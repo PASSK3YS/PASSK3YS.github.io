@@ -51,8 +51,6 @@
             margin-right: 10px;
             margin-bottom: 10px;                  
             font-weight: bold;
-            
-            /* The Button Look */
             background: rgba(56, 189, 248, 0.1); 
             border: 1px solid var(--accent);       
             padding: 6px 12px;                     
@@ -114,15 +112,13 @@
             padding-top: 2rem;
             border-top: 1px solid #1e293b; 
             text-align: center;
-        }
-
-        footer::after {
-            content: "© 2026 Kieran Colfer";
-            display: block;
             color: #64748b;
             font-size: 0.85rem;
-            font-family: 'Space Grotesk', sans-serif;
         }
+        
+        /* Ensure footer links look subtle */
+        footer a { color: #64748b; text-decoration: underline; border: none; }
+        footer a:hover { color: var(--accent); }
     </style>
 </head>
 <body>
@@ -178,7 +174,9 @@
     </main>
 
     <footer>
-        </footer>
+        <p style="margin: 0;">&copy; 2026 Kieran Colfer</p>
+        <p style="margin: 5px 0 0 0;">Licensed under <a href="LICENSE" target="_blank">MIT</a></p>
+    </footer>
 
 </body>
 </html>
