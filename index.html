@@ -8,10 +8,13 @@
     <style>
         :root {
             --width: 700px; 
-            --bg: #0f172a; 
-            --text: #cbd5e1; 
-            --accent: #38bdf8; 
-            --accent-glow: rgba(56, 189, 248, 0.3);
+            --bg: #030508; 
+            --text: #edf2fb; 
+            --accent: #7f9cf5; 
+            --accent-hover: #587bf0;
+            --border: #1c2538;
+            --nav-bg: #0b101a;
+            --accent-glow: rgba(127, 156, 245, 0.15);
         }
 
         body {
@@ -24,7 +27,7 @@
         }
 
         h1, h2, h3 {
-            color: #ffffff;
+            color: var(--text);
             text-shadow: 0 0 10px var(--accent-glow);
             letter-spacing: -0.03em; 
             margin-top: 0; 
@@ -37,12 +40,13 @@
             color: var(--accent);
             text-decoration: none;
             border-bottom: 1px solid transparent;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         a:hover {
-            text-shadow: 0 0 8px var(--accent);
-            border-bottom: 1px solid var(--accent);
+            color: var(--accent-hover);
+            text-shadow: 0 0 8px var(--accent-glow);
+            border-bottom: 1px solid var(--accent-hover);
         }
 
         nav { margin-bottom: 2rem; }
@@ -51,12 +55,12 @@
             display: inline-block;                
             margin-right: 10px;
             font-weight: bold;
-            background: rgba(56, 189, 248, 0.1); 
-            border: 1px solid var(--accent);       
-            padding: 4px 10px;                     
-            border-radius: 6px;                    
+            background: var(--nav-bg); 
+            border: 1px solid var(--border);       
+            padding: 6px 12px;                     
+            border-radius: 4px;                    
             color: var(--accent);                  
-            box-shadow: 0 0 10px var(--accent-glow); 
+            box-shadow: none; 
             text-transform: uppercase;
             font-size: 0.8em;                     
             letter-spacing: 1px;
@@ -64,10 +68,11 @@
         }
 
         nav a:hover {
-            background: var(--accent);            
-            color: var(--bg);                     
-            box-shadow: 0 0 20px var(--accent);    
+            background: var(--border);            
+            color: var(--text);                     
+            box-shadow: 0 0 15px var(--accent-glow);    
             border-bottom: none; 
+            border-color: var(--accent);
         }
 
         .bio-container {
@@ -80,15 +85,16 @@
         .profile-img { 
             width: 120px; 
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); 
-            border: 1px solid var(--accent);
+            border-radius: 4px;
+            box-shadow: 0 0 15px var(--accent-glow); 
+            border: 1px solid var(--border);
             flex-shrink: 0; 
         }
         
         .bio-text p {
             margin: 0 0 0.8rem 0;
-            line-height: 1.5;
+            line-height: 1.6;
+            color: var(--text);
         }
 
         .grid-container {
@@ -100,6 +106,7 @@
         .grid-item h3 {
             font-size: 1.1rem;
             margin-bottom: 10px;
+            color: var(--text);
         }
 
         ul { 
@@ -117,12 +124,12 @@
         footer {
             margin-top: 3rem;
             padding-top: 1rem;
-            border-top: 1px solid #1e293b; 
+            border-top: 1px solid var(--border); 
             text-align: center;
-            color: #64748b;
+            color: #556075;
             font-size: 0.85rem;
         }
-        footer a { color: #64748b; text-decoration: underline; border: none; }
+        footer a { color: #556075; text-decoration: underline; border: none; }
         footer a:hover { color: var(--accent); }
         
         #wcb {
@@ -133,7 +140,7 @@
 <body>
 
     <header>
-        <h1><a href="/" style="color: #ffffff; border: none;">Kieran's Notepad</a></h1>
+        <h1><a href="/" style="color: var(--text); border: none;">Kieran's Notepad</a></h1>
         <nav>
             <a href="/standard-notes-themes.html">Standard Notes themes</a>
         </nav>
@@ -171,7 +178,7 @@
             <div class="grid-item">
                 <h3>Music</h3>
                 <ul>
-                    <li>Spotify: <a href="https://open.spotify.com/user/iplkfu8oka623d0rj6p7xsfyh?si=98c3645462bc44e7" target="_blank">Kieran Colfer</a></li>
+                    <li>Spotify: <a href="#" target="_blank">Kieran Colfer</a></li>
                     <li>Stats: <a href="https://stats.fm/passkey" target="_blank">Stats.fm</a></li>
                 </ul>
             </div>
