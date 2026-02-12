@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --width: 660px; 
+            --width: 700px; 
             --bg: #0f172a; 
             --text: #cbd5e1; 
             --accent: #38bdf8; 
@@ -26,10 +26,12 @@
         h1, h2, h3 {
             color: #ffffff;
             text-shadow: 0 0 10px var(--accent-glow);
-            font-family: 'Space Grotesk', sans-serif;
             letter-spacing: -0.03em; 
-            margin-top: 2rem;
+            margin-top: 0; 
+            margin-bottom: 0.5rem;
         }
+        
+        h1 { margin-bottom: 1.5rem; }
 
         a {
             color: var(--accent);
@@ -43,22 +45,20 @@
             border-bottom: 1px solid var(--accent);
         }
 
-        /* Navigation Styles */
-        nav { margin-bottom: 40px; }
+        nav { margin-bottom: 2rem; }
         
         nav a {
             display: inline-block;                
             margin-right: 10px;
-            margin-bottom: 10px;                  
             font-weight: bold;
             background: rgba(56, 189, 248, 0.1); 
             border: 1px solid var(--accent);       
-            padding: 6px 12px;                     
+            padding: 4px 10px;                     
             border-radius: 6px;                    
             color: var(--accent);                  
             box-shadow: 0 0 10px var(--accent-glow); 
             text-transform: uppercase;
-            font-size: 0.85em;                     
+            font-size: 0.8em;                     
             letter-spacing: 1px;
             border-bottom: none; 
         }
@@ -67,56 +67,65 @@
             background: var(--accent);            
             color: var(--bg);                     
             box-shadow: 0 0 20px var(--accent);    
-            text-shadow: none;                    
             border-bottom: none; 
         }
 
-        /* Code Blocks */
-        pre, code {
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 6px;
-            color: #e2e8f0;
-            font-family: monospace;
+        .bio-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #1e293b;
         }
 
-        pre {
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            overflow-x: auto; 
-        }
-
-        code { padding: 2px 5px; }
-
-        /* Images */
-        img, video, iframe {
-            max-width: 100%;
+        .profile-img { 
+            width: 120px; 
             height: auto;
-            display: block;
             border-radius: 8px;
-            margin: 1.5rem 0;
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); 
-            border: 1px solid var(--accent); 
+            border: 1px solid var(--accent);
+            flex-shrink: 0; 
+        }
+        
+        .bio-text p {
+            margin: 0 0 0.8rem 0;
+            line-height: 1.5;
         }
 
-        .profile-img { width: 150px; }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 1.5rem;
+        }
 
-        /* Lists */
-        ul { padding-left: 20px; }
-        li { margin-bottom: 5px; }
+        .grid-item h3 {
+            font-size: 1.1rem;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
 
-        /* Footer */
+        ul { 
+            padding-left: 20px; 
+            margin: 0;
+        }
+        
+        li { margin-bottom: 4px; }
+
+        @media (max-width: 600px) {
+            .bio-container { flex-direction: column; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+
         footer {
-            display: block !important;
-            margin-top: 4rem;
-            padding-top: 2rem;
+            margin-top: 3rem;
+            padding-top: 1rem;
             border-top: 1px solid #1e293b; 
             text-align: center;
             color: #64748b;
             font-size: 0.85rem;
         }
-        
-        /* Ensure footer links look subtle */
         footer a { color: #64748b; text-decoration: underline; border: none; }
         footer a:hover { color: var(--accent); }
     </style>
@@ -132,45 +141,59 @@
     </header>
 
     <main>
-        <img src="https://files.horizon.pics/81e12970-37b8-4cd4-89e6-be0b2a8d5041?a=480&region=&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
+        <div class="bio-container">
+            <img src="https://files.horizon.pics/81e12970-37b8-4cd4-89e6-be0b2a8d5041?a=480&region=&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
+            <div class="bio-text">
+                <p><strong>Hi, I'm Kieran 👋</strong></p>
+                <p>Overall swell guy, avid beer drinker & privacy advocate.</p>
+                <p>Hobbies include playing video games, watching wrestling & <a href="#" target="_blank">photography</a>.</p>
+                <p>Server admin for <a href="https://proton.me" target="_blank">Proton</a> & <a href="https://standardnotes.com" target="_blank">Standard Notes</a>.</p>
+            </div>
+        </div>
 
-        <p><strong>Hi, I'm Kieran 👋</strong></p>
-        
-        <p>Overall swell guy, avid beer drinker & privacy advocate.</p>
-        
-        <p>Hobbies include playing video games, watching wrestling & <a href="#" target="_blank" rel="noopener noreferrer">photography</a>.</p>
-        
-        <p>Server admin for <a href="https://proton.me" target="_blank" rel="noopener noreferrer">Proton</a> & <a href="https://standardnotes.com" target="_blank" rel="noopener noreferrer">Standard Notes</a>.</p>
+        <div class="grid-container">
+            
+            <div class="grid-item">
+                <h3>Contact me</h3>
+                <ul>
+                    <li>hi@colfer.net</li>
+                </ul>
+            </div>
 
-        <h3>Contact me</h3>
-        <ul>
-            <li>hi@colfer.net</li>
-        </ul>
+            <div class="grid-item">
+                <h3>My Socials</h3>
+                <ul>
+                    <li>X: <a href="https://x.com/PASSK3YS" target="_blank">@PASSK3YS</a></li>
+                    <li>Discord: passkeys</li>
+                    <li>Digg: <a href="https://digg.com/@krn" target="_blank">@krn</a></li>
+                </ul>
+            </div>
 
-        <h3>My Socials</h3>
-        <ul>
-            <li>X: <a href="https://x.com/PASSK3YS" target="_blank" rel="noopener noreferrer">@PASSK3YS</a></li>
-            <li>Discord: passkeys</li>
-            <li>Digg: <a href="https://digg.com/@krn" target="_blank" rel="noopener noreferrer">@krn</a></li>
-        </ul>
+            <div class="grid-item">
+                <h3>Music</h3>
+                <ul>
+                    <li>Spotify: <a href="#" target="_blank">Kieran Colfer</a></li>
+                    <li>Stats: <a href="https://stats.fm/passkey" target="_blank">Stats.fm</a></li>
+                </ul>
+            </div>
 
-        <h3>Music</h3>
-        <ul>
-            <li>Spotify: <a href="#" target="_blank" rel="noopener noreferrer">Kieran Colfer</a></li>
-            <li>Music Stats: <a href="https://stats.fm/passkey" target="_blank" rel="noopener noreferrer">Stats.fm</a></li>
-        </ul>
+            <div class="grid-item">
+                <h3>Dev stuff</h3>
+                <ul>
+                    <li>Codeberg: <a href="https://codeberg.org/krn" target="_blank">krn</a></li>
+                    <li>GitHub: <a href="https://github.com/PASSK3YS" target="_blank">PASSK3YS</a></li>
+                </ul>
+            </div>
 
-        <h3>Dev stuff</h3>
-        <ul>
-            <li>Codeberg: <a href="https://codeberg.org/krn" target="_blank" rel="noopener noreferrer">krn</a></li>
-            <li>GitHub: <a href="https://github.com/PASSK3YS" target="_blank" rel="noopener noreferrer">PASSK3YS</a></li>
-        </ul>
+            <div class="grid-item">
+                <h3>Gamertags</h3>
+                <ul>
+                    <li>Xbox: <a href="#" target="_blank">m00t</a></li>
+                    <li>Steam: <a href="#" target="_blank">m00t316</a></li>
+                </ul>
+            </div>
 
-        <h3>My Gamertags</h3>
-        <ul>
-            <li>Xbox: <a href="#" target="_blank" rel="noopener noreferrer">m00t</a></li>
-            <li>Steam: <a href="#" target="_blank" rel="noopener noreferrer">m00t316</a></li>
-        </ul>
+        </div>
     </main>
 
     <footer>
