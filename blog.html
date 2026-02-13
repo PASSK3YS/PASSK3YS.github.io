@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | kieran.colfer.net</title>
+    <title>Blog | kieran.colfer.net</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
@@ -68,41 +68,25 @@
             box-shadow: 0 0 15px var(--accent-glow);    
             border-color: var(--accent);
         }
-        .bio-container {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            margin-bottom: 2rem;
+        .blog-post { margin-bottom: 3rem; }
+        .blog-post h3 { font-size: 1.4rem; margin-bottom: 0.5rem; margin-top: 0; }
+        .blog-post h3 a { color: var(--text); border: none; }
+        .blog-post h3 a:hover { color: var(--accent); text-shadow: 0 0 10px var(--accent-glow); }
+        .meta {
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+            opacity: 0.8;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        .profile-img { 
-            width: 120px; 
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 0 15px var(--accent-glow); 
-            border: 1px solid var(--border);
-            flex-shrink: 0; 
-        }
-        .bio-text p {
-            margin: 0 0 0.8rem 0;
+        .excerpt {
             line-height: 1.6;
-            color: var(--text);
+            color: #b0b8c8; 
+            margin-bottom: 1rem;
         }
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr; 
-            gap: 1.5rem;
-        }
-        .grid-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-        ul { list-style: none; padding-left: 0; margin: 0; }
-        li { margin-bottom: 4px; }
-        @media (max-width: 600px) {
-            .bio-container { flex-direction: column; }
-            .grid-container { grid-template-columns: 1fr; }
-        }
+        hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
         footer {
             margin-top: 3rem;
             padding-top: 1rem;
@@ -121,58 +105,20 @@
     <header>
         <h1><a href="/" style="color: var(--text); border: none;">kieran<span class="faded">.colfer.net</span></a></h1>
         <nav>
+            <a href="/">About</a>
             <a href="/standard-notes-themes.html">Standard Notes Themes</a>
-            <a href="/blog.html">Blog</a>
         </nav>
     </header>
 
     <main>
-        <div class="bio-container">
-            <img src="https://files.horizon.pics/81e12970-37b8-4cd4-89e6-be0b2a8d5041?a=480&region=&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
-            <div class="bio-text">
-                <p><strong>Hi, I'm Kieran 👋</strong></p>
-                <p>Overall swell guy, avid beer drinker & privacy advocate.</p>
-                <p>Hobbies include playing video games, watching wrestling & <a href="https://drive.proton.me/urls/A9J5Q9MZ34#Ht8OgEvmUwp1" target="_blank">photography</a>.</p>
-                <p>Server admin for <a href="https://proton.me" target="_blank">Proton</a> & <a href="https://standardnotes.com" target="_blank">Standard Notes</a>.</p>
-            </div>
-        </div>
+        <h2>Latest Posts</h2>
+        <hr>
 
-        <div class="grid-container">
-            <div class="grid-item">
-                <h3>Contact me</h3>
-                <ul>
-                    <li><a href="mailto:hi@colfer.net">hi@colfer.net</a></li>
-                </ul>
-            </div>
-            <div class="grid-item">
-                <h3>My Socials</h3>
-                <ul>
-                    <li>X: <a href="https://x.com/PASSK3YS" target="_blank">@PASSK3YS</a></li>
-                    <li>Discord: passkeys</li>
-                    <li>Digg: <a href="https://digg.com/@krn" target="_blank">@krn</a></li>
-                </ul>
-            </div>
-            <div class="grid-item">
-                <h3>Music</h3>
-                <ul>
-                    <li>Spotify: <a href="https://open.spotify.com/user/iplkfu8oka623d0rj6p7xsfyh?si=9452da697dd143af" target="_blank">Kieran Colfer</a></li>
-                    <li>Stats: <a href="https://stats.fm/passkey" target="_blank">Stats.fm</a></li>
-                </ul>
-            </div>
-            <div class="grid-item">
-                <h3>Dev stuff</h3>
-                <ul>
-                    <li>Codeberg: <a href="https://codeberg.org/krn" target="_blank">krn</a></li>
-                    <li>GitHub: <a href="https://github.com/PASSK3YS" target="_blank">PASSK3YS</a></li>
-                </ul>
-            </div>
-            <div class="grid-item">
-                <h3>Gamertags</h3>
-                <ul>
-                    <li>Xbox: <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank">m00t</a></li>
-                    <li>Steam: <a href="https://steamcommunity.com/id/m00t316/" target="_blank">m00t316</a></li>
-                </ul>
-            </div>
+        <div class="blog-post">
+            <h3><a href="blog/2025-03-11-switching-to-linux-mint.html">Goodbye Windows 11... Hello Linux Mint</a></h3>
+            <div class="meta">March 11, 2025</div>
+            <p class="excerpt">Goodbye to Microsoft's spyware and bloatware. Hello to new-found freedom. My experience switching to Linux Mint.</p>
+            <a href="blog/2025-03-11-switching-to-linux-mint.html">Read more →</a>
         </div>
     </main>
 
