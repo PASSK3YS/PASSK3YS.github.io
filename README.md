@@ -1,6 +1,6 @@
 # My personal website
 
-I am currently experimenting with this site. Features and layouts may change frequently!
+I am currently experimenting with my website. Layout may change frequently.
 
 This is the source code for my personal website.
 
