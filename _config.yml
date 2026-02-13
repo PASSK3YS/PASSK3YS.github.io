@@ -1,0 +1,4 @@
+title: kieran.colfer.net
+url: "https://kieran.colfer.net"
+markdown: kramdown
+permalink: /blog/:title/
