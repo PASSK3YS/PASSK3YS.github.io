@@ -56,11 +56,11 @@ Email Aliasing
 - [Windscribe](tab:https://windscribe.com)
 - [Mullvad VPN](tab:https://mullvad.net)
 
-DNS:
+🌐 DNS:
 - [Control D](tab:https://controld.com)
 - [NextDNS](tab:https://nextdns.io/)
 
-OS:
+🐧 OS:
 - [CachyOS](tab:https://cachyos.org/)
 - [Fedora](tab:https://www.fedoraproject.org/)
 - [ZorinOS](tab:https://zorin.com/os/)
