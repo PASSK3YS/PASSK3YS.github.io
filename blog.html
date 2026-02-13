@@ -88,21 +88,61 @@
         }
         hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
         footer {
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border); 
-            text-align: center;
-            color: #556075;
-            font-size: 0.85rem;
+            margin-top: 4rem;
+            padding-top: 0;
+            padding-bottom: 2rem;
+            border-top: none; 
         }
-        footer a { color: #556075; text-decoration: underline; border: none; }
-        footer a:hover { color: var(--accent); }
+        .footer-card {
+            background-color: var(--accent); 
+            color: var(--bg);
+            border-radius: 20px;
+            padding: 4rem 2rem 5rem 2rem; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            box-shadow: 0 10px 40px -10px rgba(127, 156, 245, 0.3);
+            position: relative;
+            overflow: hidden; 
+        }
+        .footer-content {
+            position: relative;
+            z-index: 2;
+        }
+        .copyright {
+            font-size: 0.9rem;
+            font-weight: bold;
+            opacity: 0.9;
+        }
+        .footer-card a {
+            color: var(--bg);
+            border-bottom: 1px solid rgba(3, 5, 8, 0.3);
+        }
+        .footer-card a:hover {
+            border-bottom: 1px solid var(--bg);
+            text-shadow: none;
+        }
+        .footer-big-text {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(1.5rem, 6vw, 3.5rem); 
+            font-weight: 700;
+            white-space: nowrap;
+            color: var(--bg);
+            opacity: 0.9;
+            z-index: 1;
+            line-height: 1;
+            pointer-events: none;
+            letter-spacing: -0.02em;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1><a href="/" style="color: var(--text); border: none;">kieran<span class="faded">.colfer.net</span></a></h1>
         <nav>
             <a href="/">About</a>
             <a href="/standard-notes-themes.html">Standard Notes Themes</a>
@@ -129,8 +169,15 @@
     </main>
 
     <footer>
-        <p style="margin: 0;">© 2026 Kieran Colfer</p>
-        <p style="margin: 5px 0 0 0;">Licensed under <a href="https://github.com/PASSK3YS/personal-website/blob/main/LICENSE" target="_blank">MIT</a></p>
+        <div class="footer-card">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p style="margin: 0;">© 2026 Kieran Colfer</p>
+                    <p style="margin: 5px 0 0 0;">Licensed under <a href="https://github.com/PASSK3YS/personal-website/blob/main/LICENSE" target="_blank">MIT</a></p>
+                </div>
+            </div>
+            <div class="footer-big-text">kieran.colfer.net</div>
+        </div>
     </footer>
 </body>
 </html>
