@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Freedom of speech is being eroded in the UK
+title: Freedom of speech is being eroded in the UK
 description: The UK is turning into an authoritarian state
 ---
 
