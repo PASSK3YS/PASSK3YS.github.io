@@ -3,15 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodbye Windows 11... Hello Linux Mint | kieran.colfer.net</title>
-    <meta name="description" content="Goodbye to Microsoft's spyware and bloatware. Hello to new-found freedom.">
-    
-    <meta property="og:title" content="Goodbye Windows 11... Hello Linux Mint">
-    <meta property="og:description" content="Goodbye to Microsoft's spyware and bloatware. Hello to new-found freedom.">
-    <meta property="og:image" content="https://files.horizon.pics/e42519b9-ba88-4a8f-a526-65074beefaf7?a=480&mime1=image&mime2=webp">
-    <meta property="og:url" content="https://kieran.colfer.net/blog/switching-to-linux-mint.html">
-    <meta name="twitter:card" content="summary_large_image">
-
+    <title>Tools and services I recommend | kieran.colfer.net</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
@@ -42,8 +34,9 @@
             margin-top: 0; 
             margin-bottom: 0.5rem;
         }
-        h1 { margin-bottom: 0.5rem; line-height: 1.2; }
-        .faded { opacity: 0.4; }
+        h1 { margin-bottom: 1.5rem; }
+        p { line-height: 1.6; margin-bottom: 1.5rem; }
+        hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
         a {
             color: var(--accent);
             text-decoration: none;
@@ -55,7 +48,7 @@
             text-shadow: 0 0 8px var(--accent-glow);
             border-bottom: 1px solid var(--accent-hover);
         }
-        nav { margin-bottom: 3rem; }
+        nav { margin-bottom: 2rem; }
         nav a {
             display: inline-block;                
             margin-right: 10px;
@@ -76,22 +69,21 @@
             box-shadow: 0 0 15px var(--accent-glow);    
             border-color: var(--accent);
         }
-        p { line-height: 1.6; margin-bottom: 1.5rem; font-size: 1.05rem; }
-        .meta {
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-            font-weight: bold;
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 4px;
-            margin: 2rem 0;
-            box-shadow: 0 0 15px var(--accent-glow); 
-            border: 1px solid var(--border); 
+        .grid-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        ul { list-style: none; padding-left: 0; margin: 0; }
+        li { margin-bottom: 6px; line-height: 1.4; }
+        @media (max-width: 600px) {
+            .grid-container { grid-template-columns: 1fr; }
         }
         footer {
             margin-top: 4rem;
@@ -177,26 +169,128 @@
         <nav>
             <a href="/">About</a>
             <a href="/standard-notes-themes.html">Standard Notes Themes</a>
-            <a href="/myrecommendations.html">Recommendations</a>
             <a href="/blog.html">Blog</a>
         </nav>
     </header>
 
     <main>
-        <h1>Goodbye Windows 11... Hello Linux Mint</h1>
-        <div class="meta">March 11, 2025 • Blog</div>
+        <h1>Tools and services I recommend</h1>
+        <p>This page contains zero affiliate links.<br>
+        My recommendations based on personal use and trust:</p>
         
-        <p>As someone who’s never used Linux as a main operating system, switching from Windows 11 to Linux felt like stepping into uncharted territory. But after years of dealing with Windows’ bloatware, invasive telemetry, and the forced Copilot AI integration, I decided it was time to reclaim control over my computer.</p>
+        <hr>
 
-        <p>I decided that I would make the switch over to Linux. I spent hours browsing various Linux distro subreddits and forums trying to find the right one for me. After explaining what I would be doing on my Linux computer to some people I know who've been using Linux for years, they suggested I start with Linux Mint as it's easy to use and has a familiar look to Windows. Everyone I spoke to said I would feel right at home. With a bit more research and looking up endless YouTube videos about Linix Mint, I made the decision that it would be the distro of choice.</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>💻 Browser</h3>
+                <ul>
+                    <li><a href="https://vivaldi.com" target="_blank">Vivaldi</a></li>
+                    <li><a href="https://floorp.app" target="_blank">Floorp</a></li>
+                    <li><a href="https://mullvad.net/en/browser" target="_blank">Mullvad Browser</a></li>
+                </ul>
+            </div>
 
-        <h2>Installing Linux Mint</h2>
-        <p>The installation process was surprisingly straightforward at first. I downloaded the Linux Mint ISO, flashed it to a USB drive using Rufus and booted into the live environment. I then clicked on the "install Linux Mint" icon and followed the instructions on the installer. Within about 10 minutes I was ready to go. I had successfully installed Linux Mint and replaced Windows 11 on my laptop.</p>
-        <p>Then disaster struck. On my first boot after installation, I went to enable system snapshots and my computer completely froze. I force powered down my computer, rebooted it and Linux Mint had broke entirely. Instead of launching the OS, it went to a screen about "BusyBox". Panic set in. Have I just broken my laptop? Lucky I didn't... but I had to boot the live environment from my USB and do another clean install of Linux Mint. After going through the installer again, I booted back in for the first time, redone the start up guide by enabling snapshots and Linux didn't decide to freeze and die on me that time.</p>
-        <img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/kieran/linuxmintdesktopscreenshot.webp" alt="Linux Mint Desktop Screenshot">
-        <p>My computer is now free from Windows. No more bloatware. No more spyware. Just pure Linux goodness!</p>
-        <p>I've used Linux Mint for a about a day now, and my first impressions are that everything feels way more snappy. I guess that is the positive effect of not having crap preinstalled on the system.</p>
-        <p>Should I have moved away from Windows a lot earlier? Probably so. Either way, I am excited to finally start my Linux journey!</p>
+            <div class="grid-item">
+                <h3>📆 Calendar</h3>
+                <ul>
+                    <li><a href="https://proton.me/calendar" target="_blank">Proton Calendar</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>🗨️ Chat</h3>
+                <ul>
+                    <li><a href="https://signal.org" target="_blank">Signal</a></li>
+                    <li><a href="https://simplex.chat/" target="_blank">SimpleX Chat</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>☁️ Cloud Storage</h3>
+                <ul>
+                    <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
+                    <li><a href="https://filen.io" target="_blank">Filen</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>✉️ Email</h3>
+                <ul>
+                    <li><a href="https://proton.me/mail" target="_blank">Proton Mail</a></li>
+                    <li><a href="https://tuta.com" target="_blank">Tuta</a></li>
+                    <li><a href="https://fastmail.com" target="_blank">Fastmail</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>📧 Email Aliasing</h3>
+                <ul>
+                    <li><a href="https://simplelogin.io" target="_blank">SimpleLogin</a></li>
+                    <li><a href="https://addy.io" target="_blank">Addy.io</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>📓 Notes</h3>
+                <ul>
+                    <li><a href="https://standardnotes.com" target="_blank">Standard Notes</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>🪪 Password Manager</h3>
+                <ul>
+                    <li><a href="https://proton.me/pass" target="_blank">Proton Pass</a></li>
+                    <li><a href="https://bitwarden.com" target="_blank">Bitwarden</a></li>
+                    <li><a href="https://1password.com" target="_blank">1Password</a></li>
+                    <li><a href="https://keepassxc.org/" target="_blank">KeePassXC</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>📷 Photo Management</h3>
+                <ul>
+                    <li><a href="https://ente.io" target="_blank">Ente</a></li>
+                    <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>🔍 Search Engine</h3>
+                <ul>
+                    <li><a href="https://kagi.com" target="_blank">Kagi</a></li>
+                    <li><a href="https://duckduckgo.com" target="_blank">DuckDuckGo</a></li>
+                    <li><a href="https://search.brave.com" target="_blank">Brave Search</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>🛡️ VPN</h3>
+                <ul>
+                    <li><a href="https://protonvpn.com" target="_blank">Proton VPN</a></li>
+                    <li><a href="https://windscribe.com" target="_blank">Windscribe</a></li>
+                    <li><a href="https://mullvad.net" target="_blank">Mullvad VPN</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>🌐 DNS</h3>
+                <ul>
+                    <li><a href="https://nextdns.io/" target="_blank">NextDNS</a></li>
+                    <li><a href="https://controld.com" target="_blank">Control D</a></li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h3>🐧 OS</h3>
+                <ul>
+                    <li><a href="https://cachyos.org/" target="_blank">CachyOS</a></li>
+                    <li><a href="https://www.fedoraproject.org/" target="_blank">Fedora</a></li>
+                    <li><a href="https://zorin.com/os/" target="_blank">ZorinOS</a></li>
+                    <li><a href="https://linuxmint.com/" target="_blank">Linux Mint</a></li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <footer>
