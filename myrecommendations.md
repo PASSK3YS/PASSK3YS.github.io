@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tools and services I recommend
-permalink: /myrecommendations.html
+permalink: /my-recommendations/
 ---
 
 <h1>Tools and services I recommend</h1>

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Standard Notes Themes
-permalink: /standard-notes-themes.html
+permalink: /standard-notes-themes/
 ---
 
 ## Standard Notes Themes
