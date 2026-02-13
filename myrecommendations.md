@@ -7,62 +7,92 @@ permalink: /my-recommendations/
 This page contains zero affiliate links.
 My recommendations based on personal use and trust:
 
----
-💻 Browser:
-- [Vivaldi](tab:https://vivaldi.com)
-- [Floorp](tab:https://floorp.app)
-- [Mullvad Browser](tab:https://mullvad.net)
+<hr>
 
-📆 Calendar:
-- [Proton Calendar](tab:https://proton.me/calendar)
+<div class="rec-grid">
 
-🗨️ Chat:
-- [Signal](tab:https://signal.org)
-- [SimpleX Chat](tab:https://simplex.chat/)
+<div class="rec-category">
+### 💻 Browser:
+- [Vivaldi](https://vivaldi.com)
+- [Floorp](https://floorp.app)
+- [Mullvad Browser](https://mullvad.net)
+</div>
 
-☁️ Cloud Storage:
-- [Proton Drive](tab:https://proton.me/drive)
-- [Filen](tab:https://filen.io)
+<div class="rec-category">
+### 📆 Calendar:
+- [Proton Calendar](https://proton.me/calendar)
+</div>
 
-✉️ Email:
-- [Proton Mail](tab:https://proton.me/mail)
-- [Tuta](tab:https://tuta.com)
-- [Fastmail](tab:https://fastmail.com)
+<div class="rec-category">
+### 🗨️ Chat:
+- [Signal](https://signal.org)
+- [SimpleX Chat](https://simplex.chat/)
+</div>
 
-Email Aliasing
-- [SimpleLogin](tab:https://simpleloin.io)
-- [Addy.io](tab:https://addy.io)
+<div class="rec-category">
+### ☁️ Cloud Storage:
+- [Proton Drive](https://proton.me/drive)
+- [Filen](https://filen.io)
+</div>
 
-📓 Notes:
-- [Standard Notes](tab:https://standardnotes.com)
+<div class="rec-category">
+### ✉️ Email:
+- [Proton Mail](https://proton.me/mail)
+- [Tuta](https://tuta.com)
+- [Fastmail](https://fastmail.com)
+</div>
 
-🪪 Password Manager:
-- [Proton Pass](tab:https://proton.me/pass)
-- [Bitwarden](tab:https://bitwarden.com)
-- [1Password](tab:https://1password.com)
-- [KeePassXC](tab:https://keepassxc.org/)
+<div class="rec-category">
+### 🛡️ Email Aliasing:
+- [SimpleLogin](https://simpleloin.io)
+- [Addy.io](https://addy.io)
+</div>
 
-📷 Photo Management:
-- [Ente](tab:https://ente.io)
-- [Proton Drive](tab:https://proton.me/drive)
+<div class="rec-category">
+### 📓 Notes:
+- [Standard Notes](https://standardnotes.com)
+</div>
 
-🔍 Search Engine:
-- [Kagi](tab:https://kagi.com)
-- [DuckDuckGo](tab:https://duckduckgo.com)
-- [Brave Search](tab:https://search.brave.com)
+<div class="rec-category">
+### 🪪 Password Manager:
+- [Proton Pass](https://proton.me/pass)
+- [Bitwarden](https://bitwarden.com)
+- [1Password](https://1password.com)
+- [KeePassXC](https://keepassxc.org/)
+</div>
 
-🛡️ VPN:
-- [Proton VPN](tab:https://protonvpn.com)
-- [Windscribe](tab:https://windscribe.com)
-- [Mullvad VPN](tab:https://mullvad.net)
+<div class="rec-category">
+### 📷 Photo Management:
+- [Ente](https://ente.io)
+- [Proton Drive](https://proton.me/drive)
+</div>
 
-🌐 DNS:
-- [Control D](tab:https://controld.com)
-- [NextDNS](tab:https://nextdns.io/)
+<div class="rec-category">
+### 🔍 Search Engine:
+- [Kagi](https://kagi.com)
+- [DuckDuckGo](https://duckduckgo.com)
+- [Brave Search](https://search.brave.com)
+</div>
 
-🐧 OS:
-- [CachyOS](tab:https://cachyos.org/)
-- [Fedora](tab:https://www.fedoraproject.org/)
-- [ZorinOS](tab:https://zorin.com/os/)
-- [Linux Mint](tab:https://linuxmint.com/)
+<div class="rec-category">
+### 🛡️ VPN:
+- [Proton VPN](https://protonvpn.com)
+- [Windscribe](https://windscribe.com)
+- [Mullvad VPN](https://mullvad.net)
+</div>
 
+<div class="rec-category">
+### 🌐 DNS:
+- [Control D](https://controld.com)
+- [NextDNS](https://nextdns.io/)
+</div>
+
+<div class="rec-category">
+### 🐧 OS:
+- [CachyOS](https://cachyos.org/)
+- [Fedora](https://www.fedoraproject.org/)
+- [ZorinOS](https://zorin.com/os/)
+- [Linux Mint](https://linuxmint.com/)
+</div>
+
+</div>
