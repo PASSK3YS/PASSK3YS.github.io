@@ -153,8 +153,7 @@ li { margin-bottom: 4px; }
 
 footer {
     margin-top: 4rem;
-    padding-top: 0;
-    padding-bottom: 2rem;
+    padding: 0 20px 2rem 20px;
     border-top: none; 
 }
 
