@@ -60,11 +60,16 @@ a:hover {
     border-bottom: 1px solid var(--accent-hover);
 }
 
-nav { margin-bottom: 2rem; display: flex; align-items: center; flex-wrap: wrap; }
+nav { 
+    margin-bottom: 2rem; 
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 10px;
+}
 
 nav a {
     display: inline-block;                
-    margin-right: 10px;
     font-weight: bold;
     background: var(--nav-bg); 
     border: 1px solid var(--border);       
@@ -143,6 +148,7 @@ li { margin-bottom: 4px; }
 @media (max-width: 600px) {
     .bio-container { flex-direction: column; }
     .grid-container { grid-template-columns: 1fr; }
+    .theme-toggle { margin-left: 0; }
 }
 
 footer {
