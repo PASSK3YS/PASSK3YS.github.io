@@ -1,0 +1,123 @@
+---
+layout: default
+title: Tools and services I recommend
+permalink: /myrecommendations.html
+---
+
+<h1>Tools and services I recommend</h1>
+<p>This page contains zero affiliate links.<br>
+My recommendations based on personal use and trust:</p>
+
+<hr>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <h3>💻 Browser</h3>
+        <ul>
+            <li><a href="https://vivaldi.com" target="_blank">Vivaldi</a></li>
+            <li><a href="https://floorp.app" target="_blank">Floorp</a> [Firefox fork]</li>
+            <li><a href="https://mullvad.net/en/browser" target="_blank">Mullvad Browser</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>📆 Calendar</h3>
+        <ul>
+            <li><a href="https://proton.me/calendar" target="_blank">Proton Calendar</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>🗨️ Chat</h3>
+        <ul>
+            <li><a href="https://signal.org" target="_blank">Signal</a></li>
+            <li><a href="https://simplex.chat/" target="_blank">SimpleX Chat</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>☁️ Cloud Storage</h3>
+        <ul>
+            <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
+            <li><a href="https://filen.io" target="_blank">Filen</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>✉️ Email</h3>
+        <ul>
+            <li><a href="https://proton.me/mail" target="_blank">Proton Mail</a></li>
+            <li><a href="https://tuta.com" target="_blank">Tuta</a></li>
+            <li><a href="https://fastmail.com" target="_blank">Fastmail</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>📧 Email Aliasing</h3>
+        <ul>
+            <li><a href="https://simplelogin.io" target="_blank">SimpleLogin</a></li>
+            <li><a href="https://addy.io" target="_blank">Addy.io</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>📓 Notes</h3>
+        <ul>
+            <li><a href="https://standardnotes.com" target="_blank">Standard Notes</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>🪪 Password Manager</h3>
+        <ul>
+            <li><a href="https://proton.me/pass" target="_blank">Proton Pass</a></li>
+            <li><a href="https://bitwarden.com" target="_blank">Bitwarden</a></li>
+            <li><a href="https://1password.com" target="_blank">1Password</a></li>
+            <li><a href="https://keepassxc.org/" target="_blank">KeePassXC</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>📷 Photo Management</h3>
+        <ul>
+            <li><a href="https://ente.io" target="_blank">Ente</a></li>
+            <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>🔍 Search Engine</h3>
+        <ul>
+            <li><a href="https://kagi.com" target="_blank">Kagi</a></li>
+            <li><a href="https://duckduckgo.com" target="_blank">DuckDuckGo</a></li>
+            <li><a href="https://search.brave.com" target="_blank">Brave Search</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>🛡️ VPN</h3>
+        <ul>
+            <li><a href="https://protonvpn.com" target="_blank">Proton VPN</a></li>
+            <li><a href="https://windscribe.com" target="_blank">Windscribe</a></li>
+            <li><a href="https://mullvad.net" target="_blank">Mullvad VPN</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>🌐 DNS</h3>
+        <ul>
+            <li><a href="https://nextdns.io/" target="_blank">NextDNS</a></li>
+            <li><a href="https://controld.com" target="_blank">Control D</a></li>
+        </ul>
+    </div>
+
+    <div class="grid-item">
+        <h3>🐧 OS</h3>
+        <ul>
+            <li><a href="https://cachyos.org/" target="_blank">CachyOS</a></li>
+            <li><a href="https://www.fedoraproject.org/" target="_blank">Fedora</a></li>
+            <li><a href="https://zorin.com/os/" target="_blank">ZorinOS</a></li>
+            <li><a href="https://linuxmint.com/" target="_blank">Linux Mint</a></li>
+        </ul>
+    </div>
+</div>
