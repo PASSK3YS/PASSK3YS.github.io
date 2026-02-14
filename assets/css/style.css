@@ -337,60 +337,66 @@ blockquote p {
 
 .version-link {
     position: relative;
-    text-decoration: none;
+    text-decoration: none !important;
+    border-bottom: none !important;
     display: inline-flex;
     align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: help;
 }
 
 .version-link::before {
-    content: "Website Version";
+    content: "WEBSITE VERSION";
     position: absolute;
-    bottom: 135%;
+    bottom: 140%;
     left: 50%;
-    transform: translateX(-50%);
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: bold;
+    transform: translateX(-50%) translateY(5px);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
     white-space: nowrap;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    background-color: #222;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: #111;
     color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     z-index: 1000;
 }
 
 .version-link::after {
     content: "";
     position: absolute;
-    bottom: 115%;
+    bottom: 120%;
     left: 50%;
-    transform: translateX(-50%);
-    border: 6px solid transparent;
-    border-top-color: #222;
+    transform: translateX(-50%) translateY(5px);
+    border: 5px solid transparent;
+    border-top-color: #111;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 1000;
 }
 
 .version-link:hover::before {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(-5px);
+    transform: translateX(-50%) translateY(0);
 }
 
 .version-link:hover::after {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 [data-theme="dark"] .version-link::before {
     background-color: #fff;
     color: #000;
+    box-shadow: 0 0 15px rgba(255,255,255,0.15);
 }
 
 [data-theme="dark"] .version-link::after {
