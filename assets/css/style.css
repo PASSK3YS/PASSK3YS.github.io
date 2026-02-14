@@ -37,6 +37,9 @@ body {
     max-width: var(--width);
     margin: 0 auto;        
     padding: 2rem 1rem;
+}
+
+main {
     animation: fadeIn 0.4s ease-out;
 }
 
