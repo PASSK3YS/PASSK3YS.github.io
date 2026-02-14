@@ -7,7 +7,7 @@ image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/messagemeonsignal
 
 # I convinced my friends and family to ditch WhatsApp for Signal
 
-<div class="meta">March 3, 2025 • Blog</div>
+<div class="meta">March 3, 2025</div>
 
 Over the last few months I made it my mission to convince my friends and family to switch from WhatsApp to Signal, a more secure and private alternative. It wasn't an easy task, but with persistence and creativity, I succeeded in getting them to switch.
 

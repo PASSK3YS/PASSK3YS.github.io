@@ -6,6 +6,8 @@ description: After 3 years of full time use, Standard Notes is my go-to notes ap
 
 # Why I still use Standard Notes 3 years on
 
+<div class="meta">February 4, 2023</div>
+
 ![](https://files.horizon.pics/6adc5652-ce9a-410a-8a81-0a5f324ed222?a=480&mime1=image&mime2=png)
 
 ### Peace of mind

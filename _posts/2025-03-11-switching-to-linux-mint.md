@@ -7,7 +7,7 @@ image: https://files.horizon.pics/e42519b9-ba88-4a8f-a526-65074beefaf7?a=480&mim
 
 # Goodbye Windows 11... Hello Linux Mint
 
-<div class="meta">March 11, 2025 • Blog</div>
+<div class="meta">March 11, 2025</div>
 
 As someone who’s never used Linux as a main operating system, switching from Windows 11 to Linux felt like stepping into uncharted territory. But after years of dealing with Windows’ bloatware, invasive telemetry, and the forced Copilot AI integration, I decided it was time to reclaim control over my computer.
 

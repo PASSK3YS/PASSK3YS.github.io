@@ -6,6 +6,8 @@ description: Eurotruck Simulator 2 community comes together for a good cause.
 
 # Trucking For Peace raises over $25,000 for Ukraine
 
+<div class="meta">March 22, 2022</div>
+
 ![OqPTih](https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/oqptih.webp)
 
 Earlier this month, the creators of Euro Truck Simulator 2, SCS Software, started the campaign Trucking For Peace to raise money for Ukrainians who are affected by the war and invasion of Russian troops by the order of Vladimir Putin.
