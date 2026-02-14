@@ -36,7 +36,7 @@ Dark mode version of Standard Blue theme.
 To install, go to **Preferences > Plugins > Install Custom Plugin**
 
 Paste the following link in the text box:
-`https://listed.to/p/QWil6VpMZt`
+`https://passk3ys.github.io/standard-blue-dark/ext.json`
 
 Alternatively, this theme is now included in the official Standard Notes Community Plugins repository.
 
@@ -52,7 +52,7 @@ Dark Mint theme for Standard Notes.
 To install, go to **Preferences > Plugins > Install Custom Plugin**
 
 Paste the following link in the text box:
-`https://listed.to/p/1XCck0uUkG`
+`https://passk3ys.github.io/dark-mint-theme/ext.json`
 
 GitHub: [PASSK3YS/dark-mint-theme](https://github.com/PASSK3YS/dark-mint-theme)
 
