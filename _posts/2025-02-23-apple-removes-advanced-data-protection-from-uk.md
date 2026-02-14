@@ -4,6 +4,10 @@ title: Apple Removes Advanced Data Protection from UK
 description: The UK demands access to your files.
 ---
 
+# Apple Removes Advanced Data Protection from UK
+
+<div class="meta">February 23, 2025 • Blog</div>
+
 In a significant move, Apple has decided to discontinue its Advanced Data Protection (ADP) feature in the United Kingdom. This decision comes after the UK (communist) government demanded the creation of a backdoor, aiming to access user information for surveillance purposes. Apple's stance on privacy and security has led them to remove the feature rather than compromise their encryption standards for millions of users.
 
 ### What is Advanced Data Protection?
