@@ -409,17 +409,24 @@ div.highlight {
 
 .copy-code-button {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 8px;
+    right: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    
     color: var(--text);
     background-color: var(--bg);
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 5px 10px;
-    font-size: 12px;
+    
+    padding: 6px 12px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.2s ease;
+    z-index: 10;
 }
 
 div.highlight:hover .copy-code-button {
@@ -427,6 +434,7 @@ div.highlight:hover .copy-code-button {
 }
 
 .copy-code-button:hover {
-    background-color: var(--border);
+    border-color: var(--accent);
     color: var(--accent);
+    box-shadow: 0 0 12px var(--accent-glow);
 }
