@@ -2,6 +2,7 @@
 layout: default
 title: Sharing Standard Notes Subscriptions
 description: How to share your subscription with family and friends.
+category: Standard Notes
 ---
 
 # Sharing your Standard Notes Subscription

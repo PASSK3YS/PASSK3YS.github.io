@@ -2,6 +2,7 @@
 layout: default
 title: How to add images to your Listed.to blog posts
 description: It's actually very simple to add images to your own Listed blog posts. I'll show you how to do it in this guide.
+category: Standard Notes
 ---
 
 # How to add images to your Listed.to blog post
