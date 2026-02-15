@@ -402,3 +402,31 @@ blockquote p {
 [data-theme="dark"] .version-link::after {
     border-bottom-color: #f0f6fc;
 }
+
+div.highlight {
+    position: relative;
+}
+
+.copy-code-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--text);
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+div.highlight:hover .copy-code-button {
+    opacity: 1;
+}
+
+.copy-code-button:hover {
+    background-color: var(--border);
+    color: var(--accent);
+}

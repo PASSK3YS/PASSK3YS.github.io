@@ -32,6 +32,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
+
+    <style>
+        div.highlight {
+            position: relative;
+        }
+
+        .copy-code-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, background-color 0.3s ease;
+        }
+
+        div.highlight:hover .copy-code-button {
+            opacity: 1;
+        }
+
+        .copy-code-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 <body>
 
@@ -259,6 +288,30 @@
             if ((localStorage.getItem('theme') || 'system') === 'system') {
                 document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
             }
+        });
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const codeBlocks = document.querySelectorAll('div.highlight');
+            codeBlocks.forEach(function(block) {
+                const button = document.createElement('button');
+                button.className = 'copy-code-button';
+                button.type = 'button';
+                button.innerText = 'Copy';
+                button.addEventListener('click', function() {
+                    const code = block.querySelector('code').innerText;
+                    navigator.clipboard.writeText(code).then(function() {
+                        button.innerText = 'Copied!';
+                        setTimeout(function() {
+                            button.innerText = 'Copy';
+                        }, 2000);
+                    }).catch(function(err) {
+                        console.error('Failed to copy: ', err);
+                    });
+                });
+                block.appendChild(button);
+            });
         });
     </script>
 </body>
