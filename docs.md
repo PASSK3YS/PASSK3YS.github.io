@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Docs
+title: Documentation
 description: My personal knowledge base: Tutorials, guides, and technical resources.
 permalink: /docs/
 ---
 
 <div class="page-content">
-  <h1>Documentation</h1>
+  <h1>Docs</h1>
   <p>{{ page.description }}</p>
 
   <div class="category-list" style="margin-top: 40px; display: grid; gap: 20px;">
