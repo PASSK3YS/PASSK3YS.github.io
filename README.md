@@ -9,6 +9,7 @@ This is the source code for my personal website.
 To distinguish between the underlying code structure and my personal data:
 
 **The Code:** My website is open source and available under the [MIT License](LICENSE). You are free to use, fork, and modify the code layout for your own projects.
+
 **The Content:** All personal text and personal photos are **Copyright © 2026 Kieran Colfer**. You may not use without permission.
 
 *Note: The Standard Notes themes listed on the website are governed by their own specific licenses (GPL-3.0) as noted on their respective pages.*
