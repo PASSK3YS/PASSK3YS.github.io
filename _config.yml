@@ -2,3 +2,8 @@ title: kieran.colfer.net
 url: "https://kieran.colfer.net"
 markdown: kramdown
 permalink: /blog/:title/
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:title/
