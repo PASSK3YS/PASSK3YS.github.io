@@ -54,6 +54,8 @@ To install, go to **Preferences > Plugins > Install Custom Plugin**
 Paste the following link in the text box:
 `https://passk3ys.github.io/dark-mint-theme/ext.json`
 
+Alternatively, this theme is now included in the official Standard Notes Community Plugins repository.
+
 GitHub: [PASSK3YS/dark-mint-theme](https://github.com/PASSK3YS/dark-mint-theme)
 
 ---
