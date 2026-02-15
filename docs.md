@@ -6,7 +6,6 @@ permalink: /docs/
 
 <div class="page-content">
   <h1>Documentation</h1>
-  <p>Select a category to view specific tutorials and guides.</p>
 
   <div class="category-list" style="margin-top: 40px; display: grid; gap: 20px;">
     
