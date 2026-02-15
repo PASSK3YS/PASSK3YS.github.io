@@ -54,7 +54,7 @@
     <main>
         {{ content }}
 
-{% if page.collection == 'docs' %}
+        {% if page.collection == 'docs' %}
         <div class="docs-metadata" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 20px; display: flex; flex-direction: column; gap: 12px;">
             
             <style>
@@ -169,3 +169,91 @@
             </script>
         </div>
         {% endif %}
+    </main>
+
+    <footer>
+        <div class="footer-card">
+            <div class="footer-content">
+                <div class="footer-socials">
+                    <a href="https://github.com/PASSK3YS" target="_blank" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    <a href="https://gitlab.com/m00t" target="_blank" aria-label="GitLab">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.65 14.39L20.25 7.01C20.14 6.67 19.82 6.44 19.46 6.44C19.1 6.44 18.78 6.67 18.67 7.01L16.6 13.37H7.4L5.33 7.01C5.22 6.67 4.9 6.44 4.54 6.44C4.18 6.44 3.86 6.67 3.75 7.01L1.35 14.39C1.23 14.76 1.35 15.17 1.65 15.42L12 23L22.35 15.42C22.65 15.17 22.77 14.76 22.65 14.39Z"/></svg>
+                    </a>
+                    <a href="https://buymeacoffee.com/passkeys" target="_blank" aria-label="Buy Me A Coffee">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20.216 6.415l-.132-.666c-.196-.989-1.028-1.749-2.037-1.749h-11.23c-1.01 0-1.842.761-2.037 1.749L4.65 6.415c-.161.813.471 1.585 1.301 1.585h12.964c.83 0 1.462-.772 1.301-1.585zM19 10H5s0 1 1 4 3 6 6 6 5-3 6-6 1-4 1-4zM3 6h1v1H3V6z"/></svg>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p style="margin: 0;">© 2026 Kieran Colfer</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.75em; opacity: 0.5;">
+                        <a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}" target="_blank" class="version-link" style="color: inherit; text-decoration: none;">
+                            <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg>
+                            v.{{ site.github.build_revision | slice: 0, 7 | default: "dev" }}
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-big-text">kieran.colfer.net</div>
+        </div>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const systemIcon = document.getElementById('system-icon');
+
+        function updateIcons(theme) {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'none';
+            systemIcon.style.display = 'none';
+
+            if (theme === 'light') {
+                sunIcon.style.display = 'block';
+            } else if (theme === 'dark') {
+                moonIcon.style.display = 'block';
+            } else {
+                systemIcon.style.display = 'block';
+            }
+        }
+
+        function setTheme(theme) {
+            if (theme === 'system') {
+                localStorage.setItem('theme', 'system');
+                const systemPrefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', systemPrefers);
+            } else {
+                localStorage.setItem('theme', theme);
+                document.documentElement.setAttribute('data-theme', theme);
+            }
+            updateIcons(theme);
+        }
+
+        let currentStoredTheme = localStorage.getItem('theme') || 'system';
+        updateIcons(currentStoredTheme);
+
+        toggleButton.addEventListener('click', () => {
+            let nextTheme;
+            const current = localStorage.getItem('theme') || 'system';
+
+            if (current === 'light') {
+                nextTheme = 'dark';
+            } else if (current === 'dark') {
+                nextTheme = 'system';
+            } else {
+                nextTheme = 'light';
+            }
+            
+            setTheme(nextTheme);
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if ((localStorage.getItem('theme') || 'system') === 'system') {
+                document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            }
+        });
+    </script>
+</body>
+</html>
