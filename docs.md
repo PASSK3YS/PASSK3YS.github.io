@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs
+title: Documentation
 description: My personal knowledge base: Tutorials, guides, and technical resources.
 permalink: /docs/
 ---
