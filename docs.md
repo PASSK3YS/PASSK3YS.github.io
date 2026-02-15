@@ -6,7 +6,7 @@ permalink: /docs/
 
 <div class="page-content">
   <h1>Documentation</h1>
-  <p>Tutorials, guides, and resources.</p>
+  <p>Guides and resources.</p>
 
   <ul class="post-list" style="list-style: none; padding: 0;">
     {% for doc in site.docs %}
