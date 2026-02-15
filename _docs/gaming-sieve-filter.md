@@ -3,6 +3,7 @@ layout: default
 title: Gaming sieve filter for Proton Mail
 description: Filters gaming related emails into a gaming folder
 category: Proton Mail
+type: Resource
 ---
 
 # Gaming sieve filter for Proton Mail

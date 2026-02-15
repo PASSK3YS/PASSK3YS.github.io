@@ -10,7 +10,9 @@ layout: default
     {% assign category_docs = site.docs | where: "category", page.category_name %}
     {% for doc in category_docs %}
       <li style="margin-bottom: 20px;">
-        <span class="post-meta" style="font-size: 0.85em; opacity: 0.7;">TUTORIAL</span>
+        <span class="post-meta" style="font-size: 0.85em; opacity: 0.7;">
+  {{ doc.type | default: "TUTORIAL" | upcase }}
+</span>
         <h3>
           <a class="post-link" href="{{ doc.url }}" style="text-decoration: none; font-size: 1.2em; font-weight: bold;">
             {{ doc.title }}
