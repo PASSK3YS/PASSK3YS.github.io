@@ -16,30 +16,6 @@
         }
     </script>
 
-    <style>
-        .edit-on-github {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 60px;
-            padding: 12px 24px;
-            border: 1px solid currentColor;
-            border-radius: 50px; /* Pill shape */
-            text-decoration: none;
-            color: inherit;
-            font-size: 0.9em;
-            font-weight: 500;
-            opacity: 0.6;
-            transition: all 0.2s ease;
-        }
-        
-        .edit-on-github:hover {
-            opacity: 1;
-            background-color: rgba(125, 125, 125, 0.1); /* Subtle background on hover */
-            transform: translateY(-2px); /* Slight lift */
-        }
-    </style>
-
     {% if page.description %}
     <meta name="description" content="{{ page.description }}">
     <meta property="og:description" content="{{ page.description }}">
@@ -79,10 +55,10 @@
         {{ content }}
 
         {% if page.collection == 'docs' %}
-        <div style="border-top: 1px solid var(--border-color, rgba(125,125,125,0.2)); margin-top: 60px; padding-top: 20px;">
-            <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/edit/main/{{ page.path }}" target="_blank" class="edit-on-github">
-                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-                <span>Edit this page on GitHub</span>
+        <div class="edit-link" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 20px; font-size: 0.9em; opacity: 0.7;">
+            <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/edit/main/{{ page.path }}" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center;">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                Edit this page on GitHub
             </a>
         </div>
         {% endif %}
