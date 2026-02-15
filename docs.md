@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Documentation
+title: Docs
+description: Technical references and walkthroughs for various tools and setups
 permalink: /docs/
 ---
 
