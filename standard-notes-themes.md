@@ -70,6 +70,8 @@ To install, go to **Preferences > Plugins > Install Custom Plugin**
 Paste the following link in the text box:
 `https://listed.to/p/rna5qVOnkD`
 
+Alternatively, this theme is now included in the official Standard Notes Community Plugins repository.
+
 GitHub: [PASSK3YS/lights-out](https://github.com/PASSK3YS/lights-out)
 
 ---
