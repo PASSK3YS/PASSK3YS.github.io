@@ -123,8 +123,12 @@ permalink: /tools/password-generator/
             const result = zxcvbn(password);
             let score = result.score;
 
-            if (password.length < 16 && score > 2) {
-                score = 2;
+            if (password.length < 10) {
+                if (score > 1) score = 1;
+            } else if (password.length < 16) {
+                if (score > 2) score = 2; 
+            } else if (password.length <= 25) {
+                if (score > 3) score = 3;
             }
 
             strengthBar.style.width = ((score + 1) / 5) * 100 + '%';
