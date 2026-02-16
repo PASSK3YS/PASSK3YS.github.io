@@ -22,7 +22,7 @@ permalink: /tools/
       <h2 style="margin-top: 0;">
         <a href="/password-tester/" style="text-decoration: none; color: inherit;">Password Strength Tester</a>
       </h2>
-      <p>Locally test password complexity and crack-time estimation using zxcvbn.</p>
+      <p>Locally test password complexity and crack-time estimation.</p>
       <a href="/password-tester/" style="font-weight: bold; color: var(--accent);">Open Tool &rarr;</a>
     </div>
 
