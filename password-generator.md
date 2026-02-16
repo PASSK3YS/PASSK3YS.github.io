@@ -121,10 +121,16 @@ permalink: /tools/password-generator/
         
         if(typeof zxcvbn !== 'undefined') {
             const result = zxcvbn(password);
-            strengthBar.style.width = ((result.score + 1) / 5) * 100 + '%';
-            strengthBar.style.background = strengthColors[result.score];
-            strengthText.innerText = strengthLabels[result.score];
-            strengthText.style.color = strengthColors[result.score];
+            let score = result.score;
+
+            if (password.length < 16 && score > 2) {
+                score = 2;
+            }
+
+            strengthBar.style.width = ((score + 1) / 5) * 100 + '%';
+            strengthBar.style.background = strengthColors[score];
+            strengthText.innerText = strengthLabels[score];
+            strengthText.style.color = strengthColors[score];
         }
     }
 
