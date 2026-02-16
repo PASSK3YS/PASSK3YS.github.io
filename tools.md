@@ -6,7 +6,7 @@ permalink: /tools/
 
 <div class="page-content">
   <h1>Tools</h1>
-  <p>A collection of privacy-focused, client-side tools and resources.</p>
+  <p>A collection of privacy-focused tools and resources.</p>
 
   <div class="category-list" style="margin-top: 40px; display: grid; gap: 20px;">
     
