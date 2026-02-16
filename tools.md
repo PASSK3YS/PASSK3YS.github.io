@@ -1,0 +1,22 @@
+---
+layout: default
+title: Tools
+permalink: /tools/
+---
+
+<div class="page-content">
+  <h1>Tools</h1>
+  <p>A collection of privacy-focused, client-side tools that run entirely in your browser.</p>
+
+  <div class="category-list" style="margin-top: 40px; display: grid; gap: 20px;">
+    
+    <div style="border: 1px solid var(--border); padding: 20px; border-radius: 8px; background: var(--nav-bg);">
+      <h2 style="margin-top: 0;">
+        <a href="/password-tester/" style="text-decoration: none; color: inherit;">Password Strength Tester</a>
+      </h2>
+      <p>Locally test password complexity and crack-time estimation using zxcvbn.</p>
+      <a href="/password-tester/" style="font-weight: bold; color: var(--accent);">Open Tool &rarr;</a>
+    </div>
+
+  </div>
+</div>
