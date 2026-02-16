@@ -34,5 +34,13 @@ permalink: /tools/
       <a href="/tools/username-generator/" style="font-weight: bold; color: var(--accent);">Open Tool &rarr;</a>
     </div>
 
+    <div style="border: 1px solid var(--border); padding: 20px; border-radius: 8px; background: var(--nav-bg);">
+      <h2 style="margin-top: 0;">
+        <a href="/tools/password-generator/" style="text-decoration: none; color: inherit;">Password Generator</a>
+      </h2>
+      <p>Generate cryptographically strong, random passwords with custom settings.</p>
+      <a href="/tools/password-generator/" style="font-weight: bold; color: var(--accent);">Open Tool &rarr;</a>
+    </div>
+
   </div>
 </div>
