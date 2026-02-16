@@ -14,7 +14,8 @@ permalink: /tools/password-generator/
     
     <div style="margin-bottom: 30px;">
         <div style="position: relative;">
-            <input type="text" id="password-output" readonly value="Generating..." style="width: 100%; padding: 20px; border-radius: 8px; border: 2px solid var(--border); background: var(--nav-bg); color: var(--accent); font-family: 'Space Grotesk', monospace; font-size: 1.4rem; text-align: center; outline: none; cursor: pointer; transition: all 0.2s;">
+            <div id="password-output" style="width: 100%; min-height: 86px; padding: 20px; border-radius: 8px; border: 2px solid var(--border); background: var(--nav-bg); color: var(--accent); font-family: 'Space Grotesk', monospace; font-size: 1.4rem; text-align: center; cursor: pointer; transition: all 0.2s; word-break: break-all; display: flex; align-items: center; justify-content: center; line-height: 1.4;">Generating...</div>
+            
             <div id="copy-msg" style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; opacity: 0; transition: opacity 0.2s; pointer-events: none;">Copied!</div>
         </div>
         
@@ -103,7 +104,7 @@ permalink: /tools/password-generator/
         if (useSymbol) charset += chars.symbol;
 
         if (charset === '') {
-            output.value = 'Select at least one option';
+            output.textContent = 'Select at least one option';
             strengthBar.style.width = '0%';
             strengthText.innerText = '';
             return;
@@ -117,7 +118,7 @@ permalink: /tools/password-generator/
             password += charset[array[i] % charset.length];
         }
 
-        output.value = password;
+        output.textContent = password;
         
         if(typeof zxcvbn !== 'undefined') {
             const result = zxcvbn(password);
@@ -144,8 +145,8 @@ permalink: /tools/password-generator/
     });
 
     output.addEventListener('click', () => {
-        if (!output.value) return;
-        navigator.clipboard.writeText(output.value);
+        if (!output.textContent || output.textContent === 'Generating...') return;
+        navigator.clipboard.writeText(output.textContent);
         
         output.style.borderColor = 'var(--accent)';
         copyMsg.style.opacity = '1';
