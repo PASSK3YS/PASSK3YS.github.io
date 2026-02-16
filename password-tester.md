@@ -25,6 +25,10 @@ permalink: /password-tester/
       <p id="feedback" style="margin: 0; color: var(--accent); font-weight: bold;"></p>
     </div>
   </div>
+
+  <div style="margin-top: 50px; text-align: center; font-size: 0.85rem; opacity: 0.5;">
+    Open Source. <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/blob/main/password-tester.md" target="_blank" style="color: inherit; border-bottom: 1px solid currentColor;">View source code</a>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
