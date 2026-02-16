@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Password Strength Tester
-permalink: /password-tester/
+permalink: /tools/password-tester/
 ---
 
 <div class="page-content">
