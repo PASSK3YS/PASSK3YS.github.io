@@ -12,10 +12,19 @@ permalink: /tools/password-generator/
 
   <div style="margin-top: 30px;">
     
-    <div style="position: relative; margin-bottom: 30px;">
-        <input type="text" id="password-output" readonly value="Generating..." style="width: 100%; padding: 20px; border-radius: 8px; border: 2px solid var(--border); background: var(--nav-bg); color: var(--accent); font-family: 'Space Grotesk', monospace; font-size: 1.4rem; text-align: center; outline: none; cursor: pointer; transition: all 0.2s;">
-        <div id="copy-msg" style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; opacity: 0; transition: opacity 0.2s; pointer-events: none;">Copied!</div>
-        <p style="text-align: center; font-size: 0.8rem; opacity: 0.5; margin-top: 8px;">Click to copy</p>
+    <div style="margin-bottom: 30px;">
+        <div style="position: relative;">
+            <input type="text" id="password-output" readonly value="Generating..." style="width: 100%; padding: 20px; border-radius: 8px; border: 2px solid var(--border); background: var(--nav-bg); color: var(--accent); font-family: 'Space Grotesk', monospace; font-size: 1.4rem; text-align: center; outline: none; cursor: pointer; transition: all 0.2s;">
+            <div id="copy-msg" style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; opacity: 0; transition: opacity 0.2s; pointer-events: none;">Copied!</div>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+             <div style="flex-grow: 1; height: 6px; background: var(--nav-bg); border-radius: 3px; overflow: hidden; margin-right: 15px; border: 1px solid var(--border);">
+                <div id="strength-bar" style="height: 100%; width: 0%; transition: all 0.3s ease;"></div>
+             </div>
+             <span id="strength-text" style="font-size: 0.85rem; font-weight: bold; min-width: 80px; text-align: right;"></span>
+        </div>
+        <p style="text-align: center; font-size: 0.8rem; opacity: 0.5; margin-top: 5px;">Click to copy</p>
     </div>
 
     <div style="background: var(--nav-bg); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
@@ -58,6 +67,8 @@ permalink: /tools/password-generator/
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+
 <script>
   (function() {
     const output = document.getElementById('password-output');
@@ -65,6 +76,8 @@ permalink: /tools/password-generator/
     const lengthVal = document.getElementById('length-val');
     const btn = document.getElementById('generate-btn');
     const copyMsg = document.getElementById('copy-msg');
+    const strengthBar = document.getElementById('strength-bar');
+    const strengthText = document.getElementById('strength-text');
 
     const chars = {
         upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -72,6 +85,9 @@ permalink: /tools/password-generator/
         number: '0123456789',
         symbol: '!@#$%^&*()_+~`|}{[]:;?><,./-='
     };
+
+    const strengthColors = { 0: '#ff4d4d', 1: '#ff4d4d', 2: '#ffad33', 3: '#99cc33', 4: '#33cc33' };
+    const strengthLabels = { 0: 'Very Weak', 1: 'Weak', 2: 'Fair', 3: 'Strong', 4: 'Very Strong' };
 
     function generate() {
         const length = parseInt(lengthRange.value);
@@ -88,6 +104,8 @@ permalink: /tools/password-generator/
 
         if (charset === '') {
             output.value = 'Select at least one option';
+            strengthBar.style.width = '0%';
+            strengthText.innerText = '';
             return;
         }
 
@@ -100,6 +118,14 @@ permalink: /tools/password-generator/
         }
 
         output.value = password;
+        
+        if(typeof zxcvbn !== 'undefined') {
+            const result = zxcvbn(password);
+            strengthBar.style.width = ((result.score + 1) / 5) * 100 + '%';
+            strengthBar.style.background = strengthColors[result.score];
+            strengthText.innerText = strengthLabels[result.score];
+            strengthText.style.color = strengthColors[result.score];
+        }
     }
 
     lengthRange.addEventListener('input', (e) => {
@@ -126,6 +152,6 @@ permalink: /tools/password-generator/
         generate();
     });
 
-    generate();
+    setTimeout(generate, 100);
   })();
 </script>
