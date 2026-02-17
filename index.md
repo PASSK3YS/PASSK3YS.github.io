@@ -15,12 +15,6 @@ title: About
 
 <div class="grid-container">
     <div class="grid-item">
-        <h3>Contact me</h3>
-        <ul>
-            <li><a href="mailto:hi@colfer.net">hi@colfer.net</a></li>
-        </ul>
-    </div>
-    <div class="grid-item">
         <h3>My Socials</h3>
         <ul>
             <li>X: <a href="https://x.com/PASSK3YS" target="_blank">@PASSK3YS</a></li>
