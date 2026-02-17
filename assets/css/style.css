@@ -5,7 +5,7 @@ html, body { overflow-x: hidden; }
 
 :root {
     color-scheme: dark;
-    --width: 1100px; 
+    --width: 900px; 
     --bg: #030508; 
     --text: #edf2fb; 
     --accent: #7f9cf5; 
