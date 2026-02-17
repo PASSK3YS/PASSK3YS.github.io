@@ -27,7 +27,7 @@ permalink: /tools/password-tester/
   </div>
 
   <div style="margin-top: 50px; text-align: center; font-size: 0.85rem; opacity: 0.5;">
-    Open Source. <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/blob/main/password-tester.md" target="_blank" style="color: inherit; border-bottom: 1px solid currentColor;">View source code</a>
+    Open Source. <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/blob/main/tools/password-tester.md" target="_blank" style="color: inherit; border-bottom: 1px solid currentColor;">View source code</a>
   </div>
 </div>
 
