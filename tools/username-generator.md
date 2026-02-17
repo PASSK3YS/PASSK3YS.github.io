@@ -29,7 +29,7 @@ permalink: /tools/username-generator/
   </div>
 
   <div style="margin-top: 50px; text-align: center; font-size: 0.85rem; opacity: 0.5;">
-    Open Source. <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/blob/main/username-generator.md" target="_blank" style="color: inherit; border-bottom: 1px solid currentColor;">View source code</a>
+    Open Source. <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/blob/main/tools/username-generator.md" target="_blank" style="color: inherit; border-bottom: 1px solid currentColor;">View source code</a>
   </div>
 </div>
 
@@ -111,7 +111,6 @@ permalink: /tools/username-generator/
         }
     });
 
-    // Generate initial batch
     btn.click();
   })();
 </script>
