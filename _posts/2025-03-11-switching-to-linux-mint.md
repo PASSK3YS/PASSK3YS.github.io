@@ -5,10 +5,6 @@ description: Goodbye to Microsoft's spyware and bloatware. Hello to new-found fr
 image: https://files.horizon.pics/e42519b9-ba88-4a8f-a526-65074beefaf7?a=480&mime1=image&mime2=webp
 ---
 
-# Goodbye Windows 11... Hello Linux Mint
-
-<div class="meta">March 11, 2025</div>
-
 As someone who’s never used Linux as a main operating system, switching from Windows 11 to Linux felt like stepping into uncharted territory. But after years of dealing with Windows’ bloatware, invasive telemetry, and the forced Copilot AI integration, I decided it was time to reclaim control over my computer.
 
 I decided that I would make the switch over to Linux. I spent hours browsing various Linux distro subreddits and forums trying to find the right one for me. After explaining what I would be doing on my Linux computer to some people I know who've been using Linux for years, they suggested I start with Linux Mint as it's easy to use and has a familiar look to Windows. Everyone I spoke to said I would feel right at home. With a bit more research and looking up endless YouTube videos about Linix Mint, I made the decision that it would be the distro of choice.

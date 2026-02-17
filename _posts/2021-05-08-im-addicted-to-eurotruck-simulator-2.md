@@ -4,10 +4,6 @@ title: I'm addicted to Euro Truck Simulator 2
 description: Loaded up and truckin'.
 ---
 
-# I'm addicted to Euro Truck Simulator 2
-
-<div class="meta">June 8, 2021</div>
-
 The reason I haven't been blogging much over the past 3 months is simply because I have an addiction... A addiction to trucking on Euro Truck Simulator 2.
 
 I've sunk just over 125 hours into the game and I've been building up my fleet of trucks in my logistics company. Not to mention that I purchased pretty much every DLC the game has to offer so I've been driving all the way across Europe, exploring all different towns and cities the game has to offer. I've driven into coutries in northern Europe including Sweden, Denmark, Norway & Finland. I've also been exporing in eastern Europe like parts of Russia, Poland and other countries. With all of this time played in the game, I still have only around 40% of the full map explored!

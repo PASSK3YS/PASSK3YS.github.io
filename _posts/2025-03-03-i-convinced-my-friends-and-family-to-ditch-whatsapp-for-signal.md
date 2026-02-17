@@ -5,10 +5,6 @@ description: How I successfully convinced my friends and family to switch to Sig
 image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/messagemeonsignal-2.webp
 ---
 
-# I convinced my friends and family to ditch WhatsApp for Signal
-
-<div class="meta">March 3, 2025</div>
-
 Over the last few months I made it my mission to convince my friends and family to switch from WhatsApp to Signal, a more secure and private alternative. It wasn't an easy task, but with persistence and creativity, I succeeded in getting them to switch.
 
 I was browsing YouTube and came across a video titled <a href="https://www.youtube.com/watch?v=s9Ux8DFgMSM" target="_blank">"How to convince your friends to use a private messenger"</a>. I watched the video and was inspired to take on the challenge of getting everyone I spoke to over to Signal. At that point in time, I had some people who already made the switch, but I could never convince the rest to do the same.

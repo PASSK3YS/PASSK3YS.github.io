@@ -4,10 +4,6 @@ title: Things I would like to see in Standard Notes in 2025 and beyond
 description: Features I'd love to see in Standard Notes.
 ---
 
-# Things I would like to see in Standard Notes in 2025 and beyond
-
-<div class="meta">November 7, 2024</div>
-
 As someone who uses Standard Notes their main notes app, below are things I'd love to see come to Standard Notes
 
 ### Sharable notes via a secure URL

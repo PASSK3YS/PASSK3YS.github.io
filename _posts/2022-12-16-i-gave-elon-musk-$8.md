@@ -4,10 +4,6 @@ title: I gave Elon Musk my $8
 description: I bit the bullet.
 ---
 
-# I gave Elon Musk my $8
-
-<div class="meta">December 16, 2022</div>
-
 Insert the meme here:
 ![](https://cdn.horizon.pics/jtUnFfWK3t.jpg)
 

@@ -4,10 +4,6 @@ title: Freedom of speech is being eroded in the UK
 description: The UK is turning into an authoritarian state.
 ---
 
-# Freedom of speech is being eroded in the UK
-
-<div class="meta">March 1, 2025</div>
-
 Prime Minister Keir Starmer recently visited President Donald Trump in the Oval Office. While Starmer and Trump were talking to the press, Vice President JD Vance called out the infringement on free speech in the United Kingdom.
 
 > “I said what I said. There have been infringements on Free Speech that actually affect not just the British people, but also American technology companies and American citizens.”
