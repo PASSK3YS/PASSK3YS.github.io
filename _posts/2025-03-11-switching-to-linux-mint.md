@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Goodbye Windows 11... Hello Linux Mint
 description: Goodbye to Microsoft's spyware and bloatware. Hello to new-found freedom.
 image: https://files.horizon.pics/e42519b9-ba88-4a8f-a526-65074beefaf7?a=480&mime1=image&mime2=webp

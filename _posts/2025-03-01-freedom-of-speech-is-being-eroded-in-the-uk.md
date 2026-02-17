@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Freedom of speech is being eroded in the UK
 description: The UK is turning into an authoritarian state.
 ---

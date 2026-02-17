@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: I gave Elon Musk my $8
 description: I bit the bullet.
 ---

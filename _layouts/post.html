@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="page-content">
+    <a href="/blog/" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.6; text-decoration: none; border-bottom: none; display: inline-block; margin-bottom: 20px;">&larr; Back to Blog</a>
+
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline" style="margin-top: 0;">{{ page.title }}</h1>
+      <p class="post-meta" style="color: var(--text-color); opacity: 0.6; font-size: 0.9rem;">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+        {% if page.author %}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+        {% endif %}
+      </p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody" style="margin-top: 20px;">
+      {{ content }}
+    </div>
+  </div>
+
+</article>
