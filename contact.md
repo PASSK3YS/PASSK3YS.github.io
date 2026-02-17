@@ -26,7 +26,7 @@ permalink: /contact/
         <div class="grid-item">
             <h3>Discord</h3>
             <ul>
-                <li><a href="https://discord.com/proton" target="_blank">Proton Discord Server</a></li>
+                <li><a href="https://discord.com/invite/proton" target="_blank">Proton Discord Server</a></li>
                 <li><a href="https://discord.com/invite/fxjJFxkRkY" target="_blank">Standard Notes Discord Server</a></li>
             </ul>
         </div>
