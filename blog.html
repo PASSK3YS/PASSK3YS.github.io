@@ -21,7 +21,7 @@ permalink: /blog/
         <a href="{{ post.url }}" style="text-decoration: none; color: inherit;">{{ post.title }}</a>
       </h2>
 
-      <p>{{ post.description }}</p>
+      <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
 
       <a href="{{ post.url }}" style="font-weight: bold; color: var(--accent);">Read more &rarr;</a>
     </div>
