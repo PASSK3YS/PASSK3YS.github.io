@@ -21,9 +21,9 @@
     <meta property="og:description" content="{{ page.description }}">
     {% endif %}
 
-    {% if page.image %}
-    <meta property="og:image" content="{{ page.image }}">
-    {% endif %}
+    {% assign og_image = page.image | default: "https://files.horizon.pics/2d6f201f-fbb8-4870-8a67-c8e1357d2fed?a=480&region=eu-central&mime1=image&mime2=jpeg" %}
+    <meta property="og:image" content="{{ og_image }}">
+    <meta name="twitter:image" content="{{ og_image }}">
 
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:url" content="https://kieran.colfer.net{{ page.url }}">
