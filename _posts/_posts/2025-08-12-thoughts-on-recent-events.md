@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Thoughts on recent events...
+description:
 ---
 
 # Thoughts on recent events...
