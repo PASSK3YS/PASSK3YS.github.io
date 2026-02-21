@@ -98,6 +98,12 @@ nav a:hover {
     box-shadow: none;    
 }
 
+nav a.active {
+    background: var(--border);
+    color: var(--accent);
+    box-shadow: none;
+}
+
 .theme-toggle {
     background: transparent;
     border: none;
