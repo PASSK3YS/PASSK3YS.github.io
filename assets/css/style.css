@@ -66,6 +66,12 @@ a:hover {
     border-bottom: 1px solid var(--accent-hover);
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 nav { 
     margin-bottom: 2rem; 
     display: inline-flex; 
@@ -76,6 +82,19 @@ nav {
     border: 1px solid var(--border);
     border-radius: 50px;
     padding: 8px 12px;
+    position: relative;
+}
+
+.nav-slider {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 0;
+    background: var(--border);
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+    pointer-events: none;
 }
 
 nav a {
@@ -90,17 +109,14 @@ nav a {
     text-transform: uppercase;
     font-size: 0.8em;                     
     letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    background: var(--border);            
+nav a:hover, nav a.active {
     color: var(--accent);                     
-    box-shadow: none;    
-}
-
-nav a.active {
-    background: var(--border);
-    color: var(--accent);
+    background: transparent;
     box-shadow: none;
 }
 
@@ -115,6 +131,8 @@ nav a.active {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .theme-toggle:hover {
