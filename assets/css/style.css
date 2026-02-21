@@ -76,25 +76,29 @@ nav {
     margin-bottom: 2rem; 
     display: flex; 
     align-items: center; 
-    flex-wrap: nowrap; 
-    gap: 5px;
     background-color: var(--nav-bg);
     border: 1px solid var(--border);
     border-radius: 50px;
     padding: 8px 12px;
-    position: relative;
     max-width: 100%;
+}
+
+.nav-scroll {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    min-width: 0;
 }
 
-nav::-webkit-scrollbar {
+.nav-scroll::-webkit-scrollbar {
     display: none;
 }
 
-nav a {
+.nav-scroll a {
     display: inline-block;                
     font-weight: bold;
     background: transparent !important; 
@@ -107,25 +111,16 @@ nav a {
     text-transform: uppercase;
     font-size: 0.8em;                     
     letter-spacing: 1px;
-    position: relative;
-    z-index: 2;
     transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none !important;
     text-shadow: none !important;
     outline: none !important;
     flex-shrink: 0;
-    white-space: nowrap;
 }
 
-nav a:hover, nav a.active {
+.nav-scroll a:hover, .nav-scroll a.active {
     color: var(--accent) !important;                     
     background: var(--border) !important;
-    box-shadow: none !important;
-    border: none !important;
-    border-bottom: none !important;
-    text-decoration: none !important;
-    text-shadow: none !important;
-    outline: none !important;
 }
 
 .theme-toggle {
@@ -139,15 +134,12 @@ nav a:hover, nav a.active {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 2;
     flex-shrink: 0;
 }
 
 .theme-toggle:hover {
     background: var(--border);
     color: var(--accent);
-    box-shadow: none;
 }
 
 .bio-container {
@@ -190,7 +182,6 @@ li { margin-bottom: 4px; }
 @media (max-width: 600px) {
     .bio-container { flex-direction: column; }
     .grid-container { grid-template-columns: 1fr; }
-    .theme-toggle { margin-left: 0; }
     .rec-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
