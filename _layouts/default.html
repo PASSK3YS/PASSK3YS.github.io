@@ -66,11 +66,13 @@
 
     <header>
         <nav>
-            <a href="/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>About</a>
-            <a href="/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>Contact</a>
-            <a href="/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>Docs</a>
-            <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
-            <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
+            <div class="nav-scroll">
+                <a href="/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>About</a>
+                <a href="/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>Contact</a>
+                <a href="/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>Docs</a>
+                <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
+                <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
+            </div>
 
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                 <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -314,14 +316,14 @@
             });
         });
     </script>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const nav = document.querySelector('nav');
-            const activeLink = nav ? nav.querySelector('a.active') : null;
-            if (nav && activeLink) {
-                const scrollPos = activeLink.offsetLeft - (nav.clientWidth / 2) + (activeLink.clientWidth / 2);
-                nav.scrollLeft = scrollPos;
+            const navScroll = document.querySelector('.nav-scroll');
+            const activeLink = navScroll ? navScroll.querySelector('a.active') : null;
+            if (navScroll && activeLink) {
+                const scrollPos = activeLink.offsetLeft - (navScroll.clientWidth / 2) + (activeLink.clientWidth / 2);
+                navScroll.scrollLeft = scrollPos;
             }
         });
     </script>
