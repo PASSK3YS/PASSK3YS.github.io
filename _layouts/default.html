@@ -315,33 +315,5 @@
         });
     </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const nav = document.querySelector('nav');
-            if (!nav) return;
-            
-            const slider = document.createElement('div');
-            slider.className = 'nav-slider';
-            nav.appendChild(slider);
-
-            const links = Array.from(nav.querySelectorAll('a'));
-            const activeLink = nav.querySelector('a.active') || links[0];
-
-            function updateSlider(element) {
-                if (!element) return;
-                slider.style.width = element.offsetWidth + 'px';
-                slider.style.left = element.offsetLeft + 'px';
-            }
-
-            updateSlider(activeLink);
-
-            links.forEach(link => {
-                link.addEventListener('mouseenter', () => updateSlider(link));
-            });
-
-            nav.addEventListener('mouseleave', () => updateSlider(activeLink));
-            window.addEventListener('resize', () => updateSlider(nav.querySelector('a.active') || links[0]));
-        });
-    </script>
 </body>
 </html>
