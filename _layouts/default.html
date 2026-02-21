@@ -314,6 +314,17 @@
             });
         });
     </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const nav = document.querySelector('nav');
+            const activeLink = nav ? nav.querySelector('a.active') : null;
+            if (nav && activeLink) {
+                const scrollPos = activeLink.offsetLeft - (nav.clientWidth / 2) + (activeLink.clientWidth / 2);
+                nav.scrollLeft = scrollPos;
+            }
+        });
+    </script>
 
 </body>
 </html>
