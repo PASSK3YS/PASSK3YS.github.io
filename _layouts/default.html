@@ -322,8 +322,8 @@
             const navScroll = document.querySelector('.nav-scroll');
             const activeLink = navScroll ? navScroll.querySelector('a.active') : null;
             if (navScroll && activeLink) {
-                const scrollPos = activeLink.offsetLeft - (navScroll.clientWidth / 2) + (activeLink.clientWidth / 2);
-                navScroll.scrollLeft = scrollPos;
+                const scrollLeftValue = activeLink.offsetLeft - (navScroll.clientWidth / 2) + (activeLink.clientWidth / 2);
+                navScroll.scrollLeft = scrollLeftValue;
             }
         });
     </script>
