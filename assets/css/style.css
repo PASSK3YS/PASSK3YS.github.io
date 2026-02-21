@@ -74,7 +74,7 @@ header {
 
 nav { 
     margin-bottom: 2rem; 
-    display: inline-flex; 
+    display: flex; 
     align-items: center; 
     flex-wrap: nowrap; 
     gap: 5px;
@@ -85,8 +85,9 @@ nav {
     position: relative;
     max-width: 100%;
     overflow-x: auto;
-    scrollbar-width: none;
+    white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 }
 
 nav::-webkit-scrollbar {
@@ -125,6 +126,7 @@ nav a {
     text-shadow: none !important;
     outline: none !important;
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
 nav a:hover, nav a.active {
