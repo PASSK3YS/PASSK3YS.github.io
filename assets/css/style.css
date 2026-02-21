@@ -94,18 +94,6 @@ nav::-webkit-scrollbar {
     display: none;
 }
 
-.nav-slider {
-    position: absolute;
-    top: 8px;
-    bottom: 8px;
-    left: 0;
-    background: var(--border);
-    border-radius: 50px;
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    z-index: 1;
-    pointer-events: none;
-}
-
 nav a {
     display: inline-block;                
     font-weight: bold;
@@ -121,7 +109,7 @@ nav a {
     letter-spacing: 1px;
     position: relative;
     z-index: 2;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none !important;
     text-shadow: none !important;
     outline: none !important;
@@ -131,7 +119,7 @@ nav a {
 
 nav a:hover, nav a.active {
     color: var(--accent) !important;                     
-    background: transparent !important;
+    background: var(--border) !important;
     box-shadow: none !important;
     border: none !important;
     border-bottom: none !important;
