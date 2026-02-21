@@ -118,6 +118,7 @@ nav a:hover, nav a.active {
     color: var(--accent);                     
     background: transparent;
     box-shadow: none;
+    border-bottom: none;
 }
 
 .theme-toggle {
