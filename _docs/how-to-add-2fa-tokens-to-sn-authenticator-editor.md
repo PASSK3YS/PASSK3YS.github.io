@@ -1,11 +1,9 @@
 ---
-layout: default
+layout: doc
 title: How to add 2FA tokens to Authenticator editor in Standard Notes
 description: An easy to follow guide on how to add 2FA tokens into the Authenticator editor (formally known as TokenVault) in Standard Notes.
 category: Standard Notes
 ---
-
-# How to add 2FA tokens to Authenticator editor in Standard Notes
 
 This easy to follow guide will show you how to add two factor authentication tokens into the Authenticator editor (formally known as TokenVault) in Standard Notes.
 
