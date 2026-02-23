@@ -5,6 +5,8 @@ description: A Standard Notes theme CSS template you can use.
 category: Standard Notes
 ---
 
+# Basic Standard Notes theme template
+
 Feel free to copy and modify this CSS template for your own Standard Notes theme.
 
 ```css
