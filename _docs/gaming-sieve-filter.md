@@ -6,8 +6,6 @@ category: Proton Mail
 type: Resource
 ---
 
-# Gaming sieve filter for Proton Mail
-
 Before using this filter, ensure you have created a folder named "Gaming" in your Proton Mail settings. If you prefer a different name, update the "Gaming" text in the code below to match your folder name exactly.
 
 ```
