@@ -20,7 +20,7 @@ permalink: /tools/
 
     <div style="border: 1px solid var(--border); padding: 20px; border-radius: 8px; background: var(--nav-bg);">
       <h2 style="margin-top: 0;">
-        <a href="/tools/vivaldi-themes/" style="text-decoration: none; color: inherit;">Vivald browser themes</a>
+        <a href="/tools/vivaldi-themes/" style="text-decoration: none; color: inherit;">Vivaldi browser themes</a>
       </h2>
       <p>A collection of my custom Vivaldi browser themes.</p>
       <a href="/tools/vivaldi-themes/" style="font-weight: bold; color: var(--accent);">View Themes &rarr;</a>
