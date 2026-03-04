@@ -22,7 +22,7 @@ permalink: /tools/
       <h2 style="margin-top: 0;">
         <a href="/tools/vivaldi-themes/" style="text-decoration: none; color: inherit;">Vivaldi browser themes</a>
       </h2>
-      <p>A collection of my custom Vivaldi browser themes.</p>
+      <p>A collection of my custom Vivaldi Browser Themes.</p>
       <a href="/tools/vivaldi-themes/" style="font-weight: bold; color: var(--accent);">View Themes &rarr;</a>
     </div>
 
