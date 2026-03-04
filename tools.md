@@ -20,6 +20,14 @@ permalink: /tools/
 
     <div style="border: 1px solid var(--border); padding: 20px; border-radius: 8px; background: var(--nav-bg);">
       <h2 style="margin-top: 0;">
+        <a href="/tools/vivaldi-themes/" style="text-decoration: none; color: inherit;">Vivald browser themes</a>
+      </h2>
+      <p>A collection of my custom Vivaldi browser themes.</p>
+      <a href="/tools/vivaldi-themes/" style="font-weight: bold; color: var(--accent);">View Themes &rarr;</a>
+    </div>
+
+    <div style="border: 1px solid var(--border); padding: 20px; border-radius: 8px; background: var(--nav-bg);">
+      <h2 style="margin-top: 0;">
         <a href="/tools/password-tester/" style="text-decoration: none; color: inherit;">Password Strength Tester</a>
       </h2>
       <p>Locally test password complexity and crack-time estimation.</p>
