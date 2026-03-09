@@ -4,7 +4,7 @@ title: About
 ---
 
 <div class="bio-container">
-    <img src="https://files.horizon.pics/62cf2913-4119-4a5e-bea7-cdfd0e4caaaf?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
+    <img src="https://files.horizon.pics/0e37ee6c-1ef1-42f5-bd17-eff9acba2211?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
     <div class="bio-text">
         <p><strong>Hi, I'm Kieran. 👋 Welcome to my personal website.</strong></p>
         <p>Overall swell guy, avid beer drinker & privacy advocate.</p>
