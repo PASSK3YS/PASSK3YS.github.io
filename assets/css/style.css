@@ -8,10 +8,11 @@ html, body { overflow-x: hidden; }
     --width: 900px; 
     --bg: #272121; 
     --text: #F6E9E9; 
+    --text-muted: #BFAFAF;
     --accent: #E16428; 
     --accent-hover: #FFA270;
-    --border: #363333;
-    --nav-bg: #363333;
+    --nav-bg: #302A2A;
+    --border: #4A4040;
     --accent-glow: rgba(225, 100, 40, 0.15);
 
     --sh-comment: #6c7893;
@@ -495,4 +496,22 @@ div.highlight:hover .copy-code-button {
     opacity: 1;
     color: var(--accent-hover);
     text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.grid-item {
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+
+.grid-item p, .grid-item li {
+    color: var(--text-muted);
 }
