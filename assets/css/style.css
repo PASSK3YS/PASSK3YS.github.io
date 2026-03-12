@@ -27,14 +27,14 @@ html, body { overflow-x: hidden; }
 
 [data-theme="light"] {
     color-scheme: light;
-    --bg: #ffffff;
-    --text: #1c2638;
-    --text-muted: #39707a;
-    --accent: #f14e52;      
-    --accent-hover: #9b222b;
-    --border: #95e0cc;      
-    --nav-bg: #daf2e9;      
-    --accent-glow: rgba(241, 78, 82, 0.15);
+    --bg: #f4f8fb;
+    --text: #201533;
+    --text-muted: #203562;
+    --accent: #0098db;      
+    --accent-hover: #1e579c;
+    --border: #0ce6f2;      
+    --nav-bg: #ffffff;      
+    --accent-glow: rgba(0, 152, 219, 0.15);
 }
 
 body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
@@ -515,4 +515,26 @@ div.highlight:hover .copy-code-button {
 
 .grid-item p, .grid-item li {
     color: var(--text-muted);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--bg);
 }
