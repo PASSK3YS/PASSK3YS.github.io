@@ -479,3 +479,20 @@ div.highlight:hover .copy-code-button {
     color: var(--accent);
     box-shadow: 0 0 12px var(--accent-glow);
 }
+
+.back-link {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    text-decoration: none;
+    border-bottom: none !important;
+    display: inline-block;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.back-link:hover {
+    opacity: 1;
+    color: var(--accent-hover);
+    text-shadow: 0 0 8px var(--accent-glow);
+}
