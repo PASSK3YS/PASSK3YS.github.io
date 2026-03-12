@@ -6,14 +6,14 @@ html, body { overflow-x: hidden; }
 :root {
     color-scheme: dark;
     --width: 900px; 
-    --bg: #272121; 
-    --text: #F6E9E9; 
-    --text-muted: #BFAFAF;
-    --accent: #E16428; 
-    --accent-hover: #FFA270;
-    --nav-bg: #302A2A;
-    --border: #4A4040;
-    --accent-glow: rgba(225, 100, 40, 0.15);
+    --bg: #1c2638; 
+    --text: #daf2e9; 
+    --text-muted: #95e0cc;
+    --accent: #f14e52; 
+    --accent-hover: #daf2e9;
+    --nav-bg: #23495d;
+    --border: #39707a;
+    --accent-glow: rgba(241, 78, 82, 0.15);
 
     --sh-comment: #6c7893;
     --sh-keyword: #c678dd;
