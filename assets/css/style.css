@@ -29,12 +29,12 @@ html, body { overflow-x: hidden; }
     color-scheme: light;
     --bg: #ffffff;
     --text: #272121;
-    --text-muted: #7A6F6F;
+    --text-muted: #595050;
     --accent: #E16428;      
     --accent-hover: #c9551e;
     --border: #e8d5d5;      
     --nav-bg: #F6E9E9;      
-    --accent-glow: rgba(225, 100, 40, 0.15);
+    --accent-glow: rgba(225, 100, 40, 0.1);
 }
 
 body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
