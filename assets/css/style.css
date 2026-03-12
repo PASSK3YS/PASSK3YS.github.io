@@ -4,15 +4,25 @@ html, body { overflow-x: hidden; }
 * { box-sizing: border-box; }
 
 :root {
+:root {
     color-scheme: dark;
     --width: 900px; 
-    --bg: #030508; 
-    --text: #edf2fb; 
-    --accent: #7f9cf5; 
-    --accent-hover: #587bf0;
-    --border: #1c2538;
-    --nav-bg: #0b101a;
-    --accent-glow: rgba(127, 156, 245, 0.15);
+    --bg: #272121; 
+    --text: #F6E9E9; 
+    --accent: #E16428; 
+    --accent-hover: #363333;
+    --border: #363333;
+    --nav-bg: #363333;
+    --accent-glow: rgba(225, 100, 40, 0.15);
+
+    --sh-comment: #6c7893;
+    --sh-keyword: #c678dd;
+    --sh-string: #98c379;
+    --sh-class: #e5c07b;
+    --sh-function: #61afef;
+    --sh-variable: #e06c75;
+    --sh-number: #d19a66;
+    --sh-operator: #56b6c2;
 }
 
 [data-theme="light"] {
