@@ -9,7 +9,7 @@ html, body { overflow-x: hidden; }
     --bg: #272121; 
     --text: #F6E9E9; 
     --accent: #E16428; 
-    --accent-hover: #363333;
+    --accent-hover: #FFA270;
     --border: #363333;
     --nav-bg: #363333;
     --accent-glow: rgba(225, 100, 40, 0.15);
