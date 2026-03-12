@@ -6,13 +6,13 @@ html, body { overflow-x: hidden; }
 :root {
     color-scheme: dark;
     --width: 900px; 
-    --bg: #283149; 
-    --text: #DBEDF3; 
-    --accent: #00818A; 
-    --accent-hover: #404B69;
-    --border: #404B69;
-    --nav-bg: #404B69;
-    --accent-glow: rgba(0, 129, 138, 0.15);
+    --bg: #030508; 
+    --text: #edf2fb; 
+    --accent: #7f9cf5; 
+    --accent-hover: #587bf0;
+    --border: #1c2538;
+    --nav-bg: #0b101a;
+    --accent-glow: rgba(127, 156, 245, 0.15);
 }
 
 [data-theme="light"] {
