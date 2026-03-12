@@ -28,14 +28,6 @@ permalink: /tools/
 
     <div style="border: 1px solid var(--border); padding: 20px; border-radius: 8px; background: var(--nav-bg);">
       <h2 style="margin-top: 0;">
-        <a href="/tools/password-tester/" style="text-decoration: none; color: inherit;">Password Strength Tester</a>
-      </h2>
-      <p>Locally test password complexity and crack-time estimation.</p>
-      <a href="/tools/password-tester/" style="font-weight: bold; color: var(--accent);">Open Tool &rarr;</a>
-    </div>
-
-    <div style="border: 1px solid var(--border); padding: 20px; border-radius: 8px; background: var(--nav-bg);">
-      <h2 style="margin-top: 0;">
         <a href="/tools/username-generator/" style="text-decoration: none; color: inherit;">Username Generator</a>
       </h2>
       <p>Generate secure, random usernames with optional keywords and numbers.</p>
