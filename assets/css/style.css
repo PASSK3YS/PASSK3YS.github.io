@@ -28,13 +28,13 @@ html, body { overflow-x: hidden; }
 [data-theme="light"] {
     color-scheme: light;
     --bg: #ffffff;
-    --text: #272121;
-    --text-muted: #595050;
-    --accent: #E16428;      
-    --accent-hover: #c9551e;
-    --border: #e8d5d5;      
-    --nav-bg: #F6E9E9;      
-    --accent-glow: rgba(225, 100, 40, 0.1);
+    --text: #1c2638;
+    --text-muted: #39707a;
+    --accent: #f14e52;      
+    --accent-hover: #9b222b;
+    --border: #95e0cc;      
+    --nav-bg: #daf2e9;      
+    --accent-glow: rgba(241, 78, 82, 0.15);
 }
 
 body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
