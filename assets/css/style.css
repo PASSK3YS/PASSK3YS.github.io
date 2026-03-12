@@ -6,14 +6,14 @@ html, body { overflow-x: hidden; }
 :root {
     color-scheme: dark;
     --width: 900px; 
-    --bg: #2a173b; 
-    --text: #e2e8f0; 
-    --text-muted: #8fa6c4;
-    --accent: #95c5ac; 
-    --accent-hover: #4c5c87;
-    --nav-bg: #3f2c5f;
-    --border: #443f7b;
-    --accent-glow: rgba(149, 197, 172, 0.15);
+    --bg: #272121; 
+    --text: #F6E9E9; 
+    --text-muted: #BFAFAF;
+    --accent: #E16428; 
+    --accent-hover: #FFA270;
+    --nav-bg: #302A2A;
+    --border: #4A4040;
+    --accent-glow: rgba(225, 100, 40, 0.15);
 
     --sh-comment: #6c7893;
     --sh-keyword: #c678dd;
@@ -27,14 +27,14 @@ html, body { overflow-x: hidden; }
 
 [data-theme="light"] {
     color-scheme: light;
-    --bg: #f5f6f8;
-    --text: #2a173b;
-    --text-muted: #69809e;
-    --accent: #443f7b;      
-    --accent-hover: #95c5ac;
-    --border: #dcdfe4;      
-    --nav-bg: #ffffff;      
-    --accent-glow: rgba(68, 63, 123, 0.15);
+    --bg: #ffffff;
+    --text: #272121;
+    --text-muted: #595050;
+    --accent: #E16428;      
+    --accent-hover: #c9551e;
+    --border: #e8d5d5;      
+    --nav-bg: #F6E9E9;      
+    --accent-glow: rgba(225, 100, 40, 0.1);
 }
 
 body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
