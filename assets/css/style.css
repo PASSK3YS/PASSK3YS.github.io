@@ -29,6 +29,7 @@ html, body { overflow-x: hidden; }
     color-scheme: light;
     --bg: #ffffff;
     --text: #272121;
+    --text-muted: #7A6F6F;
     --accent: #E16428;      
     --accent-hover: #c9551e;
     --border: #e8d5d5;      
