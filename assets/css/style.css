@@ -30,11 +30,11 @@ html, body { overflow-x: hidden; }
     --bg: #f4f8fb;
     --text: #201533;
     --text-muted: #203562;
-    --accent: #0098db;      
-    --accent-hover: #1e579c;
-    --border: #0ce6f2;      
+    --accent: #1e579c;      
+    --accent-hover: #0098db;
+    --border: #c4d7e8;      
     --nav-bg: #ffffff;      
-    --accent-glow: rgba(0, 152, 219, 0.15);
+    --accent-glow: rgba(30, 87, 156, 0.15);
 }
 
 body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
