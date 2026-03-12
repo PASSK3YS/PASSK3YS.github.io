@@ -4,7 +4,6 @@ html, body { overflow-x: hidden; }
 * { box-sizing: border-box; }
 
 :root {
-:root {
     color-scheme: dark;
     --width: 900px; 
     --bg: #272121; 
