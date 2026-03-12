@@ -5,7 +5,7 @@ permalink: /tools/recommendations/
 ---
 
 <div class="page-content">
-  <a href="/tools/" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.6; text-decoration: none; border-bottom: none;">&larr; Back to Tools</a>
+<a href="/tools/" class="back-link">&larr; Back to Tools</a>
 
   <h1 style="margin-top: 10px;">Tools and services I recommend</h1>
   <p>This page contains zero affiliate links.<br>

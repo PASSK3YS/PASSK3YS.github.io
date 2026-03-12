@@ -5,7 +5,7 @@ permalink: /tools/standard-notes-themes/
 ---
 
 <div class="page-content">
-  <a href="/tools/" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.6; text-decoration: none; border-bottom: none;">&larr; Back to Tools</a>
+<a href="/tools/" class="back-link">&larr; Back to Tools</a>
 
   <h1 style="margin-top: 10px;">Standard Notes Themes</h1>
   <p>This page contains a collection of my <a href="https://standardnotes.com">Standard Notes</a> themes.</p>

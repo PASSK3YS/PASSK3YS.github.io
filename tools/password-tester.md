@@ -5,7 +5,7 @@ permalink: /tools/password-tester/
 ---
 
 <div class="page-content">
-  <a href="/tools/" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.6; text-decoration: none; border-bottom: none;">&larr; Back to Tools</a>
+<a href="/tools/" class="back-link">&larr; Back to Tools</a>
   
   <h1 style="margin-top: 10px;">Password Strength Tester</h1>
   <p>Check the strength of your passwords locally in your browser. No data is ever sent to a server.</p>
