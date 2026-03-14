@@ -12,8 +12,11 @@ permalink: /contact/
         <div class="grid-item">
             <h3>Email</h3>
             <ul>
-                <li><a href="mailto:hi@colfer.net" target="blank">hi@colfer.net</a></li>
+                <li><a href="mailto:hi@colfer.net" target="_blank">hi@colfer.net</a></li>
             </ul>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; margin-bottom: 0; line-height: 1.4;">
+                If you use Proton Mail, all email communications will be end-to-end encrypted.
+            </p>
         </div>
 
         <div class="grid-item">
