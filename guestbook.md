@@ -13,8 +13,8 @@ permalink: /guestbook/
   </p>
 
   <div style="text-align: center; margin-bottom: 50px;">
-    <a href="/contact/" style="font-size: 1.1rem; font-weight: bold; padding: 12px 24px; border: 2px solid var(--accent); color: var(--accent); border-radius: 8px; display: inline-block; text-decoration: none; box-sizing: border-box; background: transparent;">
-      &#x2709; EMAIL ME TO SIGN THE GUESTBOOK
+    <a href="mailto:guestbook@colfer.net?subject=New%20Guestbook%20Entry" style="font-size: 1.1rem; font-weight: bold; padding: 12px 24px; border: 2px solid var(--accent); color: var(--accent); border-radius: 8px; display: inline-block; text-decoration: none; box-sizing: border-box; background: transparent;">
+      &#x2709; Email me to sign the Guestbook
     </a>
   </div>
 
