@@ -13,15 +13,15 @@ permalink: /guestbook/
   </p>
 
   <div style="text-align: center; margin-bottom: 50px;">
-    <a href="/contact/" class="back-link" style="font-size: 1.1rem; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; display: inline-block;">
-      &#x2709; Email me to sign the guestbook
+    <a href="/contact/" class="back-link" style="font-size: 1.1rem; font-weight: bold; padding: 12px 24px; border: 2px solid var(--accent); color: var(--accent); border-radius: 8px; display: inline-block; text-decoration: none;">
+      &#x2709; EMAIL ME TO SIGN THE GUESTBOOK
     </a>
   </div>
 
   <div style="display: flex; flex-direction: column; gap: 20px;">
 
     <div class="grid-item">
-      <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Lovin' the Coffee theme. Thank you for sharing it!"<p>
+      <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Lovin' the Coffee theme. Thank you for sharing it!"</p>
       <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Anonymous.</p>
       <span style="color: var(--text-muted); font-size: 0.85rem;">August 25, 2025</span>
     </div>
@@ -38,13 +38,13 @@ permalink: /guestbook/
       <span style="color: var(--text-muted); font-size: 0.85rem;">March 13, 2025</span>
     </div>
 
-        <div class="grid-item">
+    <div class="grid-item">
       <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Interesting blog post about the applications you use. As for SimpleLogin, there is also another alternative called Anonaddy. It does the exact same thing but provides unlimited aliases for free but with a cap on bandwidth."</p>
       <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Anonymous.</p>
       <span style="color: var(--text-muted); font-size: 0.85rem;">November 29, 2023</span>
     </div>
 
-        <div class="grid-item">
+    <div class="grid-item">
       <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Hey! Found your blog and read "I like being incognito" (November 22, 2021). You asked if someone can relate and my answer is: YES, absolutely! I think I know exactly what you mean. Thank you for this post!"</p>
       <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Anonymous.</p>
       <span style="color: var(--text-muted); font-size: 0.85rem;">February 21, 2022</span>
