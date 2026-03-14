@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I like being incognito
-description: Loaded up and truckin'.
+description:
 ---
 
 I've noticed a lot of people in this world like to share anything and everything with other people. And I could never understand why. People will post every photo that is on their phone to Instagram or they'll update their Facebook status for the 50th time in one day. I've started noticing a trend where people think they will succeed in being internet famous (or "influencers.").
