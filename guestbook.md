@@ -51,6 +51,12 @@ permalink: /guestbook/
     </div>
 
     <div class="grid-item">
+      <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Thanks for helping me on the standard notes discord server!"</p>
+      <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Spark73</p>
+      <span style="color: var(--text-muted); font-size: 0.85rem;">May 24, 2024</span>
+    </div>
+
+    <div class="grid-item">
       <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Interesting blog post about the applications you use. As for SimpleLogin, there is also another alternative called Anonaddy. It does the exact same thing but provides unlimited aliases for free but with a cap on bandwidth."</p>
       <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Anonymous</p>
       <span style="color: var(--text-muted); font-size: 0.85rem;">November 29, 2023</span>
