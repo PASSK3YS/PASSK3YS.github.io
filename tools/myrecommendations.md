@@ -68,7 +68,7 @@ permalink: /tools/recommendations/
           <h3>📓 Notes</h3>
           <ul>
               <li><a href="https://standardnotes.com" target="_blank">Standard Notes</a></li>
-              <li><a href="https://joplinapp.org" target="_blank">Joplin</a><li>
+              <li><a href="https://joplinapp.org" target="_blank">Joplin</a></li>
           </ul>
       </div>
 
