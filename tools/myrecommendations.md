@@ -114,7 +114,7 @@ permalink: /tools/recommendations/
           <ul>
               <li><a href="https://nextdns.io/" target="_blank">NextDNS</a></li>
               <li><a href="https://controld.com" target="_blank">Control D</a></li>
-              <li><a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank">Mullvad DNS</a><li>
+              <li><a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank">Mullvad DNS</a></chpreli>
           </ul>
       </div>
 
