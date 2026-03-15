@@ -68,6 +68,7 @@ permalink: /tools/recommendations/
           <h3>📓 Notes</h3>
           <ul>
               <li><a href="https://standardnotes.com" target="_blank">Standard Notes</a></li>
+              <li><a href="https://joplinapp.org" target="_blank">Joplin<a/><li>
           </ul>
       </div>
 
@@ -86,6 +87,7 @@ permalink: /tools/recommendations/
           <ul>
               <li><a href="https://ente.io" target="_blank">Ente</a></li>
               <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
+              <li><a href="https://immich.app" target="_blank">Immich</a></li>
           </ul>
       </div>
 
@@ -112,6 +114,7 @@ permalink: /tools/recommendations/
           <ul>
               <li><a href="https://nextdns.io/" target="_blank">NextDNS</a></li>
               <li><a href="https://controld.com" target="_blank">Control D</a></li>
+              <li><a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank">Mullvad DNS<a/><li>
           </ul>
       </div>
 
