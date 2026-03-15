@@ -21,6 +21,18 @@ permalink: /guestbook/
   <div style="display: flex; flex-direction: column; gap: 20px;">
 
     <div class="grid-item">
+      <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Came across your page from the standard notes discord. Keep up the good work."</p>
+      <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Anonymous</p>
+      <span style="color: var(--text-muted); font-size: 0.85rem;">Janurary 11, 2026</span>
+    </div
+
+    <div class="grid-item">
+      <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"I've been using your "Lights Out" theme for Standard Notes and it's my favorite theme on there. Thank you for creating it."</p>
+      <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Calvin</p>
+      <span style="color: var(--text-muted); font-size: 0.85rem;">December 08, 2025</span>
+    </div>
+
+    <div class="grid-item">
       <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Lovin' the Coffee theme. Thank you for sharing it!"</p>
       <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Anonymous</p>
       <span style="color: var(--text-muted); font-size: 0.85rem;">August 25, 2025</span>
