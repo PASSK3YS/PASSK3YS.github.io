@@ -19,7 +19,7 @@ title: About
         <ul>
             <li>X: <a href="https://x.com/PASSK3YS" target="_blank">@PASSK3YS</a></li>
             <li>Discord: passkeys</li>
-            <li>Digg: <a href="https://digg.com/@krn" target="_blank">@krn</a></li>
+            <li>Reddit: <a href="https://reddit.com/u/PASSK3YS" target="_blank">PASSK3YS</a></li>
         </ul>
     </div>
     <div class="grid-item">
