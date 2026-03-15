@@ -43,6 +43,7 @@ permalink: /tools/recommendations/
           <ul>
               <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
               <li><a href="https://filen.io" target="_blank">Filen</a></li>
+              <li><a href="https://cryptomator.org" target="_blank">Cryptomator</a></li>
           </ul>
       </div>
 
