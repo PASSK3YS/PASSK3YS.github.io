@@ -9,6 +9,3 @@ collections:
   docs:
     output: true
     permalink: /docs/:title/
-
-plugins:
-  - jekyll-feedgit add _config.yml
