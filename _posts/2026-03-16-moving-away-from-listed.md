@@ -9,7 +9,7 @@ Since 2020, I've been hosting my blog on the free blogging/journaling platform L
 Lately, however, the experience has degraded to the point I've decided I am going to host my blog on my own website. Here is why I am making the switch.
 
 ## The bot invasion
-One of the great things about Listed is the "Recent Authors" list. It's a chronological feed where you could discover other writers and read genuine human thoughts.
+One of the great things about Listed is the "Recent Authors" list. It's a chronological feed where you ~~can~~ could discover other writers and read genuine human thoughts.
 
 Today, that feed is completely unrecognisable. It has been thoroughly overrun by bots. Instead of personal, honest writing, the platform is now continuously spammed with AI generated slop and fake, SEO driven business blogs. It is incredibly disheartening to see a platform built for focused writing become a dumping ground for this type of content. The genuine bloggers on Listed have been entirely drowned out.
 
