@@ -1,25 +1,27 @@
 ---
 layout: null
 ---
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title><![CDATA[{{ site.title }} - Blog]]></title>
-    <description><![CDATA[The latest blog posts from {{ site.title }}]]></description>
-    <link>{{ site.url }}/blog/</link>
-    <atom:link href="{{ '/feed.xml' | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll</generator>
-    
-    {% for post in site.posts limit:10 %}
-      <item>
-        <title><![CDATA[{{ post.title }}]]></title>
-        <description><![CDATA[{{ post.content | strip_html | normalize_whitespace | truncatewords: 50 }}]]></description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
-      </item>
-    {% endfor %}
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://jekyllrb.com/">Jekyll</generator>
+  <link href="{{ '/feed.xml' | prepend: site.url }}" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}/blog/" rel="alternate" type="text/html" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}/blog/</id>
+  <title type="html">{{ site.title | xml_escape }}</title>
+  <subtitle>The latest blog posts from kieran.colfer.net</subtitle>
+
+  {% for post in site.posts limit:10 %}
+    <entry>
+      <title type="html">{{ post.title | xml_escape }}</title>
+      <link href="{{ post.url | prepend: site.url }}" rel="alternate" type="text/html" />
+      <published>{{ post.date | date_to_xmlschema }}</published>
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <id>{{ post.url | prepend: site.url }}</id>
+      <content type="html" xml:base="{{ post.url | prepend: site.url }}"><![CDATA[{{ post.content }}]]></content>
+      <author>
+          <name>Kieran Colfer</name>
+      </author>
+    </entry>
+  {% endfor %}
+</feed>
