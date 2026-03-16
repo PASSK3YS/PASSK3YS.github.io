@@ -13,6 +13,8 @@ One of the great things about Listed is the "Recent Authors" list. Its a chronol
 
 Today, that feed is completely unrecognisable. It has been thoroughly overrun by bots. Instead of personal, honest writing, the platform is now continuously spammed with AI generated slop and fake, SEO driven business blogs. It is incredibly disheartening to see a platform built for focused writing become a dumping ground for this type of content. The genuine bloggers on Listed have been entirely drowned out.
 
+![AI slop and SEO spam on the recent authors section](https://files.horizon.pics/905f0194-4ae5-4d91-bc97-4b73ee0878e8?a=480&region=eu-central&mime1=image&mime2=jpeg)
+
 ## Constant Access Headaches
 Beyond the decline in platform quality, the backend experience hasn't been so great.
 
