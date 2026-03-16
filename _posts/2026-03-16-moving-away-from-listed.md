@@ -22,6 +22,6 @@ Listed uses a unique authentication model tied to author keys rather than tradit
 
 ## Moving forward
 
-I am currently in the process of building my website and migrating my Listed blog posts over to here. I am going to keep my Listed blog up, but I don't plan to use it going forward. I just hope that the AI slop and SEO spam on the platform is combated in some way so genuine bloggers can have a spotlight on the home page again.
+I am currently in the process of building my website and migrating my Listed blog posts over to here. I am going to keep my Listed blog up, but I don't plan to use it going forward. I just hope that the AI slop and SEO spam on the platform is combated in some way so genuine bloggers can have a spotlight on the home page once again.
 
 Until next time...
