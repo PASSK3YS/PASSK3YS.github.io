@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time for a Change: Why I'm Moving Away from Listed.to
+title: Why I'm Moving Away from Listed.to
 description:
 ---
 
