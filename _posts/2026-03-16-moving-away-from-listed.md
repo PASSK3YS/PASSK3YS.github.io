@@ -18,7 +18,7 @@ Today, that feed is completely unrecognisable. It has been thoroughly overrun by
 ## Constant access headaches
 Beyond the decline in platform quality, the backend experience hasn't been so great.
 
-Listed uses a unique authentication model tied to author keys rather than traditional logins. In theory, this aligns with the Standard Notes security ethos. In practice, it has become a constant hurdle for me personally. I continually lose access to my own blog if I update any part of my domain that's connected to my Listed blog, forcing me to repeatedly go through the tedious process of requesting new author keys just to gain access back to my blog. To be clear, Effie (on the support team) in particular, has always been super helpful getting my author key back, so this is complaint on her part.
+Listed uses a unique authentication model tied to author keys rather than traditional logins. In theory, this aligns with the Standard Notes security ethos. In practice, it has become a constant hurdle for me personally. I continually lose access to my own blog if I update any part of my domain that's connected to my Listed blog, forcing me to repeatedly go through the tedious process of requesting new author keys just to gain access back to my blog.
 
 ## Moving forward
 
