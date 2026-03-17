@@ -8,19 +8,23 @@ permalink: /now/
   <h1 style="margin-top: 0;">My now page</h1>
 
 ## What I'm working on
+
 - My website
 - Creating new Standard Notes themes
 
 ## What I'm playing
+
 - Avatar: Frontiers of Pandora
 - Fortnite
 - Kingdom Come: Deliverance II
 
 ## What I'm watching
+
 - The Beauty on Hulu
 - The Dinosaurs on Netflix
 
 ## What I'm listening to
+
 - My Supermix playlist on YouTube Music
 
 
