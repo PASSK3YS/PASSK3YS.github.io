@@ -12,14 +12,20 @@ permalink: /now/
 - My website
 - Creating new Standard Notes themes
 
+---
+
 ## What I'm playing
 - Avatar: Frontiers of Pandora
 - Fortnite
 - Kingdom Come: Deliverance II
 
+---
+
 ## What I'm watching
-- The Beauty on Hulu
+- Daredevil: Born Again on Disney Plus
 - The Dinosaurs on Netflix
+
+---
 
 ## What I'm listening to
 - My Supermix playlist on YouTube Music
