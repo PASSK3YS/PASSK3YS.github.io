@@ -13,33 +13,33 @@ permalink: /cinema-watchlist/2025/
     font-size: 2.5em;
     color: var(--text);
     margin: 0 0 10px 0;
-}
-.year-subtitle {
-    font-size: 1.8em;
-    margin: 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border);
-    display: inline-block;
-}
 .year-nav {
     display: flex;
     gap: 15px;
     justify-content: center;
+    align-items: center;
 }
 .year-nav a {
     text-decoration: none;
     border-bottom: none !important;
+    padding: 6px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 .year-inactive {
     color: var(--text-muted);
-    transition: color 0.2s ease;
+    opacity: 0.5;
 }
 .year-inactive:hover {
     color: var(--text);
+    opacity: 1;
+    background-color: var(--nav-bg);
 }
 .year-active {
     color: var(--accent);
     font-weight: bold;
+    background-color: var(--border);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 .watch-count {
     display: block;
