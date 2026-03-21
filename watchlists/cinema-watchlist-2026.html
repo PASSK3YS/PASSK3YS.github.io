@@ -16,11 +16,30 @@ permalink: /cinema-watchlist/
 }
 .year-subtitle {
     font-size: 1.8em;
-    color: var(--text-muted);
     margin: 0;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--border);
     display: inline-block;
+}
+.year-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.year-nav a {
+    text-decoration: none;
+    border-bottom: none !important;
+}
+.year-inactive {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+.year-inactive:hover {
+    color: var(--text);
+}
+.year-active {
+    color: var(--accent);
+    font-weight: bold;
 }
 .watch-count {
     display: block;
@@ -30,26 +49,6 @@ permalink: /cinema-watchlist/
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-.search-container {
-    text-align: center;
-    margin-bottom: 40px;
-}
-#searchInput {
-    padding: 12px 20px;
-    width: 100%;
-    max-width: 400px;
-    font-size: 1em;
-    background-color: var(--bg);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 25px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-#searchInput:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 10px var(--accent-glow);
 }
 .movie-grid {
     display: grid;
@@ -107,12 +106,11 @@ permalink: /cinema-watchlist/
 
 <div class="page-header">
     <h1 class="main-title">Cinema Watchlist</h1>
-    <h2 class="year-subtitle">2026</h2>
-    <span class="watch-count" id="totalCount">Total Watched: 0</span>
-</div>
-
-<div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search my watched movies...">
+    <h2 class="year-subtitle year-nav">
+        <a href="/cinema-watchlist/2025/" class="year-inactive">2025</a>
+        <a href="#" class="year-active">2026</a>
+    </h2>
+    <span class="watch-count" id="totalCount"></span>
 </div>
 
 <div class="movie-grid" id="movieGrid">
@@ -154,30 +152,7 @@ permalink: /cinema-watchlist/
 </div>
 
 <script>
-    const searchInput = document.getElementById('searchInput');
     const movieCards = document.querySelectorAll('.movie-card');
     const totalCountDisplay = document.getElementById('totalCount');
-
     totalCountDisplay.textContent = `Total Watched: ${movieCards.length}`;
-
-    searchInput.addEventListener('keyup', function() {
-        const query = searchInput.value.toLowerCase();
-        let visibleCount = 0;
-
-        movieCards.forEach(card => {
-            const title = card.querySelector('.movie-title').textContent.toLowerCase();
-            if (title.includes(query)) {
-                card.style.display = 'flex';
-                visibleCount++;
-            } else {
-                card.style.display = 'none';
-            }
-        });
-
-        if (query === "") {
-            totalCountDisplay.textContent = `Total Watched: ${movieCards.length}`;
-        } else {
-            totalCountDisplay.textContent = `Found: ${visibleCount}`;
-        }
-    });
 </script>
