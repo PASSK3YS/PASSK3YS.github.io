@@ -1,0 +1,305 @@
+---
+layout: default
+title: Cinema Watchlist - 2025
+permalink: /cinema-watchlist/2025/
+---
+
+<style>
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.main-title {
+    font-size: 2.5em;
+    color: var(--text);
+    margin: 0 0 10px 0;
+}
+.year-subtitle {
+    font-size: 1.8em;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+    display: inline-block;
+}
+.year-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.year-nav a {
+    text-decoration: none;
+    border-bottom: none !important;
+}
+.year-inactive {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+.year-inactive:hover {
+    color: var(--text);
+}
+.year-active {
+    color: var(--accent);
+    font-weight: bold;
+}
+.watch-count {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.movie-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+.movie-thumbnail {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    background-color: var(--bg);
+    flex-shrink: 0;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 1px solid var(--border);
+}
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.movie-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: var(--text);
+    line-height: 1.3;
+}
+.movie-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+</style>
+
+<div class="page-header">
+    <h1 class="main-title">Cinema Watchlist</h1>
+    <h2 class="year-subtitle year-nav">
+        <a href="#" class="year-active">2025</a>
+        <a href="/cinema-watchlist/" class="year-inactive">2026</a>
+    </h2>
+    <span class="watch-count" id="totalCount">Total Watched: 0</span>
+</div>
+
+<div class="movie-grid" id="movieGrid">
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Avatar:+Fire+and+Ash" alt="Avatar: Fire and Ash">
+        <div class="movie-info">
+            <h2 class="movie-title">Avatar: Fire and Ash</h2>
+            <p class="movie-date">19 Dec</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Five+Nights+at+Freddys+2" alt="Five Night's at Freddy's 2">
+        <div class="movie-info">
+            <h2 class="movie-title">Five Night's at Freddy's 2</h2>
+            <p class="movie-date">13 Dec</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=The+Running+Man" alt="The Running Man">
+        <div class="movie-info">
+            <h2 class="movie-title">The Running Man</h2>
+            <p class="movie-date">15 Nov</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Black+Phone+2" alt="Black Phone 2">
+        <div class="movie-info">
+            <h2 class="movie-title">Black Phone 2</h2>
+            <p class="movie-date">18 Oct</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=The+Smashing+Machine" alt="The Smashing Machine">
+        <div class="movie-info">
+            <h2 class="movie-title">The Smashing Machine</h2>
+            <p class="movie-date">04 Oct</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Pirates+of+the+Caribbean" alt="Pirates of the Caribbean: Curse of the Black Pearl">
+        <div class="movie-info">
+            <h2 class="movie-title">Pirates of the Caribbean: Curse of the Black Pearl</h2>
+            <p class="movie-date">21 Sep</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=The+Conjuring:+Last+Rites" alt="The Conjuring: Last Rites">
+        <div class="movie-info">
+            <h2 class="movie-title">The Conjuring: Last Rites</h2>
+            <p class="movie-date">06 Sep</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Weapons" alt="Weapons">
+        <div class="movie-info">
+            <h2 class="movie-title">Weapons</h2>
+            <p class="movie-date">16 Aug</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=The+Naked+Gun" alt="The Naked Gun">
+        <div class="movie-info">
+            <h2 class="movie-title">The Naked Gun</h2>
+            <p class="movie-date">02 Aug</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=The+Fantastic+Four" alt="The Fantastic Four: First Steps">
+        <div class="movie-info">
+            <h2 class="movie-title">The Fantastic Four: First Steps</h2>
+            <p class="movie-date">26 Jul</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Superman" alt="Superman">
+        <div class="movie-info">
+            <h2 class="movie-title">Superman</h2>
+            <p class="movie-date">12 Jul</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Jurassic+World+Rebirth" alt="Jurassic World Rebirth">
+        <div class="movie-info">
+            <h2 class="movie-title">Jurassic World Rebirth</h2>
+            <p class="movie-date">02 Jul</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=F1:+The+Movie" alt="F1: The Movie">
+        <div class="movie-info">
+            <h2 class="movie-title">F1: The Movie</h2>
+            <p class="movie-date">28 Jun</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=M3GAN+2.0" alt="M3GAN 2.0">
+        <div class="movie-info">
+            <h2 class="movie-title">M3GAN 2.0</h2>
+            <p class="movie-date">27 Jun</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=28+Years+Later" alt="28 Years Later">
+        <div class="movie-info">
+            <h2 class="movie-title">28 Years Later</h2>
+            <p class="movie-date">19 Jun</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=How+To+Train+Your+Dragon" alt="How To Train Your Dragon">
+        <div class="movie-info">
+            <h2 class="movie-title">How To Train Your Dragon</h2>
+            <p class="movie-date">15 Jun</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Karate+Kid:+Legends" alt="Karate Kid: Legends">
+        <div class="movie-info">
+            <h2 class="movie-title">Karate Kid: Legends</h2>
+            <p class="movie-date">28 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Mission:+Impossible" alt="Mission: Impossible - The Final Reckoning">
+        <div class="movie-info">
+            <h2 class="movie-title">Mission: Impossible - The Final Reckoning</h2>
+            <p class="movie-date">24 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Final+Destination+Bloodlines" alt="Final Destination Bloodlines">
+        <div class="movie-info">
+            <h2 class="movie-title">Final Destination Bloodlines</h2>
+            <p class="movie-date">17 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Sinners" alt="Sinners">
+        <div class="movie-info">
+            <h2 class="movie-title">Sinners</h2>
+            <p class="movie-date">03 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Thunderbolts" alt="Thunderbolts*">
+        <div class="movie-info">
+            <h2 class="movie-title">Thunderbolts*</h2>
+            <p class="movie-date">02 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=A+Minecraft+Movie" alt="A Minecraft Movie">
+        <div class="movie-info">
+            <h2 class="movie-title">A Minecraft Movie</h2>
+            <p class="movie-date">04 Apr</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Novocaine" alt="Novocaine">
+        <div class="movie-info">
+            <h2 class="movie-title">Novocaine</h2>
+            <p class="movie-date">26 Mar</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Captain+America" alt="Captain America: Brave New World">
+        <div class="movie-info">
+            <h2 class="movie-title">Captain America: Brave New World</h2>
+            <p class="movie-date">14 Feb</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Heart+Eyes" alt="Heart Eyes">
+        <div class="movie-info">
+            <h2 class="movie-title">Heart Eyes</h2>
+            <p class="movie-date">08 Feb</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://via.placeholder.com/300x450/1a1a1a/ffffff?text=Flight+Risk" alt="Flight Risk">
+        <div class="movie-info">
+            <h2 class="movie-title">Flight Risk</h2>
+            <p class="movie-date">25 Jan</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const movieCards = document.querySelectorAll('.movie-card');
+    const totalCountDisplay = document.getElementById('totalCount');
+    totalCountDisplay.textContent = `Total Watched: ${movieCards.length}`;
+</script>
