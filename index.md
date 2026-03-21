@@ -42,7 +42,7 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
-    <div class="grid-item" style="grid-column: 1 / -1;">
+    <div class="grid-item">
         <h3>Latest Post</h3>
         <div id="latest-blog-container">
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
