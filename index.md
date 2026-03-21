@@ -37,13 +37,13 @@ title: About
         </ul>
     </div>
     <div class="grid-item">
-        <h3>Latest Watch</h3>
+        <h3>Latest watch at Cinema</h3>
         <div id="latest-movie-container">
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
     <div class="grid-item">
-        <h3>Latest Post</h3>
+        <h3>Latest post</h3>
         <div id="latest-blog-container">
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
