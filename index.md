@@ -42,6 +42,12 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
+    <div class="grid-item" style="grid-column: 1 / -1;">
+        <h3>Latest Post</h3>
+        <div id="latest-blog-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -131,15 +137,38 @@ title: About
     font-weight: bold;
 }
 
-.latest-movie-link-wrapper {
+.latest-movie-link-wrapper, .latest-blog-link-wrapper {
     text-decoration: none !important;
     display: block;
     opacity: 1 !important;
 }
 
-.latest-movie-link-wrapper:hover .latest-movie-title {
+.latest-movie-link-wrapper:hover .latest-movie-title, 
+.latest-blog-link-wrapper:hover .latest-blog-title {
     color: var(--accent);
     text-decoration: underline;
+}
+
+.latest-blog-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.latest-blog-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+.latest-blog-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 </style>
 
@@ -172,5 +201,42 @@ fetch('/cinema-watchlist/2026/')
     })
     .catch(error => {
         document.getElementById('latest-movie-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Watchlist unavailable</p>';
+    });
+
+fetch('/blog.html')
+    .then(response => response.text())
+    .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const firstPostLink = doc.querySelector('.post-link');
+        const firstPostMeta = doc.querySelector('.post-meta');
+
+        if (firstPostLink) {
+            const title = firstPostLink.textContent;
+            const url = firstPostLink.getAttribute('href');
+            const date = firstPostMeta ? firstPostMeta.textContent : 'Recent';
+            const container = document.getElementById('latest-blog-container');
+            
+            container.innerHTML = `
+                <a href="${url}" class="latest-blog-link-wrapper">
+                    <div class="latest-blog-content">
+                        <p class="latest-blog-title">${title}</p>
+                        <p class="latest-blog-date">${date}</p>
+                    </div>
+                </a>
+            `;
+        } else {
+            document.getElementById('latest-blog-container').innerHTML = `
+                <a href="/blog.html" class="latest-blog-link-wrapper">
+                    <div class="latest-blog-content">
+                        <p class="latest-blog-title">Check out my latest thoughts</p>
+                        <p class="latest-blog-date">Read the Blog &rarr;</p>
+                    </div>
+                </a>
+            `;
+        }
+    })
+    .catch(error => {
+        document.getElementById('latest-blog-container').innerHTML = '<a href="/blog.html" style="color: var(--accent);">Visit Blog</a>';
     });
 </script>
