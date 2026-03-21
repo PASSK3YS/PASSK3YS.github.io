@@ -203,18 +203,21 @@ fetch('/cinema-watchlist/2026/')
         document.getElementById('latest-movie-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Watchlist unavailable</p>';
     });
 
-fetch('/blog.html')
+fetch('/blog/')
     .then(response => response.text())
     .then(html => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
-        const firstPostLink = doc.querySelector('.post-link');
-        const firstPostMeta = doc.querySelector('.post-meta');
+        const firstPost = doc.querySelector('.post-list > div');
 
-        if (firstPostLink) {
-            const title = firstPostLink.textContent;
-            const url = firstPostLink.getAttribute('href');
-            const date = firstPostMeta ? firstPostMeta.textContent : 'Recent';
+        if (firstPost) {
+            const titleElement = firstPost.querySelector('h2 a');
+            const title = titleElement ? titleElement.textContent.trim() : 'Latest Post';
+            const url = titleElement ? titleElement.getAttribute('href') : '/blog/';
+            
+            const dateElement = firstPost.querySelector('div');
+            const date = dateElement ? dateElement.textContent.trim() : 'Recent';
+            
             const container = document.getElementById('latest-blog-container');
             
             container.innerHTML = `
@@ -227,16 +230,16 @@ fetch('/blog.html')
             `;
         } else {
             document.getElementById('latest-blog-container').innerHTML = `
-                <a href="/blog.html" class="latest-blog-link-wrapper">
+                <a href="/blog/" class="latest-blog-link-wrapper">
                     <div class="latest-blog-content">
                         <p class="latest-blog-title">Check out my latest thoughts</p>
-                        <p class="latest-blog-date">Read the Blog &rarr;</p>
+                        <p class="latest-blog-date">Read the Blog →</p>
                     </div>
                 </a>
             `;
         }
     })
     .catch(error => {
-        document.getElementById('latest-blog-container').innerHTML = '<a href="/blog.html" style="color: var(--accent);">Visit Blog</a>';
+        document.getElementById('latest-blog-container').innerHTML = '<a href="/blog/" style="color: var(--accent);">Visit Blog</a>';
     });
 </script>
