@@ -36,6 +36,12 @@ title: About
             <li>Steam: <a href="https://steamcommunity.com/id/m00t316/" target="_blank">m00t316</a></li>
         </ul>
     </div>
+    <div class="grid-item">
+        <h3>Latest Watch</h3>
+        <div id="latest-movie-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -88,4 +94,83 @@ title: About
     color: var(--accent);
     text-decoration: underline;
 }
+
+.latest-movie-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none !important;
+}
+
+.latest-movie-thumb {
+    width: 60px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+.latest-movie-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.latest-movie-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.latest-movie-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.latest-movie-link-wrapper {
+    text-decoration: none !important;
+    display: block;
+    opacity: 1 !important;
+}
+
+.latest-movie-link-wrapper:hover .latest-movie-title {
+    color: var(--accent);
+    text-decoration: underline;
+}
 </style>
+
+<script>
+fetch('/cinema-watchlist/2026/')
+    .then(response => response.text())
+    .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const firstMovie = doc.querySelector('.movie-card');
+
+        if (firstMovie) {
+            const imgSrc = firstMovie.querySelector('.movie-thumbnail').src;
+            const title = firstMovie.querySelector('.movie-title').textContent;
+            const date = firstMovie.querySelector('.movie-date').textContent;
+            const container = document.getElementById('latest-movie-container');
+            
+            container.innerHTML = `
+                <a href="/cinema-watchlist/2026/" class="latest-movie-link-wrapper">
+                    <div class="latest-movie-content">
+                        <img src="${imgSrc}" alt="${title}" class="latest-movie-thumb">
+                        <div class="latest-movie-info">
+                            <p class="latest-movie-title">${title}</p>
+                            <p class="latest-movie-date">${date}</p>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+    })
+    .catch(error => {
+        document.getElementById('latest-movie-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Watchlist unavailable</p>';
+    });
+</script>
