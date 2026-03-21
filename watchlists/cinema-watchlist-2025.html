@@ -43,13 +43,37 @@ permalink: /cinema-watchlist/2025/
     box-shadow: 0 0 10px var(--accent-glow);
 }
 .watch-count {
-    display: block;
-    margin-top: 15px;
     font-size: 0.9rem;
     font-weight: bold;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+.controls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+.sort-btn {
+    background-color: var(--nav-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sort-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 .movie-grid {
     display: grid;
@@ -103,33 +127,6 @@ permalink: /cinema-watchlist/2025/
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
-.controls-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 15px;
-}
-.sort-btn {
-    background-color: var(--nav-bg);
-    color: var(--text);
-    border: 1px solid var(--border);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.sort-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    box-shadow: 0 0 10px var(--accent-glow);
-}
 </style>
 
 <div class="page-header">
@@ -139,7 +136,10 @@ permalink: /cinema-watchlist/2025/
         <a href="#" class="year-active">2025</a>
         <a href="/cinema-watchlist/2026/" class="year-inactive">2026</a>
     </h2>
-    <span class="watch-count" id="totalCount"></span>
+    <div class="controls-container">
+        <span class="watch-count" id="totalCount"></span>
+        <button class="sort-btn" id="sortToggle">⬇️ Newest First</button>
+    </div>
 </div>
 
 <div class="movie-grid" id="movieGrid">
@@ -331,4 +331,30 @@ permalink: /cinema-watchlist/2025/
     const movieCards = document.querySelectorAll('.movie-card');
     const totalCountDisplay = document.getElementById('totalCount');
     totalCountDisplay.textContent = `Total Watched: ${movieCards.length}`;
+
+    const sortToggle = document.getElementById('sortToggle');
+    const movieGrid = document.getElementById('movieGrid');
+    let isNewestFirst = true;
+
+    sortToggle.addEventListener('click', function() {
+        isNewestFirst = !isNewestFirst;
+        sortToggle.textContent = isNewestFirst ? '⬇️ Newest First' : '⬆️ Oldest First';
+
+        const cardsArray = Array.from(movieCards);
+
+        cardsArray.sort(function(a, b) {
+            const dateA = new Date(a.querySelector('.movie-date').textContent + ' 2025');
+            const dateB = new Date(b.querySelector('.movie-date').textContent + ' 2025');
+
+            if (isNewestFirst) {
+                return dateB - dateA;
+            } else {
+                return dateA - dateB;
+            }
+        });
+
+        cardsArray.forEach(function(card) {
+            movieGrid.appendChild(card);
+        });
+    });
 </script>
