@@ -48,6 +48,14 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
+    <div class="grid-item">
+        <h3>Guestbook</h3>
+        <a href="/guestbook/" class="latest-blog-link-wrapper">
+            <div class="latest-blog-content">
+                <p class="latest-blog-title">Sign my guestbook</p>
+            </div>
+        </a>
+    </div>
 </div>
 
 <style>
