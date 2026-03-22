@@ -195,8 +195,8 @@ title: About
 </style>
 
 <script>
-const lastFmUsername = 'YOUR_LASTFM_USERNAME';
-const lastFmApiKey = 'YOUR_LASTFM_API_KEY';
+const lastFmUsername = 'passkeys';
+const lastFmApiKey = 'f2c5cc826164e5dd05f8fb573083b524';
 
 fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUsername}&api_key=${lastFmApiKey}&format=json&limit=1`)
     .then(response => response.json())
