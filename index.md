@@ -161,6 +161,7 @@ title: About
 
 .latest-movie-link-wrapper, .latest-blog-link-wrapper {
     text-decoration: none !important;
+    border-bottom: none !important;
     display: block;
     opacity: 1 !important;
 }
@@ -168,6 +169,7 @@ title: About
 .latest-movie-link-wrapper:hover, 
 .latest-blog-link-wrapper:hover {
     text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .latest-movie-link-wrapper:hover .latest-movie-title, 
