@@ -146,6 +146,7 @@ title: About
 .latest-movie-info {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .latest-movie-title {
@@ -171,6 +172,9 @@ title: About
     border-bottom: none !important;
     display: block;
     opacity: 1 !important;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5px;
 }
 
 .latest-movie-link-wrapper:hover, 
@@ -263,11 +267,28 @@ title: About
 .spotify-active .latest-movie-date {
     color: rgba(255, 255, 255, 0.7) !important;
 }
+
+.song-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #1DB954;
+    border-radius: 2px;
+    width: 0%;
+    animation: song-fill 210s linear forwards;
+}
+
+@keyframes song-fill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
 </style>
 
 <script>
 const lastFmUsername = 'passkeys';
 const lastFmApiKey = 'f2c5cc826164e5dd05f8fb573083b524';
+let currentSpotifyState = '';
 
 function fetchSpotifyData() {
     fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUsername}&api_key=${lastFmApiKey}&format=json&limit=1`)
@@ -276,14 +297,12 @@ function fetchSpotifyData() {
             const spotifyCard = document.getElementById('spotify-card');
             const spotifyBgLayer = document.getElementById('spotify-bg-layer');
 
-            if (data.error) {
-                document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Check API Keys</p>';
-                spotifyCard.classList.remove('spotify-active');
-                return;
-            }
-            if (!data.recenttracks || !data.recenttracks.track || data.recenttracks.track.length === 0) {
-                document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Play a song on Spotify first!</p>';
-                spotifyCard.classList.remove('spotify-active');
+            if (data.error || !data.recenttracks || !data.recenttracks.track || data.recenttracks.track.length === 0) {
+                if (currentSpotifyState !== 'error') {
+                    document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Spotify unavailable</p>';
+                    spotifyCard.classList.remove('spotify-active');
+                    currentSpotifyState = 'error';
+                }
                 return;
             }
 
@@ -291,26 +310,35 @@ function fetchSpotifyData() {
             const title = track.name;
             const artist = track.artist['#text'];
             const img = track.image[3]['#text'] || track.image[2]['#text'] || 'https://via.placeholder.com/85x85/1a1a1a/ffffff?text=Spotify';
+            const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
+            
+            const newState = `${title}-${artist}-${isPlaying}`;
+            if (currentSpotifyState === newState) {
+                return; 
+            }
+            currentSpotifyState = newState;
             
             const searchQuery = encodeURIComponent(`${title} ${artist}`);
             const url = `https://open.spotify.com/search/${searchQuery}`;
             
-            const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
-            
             spotifyBgLayer.style.backgroundImage = `url('${img}')`;
-            spotifyCard.classList.add('spotify-active');
             
             let statusTextHTML = '';
+            let progressBarHTML = '';
+            
             if (isPlaying) {
+                spotifyCard.classList.add('spotify-active');
                 statusTextHTML = `Now Playing <span class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>`;
+                progressBarHTML = `<div class="song-progress-bar"></div>`;
             } else {
+                spotifyCard.classList.add('spotify-active');
                 let timeString = '';
                 if (track.date && track.date.uts) {
                     const diffMins = Math.floor((Date.now() - (track.date.uts * 1000)) / 60000);
-                    if (diffMins < 1) timeString = ' &bull; JUST NOW';
-                    else if (diffMins < 60) timeString = ` &bull; ${diffMins} MINS AGO`;
-                    else if (diffMins < 1440) timeString = ` &bull; ${Math.floor(diffMins / 60)} HRS AGO`;
-                    else timeString = ` &bull; ${Math.floor(diffMins / 1440)} DAYS AGO`;
+                    if (diffMins < 1) timeString = ' • JUST NOW';
+                    else if (diffMins < 60) timeString = ` • ${diffMins} MINS AGO`;
+                    else if (diffMins < 1440) timeString = ` • ${Math.floor(diffMins / 60)} HRS AGO`;
+                    else timeString = ` • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                 }
                 statusTextHTML = `Last Played${timeString}`;
             }
@@ -327,13 +355,11 @@ function fetchSpotifyData() {
                             <p class="latest-movie-date" style="text-transform: none;">${artist}</p>
                         </div>
                     </div>
+                    ${progressBarHTML}
                 </a>
             `;
         })
-        .catch(() => {
-            document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Spotify unavailable</p>';
-            document.getElementById('spotify-card').classList.remove('spotify-active');
-        });
+        .catch(() => {});
 }
 
 fetchSpotifyData();
