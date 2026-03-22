@@ -57,7 +57,7 @@ title: About
         </div>
     </div>
     <div class="grid-item" style="grid-column: 1 / -1;">
-        <h3>Listening to</h3>
+        <h3>I'm currently listening to...</h3>
         <div id="spotify-container">
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading Spotify...</p>
         </div>
