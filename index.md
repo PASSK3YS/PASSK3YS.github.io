@@ -165,6 +165,11 @@ title: About
     opacity: 1 !important;
 }
 
+.latest-movie-link-wrapper:hover, 
+.latest-blog-link-wrapper:hover {
+    text-decoration: none !important;
+}
+
 .latest-movie-link-wrapper:hover .latest-movie-title, 
 .latest-blog-link-wrapper:hover .latest-blog-title {
     color: var(--accent);
