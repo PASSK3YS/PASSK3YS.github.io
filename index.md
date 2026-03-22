@@ -49,6 +49,12 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
+    <div class="grid-item">
+        <h3>Last played game</h3>
+        <div id="xbox-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading Xbox...</p>
+        </div>
+    </div>
     <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden;">
         <div id="spotify-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
@@ -307,6 +313,7 @@ title: About
 <script>
 const lastFmUsername = 'passkeys';
 const lastFmApiKey = 'f2c5cc826164e5dd05f8fb573083b524';
+const cloudflareWorkerUrl = 'https://xbox-tracker.snowy-scene-5750.workers.dev';
 let currentSpotifyState = '';
 
 function fetchSpotifyData() {
@@ -380,6 +387,30 @@ function fetchSpotifyData() {
 
 fetchSpotifyData();
 setInterval(fetchSpotifyData, 5000);
+
+fetch(cloudflareWorkerUrl)
+    .then(response => response.json())
+    .then(data => {
+        if (data.error || !data.name) {
+            document.getElementById('xbox-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Xbox unavailable</p>';
+            return;
+        }
+        const img = data.image || 'https://via.placeholder.com/60x90/1a1a1a/ffffff?text=Xbox';
+        document.getElementById('xbox-container').innerHTML = `
+            <a href="https://account.xbox.com/en-gb/profile?gamertag=m00t" target="_blank" class="latest-movie-link-wrapper">
+                <div class="latest-movie-content">
+                    <img src="${img}" alt="${data.name}" class="latest-movie-thumb">
+                    <div class="latest-movie-info">
+                        <p class="latest-movie-title">${data.name}</p>
+                        <p class="latest-movie-date">Xbox</p>
+                    </div>
+                </div>
+            </a>
+        `;
+    })
+    .catch(() => {
+        document.getElementById('xbox-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Xbox unavailable</p>';
+    });
 
 fetch('/cinema-watchlist/2026/')
     .then(response => response.text())
