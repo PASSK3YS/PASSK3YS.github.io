@@ -37,6 +37,12 @@ title: About
         </ul>
     </div>
     <div class="grid-item">
+        <h3>Listening to</h3>
+        <div id="spotify-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading Spotify...</p>
+        </div>
+    </div>
+    <div class="grid-item">
         <h3>Latest watch at Cinema</h3>
         <div id="latest-movie-container">
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
@@ -124,6 +130,14 @@ title: About
     border: 1px solid var(--border);
 }
 
+.spotify-thumb {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
 .latest-movie-info {
     display: flex;
     flex-direction: column;
@@ -181,6 +195,39 @@ title: About
 </style>
 
 <script>
+const lastFmUsername = 'passkeys';
+const lastFmApiKey = 'f2c5cc826164e5dd05f8fb573083b524';
+
+fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUsername}&api_key=${lastFmApiKey}&format=json&limit=1`)
+    .then(response => response.json())
+    .then(data => {
+        const track = data.recenttracks.track[0];
+        const title = track.name;
+        const artist = track.artist['#text'];
+        const img = track.image[2]['#text'] || 'https://via.placeholder.com/65x65/1a1a1a/ffffff?text=Spotify';
+        const url = track.url;
+        const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
+        
+        const statusText = isPlaying ? 'Now Playing 🎵' : 'Last Played';
+        const statusColor = isPlaying ? '#1DB954' : 'var(--text-muted)';
+
+        document.getElementById('spotify-container').innerHTML = `
+            <a href="${url}" target="_blank" class="latest-movie-link-wrapper">
+                <div class="latest-movie-content">
+                    <img src="${img}" alt="${title}" class="spotify-thumb">
+                    <div class="latest-movie-info">
+                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0;">${statusText}</p>
+                        <p class="latest-movie-title">${title}</p>
+                        <p class="latest-movie-date" style="color: var(--text-muted); text-transform: none;">${artist}</p>
+                    </div>
+                </div>
+            </a>
+        `;
+    })
+    .catch(() => {
+        document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Spotify unavailable</p>';
+    });
+
 fetch('/cinema-watchlist/2026/')
     .then(response => response.text())
     .then(html => {
@@ -192,9 +239,8 @@ fetch('/cinema-watchlist/2026/')
             const imgSrc = firstMovie.querySelector('.movie-thumbnail').src;
             const title = firstMovie.querySelector('.movie-title').textContent;
             const date = firstMovie.querySelector('.movie-date').textContent;
-            const container = document.getElementById('latest-movie-container');
             
-            container.innerHTML = `
+            document.getElementById('latest-movie-container').innerHTML = `
                 <a href="/cinema-watchlist/2026/" class="latest-movie-link-wrapper">
                     <div class="latest-movie-content">
                         <img src="${imgSrc}" alt="${title}" class="latest-movie-thumb">
@@ -207,7 +253,7 @@ fetch('/cinema-watchlist/2026/')
             `;
         }
     })
-    .catch(error => {
+    .catch(() => {
         document.getElementById('latest-movie-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Watchlist unavailable</p>';
     });
 
@@ -226,9 +272,7 @@ fetch('/blog/')
             const dateElement = firstPost.querySelector('div');
             const date = dateElement ? dateElement.textContent.trim() : 'Recent';
             
-            const container = document.getElementById('latest-blog-container');
-            
-            container.innerHTML = `
+            document.getElementById('latest-blog-container').innerHTML = `
                 <a href="${url}" class="latest-blog-link-wrapper">
                     <div class="latest-blog-content">
                         <p class="latest-blog-title">${title}</p>
@@ -247,7 +291,7 @@ fetch('/blog/')
             `;
         }
     })
-    .catch(error => {
+    .catch(() => {
         document.getElementById('latest-blog-container').innerHTML = '<a href="/blog/" style="color: var(--accent);">Visit Blog</a>';
     });
 </script>
