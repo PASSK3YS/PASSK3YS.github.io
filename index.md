@@ -197,6 +197,31 @@ title: About
     text-transform: uppercase;
     font-weight: bold;
 }
+
+.playing-indicator {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 10px;
+    margin-left: 6px;
+}
+
+.playing-indicator .bar {
+    width: 3px;
+    background-color: #1DB954;
+    animation: eq-bounce 1s infinite ease-in-out;
+    transform-origin: bottom;
+    border-radius: 2px;
+}
+
+.playing-indicator .bar:nth-child(1) { height: 8px; animation-delay: 0s; }
+.playing-indicator .bar:nth-child(2) { height: 11px; animation-delay: 0.2s; }
+.playing-indicator .bar:nth-child(3) { height: 7px; animation-delay: 0.4s; }
+
+@keyframes eq-bounce {
+    0%, 100% { transform: scaleY(0.4); }
+    50% { transform: scaleY(1); }
+}
 </style>
 
 <script>
@@ -225,7 +250,14 @@ function fetchSpotifyData() {
             const url = `https://open.spotify.com/search/${searchQuery}`;
             
             const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
-            const statusText = isPlaying ? 'Now Playing 🎵' : 'Last Played';
+            
+            let statusTextHTML = '';
+            if (isPlaying) {
+                statusTextHTML = `Now Playing <div class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>`;
+            } else {
+                statusTextHTML = 'Last Played';
+            }
+            
             const statusColor = isPlaying ? '#1DB954' : 'var(--text-muted)';
 
             document.getElementById('spotify-container').innerHTML = `
@@ -233,7 +265,7 @@ function fetchSpotifyData() {
                     <div class="latest-movie-content">
                         <img src="${img}" alt="${title}" class="spotify-thumb">
                         <div class="latest-movie-info">
-                            <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0;">${statusText}</p>
+                            <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center;">${statusTextHTML}</p>
                             <p class="latest-movie-title">${title}</p>
                             <p class="latest-movie-date" style="color: var(--text-muted); text-transform: none;">${artist}</p>
                         </div>
