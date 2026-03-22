@@ -55,19 +55,19 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading Xbox...</p>
         </div>
     </div>
-    <div class="grid-item" id="music-card" style="grid-column: 1 / -1; position: relative; overflow: hidden;">
-        <div id="music-bg-layer"></div>
+    <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden;">
+        <div id="spotify-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
-            <div class="music-header">
+            <div class="spotify-header">
                 <h3>I'm currently listening to...</h3>
-                <a href="https://music.youtube.com/" target="_blank" class="music-logo-link">
-                    <svg viewBox="0 0 24 24" width="26" height="26" fill="#FF0000">
-                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.016 12.396l-6.843 4.106A.464.464 0 019.5 16.104V7.896a.464.464 0 01.673-.398l6.843 4.106a.465.465 0 010 .792z"/>
+                <a href="https://open.spotify.com/user/iplkfu8oka623d0rj6p7xsfyh?si=9452da697dd143af" target="_blank" class="spotify-logo-link">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="#1DB954">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
                     </svg>
                 </a>
             </div>
-            <div id="music-container">
-                <p style="font-size: 0.9em; color: var(--text-muted);">Loading Music...</p>
+            <div id="spotify-container">
+                <p style="font-size: 0.9em; color: var(--text-muted);">Loading Spotify...</p>
             </div>
         </div>
     </div>
@@ -140,7 +140,7 @@ title: About
     border: 1px solid var(--border);
 }
 
-.music-thumb-large {
+.spotify-thumb-large {
     width: 85px;
     height: 85px;
     object-fit: cover;
@@ -227,7 +227,7 @@ title: About
 
 .playing-indicator .bar {
     width: 3px;
-    background-color: #FF0000;
+    background-color: #1DB954;
     animation: eq-bounce 1s infinite ease-in-out;
     transform-origin: bottom;
     border-radius: 2px;
@@ -242,7 +242,7 @@ title: About
     50% { transform: scaleY(1); }
 }
 
-#music-bg-layer {
+#spotify-bg-layer {
     position: absolute;
     top: -30px;
     left: -30px;
@@ -257,7 +257,7 @@ title: About
     pointer-events: none;
 }
 
-.music-header {
+.spotify-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -267,13 +267,13 @@ title: About
     transition: border-color 0.5s ease;
 }
 
-.grid-item .music-header h3 {
+.grid-item .spotify-header h3 {
     margin: 0;
     padding: 0;
     border-bottom: none;
 }
 
-.music-logo-link {
+.spotify-logo-link {
     display: flex;
     align-items: center;
     opacity: 0.8;
@@ -282,37 +282,37 @@ title: About
     border-bottom: none !important;
 }
 
-.music-logo-link:hover {
+.spotify-logo-link:hover {
     opacity: 1;
     transform: scale(1.1);
     text-decoration: none !important;
     border-bottom: none !important;
 }
 
-.music-active #music-bg-layer {
+.spotify-active #spotify-bg-layer {
     opacity: 1;
 }
 
-.music-active h3 {
+.spotify-active h3 {
     color: #ffffff !important;
 }
 
-.music-active .music-header {
+.spotify-active .spotify-header {
     border-bottom-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.music-active .latest-movie-title {
+.spotify-active .latest-movie-title {
     color: #ffffff !important;
 }
 
-.music-active .latest-movie-date {
+.spotify-active .latest-movie-date {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 </style>
 
 <script>
 const workerUrl = 'https://xbox-tracker.snowy-scene-5750.workers.dev';
-let currentMusicState = '';
+let currentSpotifyState = '';
 
 function fetchData() {
     fetch(workerUrl)
@@ -332,14 +332,14 @@ function fetchData() {
             }
 
             if (data.music) {
-                const card = document.getElementById('music-card');
-                const bg = document.getElementById('music-bg-layer');
+                const card = document.getElementById('spotify-card');
+                const bg = document.getElementById('spotify-bg-layer');
                 const newState = `${data.music.title}-${data.music.isPlaying}`;
                 
-                if (currentMusicState !== newState) {
-                    currentMusicState = newState;
+                if (currentSpotifyState !== newState) {
+                    currentSpotifyState = newState;
                     bg.style.backgroundImage = `url('${data.music.image}')`;
-                    card.classList.add('music-active');
+                    card.classList.add('spotify-active');
 
                     let statusText = data.music.isPlaying ? 
                         `Now Playing <span class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>` : 
@@ -353,13 +353,13 @@ function fetchData() {
                         else statusText += ` • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                     }
 
-                    const searchUrl = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
-                    const statusColor = data.music.isPlaying ? '#FF0000' : 'rgba(255, 255, 255, 0.7)';
+                    const searchUrl = `https://open.spotify.com/search/$${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                    const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
 
-                    document.getElementById('music-container').innerHTML = `
+                    document.getElementById('spotify-container').innerHTML = `
                         <a href="${searchUrl}" target="_blank" class="latest-movie-link-wrapper">
                             <div class="latest-movie-content">
-                                <img src="${data.music.image}" alt="${data.music.title}" class="music-thumb-large">
+                                <img src="${data.music.image}" alt="${data.music.title}" class="spotify-thumb-large">
                                 <div class="latest-movie-info">
                                     <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center;">${statusText}</p>
                                     <p class="latest-movie-title">${data.music.title}</p>
