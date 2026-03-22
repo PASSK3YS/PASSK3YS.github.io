@@ -56,10 +56,13 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
-    <div class="grid-item" style="grid-column: 1 / -1;">
-        <h3>I'm currently listening to...</h3>
-        <div id="spotify-container">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading Spotify...</p>
+    <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden;">
+        <div id="spotify-bg-layer"></div>
+        <div style="position: relative; z-index: 1;">
+            <h3>I'm currently listening to...</h3>
+            <div id="spotify-container">
+                <p style="font-size: 0.9em; color: var(--text-muted);">Loading Spotify...</p>
+            </div>
         </div>
     </div>
 </div>
@@ -91,6 +94,7 @@ title: About
     font-size: 1.1rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 10px;
+    transition: color 0.5s ease, border-color 0.5s ease;
 }
 
 .grid-item ul {
@@ -130,12 +134,13 @@ title: About
     border: 1px solid var(--border);
 }
 
-.spotify-thumb {
-    width: 65px;
-    height: 65px;
+.spotify-thumb-large {
+    width: 85px;
+    height: 85px;
     object-fit: cover;
     border-radius: 8px;
-    border: 1px solid var(--border);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    border: none;
 }
 
 .latest-movie-info {
@@ -149,6 +154,7 @@ title: About
     margin: 0 0 5px 0;
     color: var(--text);
     line-height: 1.2;
+    transition: color 0.5s ease;
 }
 
 .latest-movie-date {
@@ -157,6 +163,7 @@ title: About
     margin: 0;
     text-transform: uppercase;
     font-weight: bold;
+    transition: color 0.5s ease;
 }
 
 .latest-movie-link-wrapper, .latest-blog-link-wrapper {
@@ -174,7 +181,7 @@ title: About
 
 .latest-movie-link-wrapper:hover .latest-movie-title, 
 .latest-blog-link-wrapper:hover .latest-blog-title {
-    color: var(--accent);
+    color: var(--accent) !important;
     text-decoration: underline;
 }
 
@@ -224,6 +231,38 @@ title: About
     0%, 100% { transform: scaleY(0.4); }
     50% { transform: scaleY(1); }
 }
+
+#spotify-bg-layer {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background-size: cover;
+    background-position: center;
+    filter: blur(25px) brightness(0.35);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease, background-image 0.8s ease;
+    pointer-events: none;
+}
+
+.spotify-active #spotify-bg-layer {
+    opacity: 1;
+}
+
+.spotify-active h3 {
+    color: #ffffff !important;
+    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.spotify-active .latest-movie-title {
+    color: #ffffff !important;
+}
+
+.spotify-active .latest-movie-date {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
 </style>
 
 <script>
@@ -234,24 +273,32 @@ function fetchSpotifyData() {
     fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUsername}&api_key=${lastFmApiKey}&format=json&limit=1`)
         .then(response => response.json())
         .then(data => {
+            const spotifyCard = document.getElementById('spotify-card');
+            const spotifyBgLayer = document.getElementById('spotify-bg-layer');
+
             if (data.error) {
                 document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Check API Keys</p>';
+                spotifyCard.classList.remove('spotify-active');
                 return;
             }
             if (!data.recenttracks || !data.recenttracks.track || data.recenttracks.track.length === 0) {
                 document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Play a song on Spotify first!</p>';
+                spotifyCard.classList.remove('spotify-active');
                 return;
             }
 
             const track = data.recenttracks.track[0];
             const title = track.name;
             const artist = track.artist['#text'];
-            const img = track.image[2]['#text'] || 'https://via.placeholder.com/65x65/1a1a1a/ffffff?text=Spotify';
+            const img = track.image[3]['#text'] || track.image[2]['#text'] || 'https://via.placeholder.com/85x85/1a1a1a/ffffff?text=Spotify';
             
             const searchQuery = encodeURIComponent(`${title} ${artist}`);
             const url = `https://open.spotify.com/search/${searchQuery}`;
             
             const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
+            
+            spotifyBgLayer.style.backgroundImage = `url('${img}')`;
+            spotifyCard.classList.add('spotify-active');
             
             let statusTextHTML = '';
             if (isPlaying) {
@@ -260,16 +307,16 @@ function fetchSpotifyData() {
                 statusTextHTML = 'Last Played';
             }
             
-            const statusColor = isPlaying ? '#1DB954' : 'var(--text-muted)';
+            const statusColor = isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
 
             document.getElementById('spotify-container').innerHTML = `
                 <a href="${url}" target="_blank" class="latest-movie-link-wrapper">
                     <div class="latest-movie-content">
-                        <img src="${img}" alt="${title}" class="spotify-thumb">
+                        <img src="${img}" alt="${title}" class="spotify-thumb-large">
                         <div class="latest-movie-info">
                             <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center;">${statusTextHTML}</p>
                             <p class="latest-movie-title">${title}</p>
-                            <p class="latest-movie-date" style="color: var(--text-muted); text-transform: none;">${artist}</p>
+                            <p class="latest-movie-date" style="text-transform: none;">${artist}</p>
                         </div>
                     </div>
                 </a>
@@ -277,6 +324,7 @@ function fetchSpotifyData() {
         })
         .catch(() => {
             document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Spotify unavailable</p>';
+            document.getElementById('spotify-card').classList.remove('spotify-active');
         });
 }
 
