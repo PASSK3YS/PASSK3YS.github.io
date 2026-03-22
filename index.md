@@ -253,7 +253,7 @@ function fetchSpotifyData() {
             
             let statusTextHTML = '';
             if (isPlaying) {
-                statusTextHTML = `Now Playing <div class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>`;
+                statusTextHTML = `Now Playing <span class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>`;
             } else {
                 statusTextHTML = 'Last Played';
             }
