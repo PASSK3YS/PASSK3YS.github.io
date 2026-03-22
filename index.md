@@ -37,10 +37,12 @@ title: About
         </ul>
     </div>
     <div class="grid-item">
-        <h3>Listening to</h3>
-        <div id="spotify-container">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading Spotify...</p>
-        </div>
+        <h3>Guestbook</h3>
+        <a href="/guestbook/" class="latest-blog-link-wrapper">
+            <div class="latest-blog-content">
+                <p class="latest-blog-title">Sign my guestbook</p>
+            </div>
+        </a>
     </div>
     <div class="grid-item">
         <h3>Latest watch at Cinema</h3>
@@ -54,13 +56,11 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
-    <div class="grid-item">
-        <h3>Guestbook</h3>
-        <a href="/guestbook/" class="latest-blog-link-wrapper">
-            <div class="latest-blog-content">
-                <p class="latest-blog-title">Sign my guestbook</p>
-            </div>
-        </a>
+    <div class="grid-item" style="grid-column: 1 / -1;">
+        <h3>Listening to</h3>
+        <div id="spotify-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading Spotify...</p>
+        </div>
     </div>
 </div>
 
@@ -195,8 +195,8 @@ title: About
 </style>
 
 <script>
-const lastFmUsername = 'passkeys';
-const lastFmApiKey = 'f2c5cc826164e5dd05f8fb573083b524';
+const lastFmUsername = 'YOUR_LASTFM_USERNAME';
+const lastFmApiKey = 'YOUR_LASTFM_API_KEY';
 
 fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUsername}&api_key=${lastFmApiKey}&format=json&limit=1`)
     .then(response => response.json())
