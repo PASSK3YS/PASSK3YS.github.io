@@ -363,7 +363,7 @@ function fetchSpotifyData() {
 }
 
 fetchSpotifyData();
-setInterval(fetchSpotifyData, 15000);
+setInterval(fetchSpotifyData, 5000);
 
 fetch('/cinema-watchlist/2026/')
     .then(response => response.text())
