@@ -273,11 +273,14 @@ title: About
     opacity: 0.8;
     transition: opacity 0.2s, transform 0.2s;
     text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .spotify-logo-link:hover {
     opacity: 1;
     transform: scale(1.1);
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .spotify-active #spotify-bg-layer {
