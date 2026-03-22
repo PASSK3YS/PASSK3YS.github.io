@@ -267,22 +267,6 @@ title: About
 .spotify-active .latest-movie-date {
     color: rgba(255, 255, 255, 0.7) !important;
 }
-
-.song-progress-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    background-color: #1DB954;
-    border-radius: 2px;
-    width: 0%;
-    animation: song-fill 210s linear forwards;
-}
-
-@keyframes song-fill {
-    0% { width: 0%; }
-    100% { width: 100%; }
-}
 </style>
 
 <script>
@@ -324,12 +308,10 @@ function fetchSpotifyData() {
             spotifyBgLayer.style.backgroundImage = `url('${img}')`;
             
             let statusTextHTML = '';
-            let progressBarHTML = '';
             
             if (isPlaying) {
                 spotifyCard.classList.add('spotify-active');
                 statusTextHTML = `Now Playing <span class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>`;
-                progressBarHTML = `<div class="song-progress-bar"></div>`;
             } else {
                 spotifyCard.classList.add('spotify-active');
                 let timeString = '';
@@ -355,7 +337,6 @@ function fetchSpotifyData() {
                             <p class="latest-movie-date" style="text-transform: none;">${artist}</p>
                         </div>
                     </div>
-                    ${progressBarHTML}
                 </a>
             `;
         })
