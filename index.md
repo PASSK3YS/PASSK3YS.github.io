@@ -205,9 +205,11 @@ fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${las
         const title = track.name;
         const artist = track.artist['#text'];
         const img = track.image[2]['#text'] || 'https://via.placeholder.com/65x65/1a1a1a/ffffff?text=Spotify';
-        const url = track.url;
-        const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
         
+        const searchQuery = encodeURIComponent(`${title} ${artist}`);
+        const url = `https://open.spotify.com/search/${searchQuery}`;
+        
+        const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
         const statusText = isPlaying ? 'Now Playing 🎵' : 'Last Played';
         const statusColor = isPlaying ? '#1DB954' : 'var(--text-muted)';
 
@@ -240,58 +242,4 @@ fetch('/cinema-watchlist/2026/')
             const title = firstMovie.querySelector('.movie-title').textContent;
             const date = firstMovie.querySelector('.movie-date').textContent;
             
-            document.getElementById('latest-movie-container').innerHTML = `
-                <a href="/cinema-watchlist/2026/" class="latest-movie-link-wrapper">
-                    <div class="latest-movie-content">
-                        <img src="${imgSrc}" alt="${title}" class="latest-movie-thumb">
-                        <div class="latest-movie-info">
-                            <p class="latest-movie-title">${title}</p>
-                            <p class="latest-movie-date">${date}</p>
-                        </div>
-                    </div>
-                </a>
-            `;
-        }
-    })
-    .catch(() => {
-        document.getElementById('latest-movie-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Watchlist unavailable</p>';
-    });
-
-fetch('/blog/')
-    .then(response => response.text())
-    .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const firstPost = doc.querySelector('.post-list > div');
-
-        if (firstPost) {
-            const titleElement = firstPost.querySelector('h2 a');
-            const title = titleElement ? titleElement.textContent.trim() : 'Latest Post';
-            const url = titleElement ? titleElement.getAttribute('href') : '/blog/';
-            
-            const dateElement = firstPost.querySelector('div');
-            const date = dateElement ? dateElement.textContent.trim() : 'Recent';
-            
-            document.getElementById('latest-blog-container').innerHTML = `
-                <a href="${url}" class="latest-blog-link-wrapper">
-                    <div class="latest-blog-content">
-                        <p class="latest-blog-title">${title}</p>
-                        <p class="latest-blog-date">${date}</p>
-                    </div>
-                </a>
-            `;
-        } else {
-            document.getElementById('latest-blog-container').innerHTML = `
-                <a href="/blog/" class="latest-blog-link-wrapper">
-                    <div class="latest-blog-content">
-                        <p class="latest-blog-title">Check out my latest thoughts</p>
-                        <p class="latest-blog-date">Read the Blog →</p>
-                    </div>
-                </a>
-            `;
-        }
-    })
-    .catch(() => {
-        document.getElementById('latest-blog-container').innerHTML = '<a href="/blog/" style="color: var(--accent);">Visit Blog</a>';
-    });
-</script>
+            document.getElementById('latest-movie-container
