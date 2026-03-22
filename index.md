@@ -201,6 +201,16 @@ const lastFmApiKey = 'f2c5cc826164e5dd05f8fb573083b524';
 fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUsername}&api_key=${lastFmApiKey}&format=json&limit=1`)
     .then(response => response.json())
     .then(data => {
+        if (data.error) {
+            console.error("Last.fm Error: ", data.message);
+            document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Check API Keys (See Console)</p>';
+            return;
+        }
+        if (!data.recenttracks || !data.recenttracks.track || data.recenttracks.track.length === 0) {
+            document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Play a song on Spotify first!</p>';
+            return;
+        }
+
         const track = data.recenttracks.track[0];
         const title = track.name;
         const artist = track.artist['#text'];
@@ -226,7 +236,8 @@ fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${las
             </a>
         `;
     })
-    .catch(() => {
+    .catch(error => {
+        console.error("Fetch Error: ", error);
         document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Spotify unavailable</p>';
     });
 
@@ -242,4 +253,58 @@ fetch('/cinema-watchlist/2026/')
             const title = firstMovie.querySelector('.movie-title').textContent;
             const date = firstMovie.querySelector('.movie-date').textContent;
             
-            document.getElementById('latest-movie-container
+            document.getElementById('latest-movie-container').innerHTML = `
+                <a href="/cinema-watchlist/2026/" class="latest-movie-link-wrapper">
+                    <div class="latest-movie-content">
+                        <img src="${imgSrc}" alt="${title}" class="latest-movie-thumb">
+                        <div class="latest-movie-info">
+                            <p class="latest-movie-title">${title}</p>
+                            <p class="latest-movie-date">${date}</p>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+    })
+    .catch(() => {
+        document.getElementById('latest-movie-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Watchlist unavailable</p>';
+    });
+
+fetch('/blog/')
+    .then(response => response.text())
+    .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const firstPost = doc.querySelector('.post-list > div');
+
+        if (firstPost) {
+            const titleElement = firstPost.querySelector('h2 a');
+            const title = titleElement ? titleElement.textContent.trim() : 'Latest Post';
+            const url = titleElement ? titleElement.getAttribute('href') : '/blog/';
+            
+            const dateElement = firstPost.querySelector('div');
+            const date = dateElement ? dateElement.textContent.trim() : 'Recent';
+            
+            document.getElementById('latest-blog-container').innerHTML = `
+                <a href="${url}" class="latest-blog-link-wrapper">
+                    <div class="latest-blog-content">
+                        <p class="latest-blog-title">${title}</p>
+                        <p class="latest-blog-date">${date}</p>
+                    </div>
+                </a>
+            `;
+        } else {
+            document.getElementById('latest-blog-container').innerHTML = `
+                <a href="/blog/" class="latest-blog-link-wrapper">
+                    <div class="latest-blog-content">
+                        <p class="latest-blog-title">Check out my latest thoughts</p>
+                        <p class="latest-blog-date">Read the Blog →</p>
+                    </div>
+                </a>
+            `;
+        }
+    })
+    .catch(() => {
+        document.getElementById('latest-blog-container').innerHTML = '<a href="/blog/" style="color: var(--accent);">Visit Blog</a>';
+    });
+</script>
