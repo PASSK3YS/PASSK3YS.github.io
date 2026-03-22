@@ -331,7 +331,7 @@ function fetchData() {
                     </a>`;
             }
 
-            if (data.music) {
+            if (data.music && typeof data.music === 'object') {
                 const card = document.getElementById('spotify-card');
                 const bg = document.getElementById('spotify-bg-layer');
                 const newState = `${data.music.title}-${data.music.isPlaying}`;
@@ -370,9 +370,7 @@ function fetchData() {
                 }
             }
         })
-        .catch(err => {
-            console.error("Fetch error:", err);
-        });
+        .catch(err => console.error("Fetch error:", err));
 }
 
 fetchData();
