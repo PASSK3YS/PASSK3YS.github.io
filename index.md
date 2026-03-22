@@ -304,7 +304,15 @@ function fetchSpotifyData() {
             if (isPlaying) {
                 statusTextHTML = `Now Playing <span class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>`;
             } else {
-                statusTextHTML = 'Last Played';
+                let timeString = '';
+                if (track.date && track.date.uts) {
+                    const diffMins = Math.floor((Date.now() - (track.date.uts * 1000)) / 60000);
+                    if (diffMins < 1) timeString = ' &bull; JUST NOW';
+                    else if (diffMins < 60) timeString = ` &bull; ${diffMins} MINS AGO`;
+                    else if (diffMins < 1440) timeString = ` &bull; ${Math.floor(diffMins / 60)} HRS AGO`;
+                    else timeString = ` &bull; ${Math.floor(diffMins / 1440)} DAYS AGO`;
+                }
+                statusTextHTML = `Last Played${timeString}`;
             }
             
             const statusColor = isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
