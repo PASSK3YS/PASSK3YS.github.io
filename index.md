@@ -198,48 +198,51 @@ title: About
 const lastFmUsername = 'passkeys';
 const lastFmApiKey = 'f2c5cc826164e5dd05f8fb573083b524';
 
-fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUsername}&api_key=${lastFmApiKey}&format=json&limit=1`)
-    .then(response => response.json())
-    .then(data => {
-        if (data.error) {
-            console.error("Last.fm Error: ", data.message);
-            document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Check API Keys (See Console)</p>';
-            return;
-        }
-        if (!data.recenttracks || !data.recenttracks.track || data.recenttracks.track.length === 0) {
-            document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Play a song on Spotify first!</p>';
-            return;
-        }
+function fetchSpotifyData() {
+    fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUsername}&api_key=${lastFmApiKey}&format=json&limit=1`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Check API Keys</p>';
+                return;
+            }
+            if (!data.recenttracks || !data.recenttracks.track || data.recenttracks.track.length === 0) {
+                document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Play a song on Spotify first!</p>';
+                return;
+            }
 
-        const track = data.recenttracks.track[0];
-        const title = track.name;
-        const artist = track.artist['#text'];
-        const img = track.image[2]['#text'] || 'https://via.placeholder.com/65x65/1a1a1a/ffffff?text=Spotify';
-        
-        const searchQuery = encodeURIComponent(`${title} ${artist}`);
-        const url = `https://open.spotify.com/search/${searchQuery}`;
-        
-        const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
-        const statusText = isPlaying ? 'Now Playing 🎵' : 'Last Played';
-        const statusColor = isPlaying ? '#1DB954' : 'var(--text-muted)';
+            const track = data.recenttracks.track[0];
+            const title = track.name;
+            const artist = track.artist['#text'];
+            const img = track.image[2]['#text'] || 'https://via.placeholder.com/65x65/1a1a1a/ffffff?text=Spotify';
+            
+            const searchQuery = encodeURIComponent(`${title} ${artist}`);
+            const url = `https://open.spotify.com/search/${searchQuery}`;
+            
+            const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
+            const statusText = isPlaying ? 'Now Playing 🎵' : 'Last Played';
+            const statusColor = isPlaying ? '#1DB954' : 'var(--text-muted)';
 
-        document.getElementById('spotify-container').innerHTML = `
-            <a href="${url}" target="_blank" class="latest-movie-link-wrapper">
-                <div class="latest-movie-content">
-                    <img src="${img}" alt="${title}" class="spotify-thumb">
-                    <div class="latest-movie-info">
-                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0;">${statusText}</p>
-                        <p class="latest-movie-title">${title}</p>
-                        <p class="latest-movie-date" style="color: var(--text-muted); text-transform: none;">${artist}</p>
+            document.getElementById('spotify-container').innerHTML = `
+                <a href="${url}" target="_blank" class="latest-movie-link-wrapper">
+                    <div class="latest-movie-content">
+                        <img src="${img}" alt="${title}" class="spotify-thumb">
+                        <div class="latest-movie-info">
+                            <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0;">${statusText}</p>
+                            <p class="latest-movie-title">${title}</p>
+                            <p class="latest-movie-date" style="color: var(--text-muted); text-transform: none;">${artist}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-        `;
-    })
-    .catch(error => {
-        console.error("Fetch Error: ", error);
-        document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Spotify unavailable</p>';
-    });
+                </a>
+            `;
+        })
+        .catch(() => {
+            document.getElementById('spotify-container').innerHTML = '<p style="font-size: 0.9em; color: var(--text-muted);">Spotify unavailable</p>';
+        });
+}
+
+fetchSpotifyData();
+setInterval(fetchSpotifyData, 15000);
 
 fetch('/cinema-watchlist/2026/')
     .then(response => response.text())
