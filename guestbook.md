@@ -128,6 +128,15 @@ permalink: /guestbook/
         </div>
 
         <button id="nextBtn" class="nav-btn">&#10095;</button>
+
+        <div class="progress-wrapper">
+            <div class="progress-track">
+                <div class="progress-fill animate" id="progressBarFill"></div>
+            </div>
+            <div class="paused-indicator">
+                <div class="pause-bars"></div> Paused <div class="pause-bars"></div>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -138,6 +147,7 @@ permalink: /guestbook/
     width: 100%;
     padding: 0 40px;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .carousel-container {
@@ -147,7 +157,7 @@ permalink: /guestbook/
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     gap: 20px;
-    padding: 10px 0 30px 0;
+    padding: 10px 0 20px 0;
     scrollbar-width: none; 
 }
 
@@ -172,7 +182,7 @@ permalink: /guestbook/
 
 .nav-btn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     background: var(--nav-bg, #ffffff);
     border: 1px solid var(--border, #e0e0e0);
@@ -204,6 +214,83 @@ permalink: /guestbook/
     right: 0;
 }
 
+.progress-wrapper {
+    position: relative;
+    height: 20px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.progress-track {
+    width: 100%;
+    height: 4px;
+    background: var(--border, #e0e0e0);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent, #007bff);
+    transform-origin: left;
+}
+
+.progress-fill.animate {
+    animation: fillProgress 15s linear forwards;
+}
+
+.progress-fill.paused {
+    animation-play-state: paused;
+}
+
+@keyframes fillProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.paused-indicator {
+    position: absolute;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--text-muted, #666);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.pause-bars {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    gap: 4px;
+}
+
+.pause-bars::before, .pause-bars::after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: var(--text-muted, #666);
+    border-radius: 1px;
+}
+
+.carousel-wrapper.is-paused .progress-track {
+    opacity: 0.15;
+}
+
+.carousel-wrapper.is-paused .paused-indicator {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .carousel-wrapper {
         padding: 0;
@@ -216,7 +303,10 @@ permalink: /guestbook/
         scroll-snap-align: center;
     }
     .carousel-container {
-        padding: 10px 5% 30px 5%; 
+        padding: 10px 5% 20px 5%; 
+    }
+    .progress-wrapper {
+        padding: 0 5%;
     }
 }
 </style>
@@ -225,12 +315,79 @@ permalink: /guestbook/
 const container = document.getElementById('guestbook-carousel');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const wrapper = document.querySelector('.carousel-wrapper');
+const fill = document.getElementById('progressBarFill');
 
-prevBtn.addEventListener('click', () => {
-    container.scrollBy({ left: -container.offsetWidth, behavior: 'smooth' });
+let isLockedPause = false;
+
+function scrollNext() {
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+        container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+    }
+}
+
+function scrollPrev() {
+    if (container.scrollLeft <= 0) {
+        container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+    } else {
+        container.scrollBy({ left: -container.offsetWidth, behavior: 'smooth' });
+    }
+}
+
+function resetAnimation() {
+    fill.classList.remove('animate');
+    void fill.offsetWidth; 
+    fill.classList.add('animate');
+}
+
+function pauseAnimation() {
+    fill.classList.add('paused');
+    wrapper.classList.add('is-paused');
+}
+
+function resumeAnimation() {
+    if (isLockedPause) return;
+    fill.classList.remove('paused');
+    wrapper.classList.remove('is-paused');
+}
+
+fill.addEventListener('animationend', () => {
+    scrollNext();
+    resetAnimation();
 });
 
-nextBtn.addEventListener('click', () => {
-    container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    scrollNext();
+    resetAnimation();
 });
+
+prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    scrollPrev();
+    resetAnimation();
+});
+
+wrapper.addEventListener('mouseenter', pauseAnimation);
+wrapper.addEventListener('mouseleave', resumeAnimation);
+
+wrapper.addEventListener('click', () => {
+    isLockedPause = !isLockedPause;
+    if (isLockedPause) {
+        pauseAnimation();
+    } else {
+        resumeAnimation();
+    }
+});
+
+let isScrolling;
+container.addEventListener('scroll', () => {
+    window.clearTimeout(isScrolling);
+    pauseAnimation();
+    isScrolling = setTimeout(() => {
+        resumeAnimation();
+    }, 150);
+}, { passive: true });
 </script>
