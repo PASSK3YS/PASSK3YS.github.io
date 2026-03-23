@@ -241,7 +241,7 @@ permalink: /guestbook/
 }
 
 .progress-fill.animate {
-    animation: fillProgress 15s linear forwards;
+    animation: fillProgress 10s linear forwards;
 }
 
 .progress-fill.paused {
