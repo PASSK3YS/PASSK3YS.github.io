@@ -21,6 +21,12 @@ permalink: /guestbook/
   <div style="display: flex; flex-direction: column; gap: 20px;">
 
     <div class="grid-item">
+      <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Hello. Met u from the proton discord you are really helpful and nice keep helping secure privacy and hope the best for you."</p>
+      <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Voidfusion</p>
+      <span style="color: var(--text-muted); font-size: 0.85rem;">March 23, 2026</span>
+    </div>
+
+    <div class="grid-item">
       <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Came across your page from the standard notes discord. Keep up the good work."</p>
       <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Anonymous</p>
       <span style="color: var(--text-muted); font-size: 0.85rem;">Janurary 11, 2026</span>
