@@ -4,7 +4,7 @@ title: Guestbook
 permalink: /guestbook/
 ---
 
-<div class="page-content" style="max-width: 800px; margin: 0 auto; padding-top: 20px;">
+<div class="page-content" style="max-width: 1000px; margin: 0 auto; padding-top: 20px;">
   
   <h1 style="color: var(--accent); text-align: center; text-shadow: 0 0 15px var(--accent-glow);">Guestbook</h1>
   
@@ -18,10 +18,10 @@ permalink: /guestbook/
     </a>
   </div>
 
-  <div style="display: flex; flex-direction: column; gap: 20px;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; align-items: start;">
 
     <div class="grid-item">
-      <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Hello. Met u from the proton discord you are really helpful and nice keep helping secure privacy and hope the best for you."</p>
+      <p style="color: var(--text); font-size: 1.1rem; margin-top: 0;">"Hello. Met u from the proton discord you are really helpful and nice keep helping secure privacy and hope the best for you."</p>
       <p style="color: var(--accent); margin-bottom: 0; font-weight: bold;">&mdash; Voidfusion</p>
       <span style="color: var(--text-muted); font-size: 0.85rem;">March 23, 2026</span>
     </div>
