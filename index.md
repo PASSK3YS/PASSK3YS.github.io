@@ -62,10 +62,9 @@ title: About
         </div>
     </div>
     <div class="grid-item">
-        <h3>Tip Jar</h3>
+        <h3>Tip Jar - Monero (XMR)</h3>
         <div class="tip-jar-container">
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
-            <p class="tip-text">Monero (XMR)</p>
         </div>
     </div>
     <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: 12px 20px;">
@@ -265,8 +264,8 @@ title: About
 }
 
 .tip-qr {
-    width: 90px;
-    height: 90px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
     background-color: #ffffff;
     border-radius: 6px;
