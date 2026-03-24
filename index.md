@@ -332,6 +332,11 @@ title: About
     color: #ffffff !important;
 }
 
+.spotify-active .latest-movie-link-wrapper:hover .latest-movie-title,
+.spotify-active .latest-movie-link-wrapper:hover .prev-track-text {
+    color: var(--accent) !important;
+}
+
 .spotify-active .latest-movie-date {
     color: rgba(255, 255, 255, 0.7) !important;
 }
@@ -390,6 +395,7 @@ title: About
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: color 0.5s ease;
 }
 
 @media (max-width: 768px) {
