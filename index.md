@@ -378,7 +378,7 @@ function fetchData() {
                     card.classList.add('spotify-active');
 
                     let statusText = data.music.isPlaying ? 
-                        `Now Playing <span class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>` : 
+                        `LIVE <span class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>` : 
                         "Last Played";
 
                     if (!data.music.isPlaying && data.music.uts) {
