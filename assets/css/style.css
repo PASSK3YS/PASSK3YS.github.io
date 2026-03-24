@@ -68,13 +68,11 @@ h1 { margin-bottom: 1.5rem; }
 a {
     color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
 }
 
 a:hover {
     color: var(--accent-hover);
     text-shadow: 0 0 8px var(--accent-glow);
-    border-bottom: 1px solid var(--accent-hover);
 }
 
 body > header {
@@ -114,7 +112,6 @@ nav {
     font-weight: bold;
     background: transparent !important; 
     border: none !important;
-    border-bottom: none !important;       
     padding: 10px 20px;                     
     border-radius: 50px;                    
     color: var(--text);                  
@@ -130,7 +127,7 @@ nav {
 }
 
 .nav-scroll a:hover, .nav-scroll a.active {
-    color: var(--accent) !important;                     
+    color: var(--accent) !important;                    
     background: var(--border) !important;
 }
 
@@ -376,7 +373,6 @@ blockquote p {
 .version-link {
     position: relative;
     text-decoration: none !important;
-    border-bottom: none !important;
     display: inline-flex;
     align-items: center;
     font-family: 'Space Grotesk', sans-serif;
@@ -488,7 +484,6 @@ div.highlight:hover .copy-code-button {
     letter-spacing: 1px;
     opacity: 0.6;
     text-decoration: none;
-    border-bottom: none !important;
     display: inline-block;
     transition: opacity 0.2s ease, color 0.2s ease;
 }
