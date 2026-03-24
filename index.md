@@ -149,13 +149,13 @@ title: About
     margin-bottom: 8px;
 }
 
-.grid-item a:not(.social-icons a):not(.music-player-wrapper) {
+.grid-item a:not(.social-icons a) {
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.2s;
 }
 
-.grid-item a:not(.social-icons a):not(.music-player-wrapper):hover {
+.grid-item a:not(.social-icons a):hover {
     opacity: 1;
     color: var(--accent);
     text-decoration: underline;
@@ -337,136 +337,52 @@ title: About
     border-bottom-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.music-player-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    text-decoration: none !important;
+.spotify-active .latest-movie-title {
     color: #ffffff !important;
-    transition: transform 0.2s ease, background 0.2s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.music-player-wrapper:hover {
-    background: rgba(0, 0, 0, 0.5);
-    transform: translateY(-2px);
-    text-decoration: none !important;
+.spotify-active .latest-movie-date {
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.player-art {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    object-fit: cover;
-}
-
-.player-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 0;
-}
-
-.player-status-row {
-    margin-bottom: 6px;
-}
-
-.player-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 0 0 4px 0;
-    line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
-
-.player-artist {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
-
-.previous-track-wrapper {
+.prev-track-container {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.prev-art {
-    width: 35px;
-    height: 35px;
+.prev-track-img {
+    width: 32px;
+    height: 32px;
     border-radius: 4px;
     object-fit: cover;
 }
 
-.prev-details-col {
+.prev-track-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-width: 0;
+    overflow: hidden;
 }
 
-.prev-label {
-    font-size: 0.6rem;
+.prev-track-label {
+    font-size: 0.65rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.5);
-    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 2px;
 }
 
-.prev-title {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 0;
+.prev-track-text {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.85) !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.prev-artist {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-@media (max-width: 600px) {
-    .music-player-wrapper {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    .player-art {
-        width: 140px;
-        height: 140px;
-    }
-    .player-status-row {
-        justify-content: center;
-    }
-    .previous-track-wrapper {
-        flex-direction: column;
-        gap: 8px;
-    }
+    max-width: 220px;
 }
 </style>
 
@@ -513,33 +429,32 @@ function fetchData() {
                         else statusText += ` • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                     }
 
-                    const searchUrl = `https://open.spotify.com/...${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                    const searchUrl = `https://open.spotify.com/search/${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
                     const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
                     
                     let prevHtml = '';
                     if (data.previous) {
                         prevHtml = `
-                            <div class="previous-track-wrapper">
-                                <img src="${data.previous.image}" alt="${data.previous.title}" class="prev-art">
-                                <div class="prev-details-col">
-                                    <span class="prev-label">PREVIOUS SONG</span>
-                                    <p class="prev-title">${data.previous.title}</p>
-                                    <p class="prev-artist">${data.previous.artist}</p>
+                            <div class="prev-track-container">
+                                <img src="${data.previous.image}" alt="${data.previous.title}" class="prev-track-img">
+                                <div class="prev-track-info">
+                                    <span class="prev-track-label">Previous Song</span>
+                                    <span class="prev-track-text">${data.previous.title} &bull; ${data.previous.artist}</span>
                                 </div>
                             </div>
                         `;
                     }
 
                     document.getElementById('spotify-container').innerHTML = `
-                        <a href="${searchUrl}" target="_blank" class="music-player-wrapper">
-                            <img src="${data.music.image}" alt="${data.music.title}" class="player-art">
-                            <div class="player-details">
-                                <div class="player-status-row">
-                                    <span style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; display: flex; align-items: center;">${statusText}</span>
+                        <a href="${searchUrl}" target="_blank" class="latest-movie-link-wrapper">
+                            <div class="latest-movie-content">
+                                <img src="${data.music.image}" alt="${data.music.title}" class="spotify-thumb-large">
+                                <div class="latest-movie-info">
+                                    <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center;">${statusText}</p>
+                                    <p class="latest-movie-title">${data.music.title}</p>
+                                    <p class="latest-movie-date" style="text-transform: none;">${data.music.artist}</p>
+                                    ${prevHtml}
                                 </div>
-                                <p class="player-title">${data.music.title}</p>
-                                <p class="player-artist">${data.music.artist}</p>
-                                ${prevHtml}
                             </div>
                         </a>`;
                 }
