@@ -67,7 +67,7 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading Xbox...</p>
         </div>
     </div>
-    <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden;">
+    <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: 12px 20px;">
         <div id="spotify-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
             <div class="spotify-header">
@@ -297,10 +297,7 @@ title: About
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
-    transition: border-color 0.5s ease;
+    margin-bottom: 8px;
 }
 
 .grid-item .spotify-header h3 {
@@ -331,10 +328,6 @@ title: About
 
 .spotify-active h3 {
     color: #ffffff !important;
-}
-
-.spotify-active .spotify-header {
-    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .spotify-active .latest-movie-title {
@@ -462,7 +455,7 @@ function fetchData() {
                         else statusText += ` • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                     }
 
-                    const searchUrl = `https://open.spotify.com/search/$${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                    const searchUrl = `https://open.spotify.com/search/${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
                     const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
                     
                     let prevHtml = '';
