@@ -61,12 +61,6 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
-    <div class="grid-item">
-        <h3>Last played game</h3>
-        <div id="xbox-container">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading Xbox...</p>
-        </div>
-    </div>
     <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: 12px 20px;">
         <div id="spotify-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
@@ -112,7 +106,7 @@ title: About
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
     margin-top: 30px;
 }
@@ -330,6 +324,10 @@ title: About
     color: #ffffff !important;
 }
 
+.spotify-active .spotify-header {
+    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+}
+
 .spotify-active .latest-movie-title {
     color: #ffffff !important;
 }
@@ -420,19 +418,6 @@ function fetchData() {
     fetch(workerUrl)
         .then(res => res.json())
         .then(data => {
-            if (data.xbox) {
-                document.getElementById('xbox-container').innerHTML = `
-                    <a href="https://account.xbox.com/en-gb/profile?gamertag=m00t" target="_blank" class="latest-movie-link-wrapper">
-                        <div class="latest-movie-content">
-                            <img src="${data.xbox.image}" alt="${data.xbox.name}" class="latest-movie-thumb">
-                            <div class="latest-movie-info">
-                                <p class="latest-movie-title">${data.xbox.name}</p>
-                                <p class="latest-movie-date">Xbox</p>
-                            </div>
-                        </div>
-                    </a>`;
-            }
-
             if (data.music && typeof data.music === 'object') {
                 const card = document.getElementById('spotify-card');
                 const bg = document.getElementById('spotify-bg-layer');
@@ -455,7 +440,7 @@ function fetchData() {
                         else statusText += ` • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                     }
 
-                    const searchUrl = `https://open.spotify.com/search/${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                    const searchUrl = `open.spotify.com/search/{encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
                     const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
                     
                     let prevHtml = '';
