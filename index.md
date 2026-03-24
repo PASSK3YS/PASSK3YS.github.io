@@ -91,11 +91,13 @@ title: About
     color: var(--text);
     transition: color 0.2s ease, transform 0.2s ease;
     display: inline-flex;
+    text-decoration: none !important;
 }
 
 .social-icons a:hover {
     color: var(--accent);
     transform: scale(1.1);
+    text-decoration: none !important;
 }
 
 .social-icons svg {
