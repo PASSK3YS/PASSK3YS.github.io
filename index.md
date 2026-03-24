@@ -345,13 +345,30 @@ title: About
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
+.spotify-track-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.current-track-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 0;
+}
+
 .prev-track-container {
-    margin-top: 12px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+    max-width: 40%;
 }
 
 .prev-track-img {
@@ -382,7 +399,23 @@ title: About
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 220px;
+}
+
+@media (max-width: 768px) {
+    .spotify-track-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .prev-track-container {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 </style>
 
@@ -429,7 +462,7 @@ function fetchData() {
                         else statusText += ` • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                     }
 
-                    const searchUrl = `https://open.spotify.com/search/${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                    const searchUrl = `https://open.spotify.com/search/$${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
                     const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
                     
                     let prevHtml = '';
@@ -447,14 +480,16 @@ function fetchData() {
 
                     document.getElementById('spotify-container').innerHTML = `
                         <a href="${searchUrl}" target="_blank" class="latest-movie-link-wrapper">
-                            <div class="latest-movie-content">
-                                <img src="${data.music.image}" alt="${data.music.title}" class="spotify-thumb-large">
-                                <div class="latest-movie-info">
-                                    <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center;">${statusText}</p>
-                                    <p class="latest-movie-title">${data.music.title}</p>
-                                    <p class="latest-movie-date" style="text-transform: none;">${data.music.artist}</p>
-                                    ${prevHtml}
+                            <div class="spotify-track-layout">
+                                <div class="current-track-wrapper">
+                                    <img src="${data.music.image}" alt="${data.music.title}" class="spotify-thumb-large">
+                                    <div class="latest-movie-info">
+                                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center;">${statusText}</p>
+                                        <p class="latest-movie-title">${data.music.title}</p>
+                                        <p class="latest-movie-date" style="text-transform: none;">${data.music.artist}</p>
+                                    </div>
                                 </div>
+                                ${prevHtml}
                             </div>
                         </a>`;
                 }
