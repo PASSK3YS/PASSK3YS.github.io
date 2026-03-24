@@ -336,8 +336,7 @@ title: About
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.spotify-active .latest-movie-link-wrapper:hover .latest-movie-title,
-.spotify-active .latest-movie-link-wrapper:hover .prev-track-text {
+.spotify-active .latest-movie-link-wrapper:hover .latest-movie-title {
     color: #1DB954 !important;
 }
 
