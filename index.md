@@ -440,7 +440,7 @@ function fetchData() {
                         else statusText += ` • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                     }
 
-                    const searchUrl = `open.spotify.com/search/{encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                    const searchUrl = `https://open.spotify.com/search/${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
                     const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
                     
                     let prevHtml = '';
