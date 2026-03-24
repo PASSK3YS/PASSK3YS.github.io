@@ -61,6 +61,13 @@ title: About
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
+    <div class="grid-item">
+        <h3>Tip Jar</h3>
+        <div class="tip-jar-container">
+            <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
+            <p class="tip-text">Monero (XMR)</p>
+        </div>
+    </div>
     <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: 12px 20px;">
         <div id="spotify-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
@@ -247,6 +254,34 @@ title: About
     margin: 0;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.tip-jar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.tip-qr {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 4px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border);
+}
+
+.tip-text {
+    font-size: 0.85rem;
+    color: var(--accent) !important;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .playing-indicator {
