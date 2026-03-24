@@ -324,6 +324,7 @@ title: About
 
 .spotify-active h3 {
     color: #ffffff !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .spotify-active .spotify-header {
@@ -332,6 +333,7 @@ title: About
 
 .spotify-active .latest-movie-title {
     color: #ffffff !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .spotify-active .latest-movie-link-wrapper:hover .latest-movie-title,
@@ -340,7 +342,8 @@ title: About
 }
 
 .spotify-active .latest-movie-date {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .spotify-track-layout {
@@ -385,19 +388,21 @@ title: About
 .prev-track-label {
     font-size: 0.65rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.75);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 2px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .prev-track-text {
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     transition: color 0.5s ease;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 768px) {
@@ -475,7 +480,7 @@ function fetchData() {
                                 <div class="current-track-wrapper">
                                     <img src="${data.music.image}" alt="${data.music.title}" class="spotify-thumb-large">
                                     <div class="latest-movie-info">
-                                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center;">${statusText}</p>
+                                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);">${statusText}</p>
                                         <p class="latest-movie-title">${data.music.title}</p>
                                         <p class="latest-movie-date" style="text-transform: none;">${data.music.artist}</p>
                                     </div>
