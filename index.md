@@ -65,7 +65,7 @@ title: About
         <div id="spotify-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
             <div class="spotify-header">
-                <h3>I'm currently listening to...</h3>
+                <h3 id="spotify-header-title">I'm currently listening to...</h3>
                 <a href="https://open.spotify.com/user/1plkfuli0kwl2ld8rj6p7xsfyb?si=9452da607d5141af" target="_blank" class="spotify-logo-link">
                     <svg viewBox="0 0 24 24" width="26" height="26" fill="#1DB954">
                         <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
@@ -334,7 +334,7 @@ title: About
 
 .spotify-active .latest-movie-link-wrapper:hover .latest-movie-title,
 .spotify-active .latest-movie-link-wrapper:hover .prev-track-text {
-    color: var(--accent) !important;
+    color: #1DB954 !important;
 }
 
 .spotify-active .latest-movie-date {
@@ -427,12 +427,17 @@ function fetchData() {
             if (data.music && typeof data.music === 'object') {
                 const card = document.getElementById('spotify-card');
                 const bg = document.getElementById('spotify-bg-layer');
+                const headerTitle = document.getElementById('spotify-header-title');
                 const newState = `${data.music.title}-${data.music.isPlaying}`;
                 
                 if (currentSpotifyState !== newState) {
                     currentSpotifyState = newState;
                     bg.style.backgroundImage = `url('${data.music.image}')`;
                     card.classList.add('spotify-active');
+
+                    if (headerTitle) {
+                        headerTitle.textContent = data.music.isPlaying ? "I'm currently listening to..." : "Currently not listening to music";
+                    }
 
                     let statusText = data.music.isPlaying ? 
                         `LIVE <span class="playing-indicator"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>` : 
