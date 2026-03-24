@@ -149,13 +149,13 @@ title: About
     margin-bottom: 8px;
 }
 
-.grid-item a:not(.social-icons a) {
+.grid-item a:not(.social-icons a):not(.music-player-wrapper) {
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.2s;
 }
 
-.grid-item a:not(.social-icons a):hover {
+.grid-item a:not(.social-icons a):not(.music-player-wrapper):hover {
     opacity: 1;
     color: var(--accent);
     text-decoration: underline;
@@ -174,15 +174,6 @@ title: About
     object-fit: cover;
     border-radius: 4px;
     border: 1px solid var(--border);
-}
-
-.spotify-thumb-large {
-    width: 85px;
-    height: 85px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-    border: none;
 }
 
 .latest-movie-info {
@@ -337,12 +328,82 @@ title: About
     border-bottom-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.spotify-active .latest-movie-title {
+.music-player-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-decoration: none !important;
     color: #ffffff !important;
+    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.spotify-active .latest-movie-date {
-    color: rgba(255, 255, 255, 0.7) !important;
+.music-player-wrapper:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+    text-decoration: none !important;
+}
+
+.player-art {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+
+.player-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.player-status-row {
+    margin-bottom: 6px;
+}
+
+.player-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.player-artist {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .music-player-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .player-art {
+        width: 140px;
+        height: 140px;
+    }
+    .player-status-row {
+        justify-content: center;
+    }
 }
 </style>
 
@@ -393,14 +454,14 @@ function fetchData() {
                     const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
 
                     document.getElementById('spotify-container').innerHTML = `
-                        <a href="${searchUrl}" target="_blank" class="latest-movie-link-wrapper">
-                            <div class="latest-movie-content">
-                                <img src="${data.music.image}" alt="${data.music.title}" class="spotify-thumb-large">
-                                <div class="latest-movie-info">
-                                    <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center;">${statusText}</p>
-                                    <p class="latest-movie-title">${data.music.title}</p>
-                                    <p class="latest-movie-date" style="text-transform: none;">${data.music.artist}</p>
+                        <a href="${searchUrl}" target="_blank" class="music-player-wrapper">
+                            <img src="${data.music.image}" alt="${data.music.title}" class="player-art">
+                            <div class="player-details">
+                                <div class="player-status-row">
+                                    <span style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; display: flex; align-items: center;">${statusText}</span>
                                 </div>
+                                <p class="player-title">${data.music.title}</p>
+                                <p class="player-artist">${data.music.artist}</p>
                             </div>
                         </a>`;
                 }
