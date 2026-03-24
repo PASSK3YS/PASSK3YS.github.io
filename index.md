@@ -466,13 +466,13 @@ function fetchData() {
                     const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
                     
                     let prevHtml = '';
-                    if (data.previous) {
+                    if (data.music.isPlaying && data.previous) {
                         prevHtml = `
                             <div class="prev-track-container">
                                 <img src="${data.previous.image}" alt="${data.previous.title}" class="prev-track-img">
                                 <div class="prev-track-info">
                                     <span class="prev-track-label">Previous Song</span>
-                                    <span class="prev-track-text">${data.previous.title} &bull; ${data.previous.artist}</span>
+                                    <span class="prev-track-text">${data.previous.title} • ${data.previous.artist}</span>
                                 </div>
                             </div>
                         `;
