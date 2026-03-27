@@ -85,8 +85,6 @@ title: About
     </div>
 </div>
 
-<a rel="me" href="https://mastodon.social/@passkey" style="display: none;">Mastodon</a>
-
 <style>
 .social-icons {
     display: flex;
