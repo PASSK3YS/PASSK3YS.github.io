@@ -14,34 +14,9 @@ title: About
 </div>
 
 <div class="grid-container">
-    <div class="grid-item bento-large bento-bio">
-        <img src="https://files.horizon.pics/0e37ee6c-1ef1-42f5-bd17-eff9acba2211?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
-        <div class="bio-text" style="color: var(--text);">
-            <h2 style="margin: 0 0 12px 0; font-size: 2rem; line-height: 1.2; color: var(--text);">Hi, I'm Kieran. 👋</h2>
-            <p style="font-size: 1.1rem; opacity: 0.9; margin: 0 0 15px 0; color: inherit;">Welcome to my personal website.</p>
-            <p style="margin: 0 0 8px 0; color: inherit; opacity: 0.8;">Overall swell guy, avid beer drinker & privacy advocate.</p>
-            <p style="margin: 0 0 20px 0; color: inherit; opacity: 0.8;">Hobbies include playing video games, watching wrestling & photography.</p>
-            <div class="bio-admin-box">
-                Server admin / moderator for <a href="https://standardnotes.com" target="_blank" style="color: var(--accent); font-weight: bold;">Standard Notes</a> & <a href="https://proton.me" target="_blank" style="color: var(--accent); font-weight: bold;">Proton</a>.
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-item bento-tall" id="latest-movie-container" style="padding: 0; overflow: hidden; position: relative;">
-        <div style="padding: 24px; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
-        </div>
-    </div>
-
-    <div class="grid-item bento-wide bento-interactive" id="latest-blog-container" style="display: flex; flex-direction: column; justify-content: flex-end;">
-        <div style="padding: 24px;">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
-        </div>
-    </div>
-
-    <div class="grid-item" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <h3 class="bento-header" style="margin: 0;">My socials</h3>
-        <div class="social-icons" style="justify-content: flex-start; padding-bottom: 5px;">
+    <div class="grid-item">
+        <h3>My socials</h3>
+        <div class="social-icons">
             <a href="https://x.com/PASSK3YS" target="_blank" title="X">
                 <svg viewBox="0 0 24 24">
                     <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
@@ -59,34 +34,44 @@ title: About
             </a>
         </div>
     </div>
-    
-    <div class="grid-item" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <h3 class="bento-header" style="margin: 0;">Gamertags</h3>
-        <ul style="padding: 0; margin: 0; padding-bottom: 5px;">
-            <li><span style="opacity: 0.7;">Xbox:</span> <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank" style="font-weight: 600;">m00t</a></li>
-            <li><span style="opacity: 0.7;">Steam:</span> <a href="https://steamcommunity.com/id/m00t316/" target="_blank" style="font-weight: 600;">m00t316</a></li>
+    <div class="grid-item">
+        <h3>Gamertags</h3>
+        <ul>
+            <li>Xbox: <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank">m00t</a></li>
+            <li>Steam: <a href="https://steamcommunity.com/id/m00t316/" target="_blank">m00t316</a></li>
         </ul>
     </div>
-
-    <a href="/guestbook/" class="grid-item bento-interactive" style="text-decoration: none; display: flex; flex-direction: column; justify-content: flex-end;">
-        <div>
-            <h3 class="bento-header" style="margin: 0 0 8px 0; color: inherit;">Guestbook</h3>
-            <p class="latest-blog-title" style="margin: 0; font-size: 1.4rem;">Sign my guestbook &rarr;</p>
+    <div class="grid-item">
+        <h3>Guestbook</h3>
+        <a href="/guestbook/" class="latest-blog-link-wrapper">
+            <div class="latest-blog-content">
+                <p class="latest-blog-title">Sign my guestbook</p>
+            </div>
+        </a>
+    </div>
+    <div class="grid-item">
+        <h3>Latest watch at Cinema</h3>
+        <div id="latest-movie-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
-    </a>
-
-    <div class="grid-item" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
-        <h3 class="bento-header" style="margin: 0; width: 100%; text-align: left;">Tip Jar</h3>
-        <div class="tip-jar-container" style="padding-top: 15px;">
+    </div>
+    <div class="grid-item">
+        <h3>Latest post</h3>
+        <div id="latest-blog-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
+        </div>
+    </div>
+    <div class="grid-item">
+        <h3>Tip Jar - Monero (XMR)</h3>
+        <div class="tip-jar-container">
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
         </div>
     </div>
-
-    <div class="grid-item bento-full" id="ytm-card" style="position: relative; overflow: hidden; padding: 24px;">
+    <div class="grid-item" id="ytm-card" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: 12px 20px;">
         <div id="ytm-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
             <div class="ytm-header">
-                <h3 id="ytm-header-title" class="bento-header" style="margin-bottom: 0; color: rgba(255,255,255,0.7) !important;">I'm currently listening to...</h3>
+                <h3 id="ytm-header-title">I'm currently listening to...</h3>
                 <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
                     <svg viewBox="0 0 98 24" height="24" width="98">
                         <circle cx="12" cy="12" r="12" fill="#FF0000"/>
@@ -96,7 +81,7 @@ title: About
                     </svg>
                 </a>
             </div>
-            <div id="ytm-container" style="margin-top: 20px;">
+            <div id="ytm-container">
                 <p style="font-size: 0.9em; color: var(--text-muted);">Loading YouTube Music...</p>
             </div>
         </div>
@@ -104,102 +89,9 @@ title: About
 </div>
 
 <style>
-.bio-container { display: none; }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(180px, auto);
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.grid-item {
-    background: var(--nav-bg);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.grid-item:hover {
-    border-color: var(--accent);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
-.bento-interactive {
-    cursor: pointer;
-}
-
-.bento-interactive:hover .latest-blog-title {
-    color: var(--accent);
-    text-decoration: underline;
-}
-
-.bento-large {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.bento-wide {
-    grid-column: span 2;
-}
-
-.bento-tall {
-    grid-row: span 2;
-}
-
-.bento-full {
-    grid-column: 1 / -1;
-}
-
-.bento-bio {
-    flex-direction: row;
-    align-items: center;
-    gap: 35px;
-    justify-content: flex-start;
-}
-
-.bento-bio .profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 4px solid var(--border);
-    object-fit: cover;
-    flex-shrink: 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.bio-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.bio-admin-box {
-    background: var(--bg-color);
-    border: 1px solid var(--border);
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    display: inline-block;
-    width: fit-content;
-}
-
-.bento-header {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-muted);
-    margin: 0 0 15px 0;
-    font-weight: 700;
-}
-
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -213,43 +105,149 @@ title: About
 
 .social-icons a:hover {
     color: var(--accent);
-    transform: scale(1.15);
+    transform: scale(1.1);
     text-decoration: none !important;
 }
 
 .social-icons svg {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
     fill: currentColor;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.grid-item {
+    background: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.grid-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.grid-item h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    transition: color 0.5s ease, border-color 0.5s ease;
 }
 
 .grid-item ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    margin: 0;
 }
 
-.grid-item a:not(.social-icons a):not(.ytm-logo-link):not(.latest-blog-link-wrapper) {
+.grid-item li {
+    margin-bottom: 8px;
+}
+
+.grid-item a:not(.social-icons a):not(.ytm-logo-link) {
     text-decoration: none;
-    color: var(--accent);
+    opacity: 0.8;
     transition: opacity 0.2s;
 }
 
-.grid-item a:not(.social-icons a):not(.ytm-logo-link):not(.latest-blog-link-wrapper):hover {
-    opacity: 0.8;
+.grid-item a:not(.social-icons a):not(.ytm-logo-link):hover {
+    opacity: 1;
+    color: var(--accent);
     text-decoration: underline;
+}
+
+.latest-movie-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none !important;
+}
+
+.latest-movie-thumb {
+    width: 60px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+.ytm-thumb-large {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    border: none;
+}
+
+.latest-movie-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.latest-movie-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    color: var(--text);
+    line-height: 1.2;
+    transition: color 0.5s ease;
+}
+
+.latest-movie-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.latest-movie-link-wrapper, .latest-blog-link-wrapper {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    display: block;
+    opacity: 1 !important;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.latest-movie-link-wrapper:hover, 
+.latest-blog-link-wrapper:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.latest-movie-link-wrapper:hover .latest-movie-title, 
+.latest-blog-link-wrapper:hover .latest-blog-title {
+    color: var(--accent) !important;
+    text-decoration: underline;
+}
+
+.latest-blog-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
 }
 
 .latest-blog-title {
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0 0 8px 0;
     color: var(--text);
     line-height: 1.3;
-    transition: color 0.2s;
 }
 
 .latest-blog-date {
@@ -265,18 +263,18 @@ title: About
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    padding-top: 5px;
 }
 
 .tip-qr {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
     background-color: #ffffff;
-    border-radius: 12px;
-    padding: 8px;
+    border-radius: 6px;
+    padding: 4px;
+    margin-bottom: 8px;
     border: 1px solid var(--border);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .playing-indicator {
@@ -284,7 +282,7 @@ title: About
     align-items: flex-end;
     gap: 3px;
     height: 10px;
-    margin-left: 8px;
+    margin-left: 6px;
 }
 
 .playing-indicator .bar {
@@ -323,6 +321,13 @@ title: About
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 8px;
+}
+
+.grid-item .ytm-header h3 {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
 }
 
 .ytm-logo-link {
@@ -336,7 +341,7 @@ title: About
 
 .ytm-logo-link:hover {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.1);
     text-decoration: none !important;
     border-bottom: none !important;
 }
@@ -356,10 +361,21 @@ title: About
 
 .ytm-active h3 {
     color: rgba(255,255,255,0.7) !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.ytm-active .ytm-header {
-    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+.ytm-active .latest-movie-title {
+    color: #ffffff !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.ytm-active .latest-movie-link-wrapper:hover .latest-movie-title {
+    color: #FF0000 !important;
+}
+
+.ytm-active .latest-movie-date {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .ytm-track-layout {
@@ -373,36 +389,26 @@ title: About
 .current-track-wrapper {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     flex: 1;
     min-width: 0;
-}
-
-.ytm-thumb-large {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    border: none;
 }
 
 .prev-track-container {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding-left: 24px;
+    gap: 10px;
+    padding-left: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     flex-shrink: 0;
     max-width: 40%;
 }
 
 .prev-track-img {
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .prev-track-info {
@@ -414,25 +420,27 @@ title: About
 .prev-track-label {
     font-size: 0.65rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.75);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .prev-track-text {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9) !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transition: color 0.5s ease;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .play-history-dropdown {
-    margin-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
 }
 
 .play-history-dropdown summary {
@@ -443,7 +451,7 @@ title: About
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: color 0.2s;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .play-history-dropdown summary:hover {
@@ -453,11 +461,11 @@ title: About
 .play-history-list {
     list-style: none;
     padding: 0;
-    margin: 15px 0 0 0;
+    margin: 10px 0 0 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-height: 220px;
+    gap: 8px;
+    max-height: 200px;
     overflow-y: auto;
 }
 
@@ -466,28 +474,28 @@ title: About
 }
 
 .play-history-list::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 3px;
 }
 
 .history-track-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 8px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.25);
+    gap: 10px;
+    padding: 6px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
     transition: background 0.2s;
 }
 
 .history-track-item:hover {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .history-track-img {
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
     object-fit: cover;
 }
 
@@ -498,7 +506,7 @@ title: About
 }
 
 .history-track-title {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #ffffff;
     white-space: nowrap;
@@ -507,47 +515,20 @@ title: About
 }
 
 .history-track-artist {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.7);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-@media (max-width: 900px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .bento-large {
-        grid-column: 1 / -1;
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    .bento-bio .profile-img {
-        margin: 0 auto;
-    }
-    .bio-admin-box {
-        margin: 0 auto;
-    }
-    .bento-wide {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    .bento-tall, .bento-wide, .bento-large {
-        grid-column: 1 / -1;
-        grid-row: auto;
-    }
+@media (max-width: 768px) {
     .ytm-track-layout {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        gap: 15px;
     }
+    
     .prev-track-container {
         padding-left: 0;
         border-left: none;
@@ -657,14 +638,14 @@ function fetchData() {
                     }
 
                     document.getElementById('ytm-container').innerHTML = `
-                        <a href="${searchUrl}" target="_blank" style="text-decoration: none; display: block;">
+                        <a href="${searchUrl}" target="_blank" class="latest-movie-link-wrapper">
                             <div class="ytm-track-layout">
                                 <div class="current-track-wrapper">
                                     <img src="${data.music.image}" alt="${data.music.title}" class="ytm-thumb-large">
-                                    <div style="display: flex; flex-direction: column;">
-                                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 5px 0; display: flex; align-items: center; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${statusText}</p>
-                                        <p style="font-weight: bold; font-size: 1.2rem; color: #fff; margin: 0 0 4px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
-                                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin: 0; font-weight: 500; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${data.music.artist}</p>
+                                    <div class="latest-movie-info">
+                                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);">${statusText}</p>
+                                        <p class="latest-movie-title">${data.music.title}</p>
+                                        <p class="latest-movie-date" style="text-transform: none;">${data.music.artist}</p>
                                     </div>
                                 </div>
                                 ${prevHtml}
@@ -687,12 +668,13 @@ fetch('/cinema-watchlist/2026/')
         const firstMovie = new DOMParser().parseFromString(html, 'text/html').querySelector('.movie-card');
         if (firstMovie) {
             document.getElementById('latest-movie-container').innerHTML = `
-                <a href="/cinema-watchlist/2026/" style="width: 100%; height: 100%; display: block; border-radius: 16px; overflow: hidden; position: relative; text-decoration: none;">
-                    <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 60px 24px 24px 24px; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%); z-index: 2; display: flex; flex-direction: column; justify-content: flex-end; pointer-events: none;">
-                        <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.7); margin: 0 0 6px 0; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Latest Watch</p>
-                        <p style="font-weight: bold; font-size: 1.3rem; color: #fff; margin: 0 0 4px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">${firstMovie.querySelector('.movie-title').textContent}</p>
-                        <p style="font-size: 0.85rem; color: var(--accent); margin: 0; text-transform: uppercase; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">${firstMovie.querySelector('.movie-date').textContent}</p>
+                <a href="/cinema-watchlist/2026/" class="latest-movie-link-wrapper">
+                    <div class="latest-movie-content">
+                        <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="latest-movie-thumb">
+                        <div class="latest-movie-info">
+                            <p class="latest-movie-title">${firstMovie.querySelector('.movie-title').textContent}</p>
+                            <p class="latest-movie-date">${firstMovie.querySelector('.movie-date').textContent}</p>
+                        </div>
                     </div>
                 </a>`;
         }
@@ -705,9 +687,8 @@ fetch('/blog/')
         if (firstPost) {
             const link = firstPost.querySelector('h2 a');
             document.getElementById('latest-blog-container').innerHTML = `
-                <a href="${link.getAttribute('href')}" class="latest-blog-link-wrapper" style="padding: 24px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+                <a href="${link.getAttribute('href')}" class="latest-blog-link-wrapper">
                     <div class="latest-blog-content">
-                        <h3 class="bento-header" style="color: inherit;">Latest Post</h3>
                         <p class="latest-blog-title">${link.textContent.trim()}</p>
                         <p class="latest-blog-date">${firstPost.querySelector('div').textContent.trim()}</p>
                     </div>
