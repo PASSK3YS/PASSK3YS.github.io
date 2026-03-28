@@ -263,28 +263,6 @@ title: About
     align-items: center;
 }
 
-.ytm-logo-link {
-    display: flex;
-    align-items: center;
-    opacity: 0.85;
-    transition: opacity 0.2s, transform 0.2s;
-    text-decoration: none !important;
-}
-
-.ytm-logo-link:hover {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.ytm-logo-link svg {
-    color: var(--text);
-    transition: color 0.8s ease;
-}
-
-.ytm-active .ytm-logo-link svg {
-    color: #ffffff !important;
-}
-
 .ytm-active #ytm-bg-layer {
     opacity: 1;
 }
@@ -384,91 +362,6 @@ title: About
 @keyframes eq-bounce {
     0%, 100% { transform: scaleY(0.4); }
     50% { transform: scaleY(1); }
-}
-
-.play-history-dropdown {
-    margin-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 15px;
-}
-
-.play-history-dropdown summary {
-    cursor: pointer;
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.7);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: color 0.2s;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.play-history-dropdown summary:hover {
-    color: #FF0000;
-}
-
-.play-history-list {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-height: 240px;
-    overflow-y: auto;
-}
-
-.play-history-list::-webkit-scrollbar {
-    width: 6px;
-}
-
-.play-history-list::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-}
-
-.history-track-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    transition: background 0.2s;
-}
-
-.history-track-item:hover {
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.history-track-img {
-    width: 44px;
-    height: 44px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.history-track-info {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.history-track-title {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #ffffff;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.history-track-artist {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .cinema-link-wrapper {
@@ -588,11 +481,6 @@ function fetchData() {
                     if (data.previous) {
                         data.previous.image = await getBetterImage(data.previous.title, data.previous.artist, data.previous.image);
                     }
-                    if (data.history && Array.isArray(data.history)) {
-                        for (let i = 0; i < data.history.length; i++) {
-                            data.history[i].image = await getBetterImage(data.history[i].title, data.history[i].artist, data.history[i].image);
-                        }
-                    }
 
                     bg.style.backgroundImage = `url('${data.music.image}')`;
                     card.classList.add('ytm-active');
@@ -629,28 +517,6 @@ function fetchData() {
                         `;
                     }
 
-                    let historyHtml = '';
-                    if (data.history && Array.isArray(data.history) && data.history.length > 0) {
-                        let listItems = data.history.slice(0, 10).map(track => `
-                            <li class="history-track-item">
-                                <img src="${track.image}" alt="${track.title}" class="history-track-img">
-                                <div class="history-track-info">
-                                    <span class="history-track-title">${track.title}</span>
-                                    <span class="history-track-artist">${track.artist}</span>
-                                </div>
-                            </li>
-                        `).join('');
-
-                        historyHtml = `
-                            <details class="play-history-dropdown">
-                                <summary>Play history</summary>
-                                <ul class="play-history-list">
-                                    ${listItems}
-                                </ul>
-                            </details>
-                        `;
-                    }
-
                     document.getElementById('ytm-container').innerHTML = `
                         <a href="${searchUrl}" target="_blank" style="text-decoration: none; display: block;">
                             <div class="ytm-track-layout">
@@ -665,7 +531,6 @@ function fetchData() {
                                 ${prevHtml}
                             </div>
                         </a>
-                        ${historyHtml}
                     `;
                 }
             }
