@@ -54,7 +54,7 @@ title: About
             <div class="ytm-header">
                 <h3 id="ytm-header-title" style="margin: 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.7) !important;">I'm currently listening to...</h3>
                 <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
-                    <svg viewBox="0 0 98 24" height="22" width="98">
+                    <svg viewBox="0 0 110 24" height="22" width="100">
                         <circle cx="12" cy="12" r="12" fill="#FF0000"/>
                         <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
                         <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
@@ -62,7 +62,7 @@ title: About
                     </svg>
                 </a>
             </div>
-            <div id="ytm-container" style="margin-top: 20px;">
+            <div id="ytm-container" style="margin-top: 15px;">
                 <p style="font-size: 0.9em; color: rgba(255,255,255,0.6);">Loading YouTube Music...</p>
             </div>
         </div>
@@ -240,7 +240,7 @@ title: About
     grid-column: 1 / -1;
     position: relative;
     overflow: hidden;
-    padding: 35px;
+    padding: 24px 30px;
 }
 
 #ytm-bg-layer {
@@ -301,14 +301,14 @@ title: About
 .current-track-wrapper {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     flex: 1;
     min-width: 0;
 }
 
 .ytm-thumb-large {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 14px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
@@ -331,8 +331,8 @@ title: About
 }
 
 .prev-track-img {
-    width: 46px;
-    height: 46px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
@@ -354,7 +354,7 @@ title: About
 }
 
 .prev-track-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.95) !important;
     white-space: nowrap;
     overflow: hidden;
@@ -388,9 +388,9 @@ title: About
 }
 
 .play-history-dropdown {
-    margin-top: 30px;
+    margin-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .play-history-dropdown summary {
@@ -472,13 +472,25 @@ title: About
     text-overflow: ellipsis;
 }
 
-.card-link-wrapper {
+.latest-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     text-decoration: none !important;
-    display: block;
 }
 
-.card-link-wrapper:hover .latest-title {
-    color: var(--accent);
+.latest-thumb {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.latest-movie-thumb {
+    width: 70px;
+    height: 100px;
 }
 
 .latest-info {
@@ -504,28 +516,16 @@ title: About
     letter-spacing: 0.5px;
 }
 
-.cinema-link-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 22px;
+.card-link-wrapper {
     text-decoration: none !important;
+    display: block;
 }
 
-.cinema-movie-thumb {
-    width: 95px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-}
-
-.cinema-link-wrapper:hover .latest-title {
+.card-link-wrapper:hover .latest-title {
     color: var(--accent);
 }
 
-.cinema-link-wrapper:hover .cinema-movie-thumb {
+.card-link-wrapper:hover .latest-thumb {
     transform: scale(1.05);
 }
 
@@ -658,8 +658,8 @@ function fetchData() {
                                     <img src="${data.music.image}" alt="${data.music.title}" class="ytm-thumb-large">
                                     <div style="display: flex; flex-direction: column;">
                                         <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 6px 0; display: flex; align-items: center; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${statusText}</p>
-                                        <p style="font-weight: 800; font-size: 1.4rem; color: #fff; margin: 0 0 5px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
-                                        <p style="font-size: 1rem; color: rgba(255,255,255,0.8); margin: 0; font-weight: 500; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${data.music.artist}</p>
+                                        <p style="font-weight: 800; font-size: 1.25rem; color: #fff; margin: 0 0 5px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
+                                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0; font-weight: 500; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${data.music.artist}</p>
                                     </div>
                                 </div>
                                 ${prevHtml}
@@ -682,8 +682,8 @@ fetch('/cinema-watchlist/2026/')
         const firstMovie = new DOMParser().parseFromString(html, 'text/html').querySelector('.movie-card');
         if (firstMovie) {
             document.getElementById('latest-movie-container').innerHTML = `
-                <a href="/cinema-watchlist/2026/" class="cinema-link-wrapper">
-                    <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="cinema-movie-thumb">
+                <a href="/cinema-watchlist/2026/" class="card-link-wrapper latest-content-wrapper">
+                    <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="latest-thumb latest-movie-thumb">
                     <div class="latest-info">
                         <p class="latest-title">${firstMovie.querySelector('.movie-title').textContent}</p>
                         <p class="latest-meta">${firstMovie.querySelector('.movie-date').textContent}</p>
