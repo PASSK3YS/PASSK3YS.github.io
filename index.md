@@ -90,10 +90,11 @@ title: About
         </div>
     </a>
 
-    <div class="soft-card">
+    <div class="soft-card" style="display: flex; flex-direction: column;">
         <h3 class="soft-header">Tip Jar</h3>
-        <div class="tip-jar-container" style="flex-grow: 1; display: flex; align-items: center; justify-content: flex-start;">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding-bottom: 10px;">
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); letter-spacing: 1.5px;">MONERO (XMR)</span>
         </div>
     </div>
 
@@ -227,13 +228,19 @@ title: About
 }
 
 .tip-qr {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     object-fit: contain;
     background-color: #ffffff;
-    padding: 5px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 8px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soft-card:hover .tip-qr {
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .ytm-special-card {
@@ -658,7 +665,7 @@ function fetchData() {
                                     <img src="${data.music.image}" alt="${data.music.title}" class="ytm-thumb-large">
                                     <div style="display: flex; flex-direction: column;">
                                         <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 6px 0; display: flex; align-items: center; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${statusText}</p>
-                                        <p style="font-weight: 800; font-size: 1.25rem; color: #fff; margin: 0 0 5px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
+                                        <p style="font-weight: 800; font-size: 1.3rem; color: #fff; margin: 0 0 5px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
                                         <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0; font-weight: 500; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${data.music.artist}</p>
                                     </div>
                                 </div>
