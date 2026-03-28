@@ -59,17 +59,20 @@ title: About
 
     <div class="minimal-item">
         <h3 class="minimal-header">Gamertags</h3>
-        <ul class="minimal-list">
-            <li><span style="opacity: 0.6; font-size: 0.9em; margin-right: 5px;">Xbox</span> <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank">m00t</a></li>
-            <li><span style="opacity: 0.6; font-size: 0.9em; margin-right: 5px;">Steam</span> <a href="https://steamcommunity.com/id/m00t316/" target="_blank">m00t316</a></li>
-        </ul>
+        <div class="gamertag-list">
+            <span class="gamertag-label">Xbox</span> 
+            <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank">m00t</a>
+            
+            <span class="gamertag-label">Steam</span> 
+            <a href="https://steamcommunity.com/id/m00t316/" target="_blank">m00t316</a>
+        </div>
     </div>
 
     <div class="minimal-item">
         <h3 class="minimal-header">Guestbook</h3>
         <a href="/guestbook/" class="minimal-link-card">
             <span style="font-size: 1.3rem; font-weight: bold; color: var(--text);">Sign my guestbook &rarr;</span>
-            <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-top: 5px;">Leave a message</span>
+            <span style="font-size: 0.85rem; color: var(--accent); display: block; margin-top: 5px;">Leave a message</span>
         </a>
     </div>
 
@@ -147,10 +150,10 @@ title: About
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--text-muted);
+    color: var(--accent);
     margin: 0 0 20px 0;
     border-bottom: 1px solid var(--border);
-    padding-bottom: 12px;
+    padding-bottom: 14px;
     font-weight: 700;
 }
 
@@ -159,6 +162,7 @@ title: About
     gap: 20px;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 5px;
 }
 
 .social-icons a {
@@ -178,16 +182,21 @@ title: About
     fill: currentColor;
 }
 
-.minimal-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.gamertag-list {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 12px 10px;
+    align-items: center;
+    padding-top: 5px;
 }
 
-.minimal-list a {
+.gamertag-label {
+    opacity: 0.6; 
+    font-size: 0.9em;
+    color: var(--text);
+}
+
+.gamertag-list a {
     color: var(--text);
     text-decoration: none;
     font-weight: 600;
@@ -195,7 +204,7 @@ title: About
     font-size: 1.05rem;
 }
 
-.minimal-list a:hover {
+.gamertag-list a:hover {
     color: var(--accent);
     text-decoration: underline;
 }
@@ -204,6 +213,7 @@ title: About
     text-decoration: none;
     display: block;
     transition: transform 0.2s ease;
+    padding-top: 5px;
 }
 
 .minimal-link-card:hover {
@@ -211,13 +221,13 @@ title: About
 }
 
 .minimal-link-card:hover span:first-child {
-    color: var(--accent);
-    text-decoration: underline;
+    color: var(--accent) !important;
 }
 
 .tip-jar-container {
     display: flex;
     align-items: flex-start;
+    padding-top: 5px;
 }
 
 .tip-qr {
@@ -229,6 +239,12 @@ title: About
     border-radius: 12px;
     border: 1px solid var(--border);
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.tip-qr:hover {
+    opacity: 1;
 }
 
 .ytm-special-card {
@@ -470,6 +486,7 @@ title: About
     align-items: center;
     gap: 20px;
     text-decoration: none !important;
+    padding-top: 5px;
 }
 
 .latest-movie-thumb {
@@ -496,20 +513,25 @@ title: About
 
 .latest-movie-date {
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: var(--accent);
     margin: 0;
     text-transform: uppercase;
     font-weight: bold;
 }
 
+.latest-movie-link-wrapper {
+    text-decoration: none !important;
+    display: block;
+}
+
 .latest-movie-link-wrapper:hover .latest-movie-title {
     color: var(--accent) !important;
-    text-decoration: underline;
 }
 
 .latest-blog-content {
     display: flex;
     flex-direction: column;
+    padding-top: 5px;
 }
 
 .latest-blog-title {
@@ -523,7 +545,7 @@ title: About
 
 .latest-blog-date {
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--accent);
     margin: 0;
     text-transform: uppercase;
     font-weight: bold;
@@ -536,7 +558,6 @@ title: About
 
 .latest-blog-link-wrapper:hover .latest-blog-title {
     color: var(--accent) !important;
-    text-decoration: underline;
 }
 
 @media (max-width: 850px) {
