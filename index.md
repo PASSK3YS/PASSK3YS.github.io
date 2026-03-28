@@ -6,7 +6,7 @@ title: About
 <div class="minimal-bio">
     <img src="https://files.horizon.pics/0e37ee6c-1ef1-42f5-bd17-eff9acba2211?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
     <div class="bio-text">
-        <h1 style="margin: 0 0 15px 0; font-size: 2.4rem; font-weight: 800; line-height: 1.1;">Hi, I'm Kieran. 👋</h1>
+        <h1 style="margin: 0 0 15px 0; font-size: 2.5rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.5px;">Hi, I'm Kieran. 👋</h1>
         <p>Welcome to my personal website. Overall swell guy, avid beer drinker & privacy advocate.</p>
         <p>Hobbies include playing video games, watching wrestling & photography.</p>
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 15px;">
@@ -15,27 +15,27 @@ title: About
     </div>
 </div>
 
-<div class="minimal-grid">
-    <div class="ytm-special-card" id="ytm-card">
-        <div id="ytm-bg-layer"></div>
-        <div style="position: relative; z-index: 1;">
-            <div class="ytm-header">
-                <h3 id="ytm-header-title" style="margin: 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7) !important;">I'm currently listening to...</h3>
-                <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
-                    <svg viewBox="0 0 98 24" height="22" width="98">
-                        <circle cx="12" cy="12" r="12" fill="#FF0000"/>
-                        <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-                        <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
-                        <path fill="currentColor" d="M29.1 6.7h3.3l3.3 9.7 3.3-9.7h3.3v12h-2.9v-8.9l-2.9 8.3h-1.6l-2.9-8.3v8.9h-2.9v-12zm22.4 12.2c-.8.6-1.9.9-3.2.9-2.6 0-4-1.5-4-4.5V6.7h3v8.3c0 1.6.6 2.3 1.8 2.3.9 0 1.7-.5 2.1-1.3V6.7h3v12h-2.3l-.4-1.3zm12.3-5c0-1.5-1-2.1-2.5-2.5l-1.3-.3c-1-.2-1.3-.6-1.3-1.2 0-.7.7-1.2 1.8-1.2 1.2 0 1.9.5 2 1.5h2.8c-.1-2.2-1.9-3.6-4.7-3.6-2.6 0-4.6 1.3-4.6 3.6 0 1.7.9 2.5 2.6 2.9l1.2.3c1.1.3 1.4.7 1.4 1.4 0 .8-.8 1.4-2.1 1.4-1.4 0-2.2-.6-2.3-1.7h-2.9c.2 2.5 2.2 4.1 5.2 4.1 2.8 0 4.8-1.3 4.8-3.7zm3.8-7.2h3v12h-3v-12zm1.5-4.5c-1.1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9 1.9-.8 1.9-1.9-.8-1.9-1.9-1.9zm13.7 6.6c-1.2-1.3-2.9-2.1-4.8-2.1-3.7 0-6.4 2.6-6.4 6.2 0 3.7 2.6 6.2 6.2 6.2 2 0 3.8-.8 4.9-2.2l-2-1.9c-.6.8-1.6 1.4-2.9 1.4-2.1 0-3.3-1.4-3.3-3.6 0-2.2 1.3-3.6 3.3-3.6 1.3 0 2.2.6 2.9 1.4l2.1-1.8z"/>
-                    </svg>
-                </a>
-            </div>
-            <div id="ytm-container" style="margin-top: 20px;">
-                <p style="font-size: 0.9em; color: rgba(255,255,255,0.6);">Loading YouTube Music...</p>
-            </div>
+<div class="ytm-special-card" id="ytm-card">
+    <div id="ytm-bg-layer"></div>
+    <div style="position: relative; z-index: 1;">
+        <div class="ytm-header">
+            <h3 id="ytm-header-title" style="margin: 0; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: rgba(255,255,255,0.7) !important;">I'm currently listening to...</h3>
+            <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
+                <svg viewBox="0 0 98 24" height="22" width="98">
+                    <circle cx="12" cy="12" r="12" fill="#FF0000"/>
+                    <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+                    <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
+                    <path fill="currentColor" d="M29.1 6.7h3.3l3.3 9.7 3.3-9.7h3.3v12h-2.9v-8.9l-2.9 8.3h-1.6l-2.9-8.3v8.9h-2.9v-12zm22.4 12.2c-.8.6-1.9.9-3.2.9-2.6 0-4-1.5-4-4.5V6.7h3v8.3c0 1.6.6 2.3 1.8 2.3.9 0 1.7-.5 2.1-1.3V6.7h3v12h-2.3l-.4-1.3zm12.3-5c0-1.5-1-2.1-2.5-2.5l-1.3-.3c-1-.2-1.3-.6-1.3-1.2 0-.7.7-1.2 1.8-1.2 1.2 0 1.9.5 2 1.5h2.8c-.1-2.2-1.9-3.6-4.7-3.6-2.6 0-4.6 1.3-4.6 3.6 0 1.7.9 2.5 2.6 2.9l1.2.3c1.1.3 1.4.7 1.4 1.4 0 .8-.8 1.4-2.1 1.4-1.4 0-2.2-.6-2.3-1.7h-2.9c.2 2.5 2.2 4.1 5.2 4.1 2.8 0 4.8-1.3 4.8-3.7zm3.8-7.2h3v12h-3v-12zm1.5-4.5c-1.1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9 1.9-.8 1.9-1.9-.8-1.9-1.9-1.9zm13.7 6.6c-1.2-1.3-2.9-2.1-4.8-2.1-3.7 0-6.4 2.6-6.4 6.2 0 3.7 2.6 6.2 6.2 6.2 2 0 3.8-.8 4.9-2.2l-2-1.9c-.6.8-1.6 1.4-2.9 1.4-2.1 0-3.3-1.4-3.3-3.6 0-2.2 1.3-3.6 3.3-3.6 1.3 0 2.2.6 2.9 1.4l2.1-1.8z"/>
+                </svg>
+            </a>
+        </div>
+        <div id="ytm-container" style="margin-top: 20px;">
+            <p style="font-size: 0.9em; color: rgba(255,255,255,0.6);">Loading YouTube Music...</p>
         </div>
     </div>
+</div>
 
+<div class="minimal-grid">
     <div class="minimal-item">
         <h3 class="minimal-header">My socials</h3>
         <div class="social-icons">
@@ -71,8 +71,9 @@ title: About
     <div class="minimal-item">
         <h3 class="minimal-header">Guestbook</h3>
         <a href="/guestbook/" class="minimal-link-card">
-            <span style="font-size: 1.3rem; font-weight: bold; color: var(--text);">Sign my guestbook &rarr;</span>
-            <span style="font-size: 0.85rem; color: var(--accent); display: block; margin-top: 5px;">Leave a message</span>
+            <span class="guestbook-text">Sign my guestbook</span>
+            <span class="guestbook-arrow">&rarr;</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-top: 6px; font-weight: normal;">Leave a message</span>
         </a>
     </div>
 
@@ -91,7 +92,7 @@ title: About
     </div>
 
     <div class="minimal-item">
-        <h3 class="minimal-header">Tip Jar - Monero (XMR)</h3>
+        <h3 class="minimal-header">Tip Jar</h3>
         <div class="tip-jar-container">
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
         </div>
@@ -103,23 +104,23 @@ title: About
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .minimal-bio .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border: 2px solid var(--border);
 }
 
 .bio-text p {
     margin: 0 0 10px 0;
     font-size: 1.1rem;
     color: var(--text);
-    opacity: 0.9;
+    opacity: 0.85;
     line-height: 1.5;
 }
 
@@ -135,10 +136,20 @@ title: About
     text-decoration: underline;
 }
 
+.ytm-special-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .minimal-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 50px 40px;
+    gap: 70px 40px;
 }
 
 .minimal-item {
@@ -147,22 +158,20 @@ title: About
 }
 
 .minimal-header {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--accent);
-    margin: 0 0 20px 0;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 14px;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    opacity: 0.8;
+    margin: 0 0 16px 0;
     font-weight: 700;
 }
 
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 22px;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 5px;
 }
 
 .social-icons a {
@@ -184,10 +193,9 @@ title: About
 
 .gamertag-list {
     display: grid;
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 60px 1fr;
     gap: 12px 10px;
     align-items: center;
-    padding-top: 5px;
 }
 
 .gamertag-label {
@@ -200,61 +208,65 @@ title: About
     color: var(--text);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
     font-size: 1.05rem;
 }
 
 .gamertag-list a:hover {
     color: var(--accent);
-    text-decoration: underline;
 }
 
 .minimal-link-card {
     text-decoration: none;
     display: block;
     transition: transform 0.2s ease;
-    padding-top: 5px;
 }
 
-.minimal-link-card:hover {
-    transform: translateX(4px);
+.guestbook-text {
+    font-size: 1.3rem; 
+    font-weight: 700; 
+    color: var(--text);
+    transition: color 0.2s ease;
 }
 
-.minimal-link-card:hover span:first-child {
-    color: var(--accent) !important;
+.guestbook-arrow {
+    font-size: 1.3rem; 
+    font-weight: 700; 
+    color: var(--text);
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.2s ease;
+    margin-left: 4px;
+}
+
+.minimal-link-card:hover .guestbook-text,
+.minimal-link-card:hover .guestbook-arrow {
+    color: var(--accent);
+}
+
+.minimal-link-card:hover .guestbook-arrow {
+    transform: translateX(6px);
 }
 
 .tip-jar-container {
     display: flex;
     align-items: flex-start;
-    padding-top: 5px;
 }
 
 .tip-qr {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     object-fit: contain;
     background-color: #ffffff;
     padding: 6px;
     border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     opacity: 0.85;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .tip-qr:hover {
     opacity: 1;
-}
-
-.ytm-special-card {
-    grid-column: 1 / -1;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
 }
 
 #ytm-bg-layer {
@@ -265,7 +277,7 @@ title: About
     bottom: -30px;
     background-size: cover;
     background-position: center;
-    filter: blur(30px) brightness(0.4);
+    filter: blur(35px) brightness(0.4);
     z-index: 0;
     opacity: 0;
     transition: opacity 0.8s ease, background-image 0.8s ease;
@@ -324,9 +336,14 @@ title: About
     width: 90px;
     height: 90px;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     border: none;
+    transition: transform 0.3s ease;
+}
+
+.current-track-wrapper:hover .ytm-thumb-large {
+    transform: scale(1.03);
 }
 
 .prev-track-container {
@@ -334,7 +351,7 @@ title: About
     align-items: center;
     gap: 12px;
     padding-left: 24px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
     flex-shrink: 0;
     max-width: 40%;
 }
@@ -344,7 +361,7 @@ title: About
     height: 40px;
     border-radius: 6px;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .prev-track-info {
@@ -356,7 +373,7 @@ title: About
 .prev-track-label {
     font-size: 0.65rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 3px;
@@ -364,7 +381,7 @@ title: About
 
 .prev-track-text {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -398,7 +415,7 @@ title: About
 
 .play-history-dropdown {
     margin-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 15px;
 }
 
@@ -406,7 +423,7 @@ title: About
     cursor: pointer;
     font-size: 0.85rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: color 0.2s;
@@ -433,7 +450,7 @@ title: About
 }
 
 .play-history-list::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 3px;
 }
 
@@ -443,12 +460,12 @@ title: About
     gap: 15px;
     padding: 8px;
     border-radius: 8px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.2);
     transition: background 0.2s;
 }
 
 .history-track-item:hover {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .history-track-img {
@@ -475,7 +492,7 @@ title: About
 
 .history-track-artist {
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.6);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -486,7 +503,6 @@ title: About
     align-items: center;
     gap: 20px;
     text-decoration: none !important;
-    padding-top: 5px;
 }
 
 .latest-movie-thumb {
@@ -494,7 +510,8 @@ title: About
     height: 105px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
 }
 
 .latest-movie-info {
@@ -504,8 +521,8 @@ title: About
 
 .latest-movie-title {
     font-weight: bold;
-    font-size: 1.1rem;
-    margin: 0 0 5px 0;
+    font-size: 1.15rem;
+    margin: 0 0 6px 0;
     color: var(--text);
     line-height: 1.2;
     transition: color 0.2s ease;
@@ -528,15 +545,18 @@ title: About
     color: var(--accent) !important;
 }
 
+.latest-movie-link-wrapper:hover .latest-movie-thumb {
+    transform: scale(1.03);
+}
+
 .latest-blog-content {
     display: flex;
     flex-direction: column;
-    padding-top: 5px;
 }
 
 .latest-blog-title {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin: 0 0 8px 0;
     color: var(--text);
     line-height: 1.3;
@@ -564,7 +584,7 @@ title: About
     .minimal-bio {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 25px;
     }
 }
 
@@ -577,7 +597,7 @@ title: About
     .prev-track-container {
         padding-left: 0;
         border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
         padding-top: 15px;
         width: 100%;
         max-width: 100%;
@@ -688,9 +708,9 @@ function fetchData() {
                                 <div class="current-track-wrapper">
                                     <img src="${data.music.image}" alt="${data.music.title}" class="ytm-thumb-large">
                                     <div style="display: flex; flex-direction: column;">
-                                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 5px 0; display: flex; align-items: center; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${statusText}</p>
-                                        <p style="font-weight: bold; font-size: 1.2rem; color: #fff; margin: 0 0 4px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
-                                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin: 0; font-weight: 500; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${data.music.artist}</p>
+                                        <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 6px 0; display: flex; align-items: center; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${statusText}</p>
+                                        <p style="font-weight: 800; font-size: 1.3rem; color: #fff; margin: 0 0 5px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
+                                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0; font-weight: 500; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${data.music.artist}</p>
                                     </div>
                                 </div>
                                 ${prevHtml}
