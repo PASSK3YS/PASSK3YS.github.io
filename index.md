@@ -3,19 +3,36 @@ layout: default
 title: About
 ---
 
-<div class="bio-container">
-    <img src="https://files.horizon.pics/0e37ee6c-1ef1-42f5-bd17-eff9acba2211?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
-    <div class="bio-text">
-        <p><strong>Hi, I'm Kieran. 👋 Welcome to my personal website.</strong></p>
-        <p>Overall swell guy, avid beer drinker & privacy advocate.</p>
-        <p>Hobbies include playing video games, watching wrestling & photography.</p>
-        <p>Server admin / moderator for <a href="https://standardnotes.com" target="_blank">Standard Notes</a> & <a href="https://proton.me" target="_blank">Proton</a>.</p>
-    </div>
-</div>
-
 <div class="grid-container">
-    <div class="grid-item">
-        <h3>My socials</h3>
+    <div class="grid-item bento-large bento-bio">
+        <img src="https://files.horizon.pics/0e37ee6c-1ef1-42f5-bd17-eff9acba2211?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
+        <div class="bio-text">
+            <h2 style="margin: 0 0 10px 0; font-size: 1.8rem; line-height: 1.2;">Hi, I'm Kieran. 👋</h2>
+            <p style="font-size: 1.1rem; opacity: 0.9; margin: 0 0 15px 0;">Welcome to my personal website.</p>
+            <p style="margin: 0 0 8px 0;">Overall swell guy, avid beer drinker & privacy advocate.</p>
+            <p style="margin: 0 0 15px 0;">Hobbies include playing video games, watching wrestling & photography.</p>
+            <div class="bio-admin-box">
+                Server admin / moderator for <a href="https://standardnotes.com" target="_blank">Standard Notes</a> & <a href="https://proton.me" target="_blank">Proton</a>.
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-item bento-tall">
+        <h3 class="bento-header">Latest watch at Cinema</h3>
+        <div id="latest-movie-container" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
+        </div>
+    </div>
+
+    <div class="grid-item bento-wide" style="justify-content: center;">
+        <h3 class="bento-header">Latest post</h3>
+        <div id="latest-blog-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
+        </div>
+    </div>
+
+    <div class="grid-item" style="justify-content: center; align-items: center;">
+        <h3 class="bento-header" style="width: 100%; text-align: left;">My socials</h3>
         <div class="social-icons">
             <a href="https://x.com/PASSK3YS" target="_blank" title="X">
                 <svg viewBox="0 0 24 24">
@@ -34,56 +51,46 @@ title: About
             </a>
         </div>
     </div>
+    
     <div class="grid-item">
-        <h3>Gamertags</h3>
-        <ul>
+        <h3 class="bento-header">Gamertags</h3>
+        <ul style="padding-left: 15px;">
             <li>Xbox: <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank">m00t</a></li>
             <li>Steam: <a href="https://steamcommunity.com/id/m00t316/" target="_blank">m00t316</a></li>
         </ul>
     </div>
-    <div class="grid-item">
-        <h3>Guestbook</h3>
-        <a href="/guestbook/" class="latest-blog-link-wrapper">
+
+    <div class="grid-item" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+        <a href="/guestbook/" class="latest-blog-link-wrapper" style="padding: 10px;">
             <div class="latest-blog-content">
-                <p class="latest-blog-title">Sign my guestbook</p>
+                <p class="latest-blog-title" style="font-size: 1.4rem;">Sign my guestbook</p>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 5px 0 0 0;">Leave a message &rarr;</p>
             </div>
         </a>
     </div>
+
     <div class="grid-item">
-        <h3>Latest watch at Cinema</h3>
-        <div id="latest-movie-container">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
-        </div>
-    </div>
-    <div class="grid-item">
-        <h3>Latest post</h3>
-        <div id="latest-blog-container">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
-        </div>
-    </div>
-    <div class="grid-item">
-        <h3>Tip Jar - Monero (XMR)</h3>
+        <h3 class="bento-header">Tip Jar - Monero</h3>
         <div class="tip-jar-container">
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
         </div>
     </div>
-    <div class="grid-item" id="ytm-card" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: 12px 20px;">
+
+    <div class="grid-item bento-full" id="ytm-card" style="position: relative; overflow: hidden; padding: 20px;">
         <div id="ytm-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
             <div class="ytm-header">
-                <h3 id="ytm-header-title">I'm currently listening to...</h3>
+                <h3 id="ytm-header-title" class="bento-header" style="margin-bottom: 0;">I'm currently listening to...</h3>
                 <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
-                    <div style="display: flex; align-items: center; gap: 3px;">
-                        <svg viewBox="0 0 24 24" width="26" height="26">
-                            <circle cx="12" cy="12" r="12" fill="#FF0000"/>
-                            <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-                            <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
-                        </svg>
-                        <div class="ytm-text-logo"></div>
-                    </div>
+                    <svg viewBox="0 0 98 24" height="24" width="98">
+                        <circle cx="12" cy="12" r="12" fill="#FF0000"/>
+                        <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+                        <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
+                        <path fill="currentColor" d="M29.1 6.7h3.3l3.3 9.7 3.3-9.7h3.3v12h-2.9v-8.9l-2.9 8.3h-1.6l-2.9-8.3v8.9h-2.9v-12zm22.4 12.2c-.8.6-1.9.9-3.2.9-2.6 0-4-1.5-4-4.5V6.7h3v8.3c0 1.6.6 2.3 1.8 2.3.9 0 1.7-.5 2.1-1.3V6.7h3v12h-2.3l-.4-1.3zm12.3-5c0-1.5-1-2.1-2.5-2.5l-1.3-.3c-1-.2-1.3-.6-1.3-1.2 0-.7.7-1.2 1.8-1.2 1.2 0 1.9.5 2 1.5h2.8c-.1-2.2-1.9-3.6-4.7-3.6-2.6 0-4.6 1.3-4.6 3.6 0 1.7.9 2.5 2.6 2.9l1.2.3c1.1.3 1.4.7 1.4 1.4 0 .8-.8 1.4-2.1 1.4-1.4 0-2.2-.6-2.3-1.7h-2.9c.2 2.5 2.2 4.1 5.2 4.1 2.8 0 4.8-1.3 4.8-3.7zm3.8-7.2h3v12h-3v-12zm1.5-4.5c-1.1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9 1.9-.8 1.9-1.9-.8-1.9-1.9-1.9zm13.7 6.6c-1.2-1.3-2.9-2.1-4.8-2.1-3.7 0-6.4 2.6-6.4 6.2 0 3.7 2.6 6.2 6.2 6.2 2 0 3.8-.8 4.9-2.2l-2-1.9c-.6.8-1.6 1.4-2.9 1.4-2.1 0-3.3-1.4-3.3-3.6 0-2.2 1.3-3.6 3.3-3.6 1.3 0 2.2.6 2.9 1.4l2.1-1.8z"/>
+                    </svg>
                 </a>
             </div>
-            <div id="ytm-container">
+            <div id="ytm-container" style="margin-top: 15px;">
                 <p style="font-size: 0.9em; color: var(--text-muted);">Loading YouTube Music...</p>
             </div>
         </div>
@@ -91,10 +98,92 @@ title: About
 </div>
 
 <style>
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(140px, auto);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.grid-item {
+    background: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-wide {
+    grid-column: span 2;
+}
+
+.bento-tall {
+    grid-row: span 2;
+}
+
+.bento-full {
+    grid-column: 1 / -1;
+}
+
+.bento-bio {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.bento-bio .profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid var(--border);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.bio-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-admin-box {
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    display: inline-block;
+    width: fit-content;
+}
+
+.bento-header {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
+    justify-content: center;
+    flex-grow: 1;
     flex-wrap: wrap;
 }
 
@@ -107,62 +196,33 @@ title: About
 
 .social-icons a:hover {
     color: var(--accent);
-    transform: scale(1.1);
+    transform: scale(1.15);
     text-decoration: none !important;
 }
 
 .social-icons svg {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     fill: currentColor;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.grid-item {
-    background: var(--nav-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.grid-item:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-}
-
-.grid-item h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 10px;
-    transition: color 0.5s ease, border-color 0.5s ease;
 }
 
 .grid-item ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.grid-item li {
-    margin-bottom: 8px;
-}
-
-.grid-item a:not(.social-icons a) {
+.grid-item a:not(.social-icons a):not(.ytm-logo-link) {
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.2s;
+    color: var(--text);
 }
 
-.grid-item a:not(.social-icons a):hover {
+.grid-item a:not(.social-icons a):not(.ytm-logo-link):hover {
     opacity: 1;
     color: var(--accent);
     text-decoration: underline;
@@ -170,17 +230,21 @@ title: About
 
 .latest-movie-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 15px;
     text-decoration: none !important;
 }
 
 .latest-movie-thumb {
-    width: 60px;
-    height: 90px;
+    width: 100%;
+    max-width: 140px;
+    aspect-ratio: 2/3;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 8px;
     border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .ytm-thumb-large {
@@ -200,7 +264,7 @@ title: About
 
 .latest-movie-title {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 0 0 5px 0;
     color: var(--text);
     line-height: 1.2;
@@ -223,7 +287,6 @@ title: About
     opacity: 1 !important;
     position: relative;
     overflow: hidden;
-    padding-bottom: 5px;
 }
 
 .latest-movie-link-wrapper:hover, 
@@ -241,12 +304,11 @@ title: About
 .latest-blog-content {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
 }
 
 .latest-blog-title {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0 0 8px 0;
     color: var(--text);
     line-height: 1.3;
@@ -265,27 +327,17 @@ title: About
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 5px;
+    flex-grow: 1;
 }
 
 .tip-qr {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     background-color: #ffffff;
-    border-radius: 6px;
-    padding: 4px;
-    margin-bottom: 8px;
+    border-radius: 8px;
+    padding: 6px;
     border: 1px solid var(--border);
-}
-
-.tip-text {
-    font-size: 0.85rem;
-    color: var(--accent) !important;
-    font-weight: bold;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .playing-indicator {
@@ -332,13 +384,6 @@ title: About
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
-}
-
-.grid-item .ytm-header h3 {
-    margin: 0;
-    padding: 0;
-    border-bottom: none;
 }
 
 .ytm-logo-link {
@@ -357,18 +402,13 @@ title: About
     border-bottom: none !important;
 }
 
-.ytm-text-logo {
-    width: 44px;
-    height: 26px;
-    background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/YouTube_Music_2024.svg');
-    background-size: auto 100%;
-    background-position: right center;
-    background-repeat: no-repeat;
-    transition: filter 0.8s ease;
+.ytm-logo-link svg {
+    color: var(--text);
+    transition: color 0.8s ease;
 }
 
-[data-theme="dark"] .ytm-text-logo {
-    filter: brightness(0) invert(1);
+.ytm-active .ytm-logo-link svg {
+    color: #ffffff !important;
 }
 
 .ytm-active #ytm-bg-layer {
@@ -376,16 +416,8 @@ title: About
 }
 
 .ytm-active h3 {
-    color: #ffffff !important;
+    color: rgba(255,255,255,0.7) !important;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-.ytm-active .ytm-header {
-    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-.ytm-active .ytm-text-logo {
-    filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.5)) !important;
 }
 
 .ytm-active .latest-movie-title {
@@ -546,13 +578,39 @@ title: About
     text-overflow: ellipsis;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-large {
+        grid-column: 1 / -1;
+        flex-direction: column;
+        text-align: center;
+    }
+    .bento-bio .profile-img {
+        margin: 0 auto;
+    }
+    .bio-admin-box {
+        margin: 0 auto;
+    }
+    .bento-wide {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .bento-tall, .bento-wide, .bento-large {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
     .ytm-track-layout {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
-    
     .prev-track-container {
         padding-left: 0;
         border-left: none;
