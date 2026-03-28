@@ -76,7 +76,7 @@ title: About
     </div>
 
     <div class="soft-card">
-        <h3 class="soft-header">Cinema Watch</h3>
+        <h3 class="soft-header">Latest cinema watch</h3>
         <div id="latest-movie-container" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
@@ -472,25 +472,13 @@ title: About
     text-overflow: ellipsis;
 }
 
-.latest-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.card-link-wrapper {
     text-decoration: none !important;
+    display: block;
 }
 
-.latest-thumb {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.latest-movie-thumb {
-    width: 70px;
-    height: 100px;
+.card-link-wrapper:hover .latest-title {
+    color: var(--accent);
 }
 
 .latest-info {
@@ -516,16 +504,28 @@ title: About
     letter-spacing: 0.5px;
 }
 
-.card-link-wrapper {
+.cinema-link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 22px;
     text-decoration: none !important;
-    display: block;
 }
 
-.card-link-wrapper:hover .latest-title {
+.cinema-movie-thumb {
+    width: 95px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.cinema-link-wrapper:hover .latest-title {
     color: var(--accent);
 }
 
-.card-link-wrapper:hover .latest-thumb {
+.cinema-link-wrapper:hover .cinema-movie-thumb {
     transform: scale(1.05);
 }
 
@@ -682,8 +682,8 @@ fetch('/cinema-watchlist/2026/')
         const firstMovie = new DOMParser().parseFromString(html, 'text/html').querySelector('.movie-card');
         if (firstMovie) {
             document.getElementById('latest-movie-container').innerHTML = `
-                <a href="/cinema-watchlist/2026/" class="card-link-wrapper latest-content-wrapper">
-                    <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="latest-thumb latest-movie-thumb">
+                <a href="/cinema-watchlist/2026/" class="cinema-link-wrapper">
+                    <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="cinema-movie-thumb">
                     <div class="latest-info">
                         <p class="latest-title">${firstMovie.querySelector('.movie-title').textContent}</p>
                         <p class="latest-meta">${firstMovie.querySelector('.movie-date').textContent}</p>
