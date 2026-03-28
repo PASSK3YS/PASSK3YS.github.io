@@ -8,7 +8,7 @@ permalink: /contact/
     <div class="bio-text">
         <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px;">Contact</h1>
         <p style="font-size: 1.1rem; opacity: 0.9; margin: 0;">
-            Feel free to reach out via any of the secure platforms below.
+            You can reach me using the following...
         </p>
     </div>
 </div>
