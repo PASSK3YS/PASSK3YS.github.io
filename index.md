@@ -77,7 +77,7 @@ title: About
                         <path fill="#FF0000" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
                         <path fill="#ffffff" d="M12 4.444c-4.174 0-7.556 3.382-7.556 7.556s3.382 7.556 7.556 7.556 7.556-3.382 7.556-7.556S16.174 4.444 12 4.444zm0 14.111c-3.621 0-6.556-2.935-6.556-6.556s2.935-6.556 6.556-6.556 6.556 2.935 6.556 6.556-2.935 6.556-6.556 6.556z"/>
                         <path fill="#ffffff" d="M10 8.444v7.111l5.778-3.555z"/>
-                        <text x="27" y="18.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="20" letter-spacing="-0.5" fill="currentColor">Music</text>
+                        <path fill="currentColor" d="M28 6.3h3.5l3.2 8.7 3.2-8.7h3.5v12h-2.9v-8.2l-3 8.2h-1.6l-3-8.2v8.2H28V6.3zm20.9 0h2.9v8.4c0 1.6.8 2.3 2 2.3 1.1 0 2-.7 2-2.3V6.3h2.9v12h-2.4l-.3-1.4c-.6 1.1-1.7 1.6-3 1.6-2.3 0-4-1.4-4-4.2V6.3zm16.4 6.9c0-1.4-.9-2-2.4-2.3l-1.3-.3c-1-.2-1.4-.6-1.4-1.3 0-.8.7-1.3 1.8-1.3 1 0 1.7.5 1.8 1.4h2.8c-.1-2.1-1.8-3.4-4.6-3.4-2.5 0-4.6 1.2-4.6 3.5 0 1.6.9 2.3 2.5 2.6l1.3.3c1 .2 1.4.6 1.4 1.3 0 .8-.8 1.4-2 1.4-1.2 0-2-.6-2.1-1.6h-2.9c.2 2.3 2 3.8 5 3.8 2.9 0 4.7-1.3 4.7-3.7zm4.1-6.9h2.9v12h-2.9V6.3zm1.4-4.3c-1 0-1.8.8-1.8 1.8s.8 1.8 1.8 1.8 1.8-.8 1.8-1.8-.8-1.8-1.8-1.8zm14.1 6.3c-1.1-1.2-2.7-1.9-4.5-1.9-3.5 0-6 2.5-6 6 0 3.5 2.4 6 5.9 6 1.9 0 3.5-.7 4.6-2l-1.9-1.9c-.6.8-1.5 1.3-2.7 1.3-1.9 0-3.1-1.3-3.1-3.4 0-2.1 1.2-3.4 3.1-3.4 1.2 0 2 .5 2.7 1.3l1.9-1.9z"/>
                     </svg>
                 </a>
             </div>
@@ -343,10 +343,9 @@ title: About
     display: flex;
     align-items: center;
     opacity: 0.8;
-    transition: opacity 0.2s, transform 0.2s, color 0.8s ease;
+    transition: opacity 0.2s, transform 0.2s;
     text-decoration: none !important;
     border-bottom: none !important;
-    color: var(--text);
 }
 
 .ytm-logo-link:hover {
@@ -354,6 +353,15 @@ title: About
     transform: scale(1.1);
     text-decoration: none !important;
     border-bottom: none !important;
+}
+
+.ytm-logo-link svg {
+    color: var(--text);
+    transition: color 0.8s ease;
+}
+
+.ytm-active .ytm-logo-link svg {
+    color: #ffffff !important;
 }
 
 .ytm-active #ytm-bg-layer {
@@ -367,10 +375,6 @@ title: About
 
 .ytm-active .ytm-header {
     border-bottom-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-.ytm-active .ytm-logo-link {
-    color: #ffffff !important;
 }
 
 .ytm-active .latest-movie-title {
