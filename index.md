@@ -72,8 +72,13 @@ title: About
         <div style="position: relative; z-index: 1;">
             <div class="ytm-header">
                 <h3 id="ytm-header-title">I'm currently listening to...</h3>
-                <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
-                    <div class="ytm-logo-img"></div>
+                <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link">
+                    <svg viewBox="0 0 95 24" height="26">
+                        <path fill="#FF0000" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
+                        <path fill="#ffffff" d="M12 4.444c-4.174 0-7.556 3.382-7.556 7.556s3.382 7.556 7.556 7.556 7.556-3.382 7.556-7.556S16.174 4.444 12 4.444zm0 14.111c-3.621 0-6.556-2.935-6.556-6.556s2.935-6.556 6.556-6.556 6.556 2.935 6.556 6.556-2.935 6.556-6.556 6.556z"/>
+                        <path fill="#ffffff" d="M10 8.444v7.111l5.778-3.555z"/>
+                        <text x="27" y="18.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="20" letter-spacing="-0.5" fill="currentColor">Music</text>
+                    </svg>
                 </a>
             </div>
             <div id="ytm-container">
@@ -338,9 +343,10 @@ title: About
     display: flex;
     align-items: center;
     opacity: 0.8;
-    transition: opacity 0.2s, transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s, color 0.8s ease;
     text-decoration: none !important;
     border-bottom: none !important;
+    color: var(--text);
 }
 
 .ytm-logo-link:hover {
@@ -348,19 +354,6 @@ title: About
     transform: scale(1.1);
     text-decoration: none !important;
     border-bottom: none !important;
-}
-
-.ytm-logo-img {
-    width: 100px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/YouTube_Music_logo.svg');
-}
-
-[data-theme="dark"] .ytm-logo-img {
-    background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/YouTube_Music_short_logo_with_white_wordmark.svg');
 }
 
 .ytm-active #ytm-bg-layer {
@@ -376,8 +369,8 @@ title: About
     border-bottom-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.ytm-active .ytm-logo-img {
-    background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/YouTube_Music_short_logo_with_white_wordmark.svg') !important;
+.ytm-active .ytm-logo-link {
+    color: #ffffff !important;
 }
 
 .ytm-active .latest-movie-title {
