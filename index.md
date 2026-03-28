@@ -15,59 +15,30 @@ title: About
     </div>
 </div>
 
-<div class="directory-container">
-    
-    <div class="directory-row">
-        <div class="directory-label">Now Playing</div>
-        <div class="directory-content" style="width: 100%;">
-            <div class="ytm-special-card" id="ytm-card">
-                <div id="ytm-bg-layer"></div>
-                <div style="position: relative; z-index: 1;">
-                    <div class="ytm-header">
-                        <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
-                            <svg viewBox="0 0 98 24" height="22" width="98">
-                                <circle cx="12" cy="12" r="12" fill="#FF0000"/>
-                                <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-                                <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
-                                <path fill="currentColor" d="M29.1 6.7h3.3l3.3 9.7 3.3-9.7h3.3v12h-2.9v-8.9l-2.9 8.3h-1.6l-2.9-8.3v8.9h-2.9v-12zm22.4 12.2c-.8.6-1.9.9-3.2.9-2.6 0-4-1.5-4-4.5V6.7h3v8.3c0 1.6.6 2.3 1.8 2.3.9 0 1.7-.5 2.1-1.3V6.7h3v12h-2.3l-.4-1.3zm12.3-5c0-1.5-1-2.1-2.5-2.5l-1.3-.3c-1-.2-1.3-.6-1.3-1.2 0-.7.7-1.2 1.8-1.2 1.2 0 1.9.5 2 1.5h2.8c-.1-2.2-1.9-3.6-4.7-3.6-2.6 0-4.6 1.3-4.6 3.6 0 1.7.9 2.5 2.6 2.9l1.2.3c1.1.3 1.4.7 1.4 1.4 0 .8-.8 1.4-2.1 1.4-1.4 0-2.2-.6-2.3-1.7h-2.9c.2 2.5 2.2 4.1 5.2 4.1 2.8 0 4.8-1.3 4.8-3.7zm3.8-7.2h3v12h-3v-12zm1.5-4.5c-1.1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9 1.9-.8 1.9-1.9-.8-1.9-1.9-1.9zm13.7 6.6c-1.2-1.3-2.9-2.1-4.8-2.1-3.7 0-6.4 2.6-6.4 6.2 0 3.7 2.6 6.2 6.2 6.2 2 0 3.8-.8 4.9-2.2l-2-1.9c-.6.8-1.6 1.4-2.9 1.4-2.1 0-3.3-1.4-3.3-3.6 0-2.2 1.3-3.6 3.3-3.6 1.3 0 2.2.6 2.9 1.4l2.1-1.8z"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div id="ytm-container" style="margin-top: 15px;">
-                        <p style="font-size: 0.9em; color: rgba(255,255,255,0.6);">Loading YouTube Music...</p>
-                    </div>
-                </div>
-            </div>
+<div class="ytm-special-card" id="ytm-card">
+    <div id="ytm-bg-layer"></div>
+    <div style="position: relative; z-index: 1;">
+        <div class="ytm-header">
+            <h3 id="ytm-header-title" style="margin: 0; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: rgba(255,255,255,0.7) !important;">I'm currently listening to...</h3>
+            <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
+                <svg viewBox="0 0 98 24" height="22" width="98">
+                    <circle cx="12" cy="12" r="12" fill="#FF0000"/>
+                    <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+                    <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
+                    <path fill="currentColor" d="M29.1 6.7h3.3l3.3 9.7 3.3-9.7h3.3v12h-2.9v-8.9l-2.9 8.3h-1.6l-2.9-8.3v8.9h-2.9v-12zm22.4 12.2c-.8.6-1.9.9-3.2.9-2.6 0-4-1.5-4-4.5V6.7h3v8.3c0 1.6.6 2.3 1.8 2.3.9 0 1.7-.5 2.1-1.3V6.7h3v12h-2.3l-.4-1.3zm12.3-5c0-1.5-1-2.1-2.5-2.5l-1.3-.3c-1-.2-1.3-.6-1.3-1.2 0-.7.7-1.2 1.8-1.2 1.2 0 1.9.5 2 1.5h2.8c-.1-2.2-1.9-3.6-4.7-3.6-2.6 0-4.6 1.3-4.6 3.6 0 1.7.9 2.5 2.6 2.9l1.2.3c1.1.3 1.4.7 1.4 1.4 0 .8-.8 1.4-2.1 1.4-1.4 0-2.2-.6-2.3-1.7h-2.9c.2 2.5 2.2 4.1 5.2 4.1 2.8 0 4.8-1.3 4.8-3.7zm3.8-7.2h3v12h-3v-12zm1.5-4.5c-1.1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9 1.9-.8 1.9-1.9-.8-1.9-1.9-1.9zm13.7 6.6c-1.2-1.3-2.9-2.1-4.8-2.1-3.7 0-6.4 2.6-6.4 6.2 0 3.7 2.6 6.2 6.2 6.2 2 0 3.8-.8 4.9-2.2l-2-1.9c-.6.8-1.6 1.4-2.9 1.4-2.1 0-3.3-1.4-3.3-3.6 0-2.2 1.3-3.6 3.3-3.6 1.3 0 2.2.6 2.9 1.4l2.1-1.8z"/>
+                </svg>
+            </a>
+        </div>
+        <div id="ytm-container" style="margin-top: 20px;">
+            <p style="font-size: 0.9em; color: rgba(255,255,255,0.6);">Loading YouTube Music...</p>
         </div>
     </div>
+</div>
 
-    <div class="directory-row">
-        <div class="directory-label">Latest Post</div>
-        <div class="directory-content" id="latest-blog-container">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
-        </div>
-    </div>
-
-    <div class="directory-row">
-        <div class="directory-label">Cinema</div>
-        <div class="directory-content" id="latest-movie-container">
-            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
-        </div>
-    </div>
-
-    <div class="directory-row">
-        <div class="directory-label">Gamertags</div>
-        <div class="directory-content gamertag-list">
-            <span class="gamertag-platform">Xbox</span> 
-            <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank" class="directory-interactive-text">m00t</a>
-            <span class="gamertag-platform">Steam</span> 
-            <a href="https://steamcommunity.com/id/m00t316/" target="_blank" class="directory-interactive-text">m00t316</a>
-        </div>
-    </div>
-
-    <div class="directory-row">
-        <div class="directory-label">Socials</div>
-        <div class="directory-content social-icons">
+<div class="minimal-grid">
+    <div class="minimal-item">
+        <h3 class="minimal-header">My socials</h3>
+        <div class="social-icons">
             <a href="https://x.com/PASSK3YS" target="_blank" title="X">
                 <svg viewBox="0 0 24 24">
                     <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
@@ -86,23 +57,46 @@ title: About
         </div>
     </div>
 
-    <div class="directory-row">
-        <div class="directory-label">Guestbook</div>
-        <div class="directory-content">
-            <a href="/guestbook/" class="directory-link-wrapper">
-                <span class="directory-title">Sign my guestbook &rarr;</span>
-                <span class="directory-meta">Leave a message</span>
-            </a>
+    <div class="minimal-item">
+        <h3 class="minimal-header">Gamertags</h3>
+        <div class="gamertag-list">
+            <span class="gamertag-label">Xbox</span> 
+            <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank">m00t</a>
+            
+            <span class="gamertag-label">Steam</span> 
+            <a href="https://steamcommunity.com/id/m00t316/" target="_blank">m00t316</a>
         </div>
     </div>
 
-    <div class="directory-row">
-        <div class="directory-label">Tip Jar</div>
-        <div class="directory-content">
+    <div class="minimal-item">
+        <h3 class="minimal-header">Guestbook</h3>
+        <a href="/guestbook/" class="minimal-link-card">
+            <span class="guestbook-text">Sign my guestbook</span>
+            <span class="guestbook-arrow">&rarr;</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-top: 6px; font-weight: normal;">Leave a message</span>
+        </a>
+    </div>
+
+    <div class="minimal-item">
+        <h3 class="minimal-header">Latest watch at Cinema</h3>
+        <div id="latest-movie-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
+        </div>
+    </div>
+
+    <div class="minimal-item">
+        <h3 class="minimal-header">Latest post</h3>
+        <div id="latest-blog-container">
+            <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
+        </div>
+    </div>
+
+    <div class="minimal-item">
+        <h3 class="minimal-header">Tip Jar</h3>
+        <div class="tip-jar-container">
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
         </div>
     </div>
-
 </div>
 
 <style>
@@ -142,112 +136,40 @@ title: About
     text-decoration: underline;
 }
 
-.directory-container {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid var(--border);
+.ytm-special-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.directory-row {
-    display: flex;
-    align-items: flex-start;
-    padding: 35px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.directory-label {
-    width: 220px;
-    flex-shrink: 0;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-    font-weight: 700;
-    padding-top: 6px;
-}
-
-.directory-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.directory-link-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none !important;
-    transition: transform 0.3s ease;
-}
-
-.directory-link-wrapper:hover {
-    transform: translateX(8px);
-}
-
-.directory-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--text);
-    margin-bottom: 6px;
-    transition: color 0.2s ease;
-}
-
-.directory-link-wrapper:hover .directory-title {
-    color: var(--accent);
-}
-
-.directory-meta {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.directory-interactive-text {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.directory-interactive-text:hover {
-    color: var(--accent);
-    text-decoration: underline;
-}
-
-.directory-movie-thumb {
-    width: 60px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
-
-.directory-link-wrapper:hover .directory-movie-thumb {
-    transform: scale(1.05);
-}
-
-.gamertag-list {
+.minimal-grid {
     display: grid;
-    grid-template-columns: 70px 1fr;
-    gap: 15px 10px;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 70px 40px;
 }
 
-.gamertag-platform {
-    font-size: 0.85rem;
-    color: var(--text-muted);
+.minimal-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.minimal-header {
+    font-size: 0.7rem;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    opacity: 0.8;
+    margin: 0 0 16px 0;
     font-weight: 700;
-    letter-spacing: 0.5px;
 }
 
 .social-icons {
     display: flex;
-    gap: 25px;
+    gap: 22px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -260,41 +182,91 @@ title: About
 
 .social-icons a:hover {
     color: var(--accent);
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 .social-icons svg {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     fill: currentColor;
 }
 
+.gamertag-list {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 12px 10px;
+    align-items: center;
+}
+
+.gamertag-label {
+    opacity: 0.6; 
+    font-size: 0.9em;
+    color: var(--text);
+}
+
+.gamertag-list a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    font-size: 1.05rem;
+}
+
+.gamertag-list a:hover {
+    color: var(--accent);
+}
+
+.minimal-link-card {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.guestbook-text {
+    font-size: 1.3rem; 
+    font-weight: 700; 
+    color: var(--text);
+    transition: color 0.2s ease;
+}
+
+.guestbook-arrow {
+    font-size: 1.3rem; 
+    font-weight: 700; 
+    color: var(--text);
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.2s ease;
+    margin-left: 4px;
+}
+
+.minimal-link-card:hover .guestbook-text,
+.minimal-link-card:hover .guestbook-arrow {
+    color: var(--accent);
+}
+
+.minimal-link-card:hover .guestbook-arrow {
+    transform: translateX(6px);
+}
+
+.tip-jar-container {
+    display: flex;
+    align-items: flex-start;
+}
+
 .tip-qr {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     object-fit: contain;
     background-color: #ffffff;
     padding: 6px;
     border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     opacity: 0.85;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .tip-qr:hover {
     opacity: 1;
-    transform: translateY(-3px);
-}
-
-.ytm-special-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    padding: 24px 30px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    width: 100%;
+    transform: translateY(-2px);
 }
 
 #ytm-bg-layer {
@@ -361,11 +333,11 @@ title: About
 }
 
 .ytm-thumb-large {
-    width: 85px;
-    height: 85px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     border: none;
     transition: transform 0.3s ease;
 }
@@ -409,7 +381,7 @@ title: About
 
 .prev-track-text {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -478,7 +450,7 @@ title: About
 }
 
 .play-history-list::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 3px;
 }
 
@@ -488,12 +460,12 @@ title: About
     gap: 15px;
     padding: 8px;
     border-radius: 8px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.2);
     transition: background 0.2s;
 }
 
 .history-track-item:hover {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .history-track-img {
@@ -526,24 +498,97 @@ title: About
     text-overflow: ellipsis;
 }
 
-@media (max-width: 768px) {
+.latest-movie-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none !important;
+}
+
+.latest-movie-thumb {
+    width: 70px;
+    height: 105px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.latest-movie-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.latest-movie-title {
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin: 0 0 6px 0;
+    color: var(--text);
+    line-height: 1.2;
+    transition: color 0.2s ease;
+}
+
+.latest-movie-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.latest-movie-link-wrapper {
+    text-decoration: none !important;
+    display: block;
+}
+
+.latest-movie-link-wrapper:hover .latest-movie-title {
+    color: var(--accent) !important;
+}
+
+.latest-movie-link-wrapper:hover .latest-movie-thumb {
+    transform: scale(1.03);
+}
+
+.latest-blog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.latest-blog-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0 0 8px 0;
+    color: var(--text);
+    line-height: 1.3;
+    transition: color 0.2s ease;
+}
+
+.latest-blog-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.latest-blog-link-wrapper {
+    text-decoration: none !important;
+    display: block;
+}
+
+.latest-blog-link-wrapper:hover .latest-blog-title {
+    color: var(--accent) !important;
+}
+
+@media (max-width: 850px) {
     .minimal-bio {
         flex-direction: column;
         text-align: center;
         gap: 25px;
     }
-    .directory-row {
-        flex-direction: column;
-        padding: 25px 0;
-        gap: 15px;
-    }
-    .directory-label {
-        width: 100%;
-        padding-top: 0;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 10px;
-        margin-bottom: 5px;
-    }
+}
+
+@media (max-width: 600px) {
     .ytm-track-layout {
         flex-direction: column;
         align-items: flex-start;
@@ -688,11 +733,13 @@ fetch('/cinema-watchlist/2026/')
         const firstMovie = new DOMParser().parseFromString(html, 'text/html').querySelector('.movie-card');
         if (firstMovie) {
             document.getElementById('latest-movie-container').innerHTML = `
-                <a href="/cinema-watchlist/2026/" class="directory-link-wrapper" style="flex-direction: row; align-items: center; gap: 20px;">
-                    <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="directory-movie-thumb">
-                    <div style="display: flex; flex-direction: column;">
-                        <span class="directory-title">${firstMovie.querySelector('.movie-title').textContent}</span>
-                        <span class="directory-meta">${firstMovie.querySelector('.movie-date').textContent}</span>
+                <a href="/cinema-watchlist/2026/" class="latest-movie-link-wrapper">
+                    <div class="latest-movie-content">
+                        <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="latest-movie-thumb">
+                        <div class="latest-movie-info">
+                            <p class="latest-movie-title">${firstMovie.querySelector('.movie-title').textContent}</p>
+                            <p class="latest-movie-date">${firstMovie.querySelector('.movie-date').textContent}</p>
+                        </div>
                     </div>
                 </a>`;
         }
@@ -705,9 +752,11 @@ fetch('/blog/')
         if (firstPost) {
             const link = firstPost.querySelector('h2 a');
             document.getElementById('latest-blog-container').innerHTML = `
-                <a href="${link.getAttribute('href')}" class="directory-link-wrapper">
-                    <span class="directory-title">${link.textContent.trim()}</span>
-                    <span class="directory-meta">${firstPost.querySelector('div').textContent.trim()}</span>
+                <a href="${link.getAttribute('href')}" class="latest-blog-link-wrapper">
+                    <div class="latest-blog-content">
+                        <p class="latest-blog-title">${link.textContent.trim()}</p>
+                        <p class="latest-blog-date">${firstPost.querySelector('div').textContent.trim()}</p>
+                    </div>
                 </a>`;
         }
     });
