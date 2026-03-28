@@ -73,12 +73,14 @@ title: About
             <div class="ytm-header">
                 <h3 id="ytm-header-title">I'm currently listening to...</h3>
                 <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
-                    <svg viewBox="0 0 98 24" height="24" width="98">
-                        <circle cx="12" cy="12" r="12" fill="#FF0000"/>
-                        <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-                        <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
-                        <path fill="currentColor" d="M29.1 6.7h3.3l3.3 9.7 3.3-9.7h3.3v12h-2.9v-8.9l-2.9 8.3h-1.6l-2.9-8.3v8.9h-2.9v-12zm22.4 12.2c-.8.6-1.9.9-3.2.9-2.6 0-4-1.5-4-4.5V6.7h3v8.3c0 1.6.6 2.3 1.8 2.3.9 0 1.7-.5 2.1-1.3V6.7h3v12h-2.3l-.4-1.3zm12.3-5c0-1.5-1-2.1-2.5-2.5l-1.3-.3c-1-.2-1.3-.6-1.3-1.2 0-.7.7-1.2 1.8-1.2 1.2 0 1.9.5 2 1.5h2.8c-.1-2.2-1.9-3.6-4.7-3.6-2.6 0-4.6 1.3-4.6 3.6 0 1.7.9 2.5 2.6 2.9l1.2.3c1.1.3 1.4.7 1.4 1.4 0 .8-.8 1.4-2.1 1.4-1.4 0-2.2-.6-2.3-1.7h-2.9c.2 2.5 2.2 4.1 5.2 4.1 2.8 0 4.8-1.3 4.8-3.7zm3.8-7.2h3v12h-3v-12zm1.5-4.5c-1.1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9 1.9-.8 1.9-1.9-.8-1.9-1.9-1.9zm13.7 6.6c-1.2-1.3-2.9-2.1-4.8-2.1-3.7 0-6.4 2.6-6.4 6.2 0 3.7 2.6 6.2 6.2 6.2 2 0 3.8-.8 4.9-2.2l-2-1.9c-.6.8-1.6 1.4-2.9 1.4-2.1 0-3.3-1.4-3.3-3.6 0-2.2 1.3-3.6 3.3-3.6 1.3 0 2.2.6 2.9 1.4l2.1-1.8z"/>
-                    </svg>
+                    <div style="display: flex; align-items: center; gap: 3px;">
+                        <svg viewBox="0 0 24 24" width="26" height="26">
+                            <circle cx="12" cy="12" r="12" fill="#FF0000"/>
+                            <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+                            <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
+                        </svg>
+                        <div class="ytm-text-logo"></div>
+                    </div>
                 </a>
             </div>
             <div id="ytm-container">
@@ -355,13 +357,18 @@ title: About
     border-bottom: none !important;
 }
 
-.ytm-logo-link svg {
-    color: var(--text);
-    transition: color 0.8s ease;
+.ytm-text-logo {
+    width: 44px;
+    height: 26px;
+    background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/YouTube_Music_2024.svg');
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: filter 0.8s ease;
 }
 
-.ytm-active .ytm-logo-link svg {
-    color: #ffffff !important;
+[data-theme="dark"] .ytm-text-logo {
+    filter: brightness(0) invert(1);
 }
 
 .ytm-active #ytm-bg-layer {
@@ -375,6 +382,10 @@ title: About
 
 .ytm-active .ytm-header {
     border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.ytm-active .ytm-text-logo {
+    filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.5)) !important;
 }
 
 .ytm-active .latest-movie-title {
