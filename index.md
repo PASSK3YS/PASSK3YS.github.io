@@ -67,19 +67,19 @@ title: About
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
         </div>
     </div>
-    <div class="grid-item" id="spotify-card" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: 12px 20px;">
-        <div id="spotify-bg-layer"></div>
+    <div class="grid-item" id="ytm-card" style="grid-column: 1 / -1; position: relative; overflow: hidden; padding: 12px 20px;">
+        <div id="ytm-bg-layer"></div>
         <div style="position: relative; z-index: 1;">
-            <div class="spotify-header">
-                <h3 id="spotify-header-title">I'm currently listening to...</h3>
-                <a href="https://open.spotify.com/user/1plkfuli0kwl2ld8rj6p7xsfyb?si=9452da607d5141af" target="_blank" class="spotify-logo-link">
-                    <svg viewBox="0 0 24 24" width="26" height="26" fill="#1DB954">
-                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+            <div class="ytm-header">
+                <h3 id="ytm-header-title">I'm currently listening to...</h3>
+                <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="#FF0000">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19.16c-3.953 0-7.16-3.207-7.16-7.16S8.047 4.84 12 4.84s7.16 3.207 7.16 7.16-3.207 7.16-7.16 7.16zm-2.56-10.332L15.348 12l-5.908 3.172V8.828z"/>
                     </svg>
                 </a>
             </div>
-            <div id="spotify-container">
-                <p style="font-size: 0.9em; color: var(--text-muted);">Loading Spotify...</p>
+            <div id="ytm-container">
+                <p style="font-size: 0.9em; color: var(--text-muted);">Loading YouTube Music...</p>
             </div>
         </div>
     </div>
@@ -178,7 +178,7 @@ title: About
     border: 1px solid var(--border);
 }
 
-.spotify-thumb-large {
+.ytm-thumb-large {
     width: 85px;
     height: 85px;
     object-fit: cover;
@@ -293,7 +293,7 @@ title: About
 
 .playing-indicator .bar {
     width: 3px;
-    background-color: #1DB954;
+    background-color: #FF0000;
     animation: eq-bounce 1s infinite ease-in-out;
     transform-origin: bottom;
     border-radius: 2px;
@@ -308,7 +308,7 @@ title: About
     50% { transform: scaleY(1); }
 }
 
-#spotify-bg-layer {
+#ytm-bg-layer {
     position: absolute;
     top: -30px;
     left: -30px;
@@ -323,20 +323,20 @@ title: About
     pointer-events: none;
 }
 
-.spotify-header {
+.ytm-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
 }
 
-.grid-item .spotify-header h3 {
+.grid-item .ytm-header h3 {
     margin: 0;
     padding: 0;
     border-bottom: none;
 }
 
-.spotify-logo-link {
+.ytm-logo-link {
     display: flex;
     align-items: center;
     opacity: 0.8;
@@ -345,41 +345,41 @@ title: About
     border-bottom: none !important;
 }
 
-.spotify-logo-link:hover {
+.ytm-logo-link:hover {
     opacity: 1;
     transform: scale(1.1);
     text-decoration: none !important;
     border-bottom: none !important;
 }
 
-.spotify-active #spotify-bg-layer {
+.ytm-active #ytm-bg-layer {
     opacity: 1;
 }
 
-.spotify-active h3 {
+.ytm-active h3 {
     color: #ffffff !important;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.spotify-active .spotify-header {
+.ytm-active .ytm-header {
     border-bottom-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.spotify-active .latest-movie-title {
+.ytm-active .latest-movie-title {
     color: #ffffff !important;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.spotify-active .latest-movie-link-wrapper:hover .latest-movie-title {
-    color: #1DB954 !important;
+.ytm-active .latest-movie-link-wrapper:hover .latest-movie-title {
+    color: #FF0000 !important;
 }
 
-.spotify-active .latest-movie-date {
+.ytm-active .latest-movie-date {
     color: rgba(255, 255, 255, 0.85) !important;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.spotify-track-layout {
+.ytm-track-layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -456,7 +456,7 @@ title: About
 }
 
 .play-history-dropdown summary:hover {
-    color: #1DB954;
+    color: #FF0000;
 }
 
 .play-history-list {
@@ -524,7 +524,7 @@ title: About
 }
 
 @media (max-width: 768px) {
-    .spotify-track-layout {
+    .ytm-track-layout {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
@@ -543,22 +543,22 @@ title: About
 
 <script>
 const workerUrl = 'https://xbox-tracker.snowy-scene-5750.workers.dev';
-let currentSpotifyState = '';
+let currentYtmState = '';
 
 function fetchData() {
     fetch(workerUrl)
         .then(res => res.json())
         .then(data => {
             if (data.music && typeof data.music === 'object') {
-                const card = document.getElementById('spotify-card');
-                const bg = document.getElementById('spotify-bg-layer');
-                const headerTitle = document.getElementById('spotify-header-title');
+                const card = document.getElementById('ytm-card');
+                const bg = document.getElementById('ytm-bg-layer');
+                const headerTitle = document.getElementById('ytm-header-title');
                 const newState = `${data.music.title}-${data.music.isPlaying}`;
                 
-                if (currentSpotifyState !== newState) {
-                    currentSpotifyState = newState;
+                if (currentYtmState !== newState) {
+                    currentYtmState = newState;
                     bg.style.backgroundImage = `url('${data.music.image}')`;
-                    card.classList.add('spotify-active');
+                    card.classList.add('ytm-active');
 
                     if (headerTitle) {
                         headerTitle.textContent = data.music.isPlaying ? "I'm currently listening to..." : "Currently not listening to music";
@@ -576,8 +576,8 @@ function fetchData() {
                         else statusText += ` • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                     }
 
-                    const searchUrl = `https://open.spotify.com/search/${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
-                    const statusColor = data.music.isPlaying ? '#1DB954' : 'rgba(255, 255, 255, 0.7)';
+                    const searchUrl = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                    const statusColor = data.music.isPlaying ? '#FF0000' : 'rgba(255, 255, 255, 0.7)';
                     
                     let prevHtml = '';
                     if (data.music.isPlaying && data.previous) {
@@ -614,11 +614,11 @@ function fetchData() {
                         `;
                     }
 
-                    document.getElementById('spotify-container').innerHTML = `
+                    document.getElementById('ytm-container').innerHTML = `
                         <a href="${searchUrl}" target="_blank" class="latest-movie-link-wrapper">
-                            <div class="spotify-track-layout">
+                            <div class="ytm-track-layout">
                                 <div class="current-track-wrapper">
-                                    <img src="${data.music.image}" alt="${data.music.title}" class="spotify-thumb-large">
+                                    <img src="${data.music.image}" alt="${data.music.title}" class="ytm-thumb-large">
                                     <div class="latest-movie-info">
                                         <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 4px 0; display: flex; align-items: center; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);">${statusText}</p>
                                         <p class="latest-movie-title">${data.music.title}</p>
