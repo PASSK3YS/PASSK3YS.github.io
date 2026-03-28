@@ -54,7 +54,7 @@ title: About
             <div class="ytm-header">
                 <h3 id="ytm-header-title" style="margin: 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.7) !important;">I'm currently listening to...</h3>
                 <a href="https://music.youtube.com/" target="_blank" class="ytm-logo-link" aria-label="YouTube Music">
-                    <svg viewBox="0 0 110 24" height="24" width="110">
+                    <svg viewBox="0 0 98 24" height="22" width="98">
                         <circle cx="12" cy="12" r="12" fill="#FF0000"/>
                         <circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
                         <polygon points="10.5,8 15.5,12 10.5,16" fill="#FFFFFF"/>
@@ -666,7 +666,7 @@ function fetchData() {
                                     <img src="${data.music.image}" alt="${data.music.title}" class="ytm-thumb-large">
                                     <div style="display: flex; flex-direction: column;">
                                         <p style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; color: ${statusColor}; margin: 0 0 6px 0; display: flex; align-items: center; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${statusText}</p>
-                                        <p style="font-weight: 800; font-size: 1.3rem; color: #fff; margin: 0 0 5px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
+                                        <p style="font-weight: 800; font-size: 1.2rem; color: #fff; margin: 0 0 5px 0; line-height: 1.2; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#fff'">${data.music.title}</p>
                                         <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0; font-weight: 500; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);">${data.music.artist}</p>
                                     </div>
                                 </div>
