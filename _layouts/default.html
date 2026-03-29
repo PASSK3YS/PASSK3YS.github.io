@@ -61,7 +61,7 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
 
-        body > header {
+        header {
             display: flex;
             justify-content: center;
             width: 100%;
@@ -463,7 +463,7 @@
         }
 
         @media (max-width: 768px) {
-            .ytm-minimized-text {
+            .unified-header.ytm-is-playing .ytm-minimized-text {
                 padding: 0 0 15px 100%;
                 display: inline-block;
                 overflow: visible;
@@ -879,10 +879,12 @@
                                 eq.style.display = "inline-flex";
                                 mainHeaderTitle.textContent = "I'm currently listening to...";
                                 minimizedStatus.textContent = "I'm currently listening to... " + data.music.title;
+                                header.classList.add('ytm-is-playing');
                             } else {
                                 eq.style.display = "none";
                                 mainHeaderTitle.textContent = "I'm currently not listening to music";
                                 minimizedStatus.textContent = "I'm currently not listening to music";
+                                header.classList.remove('ytm-is-playing');
                                 
                                 if (data.music.uts) {
                                     const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
