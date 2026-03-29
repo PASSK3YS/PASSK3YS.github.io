@@ -81,7 +81,7 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
-            transition: box-shadow 0.4s ease, border-color 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
         [data-theme="dark"] .unified-header {
@@ -184,45 +184,30 @@
             color: #0ce6f2;
         }
 
-        .ytm-collapsible {
+        .ytm-minimized-text-wrapper {
             display: grid;
+            grid-template-rows: 1fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
             z-index: 2;
-            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
-        .ytm-collapsible-inner {
+        .unified-header:not(.minimized) .ytm-minimized-text-wrapper {
+            grid-template-rows: 0fr;
+        }
+
+        .ytm-minimized-text-inner {
             overflow: hidden;
-            width: 100%;
-        }
-
-        .unified-header.minimized .ytm-minimized-view {
-            grid-template-rows: 1fr;
-        }
-        
-        .unified-header:not(.minimized) .ytm-minimized-view {
-            grid-template-rows: 0fr;
-        }
-
-        .unified-header.minimized .ytm-maximized-view {
-            grid-template-rows: 0fr;
-        }
-        
-        .unified-header:not(.minimized) .ytm-maximized-view {
-            grid-template-rows: 1fr;
-        }
-
-        .ytm-minimized-content {
-            padding: 0 25px 15px 25px;
-            text-align: center;
         }
 
         .ytm-minimized-text {
-            font-size: 0.85rem;
+            padding: 0 25px 15px 25px;
+            text-align: center;
+            font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--text-muted);
+            color: var(--text);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -233,11 +218,34 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
+        .ytm-expandable {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .unified-header:not(.minimized) .ytm-expandable {
+            grid-template-rows: 1fr;
+        }
+
+        .ytm-expandable-inner {
+            overflow: hidden;
+        }
+
         .ytm-maximized-content {
-            padding: 0 25px 25px 25px;
+            padding: 0 25px 20px 25px;
             display: flex;
             flex-direction: column;
             gap: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .unified-header:not(.minimized) .ytm-maximized-content {
+            opacity: 1;
+            transition-delay: 0.1s;
         }
 
         .ytm-header-text {
@@ -250,6 +258,7 @@
 
         .unified-header.ytm-active .ytm-header-text {
             color: rgba(255,255,255,0.7);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .ytm-link-wrapper {
@@ -295,8 +304,6 @@
             display: flex;
             align-items: center;
             color: var(--text);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-            white-space: nowrap;
         }
 
         .ytm-title {
@@ -305,7 +312,6 @@
             color: var(--text);
             margin-bottom: 4px;
             line-height: 1.2;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
             transition: color 0.2s;
             white-space: nowrap;
             overflow: hidden;
@@ -320,7 +326,6 @@
             font-size: 0.95rem;
             color: var(--text-muted);
             font-weight: 500;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -359,18 +364,19 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .unified-header.ytm-active .ytm-status,
         .unified-header.ytm-active .ytm-title,
         .unified-header.ytm-active .ytm-prev-text {
             color: #ffffff;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
         }
 
         .unified-header.ytm-active .ytm-artist,
         .unified-header.ytm-active .ytm-prev-label {
             color: rgba(255,255,255,0.8);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .unified-header.ytm-active .ytm-previous {
@@ -409,7 +415,7 @@
             border: none;
             color: var(--text-muted);
             width: 100%;
-            padding: 8px;
+            padding: 6px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -489,16 +495,14 @@
                 </button>
             </div>
 
-            <div class="ytm-collapsible ytm-minimized-view">
-                <div class="ytm-collapsible-inner">
-                    <div class="ytm-minimized-content">
-                        <div class="ytm-minimized-text" id="ytm-minimized-status">Loading status...</div>
-                    </div>
+            <div class="ytm-minimized-text-wrapper">
+                <div class="ytm-minimized-text-inner">
+                    <div class="ytm-minimized-text" id="ytm-minimized-status">Loading status...</div>
                 </div>
             </div>
 
-            <div class="ytm-collapsible ytm-maximized-view">
-                <div class="ytm-collapsible-inner">
+            <div class="ytm-expandable">
+                <div class="ytm-expandable-inner">
                     <div class="ytm-maximized-content">
                         <div class="ytm-header-text" id="ytm-main-header-title">I'm currently listening to...</div>
                         <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
@@ -878,7 +882,7 @@
                                 }
                             }
 
-                            if (data.previous) {
+                            if (data.music.isPlaying && data.previous) {
                                 prevArt.src = data.previous.image || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/></svg>';
                                 prevInfo.textContent = `${data.previous.title} • ${data.previous.artist}`;
                                 prevSection.style.display = "flex";
