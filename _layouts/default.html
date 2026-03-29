@@ -85,6 +85,27 @@
             z-index: 101;
         }
 
+        .ytm-minimized-status {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            opacity: 1;
+            height: 18px;
+            margin-top: 8px;
+            pointer-events: none;
+            text-align: center;
+        }
+
+        .ytm-minimized-status.hidden {
+            opacity: 0;
+            height: 0;
+            margin-top: 0;
+            overflow: hidden;
+        }
+
         .ytm-wrapper {
             display: grid;
             grid-template-rows: 1fr;
@@ -314,7 +335,9 @@
                 </button>
             </nav>
 
-            <div class="ytm-wrapper minimized" id="ytm-wrapper">
+            <div class="ytm-minimized-status hidden" id="ytm-minimized-status"></div>
+
+            <div class="ytm-wrapper" id="ytm-wrapper">
                 <div class="ytm-dropdown-content">
                     <div class="ytm-dropdown-inner">
                         <div id="ytm-bg-layer"></div>
@@ -624,6 +647,7 @@
                         const prevInfo = document.getElementById('ytm-prev-info');
                         
                         const mainHeaderTitle = document.getElementById('ytm-main-header-title');
+                        const minimizedStatus = document.getElementById('ytm-minimized-status');
 
                         const newState = `${data.music.title}-${data.music.isPlaying}`;
                         
@@ -668,10 +692,12 @@
                                 stateText.style.color = "#FF0000";
                                 eq.style.display = "inline-flex";
                                 mainHeaderTitle.textContent = "I'm currently listening to...";
+                                minimizedStatus.textContent = "I'm currently listening to...";
                             } else {
                                 stateText.style.color = "rgba(255,255,255,0.7)";
                                 eq.style.display = "none";
-                                mainHeaderTitle.textContent = "Currently not listening to music";
+                                mainHeaderTitle.textContent = "I'm currently not listening to music";
+                                minimizedStatus.textContent = "I'm currently not listening to music";
                                 
                                 if (data.music.uts) {
                                     const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
@@ -691,10 +717,6 @@
                             } else {
                                 prevSection.style.display = "none";
                             }
-
-                            if (localStorage.getItem('ytmMinimized') !== 'true') {
-                                wrapper.classList.remove('minimized');
-                            }
                         }
                     }
                 })
@@ -704,16 +726,26 @@
         document.addEventListener("DOMContentLoaded", () => {
             const toggleNavBtn = document.getElementById('ytm-nav-toggle-btn');
             const wrapper = document.getElementById('ytm-wrapper');
+            const minStatus = document.getElementById('ytm-minimized-status');
 
             if (localStorage.getItem('ytmMinimized') === 'true') {
                 wrapper.classList.add('minimized');
+                minStatus.classList.remove('hidden');
             } else {
                 wrapper.classList.remove('minimized');
+                minStatus.classList.add('hidden');
             }
 
             toggleNavBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 wrapper.classList.toggle('minimized');
+                
+                if (wrapper.classList.contains('minimized')) {
+                    minStatus.classList.remove('hidden');
+                } else {
+                    minStatus.classList.add('hidden');
+                }
+                
                 localStorage.setItem('ytmMinimized', wrapper.classList.contains('minimized'));
             });
 
