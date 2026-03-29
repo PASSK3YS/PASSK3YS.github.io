@@ -63,88 +63,28 @@
 
         header {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
             width: 100%;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
             position: relative;
             z-index: 100;
         }
 
-        .header-wrapper {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .unified-header {
             width: 100%;
-        }
-
-        nav {
-            margin-bottom: 0 !important;
-            position: relative;
-            z-index: 101;
-        }
-
-        .ytm-minimized-status {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-            opacity: 1;
-            height: 18px;
-            margin-top: 8px;
-            pointer-events: none;
-            text-align: center;
-        }
-
-        .ytm-minimized-status.hidden {
-            opacity: 0;
-            height: 0;
-            margin-top: 0;
-            overflow: hidden;
-        }
-
-        .ytm-wrapper {
-            display: grid;
-            grid-template-rows: 1fr;
-            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease;
-            margin-top: 15px;
-            position: relative;
-            z-index: 100;
-            opacity: 1;
-            width: max-content;
-            max-width: 90vw;
-        }
-
-        .ytm-wrapper.minimized {
-            grid-template-rows: 0fr;
-            opacity: 0;
-            margin-top: 0;
-            pointer-events: none;
-        }
-
-        .ytm-dropdown-content {
-            overflow: hidden;
-            min-height: 0;
-        }
-
-        .ytm-dropdown-inner {
-            padding: 25px 30px 28px 30px;
+            max-width: 650px;
             background: var(--nav-bg);
             border: 1px solid var(--border);
             border-radius: 24px;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
             position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 15px;
-            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
-        [data-theme="dark"] .ytm-dropdown-inner {
+        [data-theme="dark"] .unified-header {
             box-shadow: 0 12px 40px rgba(0,0,0,0.5);
             border: 1px solid rgba(255,255,255,0.05);
         }
@@ -156,18 +96,144 @@
             background-position: center;
             filter: blur(40px) brightness(0.4);
             z-index: 0;
-            transition: background-image 0.8s ease;
+            transition: opacity 0.8s ease, background-image 0.8s ease;
+            opacity: 0;
             pointer-events: none;
         }
 
-        .ytm-header-text {
+        .unified-header.ytm-active #ytm-bg-layer {
+            opacity: 1;
+        }
+
+        .nav-section {
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 25px;
+            width: 100%;
+        }
+
+        .nav-scroll {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .nav-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-scroll a {
+            display: inline-block;                
+            font-weight: bold;
+            background: transparent; 
+            padding: 10px 15px;                     
+            border-radius: 50px;                    
+            color: var(--text);                  
+            text-transform: uppercase;
+            font-size: 0.85rem;                     
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none !important;
+            flex-shrink: 0;
+        }
+
+        .nav-scroll a:hover, .nav-scroll a.active {
+            color: var(--accent);                    
+            background: var(--border);
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--border);
+            color: var(--accent);
+        }
+
+        .unified-header.ytm-active .nav-scroll a,
+        .unified-header.ytm-active .theme-toggle {
+            color: #ffffff;
+        }
+
+        .unified-header.ytm-active .nav-scroll a:hover,
+        .unified-header.ytm-active .nav-scroll a.active {
+            color: #0ce6f2;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .unified-header.ytm-active .theme-toggle:hover {
+            background: rgba(255,255,255,0.1);
+            color: #0ce6f2;
+        }
+
+        .ytm-dynamic-area {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .ytm-minimized-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .unified-header.minimized .ytm-minimized-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .ytm-minimized-inner {
+            overflow: hidden;
+        }
+
+        .ytm-minimized-text {
+            text-align: center;
+            padding-bottom: 20px;
             font-size: 0.85rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: rgba(255,255,255,0.7);
-            font-weight: 700;
+            color: var(--text);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            white-space: nowrap;
+        }
+
+        .ytm-maximized-wrapper {
+            display: grid;
+            grid-template-rows: 1fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .unified-header.minimized .ytm-maximized-wrapper {
+            grid-template-rows: 0fr;
+        }
+
+        .ytm-maximized-inner {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px 25px 25px;
         }
 
         .ytm-link-wrapper {
@@ -175,8 +241,6 @@
             align-items: center;
             text-decoration: none !important;
             gap: 25px;
-            position: relative;
-            z-index: 1;
             width: 100%;
         }
 
@@ -184,6 +248,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            flex-grow: 1;
         }
 
         .ytm-art {
@@ -202,27 +267,33 @@
         .ytm-info {
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
 
         .ytm-status {
-            font-size: 0.7rem;
+            font-size: 0.85rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 6px;
             display: flex;
             align-items: center;
+            color: var(--text);
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            white-space: nowrap;
         }
 
         .ytm-title {
             font-weight: 800;
             font-size: 1.25rem;
-            color: #fff;
+            color: var(--text);
             margin-bottom: 4px;
             line-height: 1.2;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
             transition: color 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .ytm-link-wrapper:hover .ytm-title {
@@ -231,9 +302,12 @@
 
         .ytm-artist {
             font-size: 0.95rem;
-            color: rgba(255,255,255,0.8);
+            color: var(--text-muted);
             font-weight: 500;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .ytm-previous {
@@ -241,7 +315,9 @@
             align-items: center;
             gap: 15px;
             padding-left: 25px;
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid var(--border);
+            flex-shrink: 0;
+            max-width: 45%;
         }
 
         .ytm-prev-art {
@@ -255,7 +331,7 @@
         .ytm-prev-label {
             font-size: 0.65rem;
             font-weight: 800;
-            color: rgba(255, 255, 255, 0.5);
+            color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 3px;
@@ -263,9 +339,27 @@
 
         .ytm-prev-text {
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.95);
+            color: var(--text);
             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .unified-header.ytm-active .ytm-minimized-text,
+        .unified-header.ytm-active .ytm-status,
+        .unified-header.ytm-active .ytm-title,
+        .unified-header.ytm-active .ytm-prev-text {
+            color: #ffffff;
+        }
+
+        .unified-header.ytm-active .ytm-artist,
+        .unified-header.ytm-active .ytm-prev-label {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .unified-header.ytm-active .ytm-previous {
+            border-left: 1px solid rgba(255,255,255,0.15);
         }
 
         .playing-indicator {
@@ -293,7 +387,54 @@
             50% { transform: scaleY(1); }
         }
 
+        .ytm-toggle-btn {
+            position: relative;
+            z-index: 2;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            width: 100%;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: color 0.2s, background 0.2s;
+            border-top: 1px solid var(--border);
+        }
+
+        .unified-header.ytm-active .ytm-toggle-btn {
+            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .ytm-toggle-btn:hover {
+            color: var(--accent);
+            background: rgba(12, 230, 242, 0.05);
+        }
+
+        .unified-header.ytm-active .ytm-toggle-btn:hover {
+            color: #ffffff;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .ytm-toggle-btn svg {
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .unified-header.minimized .ytm-toggle-btn svg {
+            transform: rotate(0deg);
+        }
+
+        .unified-header:not(.minimized) .ytm-toggle-btn svg {
+            transform: rotate(180deg);
+        }
+
         @media (max-width: 768px) {
+            .ytm-maximized-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
             .ytm-link-wrapper {
                 flex-direction: column;
                 align-items: flex-start;
@@ -302,9 +443,14 @@
             .ytm-previous {
                 padding-left: 0;
                 border-left: none;
-                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                border-top: 1px solid var(--border);
                 padding-top: 20px;
                 width: 100%;
+                max-width: 100%;
+            }
+            .unified-header.ytm-active .ytm-previous {
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.15);
             }
         }
     </style>
@@ -314,8 +460,10 @@
 <body>
 
     <header>
-        <div class="header-wrapper">
-            <nav>
+        <div class="unified-header minimized" id="unified-header">
+            <div id="ytm-bg-layer"></div>
+            
+            <div class="nav-section">
                 <div class="nav-scroll">
                     <a href="/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>About</a>
                     <a href="/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>Contact</a>
@@ -323,31 +471,30 @@
                     <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
                     <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
                 </div>
-
-                <button class="theme-toggle" id="ytm-nav-toggle-btn" aria-label="Toggle Music Player">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
-                </button>
-
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                     <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     <svg id="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                 </button>
-            </nav>
+            </div>
 
-            <div class="ytm-minimized-status hidden" id="ytm-minimized-status"></div>
+            <div class="ytm-dynamic-area">
+                <div class="ytm-minimized-wrapper">
+                    <div class="ytm-minimized-inner">
+                        <div class="ytm-minimized-text" id="ytm-minimized-status">
+                            Loading status...
+                        </div>
+                    </div>
+                </div>
 
-            <div class="ytm-wrapper" id="ytm-wrapper">
-                <div class="ytm-dropdown-content">
-                    <div class="ytm-dropdown-inner">
-                        <div id="ytm-bg-layer"></div>
-                        <div class="ytm-header-text" id="ytm-main-header-title">I'm currently listening to...</div>
+                <div class="ytm-maximized-wrapper">
+                    <div class="ytm-maximized-inner">
                         <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
                             <div class="ytm-current">
                                 <img id="ytm-art" class="ytm-art" src="" alt="">
                                 <div class="ytm-info">
-                                    <div class="ytm-status" id="ytm-status-container">
-                                        <span id="ytm-state-text"></span>
+                                    <div class="ytm-status">
+                                        <span id="ytm-state-text">I'm currently listening to...</span>
                                         <span id="ytm-eq" class="playing-indicator" style="display: none;">
                                             <span class="bar"></span><span class="bar"></span><span class="bar"></span>
                                         </span>
@@ -368,6 +515,10 @@
                     </div>
                 </div>
             </div>
+
+            <button class="ytm-toggle-btn" id="ytm-toggle-btn" aria-label="Toggle Player">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
         </div>
     </header>
 
@@ -633,7 +784,7 @@
                 .then(res => res.json())
                 .then(async data => {
                     if (data.music && typeof data.music === 'object') {
-                        const wrapper = document.getElementById('ytm-wrapper');
+                        const header = document.getElementById('unified-header');
                         const bg = document.getElementById('ytm-bg-layer');
                         const art = document.getElementById('ytm-art');
                         const link = document.getElementById('ytm-link');
@@ -646,7 +797,6 @@
                         const prevArt = document.getElementById('ytm-prev-art');
                         const prevInfo = document.getElementById('ytm-prev-info');
                         
-                        const mainHeaderTitle = document.getElementById('ytm-main-header-title');
                         const minimizedStatus = document.getElementById('ytm-minimized-status');
 
                         const newState = `${data.music.title}-${data.music.isPlaying}`;
@@ -688,25 +838,28 @@
                             link.href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
 
                             if (data.music.isPlaying) {
-                                stateText.textContent = "LIVE";
+                                stateText.textContent = "I'm currently listening to...";
                                 stateText.style.color = "#FF0000";
                                 eq.style.display = "inline-flex";
-                                mainHeaderTitle.textContent = "I'm currently listening to...";
                                 minimizedStatus.textContent = "I'm currently listening to...";
                             } else {
-                                stateText.style.color = "rgba(255,255,255,0.7)";
                                 eq.style.display = "none";
-                                mainHeaderTitle.textContent = "I'm currently not listening to music";
                                 minimizedStatus.textContent = "I'm currently not listening to music";
                                 
                                 if (data.music.uts) {
                                     const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
-                                    if (diffMins < 1) stateText.textContent = "JUST NOW";
-                                    else if (diffMins < 60) stateText.textContent = `${diffMins} MINS AGO`;
-                                    else if (diffMins < 1440) stateText.textContent = `${Math.floor(diffMins / 60)} HRS AGO`;
-                                    else stateText.textContent = `${Math.floor(diffMins / 1440)} DAYS AGO`;
+                                    if (diffMins < 1) stateText.textContent = "Last played • JUST NOW";
+                                    else if (diffMins < 60) stateText.textContent = `Last played • ${diffMins} MINS AGO`;
+                                    else if (diffMins < 1440) stateText.textContent = `Last played • ${Math.floor(diffMins / 60)} HRS AGO`;
+                                    else stateText.textContent = `Last played • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                                 } else {
-                                    stateText.textContent = "LAST PLAYED";
+                                    stateText.textContent = "I'm currently not listening to music";
+                                }
+                                
+                                if (header.classList.contains('ytm-active')) {
+                                    stateText.style.color = "rgba(255,255,255,0.7)";
+                                } else {
+                                    stateText.style.color = "var(--text-muted)";
                                 }
                             }
 
@@ -717,6 +870,8 @@
                             } else {
                                 prevSection.style.display = "none";
                             }
+
+                            header.classList.add('ytm-active');
                         }
                     }
                 })
@@ -724,29 +879,19 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            const toggleNavBtn = document.getElementById('ytm-nav-toggle-btn');
-            const wrapper = document.getElementById('ytm-wrapper');
-            const minStatus = document.getElementById('ytm-minimized-status');
+            const toggleBtn = document.getElementById('ytm-toggle-btn');
+            const header = document.getElementById('unified-header');
 
             if (localStorage.getItem('ytmMinimized') === 'true') {
-                wrapper.classList.add('minimized');
-                minStatus.classList.remove('hidden');
+                header.classList.add('minimized');
             } else {
-                wrapper.classList.remove('minimized');
-                minStatus.classList.add('hidden');
+                header.classList.remove('minimized');
             }
 
-            toggleNavBtn.addEventListener('click', (e) => {
+            toggleBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                wrapper.classList.toggle('minimized');
-                
-                if (wrapper.classList.contains('minimized')) {
-                    minStatus.classList.remove('hidden');
-                } else {
-                    minStatus.classList.add('hidden');
-                }
-                
-                localStorage.setItem('ytmMinimized', wrapper.classList.contains('minimized'));
+                header.classList.toggle('minimized');
+                localStorage.setItem('ytmMinimized', header.classList.contains('minimized'));
             });
 
             fetchNavData();
