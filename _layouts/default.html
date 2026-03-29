@@ -61,7 +61,7 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
 
-        header {
+        body > header {
             display: flex;
             justify-content: center;
             width: 100%;
@@ -873,6 +873,8 @@
                             artist.textContent = data.music.artist;
                             link.href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
 
+                            stateText.style.color = "rgba(255,255,255,0.7)";
+
                             if (data.music.isPlaying) {
                                 stateText.textContent = "LIVE";
                                 stateText.style.color = "#FF0000";
@@ -894,12 +896,6 @@
                                     else stateText.textContent = `Last played • ${Math.floor(diffMins / 1440)} DAYS AGO`;
                                 } else {
                                     stateText.textContent = "I'm currently not listening to music";
-                                }
-                                
-                                if (header.classList.contains('ytm-active')) {
-                                    stateText.style.color = "rgba(255,255,255,0.7)";
-                                } else {
-                                    stateText.style.color = "var(--text-muted)";
                                 }
                             }
 
