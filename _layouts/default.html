@@ -94,7 +94,7 @@
             top: -40px; left: -40px; right: -40px; bottom: -40px;
             background-size: cover;
             background-position: center;
-            filter: blur(40px) brightness(0.4);
+            filter: blur(25px) brightness(0.4);
             z-index: 0;
             transition: opacity 0.8s ease, background-image 0.8s ease;
             opacity: 0;
@@ -240,9 +240,10 @@
         }
 
         .ytm-maximized-content {
-            padding: 0 25px 20px 25px;
+            padding: 0 25px 25px 25px;
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 15px;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -259,6 +260,8 @@
             letter-spacing: 1.5px;
             color: var(--text-muted);
             font-weight: 700;
+            text-align: center;
+            width: 100%;
         }
 
         .unified-header.ytm-active .ytm-header-text {
@@ -268,9 +271,18 @@
 
         .ytm-link-wrapper {
             display: flex;
+            flex-direction: column;
             align-items: center;
             text-decoration: none !important;
-            gap: 25px;
+            width: 100%;
+            gap: 15px;
+        }
+
+        .ytm-current {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
             width: 100%;
         }
 
@@ -291,9 +303,10 @@
         .ytm-info {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            text-align: center;
             overflow: hidden;
-            flex-grow: 1;
-            min-width: 0;
+            width: 100%;
         }
 
         .ytm-status {
@@ -304,9 +317,9 @@
             margin-bottom: 6px;
             display: flex;
             align-items: center;
+            justify-content: center;
             color: var(--text);
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-            white-space: nowrap;
         }
 
         .ytm-title {
@@ -314,12 +327,15 @@
             font-size: 1.4rem;
             color: var(--text);
             margin-bottom: 4px;
-            line-height: 1.2;
+            line-height: 1.3;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
             transition: color 0.2s;
-            white-space: nowrap;
+            max-width: 95%;
+            white-space: normal;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
             overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .ytm-link-wrapper:hover .ytm-title {
@@ -331,6 +347,7 @@
             color: var(--text-muted);
             font-weight: 500;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            max-width: 95%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -345,8 +362,7 @@
             padding: 5px 12px;
             border-radius: 50px;
             margin-top: 12px;
-            width: max-content;
-            max-width: 100%;
+            max-width: 95%;
             transition: background 0.2s, border-color 0.2s;
             color: var(--text);
         }
@@ -478,11 +494,6 @@
                 animation: marquee 14s linear infinite;
                 text-align: left;
             }
-            .ytm-link-wrapper {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
         }
     </style>
 
@@ -520,20 +531,22 @@
                     <div class="ytm-maximized-content">
                         <div class="ytm-header-text" id="ytm-main-header-title">I'm currently listening to...</div>
                         <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
-                            <img id="ytm-art" class="ytm-art" src="" alt="">
-                            <div class="ytm-info">
-                                <div class="ytm-status">
-                                    <span id="ytm-state-text">I'm currently listening to...</span>
-                                    <span id="ytm-eq" class="playing-indicator" style="display: none;">
-                                        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                                    </span>
-                                </div>
-                                <div class="ytm-title" id="ytm-track"></div>
-                                <div class="ytm-artist" id="ytm-artist"></div>
-                                
-                                <div class="ytm-previous-pill" id="ytm-previous" style="display: none;">
-                                    <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
-                                    <span id="ytm-prev-info"></span>
+                            <div class="ytm-current">
+                                <img id="ytm-art" class="ytm-art" src="" alt="">
+                                <div class="ytm-info">
+                                    <div class="ytm-status">
+                                        <span id="ytm-state-text">I'm currently listening to...</span>
+                                        <span id="ytm-eq" class="playing-indicator" style="display: none;">
+                                            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                                        </span>
+                                    </div>
+                                    <div class="ytm-title" id="ytm-track"></div>
+                                    <div class="ytm-artist" id="ytm-artist"></div>
+                                    
+                                    <div class="ytm-previous-pill" id="ytm-previous" style="display: none;">
+                                        <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                                        <span id="ytm-prev-info"></span>
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -844,6 +857,16 @@
                                 } catch (e) {
                                     imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
                                 }
+                            }
+
+                            if (data.previous && isDefaultImage(data.previous.image)) {
+                                try {
+                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(data.previous.title + ' ' + data.previous.artist)}&entity=song&limit=1`);
+                                    const itunesData = await res.json();
+                                    if (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
+                                        data.previous.image = itunesData.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
+                                    }
+                                } catch (e) {}
                             }
 
                             bg.style.backgroundImage = `url('${imageUrl}')`;
