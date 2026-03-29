@@ -274,20 +274,14 @@
             width: 100%;
         }
 
-        .ytm-current {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-grow: 1;
-        }
-
         .ytm-art {
-            width: 75px;
-            height: 75px;
+            width: 90px;
+            height: 90px;
             object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
             transition: transform 0.3s ease;
+            flex-shrink: 0;
         }
 
         .ytm-link-wrapper:hover .ytm-art {
@@ -298,6 +292,8 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            flex-grow: 1;
+            min-width: 0;
         }
 
         .ytm-status {
@@ -315,7 +311,7 @@
 
         .ytm-title {
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: var(--text);
             margin-bottom: 4px;
             line-height: 1.2;
@@ -340,57 +336,53 @@
             text-overflow: ellipsis;
         }
 
-        .ytm-previous {
-            display: flex;
+        .ytm-previous-pill {
+            display: inline-flex;
             align-items: center;
-            gap: 15px;
-            padding-left: 25px;
-            border-left: 1px solid var(--border);
-            flex-shrink: 0;
-            max-width: 45%;
-        }
-
-        .ytm-prev-art {
-            width: 44px;
-            height: 44px;
-            border-radius: 8px;
-            object-fit: cover;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-        }
-
-        .ytm-prev-label {
-            font-size: 0.65rem;
-            font-weight: 800;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 3px;
-        }
-
-        .ytm-prev-text {
-            font-size: 0.9rem;
+            gap: 6px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            padding: 5px 12px;
+            border-radius: 50px;
+            margin-top: 12px;
+            width: max-content;
+            max-width: 100%;
+            transition: background 0.2s, border-color 0.2s;
             color: var(--text);
+        }
+
+        .unified-header.ytm-active .ytm-previous-pill {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .ytm-previous-pill svg {
+            flex-shrink: 0;
+            opacity: 0.7;
+        }
+
+        .ytm-previous-pill span {
+            font-size: 0.75rem;
+            font-weight: 600;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .unified-header.ytm-active .ytm-previous-pill span {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .unified-header.ytm-active .ytm-status,
-        .unified-header.ytm-active .ytm-title,
-        .unified-header.ytm-active .ytm-prev-text {
+        .unified-header.ytm-active .ytm-title {
             color: #ffffff;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
         }
 
-        .unified-header.ytm-active .ytm-artist,
-        .unified-header.ytm-active .ytm-prev-label {
+        .unified-header.ytm-active .ytm-artist {
             color: rgba(255,255,255,0.8);
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-        }
-
-        .unified-header.ytm-active .ytm-previous {
-            border-left: 1px solid rgba(255,255,255,0.15);
         }
 
         .playing-indicator {
@@ -491,18 +483,6 @@
                 align-items: flex-start;
                 gap: 20px;
             }
-            .ytm-previous {
-                padding-left: 0;
-                border-left: none;
-                border-top: 1px solid var(--border);
-                padding-top: 20px;
-                width: 100%;
-                max-width: 100%;
-            }
-            .unified-header.ytm-active .ytm-previous {
-                border-left: none;
-                border-top: 1px solid rgba(255,255,255,0.15);
-            }
         }
     </style>
 
@@ -540,25 +520,20 @@
                     <div class="ytm-maximized-content">
                         <div class="ytm-header-text" id="ytm-main-header-title">I'm currently listening to...</div>
                         <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
-                            <div class="ytm-current">
-                                <img id="ytm-art" class="ytm-art" src="" alt="">
-                                <div class="ytm-info">
-                                    <div class="ytm-status">
-                                        <span id="ytm-state-text">I'm currently listening to...</span>
-                                        <span id="ytm-eq" class="playing-indicator" style="display: none;">
-                                            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                                        </span>
-                                    </div>
-                                    <div class="ytm-title" id="ytm-track"></div>
-                                    <div class="ytm-artist" id="ytm-artist"></div>
+                            <img id="ytm-art" class="ytm-art" src="" alt="">
+                            <div class="ytm-info">
+                                <div class="ytm-status">
+                                    <span id="ytm-state-text">I'm currently listening to...</span>
+                                    <span id="ytm-eq" class="playing-indicator" style="display: none;">
+                                        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                                    </span>
                                 </div>
-                            </div>
-
-                            <div class="ytm-previous" id="ytm-previous" style="display: none;">
-                                <img id="ytm-prev-art" class="ytm-prev-art" src="" alt="">
-                                <div class="ytm-info">
-                                    <div class="ytm-prev-label">Previous Song</div>
-                                    <div class="ytm-prev-text" id="ytm-prev-info"></div>
+                                <div class="ytm-title" id="ytm-track"></div>
+                                <div class="ytm-artist" id="ytm-artist"></div>
+                                
+                                <div class="ytm-previous-pill" id="ytm-previous" style="display: none;">
+                                    <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                                    <span id="ytm-prev-info"></span>
                                 </div>
                             </div>
                         </a>
@@ -844,7 +819,6 @@
                         const eq = document.getElementById('ytm-eq');
                         
                         const prevSection = document.getElementById('ytm-previous');
-                        const prevArt = document.getElementById('ytm-prev-art');
                         const prevInfo = document.getElementById('ytm-prev-info');
                         
                         const mainHeaderTitle = document.getElementById('ytm-main-header-title');
@@ -870,16 +844,6 @@
                                 } catch (e) {
                                     imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
                                 }
-                            }
-
-                            if (data.previous && isDefaultImage(data.previous.image)) {
-                                try {
-                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(data.previous.title + ' ' + data.previous.artist)}&entity=song&limit=1`);
-                                    const itunesData = await res.json();
-                                    if (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
-                                        data.previous.image = itunesData.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
-                                    }
-                                } catch (e) {}
                             }
 
                             bg.style.backgroundImage = `url('${imageUrl}')`;
@@ -915,9 +879,8 @@
                             }
 
                             if (data.music.isPlaying && data.previous) {
-                                prevArt.src = data.previous.image || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/></svg>';
-                                prevInfo.textContent = `${data.previous.title} • ${data.previous.artist}`;
-                                prevSection.style.display = "flex";
+                                prevInfo.textContent = `Previously: ${data.previous.title} • ${data.previous.artist}`;
+                                prevSection.style.display = "inline-flex";
                             } else {
                                 prevSection.style.display = "none";
                             }
