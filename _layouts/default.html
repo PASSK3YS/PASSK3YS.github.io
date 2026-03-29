@@ -60,6 +60,180 @@
         .copy-code-button:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
+
+        .header-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 2rem;
+            gap: 12px;
+        }
+
+        nav {
+            margin-bottom: 0 !important;
+        }
+
+        .ytm-nav-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            background: var(--nav-bg);
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 320px;
+            transition: max-width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease;
+            opacity: 0;
+            display: none;
+        }
+
+        .ytm-nav-container.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .ytm-nav-container.minimized {
+            max-width: 160px;
+        }
+
+        .ytm-nav-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            gap: 12px;
+        }
+
+        .ytm-nav-art {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        .ytm-nav-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            text-decoration: none !important;
+        }
+
+        .ytm-nav-status {
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .ytm-nav-track {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+            transition: color 0.2s ease;
+        }
+
+        .ytm-nav-info:hover .ytm-nav-track {
+            color: var(--accent);
+        }
+
+        .ytm-nav-artist {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .ytm-nav-toggle {
+            background: transparent;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            padding: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s ease, color 0.2s ease;
+        }
+
+        .ytm-nav-toggle:hover {
+            color: #fff;
+        }
+
+        .ytm-minimized-view {
+            display: none;
+            flex-grow: 1;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .ytm-nav-container.minimized .ytm-nav-art,
+        .ytm-nav-container.minimized .ytm-nav-info {
+            display: none;
+        }
+
+        .ytm-nav-container.minimized .ytm-minimized-view {
+            display: flex;
+        }
+
+        .ytm-nav-container.minimized .ytm-nav-toggle {
+            transform: rotate(180deg);
+        }
+
+        #ytm-nav-bg {
+            position: absolute;
+            top: -20px; left: -20px; right: -20px; bottom: -20px;
+            background-size: cover;
+            background-position: center;
+            filter: blur(20px) brightness(0.4);
+            z-index: 0;
+            transition: opacity 0.8s ease, background-image 0.8s ease;
+        }
+
+        .playing-indicator {
+            display: inline-flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 8px;
+            margin-left: 6px;
+        }
+
+        .playing-indicator .bar {
+            width: 2px;
+            background-color: #FF0000;
+            animation: eq-bounce 1s infinite ease-in-out;
+            transform-origin: bottom;
+            border-radius: 1px;
+        }
+
+        .playing-indicator .bar:nth-child(1) { height: 6px; animation-delay: 0s; }
+        .playing-indicator .bar:nth-child(2) { height: 8px; animation-delay: 0.2s; }
+        .playing-indicator .bar:nth-child(3) { height: 5px; animation-delay: 0.4s; }
+
+        @keyframes eq-bounce {
+            0%, 100% { transform: scaleY(0.4); }
+            50% { transform: scaleY(1); }
+        }
     </style>
 
     <link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" />
@@ -67,21 +241,49 @@
 <body>
 
     <header>
-        <nav>
-            <div class="nav-scroll">
-                <a href="/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>About</a>
-                <a href="/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>Contact</a>
-                <a href="/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>Docs</a>
-                <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
-                <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
-            </div>
+        <div class="header-wrapper">
+            <nav>
+                <div class="nav-scroll">
+                    <a href="/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>About</a>
+                    <a href="/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>Contact</a>
+                    <a href="/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>Docs</a>
+                    <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
+                    <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
+                </div>
 
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                <svg id="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            </button>
-        </nav>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </button>
+            </nav>
+
+            <div class="ytm-nav-container" id="ytm-nav-container">
+                <div id="ytm-nav-bg"></div>
+                <div class="ytm-nav-content">
+                    <img id="ytm-nav-art" src="" alt="" class="ytm-nav-art">
+                    <a id="ytm-nav-link" href="" target="_blank" class="ytm-nav-info">
+                        <div class="ytm-nav-status">
+                            <span id="ytm-nav-state-text"></span>
+                            <span class="playing-indicator" id="ytm-nav-eq" style="display:none;">
+                                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                            </span>
+                        </div>
+                        <div class="ytm-nav-track" id="ytm-nav-track"></div>
+                        <div class="ytm-nav-artist" id="ytm-nav-artist"></div>
+                    </a>
+                    <div class="ytm-minimized-view" id="ytm-minimized-view">
+                        <span class="playing-indicator" style="display:inline-flex;">
+                            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                        </span>
+                        <span>Now Playing</span>
+                    </div>
+                    <button class="ytm-nav-toggle" id="ytm-nav-toggle" aria-label="Toggle Player">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -334,6 +536,97 @@
                 const scrollLeftValue = activeLink.offsetLeft - (navScroll.clientWidth / 2) + (activeLink.clientWidth / 2);
                 navScroll.scrollLeft = scrollLeftValue;
             }
+        });
+    </script>
+
+    <script>
+        const workerUrl = 'https://xbox-tracker.snowy-scene-5750.workers.dev';
+        let currentYtmState = '';
+
+        function fetchNavData() {
+            fetch(workerUrl)
+                .then(res => res.json())
+                .then(async data => {
+                    if (data.music && typeof data.music === 'object') {
+                        const container = document.getElementById('ytm-nav-container');
+                        const bg = document.getElementById('ytm-nav-bg');
+                        const art = document.getElementById('ytm-nav-art');
+                        const link = document.getElementById('ytm-nav-link');
+                        const track = document.getElementById('ytm-nav-track');
+                        const artist = document.getElementById('ytm-nav-artist');
+                        const stateText = document.getElementById('ytm-nav-state-text');
+                        const eq = document.getElementById('ytm-nav-eq');
+
+                        const newState = `${data.music.title}-${data.music.isPlaying}`;
+                        
+                        if (currentYtmState !== newState) {
+                            currentYtmState = newState;
+
+                            const isDefaultImage = url => !url || url.includes('2a96cbd8b46e442fc41c2b86b821562f');
+                            let imageUrl = data.music.image;
+                            
+                            if (isDefaultImage(imageUrl)) {
+                                try {
+                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}&entity=song&limit=1`);
+                                    const itunesData = await res.json();
+                                    if (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
+                                        imageUrl = itunesData.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
+                                    } else {
+                                        imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
+                                    }
+                                } catch (e) {
+                                    imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
+                                }
+                            }
+
+                            bg.style.backgroundImage = `url('${imageUrl}')`;
+                            art.src = imageUrl;
+                            track.textContent = data.music.title;
+                            artist.textContent = data.music.artist;
+                            link.href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+
+                            if (data.music.isPlaying) {
+                                stateText.textContent = "LIVE";
+                                stateText.style.color = "#FF0000";
+                                eq.style.display = "inline-flex";
+                            } else {
+                                stateText.style.color = "rgba(255,255,255,0.7)";
+                                eq.style.display = "none";
+                                
+                                if (data.music.uts) {
+                                    const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
+                                    if (diffMins < 1) stateText.textContent = "JUST NOW";
+                                    else if (diffMins < 60) stateText.textContent = `${diffMins} MINS AGO`;
+                                    else if (diffMins < 1440) stateText.textContent = `${Math.floor(diffMins / 60)} HRS AGO`;
+                                    else stateText.textContent = `${Math.floor(diffMins / 1440)} DAYS AGO`;
+                                } else {
+                                    stateText.textContent = "LAST PLAYED";
+                                }
+                            }
+
+                            container.classList.add('active');
+                        }
+                    }
+                })
+                .catch(err => {});
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleBtn = document.getElementById('ytm-nav-toggle');
+            const container = document.getElementById('ytm-nav-container');
+
+            if (localStorage.getItem('ytmMinimized') === 'true') {
+                container.classList.add('minimized');
+            }
+
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                container.classList.toggle('minimized');
+                localStorage.setItem('ytmMinimized', container.classList.contains('minimized'));
+            });
+
+            fetchNavData();
+            setInterval(fetchNavData, 5000);
         });
     </script>
 
