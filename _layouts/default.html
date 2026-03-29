@@ -81,7 +81,7 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
-            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: box-shadow 0.4s ease, border-color 0.4s ease;
         }
 
         [data-theme="dark"] .unified-header {
@@ -184,56 +184,72 @@
             color: #0ce6f2;
         }
 
-        .ytm-dynamic-area {
+        .ytm-collapsible {
+            display: grid;
             position: relative;
             z-index: 2;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .ytm-minimized-wrapper {
-            display: grid;
-            grid-template-rows: 0fr;
             transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
-        .unified-header.minimized .ytm-minimized-wrapper {
+        .ytm-collapsible-inner {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .unified-header.minimized .ytm-minimized-view {
+            grid-template-rows: 1fr;
+        }
+        
+        .unified-header:not(.minimized) .ytm-minimized-view {
+            grid-template-rows: 0fr;
+        }
+
+        .unified-header.minimized .ytm-maximized-view {
+            grid-template-rows: 0fr;
+        }
+        
+        .unified-header:not(.minimized) .ytm-maximized-view {
             grid-template-rows: 1fr;
         }
 
-        .ytm-minimized-inner {
-            overflow: hidden;
+        .ytm-minimized-content {
+            padding: 0 25px 15px 25px;
+            text-align: center;
         }
 
         .ytm-minimized-text {
-            text-align: center;
-            padding-bottom: 20px;
             font-size: 0.85rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--text);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            color: var(--text-muted);
             white-space: nowrap;
-        }
-
-        .ytm-maximized-wrapper {
-            display: grid;
-            grid-template-rows: 1fr;
-            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .unified-header.minimized .ytm-maximized-wrapper {
-            grid-template-rows: 0fr;
-        }
-
-        .ytm-maximized-inner {
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            text-overflow: ellipsis;
+        }
+
+        .unified-header.ytm-active .ytm-minimized-text {
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .ytm-maximized-content {
             padding: 0 25px 25px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ytm-header-text {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .unified-header.ytm-active .ytm-header-text {
+            color: rgba(255,255,255,0.7);
         }
 
         .ytm-link-wrapper {
@@ -346,7 +362,6 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
-        .unified-header.ytm-active .ytm-minimized-text,
         .unified-header.ytm-active .ytm-status,
         .unified-header.ytm-active .ytm-title,
         .unified-header.ytm-active .ytm-prev-text {
@@ -431,10 +446,6 @@
         }
 
         @media (max-width: 768px) {
-            .ytm-maximized-inner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
             .ytm-link-wrapper {
                 flex-direction: column;
                 align-items: flex-start;
@@ -478,17 +489,18 @@
                 </button>
             </div>
 
-            <div class="ytm-dynamic-area">
-                <div class="ytm-minimized-wrapper">
-                    <div class="ytm-minimized-inner">
-                        <div class="ytm-minimized-text" id="ytm-minimized-status">
-                            Loading status...
-                        </div>
+            <div class="ytm-collapsible ytm-minimized-view">
+                <div class="ytm-collapsible-inner">
+                    <div class="ytm-minimized-content">
+                        <div class="ytm-minimized-text" id="ytm-minimized-status">Loading status...</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="ytm-maximized-wrapper">
-                    <div class="ytm-maximized-inner">
+            <div class="ytm-collapsible ytm-maximized-view">
+                <div class="ytm-collapsible-inner">
+                    <div class="ytm-maximized-content">
+                        <div class="ytm-header-text" id="ytm-main-header-title">I'm currently listening to...</div>
                         <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
                             <div class="ytm-current">
                                 <img id="ytm-art" class="ytm-art" src="" alt="">
@@ -797,6 +809,7 @@
                         const prevArt = document.getElementById('ytm-prev-art');
                         const prevInfo = document.getElementById('ytm-prev-info');
                         
+                        const mainHeaderTitle = document.getElementById('ytm-main-header-title');
                         const minimizedStatus = document.getElementById('ytm-minimized-status');
 
                         const newState = `${data.music.title}-${data.music.isPlaying}`;
@@ -838,12 +851,14 @@
                             link.href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
 
                             if (data.music.isPlaying) {
-                                stateText.textContent = "I'm currently listening to...";
+                                stateText.textContent = "LIVE";
                                 stateText.style.color = "#FF0000";
                                 eq.style.display = "inline-flex";
-                                minimizedStatus.textContent = "I'm currently listening to...";
+                                mainHeaderTitle.textContent = "I'm currently listening to...";
+                                minimizedStatus.textContent = "I'm currently listening to... " + data.music.title;
                             } else {
                                 eq.style.display = "none";
+                                mainHeaderTitle.textContent = "I'm currently not listening to music";
                                 minimizedStatus.textContent = "I'm currently not listening to music";
                                 
                                 if (data.music.uts) {
