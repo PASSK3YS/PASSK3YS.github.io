@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | kieran.colfer.net</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-base: #002b36;
+            --bg-surface: #073642;
+            --text-main: #93a1a1;
+            --text-heading: #eee8d5;
+            --text-muted: #586e75;
+            --accent-cyan: #2aa198;
+            --accent-blue: #268bd2;
+            --accent-red: #dc322f;
+            --border-color: rgba(42, 161, 152, 0.15);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background-color: rgba(7, 54, 66, 0.85);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            color: var(--text-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-cyan);
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+            text-transform: lowercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-cyan);
+        }
+
+        main {
+            flex: 1;
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-heading);
+            font-weight: 700;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 2rem 0 4rem 0;
+        }
+
+        .hero-greeting {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            max-width: 650px;
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero-subtext {
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .hero-subtext strong {
+            color: var(--text-heading);
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .primary-btn {
+            background-color: var(--accent-cyan);
+            color: var(--bg-base);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(42, 161, 152, 0.4);
+            color: var(--bg-base);
+        }
+
+        .secondary-btn {
+            background-color: transparent;
+            color: var(--text-heading);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .secondary-btn:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent-cyan);
+        }
+
+        .card-header {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+        }
+
+        .social-icons svg {
+            width: 30px;
+            height: 30px;
+            fill: var(--text-heading);
+            transition: fill 0.2s ease;
+        }
+
+        .social-icons a:hover svg {
+            fill: var(--accent-cyan);
+        }
+
+        .gamertag-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+        }
+
+        .gamertag-label {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .gamertag-value {
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        .card-content-large {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .large-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .large-subtext {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cinema-content {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .cinema-poster {
+            width: 80px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            flex-shrink: 0;
+            background-color: var(--bg-base);
+        }
+
+        .cinema-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: auto;
+            background-color: var(--bg-surface);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            nav {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .hero-greeting {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+            
+            .primary-btn, .secondary-btn {
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">kieran<span>.</span>net</a>
+            <nav>
+                <a href="#" class="active">about</a>
+                <a href="#">blog</a>
+                <a href="#">docs</a>
+                <a href="#">tools</a>
+                <a href="#">watchlist</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <h1 class="hero-greeting">Hi, I'm Kieran. 👋</h1>
+            <p class="hero-subtitle">Welcome to my personal website. Overall swell guy, avid beer drinker & privacy advocate.</p>
+            <p class="hero-subtitle">Hobbies include playing video games, watching wrestling & photography.</p>
+            <p class="hero-subtext">Server admin / moderator for <strong>Standard Notes</strong> & <strong>Proton</strong>.</p>
+            
+            <div class="hero-links">
+                <a href="#" class="primary-btn">Get in touch</a>
+                <a href="#" class="secondary-btn">Read my blog</a>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2 class="card-header">Socials</h2>
+                <div class="social-icons">
+                    <a href="#" aria-label="X (Twitter)">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Discord">
+                        <svg viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Reddit">
+                        <svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.89-6.302c-.39-.39-1.025-.39-1.416 0a1.002 1.002 0 0 0 0 1.416c1.17 1.17 3.528 1.42 5.535.158a1 1 0 0 0-1.06-1.693c-1.188.745-2.327.697-3.058-.034zm3.89-2.198a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-6 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm1.196-5.856l1.326-3.87a.5.5 0 0 1 .602-.315l3.226.968a2.5 2.5 0 1 1-1.37 2.102l-2.613-.784-.972 2.836c2.81.332 5.34 1.704 6.953 3.655a3.504 3.504 0 0 1 1.654 2.977c0 2.76-3.134 5-7 5s-7-2.24-7-5c0-1.282.686-2.464 1.83-3.32-.236-.517-.33-1.094-.237-1.67a3.504 3.504 0 0 1 3.54-3.079z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-header">Gamertags</h2>
+                <div class="gamertag-row">
+                    <span class="gamertag-label">Xbox</span>
+                    <span class="gamertag-value">m00t</span>
+                </div>
+                <div class="gamertag-row">
+                    <span class="gamertag-label">Steam</span>
+                    <span class="gamertag-value">m00t316</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-header">Latest Post</h2>
+                <div class="card-content-large">
+                    <div class="large-title">Why I'm moving away from Listed.to</div>
+                    <div class="large-subtext">March 16, 2026</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-header">Latest Cinema Watch</h2>
+                <div class="cinema-content">
+                    <img class="cinema-poster" src="https://walter-r2.trakt.tv/images/movies/000/991/429/posters/thumb/ace95da822.jpg.webp" alt="The Super Mario Galaxy Movie">
+                    <div class="cinema-info">
+                        <div class="large-title" style="font-size: 1.2rem;">The Super Mario Galaxy Movie</div>
+                        <div class="large-subtext">03 April</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Kieran Colfer</p>
+    </footer>
+
+</body>
+</html>
