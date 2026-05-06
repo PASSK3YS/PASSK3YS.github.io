@@ -232,17 +232,17 @@ title: About
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 22px;
+    gap: 30px;
     text-decoration: none !important;
 }
 
 .cinema-movie-thumb {
-    width: 65px;
-    height: 95px;
+    width: 110px;
+    height: 165px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex-shrink: 0;
 }
 
@@ -253,7 +253,7 @@ title: About
 
 .latest-title {
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text);
     line-height: 1.3;
     transition: color 0.2s ease;
@@ -281,6 +281,7 @@ title: About
 .cinema-link-wrapper:hover .cinema-movie-thumb,
 .unified-row.interactive-row:hover .cinema-movie-thumb {
     transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
 @media (max-width: 850px) {
@@ -293,6 +294,10 @@ title: About
         grid-template-columns: 1fr;
         gap: 15px;
         padding: 25px 20px;
+    }
+    .cinema-movie-thumb {
+        width: 80px;
+        height: 120px;
     }
 }
 </style>
@@ -307,7 +312,7 @@ fetch('/cinema-watchlist/2026/')
                 <a href="/cinema-watchlist/2026/" class="cinema-link-wrapper">
                     <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="cinema-movie-thumb">
                     <div class="latest-info">
-                        <p class="latest-title" style="margin: 0 0 6px 0;">${firstMovie.querySelector('.movie-title').textContent}</p>
+                        <p class="latest-title" style="margin: 0 0 8px 0;">${firstMovie.querySelector('.movie-title').textContent}</p>
                         <p class="latest-meta" style="margin: 0;">${firstMovie.querySelector('.movie-date').textContent}</p>
                     </div>
                 </a>`;
