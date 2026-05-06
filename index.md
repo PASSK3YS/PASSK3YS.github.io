@@ -70,7 +70,7 @@ title: About
         <h3 class="soft-header">Guestbook</h3>
         <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
             <span class="guestbook-title" style="margin: 0;">Sign my guestbook &rarr;</span>
-            <span style="font-size: 0.85rem; color: var(--text-muted);">Leave a message</span>
+            <span class="unified-meta">Leave a message</span>
         </div>
     </a>
 
@@ -78,7 +78,7 @@ title: About
         <h3 class="soft-header">Tip Jar</h3>
         <div style="display: flex; align-items: center; gap: 20px;">
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
-            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); letter-spacing: 1.5px;">MONERO (XMR)</span>
+            <span class="unified-meta">MONERO (XMR)</span>
         </div>
     </div>
 
@@ -150,7 +150,8 @@ title: About
     background-color: rgba(255,255,255,0.02);
 }
 
-.interactive-row:hover .guestbook-title {
+.interactive-row:hover .guestbook-title,
+.interactive-row:hover .latest-title {
     color: var(--accent);
 }
 
@@ -161,6 +162,15 @@ title: About
     color: var(--text-muted);
     margin: 0;
     font-weight: 700;
+}
+
+.unified-meta {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .social-icons {
@@ -188,17 +198,19 @@ title: About
 }
 
 .gamertag-label {
-    opacity: 0.6; 
-    font-size: 0.9em;
-    color: var(--text);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .gamertag-list a {
     color: var(--text);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
     transition: color 0.2s ease;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .gamertag-list a:hover {
@@ -206,7 +218,7 @@ title: About
 }
 
 .guestbook-title {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 800;
     color: var(--text);
     transition: color 0.2s ease;
@@ -253,29 +265,14 @@ title: About
 
 .latest-title {
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: var(--text);
     line-height: 1.3;
     transition: color 0.2s ease;
 }
 
-.latest-meta {
-    font-size: 0.8rem;
-    color: var(--accent);
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
 .card-link-wrapper {
     text-decoration: none !important;
-}
-
-.card-link-wrapper:hover .latest-title,
-.cinema-link-wrapper:hover .latest-title,
-.unified-row.interactive-row:hover .latest-title {
-    color: var(--accent);
 }
 
 .cinema-link-wrapper:hover .cinema-movie-thumb,
@@ -313,7 +310,7 @@ fetch('/cinema-watchlist/2026/')
                     <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="cinema-movie-thumb">
                     <div class="latest-info">
                         <p class="latest-title" style="margin: 0 0 8px 0;">${firstMovie.querySelector('.movie-title').textContent}</p>
-                        <p class="latest-meta" style="margin: 0;">${firstMovie.querySelector('.movie-date').textContent}</p>
+                        <p class="unified-meta">${firstMovie.querySelector('.movie-date').textContent}</p>
                     </div>
                 </a>`;
         }
@@ -328,7 +325,7 @@ fetch('/blog/')
             document.getElementById('latest-blog-container').innerHTML = `
                 <a href="${link.getAttribute('href')}" class="card-link-wrapper" style="display: flex; align-items: center; flex-wrap: wrap; gap: 15px;">
                     <p class="latest-title" style="margin: 0;">${link.textContent.trim()}</p>
-                    <p class="latest-meta" style="margin: 0;">${firstPost.querySelector('div').textContent.trim()}</p>
+                    <p class="unified-meta">${firstPost.querySelector('div').textContent.trim()}</p>
                 </a>`;
         }
     });
