@@ -15,11 +15,11 @@ title: About
     </div>
 </div>
 
-<div class="soft-grid-container">
-
-    <div class="soft-card">
+<div class="unified-card">
+    
+    <div class="unified-row">
         <h3 class="soft-header">Socials</h3>
-        <div class="social-icons" style="flex-grow: 1;">
+        <div class="social-icons">
             <a href="https://x.com/PASSK3YS" target="_blank" title="X">
                 <svg viewBox="0 0 24 24">
                     <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
@@ -30,17 +30,12 @@ title: About
                     <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
                 </svg>
             </a>
-            <a href="https://reddit.com/u/PASSK3YS" target="_blank" title="Reddit">
-                <svg viewBox="0 0 512 512">
-                    <path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/>
-                </svg>
-            </a>
         </div>
     </div>
 
-    <div class="soft-card">
+    <div class="unified-row">
         <h3 class="soft-header">Gamertags</h3>
-        <div class="gamertag-list" style="flex-grow: 1;">
+        <div class="gamertag-list">
             <span class="gamertag-label">Xbox</span> 
             <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank">m00t</a>
             <span class="gamertag-label">Steam</span> 
@@ -48,31 +43,31 @@ title: About
         </div>
     </div>
 
-    <div class="soft-card">
+    <div class="unified-row interactive-row">
         <h3 class="soft-header">Latest Post</h3>
-        <div id="latest-blog-container" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+        <div id="latest-blog-container">
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
 
-    <div class="soft-card">
+    <div class="unified-row interactive-row">
         <h3 class="soft-header">Latest cinema watch</h3>
-        <div id="latest-movie-container" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+        <div id="latest-movie-container">
             <p style="font-size: 0.9em; color: var(--text-muted);">Loading latest...</p>
         </div>
     </div>
 
-    <a href="/guestbook/" class="soft-card interactive-card" style="text-decoration: none;">
-        <h3 class="soft-header" style="color: inherit;">Guestbook</h3>
-        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+    <a href="/guestbook/" class="unified-row interactive-row" style="text-decoration: none; color: inherit; display: block;">
+        <h3 class="soft-header">Guestbook</h3>
+        <div>
             <span class="guestbook-title">Sign my guestbook &rarr;</span>
             <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-top: 5px;">Leave a message</span>
         </div>
     </a>
 
-    <div class="soft-card" style="display: flex; flex-direction: column;">
+    <div class="unified-row">
         <h3 class="soft-header">Tip Jar</h3>
-        <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding-bottom: 10px;">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
             <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
             <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); letter-spacing: 1.5px;">MONERO (XMR)</span>
         </div>
@@ -102,43 +97,50 @@ title: About
     flex-direction: column;
 }
 
-.soft-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-}
-
-.soft-card {
+.unified-card {
     background: var(--nav-bg);
     border-radius: 24px;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 30px rgba(0,0,0,0.04);
     border: 1px solid rgba(128,128,128,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
 }
 
-[data-theme="dark"] .soft-card {
+[data-theme="dark"] .unified-card {
     box-shadow: 0 8px 30px rgba(0,0,0,0.25);
     border: 1px solid rgba(255,255,255,0.05);
 }
 
-.soft-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-    border-color: var(--accent);
+.unified-row {
+    padding: 30px;
+    border-bottom: 1px solid rgba(128,128,128,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
 }
 
-[data-theme="dark"] .soft-card:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+[data-theme="dark"] .unified-row {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.interactive-card {
+.unified-row:last-child {
+    border-bottom: none;
+}
+
+.unified-row.interactive-row {
     cursor: pointer;
 }
 
-.interactive-card:hover .guestbook-title {
+.unified-row.interactive-row:hover {
+    background-color: rgba(128,128,128,0.03);
+}
+
+[data-theme="dark"] .unified-row.interactive-row:hover {
+    background-color: rgba(255,255,255,0.02);
+}
+
+.interactive-row:hover .guestbook-title {
     color: var(--accent);
 }
 
@@ -218,7 +220,7 @@ title: About
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.soft-card:hover .tip-qr {
+.unified-row:hover .tip-qr {
     transform: scale(1.04);
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
@@ -269,15 +271,14 @@ title: About
     display: block;
 }
 
-.card-link-wrapper:hover .latest-title {
+.card-link-wrapper:hover .latest-title,
+.cinema-link-wrapper:hover .latest-title,
+.unified-row.interactive-row:hover .latest-title {
     color: var(--accent);
 }
 
-.cinema-link-wrapper:hover .latest-title {
-    color: var(--accent);
-}
-
-.cinema-link-wrapper:hover .cinema-movie-thumb {
+.cinema-link-wrapper:hover .cinema-movie-thumb,
+.unified-row.interactive-row:hover .cinema-movie-thumb {
     transform: scale(1.05);
 }
 
@@ -286,6 +287,9 @@ title: About
         flex-direction: column;
         text-align: center;
         gap: 20px;
+    }
+    .unified-row {
+        padding: 20px;
     }
 }
 </style>
