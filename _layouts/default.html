@@ -34,6 +34,14 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <style>
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
         div.highlight {
             position: relative;
         }
@@ -72,7 +80,7 @@
 
         .unified-header {
             width: 100%;
-            max-width: 650px;
+            max-width: 1200px;
             background: var(--nav-bg);
             border: 1px solid var(--border);
             border-radius: 24px;
@@ -475,6 +483,40 @@
             transform: rotate(180deg);
         }
 
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--nav-bg);
+            color: var(--accent);
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background-color 0.2s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            background-color: var(--border);
+        }
+
         @media (max-width: 768px) {
             .nav-section {
                 justify-content: space-between;
@@ -494,6 +536,12 @@
                 text-overflow: clip;
                 animation: marquee 14s linear infinite;
                 text-align: left;
+            }
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
             }
         }
     </style>
@@ -687,6 +735,10 @@
         {% endif %}
     </main>
 
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
     <footer>
         <div class="footer-card">
             <div class="footer-content">
@@ -804,6 +856,27 @@
                 const scrollLeftValue = activeLink.offsetLeft - (navScroll.clientWidth / 2) + (activeLink.clientWidth / 2);
                 navScroll.scrollLeft = scrollLeftValue;
             }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 
