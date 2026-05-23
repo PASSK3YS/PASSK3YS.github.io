@@ -38,13 +38,13 @@ html, body { overflow-x: hidden; }
 }
 
 body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.1s ease, color 0.1s ease, border-color 0.1s ease, box-shadow 0.1s ease;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: 'Space Grotesk', sans-serif; 
+    font-family: 'JetBrains Mono', monospace; 
     max-width: var(--width);
     margin: 0 auto;        
     padding: 2rem 1.5rem;
@@ -57,9 +57,10 @@ main {
 h1, h2, h3 {
     color: var(--text);
     text-shadow: 0 0 10px var(--accent-glow);
-    letter-spacing: -0.03em; 
+    letter-spacing: -1px; 
     margin-top: 0; 
     margin-bottom: 0.5rem;
+    font-weight: 800;
 }
 
 h1 { margin-bottom: 1.5rem; }
@@ -87,9 +88,14 @@ nav {
     align-items: center; 
     background-color: var(--nav-bg);
     border: 1px solid var(--border);
-    border-radius: 50px;
+    border-radius: 4px;
     padding: 8px 12px;
     max-width: 100%;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] nav {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 .nav-scroll {
@@ -109,17 +115,17 @@ nav {
 
 .nav-scroll a {
     display: inline-block;                
-    font-weight: bold;
+    font-weight: 800;
     background: transparent !important; 
     border: none !important;
     padding: 10px 20px;                     
-    border-radius: 50px;                    
+    border-radius: 4px;                    
     color: var(--text);                  
     box-shadow: none !important; 
     text-transform: uppercase;
     font-size: 0.8em;                     
     letter-spacing: 1px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.1s ease, color 0.1s ease;
     text-decoration: none !important;
     text-shadow: none !important;
     outline: none !important;
@@ -128,7 +134,8 @@ nav {
 
 .nav-scroll a:hover, .nav-scroll a.active {
     color: var(--accent) !important;                    
-    background: var(--border) !important;
+    background: rgba(12, 230, 242, 0.05) !important;
+    outline: 1px solid var(--accent) !important;
 }
 
 .theme-toggle {
@@ -137,17 +144,19 @@ nav {
     color: var(--text);
     cursor: pointer;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 4px;
     margin-left: 5px; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: transform 0.1s ease, color 0.1s ease;
 }
 
 .theme-toggle:hover {
-    background: var(--border);
+    background: rgba(12, 230, 242, 0.05);
     color: var(--accent);
+    outline: 1px solid var(--accent);
 }
 
 .bio-container {
@@ -160,9 +169,9 @@ nav {
 .profile-img { 
     width: 120px; 
     height: auto;
-    border-radius: 4px;
-    box-shadow: 0 0 15px var(--accent-glow); 
-    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px rgba(42, 161, 152, 0.2); 
+    border: 2px solid var(--accent);
     flex-shrink: 0; 
 }
 
@@ -182,6 +191,7 @@ nav {
     font-size: 1.1rem;
     margin-bottom: 10px;
     color: var(--text);
+    font-weight: 800;
 }
 
 ul { list-style: none; padding-left: 0; margin: 0; }
@@ -203,15 +213,19 @@ footer {
     background-color: var(--nav-bg); 
     color: var(--accent);
     border: 1px solid var(--border);
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 4rem 2rem 5rem 2rem; 
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden; 
+}
+
+[data-theme="dark"] .footer-card {
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
 .footer-content {
@@ -221,18 +235,18 @@ footer {
 
 .copyright {
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 800;
     opacity: 0.9;
     color: var(--accent);
 }
 
 .footer-card a {
     color: var(--accent);
-    border-bottom: 1px solid rgba(127, 156, 245, 0.3);
+    border-bottom: 1px dashed rgba(127, 156, 245, 0.3);
 }
 
 .footer-card a:hover {
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px dashed var(--accent);
     text-shadow: 0 0 8px var(--accent-glow);
 }
 
@@ -242,14 +256,14 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     font-size: clamp(1.5rem, 6vw, 3.5rem); 
-    font-weight: 700;
+    font-weight: 800;
     white-space: nowrap;
     color: var(--accent);
     opacity: 0.15;
     z-index: 1;
     line-height: 1;
     pointer-events: none;
-    letter-spacing: -0.02em;
+    letter-spacing: -1px;
 }
 
 .footer-socials {
@@ -262,13 +276,13 @@ footer {
 .footer-socials a {
     color: var(--accent);
     border-bottom: none;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.1s, opacity 0.1s;
     display: flex;
     align-items: center;
 }
 
 .footer-socials a:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     opacity: 1;
     border-bottom: none;
     text-shadow: 0 0 15px var(--accent-glow);
@@ -281,7 +295,7 @@ footer {
 }
 
 .blog-post { margin-bottom: 3rem; }
-.blog-post h3 { font-size: 1.4rem; margin-bottom: 0.5rem; margin-top: 0; }
+.blog-post h3 { font-size: 1.4rem; margin-bottom: 0.5rem; margin-top: 0; font-weight: 800; }
 .blog-post h3 a { color: var(--text); border: none; }
 .blog-post h3 a:hover { color: var(--accent); text-shadow: 0 0 10px var(--accent-glow); }
 
@@ -290,9 +304,9 @@ footer {
     font-size: 0.85rem;
     margin-bottom: 0.8rem;
     opacity: 0.8;
-    font-weight: bold;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .excerpt {
@@ -301,19 +315,19 @@ footer {
     margin-bottom: 1rem;
 }
 
-hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
+hr { border: 0; border-top: 1px dashed var(--border); margin: 2rem 0; }
 
 pre, code {
     background: var(--nav-bg);
     border: 1px solid var(--border);
     border-radius: 4px;
     color: var(--text);
-    font-family: monospace;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 pre {
     padding: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
     overflow-x: auto; 
 }
 
@@ -323,7 +337,7 @@ img, video, iframe {
     display: block;
     border-radius: 4px;
     margin: 1.5rem 0;
-    box-shadow: 0 0 15px var(--accent-glow); 
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.2); 
     border: 1px solid var(--border); 
 }
 
@@ -351,9 +365,10 @@ blockquote p {
 
 .rec-category h3 {
     font-size: 1.1rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px dashed var(--border);
     padding-bottom: 5px;
     margin-bottom: 10px;
+    font-weight: 800;
 }
 
 .rec-category ul {
@@ -375,7 +390,7 @@ blockquote p {
     text-decoration: none !important;
     display: inline-flex;
     align-items: center;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     cursor: help;
 }
 
@@ -386,19 +401,20 @@ blockquote p {
     left: 50%;
     transform: translateX(-50%) translateY(-5px);
     padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 10px;
     letter-spacing: 0.5px;
-    font-weight: 700;
+    font-weight: 800;
     white-space: nowrap;
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.1s ease;
     background-color: #24292f;
     color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
     z-index: 1000;
+    border: 1px solid var(--border);
 }
 
 .version-link::after {
@@ -411,7 +427,7 @@ blockquote p {
     border-bottom-color: #24292f;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.1s ease;
     z-index: 1000;
 }
 
@@ -430,7 +446,7 @@ blockquote p {
 [data-theme="dark"] .version-link::before {
     background-color: #f0f6fc;
     color: #24292f;
-    box-shadow: 0 0 15px rgba(240, 246, 252, 0.15);
+    box-shadow: 4px 4px 0px rgba(240, 246, 252, 0.2);
 }
 
 [data-theme="dark"] .version-link::after {
@@ -445,19 +461,20 @@ div.highlight {
     position: absolute;
     top: 8px;
     right: 8px;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 1px;
     padding: 6px 12px;
     cursor: pointer;
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
     z-index: 10;
     background-color: var(--bg);
     color: var(--text);
     border: 1px solid var(--border);
+    border-radius: 4px;
 }
 
 [data-theme="light"] .copy-code-button {
@@ -472,10 +489,10 @@ div.highlight:hover .copy-code-button {
 
 .copy-code-button:hover {
     opacity: 1 !important;
-    background-color: var(--nav-bg);
+    background-color: rgba(12, 230, 242, 0.05);
     border-color: var(--accent);
     color: var(--accent);
-    box-shadow: 0 0 12px var(--accent-glow);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
 .back-link {
@@ -485,7 +502,8 @@ div.highlight:hover .copy-code-button {
     opacity: 0.6;
     text-decoration: none;
     display: inline-block;
-    transition: opacity 0.2s ease, color 0.2s ease;
+    transition: opacity 0.1s ease, color 0.1s ease;
+    font-weight: 800;
 }
 
 .back-link:hover {
@@ -497,14 +515,19 @@ div.highlight:hover .copy-code-button {
 .grid-item {
     background-color: var(--nav-bg);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .grid-item {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 .grid-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(42, 161, 152, 0.2);
     border-color: var(--accent);
 }
 
@@ -518,11 +541,12 @@ div.highlight:hover .copy-code-button {
 
 ::-webkit-scrollbar-track {
     background: var(--bg);
+    border-left: 1px dashed var(--border);
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--accent);
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
