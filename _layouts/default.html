@@ -156,6 +156,7 @@
             border: 1px solid var(--accent);
         }
 
+        /* Music Player Styles */
         .floating-player-wrapper {
             position: fixed; bottom: 90px; left: 30px; width: 300px;
             background: var(--nav-bg); border: 1px solid var(--border);
@@ -306,8 +307,20 @@
                         document.getElementById('ytm-art').src = data.music.image;
                         document.getElementById('ytm-track').textContent = data.music.title;
                         document.getElementById('ytm-artist').textContent = data.music.artist;
-                        document.getElementById('ytm-state-text').textContent = data.music.isPlaying ? "I'M CURRENTLY LISTENING TO..." : "LAST PLAYED";
                         document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                        
+                        if (data.music.isPlaying) {
+                            document.getElementById('ytm-state-text').textContent = "I'M CURRENTLY LISTENING TO...";
+                        } else if (data.music.uts) {
+                            const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
+                            if (diffMins < 1) document.getElementById('ytm-state-text').textContent = "LAST PLAYED • JUST NOW";
+                            else if (diffMins < 60) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${diffMins} MINS AGO`;
+                            else if (diffMins < 1440) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 60)} HRS AGO`;
+                            else document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 1440)} DAYS AGO`;
+                        } else {
+                            document.getElementById('ytm-state-text').textContent = "LAST PLAYED";
+                        }
+                        
                         document.getElementById('floating-player').classList.add('ytm-active');
                     }
                 }).catch(() => {});
