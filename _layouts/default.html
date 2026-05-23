@@ -156,6 +156,7 @@
             border: 1px solid var(--accent);
         }
 
+        /* Music Player Styles */
         .floating-player-wrapper {
             position: fixed; bottom: 90px; left: 30px; width: 300px;
             background: var(--nav-bg); border: 1px solid var(--border);
@@ -170,12 +171,14 @@
         .ytm-art { width: 60px; height: 60px; object-fit: cover; border-radius: 2px; border: 1px solid var(--border); }
         .ytm-info { display: flex; flex-direction: column; overflow: hidden; width: 100%; }
         .ytm-status { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
-        .ytm-title-container { overflow: hidden; width: 100%; }
-        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); white-space: nowrap; }
-        .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        
+        /* Scrolling Title Styles */
+        .ytm-title-container { overflow: hidden; width: 100%; position: relative; white-space: nowrap; }
+        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); display: inline-block; }
+        .scrolling-title { animation: scroll-text 10s linear infinite; padding-left: 100%; }
+        @keyframes scroll-text { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
 
-        .scrolling-title { display: inline-block; animation: scroll-text 10s linear infinite; }
-        @keyframes scroll-text { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+        .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         .floating-music-btn {
             position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px;
@@ -332,7 +335,7 @@
                         
                         trackEl.classList.remove('scrolling-title');
                         setTimeout(() => {
-                            if (trackEl.scrollWidth > trackEl.parentElement.clientWidth) {
+                            if (trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
                                 trackEl.classList.add('scrolling-title');
                             }
                         }, 100);
