@@ -309,7 +309,7 @@
 
             const workerUrl = 'https://xbox-tracker.snowy-scene-5750.workers.dev';
             function fetchMusic() {
-                fetch(workerUrl).then(res => res.json()).then(data => {
+                fetch(workerUrl).then(res => res.json()).then(async data => {
                     if (data.music) {
                         const trackEl = document.getElementById('ytm-track');
                         const artEl = document.getElementById('ytm-art');
@@ -317,7 +317,25 @@
                         
                         if (currentTitle !== data.music.title) {
                             trackEl.setAttribute('data-title', data.music.title);
-                            artEl.src = data.music.image;
+                            
+                            const isDefaultImage = url => !url || url.includes('2a96cbd8b46e442fc41c2b86b821562f');
+                            let imageUrl = data.music.image;
+                            
+                            if (isDefaultImage(imageUrl)) {
+                                try {
+                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}&entity=song&limit=1`);
+                                    const itunesData = await res.json();
+                                    if (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
+                                        imageUrl = itunesData.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
+                                    } else {
+                                        imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
+                                    }
+                                } catch (e) {
+                                    imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
+                                }
+                            }
+                            
+                            artEl.src = imageUrl;
                             trackEl.textContent = data.music.title;
                             document.getElementById('ytm-artist').textContent = data.music.artist;
                             document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
