@@ -157,17 +157,22 @@
         }
 
         .floating-player-wrapper {
-            position: fixed; bottom: 30px; left: 30px; width: 300px;
+            position: fixed; bottom: 90px; left: 30px; width: 300px;
             background: var(--nav-bg); border: 1px solid var(--border);
             border-radius: 8px; z-index: 1000; box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
             transform: translateY(20px); opacity: 0; visibility: hidden;
             transition: all 0.2s ease;
         }
         .floating-player-wrapper.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+        .floating-player-wrapper.ytm-active { display: block; }
+        
         .ytm-maximized-content { padding: 15px; display: flex; flex-direction: column; gap: 10px; }
-        .ytm-status { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent); }
-        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); }
-        .ytm-artist { font-size: 0.85rem; color: var(--text-muted); }
+        .ytm-link-wrapper { display: flex; flex-direction: row; align-items: center; text-decoration: none !important; gap: 15px; }
+        .ytm-art { width: 60px; height: 60px; object-fit: cover; border-radius: 4px; box-shadow: 4px 4px 0px rgba(0,0,0,0.2); }
+        .ytm-info { display: flex; flex-direction: column; overflow: hidden; }
+        .ytm-status { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         .floating-music-btn {
             position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px;
@@ -207,9 +212,7 @@
         </div>
     </header>
 
-    <main>
-        {{ content }}
-    </main>
+    <main>{{ content }}</main>
 
     <button id="musicToggleBtn" class="floating-music-btn" aria-label="Toggle Music Player">
         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
@@ -217,9 +220,14 @@
 
     <div id="floating-player" class="floating-player-wrapper">
         <div class="ytm-maximized-content">
-            <div class="ytm-status" id="ytm-state-text">LOADING...</div>
-            <div class="ytm-title" id="ytm-track"></div>
-            <div class="ytm-artist" id="ytm-artist"></div>
+            <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
+                <img id="ytm-art" class="ytm-art" src="" alt="">
+                <div class="ytm-info">
+                    <div class="ytm-status" id="ytm-state-text">LOADING...</div>
+                    <div class="ytm-title" id="ytm-track"></div>
+                    <div class="ytm-artist" id="ytm-artist"></div>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -240,12 +248,7 @@
                 </div>
                 <div class="copyright">
                     <p style="margin: 0;">© 2026 Kieran Colfer</p>
-                    <p style="margin: 5px 0 0 0; font-size: 0.75em; opacity: 0.5;">
-                        <a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}" target="_blank" class="version-link" style="color: inherit; text-decoration: none;">
-                            <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg>
-                            v.{{ site.github.build_revision | slice: 0, 7 | default: "dev" }}
-                        </a>
-                    </p>
+                    <a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}" target="_blank">v.{{ site.github.build_revision | slice: 0, 7 | default: "dev" }}</a>
                     <div style="margin-top: 15px;">
                         <a href="/privacy/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; opacity: 0.8;">Privacy Policy</a>
                     </div>
@@ -257,15 +260,11 @@
 
     <script>
         const toggleButton = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
-        const systemIcon = document.getElementById('system-icon');
-
         function updateIcons(theme) {
-            sunIcon.style.display = 'none'; moonIcon.style.display = 'none'; systemIcon.style.display = 'none';
-            if (theme === 'light') sunIcon.style.display = 'block';
-            else if (theme === 'dark') moonIcon.style.display = 'block';
-            else systemIcon.style.display = 'block';
+            document.querySelectorAll('#sun-icon, #moon-icon, #system-icon').forEach(el => el.style.display = 'none');
+            if (theme === 'light') document.getElementById('sun-icon').style.display = 'block';
+            else if (theme === 'dark') document.getElementById('moon-icon').style.display = 'block';
+            else document.getElementById('system-icon').style.display = 'block';
         }
         function setTheme(theme) {
             localStorage.setItem('theme', theme);
@@ -294,9 +293,11 @@
             function fetchMusic() {
                 fetch(workerUrl).then(res => res.json()).then(data => {
                     if (data.music) {
+                        document.getElementById('ytm-art').src = data.music.image;
                         document.getElementById('ytm-track').textContent = data.music.title;
                         document.getElementById('ytm-artist').textContent = data.music.artist;
                         document.getElementById('ytm-state-text').textContent = data.music.isPlaying ? "LIVE" : "LAST PLAYED";
+                        document.getElementById('floating-player').classList.add('ytm-active');
                     }
                 }).catch(() => {});
             }
