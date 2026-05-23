@@ -156,7 +156,6 @@
             border: 1px solid var(--accent);
         }
 
-        /* Music Player Styles */
         .floating-player-wrapper {
             position: fixed; bottom: 90px; left: 30px; width: 300px;
             background: var(--nav-bg); border: 1px solid var(--border);
@@ -169,10 +168,14 @@
         .ytm-maximized-content { padding: 15px; display: flex; flex-direction: column; gap: 10px; }
         .ytm-link-wrapper { display: flex; flex-direction: row; align-items: center; text-decoration: none !important; gap: 15px; }
         .ytm-art { width: 60px; height: 60px; object-fit: cover; border-radius: 2px; border: 1px solid var(--border); }
-        .ytm-info { display: flex; flex-direction: column; overflow: hidden; }
+        .ytm-info { display: flex; flex-direction: column; overflow: hidden; width: 100%; }
         .ytm-status { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
-        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .ytm-title-container { overflow: hidden; width: 100%; }
+        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); white-space: nowrap; }
         .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        .scrolling-title { display: inline-block; animation: scroll-text 10s linear infinite; }
+        @keyframes scroll-text { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
 
         .floating-music-btn {
             position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px;
@@ -226,7 +229,9 @@
                 <img id="ytm-art" class="ytm-art" src="" alt="Album Art">
                 <div class="ytm-info">
                     <div class="ytm-status" id="ytm-state-text">LOADING...</div>
-                    <div class="ytm-title" id="ytm-track"></div>
+                    <div class="ytm-title-container">
+                        <div class="ytm-title" id="ytm-track"></div>
+                    </div>
                     <div class="ytm-artist" id="ytm-artist"></div>
                 </div>
             </a>
@@ -304,8 +309,10 @@
             function fetchMusic() {
                 fetch(workerUrl).then(res => res.json()).then(data => {
                     if (data.music) {
-                        document.getElementById('ytm-art').src = data.music.image;
-                        document.getElementById('ytm-track').textContent = data.music.title;
+                        const trackEl = document.getElementById('ytm-track');
+                        const artEl = document.getElementById('ytm-art');
+                        artEl.src = data.music.image;
+                        trackEl.textContent = data.music.title;
                         document.getElementById('ytm-artist').textContent = data.music.artist;
                         document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
                         
@@ -322,6 +329,13 @@
                         }
                         
                         document.getElementById('floating-player').classList.add('ytm-active');
+                        
+                        trackEl.classList.remove('scrolling-title');
+                        setTimeout(() => {
+                            if (trackEl.scrollWidth > trackEl.parentElement.clientWidth) {
+                                trackEl.classList.add('scrolling-title');
+                            }
+                        }, 100);
                     }
                 }).catch(() => {});
             }
