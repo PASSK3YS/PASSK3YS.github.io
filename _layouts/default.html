@@ -171,13 +171,11 @@
         .ytm-info { display: flex; flex-direction: column; overflow: hidden; width: 100%; }
         .ytm-status { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
         
-        .ytm-title-container { overflow: hidden; width: 100%; position: relative; }
+        .ytm-title-container { overflow: hidden; width: 100%; position: relative; white-space: nowrap; }
+        .ytm-title-container.is-scrolling { -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
         .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); display: inline-block; white-space: nowrap; }
-        .scrolling-title { animation: scroll-text 10s linear infinite; }
-        @keyframes scroll-text { 
-            0% { transform: translateX(0); } 
-            100% { transform: translateX(-50%); } 
-        }
+        .scrolling-title { display: inline-flex; gap: 2rem; animation: scroll-text 10s linear infinite; }
+        @keyframes scroll-text { 0% { transform: translateX(0%); } 100% { transform: translateX(calc(-50% - 1rem)); } }
 
         .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -315,10 +313,27 @@
                     if (data.music) {
                         const trackEl = document.getElementById('ytm-track');
                         const artEl = document.getElementById('ytm-art');
-                        artEl.src = data.music.image;
-                        trackEl.textContent = data.music.title;
-                        document.getElementById('ytm-artist').textContent = data.music.artist;
-                        document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                        const currentTitle = trackEl.getAttribute('data-title');
+                        
+                        if (currentTitle !== data.music.title) {
+                            trackEl.setAttribute('data-title', data.music.title);
+                            artEl.src = data.music.image;
+                            trackEl.textContent = data.music.title;
+                            document.getElementById('ytm-artist').textContent = data.music.artist;
+                            document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                            
+                            trackEl.classList.remove('scrolling-title');
+                            trackEl.parentElement.classList.remove('is-scrolling');
+                            
+                            setTimeout(() => {
+                                if (trackEl.scrollWidth > trackEl.parentElement.clientWidth) {
+                                    const text = trackEl.textContent;
+                                    trackEl.innerHTML = `<span>${text}</span><span>${text}</span>`;
+                                    trackEl.classList.add('scrolling-title');
+                                    trackEl.parentElement.classList.add('is-scrolling');
+                                }
+                            }, 100);
+                        }
                         
                         if (data.music.isPlaying) {
                             document.getElementById('ytm-state-text').textContent = "I'M CURRENTLY LISTENING TO...";
@@ -333,12 +348,6 @@
                         }
                         
                         document.getElementById('floating-player').classList.add('ytm-active');
-                        
-                        trackEl.classList.remove('scrolling-title');
-                        const containerWidth = trackEl.parentElement.clientWidth;
-                        if (trackEl.scrollWidth > containerWidth) {
-                            trackEl.classList.add('scrolling-title');
-                        }
                     }
                 }).catch(() => {});
             }
