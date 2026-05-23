@@ -117,15 +117,15 @@ nav {
     display: inline-block;                
     font-weight: 800;
     background: transparent !important; 
-    border: none !important;
-    padding: 10px 20px;                     
+    border: 1px solid transparent !important;
+    padding: 8px 16px;                     
     border-radius: 4px;                    
     color: var(--text);                  
     box-shadow: none !important; 
     text-transform: uppercase;
     font-size: 0.8em;                     
     letter-spacing: 1px;
-    transition: background-color 0.1s ease, color 0.1s ease;
+    transition: all 0.1s ease;
     text-decoration: none !important;
     text-shadow: none !important;
     outline: none !important;
@@ -133,9 +133,9 @@ nav {
 }
 
 .nav-scroll a:hover, .nav-scroll a.active {
-    color: var(--accent) !important;                    
-    background: rgba(12, 230, 242, 0.05) !important;
-    outline: 1px solid var(--accent) !important;
+    color: var(--accent-cyan) !important;                    
+    background: rgba(42, 161, 152, 0.05) !important;
+    border: 1px solid var(--accent-cyan) !important;
 }
 
 .theme-toggle {
