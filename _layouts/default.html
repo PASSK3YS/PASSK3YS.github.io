@@ -170,12 +170,16 @@
         .ytm-art { width: 60px; height: 60px; object-fit: cover; border-radius: 2px; border: 1px solid var(--border); }
         .ytm-info { display: flex; flex-direction: column; overflow: hidden; width: 100%; }
         .ytm-status { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
-        .ytm-title-container { overflow: hidden; width: 100%; position: relative; white-space: nowrap; }
-        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); display: inline-block; }
-        .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        
+        .ytm-title-container { overflow: hidden; width: 100%; position: relative; }
+        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); display: inline-block; white-space: nowrap; }
+        .scrolling-title { animation: scroll-text 10s linear infinite; }
+        @keyframes scroll-text { 
+            0% { transform: translateX(0); } 
+            100% { transform: translateX(-50%); } 
+        }
 
-        .scrolling-title { padding-left: 100%; animation: scroll-text 10s linear infinite; }
-        @keyframes scroll-text { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
+        .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         .floating-music-btn {
             position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px;
@@ -331,11 +335,10 @@
                         document.getElementById('floating-player').classList.add('ytm-active');
                         
                         trackEl.classList.remove('scrolling-title');
-                        setTimeout(() => {
-                            if (trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
-                                trackEl.classList.add('scrolling-title');
-                            }
-                        }, 100);
+                        const containerWidth = trackEl.parentElement.clientWidth;
+                        if (trackEl.scrollWidth > containerWidth) {
+                            trackEl.classList.add('scrolling-title');
+                        }
                     }
                 }).catch(() => {});
             }
