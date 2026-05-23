@@ -29,7 +29,7 @@
     <meta property="og:url" content="https://kieran.colfer.net{{ page.url }}">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
 
@@ -83,7 +83,7 @@
             max-width: 1200px;
             background: var(--nav-bg);
             border: 1px solid var(--border);
-            border-radius: 24px;
+            border-radius: 8px;
             position: relative;
             overflow: hidden;
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
@@ -141,59 +141,61 @@
 
         .nav-scroll a {
             display: inline-block;                
-            font-weight: bold;
+            font-weight: 800;
             background: transparent; 
-            padding: 10px 15px;                    
-            border-radius: 50px;                    
+            border: 1px solid transparent;
+            padding: 8px 16px;                     
+            border-radius: 4px;                    
             color: var(--text);                  
             text-transform: uppercase;
             font-size: 0.85rem;                    
             letter-spacing: 1px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: all 0.1s ease;
             text-decoration: none !important;
             flex-shrink: 0;
         }
 
         .nav-scroll a:hover, .nav-scroll a.active {
             color: var(--accent);                    
-            background: var(--border);
+            background: var(--accent-glow);
+            border: 1px solid var(--accent);
         }
 
         .theme-toggle {
             position: absolute;
             right: 25px;
             background: transparent;
-            border: none;
+            border: 1px solid transparent;
             color: var(--text);
             cursor: pointer;
             padding: 10px;
-            border-radius: 50%;
+            border-radius: 4px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: all 0.1s ease;
         }
 
         .theme-toggle:hover {
-            background: var(--border);
+            background: var(--accent-glow);
             color: var(--accent);
+            border: 1px solid var(--accent);
         }
 
-        .unified-header.ytm-active .nav-scroll a,
-        .unified-header.ytm-active .theme-toggle {
-            color: #ffffff;
+        #unified-header.ytm-active .nav-scroll a:hover,
+        #unified-header.ytm-active .nav-scroll a.active {
+            color: #0ce6f2 !important;
+            background: rgba(12, 230, 242, 0.15) !important;
+            border: 1px solid #0ce6f2 !important;
+            outline: none !important;
         }
 
-        .unified-header.ytm-active .nav-scroll a:hover,
-        .unified-header.ytm-active .nav-scroll a.active {
-            color: #0ce6f2;
-            background: rgba(255,255,255,0.1);
-        }
-
-        .unified-header.ytm-active .theme-toggle:hover {
-            background: rgba(255,255,255,0.1);
-            color: #0ce6f2;
+        #unified-header.ytm-active .theme-toggle:hover {
+            color: #0ce6f2 !important;
+            background: rgba(12, 230, 242, 0.15) !important;
+            border: 1px solid transparent !important;
+            outline: 1px solid #0ce6f2 !important;
         }
 
         .ytm-minimized-text-wrapper {
@@ -299,7 +301,7 @@
             width: 90px;
             height: 90px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 4px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
             transition: transform 0.3s ease;
             flex-shrink: 0;
@@ -348,7 +350,7 @@
         }
 
         .ytm-link-wrapper:hover .ytm-title {
-            color: #FF0000;
+            color: #0ce6f2;
         }
 
         .ytm-artist {
@@ -369,7 +371,7 @@
             background: rgba(0, 0, 0, 0.2);
             border: 1px solid var(--border);
             padding: 5px 12px;
-            border-radius: 50px;
+            border-radius: 4px;
             margin-top: 10px;
             max-width: 100%;
             transition: background 0.2s, border-color 0.2s;
@@ -420,10 +422,10 @@
 
         .playing-indicator .bar {
             width: 3px;
-            background-color: #FF0000;
+            background-color: #0ce6f2;
             animation: eq-bounce 1s infinite ease-in-out;
             transform-origin: bottom;
-            border-radius: 2px;
+            border-radius: 0;
         }
 
         .playing-indicator .bar:nth-child(1) { height: 8px; animation-delay: 0s; }
@@ -453,12 +455,12 @@
             align-items: center;
             cursor: pointer;
             transition: color 0.2s, background 0.2s;
-            border-top: 1px solid var(--border);
+            border-top: 1px dashed var(--border);
         }
 
         .unified-header.ytm-active .ytm-toggle-btn {
             color: rgba(255,255,255,0.6);
-            border-top: 1px solid rgba(255,255,255,0.05);
+            border-top: 1px dashed rgba(255,255,255,0.2);
         }
 
         .ytm-toggle-btn:hover {
@@ -492,17 +494,21 @@
             background-color: var(--nav-bg);
             color: var(--accent);
             border: 2px solid var(--border);
-            border-radius: 50%;
+            border-radius: 4px;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
             opacity: 0;
             visibility: hidden;
             transform: translateY(20px);
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background-color 0.2s ease;
+            transition: opacity 0.1s ease, transform 0.1s ease, visibility 0.1s ease, background-color 0.1s ease;
             z-index: 1000;
+        }
+
+        [data-theme="dark"] .scroll-to-top {
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
         }
 
         .scroll-to-top.visible {
@@ -512,9 +518,10 @@
         }
 
         .scroll-to-top:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-            background-color: var(--border);
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px rgba(12, 230, 242, 0.2);
+            background-color: rgba(12, 230, 242, 0.05);
+            border-color: var(--accent);
         }
 
         @media (max-width: 768px) {
@@ -613,7 +620,7 @@
         {{ content }}
 
         {% if page.collection == 'docs' %}
-        <div class="docs-metadata" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+        <div class="docs-metadata" style="margin-top: 40px; border-top: 1px dashed var(--border-color); padding-top: 20px; display: flex; flex-direction: column; gap: 12px;">
             
             <style>
                 .docs-meta-link {
@@ -622,10 +629,11 @@
                     align-items: center;
                     font-size: 0.9em;
                     opacity: 0.7;
-                    transition: opacity 0.2s ease;
+                    transition: opacity 0.1s ease;
                 }
                 .docs-meta-link:hover {
                     opacity: 1;
+                    color: var(--accent-cyan);
                 }
                 #contributors a {
                     border-bottom: none !important;
@@ -636,14 +644,14 @@
                 .contributor-avatar {
                     width: 32px;
                     height: 32px;
-                    border-radius: 50%;
+                    border-radius: 4px;
                     border: 2px solid var(--bg-color);
                     box-shadow: 0 0 0 1px var(--border-color);
-                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    transition: transform 0.1s ease, box-shadow 0.1s ease;
                 }
                 .contributor-avatar:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                    transform: translate(-2px, -2px);
+                    box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
                     z-index: 10;
                 }
                 .meta-label {
@@ -651,7 +659,7 @@
                     text-transform: uppercase;
                     letter-spacing: 0.05em;
                     opacity: 0.5;
-                    font-weight: 600;
+                    font-weight: 800;
                     margin-right: 8px;
                 }
             </style>
