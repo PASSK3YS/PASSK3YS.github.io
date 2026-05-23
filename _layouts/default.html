@@ -169,15 +169,21 @@
         .ytm-link-wrapper { display: flex; flex-direction: row; align-items: center; text-decoration: none !important; gap: 15px; }
         .ytm-art { width: 60px; height: 60px; object-fit: cover; border-radius: 2px; border: 1px solid var(--border); }
         .ytm-info { display: flex; flex-direction: column; overflow: hidden; width: 100%; }
-        .ytm-status { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+        .ytm-status { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; display: flex; align-items: center; }
         
         .ytm-title-container { overflow: hidden; width: 100%; position: relative; white-space: nowrap; }
-        .ytm-title-container.is-scrolling { -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
-        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); display: inline-block; white-space: nowrap; }
-        .scrolling-title { display: inline-flex; gap: 2rem; animation: scroll-text 10s linear infinite; }
-        @keyframes scroll-text { 0% { transform: translateX(0%); } 100% { transform: translateX(calc(-50% - 1rem)); } }
+        .ytm-title { font-weight: 800; font-size: 0.95rem; color: var(--text); display: inline-block; }
+        .scrolling-title { padding-left: 100%; animation: scroll-text 10s linear infinite; }
+        @keyframes scroll-text { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
 
         .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        .playing-indicator { display: inline-flex; align-items: flex-end; gap: 3px; height: 10px; margin-left: 8px; }
+        .playing-indicator .bar { width: 3px; background-color: var(--accent); animation: eq-bounce 1s infinite ease-in-out; transform-origin: bottom; }
+        .playing-indicator .bar:nth-child(1) { height: 8px; animation-delay: 0s; }
+        .playing-indicator .bar:nth-child(2) { height: 11px; animation-delay: 0.2s; }
+        .playing-indicator .bar:nth-child(3) { height: 7px; animation-delay: 0.4s; }
+        @keyframes eq-bounce { 0%, 100% { transform: scaleY(0.4); } 50% { transform: scaleY(1); } }
 
         .floating-music-btn {
             position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px;
@@ -230,7 +236,12 @@
             <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
                 <img id="ytm-art" class="ytm-art" src="" alt="Album Art">
                 <div class="ytm-info">
-                    <div class="ytm-status" id="ytm-state-text">LOADING...</div>
+                    <div class="ytm-status">
+                        <span id="ytm-state-text">LOADING...</span>
+                        <span id="ytm-eq" class="playing-indicator" style="display: none;">
+                            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                        </span>
+                    </div>
                     <div class="ytm-title-container">
                         <div class="ytm-title" id="ytm-track"></div>
                     </div>
@@ -341,28 +352,27 @@
                             document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
                             
                             trackEl.classList.remove('scrolling-title');
-                            trackEl.parentElement.classList.remove('is-scrolling');
-                            
-                            setTimeout(() => {
-                                if (trackEl.scrollWidth > trackEl.parentElement.clientWidth) {
-                                    const text = trackEl.textContent;
-                                    trackEl.innerHTML = `<span>${text}</span><span>${text}</span>`;
+                            requestAnimationFrame(() => {
+                                if (trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
                                     trackEl.classList.add('scrolling-title');
-                                    trackEl.parentElement.classList.add('is-scrolling');
                                 }
-                            }, 100);
+                            });
                         }
                         
                         if (data.music.isPlaying) {
                             document.getElementById('ytm-state-text').textContent = "I'M CURRENTLY LISTENING TO...";
-                        } else if (data.music.uts) {
-                            const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
-                            if (diffMins < 1) document.getElementById('ytm-state-text').textContent = "LAST PLAYED • JUST NOW";
-                            else if (diffMins < 60) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${diffMins} MINS AGO`;
-                            else if (diffMins < 1440) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 60)} HRS AGO`;
-                            else document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 1440)} DAYS AGO`;
+                            document.getElementById('ytm-eq').style.display = "inline-flex";
                         } else {
-                            document.getElementById('ytm-state-text').textContent = "LAST PLAYED";
+                            document.getElementById('ytm-eq').style.display = "none";
+                            if (data.music.uts) {
+                                const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
+                                if (diffMins < 1) document.getElementById('ytm-state-text').textContent = "LAST PLAYED • JUST NOW";
+                                else if (diffMins < 60) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${diffMins} MINS AGO`;
+                                else if (diffMins < 1440) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 60)} HRS AGO`;
+                                else document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 1440)} DAYS AGO`;
+                            } else {
+                                document.getElementById('ytm-state-text').textContent = "LAST PLAYED";
+                            }
                         }
                         
                         document.getElementById('floating-player').classList.add('ytm-active');
