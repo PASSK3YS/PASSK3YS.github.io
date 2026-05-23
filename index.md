@@ -135,13 +135,13 @@ body, main, h1, h2, h3, p, a, span {
 }
 
 .unified-row {
-    padding: 30px 40px;
+    padding: 30px 34px;
     border-bottom: 1px dashed var(--border-color);
     display: grid;
     grid-template-columns: 240px 1fr;
     align-items: center;
-    transition: background-color 0.1s ease, padding-left 0.1s ease;
-    border-left: 0px solid var(--accent-cyan);
+    transition: background-color 0.1s ease, border-color 0.1s ease;
+    border-left: 6px solid transparent;
 }
 
 .unified-row:last-child {
@@ -154,12 +154,12 @@ body, main, h1, h2, h3, p, a, span {
 
 .unified-row.interactive-row:hover {
     background-color: rgba(42, 161, 152, 0.05);
-    border-left: 6px solid var(--accent-cyan);
-    padding-left: 34px;
+    border-left-color: var(--accent-cyan);
 }
 
 [data-theme="dark"] .unified-row.interactive-row:hover {
     background-color: rgba(42, 161, 152, 0.1);
+    border-left-color: var(--accent-cyan);
 }
 
 .interactive-row:hover .guestbook-title,
@@ -309,14 +309,11 @@ body, main, h1, h2, h3, p, a, span {
     .unified-row {
         grid-template-columns: 1fr;
         gap: 15px;
-        padding: 25px 20px;
+        padding: 25px 14px;
     }
     .cinema-movie-thumb {
         width: 80px;
         height: 120px;
-    }
-    .unified-row.interactive-row:hover {
-        padding-left: 14px;
     }
 }
 </style>
