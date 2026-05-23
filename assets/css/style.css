@@ -116,26 +116,25 @@ nav {
 .nav-scroll a {
     display: inline-block;                
     font-weight: 800;
-    background: transparent !important; 
-    border: 1px solid transparent !important;
+    background: transparent; 
+    border: 1px solid transparent;
     padding: 8px 16px;                     
     border-radius: 4px;                    
     color: var(--text);                  
-    box-shadow: none !important; 
+    box-shadow: none; 
     text-transform: uppercase;
     font-size: 0.8em;                     
     letter-spacing: 1px;
     transition: all 0.1s ease;
-    text-decoration: none !important;
-    text-shadow: none !important;
-    outline: none !important;
+    text-decoration: none;
+    outline: none;
     flex-shrink: 0;
 }
 
 .nav-scroll a:hover, .nav-scroll a.active {
-    color: var(--accent-cyan) !important;                    
-    background: rgba(42, 161, 152, 0.05) !important;
-    border: 1px solid var(--accent-cyan) !important;
+    color: var(--accent);                    
+    background: var(--accent-glow);
+    border: 1px solid var(--accent);
 }
 
 .theme-toggle {
