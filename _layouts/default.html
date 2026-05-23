@@ -263,15 +263,14 @@
             font-weight: 500;
         }
 
-        .floating-music-btn {
+        .floating-music-btn, .scroll-to-top {
             position: fixed;
             bottom: 30px;
-            left: 30px;
             width: 50px;
             height: 50px;
             background-color: var(--nav-bg);
             color: var(--accent);
-            border: 2px solid var(--border);
+            border: 1px solid var(--border);
             border-radius: 4px;
             cursor: pointer;
             display: flex;
@@ -282,54 +281,24 @@
             z-index: 1000;
         }
 
-        [data-theme="dark"] .floating-music-btn {
+        .floating-music-btn { left: 30px; }
+        .scroll-to-top { right: 30px; opacity: 0; visibility: hidden; }
+
+        [data-theme="dark"] .floating-music-btn, [data-theme="dark"] .scroll-to-top {
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
         }
 
-        .floating-music-btn:hover {
+        .floating-music-btn:hover, .scroll-to-top:hover {
             transform: translate(-2px, -2px);
             box-shadow: 6px 6px 0px rgba(12, 230, 242, 0.2);
             background-color: rgba(12, 230, 242, 0.05);
             border-color: var(--accent);
-        }
-
-        .scroll-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--nav-bg);
-            color: var(--accent);
-            border: 2px solid var(--border);
-            border-radius: 4px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: opacity 0.1s ease, transform 0.1s ease, visibility 0.1s ease, background-color 0.1s ease;
-            z-index: 1000;
-        }
-
-        [data-theme="dark"] .scroll-to-top {
-            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
         }
 
         .scroll-to-top.visible {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
-        }
-
-        .scroll-to-top:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px rgba(12, 230, 242, 0.2);
-            background-color: rgba(12, 230, 242, 0.05);
-            border-color: var(--accent);
         }
 
         @media (max-width: 768px) {
