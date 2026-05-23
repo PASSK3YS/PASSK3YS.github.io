@@ -88,11 +88,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
         }
 
         [data-theme="dark"] .nav-header {
-            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--border);
         }
 
@@ -156,32 +156,40 @@
             border: 1px solid var(--accent);
         }
 
-        .footer-player-wrapper {
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+        .floating-player-wrapper {
+            position: fixed;
+            bottom: 90px;
+            left: 30px;
+            width: 300px;
             background: var(--nav-bg);
             border: 1px solid var(--border);
             border-radius: 8px;
-            position: relative;
-            overflow: hidden;
+            z-index: 1000;
             box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
             display: none;
         }
 
-        [data-theme="dark"] .footer-player-wrapper {
+        [data-theme="dark"] .floating-player-wrapper {
             box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
         }
 
-        .footer-player-wrapper.ytm-active {
-            display: flex;
-            flex-direction: column;
+        .floating-player-wrapper.is-open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .floating-player-wrapper.ytm-active {
+            display: block;
         }
 
         #ytm-bg-layer {
             position: absolute;
-            top: -40px; left: -40px; right: -40px; bottom: -40px;
+            top: 0; left: 0; right: 0; bottom: 0;
             background-size: cover;
             background-position: center;
             filter: blur(20px) brightness(0.4);
@@ -190,77 +198,17 @@
             pointer-events: none;
         }
 
-        .footer-player-wrapper.ytm-active #ytm-bg-layer {
+        .floating-player-wrapper.ytm-active #ytm-bg-layer {
             opacity: 1;
         }
 
-        .ytm-minimized-text-wrapper {
-            display: grid;
-            grid-template-rows: 1fr;
-            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-player-wrapper.minimized .ytm-minimized-text-wrapper {
-            grid-template-rows: 1fr;
-        }
-
-        .footer-player-wrapper:not(.minimized) .ytm-minimized-text-wrapper {
-            grid-template-rows: 0fr;
-        }
-
-        .ytm-minimized-text-inner {
-            overflow: hidden;
-        }
-
-        .ytm-minimized-text {
-            padding: 15px 25px;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--accent);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .ytm-expandable {
-            display: grid;
-            grid-template-rows: 0fr;
-            transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-player-wrapper:not(.minimized) .ytm-expandable {
-            grid-template-rows: 1fr;
-        }
-
-        .ytm-expandable-inner {
-            overflow: hidden;
-        }
-
         .ytm-maximized-content {
-            padding: 25px;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
             display: flex;
             flex-direction: column;
-            align-items: center;
             gap: 15px;
-        }
-
-        .ytm-header-text {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: rgba(255,255,255,0.7);
-            font-weight: 700;
-            text-align: center;
-            width: 100%;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .ytm-link-wrapper {
@@ -272,112 +220,77 @@
             gap: 15px;
         }
 
-        .ytm-current {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            width: 100%;
-        }
-
         .ytm-art {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             object-fit: cover;
             border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            flex-shrink: 0;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
         }
 
         .ytm-info {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-            overflow: hidden;
-            flex: 0 1 auto;
-            max-width: calc(100% - 110px);
+            align-items: center;
+            text-align: center;
+            width: 100%;
         }
 
         .ytm-status {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
             color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 4px;
         }
 
         .ytm-title {
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #ffffff;
-            margin-bottom: 4px;
             line-height: 1.2;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            margin-bottom: 2px;
         }
 
         .ytm-artist {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: rgba(255,255,255,0.8);
             font-weight: 500;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100%;
         }
 
-        .playing-indicator {
-            display: inline-flex;
-            align-items: flex-end;
-            gap: 3px;
-            height: 10px;
-            margin-left: 8px;
-        }
-
-        .playing-indicator .bar {
-            width: 3px;
-            background-color: #0ce6f2;
-            animation: eq-bounce 1s infinite ease-in-out;
-            transform-origin: bottom;
-        }
-
-        .playing-indicator .bar:nth-child(1) { height: 8px; animation-delay: 0s; }
-        .playing-indicator .bar:nth-child(2) { height: 11px; animation-delay: 0.2s; }
-        .playing-indicator .bar:nth-child(3) { height: 7px; animation-delay: 0.4s; }
-
-        @keyframes eq-bounce {
-            0%, 100% { transform: scaleY(0.4); }
-            50% { transform: scaleY(1); }
-        }
-
-        .ytm-toggle-btn {
-            position: relative;
-            z-index: 2;
-            background: transparent;
-            border: none;
-            color: rgba(255,255,255,0.6);
-            width: 100%;
-            padding: 8px;
+        .floating-music-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--nav-bg);
+            color: var(--accent);
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
-            border-top: 1px dashed rgba(255,255,255,0.2);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+            transition: all 0.1s ease;
+            z-index: 1000;
         }
 
-        .ytm-toggle-btn:hover {
-            color: #ffffff;
-            background: rgba(255,255,255,0.05);
+        [data-theme="dark"] .floating-music-btn {
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-music-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px rgba(12, 230, 242, 0.2);
+            background-color: rgba(12, 230, 242, 0.05);
+            border-color: var(--accent);
         }
 
         .scroll-to-top {
@@ -424,6 +337,8 @@
             .nav-scroll { margin: 0; max-width: calc(100% - 45px); }
             .theme-toggle { position: relative; right: auto; }
             .scroll-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+            .floating-music-btn { bottom: 20px; left: 20px; width: 45px; height: 45px; }
+            .floating-player-wrapper { left: 20px; width: calc(100% - 40px); }
         }
     </style>
 
@@ -452,74 +367,29 @@
         {{ content }}
     </main>
 
+    <button id="musicToggleBtn" class="floating-music-btn" aria-label="Toggle Music Player">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+    </button>
+
+    <div id="floating-player" class="floating-player-wrapper">
+        <div id="ytm-bg-layer"></div>
+        <div class="ytm-maximized-content">
+            <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
+                <div class="ytm-current">
+                    <img id="ytm-art" class="ytm-art" src="" alt="">
+                    <div class="ytm-info">
+                        <div class="ytm-status" id="ytm-state-text">Loading...</div>
+                        <div class="ytm-title" id="ytm-track"></div>
+                        <div class="ytm-artist" id="ytm-artist"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
     <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
-
-    <footer>
-        <div id="unified-header" class="footer-player-wrapper">
-            <div id="ytm-bg-layer"></div>
-            
-            <div class="ytm-minimized-text-wrapper">
-                <div class="ytm-minimized-text-inner">
-                    <div class="ytm-minimized-text" id="ytm-minimized-status">Loading status...</div>
-                </div>
-            </div>
-
-            <div class="ytm-expandable">
-                <div class="ytm-expandable-inner">
-                    <div class="ytm-maximized-content">
-                        <div class="ytm-header-text" id="ytm-main-header-title">I'm currently listening to...</div>
-                        <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
-                            <div class="ytm-current">
-                                <img id="ytm-art" class="ytm-art" src="" alt="">
-                                <div class="ytm-info">
-                                    <div class="ytm-status">
-                                        <span id="ytm-state-text">I'm currently listening to...</span>
-                                        <span id="ytm-eq" class="playing-indicator" style="display: none;">
-                                            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                                        </span>
-                                    </div>
-                                    <div class="ytm-title" id="ytm-track"></div>
-                                    <div class="ytm-artist" id="ytm-artist"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="ytm-toggle-btn" id="ytm-toggle-btn" aria-label="Toggle Player">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-        </div>
-
-        <div class="footer-card">
-            <div class="footer-content">
-                <div class="footer-socials">
-                    <a href="https://github.com/PASSK3YS" target="_blank" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                    </a>
-                    <a href="https://gitlab.com/m00t" target="_blank" aria-label="GitLab">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.65 14.39L20.25 7.01C20.14 6.67 19.82 6.44 19.46 6.44C19.1 6.44 18.78 6.67 18.67 7.01L16.6 13.37H7.4L5.33 7.01C5.22 6.67 4.9 6.44 4.54 6.44C4.18 6.44 3.86 6.67 3.75 7.01L1.35 14.39C1.23 14.76 1.35 15.17 1.65 15.42L12 23L22.35 15.42C22.65 15.17 22.77 14.76 22.65 14.39Z"/></svg>
-                    </a>
-                </div>
-                <div class="copyright">
-                    <p style="margin: 0;">© 2026 Kieran Colfer</p>
-                    <p style="margin: 5px 0 0 0; font-size: 0.75em; opacity: 0.5;">
-                        <a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}" target="_blank" class="version-link" style="color: inherit; text-decoration: none;">
-                            <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg>
-                            v.{{ site.github.build_revision | slice: 0, 7 | default: "dev" }}
-                        </a>
-                    </p>
-                    <div style="margin-top: 15px;">
-                        <a href="/privacy/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; opacity: 0.8;">Privacy Policy</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-big-text">kieran.colfer.net</div>
-        </div>
-    </footer>
 
     <script>
         const toggleButton = document.getElementById('theme-toggle');
@@ -643,16 +513,13 @@
                 .then(res => res.json())
                 .then(async data => {
                     if (data.music && typeof data.music === 'object') {
-                        const playerContainer = document.getElementById('unified-header');
+                        const playerContainer = document.getElementById('floating-player');
                         const bg = document.getElementById('ytm-bg-layer');
                         const art = document.getElementById('ytm-art');
                         const link = document.getElementById('ytm-link');
                         const track = document.getElementById('ytm-track');
                         const artist = document.getElementById('ytm-artist');
                         const stateText = document.getElementById('ytm-state-text');
-                        const eq = document.getElementById('ytm-eq');
-                        
-                        const minimizedStatus = document.getElementById('ytm-minimized-status');
 
                         const newState = `${data.music.title}-${data.music.isPlaying}`;
                         
@@ -682,29 +549,8 @@
                             artist.textContent = data.music.artist;
                             link.href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
 
-                            stateText.style.color = "rgba(255,255,255,0.7)";
-
-                            if (data.music.isPlaying) {
-                                stateText.textContent = "LIVE";
-                                stateText.style.color = "#FF0000";
-                                eq.style.display = "inline-flex";
-                                minimizedStatus.textContent = "I'm currently listening to... " + data.music.title;
-                                playerContainer.classList.add('ytm-is-playing');
-                            } else {
-                                eq.style.display = "none";
-                                minimizedStatus.textContent = "I'm currently not listening to music";
-                                playerContainer.classList.remove('ytm-is-playing');
-                                
-                                if (data.music.uts) {
-                                    const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
-                                    if (diffMins < 1) stateText.textContent = "Last played • JUST NOW";
-                                    else if (diffMins < 60) stateText.textContent = `Last played • ${diffMins} MINS AGO`;
-                                    else if (diffMins < 1440) stateText.textContent = `Last played • ${Math.floor(diffMins / 60)} HRS AGO`;
-                                    else stateText.textContent = `Last played • ${Math.floor(diffMins / 1440)} DAYS AGO`;
-                                } else {
-                                    stateText.textContent = "I'm currently not listening to music";
-                                }
-                            }
+                            stateText.textContent = data.music.isPlaying ? "LIVE" : "LAST PLAYED";
+                            stateText.style.color = data.music.isPlaying ? "#FF0000" : "#ffffff";
 
                             playerContainer.classList.add('ytm-active');
                         }
@@ -714,19 +560,11 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            const toggleBtn = document.getElementById('ytm-toggle-btn');
-            const playerContainer = document.getElementById('unified-header');
+            const musicBtn = document.getElementById('musicToggleBtn');
+            const player = document.getElementById('floating-player');
 
-            if (localStorage.getItem('ytmMinimized') === 'true') {
-                playerContainer.classList.add('minimized');
-            } else {
-                playerContainer.classList.remove('minimized');
-            }
-
-            toggleBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                playerContainer.classList.toggle('minimized');
-                localStorage.setItem('ytmMinimized', playerContainer.classList.contains('minimized'));
+            musicBtn.addEventListener('click', () => {
+                player.classList.toggle('is-open');
             });
 
             fetchNavData();
