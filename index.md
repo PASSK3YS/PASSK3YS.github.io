@@ -335,16 +335,21 @@ fetch('/cinema-watchlist/2026/')
         }
     });
 
-fetch('/blog/')
-    .then(res => res.text())
-    .then(html => {
-        const firstPost = new DOMParser().parseFromString(html, 'text/html').querySelector('.post-list > div');
-        if (firstPost) {
-            const link = firstPost.querySelector('h2 a');
+fetch('/feed.json')
+    .then(res => res.json())
+    .then(data => {
+        if (data.items && data.items.length > 0) {
+            const firstPost = data.items[0];
+            let dateStr = "";
+            if (firstPost.date_published) {
+                const date = new Date(firstPost.date_published);
+                dateStr = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }).toUpperCase();
+            }
+            
             document.getElementById('latest-blog-container').innerHTML = `
-                <a href="${link.getAttribute('href')}" class="card-link-wrapper" style="display: flex; align-items: center; flex-wrap: wrap; gap: 15px;">
-                    <p class="latest-title" style="margin: 0;">${link.textContent.trim()}</p>
-                    <p class="unified-meta">${firstPost.querySelector('div').textContent.trim()}</p>
+                <a href="${firstPost.url}" class="card-link-wrapper" style="display: flex; align-items: center; flex-wrap: wrap; gap: 15px;">
+                    <p class="latest-title" style="margin: 0;">${firstPost.title}</p>
+                    <p class="unified-meta">${dateStr}</p>
                 </a>`;
         }
     });

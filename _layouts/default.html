@@ -92,7 +92,7 @@
         }
 
         [data-theme="dark"] .nav-header {
-            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1);
             border: 1px solid var(--border);
         }
 
@@ -163,6 +163,11 @@
             transform: translateY(20px); opacity: 0; visibility: hidden;
             transition: all 0.2s ease;
         }
+        
+        [data-theme="dark"] .floating-player-wrapper {
+            box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1);
+        }
+        
         .floating-player-wrapper.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
         .floating-player-wrapper.ytm-active { display: block; }
         .ytm-maximized-content { padding: 15px; display: flex; flex-direction: column; gap: 10px; }
@@ -192,6 +197,10 @@
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); z-index: 1000;
         }
 
+        [data-theme="dark"] .floating-music-btn {
+            box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.1);
+        }
+
         .scroll-to-top {
             position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px;
             background: var(--nav-bg); color: var(--accent); border: 1px solid var(--border);
@@ -199,6 +208,11 @@
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); z-index: 1000;
             opacity: 0; visibility: hidden; transition: opacity 0.1s ease;
         }
+
+        [data-theme="dark"] .scroll-to-top {
+            box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.1);
+        }
+
         .scroll-to-top.visible { opacity: 1; visibility: visible; }
     </style>
 
