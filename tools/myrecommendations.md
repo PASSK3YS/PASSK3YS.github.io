@@ -18,7 +18,7 @@ permalink: /tools/recommendations/
           <h3>💻 Browser</h3>
           <ul>
               <li><a href="https://vivaldi.com" target="_blank">Vivaldi</a></li>
-              <li><a href="https://helium.computer" target="_blank">Helium</a><li>
+              <li><a href="https://helium.computer" target="_blank">Helium</a></li>
               <li><a href="https://floorp.app" target="_blank">Floorp</a></li>
               <li><a href="https://mullvad.net/en/browser" target="_blank">Mullvad Browser</a></li>
           </ul>
