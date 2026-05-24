@@ -321,6 +321,13 @@
         updateIcons(localStorage.getItem('theme') || 'system');
 
         document.addEventListener("DOMContentLoaded", () => {
+            const navScroll = document.querySelector('.nav-scroll');
+            const activeNav = navScroll.querySelector('.active');
+            if (navScroll && activeNav) {
+                const scrollPos = activeNav.offsetLeft - (navScroll.clientWidth / 2) + (activeNav.clientWidth / 2);
+                navScroll.scrollLeft = scrollPos > 0 ? scrollPos : 0;
+            }
+
             const musicBtn = document.getElementById('musicToggleBtn');
             const player = document.getElementById('floating-player');
             musicBtn.addEventListener('click', () => player.classList.toggle('is-open'));
