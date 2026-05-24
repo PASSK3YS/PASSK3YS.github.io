@@ -131,7 +131,7 @@ body, main, h1, h2, h3, p, a, span {
 
 [data-theme="dark"] .unified-card {
     border: 1px solid var(--border-color);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1);
 }
 
 .unified-row {
@@ -248,6 +248,10 @@ body, main, h1, h2, h3, p, a, span {
     border: 1px solid var(--border-color);
 }
 
+[data-theme="dark"] .tip-qr {
+    box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.1);
+}
+
 .unified-row:hover .tip-qr {
     transform: scale(1.02);
 }
@@ -269,6 +273,10 @@ body, main, h1, h2, h3, p, a, span {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     flex-shrink: 0;
     border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .cinema-movie-thumb {
+    box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1);
 }
 
 .latest-info {
