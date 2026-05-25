@@ -144,17 +144,15 @@ body, main, h1, h2, h3, p, a, span, li {
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Playing</h3>
             <ul class="hacker-list">
-                <li><strong>Avatar: Frontiers of Pandora</strong></li>
-                <li><strong>Fortnite</strong></li>
-                <li><strong>Kingdom Come: Deliverance II</strong></li>
+                <li><strong>Foza Horizon 6</strong></li>
+                <li><strong>Battlefield 6</strong></li>
             </ul>
         </div>
 
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Watching</h3>
             <ul class="hacker-list">
-                <li><strong>Daredevil: Born Again</strong> on Disney Plus</li>
-                <li><strong>The Dinosaurs</strong> on Netflix</li>
+                <li><strong>Game of Thrones</strong> on HBO Max</li>
             </ul>
         </div>
 

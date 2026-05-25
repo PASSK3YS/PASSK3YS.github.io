@@ -63,6 +63,14 @@ title: About
         </div>
     </div>
 
+    <a href="/now/" class="unified-row interactive-row" style="text-decoration: none; color: inherit;">
+        <h3 class="soft-header">>_ Now</h3>
+        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+            <span class="latest-title" style="margin: 0;">What I'm doing now &rarr;</span>
+            <span class="unified-meta">Current Status</span>
+        </div>
+    </a>
+
     <a href="/guestbook/" class="unified-row interactive-row" style="text-decoration: none; color: inherit;">
         <h3 class="soft-header">>_ Guestbook</h3>
         <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
