@@ -4,92 +4,170 @@ title: Now
 permalink: /now/
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+
 <style>
-  .now-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .now-card {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color, #30363d);
-    border-radius: 12px;
-    padding: 24px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-  .now-card:hover {
-    border-color: #8b949e;
-    transform: translateY(-2px);
-  }
-  .now-card h2 {
-    font-size: 1.2rem;
-    margin-top: 0;
-    margin-bottom: 16px;
-    border-bottom: none;
+body, main, h1, h2, h3, p, a, span, li {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.blinking-cursor {
+    font-weight: 800;
+    color: var(--accent-cyan);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.unified-card {
+    background: var(--nav-bg);
+    border-radius: 8px;
     display: flex;
-    align-items: center;
-    gap: 8px;
-    padding-bottom: 0;
-  }
-  .now-card ul {
+    flex-direction: column;
+    border: 1px solid var(--border-color, var(--border));
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+[data-theme="dark"] .unified-card {
+    border: 1px solid var(--border-color, var(--border));
+    box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1);
+}
+
+.unified-row {
+    padding: 30px 34px;
+    border-bottom: 1px dashed var(--border-color, var(--border));
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    align-items: start;
+    transition: background-color 0.1s ease, border-color 0.1s ease;
+    border-left: 6px solid transparent;
+}
+
+.unified-row:last-child {
+    border-bottom: none;
+}
+
+.unified-row.interactive-row:hover {
+    background-color: rgba(42, 161, 152, 0.05);
+    border-left-color: var(--accent-cyan);
+}
+
+[data-theme="dark"] .unified-row.interactive-row:hover {
+    background-color: rgba(42, 161, 152, 0.1);
+    border-left-color: var(--accent-cyan);
+}
+
+.interactive-row:hover .hacker-list li strong {
+    color: var(--accent-cyan);
+}
+
+.soft-header {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
     margin: 0;
-    padding-left: 20px;
-  }
-  .now-card li {
-    margin-bottom: 10px;
+    font-weight: 700;
+    padding-top: 2px;
+}
+
+.unified-meta {
+    font-size: 0.85rem;
+    color: var(--accent-cyan);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.hacker-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hacker-list li {
+    margin-bottom: 12px;
     opacity: 0.9;
     line-height: 1.4;
-  }
-  .now-card li:last-child {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.hacker-list li::before {
+    content: ">>";
+    color: var(--accent-cyan);
+    font-weight: 800;
+    font-size: 0.9em;
+    margin-top: 1px;
+}
+
+.hacker-list li:last-child {
     margin-bottom: 0;
-  }
+}
+
+.hacker-list li strong {
+    color: var(--text);
+    transition: color 0.1s ease;
+}
+
+@media (max-width: 850px) {
+    .unified-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 25px 14px;
+    }
+}
 </style>
 
 <div class="page-content">
-  <h1 style="margin-top: 0; margin-bottom: 10px;">What I'm doing right now</h1>
-  <p style="opacity: 0.7; font-size: 1.1rem;">A snapshot of what is currently occupying my time and attention.</p>
+    <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
+        >_ Now<span class="blinking-cursor">_</span>
+    </h1>
+    <p style="font-size: 1.05rem; opacity: 0.9; margin: 0 0 30px 0;">A snapshot of what is currently occupying my time and attention.</p>
 
-  <div class="now-grid">
-    
-    <div class="now-card">
-      <h2>💻 Working on</h2>
-      <ul>
-        <li>My website</li>
-        <li>Creating new <strong>Standard Notes</strong> themes</li>
-      </ul>
+    <div class="unified-card">
+        
+        <div class="unified-row interactive-row">
+            <h3 class="soft-header">>_ Working on</h3>
+            <ul class="hacker-list">
+                <li>My website</li>
+                <li>Creating new <strong>Standard Notes</strong> themes</li>
+            </ul>
+        </div>
+
+        <div class="unified-row interactive-row">
+            <h3 class="soft-header">>_ Playing</h3>
+            <ul class="hacker-list">
+                <li><strong>Avatar: Frontiers of Pandora</strong></li>
+                <li><strong>Fortnite</strong></li>
+                <li><strong>Kingdom Come: Deliverance II</strong></li>
+            </ul>
+        </div>
+
+        <div class="unified-row interactive-row">
+            <h3 class="soft-header">>_ Watching</h3>
+            <ul class="hacker-list">
+                <li><strong>Daredevil: Born Again</strong> on Disney Plus</li>
+                <li><strong>The Dinosaurs</strong> on Netflix</li>
+            </ul>
+        </div>
+
+        <div class="unified-row interactive-row">
+            <h3 class="soft-header">>_ Listening to</h3>
+            <ul class="hacker-list">
+                <li>My <strong>Supermix</strong> playlist on YouTube Music</li>
+            </ul>
+        </div>
+
     </div>
 
-    <div class="now-card">
-      <h2>🎮 Playing</h2>
-      <ul>
-        <li><strong>Avatar: Frontiers of Pandora</strong></li>
-        <li><strong>Fortnite</strong></li>
-        <li><strong>Kingdom Come: Deliverance II</strong></li>
-      </ul>
+    <div style="text-align: right; margin-top: 10px;">
+        <p class="unified-meta" style="opacity: 0.6; display: inline-block;">Last updated: {{ site.time | date: "%d-%m-%Y" }}</p>
     </div>
-
-    <div class="now-card">
-      <h2>📺 Watching</h2>
-      <ul>
-        <li><strong>Daredevil: Born Again</strong> on Disney Plus</li>
-        <li><strong>The Dinosaurs</strong> on Netflix</li>
-      </ul>
-    </div>
-
-    <div class="now-card">
-      <h2>🎧 Listening to</h2>
-      <ul>
-        <li>My <strong>Supermix</strong> playlist on YouTube Music</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-color, #30363d);">
-    <p style="font-size: 0.85rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; margin: 0;">
-      Last updated: {{ site.time | date: "%d-%m-%Y" }}
-    </p>
-  </div>
 </div>
