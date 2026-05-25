@@ -144,7 +144,7 @@ body, main, h1, h2, h3, p, a, span, li {
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Playing</h3>
             <ul class="hacker-list">
-                <li><strong>Foza Horizon 6</strong></li>
+                <li><strong>Forza Horizon 6</strong></li>
                 <li><strong>Battlefield 6</strong></li>
             </ul>
         </div>
