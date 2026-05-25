@@ -38,6 +38,16 @@ permalink: /docs/
         </div>
     </a>
 
+        <a href="/docs/discord/" class="unified-row interactive-row">
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Discord</h2>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+                A platform for chats and communities.
+            </p>
+            <span class="read-more">View Guides &rarr;</span>
+        </div>
+    </a>
+
 </div>
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
