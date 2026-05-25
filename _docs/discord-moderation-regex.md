@@ -6,7 +6,7 @@ category: Discord
 type: Resource
 ---
 
-This document contains useful regex patterns you can use in your Discord servers to block and prevent scammers and spammers from targeting your server members. Feel free to use.
+This document contains useful regex patterns you can use in your Discord servers to block and prevent scammers and spammers from targeting your server members.
 
 ## Fake Support & "Open a Ticket" Scams
 This regex pattern blocks scammers trying to mimic official Discord system messages, fake "open a ticket" prompts, and malicious "Contact Support" bots.
