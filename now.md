@@ -127,7 +127,7 @@ body, main, h1, h2, h3, p, a, span, li {
 
 <div class="page-content">
     <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
-        >_ Now<span class="blinking-cursor">_</span>
+        Now<span class="blinking-cursor">_</span>
     </h1>
     <p style="font-size: 1.05rem; opacity: 0.9; margin: 0 0 30px 0;">A snapshot of what is currently occupying my time and attention.</p>
 
