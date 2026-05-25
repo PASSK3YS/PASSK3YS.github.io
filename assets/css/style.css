@@ -35,6 +35,15 @@ html, body { overflow-x: hidden; }
     --border: #c4d7e8;      
     --nav-bg: #ffffff;      
     --accent-glow: rgba(30, 87, 156, 0.15);
+
+    --sh-comment: #6e7781;
+    --sh-keyword: #cf222e;
+    --sh-string: #0a3069;
+    --sh-class: #953800;
+    --sh-function: #0550ae;
+    --sh-variable: #e36209;
+    --sh-number: #0550ae;
+    --sh-operator: #24292f;
 }
 
 body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
@@ -556,3 +565,14 @@ div.highlight:hover .copy-code-button {
     background: var(--accent);
     color: var(--bg);
 }
+
+.highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs { color: var(--sh-comment); }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv { color: var(--sh-keyword); }
+.highlight .n, .highlight .nx, .highlight .p { color: var(--text); }
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: var(--sh-string); }
+.highlight .na { color: var(--sh-function); }
+.highlight .nc { color: var(--sh-class); }
+.highlight .nd { color: var(--sh-keyword); }
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .nn { color: var(--sh-variable); }
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo { color: var(--sh-number); }
+.highlight .o, .highlight .ow { color: var(--sh-operator); }
