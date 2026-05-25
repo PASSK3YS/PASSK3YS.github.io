@@ -94,9 +94,8 @@ body, main, h1, h2, h3, p, a, span, li {
     margin-bottom: 12px;
     opacity: 0.9;
     line-height: 1.4;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
+    position: relative;
+    padding-left: 30px;
 }
 
 .hacker-list li::before {
@@ -104,7 +103,9 @@ body, main, h1, h2, h3, p, a, span, li {
     color: var(--accent-cyan);
     font-weight: 800;
     font-size: 0.9em;
-    margin-top: 1px;
+    position: absolute;
+    left: 0;
+    top: 1px;
 }
 
 .hacker-list li:last-child {
