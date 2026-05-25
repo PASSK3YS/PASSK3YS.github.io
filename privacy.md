@@ -9,7 +9,7 @@ permalink: /privacy/
   <h1 style="color: var(--accent); text-align: center; text-shadow: 0 0 15px var(--accent-glow);">Privacy Policy</h1>
   
   <p style="color: var(--text-muted); text-align: center; margin-bottom: 40px;">
-    Last updated: March 14, 2026
+    Last updated: May 25, 2026
   </p>
 
   <div style="color: var(--text); line-height: 1.6;">
@@ -21,6 +21,7 @@ permalink: /privacy/
     <p>Because this is a static website, the personal information I collect is what you voluntarily choose to share with me:</p>
     <ul>
       <li><strong>Email Communications:</strong> If you email me via my contact page or to sign the guestbook, I will receive your email address and any information you include in your message.</li>
+      <li><strong>GitHub Contributions:</strong> If you submit an edit or contribute to a document on this website via GitHub, your public GitHub profile (including your username and avatar) will be automatically fetched and displayed on the relevant page as a contributor.</li>
       <li><strong>Server Logs:</strong> This website is hosted on GitHub Pages. Like all web hosts, GitHub automatically collects standard server logs, which may include your IP address, browser type, and the pages you visit. This is required for security and to serve the website to you.</li>
     </ul>
 
@@ -28,7 +29,7 @@ permalink: /privacy/
     <p>To protect my website from spam and bot abuse, I use <strong>Cloudflare Turnstile</strong>. Turnstile is a privacy-first alternative to traditional CAPTCHAs. It verifies that you are a real human without tracking you across the web or using your data for targeted advertising. Cloudflare may process some standard technical data (like device or browser characteristics) strictly for the purpose of bot detection.</p>
 
     <h3 style="color: var(--accent); margin-top: 30px;">4. How Your Data is Used</h3>
-    <p>If you email me to sign the Guestbook, I use your provided name (or chosen alias) and message solely to display it on the Guestbook page. Your actual email address is never published or shared. Any other email correspondence is used strictly to reply to your inquiries.</p>
+    <p>If you email me to sign the Guestbook, I use your provided name (or chosen alias) and message solely to display it on the Guestbook page. Your actual email address is never published or shared. Any other email correspondence is used strictly to reply to your inquiries. If you contribute to a document, your public avatar and username are displayed to credit your edits.</p>
 
     <h3 style="color: var(--accent); margin-top: 30px;">5. Cookies and Trackers</h3>
     <p>This site does not set any tracking cookies, advertising cookies, or third-party analytics scripts. You are completely free to browse without being followed.</p>
