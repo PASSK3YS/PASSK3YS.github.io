@@ -24,7 +24,7 @@ permalink: /docs/
             <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
                 An end-to-end encrypted note taking application.
             </p>
-            <span class="read-more">View Guides &rarr;</span>
+            <span class="read-more">View resources &rarr;</span>
         </div>
     </a>
 
@@ -34,7 +34,7 @@ permalink: /docs/
             <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
                 A privacy focused email service.
             </p>
-            <span class="read-more">View Guides &rarr;</span>
+            <span class="read-more">View resources &rarr;</span>
         </div>
     </a>
 
@@ -44,7 +44,7 @@ permalink: /docs/
             <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
                 A platform for chats and communities.
             </p>
-            <span class="read-more">View Guides &rarr;</span>
+            <span class="read-more">View resources &rarr;</span>
         </div>
     </a>
 
