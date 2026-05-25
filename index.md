@@ -74,7 +74,6 @@ title: About
         <h3 class="soft-header">>_ Guestbook</h3>
         <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
             <span class="guestbook-title" style="margin: 0;">Sign my guestbook &rarr;</span>
-            <span class="unified-meta">Leave a message</span>
         </div>
     </a>
 
