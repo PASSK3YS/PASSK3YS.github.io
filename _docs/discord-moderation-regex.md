@@ -4,6 +4,7 @@ title: Server moderation regex patterns
 description: A list of useful Discord regex patterns to fight against Discord scammers and spammers.
 category: Discord
 type: Resource
+image: https://kieran.colfer.net/assets/docs-thumbnail.png
 ---
 
 This document contains useful regex patterns you can use in your Discord servers to block and prevent scammers and spammers from targeting your server members.

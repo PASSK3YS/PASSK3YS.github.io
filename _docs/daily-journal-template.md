@@ -3,6 +3,7 @@ layout: doc
 title: Daily journal template
 description: A basic daily journal template you can use within Standard Notes.
 category: Standard Notes
+image: https://kieran.colfer.net/assets/docs-thumbnail.png
 ---
 
 ```markdown

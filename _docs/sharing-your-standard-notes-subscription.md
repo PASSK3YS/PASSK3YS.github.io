@@ -3,6 +3,7 @@ layout: doc
 title: Sharing Standard Notes Subscriptions
 description: How to share your subscription with family and friends.
 category: Standard Notes
+image: https://kieran.colfer.net/assets/docs-thumbnail.png
 ---
 
 The team at Standard Notes have added the ability for users to share their subscription with 5 other people. If you are subscribed to the Professional plan, you can share it with a significant other, family member or friends, and they get the same features like maximum note revisions, shared 100GB of encrypted storage and encrypted backups on their desktop computers.

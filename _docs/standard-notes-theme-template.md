@@ -3,6 +3,7 @@ layout: doc
 title: Basic Standard Notes theme template
 description: A Standard Notes theme CSS template you can use.
 category: Standard Notes
+image: https://kieran.colfer.net/assets/docs-thumbnail.png
 ---
 
 Feel free to copy and modify this CSS template for your own Standard Notes theme.
