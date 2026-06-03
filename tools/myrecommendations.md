@@ -58,6 +58,14 @@ permalink: /tools/recommendations/
       </div>
 
       <div class="grid-item">
+          <h3>📄 Documents & Spreadsheets</h3>
+          <ul>
+              <li><a href="https://proton.me/docs" target="_blank">Proton Docs</a></li>
+              <li><a href="https://proton.me/sheets" target="_blank">Proton Sheets</a></li>
+          </ul>
+      </div>
+
+      <div class="grid-item">
           <h3>📧 Email Aliasing</h3>
           <ul>
               <li><a href="https://simplelogin.io" target="_blank">SimpleLogin</a></li>
