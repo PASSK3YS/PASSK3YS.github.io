@@ -62,6 +62,7 @@ permalink: /tools/recommendations/
           <ul>
               <li><a href="https://proton.me/docs" target="_blank">Proton Docs</a></li>
               <li><a href="https://proton.me/sheets" target="_blank">Proton Sheets</a></li>
+              <li><a href="https://cryptpad.fr" target=_blank">CryptPad</a></li>
           </ul>
       </div>
 
