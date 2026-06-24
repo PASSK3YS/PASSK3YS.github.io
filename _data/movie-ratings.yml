@@ -1,272 +1,62 @@
-- title: "DC League of Super-Pets"
-  year: 2022
-  rating: "7/10"
-  notes: "Watched 02 Aug 2022"
-
-- title: "Nope"
-  year: 2022
-  rating: "6/10"
-  notes: "Watched 12 Aug 2022"
-
-- title: "Orphan: First Kill"
-  year: 2022
-  rating: "6/10"
-  notes: "Watched 19 Aug 2022"
-
-- title: "Bullet Train"
-  year: 2022
+- title: "Marty Supreme"
+  year: 2026
   rating: "8/10"
-  notes: "Watched 22 Aug 2022"
+  notes: "Watched 02 Jan 2026"
 
-- title: "The Invitation"
-  year: 2022
-  rating: "4/10"
-  notes: "Watched 25 Aug 2022"
+- title: "28 Years Later: The Bone Temple"
+  year: 2026
+  rating: "6/10"
+  notes: "Watched 31 Jan 2026"
 
-- title: "Fall"
-  year: 2022
+- title: "Scream 7"
+  year: 2026
+  rating: "6/10"
+  notes: "Watched 28 Feb 2026"
+
+- title: "EPIC: Elvis Presley In Concert"
+  year: 2026
+  rating: "9/10"
+  notes: "Watched 01 Mar 2026"
+
+- title: "Project Hail Mary"
+  year: 2026
+  rating: "9/10"
+  notes: "Watched 19 Mar 2026"
+
+- title: "Super Mario Galaxy Movie"
+  year: 2026
   rating: "5/10"
-  notes: "Watched 30 Aug 2022"
+  notes: "Watched 03 Apr 2026"
 
-- title: "Top Gun: Maverick"
-  year: 2022
+- title: "Lee Cronin's The Mummy"
+  year: 2026
+  rating: "8/10"
+  notes: "Watched 18 Apr 2026"
+
+- title: "Michael"
+  year: 2026
+  rating: "9/10"
+  notes: "Watched 25 Apr 2026"
+
+- title: "Star Wars: The Mandalorian and Grog"
+  year: 2026
+  rating: "5/10"
+  notes: "Watched 22 May 2026"
+
+- title: "Obsession"
+  year: 2026
   rating: "10/10"
-  notes: "Watched 03 Sep 2022"
+  notes: "Watched 03 Jun 2026"
 
-- title: "See How They Run"
-  year: 2022
-  rating: "6/10"
-  notes: "Watched 22 Sep 2022"
-
-- title: "Smile"
-  year: 2022
-  rating: "7/10"
-  notes: "Watched 26 Sep 2022"
-
-- title: "Halloween Ends"
-  year: 2022
-  rating: "6/10"
-  notes: "Watched 15 Oct 2022"
-
-- title: "Black Adam"
-  year: 2022
-  rating: "7/10"
-  notes: "Watched 23 Oct 2022"
-
-- title: "Pray For The Devil"
-  year: 2022
-  rating: "5/10"
-  notes: "Watched 28 Oct 2022"
-
-- title: "Avatar: The Way of Water"
-  year: 2022
-  rating: "10/10"
-  notes: "Watched 16 Dec 2022"
-
-- title: "The Polar Express"
-  year: 2022
-  rating: "8/10"
-  notes: "Watched 24 Dec 2022"
-
-- title: "Plane"
-  year: 2023
-  rating: "9/10"
-  notes: "Watched 02 Feb 2023"
-
-- title: "Knock at the Cabin"
-  year: 2023
-  rating: "6/10"
-  notes: "Watched 05 Feb 2023"
-
-- title: "Puss in Boots: The Last Wish"
-  year: 2023
-  rating: "8/10"
-  notes: "Watched 08 Feb 2023"
-
-- title: "Ant-Man and the Wasp: Quantumania"
-  year: 2023
-  rating: "6/10"
-  notes: "Watched 19 Feb 2023"
-
-- title: "Cocaine Bear"
-  year: 2023
-  rating: "5/10"
-  notes: "Watched 24 Feb 2023"
-
-- title: "Creed III"
-  year: 2023
-  rating: "8/10"
-  notes: "Watched 04 Mar 2023"
-
-- title: "65"
-  year: 2023
+- title: "Disclosure Day"
+  year: 2026
   rating: "4/10"
-  notes: "Watched 11 Mar 2023"
+  notes: "Watched 13 Jun 2026"
 
-- title: "Shazam! Fury of the Gods"
-  year: 2023
-  rating: "7/10"
-  notes: "Watched 17 Mar 2023"
-
-- title: "The Super Mario Bros. Movie"
-  year: 2023
-  rating: "5/10"
-  notes: "Watched 05 Apr 2023"
-
-- title: "Evil Dead Rise"
-  year: 2023
-  rating: "6/10"
-  notes: "Watched 21 Apr 2023"
-
-- title: "Missing"
-  year: 2023
-  rating: "7/10"
-  notes: "Watched 25 Apr 2023"
-
-- title: "Guardians Of The Galaxy Vol. 3"
-  year: 2023
+- title: "Toy Story 5"
+  year: 2026
   rating: "9/10"
-  notes: "Watched 03 May 2023"
-
-- title: "Fast X"
-  year: 2023
-  rating: "7/10"
-  notes: "Watched 19 May 2023"
-
-- title: "The Flash"
-  year: 2023
-  rating: "7/10"
-  notes: "Watched 17 Jun 2023"
-
-- title: "The Nun II"
-  year: 2023
-  rating: "4/10"
-  notes: "Watched 09 Sep 2023"
-
-- title: "The Marvels"
-  year: 2023
-  rating: "6/10"
-  notes: "Watched 13 Nov 2023"
-
-- title: "Wonka"
-  year: 2023
-  rating: "8/10"
-  notes: "Watched 09 Dec 2023"
-
-- title: "Santa Claus: The Movie 4K Restoration"
-  year: 2023
-  rating: "6/10"
-  notes: "Watched 19 Dec 2023"
-
-- title: "Ferrari"
-  year: 2023
-  rating: "7/10"
-  notes: "Watched 29 Dec 2023"
-
-- title: "The Iron Claw"
-  year: 2024
-  rating: "8/10"
-  notes: "Watched 09 Feb 2024"
-
-- title: "Bob Marley: One Love"
-  year: 2024
-  rating: "9/10"
-  notes: "Watched 17 Feb 2024"
-
-- title: "Ghostbusters: Frozen Empire"
-  year: 2024
-  rating: "7/10"
-  notes: "Watched 23 Mar 2024"
-
-- title: "Kungfu Panda 4"
-  year: 2024
-  rating: "7/10"
-  notes: "Watched 29 Mar 2024"
-
-- title: "Godzilla x Kong: The New Empire"
-  year: 2024
-  rating: "8/10"
-  notes: "Watched 02 Apr 2024"
-
-- title: "The First Omen"
-  year: 2024
-  rating: "6/10"
-  notes: "Watched 10 Apr 2024"
-
-- title: "Abigail"
-  year: 2024
-  rating: "6/10"
-  notes: "Watched 25 Apr 2024"
-
-- title: "Kingdom of the Planet of the Apes"
-  year: 2024
-  rating: "7/10"
-  notes: "Watched 12 May 2024"
-
-- title: "The Fall Guy"
-  year: 2024
-  rating: "9/10"
-  notes: "Watched 15 May 2024"
-
-- title: "Furiosa: A Mad Max Saga"
-  year: 2024
-  rating: "7/10"
-  notes: "Watched 30 May 2024"
-
-- title: "Bad Boys: Ride or Die"
-  year: 2024
-  rating: "8/10"
-  notes: "Watched 19 Jun 2024"
-
-- title: "Twisters"
-  year: 2024
-  rating: "8/10"
-  notes: "Watched 20 Jul 2024"
-
-- title: "Deadpool & Wolverine"
-  year: 2024
-  rating: "10/10"
-  notes: "Watched 25 Jul 2024"
-
-- title: "Trap"
-  year: 2024
-  rating: "6/10"
-  notes: "Watched 15 Aug 2024"
-
-- title: "Alien: Romulus"
-  year: 2024
-  rating: "8/10"
-  notes: "Watched 18 Aug 2024"
-
-- title: "Beetlejuice Beetlejuice"
-  year: 2024
-  rating: "6/10"
-  notes: "Watched 07 Sep 2024"
-
-- title: "Joker: Folie à Deux"
-  year: 2024
-  rating: "2/10"
-  notes: "Watched 05 Oct 2024"
-
-- title: "Transformers One"
-  year: 2024
-  rating: "9/10"
-  notes: "Watched 11 Oct 2024"
-
-- title: "Smile 2"
-  year: 2024
-  rating: "7/10"
-  notes: "Watched 18 Oct 2024"
-
-- title: "Red One"
-  year: 2024
-  rating: "5/10"
-  notes: "Watched 09 Nov 2024"
-
-- title: "Gladiator II"
-  year: 2024
-  rating: "7/10"
-  notes: "Watched 03 Dec 2024"
+  notes: "Watched 20 Jun 2026"
 
 - title: "Flight Risk"
   year: 2025
@@ -398,62 +188,272 @@
   rating: "10/10"
   notes: "Watched 19 Dec 2025"
 
-- title: "Marty Supreme"
-  year: 2026
+- title: "The Iron Claw"
+  year: 2024
   rating: "8/10"
-  notes: "Watched 02 Jan 2026"
+  notes: "Watched 09 Feb 2024"
 
-- title: "28 Years Later: The Bone Temple"
-  year: 2026
-  rating: "6/10"
-  notes: "Watched 31 Jan 2026"
-
-- title: "Scream 7"
-  year: 2026
-  rating: "6/10"
-  notes: "Watched 28 Feb 2026"
-
-- title: "EPIC: Elvis Presley In Concert"
-  year: 2026
+- title: "Bob Marley: One Love"
+  year: 2024
   rating: "9/10"
-  notes: "Watched 01 Mar 2026"
+  notes: "Watched 17 Feb 2024"
 
-- title: "Project Hail Mary"
-  year: 2026
-  rating: "9/10"
-  notes: "Watched 19 Mar 2026"
+- title: "Ghostbusters: Frozen Empire"
+  year: 2024
+  rating: "7/10"
+  notes: "Watched 23 Mar 2024"
 
-- title: "Super Mario Galaxy Movie"
-  year: 2026
-  rating: "5/10"
-  notes: "Watched 03 Apr 2026"
+- title: "Kungfu Panda 4"
+  year: 2024
+  rating: "7/10"
+  notes: "Watched 29 Mar 2024"
 
-- title: "Lee Cronin's The Mummy"
-  year: 2026
+- title: "Godzilla x Kong: The New Empire"
+  year: 2024
   rating: "8/10"
-  notes: "Watched 18 Apr 2026"
+  notes: "Watched 02 Apr 2024"
 
-- title: "Michael"
-  year: 2026
+- title: "The First Omen"
+  year: 2024
+  rating: "6/10"
+  notes: "Watched 10 Apr 2024"
+
+- title: "Abigail"
+  year: 2024
+  rating: "6/10"
+  notes: "Watched 25 Apr 2024"
+
+- title: "Kingdom of the Planet of the Apes"
+  year: 2024
+  rating: "7/10"
+  notes: "Watched 12 May 2024"
+
+- title: "The Fall Guy"
+  year: 2024
   rating: "9/10"
-  notes: "Watched 25 Apr 2026"
+  notes: "Watched 15 May 2024"
 
-- title: "Star Wars: The Mandalorian and Grog"
-  year: 2026
-  rating: "5/10"
-  notes: "Watched 22 May 2026"
+- title: "Furiosa: A Mad Max Saga"
+  year: 2024
+  rating: "7/10"
+  notes: "Watched 30 May 2024"
 
-- title: "Obsession"
-  year: 2026
+- title: "Bad Boys: Ride or Die"
+  year: 2024
+  rating: "8/10"
+  notes: "Watched 19 Jun 2024"
+
+- title: "Twisters"
+  year: 2024
+  rating: "8/10"
+  notes: "Watched 20 Jul 2024"
+
+- title: "Deadpool & Wolverine"
+  year: 2024
   rating: "10/10"
-  notes: "Watched 03 Jun 2026"
+  notes: "Watched 25 Jul 2024"
 
-- title: "Disclosure Day"
-  year: 2026
-  rating: "4/10"
-  notes: "Watched 13 Jun 2026"
+- title: "Trap"
+  year: 2024
+  rating: "6/10"
+  notes: "Watched 15 Aug 2024"
 
-- title: "Toy Story 5"
-  year: 2026
+- title: "Alien: Romulus"
+  year: 2024
+  rating: "8/10"
+  notes: "Watched 18 Aug 2024"
+
+- title: "Beetlejuice Beetlejuice"
+  year: 2024
+  rating: "6/10"
+  notes: "Watched 07 Sep 2024"
+
+- title: "Joker: Folie à Deux"
+  year: 2024
+  rating: "2/10"
+  notes: "Watched 05 Oct 2024"
+
+- title: "Transformers One"
+  year: 2024
   rating: "9/10"
-  notes: "Watched 20 Jun 2026"
+  notes: "Watched 11 Oct 2024"
+
+- title: "Smile 2"
+  year: 2024
+  rating: "7/10"
+  notes: "Watched 18 Oct 2024"
+
+- title: "Red One"
+  year: 2024
+  rating: "5/10"
+  notes: "Watched 09 Nov 2024"
+
+- title: "Gladiator II"
+  year: 2024
+  rating: "7/10"
+  notes: "Watched 03 Dec 2024"
+
+- title: "Plane"
+  year: 2023
+  rating: "9/10"
+  notes: "Watched 02 Feb 2023"
+
+- title: "Knock at the Cabin"
+  year: 2023
+  rating: "6/10"
+  notes: "Watched 05 Feb 2023"
+
+- title: "Puss in Boots: The Last Wish"
+  year: 2023
+  rating: "8/10"
+  notes: "Watched 08 Feb 2023"
+
+- title: "Ant-Man and the Wasp: Quantumania"
+  year: 2023
+  rating: "6/10"
+  notes: "Watched 19 Feb 2023"
+
+- title: "Cocaine Bear"
+  year: 2023
+  rating: "5/10"
+  notes: "Watched 24 Feb 2023"
+
+- title: "Creed III"
+  year: 2023
+  rating: "8/10"
+  notes: "Watched 04 Mar 2023"
+
+- title: "65"
+  year: 2023
+  rating: "4/10"
+  notes: "Watched 11 Mar 2023"
+
+- title: "Shazam! Fury of the Gods"
+  year: 2023
+  rating: "7/10"
+  notes: "Watched 17 Mar 2023"
+
+- title: "The Super Mario Bros. Movie"
+  year: 2023
+  rating: "5/10"
+  notes: "Watched 05 Apr 2023"
+
+- title: "Evil Dead Rise"
+  year: 2023
+  rating: "6/10"
+  notes: "Watched 21 Apr 2023"
+
+- title: "Missing"
+  year: 2023
+  rating: "7/10"
+  notes: "Watched 25 Apr 2023"
+
+- title: "Guardians Of The Galaxy Vol. 3"
+  year: 2023
+  rating: "9/10"
+  notes: "Watched 03 May 2023"
+
+- title: "Fast X"
+  year: 2023
+  rating: "7/10"
+  notes: "Watched 19 May 2023"
+
+- title: "The Flash"
+  year: 2023
+  rating: "7/10"
+  notes: "Watched 17 Jun 2023"
+
+- title: "The Nun II"
+  year: 2023
+  rating: "4/10"
+  notes: "Watched 09 Sep 2023"
+
+- title: "The Marvels"
+  year: 2023
+  rating: "6/10"
+  notes: "Watched 13 Nov 2023"
+
+- title: "Wonka"
+  year: 2023
+  rating: "8/10"
+  notes: "Watched 09 Dec 2023"
+
+- title: "Santa Claus: The Movie 4K Restoration"
+  year: 2023
+  rating: "6/10"
+  notes: "Watched 19 Dec 2023"
+
+- title: "Ferrari"
+  year: 2023
+  rating: "7/10"
+  notes: "Watched 29 Dec 2023"
+
+- title: "DC League of Super-Pets"
+  year: 2022
+  rating: "7/10"
+  notes: "Watched 02 Aug 2022"
+
+- title: "Nope"
+  year: 2022
+  rating: "6/10"
+  notes: "Watched 12 Aug 2022"
+
+- title: "Orphan: First Kill"
+  year: 2022
+  rating: "6/10"
+  notes: "Watched 19 Aug 2022"
+
+- title: "Bullet Train"
+  year: 2022
+  rating: "8/10"
+  notes: "Watched 22 Aug 2022"
+
+- title: "The Invitation"
+  year: 2022
+  rating: "4/10"
+  notes: "Watched 25 Aug 2022"
+
+- title: "Fall"
+  year: 2022
+  rating: "5/10"
+  notes: "Watched 30 Aug 2022"
+
+- title: "Top Gun: Maverick"
+  year: 2022
+  rating: "10/10"
+  notes: "Watched 03 Sep 2022"
+
+- title: "See How They Run"
+  year: 2022
+  rating: "6/10"
+  notes: "Watched 22 Sep 2022"
+
+- title: "Smile"
+  year: 2022
+  rating: "7/10"
+  notes: "Watched 26 Sep 2022"
+
+- title: "Halloween Ends"
+  year: 2022
+  rating: "6/10"
+  notes: "Watched 15 Oct 2022"
+
+- title: "Black Adam"
+  year: 2022
+  rating: "7/10"
+  notes: "Watched 23 Oct 2022"
+
+- title: "Pray For The Devil"
+  year: 2022
+  rating: "5/10"
+  notes: "Watched 28 Oct 2022"
+
+- title: "Avatar: The Way of Water"
+  year: 2022
+  rating: "10/10"
+  notes: "Watched 16 Dec 2022"
+
+- title: "The Polar Express"
+  year: 2022
+  rating: "8/10"
+  notes: "Watched 24 Dec 2022"
