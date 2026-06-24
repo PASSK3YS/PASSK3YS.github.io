@@ -97,9 +97,9 @@ permalink: /cinema-movie-ratings/
         <div class="year-filter-container">
             {% assign all_years = site.data["movie-ratings"] | map: "year" | uniq | sort | reverse %}
             <select id="year-filter" aria-label="Filter by Year">
-                <option value="all">TARGET: ALL YEARS</option>
+                <option value="all">DATE: ALL YEARS</option>
                 {% for year in all_years %}
-                    <option value="{{ year }}">TARGET: {{ year }}</option>
+                    <option value="{{ year }}">YEAR: {{ year }}</option>
                 {% endfor %}
             </select>
         </div>
