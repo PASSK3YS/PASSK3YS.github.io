@@ -14,19 +14,24 @@ permalink: /cinema-movie-ratings/
         gap: 15px;
     }
     
-    .year-filter-container select {
-        background: var(--nav-bg);
-        color: var(--accent);
-        border: 1px solid var(--border);
-        border-radius: 4px;
-        padding: 8px 15px;
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 700;
-        cursor: pointer;
-        outline: none;
-        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-        transition: all 0.1s ease;
-    }
+.year-filter-container select {
+    background: var(--nav-bg);
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+}
+
+.year-filter-container select option {
+    background-color: var(--nav-bg);
+    color: var(--accent);
+}
 
     [data-theme="dark"] .year-filter-container select {
         box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.1);
