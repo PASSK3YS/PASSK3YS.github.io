@@ -154,6 +154,7 @@ body, main, h1, h2, h3, p, a, span, li {
             <h3 class="soft-header">>_ Watching</h3>
             <ul class="hacker-list">
                 <li><strong>Game of Thrones</strong> on HBO Max</li>
+                <li><strong>FIFA World Cup 2026</strong></li>
             </ul>
         </div>
 
