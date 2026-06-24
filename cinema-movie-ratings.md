@@ -92,7 +92,7 @@ permalink: /cinema-movie-ratings/
 <div class="page-content">
     
     <div class="ratings-header">
-        <h1 style="margin: 0;">>_ TERMINAL: RATINGS LOG</h1>
+        <h1 style="margin: 0;">>_ CINEMA MOVIE RATINGS</h1>
         
         <div class="year-filter-container">
             {% assign all_years = site.data["movie-ratings"] | map: "year" | uniq | sort | reverse %}
