@@ -146,7 +146,7 @@ body, main, h1, h2, h3, p, a, span, li {
             <h3 class="soft-header">>_ Playing</h3>
             <ul class="hacker-list">
                 <li><strong>Forza Horizon 6</strong></li>
-                <li><strong>Battlefield 6</strong></li>
+                <li><strong>Dead By Daylight</strong></li>
             </ul>
         </div>
 
