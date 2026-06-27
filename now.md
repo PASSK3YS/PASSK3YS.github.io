@@ -2,6 +2,7 @@
 layout: default
 title: Now
 permalink: /now/
+last_updated: 2026-06-27
 ---
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
@@ -138,7 +139,6 @@ body, main, h1, h2, h3, p, a, span, li {
             <h3 class="soft-header">>_ Working on</h3>
             <ul class="hacker-list">
                 <li>My website</li>
-                <li>Creating new <strong>Standard Notes</strong> themes</li>
             </ul>
         </div>
 
@@ -168,6 +168,6 @@ body, main, h1, h2, h3, p, a, span, li {
     </div>
 
     <div style="text-align: right; margin-top: 10px;">
-        <p class="unified-meta" style="opacity: 0.6; display: inline-block;">Last updated: {{ site.time | date: "%d-%m-%Y" }}</p>
+        <p class="unified-meta" style="opacity: 0.6; display: inline-block;">Last updated: {{ page.last_updated | date: "%d %m %Y" }}</p>
     </div>
 </div>
