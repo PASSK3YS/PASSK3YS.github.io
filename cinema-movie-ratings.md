@@ -169,6 +169,7 @@ permalink: /cinema-movie-ratings/
         <img src="{{ latest_movie.poster }}" alt="{{ latest_movie.title }} Poster" class="featured-poster" onerror="this.style.display='none'">
         <div class="featured-details">
             <h2 style="margin: 0; color: var(--accent);">LATEST WATCH: {{ latest_movie.title }}</h2>
+            <div style="font-size: 1.1rem; font-weight: 800; color: var(--text);">{{ latest_movie.year }}</div>
             <p style="color: var(--text-muted); margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 700;">{{ latest_movie.notes }}</p>
             <div class="huge-rating">{{ latest_movie.rating }}</div>
         </div>
@@ -185,7 +186,7 @@ permalink: /cinema-movie-ratings/
                 </tr>
             </thead>
             <tbody id="movie-table-body">
-                {% for movie in site.data["movie-ratings"] %}
+                {% for movie in site.data["movie-ratings"] offset: 1 %}
                 <tr class="movie-row" data-year="{{ movie.year }}">
                     <td style="font-weight: 700; color: var(--text);">{{ movie.title }}</td>
                     <td style="color: var(--text-muted);">{{ movie.year }}</td>
