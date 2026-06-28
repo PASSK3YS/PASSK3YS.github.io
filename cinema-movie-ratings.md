@@ -14,24 +14,24 @@ permalink: /cinema-movie-ratings/
         gap: 15px;
     }
     
-.year-filter-container select {
-    background: var(--nav-bg);
-    color: var(--accent);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 8px 15px;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-    transition: all 0.1s ease;
-}
+    .year-filter-container select {
+        background: var(--nav-bg);
+        color: var(--accent);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 8px 15px;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        transition: all 0.1s ease;
+    }
 
-.year-filter-container select option {
-    background-color: var(--nav-bg);
-    color: var(--accent);
-}
+    .year-filter-container select option {
+        background-color: var(--nav-bg);
+        color: var(--accent);
+    }
 
     [data-theme="dark"] .year-filter-container select {
         box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.1);
@@ -40,6 +40,50 @@ permalink: /cinema-movie-ratings/
     .year-filter-container select:hover, .year-filter-container select:focus {
         border-color: var(--accent);
         background: var(--accent-glow);
+    }
+
+    .featured-movie {
+        display: flex;
+        gap: 25px;
+        background: var(--nav-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+        align-items: center;
+    }
+
+    [data-theme="dark"] .featured-movie {
+        box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1);
+    }
+
+    .featured-poster {
+        width: 140px;
+        height: auto;
+        border-radius: 4px;
+        border: 1px solid var(--border);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .featured-details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .huge-rating {
+        font-size: 2.2rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 800;
+        color: var(--text);
+        background: var(--bg);
+        border: 2px solid var(--accent);
+        padding: 8px 18px;
+        border-radius: 6px;
+        display: inline-block;
+        width: fit-content;
+        margin-top: 5px;
     }
 
     .hacker-table {
@@ -92,12 +136,22 @@ permalink: /cinema-movie-ratings/
         color: var(--text);
         font-weight: 700;
     }
+
+    @media (max-width: 600px) {
+        .featured-movie {
+            flex-direction: column;
+            text-align: center;
+        }
+        .huge-rating {
+            margin: 10px auto 0 auto;
+        }
+    }
 </style>
 
 <div class="page-content">
     
     <div class="ratings-header">
-        <h1 style="margin: 0;">CINEMA MOVIE RATINGS</h1>
+        <h1 style="margin: 0;">>_ CINEMA MOVIE RATINGS</h1>
         
         <div class="year-filter-container">
             {% assign all_years = site.data["movie-ratings"] | map: "year" | uniq | sort | reverse %}
@@ -107,6 +161,16 @@ permalink: /cinema-movie-ratings/
                     <option value="{{ year }}">YEAR: {{ year }}</option>
                 {% endfor %}
             </select>
+        </div>
+    </div>
+
+    {% assign latest_movie = site.data["movie-ratings"] | first %}
+    <div class="featured-movie">
+        <img src="{{ latest_movie.poster }}" alt="{{ latest_movie.title }} Poster" class="featured-poster" onerror="this.style.display='none'">
+        <div class="featured-details">
+            <h2 style="margin: 0; color: var(--accent);">LATEST WATCH: {{ latest_movie.title }}</h2>
+            <p style="color: var(--text-muted); margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 700;">{{ latest_movie.notes }}</p>
+            <div class="huge-rating">{{ latest_movie.rating }}</div>
         </div>
     </div>
 
