@@ -48,7 +48,7 @@ html, body {
     --nav-bg: rgba(255, 255, 255, 0.8);
     --accent-glow: rgba(79, 70, 229, 0.15);
     
-    /* Light syntax adjustments */
+
     --sh-comment: #94a3b8;
     --sh-keyword: #7c3aed;
     --sh-string: #16a34a;
