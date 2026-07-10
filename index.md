@@ -90,8 +90,11 @@ title: About
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
 <style>
-body, main, h1, h2, h3, p, a, span {
+body, main, p, a, span {
     font-family: 'SUSE', sans-serif !important;
+}
+h1, h2, h3 {
+    font-family: 'Staatliches', cursive !important;
 }
 
 .blinking-cursor {

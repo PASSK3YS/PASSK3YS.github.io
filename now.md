@@ -8,8 +8,11 @@ last_updated: 2026-06-27
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
 <style>
-body, main, h1, h2, h3, p, a, span, li {
+body, main, p, a, span, li {
     font-family: 'SUSE', sans-serif !important;
+}
+h1, h2, h3 {
+    font-family: 'Staatliches', cursive !important;
 }
 
 .blinking-cursor {
