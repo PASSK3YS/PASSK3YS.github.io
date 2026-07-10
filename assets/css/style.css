@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('/assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+}
+
 @view-transition { navigation: auto; }
 
 html, body { overflow-x: hidden; }
@@ -53,7 +61,7 @@ body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: 'JetBrains Mono', monospace; 
+    font-family: 'Manrope', sans-serif; 
     max-width: var(--width);
     margin: 0 auto;        
     padding: 2rem 1.5rem;
@@ -398,7 +406,7 @@ blockquote p {
     text-decoration: none !important;
     display: inline-flex;
     align-items: center;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Manrope', sans-serif;
     cursor: help;
 }
 
