@@ -53,16 +53,22 @@ permalink: /contact/
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
 <style>
-body, main, p, a, span, div {
-    font-family: 'SUSE', sans-serif !important;
+
+body, main, p, a, span, div, button {
+    font-family: 'SUSE', 'JetBrains Mono', system-ui, -apple-system, sans-serif !important;
 }
+
 h1, h2, h3 {
-    font-family: 'Staatliches', sans-serif !important;
+    font-family: 'Staatliches', 'SUSE', sans-serif !important;
+}
+
+pre, code {
+    font-family: 'JetBrains Mono', monospace !important;
 }
 
 .blinking-cursor {
     font-weight: 800;
-    color: var(--accent-cyan);
+    color: var(--accent);
     animation: blink 1s step-end infinite;
 }
 
@@ -84,27 +90,33 @@ h1, h2, h3 {
 
 .unified-card {
     background: var(--nav-bg);
-    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--border-color);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     overflow: hidden;
 }
 
 [data-theme="dark"] .unified-card {
-    border: 1px solid var(--border-color);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
 .unified-row {
     padding: 30px 34px;
-    border-bottom: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border);
     display: grid;
     grid-template-columns: 240px 1fr;
     align-items: center;
-    transition: background-color 0.1s ease, border-color 0.1s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     border-left: 6px solid transparent;
+}
+
+[data-theme="dark"] .unified-row {
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .unified-row:last-child {
@@ -116,17 +128,19 @@ h1, h2, h3 {
 }
 
 .unified-row.interactive-row:hover {
-    background-color: rgba(42, 161, 152, 0.05);
-    border-left-color: var(--accent-cyan);
+    background-color: rgba(99, 102, 241, 0.05);
+    border-left-color: var(--accent);
 }
 
 [data-theme="dark"] .unified-row.interactive-row:hover {
-    background-color: rgba(42, 161, 152, 0.1);
-    border-left-color: var(--accent-cyan);
+    background-color: rgba(99, 102, 241, 0.1);
+    border-left-color: var(--accent);
+    transform: translate(-2px, -2px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
 }
 
 .interactive-row:hover .directory-interactive-text {
-    color: var(--accent-cyan);
+    color: var(--accent);
 }
 
 .soft-header {
@@ -136,6 +150,7 @@ h1, h2, h3 {
     color: var(--text-muted);
     margin: 0;
     font-weight: 700;
+    font-family: 'Staatliches', 'SUSE', sans-serif !important;
 }
 
 .directory-interactive-text {
@@ -143,11 +158,11 @@ h1, h2, h3 {
     font-weight: 800;
     color: var(--text);
     text-decoration: none;
-    transition: color 0.1s ease;
+    transition: color 0.3s ease;
 }
 
 .directory-interactive-text:hover {
-    color: var(--accent-cyan);
+    color: var(--accent);
     text-decoration: underline;
 }
 
@@ -157,6 +172,18 @@ h1, h2, h3 {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.5px;
+}
+
+.gamertag-list a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 800;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.gamertag-list a:hover {
+    color: var(--accent);
 }
 
 @media (max-width: 850px) {
