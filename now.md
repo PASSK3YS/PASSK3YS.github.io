@@ -12,7 +12,7 @@ body, main, p, a, span, li {
     font-family: 'SUSE', sans-serif !important;
 }
 h1, h2, h3 {
-    font-family: 'Staatliches', cursive !important;
+    font-family: 'Staatliches', sans-serif !important;
 }
 
 .blinking-cursor {
