@@ -212,7 +212,7 @@ permalink: /cinema-movie-ratings/
                 <tr class="movie-row" data-year="{{ movie.year }}">
                     <td style="font-weight: 700; color: var(--text);">{{ movie.title }}</td>
                     <td style="color: var(--text-muted);">{{ movie.year }}</td>
-                    <td><span class="rating-badge">{{ movie.rating }}</span>
+                    <td><span class="rating-badge">{{ movie.rating }}</span></td>
                     <td style="color: var(--text-muted);">{{ movie.notes }}</td>
                 </tr>
                 {% endfor %}
