@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Manrope';
-    src: url('/assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+    font-family: 'SUSE';
+    src: url('/assets/fonts/SUSE-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 800;
     font-style: normal;
     font-display: swap;
@@ -61,7 +61,7 @@ body, .footer-card, .profile-img, pre, code, h1, h2, h3, a, blockquote {
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: 'Manrope', sans-serif; 
+    font-family: 'SUSE', sans-serif; 
     max-width: var(--width);
     margin: 0 auto;        
     padding: 2rem 1.5rem;
@@ -406,7 +406,7 @@ blockquote p {
     text-decoration: none !important;
     display: inline-flex;
     align-items: center;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'SUSE', sans-serif;
     cursor: help;
 }
 

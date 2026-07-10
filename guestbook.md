@@ -147,7 +147,7 @@ permalink: /guestbook/
 
 <style>
 body, main, h1, h2, h3, p, a, span, div, button {
-    font-family: 'JetBrains Mono', monospace !important;
+    font-family: 'SUSE', sans-serif !important;
 }
 
 .blinking-cursor {

@@ -91,7 +91,7 @@ title: About
 
 <style>
 body, main, h1, h2, h3, p, a, span {
-    font-family: 'JetBrains Mono', monospace !important;
+    font-family: 'SUSE', sans-serif !important;
 }
 
 .blinking-cursor {

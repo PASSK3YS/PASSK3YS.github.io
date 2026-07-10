@@ -9,7 +9,7 @@ last_updated: 2026-06-27
 
 <style>
 body, main, h1, h2, h3, p, a, span, li {
-    font-family: 'JetBrains Mono', monospace !important;
+    font-family: 'SUSE', sans-serif !important;
 }
 
 .blinking-cursor {
