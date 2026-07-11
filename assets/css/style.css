@@ -96,7 +96,7 @@ main {
 }
 
 h1, h2, h3 {
-    color: var(--text);
+    color: var(--accent);
     font-family: 'Staatliches', 'SUSE', sans-serif;
     text-shadow: 0 0 20px var(--accent-glow);
     letter-spacing: -0.02em;
