@@ -141,14 +141,14 @@ h1, h2, h3 {
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Working on</h3>
             <ul class="hacker-list">
-                <li>My website</li>
+                <li><strong>My website</strong></li>
             </ul>
         </div>
 
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Playing</h3>
             <ul class="hacker-list">
-                <li><strong>Forza Horizon 6</strong></li>
+                <li><strong>Assassin's Creed Black Flag Resynced</strong></li>
                 <li><strong>Dead By Daylight</strong></li>
             </ul>
         </div>
