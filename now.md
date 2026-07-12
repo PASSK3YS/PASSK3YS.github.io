@@ -2,7 +2,7 @@
 layout: default
 title: Now
 permalink: /now/
-last_updated: 2026-06-27
+last_updated: 2026-07-12
 ---
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
