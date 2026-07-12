@@ -5,9 +5,17 @@ layout: default
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
 <style>
-.doc-page-wrapper {
+
+.doc-page-wrapper, .doc-page-wrapper p, .doc-page-wrapper a, .doc-page-wrapper span, .doc-page-wrapper div {
+    font-family: 'SUSE', sans-serif !important;
+}
+.doc-page-wrapper h1, .doc-page-wrapper h2, .doc-page-wrapper h3 {
+    font-family: 'Staatliches', sans-serif !important;
+}
+.doc-page-wrapper pre, .doc-page-wrapper code {
     font-family: 'JetBrains Mono', monospace !important;
 }
+
 .back-link-hacker {
     color: var(--text-muted);
     text-decoration: none;
@@ -15,44 +23,47 @@ layout: default
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
-    transition: color 0.1s ease;
+    transition: color 0.3s ease;
 }
 .back-link-hacker:hover {
-    color: var(--accent-cyan);
+    color: var(--accent);
 }
 .doc-h1 {
     font-weight: 800;
     letter-spacing: -1px;
     margin-top: 0;
     font-size: 2.2rem;
+    color: var(--accent);
 }
 
 .unified-card {
     background: var(--nav-bg);
-    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--border-color, var(--border));
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     overflow: hidden;
 }
 [data-theme="dark"] .unified-card {
-    border: 1px solid var(--border-color, var(--border));
-    box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 .unified-row {
     padding: 20px 24px;
     align-items: center;
-    transition: background-color 0.1s ease, border-color 0.1s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     border-left: 6px solid transparent;
 }
 .unified-row.interactive-row:hover {
-    background-color: rgba(42, 161, 152, 0.05);
-    border-left-color: var(--accent-cyan);
+    background-color: rgba(99, 102, 241, 0.05);
+    border-left-color: var(--accent);
 }
 [data-theme="dark"] .unified-row.interactive-row:hover {
-    background-color: rgba(42, 161, 152, 0.1);
-    border-left-color: var(--accent-cyan);
+    background-color: rgba(99, 102, 241, 0.1);
+    border-left-color: var(--accent);
 }
 .soft-header {
     font-size: 0.85rem;
@@ -61,19 +72,21 @@ layout: default
     color: var(--text-muted);
     margin: 0;
     font-weight: 700;
+    font-family: 'Staatliches', sans-serif !important;
 }
 .unified-meta {
     font-size: 0.85rem;
-    color: var(--accent-cyan);
+    color: var(--accent);
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-decoration: none;
-    transition: transform 0.1s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 .unified-meta:hover {
     transform: translateX(4px);
+    color: var(--accent-hover);
 }
 .avatar-stack {
     display: flex;
@@ -85,8 +98,8 @@ layout: default
     border-radius: 50%;
     border: 2px solid var(--nav-bg);
     margin-left: -10px;
-    transition: transform 0.1s ease;
-    background: var(--bg);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    background: var(--bg-solid);
 }
 .avatar-stack a:first-child img {
     margin-left: 0;
@@ -95,7 +108,7 @@ layout: default
     transform: translateY(-4px);
     z-index: 10;
     position: relative;
-    border-color: var(--accent-cyan);
+    border-color: var(--accent);
 }
 .footer-flex {
     display: flex;
@@ -120,7 +133,7 @@ layout: default
     </p>
 
     <header class="post-header">
-      <h1 class="post-title doc-h1">{{ page.title }}<span style="color: var(--accent-cyan); animation: blink-cursor 1s step-end infinite;">_</span></h1>
+      <h1 class="post-title doc-h1">{{ page.title }}<span style="color: var(--accent); animation: blink-cursor 1s step-end infinite;">_</span></h1>
     </header>
 
     <div class="post-content" style="margin-top: 30px;">
@@ -136,7 +149,7 @@ layout: default
             <span id="last-edited-time" class="soft-header">Loading history...</span>
         </a>
         
-        <div id="contributors-row" class="unified-row" style="border-top: 1px dashed var(--border-color, var(--border)); display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+        <div id="contributors-row" class="unified-row" style="border-top: 1px dashed var(--border); display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
             <h3 class="soft-header" style="margin: 0;">>_ Contributors</h3>
             <div id="contributors-avatars" class="avatar-stack"></div>
         </div>
