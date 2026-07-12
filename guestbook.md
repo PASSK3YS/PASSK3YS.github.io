@@ -4,9 +4,242 @@ title: Guestbook
 permalink: /guestbook/
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+body, main, h1, h2, h3, p, a, span, div, button {
+    font-family: 'SUSE', sans-serif !important;
+}
+
+h1, h2, h3 {
+    font-family: 'Staatliches', sans-serif !important;
+}
+
+pre, code {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.blinking-cursor {
+    font-weight: 800;
+    color: var(--accent);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.hacker-btn {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 14px 28px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 12px;
+    display: inline-block;
+    text-decoration: none;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+[data-theme="dark"] .hacker-btn {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.hacker-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 10px 0 20px 0;
+    scrollbar-width: none; 
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.carousel-item {
+    flex: 0 0 100%; 
+    scroll-snap-align: center;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .carousel-item {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 45px;
+    height: 45px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .nav-btn {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+    background: rgba(99, 102, 241, 0.05);
+    color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
+    transform: translateY(-50%) translate(-2px, -2px);
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+.progress-wrapper {
+    position: relative;
+    height: 20px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.progress-track {
+    width: 100%;
+    height: 6px;
+    background: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    transform-origin: left;
+}
+
+.progress-fill.animate {
+    animation: fillProgress 10s linear forwards;
+}
+
+.progress-fill.paused {
+    animation-play-state: paused;
+}
+
+@keyframes fillProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.paused-indicator {
+    position: absolute;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    background: var(--bg-solid);
+    padding: 0 10px;
+}
+
+.carousel-wrapper.is-paused .progress-track {
+    opacity: 0.15;
+}
+
+.carousel-wrapper.is-paused .paused-indicator {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        padding: 0;
+    }
+    #prevBtn, #nextBtn {
+        display: none; 
+    }
+    .carousel-item {
+        flex: 0 0 90%; 
+        scroll-snap-align: center;
+    }
+    .carousel-container {
+        padding: 10px 5% 20px 5%; 
+    }
+    .progress-wrapper {
+        padding: 0 5%;
+    }
+}
+</style>
+
 <div class="page-content" style="max-width: 800px; margin: 0 auto; padding-top: 20px;">
   
-    <h1 style="color: var(--text); text-align: center; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px;">
+    <h1 style="color: var(--accent); text-align: center; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px;">
         >_ Guestbook<span class="blinking-cursor">_</span>
     </h1>
   
@@ -142,225 +375,6 @@ permalink: /guestbook/
     </div>
 
 </div>
-
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-
-<style>
-body, main, p, a, span, div {
-    font-family: 'SUSE', sans-serif !important;
-}
-h1, h2, h3 {
-    font-family: 'Staatliches', sans-serif !important;
-}
-
-.blinking-cursor {
-    font-weight: 800;
-    color: var(--accent);
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
-.hacker-btn {
-    font-size: 1.1rem;
-    font-weight: 800;
-    padding: 14px 28px;
-    border: 1px solid var(--border);
-    color: var(--text);
-    border-radius: 4px;
-    display: inline-block;
-    text-decoration: none;
-    background: var(--nav-bg);
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-    transition: all 0.1s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-[data-theme="dark"] .hacker-btn {
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
-}
-
-.hacker-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    box-shadow: 6px 6px 0px rgba(12, 230, 242, 0.2);
-    transform: translate(-2px, -2px);
-    background: rgba(12, 230, 242, 0.05);
-}
-
-.carousel-wrapper {
-    position: relative;
-    width: 100%;
-    padding: 0 50px;
-    box-sizing: border-box;
-    user-select: none;
-}
-
-.carousel-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    gap: 20px;
-    padding: 10px 0 20px 0;
-    scrollbar-width: none; 
-}
-
-.carousel-container::-webkit-scrollbar {
-    display: none; 
-}
-
-.carousel-item {
-    flex: 0 0 100%; 
-    scroll-snap-align: center;
-    background: var(--nav-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 40px 40px;
-    box-sizing: border-box;
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 250px;
-    transition: border-color 0.2s ease;
-}
-
-[data-theme="dark"] .carousel-item {
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
-}
-
-.carousel-item:hover {
-    border-color: var(--accent);
-}
-
-.nav-btn {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    background: var(--nav-bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 45px;
-    height: 45px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.1s ease;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="dark"] .nav-btn {
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
-}
-
-.nav-btn:hover {
-    background: rgba(12, 230, 242, 0.05);
-    color: var(--accent);
-    border-color: var(--accent);
-    box-shadow: 4px 4px 0px rgba(12, 230, 242, 0.2);
-    transform: translateY(-50%) translate(-2px, -2px);
-}
-
-#prevBtn {
-    left: 0;
-}
-
-#nextBtn {
-    right: 0;
-}
-
-.progress-wrapper {
-    position: relative;
-    height: 20px;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.progress-track {
-    width: 100%;
-    height: 6px;
-    background: var(--nav-bg);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 0%;
-    background: var(--accent);
-    transform-origin: left;
-}
-
-.progress-fill.animate {
-    animation: fillProgress 10s linear forwards;
-}
-
-.progress-fill.paused {
-    animation-play-state: paused;
-}
-
-@keyframes fillProgress {
-    0% { width: 0%; }
-    100% { width: 100%; }
-}
-
-.paused-indicator {
-    position: absolute;
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    align-items: center;
-    pointer-events: none;
-    background: var(--bg);
-    padding: 0 10px;
-}
-
-.carousel-wrapper.is-paused .progress-track {
-    opacity: 0.15;
-}
-
-.carousel-wrapper.is-paused .paused-indicator {
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .carousel-wrapper {
-        padding: 0;
-    }
-    #prevBtn, #nextBtn {
-        display: none; 
-    }
-    .carousel-item {
-        flex: 0 0 90%; 
-        scroll-snap-align: center;
-    }
-    .carousel-container {
-        padding: 10px 5% 20px 5%; 
-    }
-    .progress-wrapper {
-        padding: 0 5%;
-    }
-}
-</style>
 
 <script>
 const container = document.getElementById('guestbook-carousel');
