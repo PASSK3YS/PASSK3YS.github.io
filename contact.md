@@ -30,7 +30,10 @@ permalink: /contact/
     <div class="unified-row interactive-row">
         <h3 class="soft-header">>_ Secure Chat</h3>
         <div style="display: flex; flex-direction: column; justify-content: center;">
-            <a href="https://smp11.simplex.im/a#TyDMLK6GvVA62_9o1S4lvOVG-cBoBMyIUDxvHHpg5jA" target="_blank" class="directory-interactive-text">SimpleX Chat &rarr;</a>
+            <a href="https://signal.org" target="_blank" class="directory-interactive-text">Signal</a>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; margin-bottom: 0; line-height: 1.4;">
+                Trusted contacts only.
+            </p>
         </div>
     </div>
 
