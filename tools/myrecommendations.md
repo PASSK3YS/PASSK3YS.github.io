@@ -4,6 +4,8 @@ title: Recommendations
 permalink: /tools/recommendations/
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+
 <div class="page-content">
 <a href="/tools/" class="back-link">&larr; Back to Tools</a>
 
@@ -141,6 +143,19 @@ permalink: /tools/recommendations/
 </div>
 
 <style>
+
+body, main, p, a, span, div, button, li {
+    font-family: 'SUSE', sans-serif !important;
+}
+
+h1, h2, h3 {
+    font-family: 'Staatliches', sans-serif !important;
+}
+
+pre, code {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -150,22 +165,31 @@ permalink: /tools/recommendations/
 
 .grid-item {
     background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .grid-item {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
 .grid-item:hover {
     border-color: var(--accent);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
 }
 
 .grid-item h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 1.1rem;
-    border-bottom: 1px solid var(--border);
+    font-size: 1.2rem;
+    color: var(--accent);
+    border-bottom: 1px dashed var(--border);
     padding-bottom: 10px;
 }
 
@@ -182,7 +206,7 @@ permalink: /tools/recommendations/
 .grid-item a {
     text-decoration: none;
     opacity: 0.8;
-    transition: opacity 0.2s;
+    transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .grid-item a:hover {
