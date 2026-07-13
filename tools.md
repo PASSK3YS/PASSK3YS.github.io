@@ -62,16 +62,22 @@ permalink: /tools/
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
 <style>
-body, main, p, a, span, div {
+
+body, main, h1, h2, h3, p, a, span, div, button {
     font-family: 'SUSE', sans-serif !important;
 }
+
 h1, h2, h3 {
     font-family: 'Staatliches', sans-serif !important;
 }
 
+pre, code {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
 .blinking-cursor {
     font-weight: 800;
-    color: var(--accent-cyan);
+    color: var(--accent);
     animation: blink 1s step-end infinite;
 }
 
@@ -93,27 +99,33 @@ h1, h2, h3 {
 
 .unified-card {
     background: var(--nav-bg);
-    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--border-color);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     overflow: hidden;
 }
 
 [data-theme="dark"] .unified-card {
-    border: 1px solid var(--border-color);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
 .unified-row {
     padding: 30px 34px;
-    border-bottom: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border);
     display: block;
-    transition: background-color 0.1s ease, border-color 0.1s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     border-left: 6px solid transparent;
     text-decoration: none;
     color: inherit;
+}
+
+[data-theme="dark"] .unified-row {
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .unified-row:last-child {
@@ -125,21 +137,21 @@ h1, h2, h3 {
 }
 
 .unified-row.interactive-row:hover {
-    background-color: rgba(42, 161, 152, 0.05);
-    border-left-color: var(--accent-cyan);
+    background-color: rgba(99, 102, 241, 0.05);
+    border-left-color: var(--accent);
 }
 
 [data-theme="dark"] .unified-row.interactive-row:hover {
-    background-color: rgba(42, 161, 152, 0.1);
-    border-left-color: var(--accent-cyan);
+    background-color: rgba(99, 102, 241, 0.1);
+    border-left-color: var(--accent);
 }
 
 .interactive-row:hover .directory-interactive-text {
-    color: var(--accent-cyan);
+    color: var(--accent);
 }
 
 .interactive-row:hover .read-more {
-    color: var(--accent-cyan);
+    color: var(--accent);
     transform: translateX(5px);
 }
 
@@ -148,7 +160,7 @@ h1, h2, h3 {
     font-weight: 800;
     color: var(--text);
     text-decoration: none;
-    transition: color 0.1s ease;
+    transition: color 0.3s ease;
     line-height: 1.3;
 }
 
@@ -156,11 +168,11 @@ h1, h2, h3 {
     display: inline-block;
     margin-top: 15px;
     font-size: 0.85rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: color 0.1s ease, transform 0.1s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 @media (max-width: 850px) {
