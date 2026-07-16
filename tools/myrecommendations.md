@@ -97,7 +97,7 @@ permalink: /tools/recommendations/
       <div class="grid-item">
           <h3>📷 Photo Management</h3>
           <ul>
-              <li><a href="https://ente.io" target="_blank">Ente</a></li>
+              <li><a href="https://ente.com" target="_blank">Ente</a></li>
               <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
               <li><a href="https://immich.app" target="_blank">Immich</a></li>
           </ul>
