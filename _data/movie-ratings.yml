@@ -1,8 +1,13 @@
+- title: "The Odyssey"
+  year: 2026
+  rating: "7/10"
+  notes: "Watched 17 Jul 2026"
+  poster: "https://media.trakt.tv/images/movies/001/117/351/posters/thumb/0431972894.jpg.webp"
+
 - title: "Evil Dead Burn"
   year: 2026
   rating: "5/10"
   notes: "Watched 11 Jul 2026"
-  poster: "https://walter-r2.trakt.tv/images/movies/000/977/901/posters/thumb/c678302530.jpg.webp"
 
 - title: "Supergirl"
   year: 2026
@@ -328,6 +333,11 @@
   year: 2023
   rating: "4/10"
   notes: "Watched 09 Sep 2023"
+
+- title: "Oppenheimer"
+  year: 2023
+  rating: "8/10"
+  notes: "Watched 21 Jul 2023"
 
 - title: "The Flash"
   year: 2023
