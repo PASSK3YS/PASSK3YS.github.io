@@ -2,7 +2,7 @@
 layout: default
 title: Now
 permalink: /now/
-last_updated: 2026-07-12
+last_updated: 2026-07-22
 ---
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
@@ -156,8 +156,7 @@ h1, h2, h3 {
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Watching</h3>
             <ul class="hacker-list">
-                <li><strong>Game of Thrones</strong> on HBO Max</li>
-                <li><strong>FIFA World Cup 2026</strong></li>
+                <li><strong>House of the Dragon</strong> on HBO Max</li>
             </ul>
         </div>
 
