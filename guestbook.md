@@ -56,21 +56,54 @@ pre, code {
     </p>
 
     <div class="giscus-wrapper">
-        <script src="https://giscus.app/client.js"
-                data-repo="PASSK3YS/PASSK3YS.GITHUB.IO"
-                data-repo-id="R_kgDORKZKwQ"
-                data-category="General"
-                data-category-id="DIC_kwDORKZKwc4DCdwh"
-                data-mapping="pathname"
-                data-strict="0"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="top"
-                data-theme="preferred_color_scheme"
-                data-lang="en"
-                crossorigin="anonymous"
-                async>
-        </script>
-    </div>
+    <script src="https://giscus.app/client.js"
+            data-repo="PASSK3YS/PASSK3YS.GITHUB.IO"
+            data-repo-id="R_kgDORKZKwQ"
+            data-category="General"
+            data-category-id="DIC_kwDORKZKwc4DCdwh"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="transparent_dark"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+<script>
+function updateGiscusTheme() {
+    const targetElement = document.documentElement.hasAttribute('data-theme') ? document.documentElement : document.body;
+    const currentTheme = targetElement.getAttribute('data-theme');
+    const giscusTheme = currentTheme === 'light' ? 'light' : 'dark';
+    const iframe = document.querySelector('iframe.giscus-frame');
+    
+    if (iframe) {
+        iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: giscusTheme } } },
+            'https://giscus.app'
+        );
+    }
+}
+
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'data-theme') {
+            updateGiscusTheme();
+        }
+    });
+});
+
+observer.observe(document.documentElement, { attributes: true });
+observer.observe(document.body, { attributes: true });
+
+window.addEventListener('message', (event) => {
+    if (event.origin === 'https://giscus.app' && event.data && event.data.giscus) {
+        updateGiscusTheme();
+    }
+});
+</script>
 
 </div>
