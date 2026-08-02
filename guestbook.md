@@ -283,100 +283,58 @@ pre, code {
         Messages and greetings from visitors.
     </p>
 
-    <form id="guestbook-form">
-  <input type="text" id="name" placeholder="Name" required>
-  <textarea id="message" placeholder="Message" required></textarea>
-  
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAAEEfCSzxCVuLiXl0" data-theme="auto" data-callback="unlockForm"></div>
-  
-  <button type="submit" id="submitBtn" disabled>Sign Guestbook</button>
-  <div id="formStatus"></div>
-</form>
+    <form id="guestbook-form" class="sign-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <textarea id="message" placeholder="Message" required></textarea>
+        
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAEEfCSzxCVuLiXl0" data-theme="auto" data-callback="unlockForm"></div>
+        
+        <button type="submit" id="submitBtn" class="hacker-btn" disabled>Sign Guestbook</button>
+        <div id="formStatus" style="display: none; text-align: center; font-weight: 700;"></div>
+    </form>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
-<script>
-let turnstileToken = "";
-
-window.unlockForm = function(token) {
-    turnstileToken = token;
-    document.getElementById('submitBtn').disabled = false;
-};
-
-const form = document.getElementById('guestbook-form');
-
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    if (!turnstileToken) {
-        return;
-    }
-
-    const name = document.getElementById('name').value;
-    const message = document.getElementById('message').value;
-
-    submitBtn.disabled = true;
-    formStatus.textContent = 'Transmitting...';
-    formStatus.style.display = 'block';
-
-    const { error } = await supabaseClient
-        .from('guestbook')
-        .insert([{ name, message }]);
-
-    if (error) {
-        formStatus.textContent = 'Transmission failed. Try again.';
-        formStatus.style.color = 'red';
-        submitBtn.disabled = false;
-    } else {
-        formStatus.textContent = 'Record appended successfully.';
-        formStatus.style.color = 'var(--accent)';
-        form.reset();
-        turnstileToken = "";
-        window.turnstile.reset();
-        await loadGuestbook();
-
-        setTimeout(() => {
-            formStatus.style.display = 'none';
-        }, 3000);
-    }
-});
-
-loadGuestbook();
-</script>
-
-<div class="carousel-wrapper">
-    <button id="prevBtn" class="nav-btn">&#10094;</button>
-    
-    <div class="carousel-container" id="guestbook-carousel">
-        <div class="carousel-item" style="justify-content: center; align-items: center;">
-            <p style="color: var(--text); font-size: 1.1rem;">Initializing connection...</p>
+    <div class="carousel-wrapper">
+        <button id="prevBtn" class="nav-btn">&#10094;</button>
+        
+        <div class="carousel-container" id="guestbook-carousel">
+            <div class="carousel-item" style="justify-content: center; align-items: center;">
+                <p style="color: var(--text); font-size: 1.1rem;">Initializing connection...</p>
+            </div>
         </div>
-    </div>
 
-    <button id="nextBtn" class="nav-btn">&#10095;</button>
+        <button id="nextBtn" class="nav-btn">&#10095;</button>
 
-    <div class="progress-wrapper">
-        <div class="progress-track">
-            <div class="progress-fill animate" id="progressBarFill"></div>
-        </div>
-        <div class="paused-indicator">
-            [ PAUSED ]
+        <div class="progress-wrapper">
+            <div class="progress-track">
+                <div class="progress-fill animate" id="progressBarFill"></div>
+            </div>
+            <div class="paused-indicator">
+                [ PAUSED ]
+            </div>
         </div>
     </div>
 </div>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 const supabaseUrl = 'https://hnyokpvurntvxvhdvwii.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhueW9rcHZ1cm50dnh2aGR2d2lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU2NzQ0MzEsImV4cCI6MjEwMTI1MDQzMX0.NZLDRNPtWYH-_cvDovXkwyrR-SiT9HqvYnlfT2VpEyo';
 const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+let turnstileToken = "";
+window.unlockForm = function(token) {
+    turnstileToken = token;
+    document.getElementById('submitBtn').disabled = false;
+};
 
 const container = document.getElementById('guestbook-carousel');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const wrapper = document.querySelector('.carousel-wrapper');
 const fill = document.getElementById('progressBarFill');
-const form = document.getElementById('sign-guestbook-form');
-const formStatus = document.getElementById('form-status');
+const form = document.getElementById('guestbook-form');
+const submitBtn = document.getElementById('submitBtn');
+const formStatus = document.getElementById('formStatus');
 
 let isLockedPause = false;
 let isScrolling;
@@ -411,7 +369,6 @@ async function loadGuestbook() {
         
         const messageP = document.createElement('p');
         messageP.style.cssText = 'color: var(--text); font-size: 1.1rem; margin-top: 0; line-height: 1.6; word-break: break-word;';
-        
         messageP.textContent = `"${entry.message}"`;
 
         const metaDiv = document.createElement('div');
@@ -419,7 +376,6 @@ async function loadGuestbook() {
 
         const nameP = document.createElement('p');
         nameP.style.cssText = 'color: var(--accent); margin-bottom: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;';
-        
         nameP.textContent = `> ${entry.name}`;
 
         const dateSpan = document.createElement('span');
@@ -438,17 +394,20 @@ async function loadGuestbook() {
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = document.getElementById('gb-name').value.trim();
-    const message = document.getElementById('gb-message').value.trim();
+    
+    if (!turnstileToken) {
+        return;
+    }
+
+    const name = document.getElementById('name').value.trim();
+    const message = document.getElementById('message').value.trim();
 
     if (!name || !message) return;
 
+    submitBtn.disabled = true;
     formStatus.style.display = 'block';
     formStatus.style.color = 'var(--text)';
     formStatus.textContent = 'Transmitting...';
-    
-    const submitBtn = form.querySelector('button');
-    submitBtn.disabled = true;
 
     const { error } = await supabaseClient
         .from('guestbook')
@@ -462,11 +421,12 @@ form.addEventListener('submit', async (e) => {
         formStatus.textContent = 'Record appended successfully.';
         formStatus.style.color = 'var(--accent)';
         form.reset();
+        turnstileToken = "";
+        window.turnstile.reset();
         await loadGuestbook();
         
         setTimeout(() => {
             formStatus.style.display = 'none';
-            submitBtn.disabled = false;
         }, 3000);
     }
 });
