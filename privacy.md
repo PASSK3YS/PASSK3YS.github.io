@@ -21,7 +21,7 @@ permalink: /privacy/
     <p>Because this is a static website, the personal information I collect is what you voluntarily choose to share with me:</p>
     <ul>
       <li><strong>Email Communications:</strong> If you email me via my contact page, I will receive your email address and any information you include in your message.</li>
-      <li><strong>Guestbook (Supabase):</strong> Our guestbook is powered by a Supabase backend. When you submit a message, we collect and store the name or alias you provide, the content of your message, and the exact timestamp of your submission. Supabase may temporarily process standard connection data, such as your IP address and browser user agent, for the purposes of security and spam prevention.</li>
+      <li><strong>Guestbook (Supabase):</strong> My guestbook is powered by a Supabase backend. When you submit a message, I collect and store the name or alias you provide, the content of your message, and the exact timestamp of your submission. Supabase may temporarily process standard connection data, such as your IP address and browser user agent, for the purposes of security and spam prevention.</li>
       <li><strong>GitHub Contributions:</strong> If you submit an edit or contribute to a document on this website via GitHub, your public GitHub profile (including your username and avatar) will be automatically fetched and displayed on the relevant page as a contributor.</li>
       <li><strong>Server Logs:</strong> This website is hosted on GitHub Pages. Like all web hosts, GitHub automatically collects standard server logs, which may include your IP address, browser type, and the pages you visit. This is required for security and to serve the website to you.</li>
     </ul>
