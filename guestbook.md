@@ -294,6 +294,8 @@ pre, code {
 </form>
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
 let turnstileToken = "";
 
 window.unlockForm = function(token) {
