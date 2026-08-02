@@ -315,7 +315,7 @@ pre, code {
 <script>
 const supabaseUrl = 'https://hnyokpvurntvxvhdvwii.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhueW9rcHZ1cm50dnh2aGR2d2lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU2NzQ0MzEsImV4cCI6MjEwMTI1MDQzMX0.NZLDRNPtWYH-_cvDovXkwyrR-SiT9HqvYnlfT2VpEyo';
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 const container = document.getElementById('guestbook-carousel');
 const prevBtn = document.getElementById('prevBtn');
@@ -329,7 +329,7 @@ let isLockedPause = false;
 let isScrolling;
 
 async function loadGuestbook() {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
         .from('guestbook')
         .select('name, message, created_at')
         .order('created_at', { ascending: false });
@@ -397,7 +397,7 @@ form.addEventListener('submit', async (e) => {
     const submitBtn = form.querySelector('button');
     submitBtn.disabled = true;
 
-    const { error } = await supabase
+    const { error } = await supabaseClient
         .from('guestbook')
         .insert([{ name, message }]);
 
