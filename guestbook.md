@@ -283,12 +283,59 @@ pre, code {
         Messages and greetings from visitors.
     </p>
 
-    <form id="sign-guestbook-form" class="sign-form">
-        <input type="text" id="gb-name" placeholder="Name or Alias" required maxlength="50">
-        <textarea id="gb-message" placeholder="Leave a message..." rows="3" required maxlength="300"></textarea>
-        <button type="submit" class="hacker-btn">> Sign Guestbook</button>
-        <div id="form-status" style="text-align: center; font-weight: bold; display: none; margin-top: 10px;"></div>
-    </form>
+    <form id="guestbook-form">
+  <input type="text" id="name" placeholder="Name" required>
+  <textarea id="message" placeholder="Message" required></textarea>
+  
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAEEfCSzxCVuLiXl0" data-theme="auto" data-callback="unlockForm"></div>
+  
+  <button type="submit" id="submitBtn" disabled>Sign Guestbook</button>
+  <div id="formStatus"></div>
+</form>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+let turnstileToken = "";
+
+window.unlockForm = function(token) {
+    turnstileToken = token;
+    document.getElementById('submitBtn').disabled = false;
+};
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    if (!turnstileToken) {
+        return;
+    }
+
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+
+    submitBtn.disabled = true;
+    formStatus.textContent = 'Transmitting...';
+    formStatus.style.display = 'block';
+
+    const { error } = await supabaseClient
+        .from('guestbook')
+        .insert([{ name, message }]);
+
+    if (error) {
+        formStatus.textContent = 'Transmission failed. Try again.';
+        formStatus.style.color = 'red';
+        submitBtn.disabled = false;
+    } else {
+        formStatus.textContent = 'Record appended successfully.';
+        formStatus.style.color = 'var(--accent)';
+        form.reset();
+        turnstileToken = "";
+        window.turnstile.reset();
+        await loadGuestbook();
+
+        setTimeout(() => {
+            formStatus.style.display = 'none';
+        }, 3000);
+    }
+});
 
     <div class="carousel-wrapper">
         <button id="prevBtn" class="nav-btn">&#10094;</button>
