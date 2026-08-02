@@ -303,6 +303,8 @@ window.unlockForm = function(token) {
     document.getElementById('submitBtn').disabled = false;
 };
 
+const form = document.getElementById('guestbook-form');
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -339,24 +341,26 @@ form.addEventListener('submit', async (e) => {
     }
 });
 
-    <div class="carousel-wrapper">
-        <button id="prevBtn" class="nav-btn">&#10094;</button>
-        
-        <div class="carousel-container" id="guestbook-carousel">
-            <div class="carousel-item" style="justify-content: center; align-items: center;">
-                <p style="color: var(--text); font-size: 1.1rem;">Initializing connection...</p>
-            </div>
+loadGuestbook();
+</script>
+
+<div class="carousel-wrapper">
+    <button id="prevBtn" class="nav-btn">&#10094;</button>
+    
+    <div class="carousel-container" id="guestbook-carousel">
+        <div class="carousel-item" style="justify-content: center; align-items: center;">
+            <p style="color: var(--text); font-size: 1.1rem;">Initializing connection...</p>
         </div>
+    </div>
 
-        <button id="nextBtn" class="nav-btn">&#10095;</button>
+    <button id="nextBtn" class="nav-btn">&#10095;</button>
 
-        <div class="progress-wrapper">
-            <div class="progress-track">
-                <div class="progress-fill animate" id="progressBarFill"></div>
-            </div>
-            <div class="paused-indicator">
-                [ PAUSED ]
-            </div>
+    <div class="progress-wrapper">
+        <div class="progress-track">
+            <div class="progress-fill animate" id="progressBarFill"></div>
+        </div>
+        <div class="paused-indicator">
+            [ PAUSED ]
         </div>
     </div>
 </div>
