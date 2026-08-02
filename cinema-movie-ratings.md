@@ -204,7 +204,7 @@ permalink: /cinema-movie-ratings/
                     <th>Title</th>
                     <th>Year</th>
                     <th>Rating</th>
-                    <th>Notes</th>
+                    <th>Date Watched</th>
                 </tr>
             </thead>
             <tbody id="movie-table-body">
