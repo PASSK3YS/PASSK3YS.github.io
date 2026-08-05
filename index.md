@@ -4,7 +4,7 @@ title: About
 ---
 
 <div class="bio-container">
-    <img src="https://files.horizon.pics/0e37ee6c-1ef1-42f5-bd17-eff9acba2211?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
+    <img src="https://files.horizon.pics/80bf60d4-5f09-458c-a235-6f7387f7db1f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
     <div class="bio-text">
         <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
             Hi, I'm Kieran<span class="blinking-cursor">_</span>
