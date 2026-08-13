@@ -162,7 +162,7 @@ h1, h2, h3 {
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Listening to</h3>
             <ul class="hacker-list">
-                <li><strong>Any Batmobile song<strong></li>
+                <li><strong>Any Batmobile song</strong></li>
             </ul>
         </div>
 
