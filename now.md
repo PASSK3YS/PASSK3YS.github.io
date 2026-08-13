@@ -141,14 +141,13 @@ h1, h2, h3 {
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Working on</h3>
             <ul class="hacker-list">
-                <li><strong>My website</strong></li>
+                <li><strong>Trying to lose weight</strong></li>
             </ul>
         </div>
 
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Playing</h3>
             <ul class="hacker-list">
-                <li><strong>Assassin's Creed Black Flag Resynced</strong></li>
                 <li><strong>Dead By Daylight</strong></li>
             </ul>
         </div>
@@ -163,7 +162,7 @@ h1, h2, h3 {
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Listening to</h3>
             <ul class="hacker-list">
-                <li>My <strong>Supermix</strong> playlist on YouTube Music</li>
+                <li><strong>Any Batmobile song</li>
             </ul>
         </div>
 
