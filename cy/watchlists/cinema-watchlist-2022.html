@@ -1,0 +1,252 @@
+---
+layout: default
+title: Cinema Watchlist - 2022
+permalink: /cy/cinema-watchlist/2022/
+---
+
+<style>
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.main-title {
+    font-size: 2.5em;
+    color: var(--text);
+    margin: 0 0 10px 0;
+}
+.year-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.year-nav a {
+    text-decoration: none;
+    border-bottom: none !important;
+    padding: 6px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.year-inactive {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+.year-inactive:hover {
+    color: var(--text);
+    opacity: 1;
+    background-color: var(--nav-bg);
+}
+.year-active {
+    color: var(--accent);
+    font-weight: bold;
+    background-color: var(--border);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+.watch-count {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.controls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+.sort-btn {
+    background-color: var(--nav-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sort-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.movie-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+.movie-thumbnail {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    background-color: var(--bg);
+    flex-shrink: 0;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 1px solid var(--border);
+}
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.movie-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: var(--text);
+    line-height: 1.3;
+}
+.movie-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+</style>
+
+<div class="page-header">
+    <h1 class="main-title">Cinema Watchlist</h1>
+    <h2 class="year-subtitle year-nav">
+        <a href="#" class="year-active">2022</a>
+        <a href="/cinema-watchlist/2023/" class="year-inactive">2023</a>
+        <a href="/cinema-watchlist/2024/" class="year-inactive">2024</a>
+        <a href="/cinema-watchlist/2025/" class="year-inactive">2025</a>
+        <a href="/cinema-watchlist/2026/" class="year-inactive">2026</a>
+        <a href="/cinema-movie-ratings/" class="year-inactive">Movie Ratings</a>
+    </h2>
+    <div class="controls-container">
+        <span class="watch-count" id="totalCount"></span>
+        <button class="sort-btn" id="sortToggle">⬇️ Newest First</button>
+    </div>
+</div>
+
+<div class="movie-grid" id="movieGrid">
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/511/133/posters/thumb/e1122fa1f3.jpg.webp" alt="Prey for the Devil">
+        <div class="movie-info">
+            <h2 class="movie-title">Prey for the Devil</h2>
+            <p class="movie-date">28 October</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/288/212/posters/thumb/abf7701e2f.jpg.webp" alt="Black Adam">
+        <div class="movie-info">
+            <h2 class="movie-title">Black Adam</h2>
+            <p class="movie-date">23 October</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/460/030/posters/thumb/acb4396820.jpg.webp" alt="Halloween Ends">
+        <div class="movie-info">
+            <h2 class="movie-title">Halloween Ends</h2>
+            <p class="movie-date">15 October</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/604/929/posters/thumb/17ff145457.jpg.webp" alt="See How They Run">
+        <div class="movie-info">
+            <h2 class="movie-title">See How They Run</h2>
+            <p class="movie-date">21 September</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/297/485/posters/thumb/6e3d1206ea.jpg.webp" alt="Top Gun: Maverick">
+        <div class="movie-info">
+            <h2 class="movie-title">Top Gun: Maverick</h2>
+            <p class="movie-date">3 September</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/662/888/posters/thumb/2fe8c76855.jpg.webp" alt="The Invitation">
+        <div class="movie-info">
+            <h2 class="movie-title">The Invitation</h2>
+            <p class="movie-date">25 August</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/561/702/posters/thumb/409fd7515e.jpg.webp" alt="Bullet Train">
+        <div class="movie-info">
+            <h2 class="movie-title">Bullet Train</h2>
+            <p class="movie-date">22 August</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/599/180/posters/thumb/1db8386132.jpg.webp" alt="Orphan: First Kill">
+        <div class="movie-info">
+            <h2 class="movie-title">Orphan: First Kill</h2>
+            <p class="movie-date">19 August</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/601/018/posters/thumb/6a4072dcb2.jpg.webp" alt="Nope">
+        <div class="movie-info">
+            <h2 class="movie-title">Nope</h2>
+            <p class="movie-date">12 August</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/391/105/posters/thumb/a316fbf151.jpg.webp" alt="DC League of Super-Pets">
+        <div class="movie-info">
+            <h2 class="movie-title">DC League of Super-Pets</h2>
+            <p class="movie-date">2 August</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const movieCards = document.querySelectorAll('.movie-card');
+    const totalCountDisplay = document.getElementById('totalCount');
+    totalCountDisplay.textContent = `Total Watched: ${movieCards.length}`;
+
+    const sortToggle = document.getElementById('sortToggle');
+    const movieGrid = document.getElementById('movieGrid');
+    let isNewestFirst = true;
+
+    sortToggle.addEventListener('click', function() {
+        isNewestFirst = !isNewestFirst;
+        sortToggle.textContent = isNewestFirst ? '⬇️ Newest First' : '⬆️ Oldest First';
+
+        const cardsArray = Array.from(movieCards);
+
+        cardsArray.sort(function(a, b) {
+            const dateA = new Date(a.querySelector('.movie-date').textContent + ' 2023');
+            const dateB = new Date(b.querySelector('.movie-date').textContent + ' 2023');
+
+            if (isNewestFirst) {
+                return dateB - dateA;
+            } else {
+                return dateA - dateB;
+            }
+        });
+
+        cardsArray.forEach(function(card) {
+            movieGrid.appendChild(card);
+        });
+    });
+</script>

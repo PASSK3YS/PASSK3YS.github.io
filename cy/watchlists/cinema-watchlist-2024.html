@@ -1,0 +1,329 @@
+---
+layout: default
+title: Cinema Watchlist - 2024
+permalink: /cy/cinema-watchlist/2024/
+---
+
+<style>
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.main-title {
+    font-size: 2.5em;
+    color: var(--text);
+    margin: 0 0 10px 0;
+}
+.year-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.year-nav a {
+    text-decoration: none;
+    border-bottom: none !important;
+    padding: 6px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.year-inactive {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+.year-inactive:hover {
+    color: var(--text);
+    opacity: 1;
+    background-color: var(--nav-bg);
+}
+.year-active {
+    color: var(--accent);
+    font-weight: bold;
+    background-color: var(--border);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+.watch-count {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.controls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+.sort-btn {
+    background-color: var(--nav-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sort-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.movie-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+.movie-thumbnail {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    background-color: var(--bg);
+    flex-shrink: 0;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 1px solid var(--border);
+}
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.movie-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: var(--text);
+    line-height: 1.3;
+}
+.movie-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+</style>
+
+<div class="page-header">
+    <h1 class="main-title">Cinema Watchlist</h1>
+    <h2 class="year-subtitle year-nav">
+        <a href="/cinema-watchlist/2022/" class="year-inactive">2022</a>
+        <a href="/cinema-watchlist/2023/" class="year-inactive">2023</a>
+        <a href="#" class="year-active">2024</a>
+        <a href="/cinema-watchlist/2025/" class="year-inactive">2025</a>
+        <a href="/cinema-watchlist/2026/" class="year-inactive">2026</a>
+        <a href="/cinema-movie-ratings/" class="year-inactive">Movie Ratings</a>
+    </h2>
+    <div class="controls-container">
+        <span class="watch-count" id="totalCount"></span>
+        <button class="sort-btn" id="sortToggle">⬇️ Newest First</button>
+    </div>
+</div>
+
+<div class="movie-grid" id="movieGrid">
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/409/281/posters/thumb/3a9cb9e155.jpg.webp" alt="Gladiator II">
+        <div class="movie-info">
+            <h2 class="movie-title">Gladiator II</h2>
+            <p class="movie-date">3 December</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/675/565/posters/thumb/faf2dc003c.jpg.webp" alt="Red One">
+        <div class="movie-info">
+            <h2 class="movie-title">Red One</h2>
+            <p class="movie-date">9 November</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/885/510/posters/thumb/c057a9ef75.jpg.webp" alt="Smile 2">
+        <div class="movie-info">
+            <h2 class="movie-title">Smile 2</h2>
+            <p class="movie-date">18 October</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/542/273/posters/thumb/540466dadd.jpg.webp" alt="Transformers One">
+        <div class="movie-info">
+            <h2 class="movie-title">Transformers One</h2>
+            <p class="movie-date">11 October</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/713/866/posters/thumb/58eb172027.jpg.webp" alt="Joker: Folie à Deux">
+        <div class="movie-info">
+            <h2 class="movie-title">Joker: Folie à Deux</h2>
+            <p class="movie-date">5 October</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/734/869/posters/thumb/03504312e9.jpg.webp" alt="Beetlejuice Beetlejuice">
+        <div class="movie-info">
+            <h2 class="movie-title">Beetlejuice Beetlejuice</h2>
+            <p class="movie-date">7 September</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/759/944/posters/thumb/77dc6c4675.jpg.webp" alt="Alien: Romulus">
+        <div class="movie-info">
+            <h2 class="movie-title">Alien: Romulus</h2>
+            <p class="movie-date">18 August</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/830/863/posters/thumb/521add45d9.jpg.webp" alt="Trap">
+        <div class="movie-info">
+            <h2 class="movie-title">Trap</h2>
+            <p class="movie-date">15 August</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/395/672/posters/thumb/6dd2e7b140.jpg.webp" alt="Deadpool & Wolverine">
+        <div class="movie-info">
+            <h2 class="movie-title">Deadpool & Wolverine</h2>
+            <p class="movie-date">25 July</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/561/219/posters/thumb/c7ab36264f.jpg.webp" alt="Twisters">
+        <div class="movie-info">
+            <h2 class="movie-title">Twisters</h2>
+            <p class="movie-date">20 July</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/424/256/posters/thumb/7378e6d818.jpg.webp" alt="Bad Boys: Ride or Die">
+        <div class="movie-info">
+            <h2 class="movie-title">Bad Boys: Ride or Die</h2>
+            <p class="movie-date">19 June</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/623/532/posters/thumb/01b80c9a90.jpg.webp" alt="Furiosa: A Mad Max Saga">
+        <div class="movie-info">
+            <h2 class="movie-title">Furiosa: A Mad Max Saga</h2>
+            <p class="movie-date">30 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/586/621/posters/thumb/c8eb657e58.jpg.webp" alt="The Fall Guy">
+        <div class="movie-info">
+            <h2 class="movie-title">The Fall Guy</h2>
+            <p class="movie-date">15 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/488/280/posters/thumb/9b0f3165ff.jpg.webp" alt="Kingdom of the Planet of the Apes">
+        <div class="movie-info">
+            <h2 class="movie-title">Kingdom of the Planet of the Apes</h2>
+            <p class="movie-date">12 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/894/636/posters/thumb/c4a5dc3a51.jpg.webp" alt="Abigail">
+        <div class="movie-info">
+            <h2 class="movie-title">Abigail</h2>
+            <p class="movie-date">25 April</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/304/347/posters/thumb/193525fa99.jpg.webp" alt="The First Omen">
+        <div class="movie-info">
+            <h2 class="movie-title">The First Omen</h2>
+            <p class="movie-date">10 April</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/656/266/posters/thumb/5e17a4de1b.jpg.webp" alt="Godzilla x Kong: The New Empire">
+        <div class="movie-info">
+            <h2 class="movie-title">Godzilla x Kong: The New Empire</h2>
+            <p class="movie-date">2 April</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/813/333/posters/thumb/953f7257d0.jpg.webp" alt="Kungfu Panda 4">
+        <div class="movie-info">
+            <h2 class="movie-title">Kungfu Panda 4</h2>
+            <p class="movie-date">29 March</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/778/125/posters/thumb/c75feb22c2.jpg.webp" alt="Ghostbusters: Frozen Empire">
+        <div class="movie-info">
+            <h2 class="movie-title">Ghostbusters: Frozen Empire</h2>
+            <p class="movie-date">23 March</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/637/193/posters/thumb/915f0bc57e.jpg.webp" alt="Bob Marley: One Love">
+        <div class="movie-info">
+            <h2 class="movie-title">Bob Marley: One Love</h2>
+            <p class="movie-date">17 February</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/679/147/posters/thumb/eeae8fec43.jpg.webp" alt="The Iron Claw">
+        <div class="movie-info">
+            <h2 class="movie-title">The Iron Claw</h2>
+            <p class="movie-date">9 February</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const movieCards = document.querySelectorAll('.movie-card');
+    const totalCountDisplay = document.getElementById('totalCount');
+    totalCountDisplay.textContent = `Total Watched: ${movieCards.length}`;
+
+    const sortToggle = document.getElementById('sortToggle');
+    const movieGrid = document.getElementById('movieGrid');
+    let isNewestFirst = true;
+
+    sortToggle.addEventListener('click', function() {
+        isNewestFirst = !isNewestFirst;
+        sortToggle.textContent = isNewestFirst ? '⬇️ Newest First' : '⬆️ Oldest First';
+
+        const cardsArray = Array.from(movieCards);
+
+        cardsArray.sort(function(a, b) {
+            const dateA = new Date(a.querySelector('.movie-date').textContent + ' 2024');
+            const dateB = new Date(b.querySelector('.movie-date').textContent + ' 2024');
+
+            if (isNewestFirst) {
+                return dateB - dateA;
+            } else {
+                return dateA - dateB;
+            }
+        });
+
+        cardsArray.forEach(function(card) {
+            movieGrid.appendChild(card);
+        });
+    });
+</script>

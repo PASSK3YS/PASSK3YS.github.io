@@ -1,0 +1,309 @@
+---
+layout: default
+title: Cinema Watchlist - 2026
+permalink: /cy/cinema-watchlist/2026/
+---
+
+<style>
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.main-title {
+    font-size: 2.5em;
+    color: var(--text);
+    margin: 0 0 10px 0;
+}
+.year-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.year-nav a {
+    text-decoration: none;
+    border-bottom: none !important;
+    padding: 6px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.year-inactive {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+.year-inactive:hover {
+    color: var(--text);
+    opacity: 1;
+    background-color: var(--nav-bg);
+}
+.year-active {
+    color: var(--accent);
+    font-weight: bold;
+    background-color: var(--border);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+.watch-count {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.controls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+.sort-btn {
+    background-color: var(--nav-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sort-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.movie-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+.movie-thumbnail {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    background-color: var(--bg);
+    flex-shrink: 0;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 1px solid var(--border);
+}
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.movie-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: var(--text);
+    line-height: 1.3;
+}
+.movie-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+</style>
+
+<div class="page-header">
+    <h1 class="main-title">Cinema Watchlist</h1>
+    <h2 class="year-subtitle year-nav">
+        <a href="/cinema-watchlist/2022/" class="year-inactive">2022</a>
+        <a href="/cinema-watchlist/2023/" class="year-inactive">2023</a>
+        <a href="/cinema-watchlist/2024/" class="year-inactive">2024</a>
+        <a href="/cinema-watchlist/2025/" class="year-inactive">2025</a>
+        <a href="#" class="year-active">2026</a>
+        <span style="opacity: 0.3; padding: 0 5px;">|</span>
+        <a href="/cinema-movie-ratings/" class="year-inactive">Movie Ratings</a>
+    </h2>
+    <div class="controls-container">
+        <span class="watch-count" id="totalCount"></span>
+        <button class="sort-btn" id="sortToggle">⬇️ Newest First</button>
+    </div>
+</div>
+
+    <div class="movie-grid" id="movieGrid">
+        <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/885/985/posters/thumb/f951e69413.jpg.webp" alt="The End of Oak Street">
+        <div class="movie-info">
+            <h2 class="movie-title">The End of Oak Street</h2>
+            <p class="movie-date">10 August</p>
+        </div>
+    </div>
+        <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/905/132/posters/thumb/8d9eda2b90.jpg.webp" alt="Spider-Man: Brand New Day">
+        <div class="movie-info">
+            <h2 class="movie-title">Spider-Man: Brand New Day</h2>
+            <p class="movie-date">30 July</p>
+        </div>
+    </div>
+        <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/001/117/351/posters/thumb/0431972894.jpg.webp" alt="Evil Dead Burn">
+        <div class="movie-info">
+            <h2 class="movie-title">The Odyssey</h2>
+            <p class="movie-date">17 July</p>
+        </div>
+    </div>
+        <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/977/901/posters/thumb/c678302530.jpg.webp" alt="Evil Dead Burn">
+        <div class="movie-info">
+            <h2 class="movie-title">Evil Dead Burn</h2>
+            <p class="movie-date">11 July</p>
+        </div>
+    </div>
+        <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/868/842/posters/thumb/ea45c12a8f.jpg.webp" alt="Supergirl">
+        <div class="movie-info">
+            <h2 class="movie-title">Supergirl</h2>
+            <p class="movie-date">28 June</p>
+        </div>
+    </div>
+        <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/871/500/posters/thumb/9bda332de0.jpg.webp" alt="Toy Story 5">
+        <div class="movie-info">
+            <h2 class="movie-title">Toy Story 5</h2>
+            <p class="movie-date">20 June</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/001/036/433/posters/thumb/4266426da4.jpg.webp" alt="Disclosure Day">
+        <div class="movie-info">
+            <h2 class="movie-title">Disclosure Day</h2>
+            <p class="movie-date">13 June</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/001/034/092/posters/thumb/9bfe45dab8.jpg.webp" alt="Scary Movie">
+        <div class="movie-info">
+            <h2 class="movie-title">Scary Movie</h2>
+            <p class="movie-date">06 June</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/001/095/879/posters/thumb/34a6172eb2.jpg.webp" alt="Obsession">
+        <div class="movie-info">
+            <h2 class="movie-title">Obsession</h2>
+            <p class="movie-date">03 June</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/993/003/posters/thumb/a33ade7cc8.jpg.webp" alt="Star Wars: The Mandalorian and Grogu">
+        <div class="movie-info">
+            <h2 class="movie-title">Star Wars: The Mandalorian and Grogu</h2>
+            <p class="movie-date">22 May</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/751/145/posters/thumb/7ff54beca9.jpg.webp" alt="Michael">
+        <div class="movie-info">
+            <h2 class="movie-title">Michael</h2>
+            <p class="movie-date">25 April</p>
+        </div>
+    </div>    
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/001/063/866/posters/thumb/f4545990cd.jpg.webp" alt="Lee Cronin's The Mummy">
+        <div class="movie-info">
+            <h2 class="movie-title">Lee Cronin's The Mummy</h2>
+            <p class="movie-date">18 April</p>
+        </div>
+    </div>    
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/991/429/posters/thumb/ace95da822.jpg.webp" alt="The Super Mario Galaxy Movie">
+        <div class="movie-info">
+            <h2 class="movie-title">The Super Mario Galaxy Movie</h2>
+            <p class="movie-date">03 April</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/531/178/posters/thumb/9224492cbf.jpg.webp" alt="Project Hail Mary">
+        <div class="movie-info">
+            <h2 class="movie-title">Project Hail Mary</h2>
+            <p class="movie-date">19 March</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/001/183/117/posters/thumb/bbbfdd5dfb.jpg.webp" alt="EPIC: Elvis Presley In Concert">
+        <div class="movie-info">
+            <h2 class="movie-title">EPIC: Elvis Presley In Concert</h2>
+            <p class="movie-date">01 March</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/000/934/134/posters/thumb/3f46b34adc.jpg.webp" alt="Scream 7">
+        <div class="movie-info">
+            <h2 class="movie-title">Scream 7</h2>
+            <p class="movie-date">28 February</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/001/033/738/posters/thumb/490a2d3fbb.jpg.webp" alt="28 Years Later: The Bone Temple">
+        <div class="movie-info">
+            <h2 class="movie-title">28 Years Later: The Bone Temple</h2>
+            <p class="movie-date">31 January</p>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img class="movie-thumbnail" src="https://walter-r2.trakt.tv/images/movies/001/076/665/posters/thumb/99eb58cb64.jpg.webp" alt="Marty Supreme">
+        <div class="movie-info">
+            <h2 class="movie-title">Marty Supreme</h2>
+            <p class="movie-date">02 January</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const movieCards = document.querySelectorAll('.movie-card');
+    const totalCountDisplay = document.getElementById('totalCount');
+    totalCountDisplay.textContent = `Total Watched: ${movieCards.length}`;
+
+    const sortToggle = document.getElementById('sortToggle');
+    const movieGrid = document.getElementById('movieGrid');
+    let isNewestFirst = true;
+
+    sortToggle.addEventListener('click', function() {
+        isNewestFirst = !isNewestFirst;
+        sortToggle.textContent = isNewestFirst ? '⬇️ Newest First' : '⬆️ Oldest First';
+
+        const cardsArray = Array.from(movieCards);
+
+        cardsArray.sort(function(a, b) {
+            const dateA = new Date(a.querySelector('.movie-date').textContent + ' 2026');
+            const dateB = new Date(b.querySelector('.movie-date').textContent + ' 2026');
+
+            if (isNewestFirst) {
+                return dateB - dateA;
+            } else {
+                return dateA - dateB;
+            }
+        });
+
+        cardsArray.forEach(function(card) {
+            movieGrid.appendChild(card);
+        });
+    });
+</script>

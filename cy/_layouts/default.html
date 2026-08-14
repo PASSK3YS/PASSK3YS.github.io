@@ -121,7 +121,7 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
-            max-width: calc(100% - 150px);
+            max-width: calc(100% - 90px);
             margin: 0 auto;
             padding-bottom: 4px;
         }
@@ -135,7 +135,7 @@
             font-weight: 700;
             background: transparent; 
             border: 1px solid transparent;
-            padding: 8px 16px;                    
+            padding: 8px 16px;                     
             border-radius: 12px;                    
             color: var(--text);                  
             text-transform: uppercase;
@@ -173,32 +173,6 @@
             background: var(--accent-glow);
             color: var(--accent);
             transform: rotate(15deg);
-        }
-
-        .lang-toggle {
-            position: absolute;
-            right: 75px;
-            background: transparent;
-            border: 1px solid transparent;
-            color: var(--text);
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 12px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-weight: 700;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            transition: all 0.2s ease, transform 0.2s ease;
-        }
-
-        .lang-toggle:hover {
-            background: var(--accent-glow);
-            color: var(--accent);
-            border-color: var(--accent);
-            transform: translateY(-1px);
         }
 
         .floating-player-wrapper {
@@ -286,7 +260,6 @@
                 <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
                 <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
             </div>
-            <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">EN / CY</button>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                 <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -479,20 +452,6 @@
                     }
                 });
             });
-
-            const langToggleBtn = document.getElementById('lang-toggle');
-            if (langToggleBtn) {
-                langToggleBtn.addEventListener('click', () => {
-                    let currentPath = window.location.pathname;
-                    if (currentPath.startsWith('/cy/')) {
-                        window.location.assign(currentPath.substring(3));
-                    } else if (currentPath === '/cy') {
-                        window.location.assign('/');
-                    } else {
-                        window.location.assign('/cy' + currentPath);
-                    }
-                });
-            }
         });
     </script>
 </body>
