@@ -8,7 +8,7 @@ image: https://kieran.colfer.net/assets/docs-thumbnail.png
 
 Mae croeso i chi gopïo ac addasu'r templed CSS hwn ar gyfer eich thema Nodiadau Safonol eich hun.
 
-```css
+``` css
 : gwraidd {
   /* ===========================================
      1. DIFFINIADAU PALET CRAIDD
@@ -140,5 +140,4 @@ Mae croeso i chi gopïo ac addasu'r templed CSS hwn ar gyfer eich thema Nodiadau
 ::-webkit-scrollbar-thumb {
     lliw cefndir: var (--c-mint-dim);
     border-radiws: 4px;
-}
-```
+}```

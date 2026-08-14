@@ -4,37 +4,15 @@ title: Username Generator
 permalink: /cy/tools/username-generator/
 ---
 
-<div class="page-content">
-<a href="/tools/" class="back-link">&larr; Yn ôl i Offer</a>
-  
-  <h1 style="margin-top: 10px;"> Cynhyrchydd Enw Defnyddiwr</ h1>
-  <p>Cynhyrchu enwau defnyddwyr unigryw, ar hap yn lleol. Cliciwch unrhyw enw defnyddiwr i'w gopïo i'ch clipfwrdd.</p>
+<div class="page-content"><a href="/tools/" class="back-link">&larr; Yn ôl i Offer</a>Generadur Enw Defnyddiwr<h1 style="margin-top: 10px;"></h1><p>Cynhyrchu enwau defnyddwyr unigryw, ar hap yn lleol. Cliciwch unrhyw enw defnyddiwr i'w gopïo i'ch clipfwrdd.</p>
 
-<div style="margin-top: 30px;">
-    <div style="display: flex; gap: 10px; ymyl-gwaelod: 20px; flex-wrap: wrap;">
-        <input type="text" id="keyword-input" placeholder="Rhowch allweddair (dewisol)..." style="flex: 1; lled min: 200px; padin: 12px; radiws ffin: 4px; border: 1px solid var(--border); cefndir: var(--nav-bg--color); Grotesk', sans-serif; amlinelliad: dim;">
-        <button id="generate-btn" style="padding: 12px 24px; border-radius: 4px; border: 1px solid var(--accent); cefndir: var(--acen); lliw: gwyn; pwysau ffont: trwm; cyrchwr: pwyntydd; ffont-teulu: 'Space san-skrif; 0.2s;"> Cynhyrchu </botwm>
-    </div>
+<div style="margin-top: 30px;"><div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;"><input type="text" id="keyword-input" placeholder="Enter a keyword (optional)..." style="flex: 1; min-width: 200px; padding: 12px; border-radius: 4px; border: 1px solid var(--border); background: var(--nav-bg); color: var(--text); font-family: 'Space Grotesk', sans-serif; outline: none;"><button id="generate-btn" style="padding: 12px 24px; border-radius: 4px; border: 1px solid var(--accent); background: var(--accent); color: white; font-weight: bold; cursor: pointer; font-family: 'Space Grotesk', sans-serif; transition: all 0.2s;">Cynhyrchu</button></div>
 
-<div style="display: flex; gap: 20px; ymyl-gwaelod: 30px; maint y ffont: 0.9em;">
-        <label style="display: flex; alinio-eitemau: canol; bwlch: 8px; cyrchwr: pwyntydd;">
-            <input type="checkbox" id="defnydd-rhifau" wedi'i wirio style=" accent-color: var(--accent);"> Cynnwys Rhifau
-        </label>
-        <label style="display: flex; alinio-eitemau: canol; bwlch: 8px; cyrchwr: pwyntydd;">
-            <input type="checkbox" id="use-special"> Cymeriadau Arbennig
-        </label>
-    </div>
-    
-    <div id="results-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;"> </div>
-  </div>
+<div style="display: flex; gap: 20px; margin-bottom: 30px; font-size: 0.9em;"><label style="display: flex; align-items: center; gap: 8px; cursor: pointer;"><input type="checkbox" id="use-numbers" checked style="accent-color: var(--accent);">Cynnwys Rhifau</label><label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">Cymeriadau Arbennig<input type="checkbox" id="use-special"></label></div><div id="results-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;"></div></div>
 
-<div style="margin-top: 50px; text-align: center; maint y ffont: 0.85rem; didreiddedd: 0.5;">
-    Ffynhonnell Agored. <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/blob/main/tools/username-generator.md" target="_blank" style="color: inherit; border-bottom: 1px solid currentColor;">Gweld y cod ffynhonnell</a>
-  </div>
-</div>
+<div style="margin-top: 50px; text-align: center; font-size: 0.85rem; opacity: 0.5;">Ffynhonnell Agored.<a href="https://github.com/PASSK3YS/PASSK3YS.github.io/blob/main/tools/username-generator.md" target="_blank" style="color: inherit; border-bottom: 1px solid currentColor;">Gweld cod ffynhonnell</a></div></div>
 
-<script>
-  (swyddogaeth () {
+<script>(swyddogaeth () {
     const adjectives = [ 'Tawel', 'Cudd', 'Diogel', 'Preifat', 'Amgryptio', 'Digidol', 'Cyber', 'Neon', 'Cyflym', 'Swift', 'Cosmic', 'Solar', 'Lunar', 'Arctic', 'Obsidianson', 'Obsidrian' 'Azure', 'Cysgod', 'Ysbryd', 'Zero', 'Deuaidd', 'Cwantwm', 'Glitch', 'Hollow', 'Haearn', 'Dur', 'Titaniwm', 'Melfed', 'Frost'];
     const nouns = [ 'Protocol', 'Signal', 'Node', 'Key', 'Lock', 'Vault', 'Cipher', 'Proxy', 'Router', 'Frame', 'Stack', 'Grid', 'Core', 'Link', 'Vector', 'Pixel', 'Pixel', 'By', 'Pixel', 'By' 'Wave', 'Sphere', 'Orbit', 'Horizon', 'Nexus', 'Haven', 'Fortress', 'Citadel', 'Shield', 'Guard', 'Sentry', 'Hebog', 'Wolf', 'Hawk', 'Cigfran', 'Viper', 'Phanpectom', 'Spectobra', 'Cobra', 'Spaint' 'Ronin'];
     
@@ -112,5 +90,4 @@ btn.addEventListener('clic', () => {
     });
 
 btn.clic();
-  })();
-</script>
+  })();</script>

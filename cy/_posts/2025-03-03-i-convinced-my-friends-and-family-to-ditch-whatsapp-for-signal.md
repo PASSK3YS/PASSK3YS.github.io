@@ -7,7 +7,7 @@ image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/messagemeonsignal
 
 Dros yr ychydig fisoedd diwethaf, nodais fy nghenhadaeth i argyhoeddi fy ffrindiau a fy nheulu i newid o WhatsApp i Signal, dewis amgen mwy diogel a phreifat. Nid oedd yn dasg hawdd, ond gyda dyfalbarhad a chreadigrwydd, llwyddais i'w cael i newid.
 
-Roeddwn i'n pori YouTube a des i ar draws fideo o'r enw <a href="https://www.youtube.com/watch?v=s9Ux8DFgMSM" target="_blank">"Sut i ddarbwyllo'ch ffrindiau i ddefnyddio negesydd preifat"</a>. Gwyliais y fideo a chefais fy ysbrydoli i ymgymryd â'r her o gael pawb y siaradais â nhw draw i Signal. Ar yr adeg honno, roedd gennyf rai pobl a oedd eisoes wedi newid, ond ni allwn byth argyhoeddi'r gweddill i wneud yr un peth.
+Roeddwn yn pori YouTube a deuthum ar draws fideo o'r enw<a href="https://www.youtube.com/watch?v=s9Ux8DFgMSM" target="_blank">"Sut i argyhoeddi'ch ffrindiau i ddefnyddio negesydd preifat"</a>. Gwyliais y fideo a chefais fy ysbrydoli i ymgymryd â'r her o gael pawb y siaradais â nhw draw i Signal. Ar yr adeg honno, roedd gennyf rai pobl a oedd eisoes wedi newid, ond ni allwn byth argyhoeddi'r gweddill i wneud yr un peth.
 
 Ar ôl gwylio'r fideo, roeddwn i'n meddwl y byddwn i'n rhoi cynnig ar y tip ymateb gohiriedig. Dechreuais ohirio fy ymatebion i bobl ar WhatsApp 24 awr yn fwriadol. Gwn yn ddigywilydd, ond bu'n effeithiol i mi. Roeddwn yn gallu cyfleu’n gynnil nad oeddwn bellach yn blaenoriaethu’r platfform. Rhaid cyfaddef, achosodd y newid bach hwn o ohirio fy ymatebion rwystredigaeth ymhlith ychydig o bobl yn fy nghysylltiadau, ond ar ôl esbonio pam nad oeddwn yn ymateb yn syth mwyach, fe ddeallon nhw a chytuno i lawrlwytho Signal i'm cyrraedd yn gyflymach.
 
@@ -16,8 +16,7 @@ Pan newidiais fy llun proffil WhatsApp i ddelwedd yn cynnwys logo Signal ynghyd 
 
 Ymlaen yn gyflym at heddiw, ac rwyf wrth fy modd i adrodd bod pawb rwy'n cyfathrebu â nhw nawr yn defnyddio Signal yn unig. Mae'n werth chweil gwybod bod pawb y cefais i newid i Signal, rwyf wedi eu helpu i gymryd cam sylweddol tuag at ddiogelu eu preifatrwydd ar-lein.
 
-Os ydych chi'n ceisio cael ffrindiau a theulu i newid o WhatsApp (neu ap negesydd arall), rwy'n eich annog i fod yn amyneddgar ac yn greadigol yn eich ymagwedd.<br>
-Nid yw'r dasg amhosibl o gael pobl i newid apiau negeseuon mor amhosibl â hynny wedi'r cyfan.
+Os ydych chi'n ceisio cael ffrindiau a theulu i newid o WhatsApp (neu ap negesydd arall), rwy'n eich annog i fod yn amyneddgar ac yn greadigol yn eich ymagwedd.<br>Nid yw'r dasg amhosibl o gael pobl i newid apiau negeseuon mor amhosibl â hynny wedi'r cyfan.
 
 ---
 

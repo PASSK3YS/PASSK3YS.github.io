@@ -9,19 +9,43 @@ translator = GoogleTranslator(source='en', target='cy')
 def chunk_and_translate(text):
     paragraphs = text.split('\n\n')
     translated = []
+    
+    protect_pattern = re.compile(r'(\{%.*?%\}|\{\{.*?\}\}|<[^>]+>|```.*?```|`.*?`)', re.DOTALL)
+
     for p in paragraphs:
-        if p.strip():
-            try:
-                res = translator.translate(p)
-                if res is None:
-                    translated.append(p)
-                else:
-                    translated.append(res)
-            except Exception as e:
-                print(f"    [!] Error: {e}")
-                translated.append(p)
-        else:
+        if not p.strip():
             translated.append(p)
+            continue
+            
+        blocks = []
+        
+        # Replace the protected code with a nonsense placeholder Google won't translate
+        def save_block(match):
+            blocks.append(match.group(0))
+            return f" ZXC{len(blocks)-1}Q "
+            
+        safe_p = protect_pattern.sub(save_block, p)
+        
+        try:
+            res = translator.translate(safe_p)
+            if res is None:
+                translated.append(p)
+            else:
+                # Swap the placeholders back to your original code
+                def restore_block(match):
+                    idx = int(match.group(1))
+                    if idx < len(blocks):
+                        return blocks[idx]
+                    return match.group(0)
+                    
+                # (?i) makes it case-insensitive just in case Google lowercases our placeholder
+                res_restored = re.sub(r'(?i)\s*zxc(\d+)q\s*', restore_block, res)
+                translated.append(res_restored)
+                
+        except Exception as e:
+            print(f"    [!] Error: {e}")
+            translated.append(p)
+
     return '\n\n'.join(translated)
 
 files_to_process = []
@@ -34,7 +58,7 @@ for filepath in files_to_process:
     if filepath.startswith('cy/') or filepath.startswith('_site/') or 'README.md' in filepath:
         continue
         
-    print(f"Translating: {filepath}...")
+    print(f"Translating safely: {filepath}...")
         
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()

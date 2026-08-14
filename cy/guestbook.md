@@ -4,11 +4,9 @@ title: Guestbook
 permalink: /cy/guestbook/
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"> </script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<steil>
-corff, prif, h1, h2, h3, p, a, rhychwant, div, botwm {
+<style>corff, prif, h1, h2, h3, p, a, rhychwant, div, botwm {
     font-family: 'SUSE', sans-serif !pwysig;
 }
 
@@ -200,13 +198,13 @@ mewnbwn .sign-form:focus, .sign-form textarea:focus {
 }
 
 .progress-track {
-    width: 100%;
-    height: 6px;
-    background: var(--nav-bg);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease;
+    lled: 100%;
+    uchder: 6px;
+    cefndir: var(--nav-bg);
+    ffin: var solet 1px (--ffin);
+    ffin-radiws: 0;
+    gorlif: cudd;
+    pontio: didreiddedd 0.3s rhwyddineb;
 }
 
 .cynnydd-lenwi {
@@ -270,54 +268,19 @@ mewnbwn .sign-form:focus, .sign-form textarea:focus {
     .progress-lapper {
         padin: 0 5%;
     }
-}
-</style>
+}</style>
 
-<div class="page-content" style="uch-lled: 800px; ymyl: 0 auto; padin-top: 20px;">
-  
-    <h1 style="color: var(--accent); text-align: center; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythrennau: -1px; ymyl-gwaelod: 10px;">
-        >_ Llyfr Gwesteion <span class="blinking-cursor">_</span>
-    </h1>
-  
-    <p style="color: var(--text-muted); text-align: center; ymyl-gwaelod: 30px; maint y ffont: 1.05rem;">
-        Negeseuon a chyfarchion gan ymwelwyr.
-    </p>
+<div class="page-content" style="max-width: 800px; margin: 0 auto; padding-top: 20px;"><h1 style="color: var(--accent); text-align: center; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px;">>_ Llyfr Gwesteion<span class="blinking-cursor">_</span></h1><p style="color: var(--text-muted); text-align: center; margin-bottom: 30px; font-size: 1.05rem;">Negeseuon a chyfarchion gan ymwelwyr.</p>
 
-<form id="ffurflen llyfr gwesteion" class="sign-form">
-        <input type="text" id="name" placeholder="Angen enw">
-        <textarea id="message" placeholder="Angen neges"></textarea>
-        
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAEEfCSzxCVuLiXl0" data-theme="auto" data-callback="unlockForm"></div>
-        
-        <button type="submit" id="submitBtn" class="hacker-btn" wedi'i analluogi>Llofnodi Llyfr Gwesteion</button>
-        <div id="formStatus" style="display: none; text-align: center; font-weight: 700;"> </div>
-    </form>
+<form id="guestbook-form" class="sign-form"><input type="text" id="name" placeholder="Name" required><textarea id="message" placeholder="Message" required></textarea><div class="cf-turnstile" data-sitekey="0x4AAAAAAEEfCSzxCVuLiXl0" data-theme="auto" data-callback="unlockForm"></div>Llyfr Gwesteion Arwydd<button type="submit" id="submitBtn" class="hacker-btn" disabled></button><div id="formStatus" style="display: none; text-align: center; font-weight: 700;"></div></form>
 
-<div class="carousel-lapper">
-        <botwm id="prevBtn" class="nav-btn">&#10094;</button>
-        
-        <div class="carousel-container" id="guestbook-carousel">
-            <div class="carousel-item" style="cyfiawnhau-cynnwys: canol; alinio-eitemau: canol;">
-                <p style="color: var(--text); font-size: 1.1rem;"> Cychwyn cysylltiad...</p>
-            </div>
-        </div>
+<div class="carousel-wrapper"><button id="prevBtn" class="nav-btn">&#10094;</button><div class="carousel-container" id="guestbook-carousel"><div class="carousel-item" style="justify-content: center; align-items: center;"><p style="color: var(--text); font-size: 1.1rem;">Cychwyn cysylltiad...</p></div></div>
 
-        <button id="nextBtn" class="nav-btn">&#10095;</button>
+<button id="nextBtn" class="nav-btn">&#10095;</button>
 
-<div class="progress-lapper">
-            <div class="progress-track">
-                <div class="progress-fill animate" id="progressBarFill"></div>
-            </div>
-            <div class="dangosydd wedi'i seibio">
-                [ WEDI EI SEIB ]
-            </div>
-        </div>
-    </div>
-</div>
+<div class="progress-wrapper"><div class="progress-track"><div class="progress-fill animate" id="progressBarFill"></div></div><div class="paused-indicator">[ WEDI EI SEIB ]</div></div></div></div>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" gohirio async></script>
-<script>
-const supabaseUrl = ' https://hnyokpvurntvxvhdvwii.supabase.co ' ;
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script><script>const supabaseUrl = ' https://hnyokpvurntvxvhdvwii.supabase.co ' ;
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhueW9rcHZ1cm50dnh2aGR2d2lpIiwicm9 sZSI6ImFub24iLCJpYXQiOjE3ODU2NzQ0MzEsImV4cCI6MjEwMTI1MDQzMX0.NZLDRNPtWYH-_cvDovXkwyrR-SiT9HqvYnlfT2VpEyo';
 const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
@@ -346,14 +309,14 @@ swyddogaeth async loadGuestbook() {
         .order ('creu_at', { esgynnol: ffug });
 
 os (gwall) {
-        container.innerHTML = `<div class="carousel-item" style="cyfiawnhau-cynnwys: canol; alinio-eitemau: canol;" <p style="color: red;"> Methwyd ag adalw cofnodion.</p></div>`;
+        container.innerHTML =`<div class="carousel-item" style="justify-content: center; align-items: center;"><p style="color: red;">Failed to retrieve records.</p></div>`;
         dychwelyd;
     }
 
 container.innerHTML = '' ;
 
 os (data.length === 0) {
-        container.innerHTML = `<div class="carousel-item" style="cyfiawnhau-cynnwys: canol; alinio-eitemau: canol;" <p style="color: var(--text);">Ni chafwyd hyd i gofnodion.</p></div>`;
+        container.innerHTML =`<div class="carousel-item" style="justify-content: center; align-items: center;"><p style="color: var(--text);">No records found.</p></div>`;
         dychwelyd;
     }
 
@@ -369,17 +332,17 @@ const itemDiv = document.createElement('div');
         
         const messageP = document.createElement('p');
         messageP.style.cssText = 'lliw: var(--text); maint y ffont: 1.1rem; ymyl-brig: 0; uchder llinell: 1.6; toriad gair: break-word;';
-        messageP.textContent = `"${entry.message}"`;
+        messageP.textContent =`"${entry.message}"`;
 
 const metaDiv = document.createElement('div');
         metaDiv.style.marginTop = '20px';
 
 const nameP = document.createElement('p');
         nameP.style.cssText = 'lliw: var(--acen); ymyl-gwaelod: 0; ffont-pwysau: 800; testun-trawsnewid: priflythrennau; bylchau rhwng llythyrau: 1px;';
-        nameP.textContent = `> ${entry.name}`;
+        nameP.textContent =`> ${entry.name}`;
 
-        const dateSpan = document.createElement('span');
-        dateSpan.style.cssText = 'color: var(--text-muted); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;';
+const dateSpan = document.createElement('span');
+        dateSpan.style.cssText = 'lliw: var(--text-muted); maint y ffont: 0.85rem; ffont-pwysau: 700; bylchau rhwng llythyrau: 0.5px; testun-trawsnewid: priflythrennau;';
         dateSpan.textContent = dateStr;
 
 metaDiv.appendChild(enwP);
@@ -501,5 +464,4 @@ container.addEventListener( 'scroll', () => {
     }, 150) ;
 }, { goddefol: true });
 
-loadGuestbook();
-</script>
+loadGuestbook();</script>

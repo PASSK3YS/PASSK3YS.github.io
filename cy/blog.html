@@ -4,49 +4,15 @@ title: Blog
 permalink: /cy/blog/
 ---
 
-<div class="bio-container">
-    <div class="bio-testun">
-        <div style="display: flex; alinio-eitemau: canol; bwlch: 15px; ymyl-gwaelod: 10px;">
-            <h1 style="margin: 0; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythyrau: -1px;">
-                Blog <span class="blinking-cursor">_</span>
-            </h1>
-            <a href="/feed.json" target="_blank" title="Tanysgrifio drwy RSS" class="rss-link">
-                <svg viewBox="0 0 24 24" lled="24" uchder="24" strôc = "Lliw presennol" strôc-lled="2" fill="dim" stroke-linecap="rownd" stroke-linejoin="round">
-                    <llwybr d="M4 11a9 9 0 0 1 9 9"> </path>
-                    <path d="M4 4a16 16 0 0 1 16 16"> </path>
-                    <cylch cx="5" cy="19" r="1"> </circle>
-                </svg>
-            </a>
-        </div>
-        <p style="font-size: 1.05rem; didreiddedd: 0.9; ymyl: 0;">
-            Croeso i fy mlog.
-        </p>
-    </div>
-</div>
+<div class="bio-container"><div class="bio-text"><div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;"><h1 style="margin: 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">Blog<span class="blinking-cursor">_</span></h1><a href="/feed.json" target="_blank" title="Subscribe via RSS" class="rss-link"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></div><p style="font-size: 1.05rem; opacity: 0.9; margin: 0;">Croeso i fy mlog.</p></div></div>
 
-<div class="unified-card">
-    
-    { % ar gyfer post yn site.posts %}
-    <a href="{{ post.url }}" class="rhes-ryngweithiol-rhes unedig">
-        <div>
-            <span class="unified-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-        </div>
-        
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;"> {{ post.title }}</h2>
-            <p style="font-size: 0.95rem; lliw: var(--testun-muted); ymyl: 0; uchder llinell: 1.5;">
-                {{ post.description | rhagosodedig: post.excerpt | strip_html | blaeneiriau: 30 }}
-            </p>
-            <span class="read-more">Darllen mwy &rarr;</span>
-        </div>
-    </a>
-    { % end for %}
+<div class="unified-card">{% for post in site.posts %}<a href="{{ post.url }}" class="unified-row interactive-row"><div><span class="unified-meta">{{ post.date | date: "%B %-d, %Y" }}</span></div><div style="display: flex; flex-direction: column; justify-content: center;"><h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">{{ post.title }}</h2><p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p><span class="read-more">Darllen mwy &rarr;</span></div></a>{% endfor %}
 
 </div>
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<steil>
+<style>
 
 corff, prif, p, a, rhychwant, div, botwm {
     font-family: 'SUSE', sans-serif !pwysig;
@@ -198,5 +164,4 @@ cyn, cod {
         ymyl-gwaelod: 5px;
         arddangos: inline-bloc;
     }
-}
-</style>
+}</style>

@@ -4,7 +4,7 @@ title: Cinema Movie Ratings
 permalink: /cy/cinema-movie-ratings/
 ---
 
-<steil>
+<style>
 
 corff, prif, p, a, rhychwant, div, botwm, dewis, opsiwn {
         font-family: 'SUSE', sans-serif !pwysig;
@@ -167,63 +167,17 @@ corff, prif, p, a, rhychwant, div, botwm, dewis, opsiwn {
         .graddfa enfawr {
             ymyl: 10px awto 0;
         }
-    }
-</style>
+    }</style>
 
-<div class="page-content">
-    
-    <div class="ratings-header">
-        <h1 style="margin: 0;">Sgoriau Ffilm Sinema</h1>
-        
-        <div class="year-hidlen-container">
-            {% assign all_years = site.data["movie-ratings"] | map: "blwyddyn" | uniq | didoli | cefn %}
-            <select id="filter-blwyddyn" aria-label="Hidlo yn ôl Blwyddyn">
-                <option value="all">Dyddiad: Pob Blwyddyn</option>
-                { % am flwyddyn ym mhob_blwyddyn %}
-                    <option value="{{ year }}">Blwyddyn: {{ year }}</option>
-                { % end for %}
-            </select>
-        </div>
-    </div>
+<div class="page-content"><div class="ratings-header">Graddau Ffilm Sinema<h1 style="margin: 0;"></h1><div class="year-filter-container">{% assign all_years = site.data["movie-ratings"] | map: "year" | uniq | sort | reverse %}<select id="year-filter" aria-label="Filter by Year"><option value="all">Dyddiad: Pob Blwyddyn</option>{% for year in all_years %}<option value="{{ year }}">Blwyddyn:{{ year }}</option>{% endfor %}</select></div></div>
 
-{% assign latest_movie = site.data[ "movie-ratings"] | %} cyntaf
-    <div class="featured-movie">
-        <img src="{{ latest_movie.poster }}" alt="{{ latest_movie.title }} Poster" class="featured-poster" onerror="this.style.display= 'dim'">
-        <div class="featured-manylion">
-            <h2 style="margin: 0; color: var(--accent);">{{ latest_movie.title }}</h2>
-            <div style="font-size: 1.1rem; pwysau ffont: 800; lliw: var(--text);">{{ latest_movie.year }}</div>
-            <p style="color: var(--text-muted); margin: 0; font-weight: 700;"> {{ latest_movie.notes }}</p>
-            <div class="huge-rate">{{ latest_movie.rating }}</div>
-        </div>
-    </div>
+{% assign latest_movie = site.data["movie-ratings"] | first %}<div class="featured-movie"><img src="{{ latest_movie.poster }}" alt="{{ latest_movie.title }} Poster" class="featured-poster" onerror="this.style.display='none'"><div class="featured-details"><h2 style="margin: 0; color: var(--accent);">{{ latest_movie.title }}</h2><div style="font-size: 1.1rem; font-weight: 800; color: var(--text);">{{ latest_movie.year }}</div><p style="color: var(--text-muted); margin: 0; font-weight: 700;">{{ latest_movie.notes }}</p><div class="huge-rating">{{ latest_movie.rating }}</div></div></div>
 
-<div style="overflow-x: auto; margin-top: 20px;">
-        <table class="hacker-table">
-            <pen>
-                <tr>
-                    <th>Teitl</th>
-                    <fed>Blwyddyn</th>
-                    <th>Sgoriad</th>
-                    <th>Dyddiad Gwylio</th>
-                </tr>
-            </thead>
-            <tbody id="movie-table-body">
-                {% ar gyfer ffilm yn site.data["movie-ratings"] wrthbwyso: 1 %}
-                <tr class="movie-row" data-year="{{ movie.year }}">
-                    <td style="font-weight: 700; lliw: var(--text);"> {{ movie.title }}</ td>
-                    <td style="color: var(--text-muted);"> {{ movie.year }}</ td>
-                    <td><span class="rating-badge">{{ movie.rating }}</span></td>
-                    <td style="color: var(--text-muted);"> {{ movie.notes }}</ td>
-                </tr>
-                { % end for %}
-            </tbody>
-        </table>
-    </div>
+<div style="overflow-x: auto; margin-top: 20px;"><table class="hacker-table"><thead><tr>Teitl<th></th><th>Blwyddyn</th>Graddfa<th></th><th>Dyddiad Gwylio</th></tr></thead><tbody id="movie-table-body">{% for movie in site.data["movie-ratings"] offset: 1 %}<tr class="movie-row" data-year="{{ movie.year }}"><td style="font-weight: 700; color: var(--text);">{{ movie.title }}</td><td style="color: var(--text-muted);">{{ movie.year }}</td><td><span class="rating-badge">{{ movie.rating }}</span></td><td style="color: var(--text-muted);">{{ movie.notes }}</td></tr>{% endfor %}</tbody></table></div>
 
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
+<script>document.addEventListener("DOMContentLoaded", () => {
         const filter = document.getElementById('hidlo blwyddyn');
         const rows = document.querySelectorAll('.movie-row');
 
@@ -238,5 +192,4 @@ filter.addEventListener('newid', ffwythiant() {
                 }
             });
         });
-    });
-</script>
+    });</script>

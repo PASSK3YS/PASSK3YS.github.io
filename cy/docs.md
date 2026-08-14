@@ -5,54 +5,21 @@ description: "My personal knowledge base: Tutorials, guides, and technical resou
 permalink: /cy/docs/
 ---
 
-<div class="bio-container">
-    <div class="bio-testun">
-        <h1 style="margin: 0 0 10px 0; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythyrau: -1px;">
-            Dogfennau <span class="blinking-cursor">_</span>
-        </h1>
-        <p style="font-size: 1.05rem; didreiddedd: 0.9; ymyl: 0;">
-            {{ page.description }}
-        </p>
-    </div>
-</div>
+<div class="bio-container"><div class="bio-text"><h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">Dogfennau<span class="blinking-cursor">_</span></h1><p style="font-size: 1.05rem; opacity: 0.9; margin: 0;">{{ page.description }}</p></div></div>
 
 <div class="unified-card">
 
-<a href="/docs/standard-notes/" class="rhes-ryngweithiol-rhes-unedig">
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Nodiadau Safonol</ h2>
-            <p style="font-size: 0.95rem; lliw: var(--testun-muted); ymyl: 0; uchder llinell: 1.5;">
-                Cymhwysiad cymryd nodiadau wedi'i amgryptio o'r dechrau i'r diwedd.
-            </p>
-            <span class="read-more">Gweld adnoddau &rarr;</span>
-        </div>
-    </a>
+<a href="/docs/standard-notes/" class="unified-row interactive-row"><div style="display: flex; flex-direction: column; justify-content: center;">Nodiadau Safonol<h2 class="directory-interactive-text" style="margin: 0 0 10px 0;"></h2><p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Cymhwysiad cymryd nodiadau wedi'i amgryptio o'r dechrau i'r diwedd.</p><span class="read-more">Gweld adnoddau &rarr;</span></div></a>
 
-<a href="/docs/proton-mail/" class="rhes-ryngweithiol-rhes unedig">
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;"> Post Proton</ h2>
-            <p style="font-size: 0.95rem; lliw: var(--testun-muted); ymyl: 0; uchder llinell: 1.5;">
-                Gwasanaeth e-bost sy'n canolbwyntio ar breifatrwydd.
-            </p>
-            <span class="read-more">Gweld adnoddau &rarr;</span>
-        </div>
-    </a>
+<a href="/docs/proton-mail/" class="unified-row interactive-row"><div style="display: flex; flex-direction: column; justify-content: center;">Post Proton<h2 class="directory-interactive-text" style="margin: 0 0 10px 0;"></h2><p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Gwasanaeth e-bost sy'n canolbwyntio ar breifatrwydd.</p><span class="read-more">Gweld adnoddau &rarr;</span></div></a>
 
-<a href="/docs/discord/" class="rhes-ryngweithiol-rhes unedig">
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Anghydgord</h2>
-            <p style="font-size: 0.95rem; lliw: var(--testun-muted); ymyl: 0; uchder llinell: 1.5;">
-                Llwyfan ar gyfer sgyrsiau a chymunedau.
-            </p>
-            <span class="read-more">Gweld adnoddau &rarr;</span>
-        </div>
-    </a>
+<a href="/docs/discord/" class="unified-row interactive-row"><div style="display: flex; flex-direction: column; justify-content: center;">Discord<h2 class="directory-interactive-text" style="margin: 0 0 10px 0;"></h2><p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Llwyfan ar gyfer sgyrsiau a chymunedau.</p><span class="read-more">Gweld adnoddau &rarr;</span></div></a>
 
 </div>
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<steil>
+<style>
 
 corff, prif, h1, h2, h3, p, a, rhychwant, div, botwm {
     font-family: 'SUSE', sans-serif !pwysig;
@@ -138,7 +105,7 @@ cyn, cod {
 }
 
 .interactive-row:hover .directory-interactive-text {
-    color: var(--accent);
+    lliw: var (--acen);
 }
 
 .interactive-row:hover .read-more {
@@ -170,5 +137,4 @@ cyn, cod {
     .unified-res {
         padin: 25px 14px;
     }
-}
-</style>
+}</style>

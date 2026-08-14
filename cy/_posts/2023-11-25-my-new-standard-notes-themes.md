@@ -16,7 +16,7 @@ Os ydych chi'n hoffi'r themâu hyn, byddwn yn gwerthfawrogi pe gallech serennu'r
 
 [Standard Blue]( https://github.com/m00t316/standard-blue)
 
-[Standard Blue Dark](https://github.com/m00t316/standard-blue-dark)
+[Standard Blue Dark]( https://github.com/m00t316/standard-blue-dark)
 
 ---
 
@@ -32,10 +32,9 @@ I osod, ewch i dewisiadau > cyffredinol > opsiynau uwch
 
 Gludwch y ddolen ganlynol yn y blwch testun:
 
-` https://notes.m00t.xyz/p/gWG2LYgCPH (dolen hen ffasiwn)`
+`https://notes.m00t.xyz/p/gWG2LYgCPH (outdated link)`
 
-
-## Standard Blue Dark
+## Tywyll Glas Safonol
 
 ![Standard Blue Dark]( https://files.horizon.pics/2f0c6f85-bf24-46d7-a7f3-038157d8c346?a=480&mime1=image&mime2=png)
 

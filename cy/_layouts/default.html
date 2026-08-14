@@ -1,56 +1,25 @@
-{ % assign lang_prefix = " " %}
-{ % assign nav_about = " Ynglŷn â " %}
-{ % assign nav_contact = "Cysylltu" %}
-{ % assign nav_docs = "Dogfennau" %}
-{ % assign nav_tools = " Offer " %}
-{ % assign nav_blog = "Blog" %}
+{% assign lang_prefix = "" %}{% assign nav_about = "About" %}{% assign nav_contact = "Contact" %}{% assign nav_docs = "Docs" %}{% assign nav_tools = "Tools" %}{% assign nav_blog = "Blog" %}
 
-{ % os yw tudalen.url yn cynnwys '/cy/' %}
-    { % assign lang_prefix = " \ " \ " \ " %}
-    { % assign nav_about = "Amdanom" %}
-    { % assign nav_contact = " Cysylltu " %}
-    { % assign nav_docs = "Dogfennau" %}
-    { % assign nav_tools = "Cynnig" %}
-    { % assign nav_blog = "Blog" %}
-{ % endif %}
+{% if page.url contains '/cy/' %}{% assign lang_prefix = "/cy" %}{% assign nav_about = "Amdanom" %}{% assign nav_contact = "Cysylltu" %}{% assign nav_docs = "Dogfennau" %}{% assign nav_tools = "Offer" %}{% assign nav_blog = "Blog" %}{% endif %}
 
-<!DOCTYPE html>
-<html lang="en">
-<pen>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | kieran.colfer.net</title>
-    
-    <script>
-        const savedTheme = localStorage.getItem('thema') || 'system';
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>{{ page.title }}| kieran.colfer.net</title><script>const savedTheme = localStorage.getItem('thema') || 'system';
         gadewch i systemTheme = window.matchMedia('(dewis-lliw-cynllun: tywyll)'). cyfateb ? 'tywyll' : 'light';
         
         os (savedTheme === 'system') {
             document.documentElement.setAttribute('data-thema', systemTheme);
         } arall {
             document.documentElement.setAttribute('data-thema', savedTheme);
-        }
-    </script>
+        }</script>
 
-{ % os tudalen.description %}
-    <meta name="description" content="{{ page.description }}">
-    <meta property="og:description" content="{{ page.description }}">
-    { % endif %}
+{% if page.description %}<meta name="description" content="{{ page.description }}"><meta property="og:description" content="{{ page.description }}">{% endif %}
 
-{% assign og_image = page.image | rhagosodedig: " https://files.horizon.pics/2d6f201f-fbb8-4870-8a67-c8e1357d2fed?a=480&region=eu-central&mime1=image&mime2=jpeg " %}
-    <meta property="og:image" content="{{ og_image }}">
-    <meta name="twitter:image" content="{{ og_image }}">
+{% assign og_image = page.image | default: "https://files.horizon.pics/2d6f201f-fbb8-4870-8a67-c8e1357d2fed?a=480&region=eu-central&mime1=image&mime2=jpeg" %}<meta property="og:image" content="{{ og_image }}"><meta name="twitter:image" content="{{ og_image }}">
 
-<meta property="og:title" content="{{ page.title }}">
-    <meta property="og:url" content="https://kieran.colfer.net{{ page.url }}">
-    <meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="{{ page.title }}"><meta property="og:url" content="https://kieran.colfer.net{{ page.url }}"><meta name="twitter:card" content="summary_large_image">
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="stylesheet" href="/assets/css/style.css">
 
-<steil>
-        prif {
+<style>prif {
             uchafswm-lled: 1200px;
             ymyl: 0 auto;
             padin: 0 20px;
@@ -286,93 +255,23 @@ corff > pennyn {
         }
 
 .scroll-to-top.visible { didreiddedd: 1; gwelededd: visible; }
-        .scroll-to-top:hofran { trawsffurfio: translateY(-4px); }
-    </style>
+        .scroll-to-top:hofran { trawsffurfio: translateY(-4px); }</style>
 
-<link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | rhagpend: site.url }}" />
-</pen>
-<corff>
+<link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" /></head><body>
 
-<pennawd>
-        <div class="nav-header">
-            <div class="nav-scroll">
-                <a href="{{ lang_prefix }}/ " { %if page.url == '/' or page.url == '/cy/' or page.url == '/index.html' or page.url == '/cy/index.html ' %}class="active" { %endif %}> { { nav_about }}
-                <a href = " { { lang_prefix }}/contact/ " { % os yw page.url yn cynnwys '/contact/' %}class="active"{ %endif %}>{{ nav_contact }}</a>
-                <a href="{{ lang_prefix }}/docs/" { %if page.collection == Mae 'docs' neu page.url yn cynnwys '/docs/' %}class="active"{ %endif %}>{{ nav_docs }}</a>
-                <a href = " { { lang_prefix }}/tools/ " { % os yw page.url yn cynnwys '/tools/' %}class = " yn weithredol " { %endif % }> { { nav_tools }}</a>
-                <a href="{{ lang_prefix }}/blog/" " { % if page.url contains '/blog/' or page.layout == 'post' %}class="active"{ %endif %}>{{ nav_blog }}</a>
-            </div>
-            <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">EN / CY</button>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="dim" strôc = " CurrentColor " stroke-width = " 2 " stroke-linecap = " rownd "strôc-linejoinplay=" style";circle"; cy="12" r="5"> </circle> <line x1="12" y1="1" x2="12" y2="3"> </line> x1="12" y1="21" x2="12" y2="23"> </line><line x1="4.22" y1="4.22" x2="5.64" x2="5.64" y2="5.64" y2="5.64" x2="5.64" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"> </line> <line x1="21" y1="12" x2="23" y2="12"> </line><line x1="4.22" y1 = " 4.22 "y1" x1="4.22" y1 = " x29" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"> </line></svg>
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="dim" strôc = "currentColor" stroke-width="2" stroke-linecap="1" stroke-linejoinpath=" styleM"; 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"> </path></svg>
-                <svg id="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="3" stroke-linejoinplayround="" style="2" stroke-linejoinplayround=""; width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"> </line></svg>
-            </button>
-        </div>
-    </header>
+<header><div class="nav-header"><div class="nav-scroll"><a href="{{ lang_prefix }}/" {% if page.url == '/' or page.url == '/cy/' or page.url == '/index.html' or page.url == '/cy/index.html' %}class="active"{% endif %}>{{ nav_about }}</a><a href="{{ lang_prefix }}/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>{{ nav_contact }}</a><a href="{{ lang_prefix }}/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>{{ nav_docs }}</a><a href="{{ lang_prefix }}/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>{{ nav_tools }}</a><a href="{{ lang_prefix }}/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>{{ nav_blog }}</a></div><button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">EN / CY</button><button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22">ZXC</svg><svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg id="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></button></div></header>
 
-<prif>
-        {{ cynnwys }}
-    </main>
+<main>{{ content }}</main>
 
-<button id="musicToggleBtn" class="floating-music-btn" aria-label="Toggle Music Player">
-        <svg viewBox="0 0 24 24" lled="24" uchder="24" strôc="Lliw cyfredol" strôc-lled="2" fill="dim"><path d="M9 18V5l12-2v13"> </path><circle cx="6" cy="18" r="3"> </circle><circle cx="1" r="3"> </circle></svg>
-    </button>
+<button id="musicToggleBtn" class="floating-music-btn" aria-label="Toggle Music Player"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg></button>
 
-<div id="floating-player" class="floating-player-lapper">
-        <div class="ytm-maximized-content">
-            <a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper">
-                <img id="ytm-art" class="ytm-art" src="" alt="Celf Albwm">
-                <div class="ytm-info">
-                    <div class="ytm-status">
-                        <span id="ytm-state-text">LLWYTHO...</span>
-                        <span id="ytm-eq" class="playing-indicator" style="display: none;">
-                            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                        </span>
-                    </div>
-                    <div class="ytm-title-container">
-                        <div class="ytm-title" id="ytm-track"></div>
-                    </div>
-                    <div class="ytm-artist" id="ytm-artist"> </div>
-                </div>
-            </a>
-        </div>
-    </div>
+<div id="floating-player" class="floating-player-wrapper"><div class="ytm-maximized-content"><a href="" id="ytm-link" target="_blank" class="ytm-link-wrapper"><img id="ytm-art" class="ytm-art" src="" alt="Album Art"><div class="ytm-info"><div class="ytm-status">LLWYTHO<span id="ytm-state-text">...</span><span id="ytm-eq" class="playing-indicator" style="display: none;"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></div><div class="ytm-title-container"><div class="ytm-title" id="ytm-track"></div></div><div class="ytm-artist" id="ytm-artist"></div></div></a></div></div>
 
-<button id="scrollToTopBtn" class="scroll-i-top" aria-label="Sgrolio i'r brig">
-        <svg viewBox="0 0 24 24" lled="24" uchder="24" strôc="Lliw cyfredol" lled-strôc="2.5" llenwi="dim"><polyline points="18 15 12 9 6 15"> </polyline></svg>
-    </button>
+<button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
 
-<footer>
-        <div class="footer-card">
-            <div class="footer-content">
-                <div class="footer-socials">
-                    <a href="https://github.com/PASSK3YS" target="_blank" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8. 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 33. 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.030.03 3-.405-.322 . 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.65-5. 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.575 22.092 24 . 12.297c0-6.627-5.373-12-12-12 busnes/svg>
-                    </a>
-                    <a href="https://gitlab.com/m00t" target="_blank" aria-label="GitLab">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.65 14.39L20.25 7.01C20.14 6.67 19.82 6.44 19.47 .4C 6.44 19.46 . 6.67 18.67 7.01L16.6 13.37H7.4L5.33 7.01C5.22 6.67 4.9 6.44 4.54 6.44C4.18 6.44 3.86 6.67 3.713 . 14.76 1.35 15.17 1.65 15.42L12 23L22.35 15.42C22.65 15.17 22.77 14.76 22.65 14.39Z/svg>
-                    </a>
-                </div>
-                <div class="hawlfraint">
-                    <p style="margin: 0;">© 2026 Kieran Colfer</p>
-                    <p style="margin: 5px 0 0 0; maint y ffont: 0.75em; didreiddedd: 0.5;">
-                        <a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}" target="_blank" class="version-link" style="color: inherit; text-decoration: none;">
-                            <svg viewBox="0 0 24 24" width="12" uchder="12" strôc="currentColor" stroke-width="2" fill="dim" stroke-linecap="rownd" stroke-linejoin="round" style="margin-dde: 4px;"><circle cx="12" cy="12" xcircle = =" 12 " > cylch = " 12 " > cylch = " 1 " x 1 2 " cy = x2="7" y2="12"> </line><line x1="17.01" y1="12" x2="22.96" y2="12"> </line></svg>
-                            v.{{ site.github.build_revision | sleisen: 0, 7 | rhagosodedig: "dev" }}
-                        </a>
-                    </p>
-                    <div style="margin-top: 15px;">
-                        <a href="{{ lang_prefix }}/privacy/" style="color: var(--text-muted); maint y ffont: 0.85rem; addurno testun: dim; didreiddedd: 0.8;">Polisi Preifatrwydd</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-big-text">kieran.colfer.net</div>
-        </div>
-    </footer>
+<footer><div class="footer-card"><div class="footer-content"><div class="footer-socials"><a href="https://github.com/PASSK3YS" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a href="https://gitlab.com/m00t" target="_blank" aria-label="GitLab"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.65 14.39L20.25 7.01C20.14 6.67 19.82 6.44 19.46 6.44C19.1 6.44 18.78 6.67 18.67 7.01L16.6 13.37H7.4L5.33 7.01C5.22 6.67 4.9 6.44 4.54 6.44C4.18 6.44 3.86 6.67 3.75 7.01L1.35 14.39C1.23 14.76 1.35 15.17 1.65 15.42L12 23L22.35 15.42C22.65 15.17 22.77 14.76 22.65 14.39Z"/></svg></a></div><div class="copyright"><p style="margin: 0;">© 2026 Kieran Colfer</p><p style="margin: 5px 0 0 0; font-size: 0.75em; opacity: 0.5;"><a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}" target="_blank" class="version-link" style="color: inherit; text-decoration: none;"><svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg>v{{ site.github.build_revision | slice: 0, 7 | default: "dev" }}</a></p><div style="margin-top: 15px;">Polisi Preifatrwydd<a href="{{ lang_prefix }}/privacy/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; opacity: 0.8;"></a></div></div></div><div class="footer-big-text">kieran.colfer.net</div></div></footer>
 
-<script>
-        const toggleButton = document.getElementById('theme-toggle');
+<script>const toggleButton = document.getElementById('theme-toggle');
         const sunIcon = document.getElementById('sun-icon');
         const moonIcon = document.getElementById('moon-icon');
         const systemIcon = document.getElementById('system-icon');
@@ -413,30 +312,30 @@ const scrollToTopBtn = document.getElementById('scrollToTopBtn');
             });
             scrollToTopBtn.addEventListener('clic', () => window.scrollTo({ top: 0, ymddygiad: 'llyfn' }));
 
-            const workerUrl = 'https://xbox-tracker.snowy-scene-5750.workers.dev';
-            function fetchMusic() {
-                fetch(workerUrl).then(res => res.json()).then(async data => {
-                    if (data.music) {
+const workerUrl = ' https://xbox-tracker.snowy-scene-5750.workers.dev ' ;
+            ffwythiant fetchMusic() {
+                nôl(workerUrl).then(res => res.json()).then(data async => {
+                    os (data.music) {
                         const trackEl = document.getElementById('ytm-track');
                         const artEl = document.getElementById('ytm-art');
-                        const currentTitle = trackEl.getAttribute('data-title');
+                        const currentTitle = trackEl.getAttribute('teitl data');
                         
-                        if (currentTitle !== data.music.title) {
-                            trackEl.setAttribute('data-title', data.music.title);
+                        os (currentTitle!== data.music.title) {
+                            trackEl.setAttribute('teitl-data', data.music.title);
                             
-                            const isDefaultImage = url => !url || url.includes('2a96cbd8b46e442fc41c2b86b821562f');
-                            let imageUrl = data.music.image;
+                            const isDefaultImage = url => !url || url.yn cynnwys('2a96cbd8b46e442fc41c2b86b821562f');
+                            gadewch imageUrl = data.music.image;
                             
-                            if (isDefaultImage(imageUrl)) {
-                                try {
-                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}&entity=song&limit=1`);
-                                    const itunesData = await res.json();
-                                    if (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
+                            os (isDefaultImage(imageUrl)) {
+                                ceisio {
+                                    const res = aros i'w nôl(`https://itunes.apple.com/search?term=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}&entity=song&limit=1`);
+                                    const itunesData = aros am res.json();
+                                    os (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
                                         imageUrl = itunesData.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
-                                    } else {
+                                    } arall {
                                         imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
                                     }
-                                } catch (e) {
+                                } dal (e) {
                                     imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
                                 }
                             }
@@ -444,24 +343,24 @@ const scrollToTopBtn = document.getElementById('scrollToTopBtn');
                             artEl.src = imageUrl;
                             trackEl.textContent = data.music.title;
                             document.getElementById('ytm-artist').textContent = data.music.artist;
-                            document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                            document.getElementById('ytm-link').href =`https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
                             
-                            trackEl.classList.remove('scrolling-title');
+                            trackEl.classList.remove('teitl sgrolio');
                             requestAnimationFrame(() => {
-                                if (trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
-                                    trackEl.classList.add('scrolling-title');
+                                os (trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
+                                    trackEl.classList.add('teitl sgrolio');
                                 }
                             });
                         }
                         
-                        if (data.music.isPlaying) {
-                            document.getElementById('ytm-state-text').textContent = "I'M CURRENTLY LISTENING TO...";
+                        os (data.music.isPlaying) {
+                            document.getElementById('ytm-state-text').textContent = "Rwyf YN GWRANDO AR HYN O BRYD...";
                             document.getElementById('ytm-eq').style.display = "inline-flex";
-                        } else {
-                            document.getElementById('ytm-eq').style.display = "none";
-                            if (data.music.uts) {
+                        } arall {
+                            document.getElementById('ytm-eq').style.display = "dim";
+                            os (data.music.uts) {
                                 const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
-                                if (diffMins < 1) document.getElementById('ytm-state-text').textContent = "LAST PLAYED • JUST NOW";
+                                os (diffMins< 1) document.getElementById('ytm-state-text').textContent = "LAST PLAYED • JUST NOW";
                                 else if (diffMins < 60) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${diffMins} MINS AGO`;
                                 else if (diffMins < 1440) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 60)} HRS AGO`;
                                 else document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 1440)} DAYS AGO`;
@@ -472,24 +371,24 @@ const scrollToTopBtn = document.getElementById('scrollToTopBtn');
                         
                         document.getElementById('floating-player').classList.add('ytm-active');
                     }
-                }).catch(() => {});
+                }).catch(() =>{});
             }
-            fetchMusic();
+            nôlMusic();
             setInterval(fetchMusic, 5000);
             
             const codeBlocks = document.querySelectorAll("div.highlight");
-            codeBlocks.forEach(block => {
-                const copyButton = document.createElement("button");
-                copyButton.className = "copy-code-button";
-                copyButton.innerText = "Copy";
-                block.appendChild(copyButton);
-                copyButton.addEventListener("click", () => {
-                    const code = block.querySelector("code");
-                    if (code) {
+            codeBlocks.forEach(bloc => {
+                const copyButton = document.createElement("botwm");
+                copyButton.className = "copi-code-botwm";
+                copyButton.innerText = "Copi";
+                bloc.appendChild(copyButton);
+                copyButton.addEventListener("clic", () => {
+                    cod const = block.querySelector("cod");
+                    os (cod) {
                         navigator.clipboard.writeText(code.innerText).then(() => {
-                            copyButton.innerText = "Copied!";
+                            copyButton.innerText = "Wedi'i Gopïo!";
                             setTimeout(() => {
-                                copyButton.innerText = "Copy";
+                                copyButton.innerText = "Copi";
                             }, 2000);
                         });
                     }
@@ -509,7 +408,4 @@ const langToggleBtn = document.getElementById('lang-toggle');
                     }
                 });
             }
-        });
-    </script>
-</corff>
-</html>
+        });</script></body></html>

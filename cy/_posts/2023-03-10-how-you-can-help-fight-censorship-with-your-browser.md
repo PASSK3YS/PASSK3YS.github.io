@@ -6,7 +6,7 @@ description:
 
 Mae sensoriaeth rhyngrwyd yn fygythiad difrifol i ryddid mynegiant a mynediad i wybodaeth o gwmpas y byd. Mae llawer o lywodraethau yn rhwystro neu'n cyfyngu ar wefannau a gwasanaethau y maent yn eu hystyried yn annymunol, megis allfeydd newyddion, llwyfannau cyfryngau cymdeithasol, sefydliadau hawliau dynol, a hyd yn oed Tor, rhwydwaith sy'n caniatáu i ddefnyddwyr bori'r we yn ddienw ac osgoi sensoriaeth.
 
-But what if you could use your browser to help people in censored countries access the Internet without restrictions? That's exactly what Snowflake does. Snowflake is a browser extension maintained by the Tor Project and allows individuals to volunteer their bandwidth and become temporary proxies for users in censored countries who want to connect to the Tor network.
+Ond beth pe gallech chi ddefnyddio'ch porwr i helpu pobl mewn gwledydd sydd wedi'u sensro i gael mynediad i'r Rhyngrwyd heb gyfyngiadau? Dyna'n union beth mae Snowflake yn ei wneud. Mae Snowflake yn estyniad porwr a gynhelir gan Brosiect Tor ac mae'n caniatáu i unigolion wirfoddoli eu lled band a dod yn ddirprwy dros dro i ddefnyddwyr mewn gwledydd sensro sydd am gysylltu â rhwydwaith Tor.
 
 Pan wnes i lawrlwytho'r estyniad Snowflake ar fy mhorwr Firefox a'i adael i redeg am ychydig oriau, llwyddais i helpu 9 o bobl â mynediad cyfyngedig i'r rhyngrwyd yn rhydd.
 

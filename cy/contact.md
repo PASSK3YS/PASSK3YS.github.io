@@ -4,58 +4,21 @@ title: Contact
 permalink: /cy/contact/
 ---
 
-<div class="bio-container">
-    <div class="bio-testun">
-        <h1 style="margin: 0 0 10px 0; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythyrau: -1px;">
-            Cysylltwch â <span class="blinking-cursor">_</span>
-        </h1>
-        <p style="font-size: 1.05rem; didreiddedd: 0.9; ymyl: 0;">
-            Gallwch chi fy nghyrraedd gan ddefnyddio'r canlynol ...
-        </p>
-    </div>
-</div>
+<div class="bio-container"><div class="bio-text"><h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">Cysylltwch â<span class="blinking-cursor">_</span></h1><p style="font-size: 1.05rem; opacity: 0.9; margin: 0;">Gallwch chi fy nghyrraedd gan ddefnyddio'r canlynol ...</p></div></div>
 
 <div class="unified-card">
 
-<div class="rhes-ryngweithiol-rhes-unedig">
-        <h3 class="header-soft">_ E-bost</h3>
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <a href="mailto:hi@colfer.net" class="directory-interactive-text">hi@colfer.net</a>
-            <p style="font-size: 0.85rem; lliw: var(--testun-muted); ymyl-brig: 15px; ymyl-gwaelod: 0; uchder llinell: 1.4;">
-                Os ydych chi'n defnyddio Proton Mail, bydd pob cyfathrebiad e-bost yn cael ei amgryptio o'r dechrau i'r diwedd.
-            </p>
-        </div>
-    </div>
+<div class="unified-row interactive-row"><h3 class="soft-header">>_ E-bost</h3><div style="display: flex; flex-direction: column; justify-content: center;"><a href="mailto:hi@colfer.net" class="directory-interactive-text">hi@colfer.net</a><p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; margin-bottom: 0; line-height: 1.4;">Os ydych chi'n defnyddio Proton Mail, bydd pob cyfathrebiad e-bost yn cael ei amgryptio o'r dechrau i'r diwedd.</p></div></div>
 
-<div class="rhes-ryngweithiol-rhes-unedig">
-        <h3 class="header-soft">_ Sgwrs Ddiogel</h3>
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <a href="https://signal.org" target="_blank" class="directory-interactive-text">Signal</a>
-            <p style="font-size: 0.85rem; lliw: var(--testun-muted); ymyl-brig: 15px; ymyl-gwaelod: 0; uchder llinell: 1.4;">
-                Cysylltiadau dibynadwy yn unig.
-            </p>
-        </div>
-    </div>
+<div class="unified-row interactive-row"><h3 class="soft-header">> _ Sgwrs Ddiogel</h3><div style="display: flex; flex-direction: column; justify-content: center;">Signal<a href="https://signal.org" target="_blank" class="directory-interactive-text"></a><p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; margin-bottom: 0; line-height: 1.4;">Cysylltiadau dibynadwy yn unig.</p></div></div>
 
-<div class="unified-row">
-        <h3 class="soft-header">_ Cymuned Discord</h3>
-        <div class="gamertag-list" style="display: flex; gap: 30px; alinio-eitemau: canol; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <span class="gamertag-label">Proton</span> 
-                <a href="https://discord.com/invite/proton" target="_blank" class="directory-interactive-text">Ymuno â Gweinydd</a>
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <span class="gamertag-label">Nodiadau Safonol</span> 
-                <a href="https://discord.com/invite/fxjJFxkRkY" target="_blank" class="directory-interactive-text">Ymuno â Gweinydd</a>
-            </div>
-        </div>
-    </div>
+<div class="unified-row"><h3 class="soft-header">> _ Cymuned Discord</h3><div class="gamertag-list" style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap;"><div style="display: flex; align-items: center; gap: 10px;"><span class="gamertag-label">Proton</span><a href="https://discord.com/invite/proton" target="_blank" class="directory-interactive-text">Ymunwch â Gweinydd</a></div><div style="display: flex; align-items: center; gap: 10px;">Nodiadau Safonol<span class="gamertag-label"></span><a href="https://discord.com/invite/fxjJFxkRkY" target="_blank" class="directory-interactive-text">Ymunwch â Gweinydd</a></div></div></div>
 
 </div>
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<steil>
+<style>
 
 corff, prif, p, a, rhychwant, div, botwm {
     ffont-teulu: 'SUSE', 'JetBrains Mono', system-ui, -apple-system, sans-serif !important;
@@ -195,5 +158,4 @@ pennyn .soft {
         bwlch: 15px;
         padin: 25px 14px;
     }
-}
-</style>
+}</style>

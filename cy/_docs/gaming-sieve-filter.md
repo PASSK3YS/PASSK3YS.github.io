@@ -52,8 +52,7 @@ os o gwbl (
 ) {
     ffeil "Hapchwarae";
     stopio;
-}
-```
+}```
 
 ## Sut i wneud cais
 

@@ -28,5 +28,4 @@ Her: [Rhwystr a wynebwyd gennych a sut y gwnaethoch ei drin]
 
 Gwers a Ddysgwyd: [Sylweddoliad neu ddarn newydd o wybodaeth a gafwyd heddiw]
 
-Addasiad Yfory: [Un peth bach rydych chi am ei wneud yn wahanol neu'n well yfory]
-```
+Addasiad Yfory: [Un peth bach rydych chi am ei wneud yn wahanol neu'n well yfory]```

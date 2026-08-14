@@ -4,64 +4,23 @@ title: Tools
 permalink: /cy/tools/
 ---
 
-<div class="bio-container">
-    <div class="bio-testun">
-        <h1 style="margin: 0 0 10px 0; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythyrau: -1px;">
-            Offer <span class="blinking-cursor">_</span>
-        </h1>
-        <p style="font-size: 1.05rem; didreiddedd: 0.9; ymyl: 0;">
-            Casgliad o offer ac adnoddau ochr y cleient sy'n canolbwyntio ar breifatrwydd.
-        </p>
-    </div>
-</div>
+<div class="bio-container"><div class="bio-text"><h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">Offer<span class="blinking-cursor">_</span></h1><p style="font-size: 1.05rem; opacity: 0.9; margin: 0;">Casgliad o offer ac adnoddau ochr y cleient sy'n canolbwyntio ar breifatrwydd.</p></div></div>
 
 <div class="unified-card">
 
-<a href="/tools/standard-notes-themes/" class="rhes-ryngweithiol-rhes unedig">
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;"> Themâu Nodiadau Safonol</ h2>
-            <p style="font-size: 0.95rem; lliw: var(--testun-muted); ymyl: 0; uchder llinell: 1.5;">
-                Casgliad o themâu wedi'u teilwra gan gynnwys Standard Blue, Dark Mint, a Lights Out.
-            </p>
-            <span class="read-more">Gweld Themâu &rarr;</span>
-        </div>
-    </a>
+<a href="/tools/standard-notes-themes/" class="unified-row interactive-row"><div style="display: flex; flex-direction: column; justify-content: center;">Nodiadau Safonol<h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Themâu</h2><p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Casgliad o themâu wedi'u teilwra gan gynnwys Standard Blue, Dark Mint, a Lights Out.</p><span class="read-more">Gweld Themâu &rarr;</span></div></a>
 
-<a href="/tools/vivaldi-themes/" class="rhes-ryngweithiol-rhes unedig">
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Themâu porwr Vivaldi</h2>
-            <p style="font-size: 0.95rem; lliw: var(--testun-muted); ymyl: 0; uchder llinell: 1.5;">
-                Casgliad o fy Themâu Porwr Vivaldi personol.
-            </p>
-            <span class="read-more">Gweld Themâu &rarr;</span>
-        </div>
-    </a>
+<a href="/tools/vivaldi-themes/" class="unified-row interactive-row"><div style="display: flex; flex-direction: column; justify-content: center;">Themâu porwr<h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Vivaldi</h2><p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Casgliad o fy Themâu Porwr Vivaldi personol.</p><span class="read-more">Gweld Themâu &rarr;</span></div></a>
 
-<a href="/tools/username-generator/" class="rhes-ryngweithiol-rhes unedig">
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Cynhyrchydd Enw Defnyddiwr</h2>
-            <p style="font-size: 0.95rem; lliw: var(--testun-muted); ymyl: 0; uchder llinell: 1.5;">
-                Cynhyrchu enwau defnyddwyr diogel, ar hap gyda geiriau allweddol a rhifau dewisol.
-            </p>
-            <span class="read-more">Offer Agored &rarr;</span>
-        </div>
-    </a>
+<a href="/tools/username-generator/" class="unified-row interactive-row"><div style="display: flex; flex-direction: column; justify-content: center;">Generadur Enw Defnyddiwr<h2 class="directory-interactive-text" style="margin: 0 0 10px 0;"></h2><p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Cynhyrchu enwau defnyddwyr diogel, ar hap gyda geiriau allweddol a rhifau dewisol.</p>Offeryn Agored<span class="read-more">&rarr;</span></div></a>
 
-<a href="/tools/argymhellion/" class="rhes-ryngweithiol-rhes unedig">
-        <div style="display: flex; flex-direction: colofn; cyfiawnhau-cynnwys: canol;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Argymhellion</h2>
-            <p style="font-size: 0.95rem; lliw: var(--testun-muted); ymyl: 0; uchder llinell: 1.5;">
-                Fy rhestr guradu o offer, meddalwedd, a gwasanaethau yr wyf yn eu defnyddio ac yn eu hargymell.
-            </p>
-            <span class="read-more">Gweld y Rhestr &rarr;</span>
-        </div>
-    </a>
+<a href="/tools/recommendations/" class="unified-row interactive-row"><div style="display: flex; flex-direction: column; justify-content: center;">Argymhellion<h2 class="directory-interactive-text" style="margin: 0 0 10px 0;"></h2><p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Fy rhestr guradu o offer, meddalwedd, a gwasanaethau yr wyf yn eu defnyddio ac yn eu hargymell.</p><span class="read-more">Rhestr Gweld &rarr;</span></div></a>
 
 </div>
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<steil>
+<style>
 
 corff, prif, h1, h2, h3, p, a, rhychwant, div, botwm {
     font-family: 'SUSE', sans-serif !pwysig;
@@ -179,5 +138,4 @@ cyn, cod {
     .unified-res {
         padin: 25px 14px;
     }
-}
-</style>
+}</style>

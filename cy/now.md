@@ -7,8 +7,7 @@ last_updated: 2026-08-14
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<steil>
-corff, prif, p, a, rhychwant, li{
+<style>corff, prif, p, a, rhychwant, li{
     font-family: 'SUSE', sans-serif !pwysig;
 }
 h1, h2, h3 {
@@ -127,49 +126,18 @@ pennyn .soft {
         bwlch: 15px;
         padin: 25px 14px;
     }
-}
-</style>
+}</style>
 
-<div class="page-content">
-    <h1 style="margin: 0 0 10px 0; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythyrau: -1px;">
-        Nawr <span class="blinking-cursor">_</span>
-    </h1>
-    <p style="font-size: 1.05rem; didreiddedd: 0.9; ymyl: 0 0 30px 0;"> Ciplun o'r hyn sy'n cymryd fy amser a fy sylw ar hyn o bryd.</p>
+<div class="page-content"><h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">Nawr<span class="blinking-cursor">_</span></h1><p style="font-size: 1.05rem; opacity: 0.9; margin: 0 0 30px 0;">Ciplun o'r hyn sy'n cymryd fy amser a fy sylw ar hyn o bryd.</p>
 
-<div class="unified-card">
-        
-        <div class="rhes-ryngweithiol-rhes-unedig">
-            <h3 class="soft-header">_ Gweithio ar</h3>
-            <ul class="hacker-list">
-                <li><strong>Ceisio colli pwysau</strong></li>
-            </ul>
-        </div>
+<div class="unified-card"><div class="unified-row interactive-row"><h3 class="soft-header">> _ Yn gweithio ar</h3><ul class="hacker-list"><li><strong>Ceisio colli pwysau</strong></li></ul></div>
 
-<div class="rhes-ryngweithiol-rhes-unedig">
-            <h3 class="soft-header">_ Yn chwarae</h3>
-            <ul class="hacker-list">
-                <li><strong>Marw Erbyn Golau Dydd</strong></li>
-            </ul>
-        </div>
+<div class="unified-row interactive-row"><h3 class="soft-header">> _ Chwarae</h3><ul class="hacker-list"><li><strong>Marw Gan Oleuni Dydd</strong></li></ul></div>
 
-<div class="rhes-ryngweithiol-rhes-unedig">
-            <h3 class="header-soft">_ Gwylio</h3>
-            <ul class="hacker-list">
-                <li><strong>Tŷ'r Ddraig</strong> ar HBO Max</li>
-                <li><strong>Marchog y Saith Teyrnas</strong> ar HBO Max</li>
-            </ul>
-        </div>
+<div class="unified-row interactive-row"><h3 class="soft-header">>_ Gwylio</h3><ul class="hacker-list"><li><strong>Ty'r Ddraig</strong>ar HBO Max</li><li><strong>Marchog y Saith Teyrnas</strong>ar HBO Max</li></ul></div>
 
-<div class="rhes-ryngweithiol-rhes-unedig">
-            <h3 class="header-soft">_ Gwrando ar</h3>
-            <ul class="hacker-list">
-                <li><strong>Unrhyw gân Batmobile</strong></li>
-            </ul>
-        </div>
+<div class="unified-row interactive-row"><h3 class="soft-header">> _ Gwrando ar</h3><ul class="hacker-list"><li><strong>Unrhyw gân Batmobile</strong></li></ul></div>
 
 </div>
 
-<div style="text-align: right; margin-top: 10px;">
-        <p class="unified-meta" style="opacity: 0.6; display: inline-block;"> Diweddarwyd ddiwethaf: {{ page.last_updated | date: "%d %m %Y" }}</p>
-    </div>
-</div>
+<div style="text-align: right; margin-top: 10px;"><p class="unified-meta" style="opacity: 0.6; display: inline-block;">Wedi'i ddiweddaru ddiwethaf:{{ page.last_updated | date: "%d %m %Y" }}</p></div></div>

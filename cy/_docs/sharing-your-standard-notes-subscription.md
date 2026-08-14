@@ -21,7 +21,7 @@ Cyn dilyn y camau hyn, mae angen i chi sicrhau bod y person rydych chi am rannu'
 Yna bydd y gwahoddwr yn cael e-bost sy'n cynnwys dolen y gellir ei chlicio.
 Wrth glicio ar y ddolen, dylent gael deialog testun yn nodi'r canlynol;
 
-`{ "meta":{ "auth":{}, "server":{ "filesServerUrl": "https://files.standardnotes.com" }}, "data":{ "llwyddiant": true}}`
+`{"meta":{"auth":{},"server":{"filesServerUrl":"https://files.standardnotes.com"}},"data":{"success":true}}`
 
 Llongyfarchiadau! Rydych chi wedi rhannu'ch tanysgrifiad yn llwyddiannus.
 

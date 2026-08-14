@@ -6,143 +6,41 @@ permalink: /cy/tools/recommendations/
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<div class="page-content">
-<a href="/tools/" class="back-link">&larr; Yn ôl i Offer</a>
+<div class="page-content"><a href="/tools/" class="back-link">&larr; Yn ôl i Offer</a>
 
-<h1 style="margin-top: 10px;"> Offer a gwasanaethau rwy'n eu hargymell</ h1>
-  <p>Mae'r dudalen hon yn cynnwys sero dolen gyswllt.<br>
-  Fy argymhellion yn seiliedig ar ddefnydd personol ac ymddiriedaeth:</p>
+<h1 style="margin-top: 10px;">Offer a gwasanaethau rwy'n argymell</h1><p>Mae'r dudalen hon yn cynnwys sero cysylltiadau cyswllt.<br>Fy argymhellion yn seiliedig ar ddefnydd personol ac ymddiriedaeth:</p>
 
 <hr>
 
-<div class="grid-container">
-      <div class="grid-item">
-          <h3>💻 Porwr</h3>
-          <ul>
-              <li><a href="https://vivaldi.com" target="_blank">Vivaldi</a></li>
-              <li><a href="https://helium.computer" target="_blank">Heliwm</a></li>
-              <li><a href="https://floorp.app" target="_blank">Llawr</a></li>
-              <li><a href="https://mullvad.net/en/browser" target="_blank">Porwr Mullvad</a></li>
-          </ul>
-      </div>
+<div class="grid-container"><div class="grid-item"><h3>💻 Porwr</h3><ul><li><a href="https://vivaldi.com" target="_blank">Vivaldi</a></li><li><a href="https://helium.computer" target="_blank">Heliwm</a></li><li><a href="https://floorp.app" target="_blank">Floorp</a></li>Porwr Mullvad<li><a href="https://mullvad.net/en/browser" target="_blank"></a></li></ul></div>
 
-<div class="grid-item">
-          <h3>📆 Calendr</h3>
-          <ul>
-              <li><a href="https://proton.me/calendar" target="_blank">Calendr Proton</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>📆 Calendr</h3><ul>Calendr Proton<li><a href="https://proton.me/calendar" target="_blank"></a></li></ul></div>
 
-<div class="grid-item">
-          <h3>🗨️ Sgwrs</h3>
-          <ul>
-              <li><a href="https://signal.org" target="_blank">Signal</a></li>
-              <li><a href="https://simplex.chat/" target="_blank">Sgwrs SimpleX</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>🗨️ Sgwrs</h3><ul>Signal<li><a href="https://signal.org" target="_blank"></a></li>Sgwrs<li><a href="https://simplex.chat/" target="_blank">SimpleX</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>☁️ Storio Cwmwl</h3>
-          <ul>
-              <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
-              <li><a href="https://filen.io" target="_blank">Ffeil</a></li>
-              <li><a href="https://cryptomator.org" target="_blank">Cryptomator</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>☁️ Storio Cwmwl</h3><ul>Gyriant Proton<li><a href="https://proton.me/drive" target="_blank"></a></li>Ffeil<li><a href="https://filen.io" target="_blank"></a></li><li><a href="https://cryptomator.org" target="_blank">Cryptomator</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>✉️ E-bost</h3>
-          <ul>
-              <li><a href="https://proton.me/mail" target="_blank">Post Proton</a></li>
-              <li><a href="https://tuta.com" target="_blank">Tuta</a></li>
-              <li><a href="https://fastmail.com" target="_blank">Fastmail</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>✉️ E-bost</h3><ul>Post Proton<li><a href="https://proton.me/mail" target="_blank"></a></li><li><a href="https://tuta.com" target="_blank">Tuta</a></li><li><a href="https://fastmail.com" target="_blank">Fastmail</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>📄 Dogfennau a Thaenlenni</h3>
-          <ul>
-              <li><a href="https://proton.me/docs" target="_blank">Proton Docs</a></li>
-              <li><a href="https://proton.me/sheets" target="_blank">Dalenni Proton</a></li>
-              <li><a href="https://cryptpad.fr" target="_blank">CryptPad</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>📄 Dogfennau a Thaenlenni</h3><ul><li><a href="https://proton.me/docs" target="_blank">Proton Docs</a></li>Taflenni Proton<li><a href="https://proton.me/sheets" target="_blank"></a></li><li><a href="https://cryptpad.fr" target="_blank">CryptPad</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>📧 Aliasing E-bost</h3>
-          <ul>
-              <li><a href="https://simplelogin.io" target="_blank">Mewngofnodi Syml</a></li>
-              <li><a href="https://addy.io" target="_blank">Addy.io</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>📧 E-bost Aliasing</h3><ul><li><a href="https://simplelogin.io" target="_blank">SimpleLogin</a></li><li><a href="https://addy.io" target="_blank">Addy.io</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>📓 Nodiadau</h3>
-          <ul>
-              <li><a href="https://standardnotes.com" target="_blank">Nodiadau Safonol</a></li>
-              <li><a href="https://joplinapp.org" target="_blank">Joplin</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>📓 Nodiadau</h3><ul>Nodiadau Safonol<li><a href="https://standardnotes.com" target="_blank"></a></li><li><a href="https://joplinapp.org" target="_blank">Joplin</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>🪪 Rheolwr Cyfrinair</ h3>
-          <ul>
-              <li><a href="https://proton.me/pass" target="_blank">Tocyn Proton</a></li>
-              <li><a href="https://bitwarden.com" target="_blank">Bitwarden</a></li>
-              <li><a href="https://1password.com" target="_blank">1 Cyfrinair</a></li>
-              <li><a href="https://keepassxc.org/" target="_blank">KeePassXC</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>🪪 Rheolwr Cyfrinair</h3><ul>Pas Proton<li><a href="https://proton.me/pass" target="_blank"></a></li><li><a href="https://bitwarden.com" target="_blank">Bitwarden</a></li><li><a href="https://1password.com" target="_blank">1Password</a></li><li><a href="https://keepassxc.org/" target="_blank">KeePassXC</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>📷 Rheoli Lluniau</h3>
-          <ul>
-              <li><a href="https://ente.com" target="_blank">Ente</a></li>
-              <li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li>
-              <li><a href="https://immich.app" target="_blank">Immich</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>📷 Rheoli Ffotograffau</h3><ul><li><a href="https://ente.com" target="_blank">Ente</a></li><li><a href="https://proton.me/drive" target="_blank">Proton Drive</a></li><li><a href="https://immich.app" target="_blank">Immich</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>🔍 Peiriant Chwilio</h3>
-          <ul>
-              <li><a href="https://kagi.com" target="_blank">Kagi</a></li>
-              <li><a href="https://duckduckgo.com" target="_blank">DuckDuckGo</a></li>
-              <li><a href="https://search.brave.com" target="_blank">Chwiliad Dewr</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>🔍 Peiriant Chwilio</h3><ul><li><a href="https://kagi.com" target="_blank">Kagi</a></li><li><a href="https://duckduckgo.com" target="_blank">DuckDuckGo</a></li><li><a href="https://search.brave.com" target="_blank">Chwiliad Dewr</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>🛡️ VPN</h3>
-          <ul>
-              <li><a href="https://protonvpn.com" target="_blank">Proton VPN</a></li>
-              <li><a href="https://windscribe.com" target="_blank">Windscribe</a></li>
-              <li><a href="https://mullvad.net" target="_blank">Mullvad VPN</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>🛡️ VPN</h3><ul><li><a href="https://protonvpn.com" target="_blank">Proton VPN</a></li><li><a href="https://windscribe.com" target="_blank">Windscribe</a></li><li><a href="https://mullvad.net" target="_blank">Mullvad VPN</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>🌐 DNS</h3>
-          <ul>
-              <li><a href="https://nextdns.io/" target="_blank">NesafDNS</a></li>
-              <li><a href="https://controld.com" target="_blank">Rheoli D</a></li>
-              <li><a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank">Mullvad DNS</a></li>
-          </ul>
-      </div>
+<div class="grid-item"><h3>🌐 DNS</h3><ul><li><a href="https://nextdns.io/" target="_blank">NextDNS</a></li>Rheoli<li><a href="https://controld.com" target="_blank">D</a></li><li><a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank">Mullvad DNS</a></li></ul></div>
 
-<div class="grid-item">
-          <h3>🐧 OS</h3>
-          <ul>
-              <li><a href="https://cachyos.org/" target="_blank">CachyOS</a></li>
-              <li><a href="https://www.fedoraproject.org/" target="_blank">Fedora</a></li>
-              <li><a href="https://zorin.com/os/" target="_blank">ZorinOS</a></li>
-              <li><a href="https://linuxmint.com/" target="_blank">Linux Mint</a></li>
-          </ul>
-      </div>
-  </div>
-</div>
+<div class="grid-item"><h3>🐧 OS</h3><ul><li><a href="https://cachyos.org/" target="_blank">CachyOS</a></li><li><a href="https://www.fedoraproject.org/" target="_blank">Fedora</a></li><li><a href="https://zorin.com/os/" target="_blank">ZorinOS</a></li><li><a href="https://linuxmint.com/" target="_blank">Linux Mint</a></li></ul></div></div></div>
 
-<steil>
+<style>
 
 corff, prif, p, a, rhychwant, div, botwm, li{
     font-family: 'SUSE', sans-serif !pwysig;
@@ -213,5 +111,4 @@ cyn, cod {
     didreiddedd: 1;
     lliw: var (--acen);
     testun-addurn: tanlinellu;
-}
-</style>
+}</style>
