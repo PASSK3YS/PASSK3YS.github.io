@@ -4,7 +4,7 @@ import re
 from deep_translator import MyMemoryTranslator
 
 os.makedirs('cy', exist_ok=True)
-translator = MyMemoryTranslator(source='en', target='cy')
+translator = MyMemoryTranslator(source='en-GB', target='cy-GB')
 
 for filepath in glob.glob('*.md'):
     if filepath == 'README.md' or filepath.startswith('cy/'):
