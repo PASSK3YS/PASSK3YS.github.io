@@ -156,6 +156,7 @@ h1, h2, h3 {
             <h3 class="soft-header">>_ Watching</h3>
             <ul class="hacker-list">
                 <li><strong>House of the Dragon</strong> on HBO Max</li>
+                <li><strong>A Knight of the Seven Kingdoms</strong> on HBO Max</li>
             </ul>
         </div>
 
