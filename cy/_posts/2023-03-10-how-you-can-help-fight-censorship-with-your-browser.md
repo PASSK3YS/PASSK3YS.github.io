@@ -4,18 +4,18 @@ title: How you can help fight Internet censorship with your browser
 description:
 ---
 
-Internet censorship is a serious threat to freedom of expression and access to information around the world. Many governments block or restrict websites and services that they deem undesirable, such as news outlets, social media platforms, human rights organisations, and even Tor, a network that allows users to browse the web anonymously and circumvent censorship.
+Mae sensoriaeth rhyngrwyd yn fygythiad difrifol i ryddid mynegiant a mynediad i wybodaeth o gwmpas y byd. Mae llawer o lywodraethau yn rhwystro neu'n cyfyngu ar wefannau a gwasanaethau y maent yn eu hystyried yn annymunol, megis allfeydd newyddion, llwyfannau cyfryngau cymdeithasol, sefydliadau hawliau dynol, a hyd yn oed Tor, rhwydwaith sy'n caniatáu i ddefnyddwyr bori'r we yn ddienw ac osgoi sensoriaeth.
 
 But what if you could use your browser to help people in censored countries access the Internet without restrictions? That's exactly what Snowflake does. Snowflake is a browser extension maintained by the Tor Project and allows individuals to volunteer their bandwidth and become temporary proxies for users in censored countries who want to connect to the Tor network.
 
-When I downloaded the Snowflake extension on my Firefox browser and left it to run for a few hours, I managed to help 9 people with restricted internet access the web freely.
+Pan wnes i lawrlwytho'r estyniad Snowflake ar fy mhorwr Firefox a'i adael i redeg am ychydig oriau, llwyddais i helpu 9 o bobl â mynediad cyfyngedig i'r rhyngrwyd yn rhydd.
 
-![snowflake-extension](https://cdn.horizon.pics/DLfoxJTLV3.png)
+![estyniad pluen eira]( https://cdn.horizon.pics/DLfoxJTLV3.png)
 
-## How does Snowflake work?
-Snowflake works by creating a constantly moving mesh of proxies that no government could ever block. Once you install and enable the extension in your browser (available for Chromium browsers and Firefox), you will see a snowflake icon on your toolbar. When the icon turns green, it means that a censored user is connecting through your extension to access the Internet via Tor. You don't need to do anything else; just keep your browser open and let Snowflake do its magic.
+## Sut mae Snowflake yn gweithio?
+Mae pluen eira yn gweithio trwy greu rhwyll o ddirprwyon sy'n symud yn gyson na allai unrhyw lywodraeth byth eu rhwystro. Ar ôl i chi osod a galluogi'r estyniad yn eich porwr (ar gael ar gyfer porwyr Chromium a Firefox), fe welwch eicon pluen eira ar eich bar offer. Pan fydd yr eicon yn troi'n wyrdd, mae'n golygu bod defnyddiwr wedi'i sensro yn cysylltu trwy'ch estyniad i gael mynediad i'r Rhyngrwyd trwy Tor. Nid oes angen i chi wneud unrhyw beth arall; cadwch eich porwr ar agor a gadael i Snowflake wneud ei hud.
 
-## How can I join Snowflake?
-Joining Snowflake is easy and safe. You don't need any technical skills or special configuration; just download and install the extension from the Chrome Web Store or Firefox Add-ons. You can also visit [snowflake.torproject.org](snowflake.torproject.org) for more information and instructions.
+## Sut alla i ymuno â Snowflake?
+Mae ymuno â Snowflake yn hawdd ac yn ddiogel. Nid oes angen unrhyw sgiliau technegol na chyfluniad arbennig arnoch; lawrlwythwch a gosodwch yr estyniad o Chrome Web Store neu Firefox Add-ons. Gallwch hefyd ymweld â [snowflake.torproject.org](snowflake.torproject.org) am ragor o wybodaeth a chyfarwyddiadau.
 
-The more people that download the Snowflake extension, the easier it will be to help people in censored countries access the Internet without restrictions.
+Po fwyaf o bobl sy'n lawrlwytho estyniad Snowflake, yr hawsaf fydd hi i helpu pobl mewn gwledydd sydd wedi'u sensro i gael mynediad i'r Rhyngrwyd heb gyfyngiadau.

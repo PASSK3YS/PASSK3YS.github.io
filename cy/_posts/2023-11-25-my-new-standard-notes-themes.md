@@ -4,43 +4,43 @@ title: My new Standard Notes themes
 description:
 ---
 
-I recently made some custom themes for Standard Notes. Since then I have been experimenting more and these are my latest themes. I thought I'd share them with my readers.
+Yn ddiweddar, gwnes rai themâu arfer ar gyfer Nodiadau Safonol. Ers hynny rwyf wedi bod yn arbrofi mwy a dyma fy themâu diweddaraf. Roeddwn i'n meddwl y byddwn i'n eu rhannu gyda'm darllenwyr.
 
-Introducing Standard Blue and Standard Blue Dark.
-Both of these themes are free to install without a Standard Notes paid subscription.
+Cyflwyno Standard Blue a Standard Blue Dark.
+Mae'r ddwy thema hyn yn rhad ac am ddim i'w gosod heb danysgrifiad taledig Nodiadau Safonol.
 
-I welcome all feedback about these themes! Please reach out to me on the Standard Notes Discord
+Rwy'n croesawu pob adborth am y themâu hyn! Cysylltwch â mi ar y Discord Nodiadau Safonol
 
-GitHub Repos
-If you like these themes, I would appreciate it if you could star the GitHub repos.
+Repos GitHub
+Os ydych chi'n hoffi'r themâu hyn, byddwn yn gwerthfawrogi pe gallech serennu'r repos GitHub.
 
-[Standard Blue](https://github.com/m00t316/standard-blue)
+[Standard Blue]( https://github.com/m00t316/standard-blue)
 
 [Standard Blue Dark](https://github.com/m00t316/standard-blue-dark)
 
 ---
 
-## Standard Blue
+## Glas Safonol
 
-![Standard Blue](https://files.horizon.pics/9107e89e-afd9-421b-aca2-6acd6f2355b8?a=480&mime1=image&mime2=png)
+![Standard Blue]( https://files.horizon.pics/9107e89e-afd9-421b-aca2-6acd6f2355b8?a=480&mime1=image&mime2=png )
 
-Standard Blue is a theme that features different light shades of blue. It is inspired by the Standard Notes branding. It also includes a custom font.
+Mae Standard Blue yn thema sy'n cynnwys gwahanol arlliwiau golau glas. Mae wedi'i ysbrydoli gan frandio Standard Notes. Mae hefyd yn cynnwys ffont wedi'i deilwra.
 
-How to install:
+Sut i osod:
 
-To install, go to preferences > general > advanced options
+I osod, ewch i dewisiadau > cyffredinol > opsiynau uwch
 
-Paste the following link in the text box:
+Gludwch y ddolen ganlynol yn y blwch testun:
 
-`https://notes.m00t.xyz/p/gWG2LYgCPH (outdated link)`
+` https://notes.m00t.xyz/p/gWG2LYgCPH (dolen hen ffasiwn)`
 
 
 ## Standard Blue Dark
 
-![Standard Blue Dark](https://files.horizon.pics/2f0c6f85-bf24-46d7-a7f3-038157d8c346?a=480&mime1=image&mime2=png)
+![Standard Blue Dark]( https://files.horizon.pics/2f0c6f85-bf24-46d7-a7f3-038157d8c346?a=480&mime1=image&mime2=png)
 
-Standard Blue Dark is the dark themed version of Standard Blue. It has elements from the light theme, but made AMOLED friendly.
+Standard Blue Dark yw'r fersiwn thema dywyll o Standard Blue. Mae ganddo elfennau o'r thema ysgafn, ond mae wedi'i wneud yn gyfeillgar i AMOLED.
 
-How to install:
+Sut i osod:
 
-UPDATE: This theme is now included in the official Standard Notes Community Plugins repository. It can be installed directly in the Standard Notes application via the Plugins menu.
+DIWEDDARIAD: Mae'r thema hon bellach wedi'i chynnwys yn y storfa swyddogol Ategion Cymunedol Nodiadau Safonol. Gellir ei osod yn uniongyrchol yn y rhaglen Nodiadau Safonol trwy'r ddewislen Ategion.

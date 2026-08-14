@@ -4,8 +4,8 @@ title: I gave Elon Musk my $8
 description: I bit the bullet.
 ---
 
-Insert the meme here:
-![](https://cdn.horizon.pics/jtUnFfWK3t.jpg)
+Mewnosodwch y meme yma:
+![]( https://cdn.horizon.pics/jtUnFfWK3t.jpg)
 
-Technically I gave Elon more than $8 (Thanks VAT), but now I get the cool blue checkmark on my [Twitter](https://twitter.com/PASSK3YS) account everyone's been raving about.
-Probably only for a month though... I'll enjoy it while it lasts.
+Yn dechnegol rhoddais fwy na $8 (Diolch TAW) i Elon, ond nawr dwi'n cael y marc gwirio glas cŵl ar fy nghyfrif [Twitter](https://twitter.com/PASSK3YS) mae pawb wedi bod yn chwilota amdano.
+Mae'n debyg mai dim ond am fis serch hynny... byddaf yn ei fwynhau tra bydd yn para.

@@ -6,7 +6,7 @@ category: Standard Notes
 image: https://kieran.colfer.net/assets/docs-thumbnail.png
 ---
 
-Rwy'n cael llawer o bobl yn gofyn imi sut y gallaf ychwanegu delweddau at rai o fy swyddi blog ar Listed.to. Credwch neu beidio, mae'n hawdd iawn ychwanegu delweddau at eich postiadau blog Rhestredig eich hun. Byddaf yn dangos i chi sut i wneud hynny yn y canllaw hwn.
+Rwy'n cael llawer o bobl yn gofyn imi sut y gallaf ychwanegu delweddau at rai o'm postiadau blog ar Listed.to. Credwch neu beidio, mewn gwirionedd mae'n syml iawn ychwanegu delweddau at eich postiadau blog Rhestredig eich hun. Byddaf yn dangos i chi sut i wneud hynny yn y canllaw Sut i wneud hyn.
 
 ---
 
@@ -42,4 +42,4 @@ Copy and paste the following into the note:
 
 ---
 
-Os oes angen cymorth arnoch, peidiwch ag oedi cyn cysylltu â mi trwy e - bost.
+Os oes angen cymorth arnoch, peidiwch ag oedi cyn cysylltu â mi trwy e-bost.

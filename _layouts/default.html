@@ -1,3 +1,19 @@
+{% assign lang_prefix = "" %}
+{% assign nav_about = "About" %}
+{% assign nav_contact = "Contact" %}
+{% assign nav_docs = "Docs" %}
+{% assign nav_tools = "Tools" %}
+{% assign nav_blog = "Blog" %}
+
+{% if page.url contains '/cy/' %}
+    {% assign lang_prefix = "/cy" %}
+    {% assign nav_about = "Amdanom" %}
+    {% assign nav_contact = "Cysylltu" %}
+    {% assign nav_docs = "Dogfennau" %}
+    {% assign nav_tools = "Offer" %}
+    {% assign nav_blog = "Blog" %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -273,18 +289,18 @@
         .scroll-to-top:hover { transform: translateY(-4px); }
     </style>
 
-    <link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" />
+<link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" />
 </head>
 <body>
 
     <header>
         <div class="nav-header">
             <div class="nav-scroll">
-                <a href="/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>About</a>
-                <a href="/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>Contact</a>
-                <a href="/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>Docs</a>
-                <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
-                <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
+                <a href="{{ lang_prefix }}/" {% if page.url == '/' or page.url == '/cy/' or page.url == '/index.html' or page.url == '/cy/index.html' %}class="active"{% endif %}>{{ nav_about }}</a>
+                <a href="{{ lang_prefix }}/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>{{ nav_contact }}</a>
+                <a href="{{ lang_prefix }}/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>{{ nav_docs }}</a>
+                <a href="{{ lang_prefix }}/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>{{ nav_tools }}</a>
+                <a href="{{ lang_prefix }}/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>{{ nav_blog }}</a>
             </div>
             <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">EN / CY</button>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
@@ -347,7 +363,7 @@
                         </a>
                     </p>
                     <div style="margin-top: 15px;">
-                        <a href="/privacy/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; opacity: 0.8;">Privacy Policy</a>
+                        <a href="{{ lang_prefix }}/privacy/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; opacity: 0.8;">Privacy Policy</a>
                     </div>
                 </div>
             </div>

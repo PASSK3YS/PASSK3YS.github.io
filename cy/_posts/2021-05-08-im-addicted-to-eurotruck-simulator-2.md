@@ -4,16 +4,16 @@ title: I'm addicted to Euro Truck Simulator 2
 description: Loaded up and truckin'.
 ---
 
-Y rheswm nad wyf wedi bod yn blogio llawer dros y 3 mis diwethaf yn syml oherwydd bod gen i ddibyniaeth... Mae caethiwed i losgi ar Euro Truck Efelychydd 2.
+Y rheswm pam nad ydw i wedi bod yn blogio llawer dros y 3 mis diwethaf yw'r rheswm syml bod gen i ddibyniaeth... Caethiwed i lorio ar Euro Truck Simulator 2 .
 
-I've sunk just over 125 hours into the game and I've been building up my fleet of trucks in my logistics company. Not to mention that I purchased pretty much every DLC the game has to offer so I've been driving all the way across Europe, exploring all different towns and cities the game has to offer. I've driven into coutries in northern Europe including Sweden, Denmark, Norway & Finland. I've also been exporing in eastern Europe like parts of Russia, Poland and other countries. With all of this time played in the game, I still have only around 40% of the full map explored!
+Rwyf wedi suddo ychydig dros 125 awr i mewn i'r gêm ac rwyf wedi bod yn adeiladu fy fflyd o lorïau yn fy nghwmni logisteg. Heb sôn fy mod wedi prynu bron bob DLC sydd gan y gêm i'w gynnig felly rydw i wedi bod yn gyrru'r holl ffordd ar draws Ewrop, yn archwilio'r holl drefi a dinasoedd gwahanol sydd gan y gêm i'w cynnig. Rwyf wedi gyrru i wledydd yng ngogledd Ewrop gan gynnwys Sweden, Denmarc, Norwy a'r Ffindir. Rwyf hefyd wedi bod yn exporing yn nwyrain Ewrop fel rhannau o Rwsia, Gwlad Pwyl a gwledydd eraill. Gyda'r holl amser hwn yn cael ei chwarae yn y gêm, dim ond tua 40% o'r map llawn a archwiliwyd gennyf o hyd!
 
-With all of this driving around Europe, I needed a good reliable truck that I could drive to take me to all of these places and the truck I chose for it was the Scania S-Series.
+Gyda hyn i gyd yn gyrru o gwmpas Ewrop, roedd angen lori ddibynadwy dda arnaf y gallwn ei yrru i fynd â mi i bob un o'r lleoedd hyn a'r lori a ddewisais ar ei gyfer oedd y Scania S-Series.
 
-I am going to continue to explore more of the map and haul cargo across Europe while also building up my trucking empire. I can easily see myself having over 500 hours played soon. And with the addition of the new convoy experimental beta for ETS2, it's going to be a lot more fun trucking across Europe with some of my friends.
+Rydw i'n mynd i barhau i archwilio mwy o'r map a chludo cargo ar draws Ewrop tra hefyd yn adeiladu fy ymerodraeth lori. Gallaf yn hawdd weld fy hun yn cael dros 500 o oriau chwarae yn fuan. A chyda'r beta arbrofol confoi newydd ar gyfer ETS2 yn cael ei ychwanegu, mae'n mynd i fod yn llawer mwy o hwyl yn gyrru ar draws Ewrop gyda rhai o fy ffrindiau.
 
-I've also driven and own other trucks in ETS2. These are a couple screenshots of some of the trucks I own in the game:
+Rwyf hefyd wedi gyrru ac yn berchen ar lorïau eraill yn ETS2. Dyma ychydig o sgrinluniau o rai o'r tryciau rwy'n berchen arnynt yn y gêm:
 
-![Eurotruck Simulator 2](https://files.horizon.pics/bb2eb792-6c67-464e-b3a2-349b11c2d3a6?a=480&region=eu-central&mime1=image&mime2=jpeg)
+![Eurotruck Efelychydd 2]( https://files.horizon.pics/bb2eb792-6c67-464e-b3a2-349b11c2d3a6?a=480&region=eu-central&mime1=image&mime2=jpeg )
 
-![Eurotruck Simulator 2](https://files.horizon.pics/d860e7fc-f8db-4048-8cb4-04eb917da4d2?a=480&region=eu-central&mime1=image&mime2=jpeg)
+![Eurotruck Efelychydd 2]( https://files.horizon.pics/d860e7fc-f8db-4048-8cb4-04eb917da4d2?a=480&region=eu-central&mime1=image&mime2=jpeg )

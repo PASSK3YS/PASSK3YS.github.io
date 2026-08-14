@@ -4,145 +4,145 @@ title: Cinema Watchlist - 2023
 permalink: /cy/cinema-watchlist/2023/
 ---
 
-<style>
-.page-header {
-    text-align: center;
-    margin-bottom: 40px;
+<steil>
+.pennawd tudalen {
+    testun-alinio: canol;
+    ymyl-gwaelod: 40px;
 }
-.main-title {
-    font-size: 2.5em;
-    color: var(--text);
-    margin: 0 0 10px 0;
+.prif-deitl {
+    ffont-maint: 2.5em;
+    lliw: var (--testun);
+    ymyl: 0 0 10px 0;
 }
 .year-nav {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    arddangos: fflecs;
+    bwlch: 15px;
+    cyfiawnhau-cynnwys: center;
+    alinio-eitemau: canol;
+    fflecs-lapio: lapio;
 }
-.year-nav a {
-    text-decoration: none;
-    border-bottom: none !important;
-    padding: 6px 18px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+.blwyddyn-nav a {
+    addurno testun: dim;
+    ymyl-gwaelod: dim !pwysig;
+    padin: 6px 18px;
+    radiws ffin: 25px;
+    trawsnewid: rhwyddineb 0.3s i gyd;
 }
-.year-inactive {
-    color: var(--text-muted);
-    opacity: 0.5;
+.blwyddyn anweithredol {
+    lliw: var (--testun-tewi);
+    didreiddedd: 0.5;
 }
-.year-inactive:hover {
-    color: var(--text);
-    opacity: 1;
-    background-color: var(--nav-bg);
+.blwyddyn anweithredol: hofran {
+    lliw: var (--testun);
+    didreiddedd: 1;
+    lliw cefndir: var(--nav-bg);
 }
-.year-active {
-    color: var(--accent);
-    font-weight: bold;
-    background-color: var(--border);
-    box-shadow: 0 0 10px var(--accent-glow);
+.blwyddyn-weithredol {
+    lliw: var (--acen);
+    ffont-pwysau: beiddgar;
+    lliw cefndir: var (--ffin);
+    cysgod bocs: 0 0 10px var(--acen-glow);
 }
-.watch-count {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.gwylio-cyfrif {
+    maint y ffont: 0.9rem;
+    ffont-pwysau: beiddgar;
+    lliw: var (--acen);
+    testun-trawsnewid: priflythrennau;
+    bylchau rhwng llythyrau: 2px;
 }
 .controls-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 15px;
+    arddangos: fflecs;
+    cyfiawnhau-cynnwys: center;
+    alinio-eitemau: canol;
+    bwlch: 20px;
+    ymyl-brig: 15px;
 }
 .sort-btn {
-    background-color: var(--nav-bg);
-    color: var(--text);
-    border: 1px solid var(--border);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    lliw cefndir: var(--nav-bg);
+    lliw: var (--testun);
+    ffin: var solet 1px (--ffin);
+    padin: 6px 16px;
+    radiws ffin: 20px;
+    ffont-deulu: etifeddu;
+    maint y ffont: 0.85rem;
+    ffont-pwysau: beiddgar;
+    cyrchwr: pwyntydd;
+    pontio: rhwyddineb 0.2s i gyd;
+    testun-trawsnewid: priflythrennau;
+    bylchau rhwng llythyrau: 1px;
 }
-.sort-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    box-shadow: 0 0 10px var(--accent-glow);
+.sort-btn:hofran {
+    lliw border: var (--acen);
+    lliw: var (--acen);
+    cysgod bocs: 0 0 10px var(--acen-glow);
 }
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+.grid ffilm {
+    arddangos: grid;
+    grid-templed-colofnau: ailadrodd (awto-lenwi, minmax (350px, 1fr));
+    bwlch: 20px;
+    uchafswm-lled: 1000px;
+    ymyl: 0 auto;
 }
-.movie-card {
-    display: flex;
-    align-items: center;
-    background-color: var(--nav-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+cerdyn ffilm {
+    arddangos: fflecs;
+    alinio-eitemau: canol;
+    lliw cefndir: var(--nav-bg);
+    ffin: var solet 1px (--ffin);
+    border-radiws: 12px;
+    padin: 15px;
+    gorlif: cudd;
+    pontio: trawsnewid rhwyddineb 0.3s, blwch-cysgod 0.3s rhwyddineb, border-lliw 0.3s rhwyddineb;
 }
-.movie-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    border-color: var(--accent);
+.movie-card: hofran {
+    trawsnewid: translateY(-4px);
+    cysgod blwch: 0 8px 20px rgba(0, 0, 0, 0.3);
+    lliw border: var (--acen);
 }
 .movie-thumbnail {
-    width: 100px;
-    height: 150px;
-    object-fit: cover;
-    background-color: var(--bg);
-    flex-shrink: 0;
-    border-radius: 8px;
-    margin-right: 20px;
-    border: 1px solid var(--border);
+    lled: 100px;
+    uchder: 150px;
+    gwrthrych-ffit: clawr;
+    lliw cefndir: var(--bg);
+    fflecs-crebachu: 0;
+    radiws ffin: 8px;
+    ymyl-dde: 20px;
+    ffin: var solet 1px (--ffin);
 }
-.movie-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.film-gwybodaeth {
+    arddangos: fflecs;
+    fflecs-cyfeiriad: colofn;
+    testun-alinio: chwith;
 }
-.movie-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 0 0 5px 0;
-    color: var(--text);
-    line-height: 1.3;
+.teitl ffilm {
+    maint y ffont: 1.1rem;
+    ffont-pwysau: beiddgar;
+    ymyl: 0 0 5px 0;
+    lliw: var (--testun);
+    uchder llinell: 1.3;
 }
-.movie-date {
-    font-size: 0.85rem;
-    color: var(--accent);
-    font-weight: bold;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.dyddiad ffilm {
+    maint y ffont: 0.85rem;
+    lliw: var (--acen);
+    ffont-pwysau: beiddgar;
+    ymyl: 0;
+    testun-trawsnewid: priflythrennau;
+    bylchau rhwng llythyrau: 0.5px;
 }
 </style>
 
 <div class="page-header">
-    <h1 class="main-title">Cinema Watchlist</h1>
-    <h2 class="year-subtitle year-nav">
-        <a href="/cinema-watchlist/2022/" class="year-inactive">2022</a>
+    <h1 class="main-title">Rhestr Gwylio Sinema</ h1>
+    <h2 class="is-deitl blwyddyn-llywio">
+        <a href="/cinema-watchlist/2022/" class="blwyddyn anweithredol">2022</a>
         <a href="#" class="year-active">2023</a>
-        <a href="/cinema-watchlist/2024/" class="year-inactive">2024</a>
-        <a href="/cinema-watchlist/2025/" class="year-inactive">2025</a>
-        <a href="/cinema-watchlist/2026/" class="year-inactive">2026</a>
-        <a href="/cinema-movie-ratings/" class="year-inactive">Movie Ratings</a>
+        <a href="/cinema-watchlist/2024/" class="blwyddyn anweithredol">2024</a>
+        <a href="/cinema-watchlist/2025/" class="blwyddyn anweithredol">2025</a>
+        <a href="/cinema-watchlist/2026/" class="blwyddyn anweithredol">2026</a>
+        <a href="/cinema-movie-ratings/" class="blwyddyn anweithredol">Sgoriau Ffilm</a>
     </h2>
     <div class="controls-container">
         <span class="watch-count" id="totalCount"></span>
-        <button class="sort-btn" id="sortToggle">⬇️ Newest First</button>
+        <button class="sort-btn" id="sortToggle">⬇️ Cyntaf Newydd </button>
     </div>
 </div>
 
@@ -291,31 +291,31 @@ permalink: /cy/cinema-watchlist/2023/
 <script>
     const movieCards = document.querySelectorAll('.movie-card');
     const totalCountDisplay = document.getElementById('totalCount');
-    totalCountDisplay.textContent = `Total Watched: ${movieCards.length}`;
+    totalCountDisplay.textContent = `Cyfanswm a Gwyliwyd: ${movieCards.length}`;
 
-    const sortToggle = document.getElementById('sortToggle');
+const sortToggle = document.getElementById('sortToggle');
     const movieGrid = document.getElementById('movieGrid');
-    let isNewestFirst = true;
+    let isNewestFirst = gwir;
 
-    sortToggle.addEventListener('click', function() {
+sortToggle.addEventListener('clic', swyddogaeth() {
         isNewestFirst = !isNewestFirst;
-        sortToggle.textContent = isNewestFirst ? '⬇️ Newest First' : '⬆️ Oldest First';
+        sortToggle.textContent = isNewestFirst ? '⬇️ Newest First' : '⬆️ Hynaf yn Gyntaf';
 
-        const cardsArray = Array.from(movieCards);
+const cardsArray = Array.from(movieCards);
 
-        cardsArray.sort(function(a, b) {
-            const dateA = new Date(a.querySelector('.movie-date').textContent + ' 2023');
-            const dateB = new Date(b.querySelector('.movie-date').textContent + ' 2023');
+cardsArray.sort(swyddogaeth(a,b) {
+            const dateA = dyddiad newydd(a.querySelector('.movie-date').textContent + ' 2023');
+            const dateB = dyddiad newydd(b.querySelector('.movie-date').textContent + ' 2023');
 
-            if (isNewestFirst) {
-                return dateB - dateA;
-            } else {
-                return dateA - dateB;
+os (isNewestFirst) {
+                dyddiad dychwelydB - dyddiadA;
+            } arall {
+                dyddiad dychwelydA - dyddiadB;
             }
         });
 
-        cardsArray.forEach(function(card) {
-            movieGrid.appendChild(card);
+cardsArray.forEach(swyddogaeth(cerdyn) {
+            movieGrid.appendChild(cerdyn);
         });
     });
 </script>

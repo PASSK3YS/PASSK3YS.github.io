@@ -5,14 +5,14 @@ title: About
 
 <div class="bio-container">
     <img src="https://files.horizon.pics/80bf60d4-5f09-458c-a235-6f7387f7db1f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
-    <div class="bio-text">
-        <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
-            Hi, I'm Kieran<span class="blinking-cursor">_</span>
+    <div class="bio-testun">
+        <h1 style="margin: 0 0 10px 0; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythyrau: -1px;">
+            Helo, Kieran <span class="blinking-cursor">_</span> ydw i
         </h1>
-        <p style="font-size: 1.05rem; opacity: 0.9; margin: 0 0 10px 0;">Welcome to my personal website. Overall swell guy, avid beer drinker & privacy advocate.</p>
-        <p style="margin: 0 0 15px 0; font-size: 1.05rem;">Hobbies include playing video games, watching wrestling & photography.</p>
+        <p style="font-size: 1.05rem; didreiddedd: 0.9; ymyl: 0 0 10px 0;"> Croeso i fy ngwefan bersonol. Boi chwydd cyffredinol, yfwr cwrw brwd ac eiriolwr preifatrwydd.</p>
+        <p style="margin: 0 0 15px 0; font-size: 1.05rem;">Mae hobïau yn cynnwys chwarae gemau fideo, gwylio reslo a ffotograffiaeth.</p>
         <p style="color: var(--text-muted); font-size: 0.9rem;">
-            Server admin / moderator for <a href="https://standardnotes.com" target="_blank" style="color: var(--accent); font-weight: 700; text-decoration: none;">Standard Notes</a> & <a href="https://proton.me" target="_blank" style="color: var(--accent); font-weight: 700; text-decoration: none;">Proton</a>.
+            Gweinyddwr gweinydd / cymedrolwr ar gyfer <a href="https://standardnotes.com" target="_blank" style="color: var(--accent); pwysau ffont: 700; addurno testun: dim;"> Nodiadau Safonol</a> & <a href="https://proton.me" target="_blank" style="-color: 7); text-decoration: none;">Proton</a>.
         </p>
     </div>
 </div>
@@ -20,67 +20,67 @@ title: About
 <div class="unified-card">
     
     <div class="unified-row">
-        <h3 class="soft-header">>_ Socials</h3>
-        <div class="social-icons">
+        <h3 class="header-soft">_ Socials</h3>
+        <div class="social-eicons">
             <a href="https://x.com/PASSK3YS" target="_blank" title="X">
                 <svg viewBox="0 0 24 24">
-                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+                    < llwybr d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.1934h5. 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z />
                 </svg>
             </a>
             <a href="https://discord.com/users/passkeys" target="_blank" title="Discord: passkeys">
                 <svg viewBox="0 0 24 24">
-                    <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+                    < llwybr d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.44847. 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0376-.0373-0 0 00-.0373-. 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.080.060 2.2 ! 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.938 1.7933 8.938 1. 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2981 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0841.0632a.076.076 0 00.0841. 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.06 . 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4179-2.2189 2.1589-2 . 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1468 2.4189-2.
                 </svg>
             </a>
         </div>
     </div>
 
-    <div class="unified-row">
-        <h3 class="soft-header">>_ Gamertags</h3>
-        <div class="gamertag-list" style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+<div class="unified-row">
+        <h3 class="header-soft">_ Tagiau gêm</h3>
+        <div class="gamertag-list" style="display: flex; gap: 30px; alinio-eitemau: canol; flex-wrap: wrap;">
             <div style="display: flex; align-items: center; gap: 10px;">
                 <span class="gamertag-label">Xbox</span> 
                 <a href="https://www.xbox.com/en-GB/play/user/m00t" target="_blank">m00t</a>
             </div>
             <div style="display: flex; align-items: center; gap: 10px;">
-                <span class="gamertag-label">Steam</span> 
+                <span class="gamertag-label">Stêm</span> 
                 <a href="https://steamcommunity.com/id/m00t316/" target="_blank">m00t316</a>
             </div>
         </div>
     </div>
 
-    <div class="unified-row interactive-row">
-        <h3 class="soft-header">>_ Latest Post</h3>
+<div class="rhes-ryngweithiol-rhes-unedig">
+        <h3 class="soft-header">_ Post Diweddaraf</h3>
         <div id="latest-blog-container">
-            <p style="font-size: 0.9em; color: var(--text-muted); margin: 0;">Loading latest...</p>
+            <p style="font-size: 0.9em; lliw: var(--testun-wedi'i dewi); ymyl: 0;"> Yn llwytho diweddaraf...</p>
         </div>
     </div>
 
-    <div class="unified-row interactive-row">
-        <h3 class="soft-header">>_ Latest cinema watch</h3>
+<div class="rhes-ryngweithiol-rhes-unedig">
+        <h3 class="soft-header">_ Gwyliad sinema diweddaraf</h3>
         <div id="latest-movie-container">
-            <p style="font-size: 0.9em; color: var(--text-muted); margin: 0;">Loading latest...</p>
+            <p style="font-size: 0.9em; lliw: var(--testun-wedi'i dewi); ymyl: 0;"> Yn llwytho diweddaraf...</p>
         </div>
     </div>
 
-    <a href="/now/" class="unified-row interactive-row" style="text-decoration: none; color: inherit;">
-        <h3 class="soft-header">>_ Now</h3>
-        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <span class="latest-title" style="margin: 0;">What I'm doing now &rarr;</span>
+<a href="/now/" class="rhes-ryngweithiol-rhes-unedig" style="text-decoration: dim; lliw: etifeddu;">
+        <h3 class="soft-header">_ Nawr</h3>
+        <div style="display: flex; alinio-eitemau: canol; bwlch: 15px; flex-wrap: wrap;">
+            <span class="latest-title" style="margin: 0;">Beth rydw i'n ei wneud nawr &rarr;</span>
         </div>
     </a>
 
-    <a href="/guestbook/" class="unified-row interactive-row" style="text-decoration: none; color: inherit;">
-        <h3 class="soft-header">>_ Guestbook</h3>
-        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <span class="guestbook-title" style="margin: 0;">Sign my guestbook &rarr;</span>
+<a href="/guestbook/" class="unified-row interactive-row" style="text-decoration: dim; lliw: etifeddu;">
+        <h3 class="soft-header">_ Llyfr Gwesteion</h3>
+        <div style="display: flex; alinio-eitemau: canol; bwlch: 15px; flex-wrap: wrap;">
+            <span class="guestbook-title" style="margin: 0;">Llofnodwch fy llyfr gwesteion &rarr;</span>
         </div>
     </a>
 
-    <div class="unified-row">
-        <h3 class="soft-header">>_ Tip Jar</h3>
+<div class="unified-row">
+        <h3 class="header-soft">> Jar Awgrym</h3>
         <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
+            <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Cod Monero QR" class="tip-qr">
             <span class="unified-meta">MONERO (XMR)</span>
         </div>
     </div>
@@ -89,287 +89,287 @@ title: About
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<style>
+<steil>
 
-body, main, p, a, span, div, button {
-    font-family: 'SUSE', 'JetBrains Mono', system-ui, -apple-system, sans-serif !important;
+corff, prif, p, a, rhychwant, div, botwm {
+    ffont-teulu: 'SUSE', 'JetBrains Mono', system-ui, -apple-system, sans-serif !important;
 }
 
 h1, h2, h3 {
-    font-family: 'Staatliches', 'SUSE', cursive !important;
+    ffont-teulu: 'Staatliches', 'SUSE', cursive !pwysig;
 }
 
-pre, code {
-    font-family: 'JetBrains Mono', monospace !important;
+cyn, cod {
+    ffont-teulu: 'JetBrains Mono', monospace !pwysig;
 }
 
 .blinking-cursor {
-    font-weight: 800;
-    color: var(--accent);
-    animation: blink 1s step-end infinite;
+    ffont-pwysau: 800;
+    lliw: var (--acen);
+    animeiddiad: amrantiad 1s cam-diwedd anfeidrol;
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% { didreiddedd: 0; }
 }
 
-.bio-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
+.bio-gynhwysydd {
+    arddangos: fflecs;
+    alinio-eitemau: canol;
+    bwlch: 30px;
+    ymyl-gwaelod: 40px;
 }
 
-.bio-container .profile-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 16px;
-    object-fit: cover;
-    border: 2px solid var(--accent);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+.bio-gynhwysydd .profile-img {
+    lled: 130px;
+    uchder: 130px;
+    radiws ffin: 16px;
+    gwrthrych-ffit: clawr;
+    border: var solet 2px (--acen);
+    cysgod blwch: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    trawsnewid: trawsnewid rhwyddineb 0.3s;
 }
 
-[data-theme="dark"] .bio-container .profile-img {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+[data-theme="dywyll"] .bio-gynhwysydd .profile-img {
+    cysgod blwch: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
 }
 
-.bio-container .profile-img:hover {
-    transform: scale(1.02);
+.bio-gynhwysydd .profile-img:hover {
+    trawsnewid: graddfa(1.02);
 }
 
-.bio-text {
-    display: flex;
-    flex-direction: column;
+.bio-destun {
+    arddangos: fflecs;
+    fflecs-cyfeiriad: colofn;
 }
 
 .unified-card {
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
+    cefndir: var(--nav-bg);
+    hidlydd cefndir: niwlog(12px);
+    -webkit-cefn-hidlo: aneglur(12px);
+    radiws ffin: 16px;
+    arddangos: fflecs;
+    fflecs-cyfeiriad: colofn;
+    ffin: var solet 1px (--ffin);
+    cysgod blwch: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    gorlif: cudd;
 }
 
-[data-theme="dark"] .unified-card {
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+[ data-theme = "tywyll"] .unified-card {
+    ffin: var solet 1px (--ffin);
+    cysgod bocs: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
-.unified-row {
-    padding: 30px 34px;
-    border-bottom: 1px dashed var(--border);
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    align-items: center;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    border-left: 6px solid transparent;
+.unified-res {
+    padin: 30px 34px;
+    gwaelod ymyl: var doriad 1px (--ffin);
+    arddangos: grid;
+    grid-templed-colofnau: 240px 1fr;
+    alinio-eitemau: canol;
+    pontio: cefndir-lliw 0.3s rhwyddineb, border-lliw 0.3s rhwyddineb;
+    border-chwith: 6px solet tryloyw;
 }
 
-[data-theme="dark"] .unified-row {
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+[ data-theme = "tywyll"] .unified-row {
+    pontio: cefndir-lliw 0.3s rhwyddineb, border-lliw 0.3s rhwyddineb, blwch-cysgod 0.3s rhwyddineb;
 }
 
-.unified-row:last-child {
-    border-bottom: none;
+.unified-res: last-plentyn {
+    border-gwaelod: dim;
 }
 
 .unified-row.interactive-row {
-    cursor: pointer;
+    cyrchwr: pwyntydd;
 }
 
 .unified-row.interactive-row:hover {
-    background-color: rgba(99, 102, 241, 0.05);
-    border-left-color: var(--accent);
+    lliw cefndir: rgba(99, 102, 241, 0.05);
+    lliw border-chwith: var (--acen);
 }
 
-[data-theme="dark"] .unified-row.interactive-row:hover {
-    background-color: rgba(99, 102, 241, 0.1);
-    border-left-color: var(--accent);
-    transform: translate(-2px, -2px);
-    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
+[data-theme="tywyll"] .unified-row.interactive-row:hover {
+    lliw cefndir: rgba(99, 102, 241, 0.1);
+    lliw border-chwith: var (--acen);
+    trawsnewid: cyfieithu (-2px, -2px);
+    blwch-cysgod: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
 }
 
-.interactive-row:hover .guestbook-title,
-.interactive-row:hover .latest-title {
-    color: var(--accent);
+.rhyngweithiol-rhes: hofran .guestbook-title,
+.rhyngweithiol-rhes:hover .latest-title {
+    lliw: var (--acen);
 }
 
-.soft-header {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    margin: 0;
-    font-weight: 700;
-    font-family: 'Staatliches', 'SUSE', sans-serif !important;
+pennyn .soft {
+    maint y ffont: 0.85rem;
+    testun-trawsnewid: priflythrennau;
+    bylchau rhwng llythyrau: 1px;
+    lliw: var (--testun-tewi);
+    ymyl: 0;
+    ffont-pwysau: 700;
+    font-family: 'Staatliches', 'SUSE', sans-serif !pwysig;
 }
 
 .unified-meta {
-    font-size: 0.85rem;
-    color: var(--accent);
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    font-family: 'Staatliches', 'SUSE', sans-serif !important;
+    maint y ffont: 0.85rem;
+    lliw: var (--acen);
+    ymyl: 0;
+    testun-trawsnewid: priflythrennau;
+    ffont-pwysau: 700;
+    bylchau rhwng llythyrau: 0.5px;
+    font-family: 'Staatliches', 'SUSE', sans-serif !pwysig;
 }
 
-.social-icons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    flex-wrap: wrap;
+.cymdeithasol-eiconau {
+    arddangos: fflecs;
+    bwlch: 20px;
+    alinio-eitemau: canol;
+    fflecs-lapio: lapio;
 }
 
-.social-icons a {
-    color: var(--text);
-    transition: transform 0.3s ease, color 0.3s ease;
-    display: inline-flex;
+.social-eiconau a {
+    lliw: var (--testun);
+    pontio: trawsnewid rhwyddineb 0.3s, lliw 0.3s rhwyddineb;
+    arddangos: inline-flex;
 }
 
-.social-icons a:hover {
-    color: var(--accent);
-    transform: translateY(-2px);
+.cymdeithasol-eiconau a:hofran {
+    lliw: var (--acen);
+    trawsnewid: translateY(-2px);
 }
 
-.social-icons svg {
-    width: 32px;
-    height: 32px;
-    fill: currentColor;
+.social-eiconau svg {
+    lled: 32px;
+    uchder: 32px;
+    llenwi: currentColor;
 }
 
 .gamertag-label {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    maint y ffont: 0.85rem;
+    lliw: var (--testun-tewi);
+    testun-trawsnewid: priflythrennau;
+    ffont-pwysau: 700;
+    bylchau rhwng llythyrau: 0.5px;
 }
 
-.gamertag-list a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 800;
-    transition: color 0.3s ease;
-    font-size: 1.1rem;
+.gamertag-rhestr a {
+    lliw: var (--testun);
+    addurno testun: dim;
+    ffont-pwysau: 800;
+    pontio: lliw 0.3s rhwyddineb;
+    maint y ffont: 1.1rem;
 }
 
-.gamertag-list a:hover {
-    color: var(--accent);
+.gamertag-list a:hofran {
+    lliw: var (--acen);
 }
 
-.guestbook-title {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--text);
-    transition: color 0.3s ease;
+. llyfr gwesteion - teitl {
+    maint y ffont: 1.1rem;
+    ffont-pwysau: 800;
+    lliw: var (--testun);
+    pontio: lliw 0.3s rhwyddineb;
 }
 
 .tip-qr {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    background-color: #ffffff;
-    padding: 6px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    border: 1px solid var(--border);
+    lled: 80px;
+    uchder: 80px;
+    gwrthrych-ffit: cynnwys;
+    cefndir-lliw: #ffffff;
+    padin: 6px;
+    border-radiws: 12px;
+    cysgod blwch: 0 4px 6px -1px rgba(0,0,0,0.1);
+    trawsnewid: trawsnewid rhwyddineb 0.3s;
+    ffin: var solet 1px (--ffin);
 }
 
-[data-theme="dark"] .tip-qr {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+[ data-theme = "tywyll"] .tip-qr {
+    cysgod blwch: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
-.unified-row:hover .tip-qr {
-    transform: scale(1.05);
+.unified-row: hofran .tip-qr {
+    trawsnewid: graddfa(1.05);
 }
 
-.cinema-link-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    text-decoration: none !important;
+.cinema-link-lapper {
+    arddangos: fflecs;
+    fflecs-cyfeiriad: rhes;
+    alinio-eitemau: canol;
+    bwlch: 30px;
+    addurno testun: dim !pwysig;
 }
 
 .cinema-movie-thumb {
-    width: 110px;
-    height: 165px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0;
-    border: 1px solid var(--border);
+    lled: 110px;
+    uchder: 165px;
+    gwrthrych-ffit: clawr;
+    border-radiws: 12px;
+    blwch-cysgod: 0 10px 15px -3px rgba(0,0,0,0.3);
+    pontio: trawsnewid rhwyddineb 0.3s, blwch-cysgod 0.3s rhwyddineb;
+    fflecs-crebachu: 0;
+    ffin: var solet 1px (--ffin);
 }
 
-[data-theme="dark"] .cinema-movie-thumb {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+[ data-theme = "tywyll"] .cinema-movie-thumb {
+    cysgod blwch: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
 }
 
-.latest-info {
-    display: flex;
-    flex-direction: column;
+.gwybodaeth ddiweddaraf {
+    arddangos: fflecs;
+    fflecs-cyfeiriad: colofn;
 }
 
 .latest-title {
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: var(--text);
-    line-height: 1.4;
-    transition: color 0.3s ease;
+    ffont-pwysau: 800;
+    maint y ffont: 1.1rem;
+    lliw: var (--testun);
+    uchder llinell: 1.4;
+    pontio: lliw 0.3s rhwyddineb;
 }
 
-.card-link-wrapper {
-    text-decoration: none !important;
+.card-link-lapper {
+    addurno testun: dim !pwysig;
 }
 
-.card-link-wrapper:hover .latest-title,
-.cinema-link-wrapper:hover .latest-title,
+.card-link-wrapper: hofran .latest-title,
+.cinema-link-wrapper: hofran .latest-title,
 .unified-row.interactive-row:hover .latest-title {
-    color: var(--accent);
+    lliw: var (--acen);
 }
 
-.cinema-link-wrapper:hover .cinema-movie-thumb,
+.cinema-link-lapper: hofran .sinema-movie-thumb,
 .unified-row.interactive-row:hover .cinema-movie-thumb {
-    transform: translate(-4px, -4px);
-    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.3);
+    trawsnewid: cyfieithu (-4px, -4px);
+    blwch-cysgod: 0 20px 25px -5px rgba(99, 102, 241, 0.3);
 }
 
-@media (max-width: 850px) {
-    .bio-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+@cyfryngau (uchafswm lled: 850px) {
+    .bio-gynhwysydd {
+        fflecs-cyfeiriad: colofn;
+        testun-alinio: canol;
+        bwlch: 20px;
     }
-    .unified-row {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 25px 14px;
+    .unified-res {
+        grid-templed-colofnau: 1fr;
+        bwlch: 15px;
+        padin: 25px 14px;
     }
     .cinema-movie-thumb {
-        width: 80px;
-        height: 120px;
+        lled: 80px;
+        uchder: 120px;
     }
 }
 </style>
 
 <script>
-fetch('/cinema-watchlist/2026/')
+nôl('/sinema-watchlist/2026/')
     .then(res => res.text())
-    .then(html => {
-        const firstMovie = new DOMParser().parseFromString(html, 'text/html').querySelector('.movie-card');
-        if (firstMovie) {
+    .yna(html => {
+        const firstMovie = DOMparser newydd().parseFromString(html, 'text/html').querySelector('.movie-card');
+        os (Film Cyntaf) {
             document.getElementById('latest-movie-container').innerHTML = `
                 <a href="/cinema-watchlist/2026/" class="cinema-link-wrapper">
                     <img src="${firstMovie.querySelector('.movie-thumbnail').src}" alt="${firstMovie.querySelector('.movie-title').textContent}" class="cinema-movie-thumb">
-                    <div class="latest-info">
+                    <div class="gwybodaeth-ddiweddaraf">
                         <p class="latest-title" style="margin: 0 0 8px 0;">${firstMovie.querySelector('.movie-title').textContent}</p>
                         <p class="unified-meta">${firstMovie.querySelector('.movie-date').textContent}</p>
                     </div>
@@ -377,19 +377,19 @@ fetch('/cinema-watchlist/2026/')
         }
     });
 
-fetch('/feed.json')
+nôl ('/feed.json')
     .then(res => res.json())
     .then(data => {
-        if (data.items && data.items.length > 0) {
+        os (data.items && data.items.length > 0) {
             const firstPost = data.items[0];
-            let dateStr = "";
-            if (firstPost.date_published) {
-                const date = new Date(firstPost.date_published);
-                dateStr = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }).toUpperCase();
+            gadewch dateStr="";
+            os (firstPost.date_published) {
+                const date = Dyddiad newydd(firstPost.date_published);
+                dateStr = date.toLocaleDateString('en-GB', { diwrnod: 'rhif', mis: 'byr' }).toUpperCase();
             }
             
             document.getElementById('latest-blog-container').innerHTML = `
-                <a href="${firstPost.url}" class="card-link-wrapper" style="display: flex; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <a href="${firstPost.url}" class="card-link-wrapper" style="display: fflecs; alinio-eitemau: canol; fflecs-lapio: wrap; gap: 15px;">
                     <p class="latest-title" style="margin: 0;">${firstPost.title}</p>
                     <p class="unified-meta">${dateStr}</p>
                 </a>`;

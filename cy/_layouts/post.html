@@ -4,43 +4,43 @@ layout: default
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div class="page-content">
-    <a href="/blog/" class="back-link" style="margin-bottom: 20px;">&larr; Back to Blog</a>
+<div class="page-content">
+    <a href="/blog/" class="back-link" style="margin-bottom: 20px;">&larr; Nôl i'r Blog</a>
 
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline" style="margin-top: 0;">{{ page.title }}</h1>
+<header class="post-header">
+      <h1 class="post-title" itemprop="enw headline" style="margin-top: 0;"> {{ page.title }}</h1>
       
-      <p class="post-meta" style="color: var(--text-color); opacity: 0.6; font-size: 0.9rem;">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {{ page.date | date: "%B %-d, %Y" }}
+      <p class="post-meta" style="color: var(--text-color); didreiddedd: 0.6; maint y ffont: 0.9rem;">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop = "dyddiadCyhoeddwyd">
+          {{ tudalen.date | dyddiad: "%B %-d, %Y" }}
         </time>
 
-        • 
-        {% assign words = content | number_of_words %}
-        {% assign read_time = words | divided_by: 180 %}
-        {% if read_time < 1 %}
-            1 min read
-        {% else %}
-            {{ read_time }} min read
-        {% endif %}
+• 
+        {% assign words = cynnwys | nifer_o_eiriau %}
+        {% assign read_time = geiriau | wedi'i rannu_â: 180 %}
+        { % os darllen_amser < 1 % }
+            Darllen 1 munud
+        { % arall %}
+            {{ read_time }} munud wedi'i ddarllen
+        { % endif %}
 
-        {% if page.author %}
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-        {% endif %}
+{ % os tudalen.author %}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span>
+        { % endif %}
       </p>
     </header>
 
-    <div class="post-content" itemprop="articleBody" style="margin-top: 20px;">
-      {{ content }}
+<div class="post-content" itemprop="articleBody" style="margin-top: 20px;">
+      {{ cynnwys }}
       
-      <div style="text-align: center; margin-top: 60px; margin-bottom: 40px;">
-        <hr style="border: 0; border-top: 1px solid var(--border); margin-bottom: 40px; opacity: 0.5;">
-        <h3 style="color: var(--text); margin-bottom: 20px;">Enjoyed the post?</h3>
-        <a href="/guestbook/" style="font-size: 1.1rem; font-weight: bold; padding: 12px 24px; border: 2px solid var(--accent); color: var(--accent); border-radius: 8px; display: inline-block; text-decoration: none; box-sizing: border-box; background: transparent;">
-          &#x2709; Leave a message in the Guestbook
+      <div style="text-align: center; margin-top: 60px; ymyl-gwaelod: 40px;">
+        <hr style="border: 0; border-top: 1px solid var(--border); ymyl-gwaelod: 40px; didreiddedd: 0.5;">
+        <h3 style="color: var(--text); margin-bottom: 20px;">Wedi mwynhau'r post?</h3>
+        <a href="/guestbook/" style="font-size: 1.1rem; pwysau ffont: beiddgar; padin: 12px 24px; border: var solet 2px (--acen); lliw: var(--acen); radiws ffin: 8px; arddangos: bloc mewn-lein; border; dim byd-bocs; addurniadau; dim byd;
+          &#x2709; Gadael neges yn y Llyfr Gwesteion
         </a>
       </div>
     </div>
   </div>
 
-</article>
+</erthygl>

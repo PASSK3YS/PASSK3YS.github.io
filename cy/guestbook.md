@@ -5,198 +5,198 @@ permalink: /cy/guestbook/
 ---
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"> </script>
 
-<style>
-body, main, h1, h2, h3, p, a, span, div, button {
-    font-family: 'SUSE', sans-serif !important;
+<steil>
+corff, prif, h1, h2, h3, p, a, rhychwant, div, botwm {
+    font-family: 'SUSE', sans-serif !pwysig;
 }
 
 h1, h2, h3 {
-    font-family: 'Staatliches', sans-serif !important;
+    ffont-teulu: 'Staatliches', sans-serif !important;
 }
 
-pre, code {
-    font-family: 'JetBrains Mono', monospace !important;
+cyn, cod {
+    ffont-teulu: 'JetBrains Mono', monospace !pwysig;
 }
 
 .blinking-cursor {
-    font-weight: 800;
-    color: var(--accent);
-    animation: blink 1s step-end infinite;
+    ffont-pwysau: 800;
+    lliw: var (--acen);
+    animeiddiad: amrantiad 1s cam-diwedd anfeidrol;
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% { didreiddedd: 0; }
 }
 
 .hacker-btn {
-    font-size: 1.1rem;
-    font-weight: 700;
-    padding: 14px 28px;
-    border: 1px solid var(--border);
-    color: var(--text);
-    border-radius: 12px;
-    display: inline-block;
-    text-decoration: none;
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
+    maint y ffont: 1.1rem;
+    ffont-pwysau: 700;
+    padin: 14px 28px;
+    ffin: var solet 1px (--ffin);
+    lliw: var (--testun);
+    border-radiws: 12px;
+    arddangos: inline-bloc;
+    addurno testun: dim;
+    cefndir: var(--nav-bg);
+    hidlydd cefndir: niwlog(12px);
+    -webkit-cefn-hidlo: aneglur(12px);
+    cysgod blwch: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    trawsnewid: pob un o'r 0.3s ciwbig-bezier(0.4, 0, 0.2, 1);
+    testun-trawsnewid: priflythrennau;
+    bylchau rhwng llythyrau: 1px;
+    cyrchwr: pwyntydd;
 }
 
-[data-theme="dark"] .hacker-btn {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+[ data-theme = "tywyll"] .hacker-btn {
+    cysgod bocs: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
-.hacker-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
-    transform: translateY(-2px);
-    background: rgba(99, 102, 241, 0.05);
+.hacker-btn:hofran {
+    lliw border: var (--acen);
+    lliw: var (--acen);
+    blwch-cysgod: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
+    trawsnewid: translateY(-2px);
+    cefndir: rgba(99, 102, 241, 0.05);
 }
 
 .sign-form {
-    max-width: 500px;
-    margin: 0 auto 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: var(--nav-bg);
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    uchafswm-lled: 500px;
+    ymyl: 0 auto 40px awto;
+    arddangos: fflecs;
+    fflecs-cyfeiriad: colofn;
+    bwlch: 15px;
+    cefndir: var(--nav-bg);
+    padin: 30px;
+    radiws ffin: 16px;
+    ffin: var solet 1px (--ffin);
+    hidlydd cefndir: niwlog(12px);
+    -webkit-cefn-hidlo: aneglur(12px);
+    cysgod blwch: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] .sign-form {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+[ data-theme = "tywyll"] .sign-form {
+    cysgod blwch: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
-.sign-form input, .sign-form textarea {
-    font-family: 'SUSE', sans-serif;
-    background: var(--bg-solid);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+mewnbwn .sign-form, .sign-form textarea {
+    ffont-teulu: 'SUSE', sans-serif;
+    cefndir: var(--bg-solid);
+    ffin: var solet 1px (--ffin);
+    lliw: var (--testun);
+    padin: 14px;
+    radiws ffin: 8px;
+    maint y ffont: 1rem;
+    pontio: border-lliw 0.3s rhwyddineb;
 }
 
-.sign-form input:focus, .sign-form textarea:focus {
-    outline: none;
-    border-color: var(--accent);
+mewnbwn .sign-form:focus, .sign-form textarea:focus {
+    amlinelliad: none;
+    lliw border: var (--acen);
 }
 
-.carousel-wrapper {
-    position: relative;
-    width: 100%;
-    padding: 0 50px;
-    box-sizing: border-box;
-    user-select: none;
+.carousel-lapiwr {
+    sefyllfa: perthynas;
+    lled: 100%;
+    padin: 0 50px;
+    blwch-sizing: border-box;
+    defnyddiwr-dewis: dim;
 }
 
 .carousel-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    gap: 20px;
-    padding: 10px 0 20px 0;
-    scrollbar-width: none; 
+    arddangos: fflecs;
+    gorlif-x: auto;
+    sgrolio-snap-type: x gorfodol;
+    sgrolio-ymddygiad: llyfn;
+    -webkit-gorlif-sgrolio: cyffwrdd;
+    bwlch: 20px;
+    padin: 10px 0 20px 0;
+    bar sgrolio-lled: dim; 
 }
 
 .carousel-container::-webkit-scrollbar {
-    display: none; 
+    arddangos: dim; 
 }
 
 .carousel-item {
-    flex: 0 0 100%; 
-    scroll-snap-align: center;
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 40px 40px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 250px;
-    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    fflecs: 0 0 100%; 
+    sgrolio-snap-align: canol;
+    cefndir: var(--nav-bg);
+    hidlydd cefndir: niwlog(12px);
+    -webkit-cefn-hidlo: aneglur(12px);
+    ffin: var solet 1px (--ffin);
+    radiws ffin: 16px;
+    padin: 40px 40px;
+    blwch-sizing: border-box;
+    cysgod blwch: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    arddangos: fflecs;
+    fflecs-cyfeiriad: colofn;
+    cyfiawnhau-cynnwys: space-between;
+    Isafswm uchder: 250px;
+    pontio: ffin-lliw 0.3s rhwyddineb, trawsnewid rhwyddineb 0.3s, blwch-cysgod 0.3s rhwyddineb;
 }
 
-[data-theme="dark"] .carousel-item {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+[ data-theme = "tywyll"] .carousel-item {
+    cysgod bocs: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-item:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
+.carousel-item: hofran {
+    lliw border: var (--acen);
+    trawsnewid: translateY(-2px);
+    blwch-cysgod: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
 }
 
-.nav-btn {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 12px;
-    width: 45px;
-    height: 45px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.nav-btn{
+    sefyllfa: absoliwt;
+    uchaf: 45%;
+    trawsnewid: translateY(-50%);
+    cefndir: var(--nav-bg);
+    hidlydd cefndir: niwlog(12px);
+    -webkit-cefn-hidlo: aneglur(12px);
+    ffin: var solet 1px (--ffin);
+    lliw: var (--testun);
+    maint y ffont: 1.2rem;
+    cyrchwr: pwyntydd;
+    border-radiws: 12px;
+    lled: 45px;
+    uchder: 45px;
+    z-mynegai: 10;
+    arddangos: fflecs;
+    alinio-eitemau: canol;
+    cyfiawnhau-cynnwys: center;
+    trawsnewid: pob un o'r 0.3s ciwbig-bezier(0.4, 0, 0.2, 1);
+    cysgod blwch: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-[data-theme="dark"] .nav-btn {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+[ data-theme = "tywyll"] .nav-btn {
+    cysgod bocs: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
-.nav-btn:hover {
-    background: rgba(99, 102, 241, 0.05);
-    color: var(--accent);
-    border-color: var(--accent);
-    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
-    transform: translateY(-50%) translate(-2px, -2px);
+.nav-btn:hofran {
+    cefndir: rgba(99, 102, 241, 0.05);
+    lliw: var (--acen);
+    lliw border: var (--acen);
+    blwch-cysgod: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
+    trawsnewid: translateY(-50%) translate(-2px, -2px);
 }
 
 #prevBtn {
-    left: 0;
+    chwith: 0;
 }
 
-#nextBtn {
-    right: 0;
+#nesafBtn {
+    dde: 0;
 }
 
-.progress-wrapper {
-    position: relative;
-    height: 20px;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.progress-lapper {
+    sefyllfa: perthynas;
+    uchder: 20px;
+    ymyl-brig: 15px;
+    arddangos: fflecs;
+    alinio-eitemau: canol;
+    cyfiawnhau-cynnwys: center;
+    cyrchwr: pwyntydd;
 }
 
 .progress-track {
@@ -209,122 +209,122 @@ pre, code {
     transition: opacity 0.3s ease;
 }
 
-.progress-fill {
-    height: 100%;
-    width: 0%;
-    background: var(--accent);
-    transform-origin: left;
+.cynnydd-lenwi {
+    uchder: 100%;
+    lled: 0%;
+    cefndir: var (--acen);
+    trawsnewid-tarddiad: chwith;
 }
 
 .progress-fill.animate {
-    animation: fillProgress 10s linear forwards;
+    animeiddiad: fillProgress 10s llinol ymlaen;
 }
 
 .progress-fill.paused {
-    animation-play-state: paused;
+    animeiddiad-chwarae-cyflwr: seibio;
 }
 
 @keyframes fillProgress {
-    0% { width: 0%; }
-    100% { width: 100%; }
+    0% { lled: 0%; }
+    100% { lled: 100%; }
 }
 
-.paused-indicator {
-    position: absolute;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    align-items: center;
-    pointer-events: none;
-    background: var(--bg-solid);
-    padding: 0 10px;
+.dangosydd wedi'i seibio {
+    sefyllfa: absoliwt;
+    maint y ffont: 0.85rem;
+    ffont-pwysau: 700;
+    lliw: var (--acen);
+    testun-trawsnewid: priflythrennau;
+    bylchau rhwng llythyrau: 2px;
+    didreiddedd: 0;
+    pontio: didreiddedd 0.3s rhwyddineb;
+    arddangos: fflecs;
+    alinio-eitemau: canol;
+    digwyddiadau pwyntydd: dim;
+    cefndir: var(--bg-solid);
+    padin: 0 10px;
 }
 
-.carousel-wrapper.is-paused .progress-track {
-    opacity: 0.15;
+.carousel-wrapper.is-saib .progress-track {
+    didreiddedd: 0.15;
 }
 
-.carousel-wrapper.is-paused .paused-indicator {
-    opacity: 1;
+.carousel-wrapper.is-saib .paused-indicator {
+    didreiddedd: 1;
 }
 
-@media (max-width: 768px) {
-    .carousel-wrapper {
-        padding: 0;
+@cyfryngau (uchafswm-lled: 768px) {
+    .carousel-lapiwr {
+        padin: 0;
     }
     #prevBtn, #nextBtn {
-        display: none; 
+        arddangos: dim; 
     }
     .carousel-item {
-        flex: 0 0 90%; 
-        scroll-snap-align: center;
+        fflecs: 0 0 90%; 
+        sgrolio-snap-align: canol;
     }
     .carousel-container {
-        padding: 10px 5% 20px 5%; 
+        padin: 10px 5% 20px 5%; 
     }
-    .progress-wrapper {
-        padding: 0 5%;
+    .progress-lapper {
+        padin: 0 5%;
     }
 }
 </style>
 
-<div class="page-content" style="max-width: 800px; margin: 0 auto; padding-top: 20px;">
+<div class="page-content" style="uch-lled: 800px; ymyl: 0 auto; padin-top: 20px;">
   
-    <h1 style="color: var(--accent); text-align: center; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px;">
-        >_ Guestbook<span class="blinking-cursor">_</span>
+    <h1 style="color: var(--accent); text-align: center; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythrennau: -1px; ymyl-gwaelod: 10px;">
+        >_ Llyfr Gwesteion <span class="blinking-cursor">_</span>
     </h1>
   
-    <p style="color: var(--text-muted); text-align: center; margin-bottom: 30px; font-size: 1.05rem;">
-        Messages and greetings from visitors.
+    <p style="color: var(--text-muted); text-align: center; ymyl-gwaelod: 30px; maint y ffont: 1.05rem;">
+        Negeseuon a chyfarchion gan ymwelwyr.
     </p>
 
-    <form id="guestbook-form" class="sign-form">
-        <input type="text" id="name" placeholder="Name" required>
-        <textarea id="message" placeholder="Message" required></textarea>
+<form id="ffurflen llyfr gwesteion" class="sign-form">
+        <input type="text" id="name" placeholder="Angen enw">
+        <textarea id="message" placeholder="Angen neges"></textarea>
         
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAEEfCSzxCVuLiXl0" data-theme="auto" data-callback="unlockForm"></div>
         
-        <button type="submit" id="submitBtn" class="hacker-btn" disabled>Sign Guestbook</button>
-        <div id="formStatus" style="display: none; text-align: center; font-weight: 700;"></div>
+        <button type="submit" id="submitBtn" class="hacker-btn" wedi'i analluogi>Llofnodi Llyfr Gwesteion</button>
+        <div id="formStatus" style="display: none; text-align: center; font-weight: 700;"> </div>
     </form>
 
-    <div class="carousel-wrapper">
-        <button id="prevBtn" class="nav-btn">&#10094;</button>
+<div class="carousel-lapper">
+        <botwm id="prevBtn" class="nav-btn">&#10094;</button>
         
         <div class="carousel-container" id="guestbook-carousel">
-            <div class="carousel-item" style="justify-content: center; align-items: center;">
-                <p style="color: var(--text); font-size: 1.1rem;">Initializing connection...</p>
+            <div class="carousel-item" style="cyfiawnhau-cynnwys: canol; alinio-eitemau: canol;">
+                <p style="color: var(--text); font-size: 1.1rem;"> Cychwyn cysylltiad...</p>
             </div>
         </div>
 
         <button id="nextBtn" class="nav-btn">&#10095;</button>
 
-        <div class="progress-wrapper">
+<div class="progress-lapper">
             <div class="progress-track">
                 <div class="progress-fill animate" id="progressBarFill"></div>
             </div>
-            <div class="paused-indicator">
-                [ PAUSED ]
+            <div class="dangosydd wedi'i seibio">
+                [ WEDI EI SEIB ]
             </div>
         </div>
     </div>
 </div>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" gohirio async></script>
 <script>
-const supabaseUrl = 'https://hnyokpvurntvxvhdvwii.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhueW9rcHZ1cm50dnh2aGR2d2lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU2NzQ0MzEsImV4cCI6MjEwMTI1MDQzMX0.NZLDRNPtWYH-_cvDovXkwyrR-SiT9HqvYnlfT2VpEyo';
+const supabaseUrl = ' https://hnyokpvurntvxvhdvwii.supabase.co ' ;
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhueW9rcHZ1cm50dnh2aGR2d2lpIiwicm9 sZSI6ImFub24iLCJpYXQiOjE3ODU2NzQ0MzEsImV4cCI6MjEwMTI1MDQzMX0.NZLDRNPtWYH-_cvDovXkwyrR-SiT9HqvYnlfT2VpEyo';
 const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
-let turnstileToken = "";
-window.unlockForm = function(token) {
-    turnstileToken = token;
-    document.getElementById('submitBtn').disabled = false;
+gadewch turnstileToken = "" ;
+window.unlockForm = swyddogaeth (tocyn) {
+    turnstileToken = tocyn;
+    document.getElementById('submitBtn').disabled = ffug;
 };
 
 const container = document.getElementById('guestbook-carousel');
@@ -332,174 +332,174 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const wrapper = document.querySelector('.carousel-wrapper');
 const fill = document.getElementById('progressBarFill');
-const form = document.getElementById('guestbook-form');
+const form = document.getElementById('llyfr gwesteion-ffurf');
 const submitBtn = document.getElementById('submitBtn');
 const formStatus = document.getElementById('formStatus');
 
-let isLockedPause = false;
-let isScrolling;
+gadewch isLockedPause = ffug;
+gadewch i isScrolling;
 
-async function loadGuestbook() {
-    const { data, error } = await supabaseClient
-        .from('guestbook')
-        .select('name, message, created_at')
-        .order('created_at', { ascending: false });
+swyddogaeth async loadGuestbook() {
+    const { data , error } = aros am supabaseClient
+        .o('llyfr gwesteion')
+        .select('enw, neges, creu_at')
+        .order ('creu_at', { esgynnol: ffug });
 
-    if (error) {
-        container.innerHTML = `<div class="carousel-item" style="justify-content: center; align-items: center;"><p style="color: red;">Failed to retrieve records.</p></div>`;
-        return;
+os (gwall) {
+        container.innerHTML = `<div class="carousel-item" style="cyfiawnhau-cynnwys: canol; alinio-eitemau: canol;" <p style="color: red;"> Methwyd ag adalw cofnodion.</p></div>`;
+        dychwelyd;
     }
 
-    container.innerHTML = '';
+container.innerHTML = '' ;
 
-    if (data.length === 0) {
-        container.innerHTML = `<div class="carousel-item" style="justify-content: center; align-items: center;"><p style="color: var(--text);">No records found.</p></div>`;
-        return;
+os (data.length === 0) {
+        container.innerHTML = `<div class="carousel-item" style="cyfiawnhau-cynnwys: canol; alinio-eitemau: canol;" <p style="color: var(--text);">Ni chafwyd hyd i gofnodion.</p></div>`;
+        dychwelyd;
     }
 
-    data.forEach(entry => {
-        const dateStr = new Date(entry.created_at).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+data.forEach(mynediad => {
+        const dateStr = dyddiad newydd(entry.created_at).toLocaleDateString('en-US', {
+            blwyddyn: 'rhifol',
+            mis: 'hir',
+            diwrnod: 'numeric'
         });
 
-        const itemDiv = document.createElement('div');
+const itemDiv = document.createElement('div');
         itemDiv.className = 'carousel-item';
         
         const messageP = document.createElement('p');
-        messageP.style.cssText = 'color: var(--text); font-size: 1.1rem; margin-top: 0; line-height: 1.6; word-break: break-word;';
+        messageP.style.cssText = 'lliw: var(--text); maint y ffont: 1.1rem; ymyl-brig: 0; uchder llinell: 1.6; toriad gair: break-word;';
         messageP.textContent = `"${entry.message}"`;
 
-        const metaDiv = document.createElement('div');
+const metaDiv = document.createElement('div');
         metaDiv.style.marginTop = '20px';
 
-        const nameP = document.createElement('p');
-        nameP.style.cssText = 'color: var(--accent); margin-bottom: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;';
+const nameP = document.createElement('p');
+        nameP.style.cssText = 'lliw: var(--acen); ymyl-gwaelod: 0; ffont-pwysau: 800; testun-trawsnewid: priflythrennau; bylchau rhwng llythyrau: 1px;';
         nameP.textContent = `> ${entry.name}`;
 
         const dateSpan = document.createElement('span');
         dateSpan.style.cssText = 'color: var(--text-muted); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;';
         dateSpan.textContent = dateStr;
 
-        metaDiv.appendChild(nameP);
-        metaDiv.appendChild(dateSpan);
+metaDiv.appendChild(enwP);
+        metaDiv.appendChild(dateSspan);
         itemDiv.appendChild(messageP);
         itemDiv.appendChild(metaDiv);
         container.appendChild(itemDiv);
     });
 
-    resetAnimation();
+resetAnimation();
 }
 
-form.addEventListener('submit', async (e) => {
+form.addEventListener('cyflwyno', async(e) => {
     e.preventDefault();
     
-    if (!turnstileToken) {
-        return;
+    os (!turnstileToken) {
+        dychwelyd;
     }
 
-    const name = document.getElementById('name').value.trim();
+const name = document.getElementById('name').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    if (!name || !message) return;
+os bydd (!enw || !neges) yn dychwelyd;
 
-    submitBtn.disabled = true;
-    formStatus.style.display = 'block';
+submitBtn.disabled = gwir;
+    formStatus.style.display = 'bloc';
     formStatus.style.color = 'var(--text)';
-    formStatus.textContent = 'Transmitting...';
+    formStatus.textContent = 'Trosglwyddo...';
 
-    const { error } = await supabaseClient
-        .from('guestbook')
-        .insert([{ name, message }]);
+const { error } = aros am supabaseClient
+        .o('llyfr gwesteion')
+        .insert([{ enw, neges }]);
 
-    if (error) {
-        formStatus.textContent = 'Transmission failed. Try again.';
-        formStatus.style.color = 'red';
-        submitBtn.disabled = false;
-    } else {
-        formStatus.textContent = 'Record appended successfully.';
-        formStatus.style.color = 'var(--accent)';
-        form.reset();
+os (gwall) {
+        formStatus.textContent = 'Methwyd y trosglwyddiad. Ceisiwch eto.';
+        formStatus.style.color = 'coch';
+        submitBtn.disabled = ffug;
+    } arall {
+        formStatus.textContent = 'Cofnod wedi'i atodi'n llwyddiannus.';
+        formStatus.style.color = 'var(--acen)';
+        ffurflen.reset();
         turnstileToken = "";
-        window.turnstile.reset();
-        await loadGuestbook();
+        ffenestr.turnstile.reset();
+        aros llwythGuestbook();
         
         setTimeout(() => {
-            formStatus.style.display = 'none';
+            formStatus.style.display = 'dim';
         }, 3000);
     }
 });
 
-function scrollNext() {
-    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
-        container.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-        container.scrollBy({ left: container.offsetWidth, behavior: 'smooth' });
+swyddogaeth sgrolioNext() {
+    os (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+        container.scrollTo({ chwith: 0, ymddygiad: 'llyfn' });
+    } arall {
+        container.scrollBy({ chwith: container.offsetWidth, ymddygiad: 'llyfn' });
     }
 }
 
-function scrollPrev() {
-    if (container.scrollLeft <= 0) {
-        container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
-    } else {
-        container.scrollBy({ left: -container.offsetWidth, behavior: 'smooth' });
+swyddogaeth scrollPrev() {
+    os (container.scrollLeft <= 0) {
+        container.scrollTo({ chwith: container.scrollWidth, ymddygiad: 'llyfn' });
+    } arall {
+        container.scrollBy({ chwith: -container.offsetWidth, ymddygiad: 'llyfn' });
     }
 }
 
-function resetAnimation() {
+swyddogaeth resetAnimation() {
     fill.classList.remove('animate');
-    void fill.offsetWidth; 
+    llenwi gwag.offsetWidth; 
     fill.classList.add('animate');
 }
 
-function pauseAnimation() {
-    fill.classList.add('paused');
-    wrapper.classList.add('is-paused');
+seibiant ffwythiantAnimation() {
+    fill.classList.add('saib');
+    wrapper.classList.add('yn-saib');
 }
 
-function resumeAnimation() {
-    if (isLockedPause) return;
-    fill.classList.remove('paused');
-    wrapper.classList.remove('is-paused');
+ailddechrau swyddogaeth Animeiddiad() {
+    os (isLockedPause) dychwelyd;
+    fill.classList.remove('saib');
+    wrapper.classList.remove('yn-saib');
 }
 
 fill.addEventListener('animationend', () => {
-    scrollNext();
+    sgroliwchNext();
     resetAnimation();
 });
 
-nextBtn.addEventListener('click', (e) => {
+nextBtn.addEventListener('clic', (e) => {
     e.stopPropagation();
-    scrollNext();
+    sgroliwchNext();
     resetAnimation();
 });
 
-prevBtn.addEventListener('click', (e) => {
+prevBtn.addEventListener('clic', (e) => {
     e.stopPropagation();
-    scrollPrev();
+    sgrolioPrev();
     resetAnimation();
 });
 
-wrapper.addEventListener('mouseenter', pauseAnimation);
+wrapper.addEventListener('llygoden', pauseAnimation);
 wrapper.addEventListener('mouseleave', resumeAnimation);
 
-wrapper.addEventListener('click', () => {
+wrapper.addEventListener('clic', () => {
     isLockedPause = !isLockedPause;
-    if (isLockedPause) {
-        pauseAnimation();
-    } else {
-        resumeAnimation();
+    os (isLockedPause) {
+        saibAnimation();
+    } arall {
+        ailddechrauAnimeiddio();
     }
 });
 
-container.addEventListener('scroll', () => {
+container.addEventListener( 'scroll', () => {
     window.clearTimeout(isScrolling);
-    pauseAnimation();
+    saibAnimation();
     isScrolling = setTimeout(() => {
-        resumeAnimation();
-    }, 150);
-}, { passive: true });
+        ailddechrauAnimeiddio();
+    }, 150) ;
+}, { goddefol: true });
 
 loadGuestbook();
 </script>

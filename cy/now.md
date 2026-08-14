@@ -7,169 +7,169 @@ last_updated: 2026-08-14
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<style>
-body, main, p, a, span, li {
-    font-family: 'SUSE', sans-serif !important;
+<steil>
+corff, prif, p, a, rhychwant, li{
+    font-family: 'SUSE', sans-serif !pwysig;
 }
 h1, h2, h3 {
-    font-family: 'Staatliches', sans-serif !important;
+    ffont-teulu: 'Staatliches', sans-serif !important;
 }
 
 .blinking-cursor {
-    font-weight: 800;
-    color: var(--accent-cyan);
-    animation: blink 1s step-end infinite;
+    ffont-pwysau: 800;
+    lliw: var (--accent-cyan);
+    animeiddiad: amrantiad 1s cam-diwedd anfeidrol;
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% { didreiddedd: 0; }
 }
 
 .unified-card {
-    background: var(--nav-bg);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--border-color, var(--border));
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-bottom: 20px;
+    cefndir: var(--nav-bg);
+    radiws ffin: 8px;
+    arddangos: fflecs;
+    fflecs-cyfeiriad: colofn;
+    ffin: var solet 1px (-- border-color, var (-- border));
+    cysgod blwch: 6px 6px 0px rgba(0, 0, 0, 0.1);
+    gorlif: cudd;
+    ymyl-gwaelod: 20px;
 }
 
-[data-theme="dark"] .unified-card {
-    border: 1px solid var(--border-color, var(--border));
-    box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1);
+[ data-theme = "tywyll"] .unified-card {
+    ffin: var solet 1px (-- border-color, var (-- border));
+    cysgod blwch: 6px 6px 0px rgba(255, 255, 255, 0.1);
 }
 
-.unified-row {
-    padding: 30px 34px;
-    border-bottom: 1px dashed var(--border-color, var(--border));
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    align-items: start;
-    transition: background-color 0.1s ease, border-color 0.1s ease;
-    border-left: 6px solid transparent;
+.unified-res {
+    padin: 30px 34px;
+    gwaelod ymyl: var doriad 1px (-- border-color, var (-- border));
+    arddangos: grid;
+    grid-templed-colofnau: 240px 1fr;
+    alinio-eitemau: cychwyn;
+    pontio: cefndir-lliw 0.1s rhwyddineb, border-lliw 0.1s rhwyddineb;
+    border-chwith: 6px solet tryloyw;
 }
 
-.unified-row:last-child {
-    border-bottom: none;
+.unified-res: last-plentyn {
+    border-gwaelod: dim;
 }
 
 .unified-row.interactive-row:hover {
-    background-color: rgba(42, 161, 152, 0.05);
-    border-left-color: var(--accent-cyan);
+    lliw cefndir: rgba(42, 161, 152, 0.05);
+    lliw border-chwith: var (--acen-cyan);
 }
 
-[data-theme="dark"] .unified-row.interactive-row:hover {
-    background-color: rgba(42, 161, 152, 0.1);
-    border-left-color: var(--accent-cyan);
+[data-theme="tywyll"] .unified-row.interactive-row:hover {
+    lliw cefndir: rgba(42, 161, 152, 0.1);
+    lliw border-chwith: var (--acen-cyan);
 }
 
-.interactive-row:hover .hacker-list li strong {
-    color: var(--accent-cyan);
+.interactive-row:hover .hacker-list li cryf {
+    lliw: var (--accent-cyan);
 }
 
-.soft-header {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    margin: 0;
-    font-weight: 700;
-    padding-top: 2px;
+pennyn .soft {
+    maint y ffont: 0.85rem;
+    testun-trawsnewid: priflythrennau;
+    bylchau rhwng llythyrau: 1px;
+    lliw: var (--testun-tewi);
+    ymyl: 0;
+    ffont-pwysau: 700;
+    padin-top: 2px;
 }
 
 .unified-meta {
-    font-size: 0.85rem;
-    color: var(--accent-cyan);
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    maint y ffont: 0.85rem;
+    lliw: var (--accent-cyan);
+    ymyl: 0;
+    testun-trawsnewid: priflythrennau;
+    ffont-pwysau: 700;
+    bylchau rhwng llythyrau: 0.5px;
 }
 
-.hacker-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.haciwr-rhestr {
+    arddull rhestr: dim;
+    padin: 0;
+    ymyl: 0;
 }
 
-.hacker-list li {
-    margin-bottom: 12px;
-    opacity: 0.9;
-    line-height: 1.4;
-    position: relative;
-    padding-left: 30px;
+.hacker-list li{
+    ymyl-gwaelod: 12px;
+    didreiddedd: 0.9;
+    uchder llinell: 1.4;
+    sefyllfa: perthynas;
+    padin-chwith: 30px;
 }
 
-.hacker-list li::before {
-    content: ">>";
-    color: var(--accent-cyan);
-    font-weight: 800;
-    font-size: 0.9em;
-    position: absolute;
-    left: 0;
-    top: 1px;
+.hacker-list li ::cyn {
+    cynnwys:">>";
+    lliw: var (--accent-cyan);
+    ffont-pwysau: 800;
+    maint y ffont: 0.9em;
+    sefyllfa: absoliwt;
+    chwith: 0;
+    uchaf: 1px;
 }
 
-.hacker-list li:last-child {
-    margin-bottom: 0;
+.hacker-list li: last-plentyn {
+    ymyl-gwaelod: 0;
 }
 
-.hacker-list li strong {
-    color: var(--text);
-    transition: color 0.1s ease;
+.hacker-list li cryf {
+    lliw: var (--testun);
+    pontio: lliw 0.1s rhwyddineb;
 }
 
-@media (max-width: 850px) {
-    .unified-row {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 25px 14px;
+@cyfryngau (uchafswm lled: 850px) {
+    .unified-res {
+        grid-templed-colofnau: 1fr;
+        bwlch: 15px;
+        padin: 25px 14px;
     }
 }
 </style>
 
 <div class="page-content">
-    <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
-        Now<span class="blinking-cursor">_</span>
+    <h1 style="margin: 0 0 10px 0; maint y ffont: 2.2rem; pwysau ffont: 800; bylchau rhwng llythyrau: -1px;">
+        Nawr <span class="blinking-cursor">_</span>
     </h1>
-    <p style="font-size: 1.05rem; opacity: 0.9; margin: 0 0 30px 0;">A snapshot of what is currently occupying my time and attention.</p>
+    <p style="font-size: 1.05rem; didreiddedd: 0.9; ymyl: 0 0 30px 0;"> Ciplun o'r hyn sy'n cymryd fy amser a fy sylw ar hyn o bryd.</p>
 
-    <div class="unified-card">
+<div class="unified-card">
         
-        <div class="unified-row interactive-row">
-            <h3 class="soft-header">>_ Working on</h3>
+        <div class="rhes-ryngweithiol-rhes-unedig">
+            <h3 class="soft-header">_ Gweithio ar</h3>
             <ul class="hacker-list">
-                <li><strong>Trying to lose weight</strong></li>
+                <li><strong>Ceisio colli pwysau</strong></li>
             </ul>
         </div>
 
-        <div class="unified-row interactive-row">
-            <h3 class="soft-header">>_ Playing</h3>
+<div class="rhes-ryngweithiol-rhes-unedig">
+            <h3 class="soft-header">_ Yn chwarae</h3>
             <ul class="hacker-list">
-                <li><strong>Dead By Daylight</strong></li>
+                <li><strong>Marw Erbyn Golau Dydd</strong></li>
             </ul>
         </div>
 
-        <div class="unified-row interactive-row">
-            <h3 class="soft-header">>_ Watching</h3>
+<div class="rhes-ryngweithiol-rhes-unedig">
+            <h3 class="header-soft">_ Gwylio</h3>
             <ul class="hacker-list">
-                <li><strong>House of the Dragon</strong> on HBO Max</li>
-                <li><strong>A Knight of the Seven Kingdoms</strong> on HBO Max</li>
+                <li><strong>Tŷ'r Ddraig</strong> ar HBO Max</li>
+                <li><strong>Marchog y Saith Teyrnas</strong> ar HBO Max</li>
             </ul>
         </div>
 
-        <div class="unified-row interactive-row">
-            <h3 class="soft-header">>_ Listening to</h3>
+<div class="rhes-ryngweithiol-rhes-unedig">
+            <h3 class="header-soft">_ Gwrando ar</h3>
             <ul class="hacker-list">
-                <li><strong>Any Batmobile song</strong></li>
+                <li><strong>Unrhyw gân Batmobile</strong></li>
             </ul>
         </div>
 
-    </div>
+</div>
 
-    <div style="text-align: right; margin-top: 10px;">
-        <p class="unified-meta" style="opacity: 0.6; display: inline-block;">Last updated: {{ page.last_updated | date: "%d %m %Y" }}</p>
+<div style="text-align: right; margin-top: 10px;">
+        <p class="unified-meta" style="opacity: 0.6; display: inline-block;"> Diweddarwyd ddiwethaf: {{ page.last_updated | date: "%d %m %Y" }}</p>
     </div>
 </div>

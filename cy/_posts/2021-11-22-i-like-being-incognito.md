@@ -4,19 +4,19 @@ title: I like being incognito
 description:
 ---
 
-I've noticed a lot of people in this world like to share anything and everything with other people. And I could never understand why. People will post every photo that is on their phone to Instagram or they'll update their Facebook status for the 50th time in one day. I've started noticing a trend where people think they will succeed in being internet famous (or "influencers.").
+Rwyf wedi sylwi bod llawer o bobl yn y byd hwn yn hoffi rhannu unrhyw beth a phopeth gyda phobl eraill. Ac ni allwn byth ddeall pam. Bydd pobl yn postio pob llun sydd ar eu ffôn i Instagram neu byddant yn diweddaru eu statws Facebook am y 50fed tro mewn un diwrnod. Rwyf wedi dechrau sylwi ar duedd lle mae pobl yn meddwl y byddant yn llwyddo i fod yn enwog ar y rhyngrwyd (neu "ddylanwadwyr.").
 
-I on the other hand, like to remain incognito. I don't like to tell everyone about what I am doing or how I am feeling. And when it comes to any sort of fame, that is certainly not for me.
+Ar y llaw arall, rydw i'n hoffi aros yn anhysbys. Dydw i ddim yn hoffi dweud wrth bawb beth rydw i'n ei wneud na sut rydw i'n teimlo. A phan ddaw i unrhyw fath o enwogrwydd, yn sicr nid yw hynny i mi.
 
-Being in the background is where I feel most comfortable. I don't like being asked a billion different questions about what I am doing in life, or am I in a relationship yet, or have I done this or that...
-It's no ones business but mine. And that's how I like it to be.
+Bod yn y cefndir yw lle rwy'n teimlo'n fwyaf cyfforddus. Dydw i ddim yn hoffi cael biliwn o gwestiynau gwahanol am yr hyn rydw i'n ei wneud mewn bywyd, neu ydw i mewn perthynas eto, neu ydw i wedi gwneud hyn neu'r llall...
+Nid yw'n fusnes neb ond fy un i. A dyna sut yr wyf yn hoffi iddo fod.
 
-Imagine you are at a party. You see everyone dancing and talking to each other and then you look to the back of the room to see a guy leaning up against the wall with a can of beer in his hand, wishing he could just escape. That's me.
+Dychmygwch eich bod mewn parti. Rydych chi'n gweld pawb yn dawnsio ac yn siarad â'i gilydd ac yna rydych chi'n edrych i gefn yr ystafell i weld dyn yn pwyso i fyny yn erbyn y wal gyda chan o gwrw yn ei law, yn dymuno y gallai ddianc. Dyna fi.
 
-Is it some sort of social anxiety disorder? *No.*
+Ai rhyw fath o anhwylder gorbryder cymdeithasol ydyw? *Na.*
 
-Is it weird? *Probably so.*
+Ydy hi'n rhyfedd? *Mae'n debyg felly.*
 
-But that's just me.
+Ond dim ond fi yw hynny.
 
-Can anyone else relate?
+A all unrhyw un arall ymwneud?

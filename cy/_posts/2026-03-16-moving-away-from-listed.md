@@ -4,24 +4,24 @@ title: Why I'm moving away from Listed.to
 description:
 ---
 
-Since 2020, I've been hosting my blog on the free blogging/journaling platform Listed.to.  Developed by Standard Notes, Listed was the perfect minimalist blogging platform that offered a distraction-free environment that prioritised privacy and simplicity. It was perfect. I could just write stuff within Standard Notes and with a click of a button, it would be published without effort.
+Ers 2020, rydw i wedi bod yn cynnal fy mlog ar y platfform blogio / cyfnodolyn rhad ac am ddim Listed.to.  Wedi'i ddatblygu gan Standard Notes, roedd Listed yn blatfform blogio minimalaidd perffaith a oedd yn cynnig amgylchedd di-dynnu sylw a oedd yn blaenoriaethu preifatrwydd a symlrwydd. Roedd yn berffaith. Gallwn i ysgrifennu stwff o fewn Nodiadau Safonol a gyda chlicio botwm, byddai'n cael ei gyhoeddi heb ymdrech.
 
-Lately, however, the experience has degraded to the point I've decided I am going to host my blog on my own website. Here is why I am making the switch.
+Yn ddiweddar, fodd bynnag, mae'r profiad wedi dirywio i'r pwynt rwyf wedi penderfynu fy mod yn mynd i gynnal fy mlog ar fy ngwefan fy hun. Dyma pam rydw i'n gwneud y switsh.
 
-## The bot invasion
-One of the great things about Listed is the "Recent Authors" list. It's a chronological feed where you ~~can~~ could discover other writers and read genuine human thoughts.
+## Y goresgyniad bot
+Un o'r pethau gwych am y Rhestredig yw'r rhestr "Awduron Diweddar". Mae'n borthiant cronolegol lle gallwch chi ~~~~ ddarganfod awduron eraill a darllen meddyliau dynol dilys.
 
-Today, that feed is completely unrecognisable. It has been thoroughly overrun by bots. Instead of personal, honest writing, the platform is now continuously spammed with AI generated slop and fake, SEO driven business blogs. It is incredibly disheartening to see a platform built for focused writing become a dumping ground for this type of content. The genuine bloggers on Listed have been entirely drowned out.
+Heddiw, mae'r porthiant hwnnw'n gwbl anadnabyddadwy. Mae wedi cael ei or-redeg yn llwyr gan bots. Yn lle ysgrifennu personol, gonest, mae'r platfform bellach yn cael ei sbamio'n barhaus â blogiau busnes ffug a ffug a yrrir gan SEO. Mae'n hynod ddigalon gweld llwyfan a adeiladwyd ar gyfer ysgrifennu â ffocws yn dod yn faes dympio ar gyfer y math hwn o gynnwys. Mae'r blogwyr dilys ar Listed wedi cael eu boddi'n llwyr.
 
-![AI slop and SEO spam on the recent authors section](https://files.horizon.pics/905f0194-4ae5-4d91-bc97-4b73ee0878e8?a=480&region=eu-central&mime1=image&mime2=jpeg)
+![Slop AI a sbam SEO ar yr adran awduron diweddar]( https://files.horizon.pics/905f0194-4ae5-4d91-bc97-4b73ee0878e8?a=480&region=eu-central&mime1=image&mime2=jpeg )
 
-## Constant access headaches
-Beyond the decline in platform quality, the backend experience hasn't been so great.
+## Cur pen mynediad cyson
+Y tu hwnt i'r dirywiad yn ansawdd y platfform, nid yw'r profiad backend wedi bod mor wych.
 
-Listed uses a unique authentication model tied to author keys rather than traditional logins. In theory, this aligns with the Standard Notes security ethos. In practice, it has become a constant hurdle for me personally. I continually lose access to my own blog if I update any part of my domain that's connected to my Listed blog, forcing me to repeatedly go through the tedious process of requesting new author keys just to gain access back to my blog.
+Mae Rhestredig yn defnyddio model dilysu unigryw sy'n gysylltiedig ag allweddi awdur yn hytrach na mewngofnodi traddodiadol. Mewn egwyddor, mae hyn yn cyd-fynd ag ethos diogelwch Nodiadau Safonol. Yn ymarferol, mae wedi dod yn rhwystr cyson i mi yn bersonol. Rwy'n colli mynediad i fy mlog fy hun yn barhaus os byddaf yn diweddaru unrhyw ran o'm parth sy'n gysylltiedig â'm blog Rhestredig, gan fy ngorfodi i fynd trwy'r broses ddiflas dro ar ôl tro o ofyn am allweddi awduron newydd dim ond i gael mynediad yn ôl i'm blog.
 
-## Moving forward
+## Symud ymlaen
 
-I am currently in the process of building my website and migrating my Listed blog posts over to here. I am going to keep my Listed blog up, but I don't plan to use it going forward. I just hope that the AI slop and SEO spam on the platform is combated in some way so genuine bloggers can have a spotlight on the home page once again.
+Ar hyn o bryd rydw i yn y broses o adeiladu fy ngwefan a mudo fy mhyst blogiau Rhestredig i fan hyn. Rwy'n mynd i gadw fy mlog Rhestredig i fyny, ond nid wyf yn bwriadu ei ddefnyddio wrth symud ymlaen. Rwy'n gobeithio y bydd y slop AI a'r sbam SEO ar y platfform yn cael eu brwydro mewn rhyw ffordd fel y gall blogwyr dilys gael sylw ar y dudalen gartref unwaith eto.
 
-Until next time...
+Tan y tro nesaf...

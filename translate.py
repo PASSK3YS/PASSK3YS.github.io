@@ -1,10 +1,10 @@
 import os
 import glob
 import re
-from deep_translator import MyMemoryTranslator
+from deep_translator import GoogleTranslator
 
 os.makedirs('cy', exist_ok=True)
-translator = MyMemoryTranslator(source='en-GB', target='cy-GB')
+translator = GoogleTranslator(source='en', target='cy')
 
 def chunk_and_translate(text):
     paragraphs = text.split('\n\n')
@@ -12,8 +12,13 @@ def chunk_and_translate(text):
     for p in paragraphs:
         if p.strip():
             try:
-                translated.append(translator.translate(p))
-            except:
+                res = translator.translate(p)
+                if res is None:
+                    translated.append(p)
+                else:
+                    translated.append(res)
+            except Exception as e:
+                print(f"    [!] Error: {e}")
                 translated.append(p)
         else:
             translated.append(p)

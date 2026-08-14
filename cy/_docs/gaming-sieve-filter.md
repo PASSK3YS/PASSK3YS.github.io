@@ -7,13 +7,13 @@ type: Resource
 image: https://kieran.colfer.net/assets/docs-thumbnail.png
 ---
 
-Cyn defnyddio'r hidlydd hwn, sicrhewch eich bod wedi creu ffolder o'r enw "Hapchwarae" yn eich gosodiadau Post Proton. Os yw'n well gennych enw gwahanol, diweddarwch y testun "Hapchwarae" yn y cod isod i gyd - fynd ag enw eich ffolder yn union.
+Cyn defnyddio'r hidlydd hwn, gwnewch yn siŵr eich bod wedi creu ffolder o'r enw "Gaming" yn eich gosodiadau Proton Mail. Os yw'n well gennych enw gwahanol, diweddarwch y testun "Hapchwarae" yn y cod isod i gyd-fynd yn union ag enw'ch ffolder.
 
 ```
-angen [" fileinto ", "imap4flags "];
+angen ["fileleinto", "imap4flags"];
 
-if anyof (
-    address :domain :contains "from" [
+os o gwbl (
+    cyfeiriad :domain :contains "from" [
         "steampowered.com",
         "steamcommunity.com",
         "playstation.com",
@@ -27,7 +27,7 @@ if anyof (
         "epicgames.com",
         "gog.com",
         "blizzard.com",
-        "battle.net",
+        "brwydr.net",
         "riotgames.com",
         "ubisoft.com",
         "ea.com",
@@ -40,24 +40,24 @@ if anyof (
         "bungie.net",
         "roblox.com"
     ],
-    header :contains "Subject" [
-        "Steam Wishlist",
+    pennawd : yn cynnwys "Pwnc" [
+        "Rhestr dymuniadau Stêm",
         "PlayStation Store",
-        "Xbox Game Pass",
-        "Nintendo Switch",
+        "Tocyn Gêm Xbox",
+        "Switsh Nintendo",
         "Twitch Drop",
-        "Humble Bundle",
-        "Epic Games Store"
+        "Bwndel Humble",
+        "Storfa Gemau Epig"
     ]
 ) {
-    fileinto "Gaming";
-    stop;
+    ffeil "Hapchwarae";
+    stopio;
 }
 ```
 
-Sut i Ymgeisio
+## Sut i wneud cais
 
 1. Cliciwch yr eicon gosodiadau -> Pob gosodiad -> Hidlau
-2. Cliciwch Ychwanegu hidlydd gogr.
-3. Enwch yr hidlydd (ee, "Hidlo Hapchwarae "), a gludwch y cod i'r golygydd sgript.
+2. Cliciwch Ychwanegu hidlydd ridyll.
+3. Enwch yr hidlydd (e.e., "Hidlydd Hapchwarae"), a gludwch y cod i'r golygydd sgript.
 4. Cliciwch arbed.

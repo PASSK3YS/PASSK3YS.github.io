@@ -5,24 +5,24 @@ description: How I successfully convinced my friends and family to switch to Sig
 image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/messagemeonsignal-2.webp
 ---
 
-Over the last few months I made it my mission to convince my friends and family to switch from WhatsApp to Signal, a more secure and private alternative. It wasn't an easy task, but with persistence and creativity, I succeeded in getting them to switch.
+Dros yr ychydig fisoedd diwethaf, nodais fy nghenhadaeth i argyhoeddi fy ffrindiau a fy nheulu i newid o WhatsApp i Signal, dewis amgen mwy diogel a phreifat. Nid oedd yn dasg hawdd, ond gyda dyfalbarhad a chreadigrwydd, llwyddais i'w cael i newid.
 
-I was browsing YouTube and came across a video titled <a href="https://www.youtube.com/watch?v=s9Ux8DFgMSM" target="_blank">"How to convince your friends to use a private messenger"</a>. I watched the video and was inspired to take on the challenge of getting everyone I spoke to over to Signal. At that point in time, I had some people who already made the switch, but I could never convince the rest to do the same.
+Roeddwn i'n pori YouTube a des i ar draws fideo o'r enw <a href="https://www.youtube.com/watch?v=s9Ux8DFgMSM" target="_blank">"Sut i ddarbwyllo'ch ffrindiau i ddefnyddio negesydd preifat"</a>. Gwyliais y fideo a chefais fy ysbrydoli i ymgymryd â'r her o gael pawb y siaradais â nhw draw i Signal. Ar yr adeg honno, roedd gennyf rai pobl a oedd eisoes wedi newid, ond ni allwn byth argyhoeddi'r gweddill i wneud yr un peth.
 
-After watching the video, I thought I'd give the delayed response tip a try. I started to deliberately delay my responses to people on WhatsApp by 24 hours. Cheeky I know, but it proved effective for me. I was able to subtly convey that I was no longer prioritising the platform. Admittedly, this small change of delaying my responses caused frustration amongst a few people in my contacts, but after explaining why I was no longer responding straight away, they understood and agreed to download Signal to reach me faster.
+Ar ôl gwylio'r fideo, roeddwn i'n meddwl y byddwn i'n rhoi cynnig ar y tip ymateb gohiriedig. Dechreuais ohirio fy ymatebion i bobl ar WhatsApp 24 awr yn fwriadol. Gwn yn ddigywilydd, ond bu'n effeithiol i mi. Roeddwn yn gallu cyfleu’n gynnil nad oeddwn bellach yn blaenoriaethu’r platfform. Rhaid cyfaddef, achosodd y newid bach hwn o ohirio fy ymatebion rwystredigaeth ymhlith ychydig o bobl yn fy nghysylltiadau, ond ar ôl esbonio pam nad oeddwn yn ymateb yn syth mwyach, fe ddeallon nhw a chytuno i lawrlwytho Signal i'm cyrraedd yn gyflymach.
 
-### Changing my profile picture
-When I changed my WhatsApp profile picture to an image featuring the Signal logo along with the download URL, this caught the attention of a few family members. It became a good conversation starter when they asked me what my profile picture was about. I explained what Signal was and why it was a better choice for their online privacy. I highlighted that Signal's end-to-end encryption messages were just like WhatsApp, but with the added bonus of minimal meta data collection, and the company's non-profit status - which thankfully resonated with them to make the switch and delete WhatsApp!
+### Newid fy llun proffil
+Pan newidiais fy llun proffil WhatsApp i ddelwedd yn cynnwys logo Signal ynghyd â'r URL lawrlwytho, daliodd hyn sylw ychydig o aelodau'r teulu. Daeth yn ddechreuwr sgwrs dda pan ofynnon nhw i mi beth oedd pwrpas fy llun proffil. Esboniais beth oedd Signal a pham ei fod yn ddewis gwell ar gyfer eu preifatrwydd ar-lein. Tynnais sylw at y ffaith bod negeseuon amgryptio o un pen i'r llall Signal yn union fel WhatsApp, ond gyda'r bonws ychwanegol o gasglu data meta lleiaf posibl, a statws di-elw y cwmni - a oedd, diolch byth, yn atseinio gyda nhw i newid a dileu WhatsApp!
 
-Fast forward to today, and I'm thrilled to report that everyone I communicate with now exclusively uses Signal. It's rewarding to know that everyone I got to switch to Signal, I've helped them take a significant step towards protecting their online privacy.
+Ymlaen yn gyflym at heddiw, ac rwyf wrth fy modd i adrodd bod pawb rwy'n cyfathrebu â nhw nawr yn defnyddio Signal yn unig. Mae'n werth chweil gwybod bod pawb y cefais i newid i Signal, rwyf wedi eu helpu i gymryd cam sylweddol tuag at ddiogelu eu preifatrwydd ar-lein.
 
-If you are trying to get friends and family switch from WhatsApp (or another messenger app), I encourage you to be patient and creative in your approach.<br>
-The impossible task of getting people to switch messaging apps really isn't that impossible after all.
+Os ydych chi'n ceisio cael ffrindiau a theulu i newid o WhatsApp (neu ap negesydd arall), rwy'n eich annog i fod yn amyneddgar ac yn greadigol yn eich ymagwedd.<br>
+Nid yw'r dasg amhosibl o gael pobl i newid apiau negeseuon mor amhosibl â hynny wedi'r cyfan.
 
 ---
 
-Feel free to use this image I created to change your profile picture on the app you want people to move away from:
+Mae croeso i chi ddefnyddio'r ddelwedd hon a greais i newid eich llun proffil ar yr ap rydych chi am i bobl symud i ffwrdd ohono:
 
-![Message Me On Signal Profile Picture](https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/messagemeonsignal-2.webp)
+![Neges Me Ar Llun Proffil Signal]( https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/messagemeonsignal-2.webp)
 
-Until next time...
+Tan y tro nesaf...

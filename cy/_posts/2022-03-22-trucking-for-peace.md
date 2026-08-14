@@ -4,21 +4,21 @@ title: Trucking For Peace raises over $25,000 for Ukraine
 description: Eurotruck Simulator 2 community comes together for a good cause.
 ---
 
-![OqPTih](https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/oqptih.webp)
+![OqPTih]( https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/oqptih.webp)
 
-Earlier this month, the creators of Euro Truck Simulator 2, SCS Software, started the campaign Trucking For Peace to raise money for Ukrainians who are affected by the war and invasion of Russian troops by the order of Vladimir Putin.
+Yn gynharach y mis hwn, cychwynnodd crewyr Euro Truck Simulator 2, SCS Software, yr ymgyrch Trucking For Peace i godi arian ar gyfer Ukrainians sy'n cael eu heffeithio gan y rhyfel a goresgyniad milwyr Rwsia gan orchymyn Vladimir Putin.
 
-With an initial donation of 20,000 Euros (22,000 USD), SCS Software released 4 Ukraine themed paint jobs where 100% of the profits would be donated directly to the [People In Need charity](https://www.peopleinneed.net/people-in-need-continues-support-ukraine-8586gp), and the Euro Truck Simulator 2 community (dubbed The Best Community Ever) certainly didn't disappoint in their efforts to help raise money. With the support of the whole ETS2 and ATS community, SCS Software managed raised over 18,000 USD in 24 hours for Trucking For Peace.
+Gyda rhodd gychwynnol o 20,000 Ewro (22,000 USD), rhyddhaodd SCS Software 4 swydd paent ar thema’r Wcrain lle byddai 100% o’r elw’n cael ei roi’n uniongyrchol i’r [elusen Pobl Mewn Angen]( https://www.peopleinneed.net/people-in-need-continues-support-ukraine-8586gp) yn sicr, a’r gymuned Eurodubb Best (Eurodubb Simulator) yn sicr o wneud hynny. siom yn eu hymdrechion i helpu i godi arian. Gyda chefnogaeth y gymuned ETS2 ac ATS gyfan, cododd SCS Software a reolir dros 18,000 USD mewn 24 awr ar gyfer Trucking For Peace.
 
-To date, over 25,000 USD has been raised and that number keeps on growing!
+Hyd yn hyn, mae dros 25,000 USD wedi'i godi ac mae'r nifer hwnnw'n parhau i dyfu!
 
-Recently, SCS Software (along with the kind people from Satnik Praha), delivered 50,000 CZK (around 2,200 USD) worth of food and hygiene products for Ukrainian refugees who had to flee their home country for safety.
+Yn ddiweddar, cyflwynodd SCS Software (ynghyd â'r bobl garedig o Satnik Praha), werth 50,000 CZK (tua 2,200 USD) o gynhyrchion bwyd a hylendid ar gyfer ffoaduriaid Wcrain a oedd yn gorfod ffoi o'u mamwlad er diogelwch.
 
-![yFuRiv](https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/yfuriv.webp)
-#### Image Credit: SCS Software
+![yFuRiv]( https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/yfuriv.webp)
+#### Credyd Delwedd: Meddalwedd SCS
 
-If you would like to donate on behalf of Trucking For Peace to help Ukrainians in a time of crisis, please purchase the [Ukrainian Paint Jobs Pack DLC](https://store.steampowered.com/app/1918370/Euro_Truck_Simulator_2__Ukrainian_Paint_Jobs_Pack/) for Euro Truck Simulator 2 on Steam and all proceeds will go directly the [People In Need charity.](https://www.peopleinneed.net/people-in-need-continues-support-ukraine-8586gp) Alternatively, you can donate directly.
+Os hoffech chi gyfrannu ar ran Trucking For Peace i helpu Ukrainians mewn cyfnod o argyfwng, prynwch y [Pecyn Swyddi Paent Wcreineg DLC](https://store.steampowered.com/app/1918370/Euro_Truck_Simulator_2__Ukrainian_Paint_Jobs_Pack/) ar gyfer Euro Truck Simulators 2 yn mynd ymlaen yn uniongyrchol a bydd yr holl Needples yn mynd yn ei flaen yn uniongyrchol elusen.](https://www.peopleinneed.net/people-in-need-continues-support-ukraine-8586gp) Fel arall, gallwch gyfrannu'n uniongyrchol.
 
-You can find more information about Trucking For Peace on [SCS Software's official blog.](https://blog.scssoft.com/2022/03/ukrainian-paint-jobs-pack.html)
+Gallwch ddod o hyd i ragor o wybodaeth am Trucking For Peace ar [blog swyddogol SCS Software.]( https://blog.scssoft.com/2022/03/ukrainian-paint-jobs-pack.html)
 
-Please spread the message by using #TruckingForPeace on Twitter.
+Lledaenwch y neges drwy ddefnyddio #TruckingForPeace ar Twitter.

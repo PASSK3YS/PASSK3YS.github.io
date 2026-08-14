@@ -4,24 +4,24 @@ title: Freedom of speech is being eroded in the UK
 description: The UK is turning into an authoritarian state.
 ---
 
-Prime Minister Keir Starmer recently visited President Donald Trump in the Oval Office. While Starmer and Trump were talking to the press, Vice President JD Vance called out the infringement on free speech in the United Kingdom.
+Ymwelodd y Prif Weinidog Keir Starmer â’r Arlywydd Donald Trump yn y Swyddfa Oval yn ddiweddar. Tra bod Starmer a Trump yn siarad â'r wasg, galwodd yr Is-lywydd JD Vance y drosedd ar ryddid i lefaru yn y Deyrnas Unedig.
 
-> “I said what I said. There have been infringements on Free Speech that actually affect not just the British people, but also American technology companies and American citizens.”
+> “Dywedais yr hyn a ddywedais. Bu troseddau ar Free Speech sydd mewn gwirionedd yn effeithio nid yn unig ar bobl Prydain, ond hefyd ar gwmnïau technoleg Americanaidd a dinasyddion America.”
 
-Keir Starmer then made a comment saying the following...
+Yna gwnaeth Keir Starmer sylw gan ddweud y canlynol ...
 
-> "We've had free speech for a very very long time in the United Kingdom and it will last for a very very long time...I'm very proud of our history there."
+> "Rydym wedi cael rhyddid i lefaru am amser hir iawn yn y Deyrnas Unedig a bydd yn para am amser hir iawn...dwi'n falch iawn o'n hanes ni yno."
 
-Yes, we have had free speech in the UK for a long time, but in the last few years, especially under Keir Starmer's Labour government, laws around free speech and censorship have tightened. How can he confidently say he is "very proud" of the free speech we have in our country?
+Ydym, rydym wedi cael rhyddid i lefaru yn y DU ers amser maith, ond yn ystod yr ychydig flynyddoedd diwethaf, yn enwedig o dan lywodraeth Lafur Keir Starmer, mae cyfreithiau ynghylch rhyddid i lefaru a sensoriaeth wedi tynhau. Sut y gall ddweud yn hyderus ei fod yn "falch iawn" o'r rhyddid i siarad sydd gennym yn ein gwlad?
 
-Free speech is a fundamental human right, yet it is under constant attack in the UK. This country that once prided itself on its liberal values and open society is now witnessing a steady erosion of this basic freedom. The consequences are far-reaching, and the implications are alarming.
+Mae rhyddid i lefaru yn hawl ddynol sylfaenol, ac eto mae dan ymosodiad cyson yn y DU. Mae'r wlad hon a fu unwaith yn ymfalchïo yn ei gwerthoedd rhyddfrydol a'i chymdeithas agored bellach yn dyst i erydiad cyson o'r rhyddid sylfaenol hwn. Mae’r canlyniadau’n bellgyrhaeddol, ac mae’r goblygiadau’n frawychus.
 
-In recent years, we've all witnessed a surge in censorship, with the government cracking down on speech that is deemed "offensive or hateful". The thing is, what is defined as offensive and hateful? What could be interpreted as offensive and hateful to one person, may not be to another. The government put out a warning of "think before you post" on social media - meaning be careful what you say, or face the consequences... And we've already seen the consequences. During the 2024 UK riots, many people were arrested and sentenced to 20 - 30 months in prison over social media posts. Bear in mind, some people commit really horrible crimes and get less time in prison. I won't go into details about the crimes I am referring to, but you can probably guess.
+Yn ystod y blynyddoedd diwethaf, rydym i gyd wedi gweld ymchwydd mewn sensoriaeth, gyda'r llywodraeth yn mynd i'r afael â lleferydd sy'n cael ei ystyried yn "sarhaus neu atgas". Y peth yw, beth sy'n cael ei ddiffinio fel sarhaus ac atgas? Efallai nad yw'r hyn y gellid ei ddehongli fel sarhaus ac atgas i un person yn un arall. Rhoddodd y llywodraeth rybudd o "feddwl cyn postio" ar gyfryngau cymdeithasol - sy'n golygu byddwch yn ofalus beth rydych chi'n ei ddweud, neu wynebu'r canlyniadau ... Ac rydyn ni eisoes wedi gweld y canlyniadau. Yn ystod terfysgoedd y DU yn 2024, cafodd llawer o bobl eu harestio a’u dedfrydu i 20 - 30 mis yn y carchar dros bostiadau cyfryngau cymdeithasol. Cofiwch, mae rhai pobl yn cyflawni troseddau erchyll iawn ac yn cael llai o amser yn y carchar. Nid af i fanylion am y troseddau yr wyf yn cyfeirio atynt, ond mae'n debyg y gallwch ddyfalu.
 
-Admittedly, during those riots, some people were stirring up racial hatred online - which is totally not acceptable by any means, but there were many people expressing legitimate concerns online and in person over illegal immigration and how it was affecting areas they live in. These people were branded as "far right" from the legacy mainstream media and even from the Prime Minister himself. Sending these so called "far right" people to prison for 20 or even 30 months is outright ridiculous. We can't just go around locking people up for years in prison just because they might have said some "offensive" words on social media, or expressed an unpopular opinion the establishment disagrees with.
+Rhaid cyfaddef, yn ystod y terfysgoedd hynny, roedd rhai pobl yn ysgogi casineb hiliol ar-lein - sy'n gwbl annerbyniol o bell ffordd, ond roedd llawer o bobl yn mynegi pryderon dilys ar-lein ac yn bersonol ynghylch mewnfudo anghyfreithlon a sut yr oedd yn effeithio ar ardaloedd y maent yn byw ynddynt. Cafodd y bobl hyn eu brandio fel rhai "dde pellaf" o'r cyfryngau prif ffrwd etifeddiaeth a hyd yn oed gan y Prif Weinidog ei hun. Mae anfon y bobl “dde pellaf” hyn, fel y'u gelwir, i garchar am 20 neu hyd yn oed 30 mis yn hollol chwerthinllyd. Ni allwn fynd o gwmpas yn cloi pobl am flynyddoedd yn y carchar dim ond oherwydd efallai eu bod wedi dweud rhai geiriau "sarhaus" ar gyfryngau cymdeithasol, neu fynegi barn amhoblogaidd y mae'r sefydliad yn anghytuno ag ef.
 
-I don't agree with many things I read on the internet, but not once have I ever wanted those people to be de-platformed, thrown in prison, and have their lives ruined over something I may disagree with. A democratic society is built on the foundation of freedoms such as free speech, and people having a difference in opinions and view points, but what this government is doing currently is turning the UK into an authoritarian state.
+Nid wyf yn cytuno â llawer o bethau yr wyf yn eu darllen ar y rhyngrwyd, ond nid unwaith yr wyf erioed wedi bod eisiau i'r bobl hynny gael eu dad-lwyfannu, eu taflu i'r carchar, a chael eu bywydau wedi'u difetha dros rywbeth y byddaf yn anghytuno ag ef efallai. Mae cymdeithas ddemocrataidd wedi’i hadeiladu ar sail rhyddid fel rhyddid i lefaru, a phobl yn cael gwahaniaeth barn a safbwyntiau, ond yr hyn y mae’r llywodraeth hon yn ei wneud ar hyn o bryd yw troi’r DU yn wladwriaeth awdurdodaidd.
 
-I unfortunately feel that things will get even worse the longer this current government is in power. Free speech will continue to erode, many more people will be locked up, and state surveillance will get more invasive.
+Yn anffodus, rwy’n teimlo y bydd pethau’n mynd yn waeth po hiraf y bydd y llywodraeth bresennol mewn grym. Bydd lleferydd rhydd yn parhau i erydu, bydd llawer mwy o bobl yn cael eu cloi, a bydd gwyliadwriaeth y wladwriaeth yn dod yn fwy ymledol.
 
-Until next time...
+Tan y tro nesaf...

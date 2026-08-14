@@ -4,15 +4,15 @@ title: Why I still use Standard Notes 3 years on
 description: After 3 years of full time use, Standard Notes is my go-to notes app.
 ---
 
-![](https://files.horizon.pics/6adc5652-ce9a-410a-8a81-0a5f324ed222?a=480&mime1=image&mime2=png)
+![]( https://files.horizon.pics/6adc5652-ce9a-410a-8a81-0a5f324ed222?a=480&mime1=image&mime2=png)
 
-### Peace of mind
-I've always wanted a digital "lockbox" where I would feel comfortable to write and store personal things, whether my own beliefs and opinions, or sensitive information like health records. Because privacy is a core tenet of Standard Notes, end-to-end encryption is built into the application - so only I can read my notes. That's why Standard Notes is, and will continue to be my personal digital "lockbox" for my thoughts for many years to come.
+### Tawelwch meddwl
+Rwyf bob amser wedi bod eisiau "lockbox" digidol lle byddwn yn teimlo'n gyfforddus i ysgrifennu a storio pethau personol, boed fy nghredoau a'm barn fy hun, neu wybodaeth sensitif fel cofnodion iechyd. Gan fod preifatrwydd yn un o egwyddorion craidd Nodiadau Safonol, mae amgryptio o'r dechrau i'r diwedd wedi'i ymgorffori yn y rhaglen - felly dim ond fi sy'n gallu darllen fy nodiadau. Dyna pam mai Standard Notes yw fy “cloc clo” digidol personol i, a bydd yn parhau i fod, ar gyfer fy meddyliau am flynyddoedd lawer i ddod.
 
-### Flawless syncing
-In the last 3 years of using Standard Notes, I've only had a couple of times where the syncing of my notes have failed - and I mean that loosely. With those small instances, my notes were still completely fine because Standard Notes creates a "conflicted copy" of the note on the device ensure no data is lost. With all the note taking apps I've used before like Evernote, Google Keep and OneDrive, I truly believe that Standard Notes has the best syncing between devices. Period.
+### Cysoni di-ffael
+Yn ystod y 3 blynedd diwethaf o ddefnyddio Nodiadau Safonol, dim ond cwpl o weithiau rydw i wedi'u cael lle mae cysoni fy nodiadau wedi methu - ac rwy'n golygu hynny'n llac. Gyda'r achosion bach hynny, roedd fy nodiadau yn dal i fod yn hollol iawn oherwydd bod Standard Notes yn creu "copi gwrthdaro" o'r nodyn ar y ddyfais i sicrhau na chollir unrhyw ddata. Gyda'r holl apiau cymryd nodiadau rydw i wedi'u defnyddio o'r blaen fel Evernote, Google Keep ac OneDrive, rydw i wir yn credu bod gan Standard Notes y cysoni gorau rhwng dyfeisiau. Cyfnod.
 
-### Audited security
-One thing I love about Standard Notes are the security audits that are published for all users to see. The development team at Standard Notes regularly conducts security audits to identify and fix potential vulnerabilities, making sure the application remains secure over time.
+### Diogelwch wedi'i archwilio
+Un peth rydw i'n ei garu am Standard Notes yw'r archwiliadau diogelwch sy'n cael eu cyhoeddi i bob defnyddiwr eu gweld. Mae'r tîm datblygu yn Standard Notes yn cynnal archwiliadau diogelwch yn rheolaidd i nodi a thrwsio gwendidau posibl, gan sicrhau bod y cais yn parhau'n ddiogel dros amser.
 
-There are many more things about Standard Notes that I love, but these are the main reasons why I still continue to use this app 3 years on.
+Mae yna lawer mwy o bethau am Nodiadau Safonol rydw i'n eu caru, ond dyma'r prif resymau pam rydw i'n dal i barhau i ddefnyddio'r app hwn 3 blynedd yn ddiweddarach.
