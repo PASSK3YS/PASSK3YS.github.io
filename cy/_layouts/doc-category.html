@@ -1,9 +1,0 @@
----
-layout: default
----
-
-<div class="page-content"><h1>{{ page.title }}</h1><p>{{ page.description }}</p>
-
-<ul class="post-list" style="list-style: none; padding: 0;">{% assign category_docs = site.docs | where: "category", page.category_name %}{% for doc in category_docs %}<li style="margin-bottom: 20px;"><span class="post-meta" style="font-size: 0.85em; opacity: 0.7;"></span><h3><a class="post-link" href="{{ doc.url }}" style="text-decoration: none; font-size: 1.2em; font-weight: bold;">{{ doc.title }}</a></h3>{% if doc.description %}<p style="margin-top: 5px;">{{ doc.description }}</p>{% endif %}</li>{% endfor %}</ul>
-
-<p style="margin-top: 40px;"><a href="/docs/" class="back-link">&larr; Yn ôl i bob Dogfen</a></p></div>

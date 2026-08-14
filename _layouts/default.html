@@ -1,19 +1,3 @@
-{% assign lang_prefix = "" %}
-{% assign nav_about = "About" %}
-{% assign nav_contact = "Contact" %}
-{% assign nav_docs = "Docs" %}
-{% assign nav_tools = "Tools" %}
-{% assign nav_blog = "Blog" %}
-
-{% if page.url contains '/cy/' %}
-    {% assign lang_prefix = "/cy" %}
-    {% assign nav_about = "Amdanom" %}
-    {% assign nav_contact = "Cysylltu" %}
-    {% assign nav_docs = "Dogfennau" %}
-    {% assign nav_tools = "Offer" %}
-    {% assign nav_blog = "Blog" %}
-{% endif %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,7 +121,7 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
-            max-width: calc(100% - 150px);
+            max-width: calc(100% - 90px);
             margin: 0 auto;
             padding-bottom: 4px;
         }
@@ -189,32 +173,6 @@
             background: var(--accent-glow);
             color: var(--accent);
             transform: rotate(15deg);
-        }
-
-        .lang-toggle {
-            position: absolute;
-            right: 75px;
-            background: transparent;
-            border: 1px solid transparent;
-            color: var(--text);
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 12px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-weight: 700;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            transition: all 0.2s ease, transform 0.2s ease;
-        }
-
-        .lang-toggle:hover {
-            background: var(--accent-glow);
-            color: var(--accent);
-            border-color: var(--accent);
-            transform: translateY(-1px);
         }
 
         .floating-player-wrapper {
@@ -289,20 +247,19 @@
         .scroll-to-top:hover { transform: translateY(-4px); }
     </style>
 
-<link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" />
 </head>
 <body>
 
     <header>
         <div class="nav-header">
             <div class="nav-scroll">
-                <a href="{{ lang_prefix }}/" {% if page.url == '/' or page.url == '/cy/' or page.url == '/index.html' or page.url == '/cy/index.html' %}class="active"{% endif %}>{{ nav_about }}</a>
-                <a href="{{ lang_prefix }}/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>{{ nav_contact }}</a>
-                <a href="{{ lang_prefix }}/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>{{ nav_docs }}</a>
-                <a href="{{ lang_prefix }}/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>{{ nav_tools }}</a>
-                <a href="{{ lang_prefix }}/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>{{ nav_blog }}</a>
+                <a href="/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>About</a>
+                <a href="/contact/" {% if page.url contains '/contact/' %}class="active"{% endif %}>Contact</a>
+                <a href="/docs/" {% if page.collection == 'docs' or page.url contains '/docs/' %}class="active"{% endif %}>Docs</a>
+                <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
+                <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
             </div>
-            <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">EN / CY</button>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                 <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -363,7 +320,7 @@
                         </a>
                     </p>
                     <div style="margin-top: 15px;">
-                        <a href="{{ lang_prefix }}/privacy/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; opacity: 0.8;">Privacy Policy</a>
+                        <a href="/privacy/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; opacity: 0.8;">Privacy Policy</a>
                     </div>
                 </div>
             </div>
@@ -495,20 +452,6 @@
                     }
                 });
             });
-
-            const langToggleBtn = document.getElementById('lang-toggle');
-            if (langToggleBtn) {
-                langToggleBtn.addEventListener('click', () => {
-                    let currentPath = window.location.pathname;
-                    if (currentPath.startsWith('/cy/')) {
-                        window.location.assign(currentPath.substring(3));
-                    } else if (currentPath === '/cy') {
-                        window.location.assign('/');
-                    } else {
-                        window.location.assign('/cy' + currentPath);
-                    }
-                });
-            }
         });
     </script>
 </body>
