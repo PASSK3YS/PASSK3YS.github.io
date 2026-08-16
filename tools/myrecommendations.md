@@ -214,7 +214,7 @@ permalink: /tools/recommendations/
                           <li>Open-souce.</li>
                           <li>Quantum-resistant encryption</li>
                           <li>Cross-platform.</li>
-                          <li>Proxied P2P architecture<li>
+                          <li>Proxied P2P architecture</li>
                           <li>Disappearing messages.</li>
                           <li>Multiple profiles.</li>
                       </ul>
