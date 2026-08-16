@@ -96,7 +96,7 @@ permalink: /tools/recommendations/
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li>A little slower to get feature and security compared to Firefox.</li>
+                          <li>A little slower to get feature and security updates compared to Firefox.</li>
                       </ul>
                   </div>
               </div>
