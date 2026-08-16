@@ -276,7 +276,7 @@ permalink: /tools/recommendations/
                       <strong class="cons-title">Cons:</strong>
                       <ul>
                           <li>Limited free tier.</li>
-                          <li>Native Linux desktop app.</li>
+                          <li>No native Linux desktop app.</li>
                           <li>Potentially higher cost compared to mainstream providers.</li>
                       </ul>
                   </div>
