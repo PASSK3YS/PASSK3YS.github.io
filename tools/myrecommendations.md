@@ -74,8 +74,12 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
+                          <li>Fully open-source.</li>
                           <li>Lightweight.</li>
+                          <li>No Google telemetry</li>
                           <li>Supports uBlock Origin.</li>
+                          <li>Anti-fingerprinting measures.</li>
+                          <li>No Brave-style bloat.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
@@ -99,7 +103,10 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li>Privacy respecting and customisable.</li>
+                          <li>Privacy-conscious defaults like mozilla telemery disabled.</li>
+                          <li>Very customisable.</li>
+                          <li>Firefox-based.</li>
+                          <li>Open source.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
