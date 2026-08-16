@@ -76,7 +76,7 @@ permalink: /tools/recommendations/
                       <ul>
                           <li>Open-source.</li>
                           <li>Lightweight.</li>
-                          <li>No Google telemetry</li>
+                          <li>No Google telemetry.</li>
                           <li>Supports uBlock Origin.</li>
                           <li>Anti-fingerprinting measures.</li>
                           <li>No Brave-style bloat.</li>
@@ -85,7 +85,7 @@ permalink: /tools/recommendations/
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li>Unable to play DRM protected media on sites like Netlix and Disney Plus.</li>
+                          <li>Unable to play DRM protected media on sites like Netflix and Disney Plus.</li>
                           <li>No sync between devices.</li>
                           <li>No mobile app.</li>
                           <li>Based on the Chromium engine.</li>
@@ -155,7 +155,7 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li>End-to-end encrypted</li>
+                          <li>End-to-end encrypted.</li>
                           <li>Cross platform.</li>
                           <li>Easy to import calendar information from other providers.</li>
                       </ul>
