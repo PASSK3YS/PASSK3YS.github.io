@@ -65,7 +65,7 @@ permalink: /tools/recommendations/
                           <li>Not fully open-source.</li>
                           <li>Can use a lot of system resources.</li>
                           <li>Based on the Chromium engine.</li>
-                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -136,7 +136,7 @@ permalink: /tools/recommendations/
                       <strong class="pros-title">Pros:</strong>
                       <ul>
                           <li>Strong privacy features like anti-fingerprinting, ad and tracker blocking, and automatic browser data wiping.</li>
-                          <li>Firefox based.</li>
+                          <li>Firefox-based.</li>
                           <li>Letterboxing.</li>
                           <li>Identical fingerprint for all users.</li>
                           <li>No telemetry, accounts, or sync.</li>
@@ -151,7 +151,7 @@ permalink: /tools/recommendations/
                           <li>Some websites may not function correctly.</li>
                           <li>No mobile app.</li>
                           <li>No built-in sync</li>
-                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -212,7 +212,7 @@ permalink: /tools/recommendations/
                       <ul>
                           <li>Requires a phone number.</li>
                           <li>US-Based company.</li>
-                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -242,7 +242,7 @@ permalink: /tools/recommendations/
                           <li>UI less polished.</li>
                           <li>Smaller community.</li>
                           <li>UK-based company.</li>
-                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -304,7 +304,7 @@ permalink: /tools/recommendations/
                       <ul>
                           <li>Mobile app can be buggy.</li>
                           <li>Short inactivity policy for free accounts.</li>
-                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -336,7 +336,7 @@ permalink: /tools/recommendations/
                           <li>Paid mobile app.</li>
                           <li>No cloud-side search.</li>
                           <li>No protection against device compromise.</li>
-                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -415,7 +415,7 @@ permalink: /tools/recommendations/
                           <li>No automated email sorting into folders.</li>
                           <li>UI is fairly basic.</li>
                           <li>Has no .onion site.</li>
-                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -447,7 +447,7 @@ permalink: /tools/recommendations/
                           <li>No PGP support.</li>
                           <li>Requires phone number on sign-up.</li>
                           <li>Australian-based company.</li>
-                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
                           <li>Partial open-source code.</li>
                       </ul>
                   </div>
@@ -580,13 +580,32 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>End-to-end encrypted.</li>
+                          <li>Open-source.</li>
+                          <li>Cross-platform.</li>
+                          <li>Offline support.</li>
+                          <li>Self-hosting.</li>
+                          <li>Encypted sheduled backups.</li>
+                          <li>Import and export options.</li>
+                          <li>Supports community made plugins and themes.</li>
+                          <li>Web clipper.</li>
+                          <li>Notes stored locally with on-device encryption.</li>
+                          <li>Independently audited.</li>
+                          <li>End-to-end encrypted file storage.</li>
+
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Updates can be buggy.</li>
+                          <li>Limited free plan.</li>
+                          <li>Expensive paid pans.</li>
+                          <li>No real-time collaboration.</li>
+                          <li>No tasks or to-dos.</li>
+                          <li>US-based company.</li>
+                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          
                       </ul>
                   </div>
               </div>
@@ -601,13 +620,20 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>Open Source.</li>
+                          <li>Self-hosting.</li>
+                          <li>Offline support.</li>
+                          <li>Optional end-to-end encrypted sync.</li>
+                          <li>Supports community plugins and themes.</li>
+                          <li>Free app.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>No real-time collaboration</li>
+                          <li>Mobile sync complexity.</li>
+                          <li>UI is more basic compared to others.</li>
                       </ul>
                   </div>
               </div>
