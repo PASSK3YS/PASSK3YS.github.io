@@ -48,13 +48,13 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>Very customisable, respects privacy and EU made. </li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Not fully open-source.</li>
                       </ul>
                   </div>
               </div>
@@ -69,13 +69,13 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>Lightweight and supports uBlock Origin</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Unable to play DRM protected media on sites like Netlix and Disney Plus</li>
                       </ul>
                   </div>
               </div>
@@ -90,13 +90,13 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>Privacy respecting and customisable.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>A little slower to get feature and security compared to Firefox.</li>
                       </ul>
                   </div>
               </div>
@@ -111,13 +111,13 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>Strong privacy features like anti-fingerprinting, ad and tracker blocking, and automatic browser data wiping.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Some websites may not function correctly.</li>
                       </ul>
                   </div>
               </div>
