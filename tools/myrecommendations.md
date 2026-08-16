@@ -13,10 +13,30 @@ permalink: /tools/recommendations/
   <p>This page contains zero affiliate links.<br>
   My recommendations based on personal use and trust:</p>
 
+  <div class="dropdown-container">
+      <select id="section-nav" aria-label="Jump to section" onchange="if (this.value) window.location.hash = this.value;">
+          <option value="">Jump to a section...</option>
+          <option value="#browser">💻 Browser</option>
+          <option value="#calendar">📆 Calendar</option>
+          <option value="#chat">🗨️ Chat</option>
+          <option value="#cloud-storage">☁️ Cloud Storage</option>
+          <option value="#email">✉️ Email</option>
+          <option value="#documents">📄 Documents & Spreadsheets</option>
+          <option value="#email-aliasing">📧 Email Aliasing</option>
+          <option value="#notes">📓 Notes</option>
+          <option value="#password-manager">🪪 Password Manager</option>
+          <option value="#photo-management">📷 Photo Management</option>
+          <option value="#search-engine">🔍 Search Engine</option>
+          <option value="#vpn">🛡️ VPN</option>
+          <option value="#dns">🌐 DNS</option>
+          <option value="#os">🐧 OS</option>
+      </select>
+  </div>
+
   <hr>
 
   <div class="grid-container">
-      <div class="grid-item">
+      <div class="grid-item" id="browser">
           <h3>💻 Browser</h3>
           
           <div class="product-entry">
@@ -104,7 +124,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="calendar">
           <h3>📆 Calendar</h3>
           
           <div class="product-entry">
@@ -129,7 +149,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="chat">
           <h3>🗨️ Chat</h3>
           
           <div class="product-entry">
@@ -175,7 +195,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="cloud-storage">
           <h3>☁️ Cloud Storage</h3>
           
           <div class="product-entry">
@@ -242,7 +262,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="email">
           <h3>✉️ Email</h3>
           
           <div class="product-entry">
@@ -309,7 +329,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="documents">
           <h3>📄 Documents & Spreadsheets</h3>
           
           <div class="product-entry">
@@ -376,7 +396,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="email-aliasing">
           <h3>📧 Email Aliasing</h3>
           
           <div class="product-entry">
@@ -422,7 +442,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="notes">
           <h3>📓 Notes</h3>
           
           <div class="product-entry">
@@ -468,7 +488,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="password-manager">
           <h3>🪪 Password Manager</h3>
           
           <div class="product-entry">
@@ -556,7 +576,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="photo-management">
           <h3>📷 Photo Management</h3>
           
           <div class="product-entry">
@@ -623,7 +643,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="search-engine">
           <h3>🔍 Search Engine</h3>
           
           <div class="product-entry">
@@ -690,7 +710,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="vpn">
           <h3>🛡️ VPN</h3>
           
           <div class="product-entry">
@@ -757,7 +777,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="dns">
           <h3>🌐 DNS</h3>
           
           <div class="product-entry">
@@ -824,7 +844,7 @@ permalink: /tools/recommendations/
           </div>
       </div>
 
-      <div class="grid-item">
+      <div class="grid-item" id="os">
           <h3>🐧 OS</h3>
           
           <div class="product-entry">
@@ -915,7 +935,6 @@ permalink: /tools/recommendations/
 </div>
 
 <style>
-
 body, main, p, a, span, div, button, li {
     font-family: 'SUSE', sans-serif !important;
 }
@@ -928,6 +947,46 @@ pre, code {
     font-family: 'JetBrains Mono', monospace !important;
 }
 
+.dropdown-container {
+    margin: 25px 0;
+}
+
+#section-nav {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-family: 'SUSE', sans-serif;
+    font-weight: 700;
+    color: var(--text);
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    appearance: none;
+    /* Custom SVG arrow for light mode */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px top 50%;
+    background-size: 12px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#section-nav:hover, #section-nav:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* Custom SVG arrow for dark mode */
+[data-theme="dark"] #section-nav {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e2e8f0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
 .grid-container {
     display: flex;
     flex-direction: column;
@@ -936,6 +995,7 @@ pre, code {
 }
 
 .grid-item {
+    scroll-margin-top: 100px; /* Gives nice spacing when jumping to an anchor link */
     background: var(--nav-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);

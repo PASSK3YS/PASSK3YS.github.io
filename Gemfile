@@ -8,3 +8,5 @@ gem "bigdecimal"
 gem "base64", "~> 0.3.0"
 
 gem "kramdown-parser-gfm", "~> 1.1"
+
+gem "wdm", "~> 0.2.0"
