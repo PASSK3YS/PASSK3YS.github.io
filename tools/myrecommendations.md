@@ -41,7 +41,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="../assets/icons/vivaldi-browser-icon.svg" alt="Vivaldi Logo" class="product-logo">
+                  <img src="/assets/icons/vivaldi-browser-icon.svg" alt="Vivaldi Logo" class="product-logo">
                   <a href="https://vivaldi.com" target="_blank" class="product-name">Vivaldi</a>
               </div>
               <div class="product-details">
@@ -62,7 +62,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="../assets/icons/helium-app-icon.svg" alt="Helium Logo" class="product-logo">
+                  <img src="/assets/icons/helium-app-icon.svg" alt="Helium Logo" class="product-logo">
                   <a href="https://helium.computer" target="_blank" class="product-name">Helium</a>
               </div>
               <div class="product-details">
@@ -83,7 +83,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="../assets/icons/floorp-browser-icon.svg" alt="Floorp Logo" class="product-logo">
+                  <img src="/assets/icons/floorp-browser-icon.svg" alt="Floorp Logo" class="product-logo">
                   <a href="https://floorp.app" target="_blank" class="product-name">Floorp</a>
               </div>
               <div class="product-details">
@@ -104,7 +104,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="../assets/icons/mullvad-browser-icon.svg" alt="Mullvad Browser Logo" class="product-logo">
+                  <img src="/assets/icons/mullvad-browser-icon.svg" alt="Mullvad Browser Logo" class="product-logo">
                   <a href="https://mullvad.net/en/browser" target="_blank" class="product-name">Mullvad Browser</a>
               </div>
               <div class="product-details">
