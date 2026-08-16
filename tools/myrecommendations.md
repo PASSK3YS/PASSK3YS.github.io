@@ -192,7 +192,7 @@ permalink: /tools/recommendations/
                           <li>Open-source.</li>
                           <li>Minimal metadata.</li>
                           <li>Disappearing messages.</li>
-                          <li>Free and ad-free  experience.</li>
+                          <li>Free and ad-free experience.</li>
                           <li>Cross-platform.</li>
                           <li>IP relay for calls.</li>
                       </ul>
@@ -218,7 +218,7 @@ permalink: /tools/recommendations/
                       <strong class="pros-title">Pros:</strong>
                       <ul>
                           <li>No phone number requirement.</li>
-                          <li>Open-souce.</li>
+                          <li>Open-source.</li>
                           <li>Quantum-resistant encryption</li>
                           <li>Cross-platform.</li>
                           <li>Proxied P2P architecture</li>
@@ -538,7 +538,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/addy-icon.svg" alt="Addy.io Logo" class="product-logo">
+                  <img src="/assets/icons/addydotio-icon.svg" alt="Addy.io Logo" class="product-logo">
                   <a href="https://addy.io" target="_blank" class="product-name">Addy.io</a>
               </div>
               <div class="product-details">
@@ -651,7 +651,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/1password-icon.svg" alt="1Password Logo" class="product-logo">
+                  <img src="assets/icons/1password-icon.svg" alt="1Password Logo" class="product-logo">
                   <a href="https://1password.com" target="_blank" class="product-name">1Password</a>
               </div>
               <div class="product-details">
@@ -806,7 +806,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/brave-search-icon.svg" alt="Brave Search Logo" class="product-logo">
+                  <img src="/assets/icons/brave-icon.svg" alt="Brave Search Logo" class="product-logo">
                   <a href="https://search.brave.com" target="_blank" class="product-name">Brave Search</a>
               </div>
               <div class="product-details">
@@ -873,7 +873,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/mullvad-vpn-icon.svg" alt="Mullvad VPN Logo" class="product-logo">
+                  <img src="/assets/icons/mullvad-icon.svg" alt="Mullvad VPN Logo" class="product-logo">
                   <a href="https://mullvad.net" target="_blank" class="product-name">Mullvad VPN</a>
               </div>
               <div class="product-details">
@@ -919,7 +919,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/controld-icon.svg" alt="Control D Logo" class="product-logo">
+                  <img src="/assets/icons/controd-icon.svg" alt="Control D Logo" class="product-logo">
                   <a href="https://controld.com" target="_blank" class="product-name">Control D</a>
               </div>
               <div class="product-details">
@@ -940,7 +940,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/mullvad-dns-icon.svg" alt="Mullvad DNS Logo" class="product-logo">
+                  <img src="/assets/icons/mullvad-icon.svg" alt="Mullvad DNS Logo" class="product-logo">
                   <a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank" class="product-name">Mullvad DNS</a>
               </div>
               <div class="product-details">
@@ -1007,7 +1007,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/zorinos-icon.svg" alt="ZorinOS Logo" class="product-logo">
+                  <img src="/assets/icons/zorin-os-icon.svg" alt="ZorinOS Logo" class="product-logo">
                   <a href="https://zorin.com/os/" target="_blank" class="product-name">ZorinOS</a>
               </div>
               <div class="product-details">
@@ -1186,14 +1186,6 @@ pre, code {
     background-color: var(--bg-solid);
     padding: 4px;
     border: 1px solid var(--border);
-}
-
-[data-theme="dark"] .product-logo {
-    filter: invert(1) hue-rotate(180deg);
-}
-
-.product-logo {
-    transition: filter 0.3s ease;
 }
 
 .product-name {
