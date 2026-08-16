@@ -197,6 +197,8 @@ permalink: /tools/recommendations/
                       <strong class="cons-title">Cons:</strong>
                       <ul>
                           <li>Requires a phone number.</li>
+                          <li>US-Based company.</li>
+                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -226,7 +228,7 @@ permalink: /tools/recommendations/
                           <li>UI less polished.</li>
                           <li>Smaller community.</li>
                           <li>UK-based company.</li>
-                          <li>Within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -288,7 +290,7 @@ permalink: /tools/recommendations/
                       <ul>
                           <li>Mobile app can be buggy.</li>
                           <li>Short inactivity policy for free accounts.</li>
-                          <li>Within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
 
                       </ul>
                   </div>
@@ -321,7 +323,7 @@ permalink: /tools/recommendations/
                           <li>Paid mobile app.</li>
                           <li>No cloud-side search.</li>
                           <li>No protection against device compromise.</li>
-                          <li>Within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -402,7 +404,7 @@ permalink: /tools/recommendations/
                           <li>No automated email sorting into folders.</li>
                           <li>UI is fairly basic.</li>
                           <li>Has no .onion site.</li>
-                          <li>Within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -434,7 +436,7 @@ permalink: /tools/recommendations/
                           <li>No PGP support.</li>
                           <li>Requires phone number on sign-up.</li>
                           <li>Australian-based company.</li>
-                          <li>Within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
                           <li>Partial open-source code.</li>
 
                       </ul>
