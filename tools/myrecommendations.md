@@ -13,6 +13,10 @@ permalink: /tools/recommendations/
   <p>This page contains zero affiliate links.<br>
   My recommendations based on personal use and trust:</p>
 
+  <div class="info-callout">
+      Incorrect information? <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/issues" target="_blank">Open a GitHub issue</a>
+  </div>
+
   <div class="dropdown-container">
       <select id="section-nav" aria-label="Jump to section" onchange="if (this.value) window.location.hash = this.value;">
           <option value="">Jump to a section...</option>
@@ -291,7 +295,6 @@ permalink: /tools/recommendations/
                           <li>Mobile app can be buggy.</li>
                           <li>Short inactivity policy for free accounts.</li>
                           <li>Based within the 5, 9 & 14 eyes alliance.</li>
-
                       </ul>
                   </div>
               </div>
@@ -392,8 +395,6 @@ permalink: /tools/recommendations/
                           <li>Offline support.</li>
                           <li>Custom domain support.</li>
                           <li>End-to-end encrypted storage of all contact details.</li>
-
-
                       </ul>
                   </div>
                   <div class="cons-section">
@@ -438,7 +439,6 @@ permalink: /tools/recommendations/
                           <li>Australian-based company.</li>
                           <li>Based within the 5, 9 & 14 eyes alliance.</li>
                           <li>Partial open-source code.</li>
-
                       </ul>
                   </div>
               </div>
@@ -538,7 +538,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/addydotio-icon.svg" alt="Addy.io Logo" class="product-logo">
+                  <img src="/assets/icons/addy-icon.svg" alt="Addy.io Logo" class="product-logo">
                   <a href="https://addy.io" target="_blank" class="product-name">Addy.io</a>
               </div>
               <div class="product-details">
@@ -806,7 +806,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/brave-icon.svg" alt="Brave Search Logo" class="product-logo">
+                  <img src="/assets/icons/brave-search-icon.svg" alt="Brave Search Logo" class="product-logo">
                   <a href="https://search.brave.com" target="_blank" class="product-name">Brave Search</a>
               </div>
               <div class="product-details">
@@ -873,7 +873,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/mullvad-icon.svg" alt="Mullvad VPN Logo" class="product-logo">
+                  <img src="/assets/icons/mullvad-vpn-icon.svg" alt="Mullvad VPN Logo" class="product-logo">
                   <a href="https://mullvad.net" target="_blank" class="product-name">Mullvad VPN</a>
               </div>
               <div class="product-details">
@@ -919,7 +919,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/controd-icon.svg" alt="Control D Logo" class="product-logo">
+                  <img src="/assets/icons/controld-icon.svg" alt="Control D Logo" class="product-logo">
                   <a href="https://controld.com" target="_blank" class="product-name">Control D</a>
               </div>
               <div class="product-details">
@@ -940,7 +940,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/mullvad-icon.svg" alt="Mullvad DNS Logo" class="product-logo">
+                  <img src="/assets/icons/mullvad-dns-icon.svg" alt="Mullvad DNS Logo" class="product-logo">
                   <a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank" class="product-name">Mullvad DNS</a>
               </div>
               <div class="product-details">
@@ -1007,7 +1007,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="/assets/icons/zorin-os-icon.svg" alt="ZorinOS Logo" class="product-logo">
+                  <img src="/assets/icons/zorinos-icon.svg" alt="ZorinOS Logo" class="product-logo">
                   <a href="https://zorin.com/os/" target="_blank" class="product-name">ZorinOS</a>
               </div>
               <div class="product-details">
@@ -1063,6 +1063,26 @@ pre, code {
     font-family: 'JetBrains Mono', monospace !important;
 }
 
+.info-callout {
+    background-color: rgba(99, 102, 241, 0.1);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.info-callout a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.info-callout a:hover {
+    text-decoration: none;
+}
+
 .dropdown-container {
     margin: 25px 0;
 }
@@ -1084,7 +1104,6 @@ pre, code {
     outline: none;
     transition: all 0.3s ease;
     appearance: none;
-    /* Custom SVG arrow for light mode */
     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-position: right 16px top 50%;
@@ -1096,7 +1115,6 @@ pre, code {
     border-color: var(--accent);
     box-shadow: 0 0 0 3px var(--accent-glow);
 }
-
 
 [data-theme="dark"] #section-nav {
     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e2e8f0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
@@ -1168,6 +1186,14 @@ pre, code {
     background-color: var(--bg-solid);
     padding: 4px;
     border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .product-logo {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.product-logo {
+    transition: filter 0.3s ease;
 }
 
 .product-name {
