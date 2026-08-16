@@ -50,6 +50,7 @@ permalink: /tools/recommendations/
                       <ul>
                           <li>Very customisable.</li>
                           <li>Respects privacy.</li>
+                          <li>No Google telemetry.</li>
                           <li>Encrypted sync.</li>
                           <li>Made in the EU.</li>
                       </ul>
@@ -187,7 +188,7 @@ permalink: /tools/recommendations/
                           <li>Open-source.</li>
                           <li>Minimal metadata.</li>
                           <li>Disappearing messages.</li>
-                          <li>Free and ad-free.</li>
+                          <li>Free and ad-free  experience.</li>
                           <li>Cross-platform.</li>
                           <li>IP relay for calls.</li>
                       </ul>
@@ -225,6 +226,7 @@ permalink: /tools/recommendations/
                           <li>UI less polished.</li>
                           <li>Smaller community.</li>
                           <li>UK-based company.</li>
+                          <li>Within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -286,6 +288,7 @@ permalink: /tools/recommendations/
                       <ul>
                           <li>Mobile app can be buggy.</li>
                           <li>Short inactivity policy for free accounts.</li>
+                          <li>Within the 5, 9 & 14 eyes alliance.</li>
 
                       </ul>
                   </div>
@@ -318,6 +321,7 @@ permalink: /tools/recommendations/
                           <li>Paid mobile app.</li>
                           <li>No cloud-side search.</li>
                           <li>No protection against device compromise.</li>
+                          <li>Within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -336,13 +340,29 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>End-to-end & zero-access encryption.</li>
+                          <li>Cross-platform.</li>
+                          <li>Independently audited.</li>
+                          <li>Switzerland-based company.</li>
+                          <li>Ad-free experience.</li>
+                          <li>Cheap paid plans.</li>
+                          <li>Pay anonymously with cash.</li>
+                          <li>Blocked third-party trackers in emails.</li>
+                          <li>Automated email sorting into folders.</li>
+                          <li>Dark Web Monitoring</li>
+                          <li>Hide-my-email aliases</li>
+                          <li>End-to-end ecrypted password-protected emails for non-Proton users.</li>
+                          <li>Custom domain support.</li>
+                          <li>Generous free plan.</li>
+                          <li>Has a .onion site.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Subject lines aren't encrypted.</li>
+                          <li>Limited free storage</li>
+                          <li>Offline support limited to mobile apps.</li>
                       </ul>
                   </div>
               </div>
@@ -351,19 +371,38 @@ permalink: /tools/recommendations/
           <div class="product-entry">
               <div class="product-header">
                   <img src="/assets/icons/tuta-mail-icon.svg" alt="Tuta Logo" class="product-logo">
-                  <a href="https://tuta.com" target="_blank" class="product-name">Tuta</a>
+                  <a href="https://tuta.com" target="_blank" class="product-name">Tuta Mail</a>
               </div>
               <div class="product-details">
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>Quantum-safe end-to-end encryption.</li>
+                          <li>Zero-access encryption.</li>
+                          <li>Independently audited</li>
+                          <li>Open-source.</li>
+                          <li>100% renewable energy.</li>
+                          <li>100% Google-independent.</li>
+                          <li>Cheap paid plans.</li>
+                          <li>Pay anonymously with cash.</li>
+                          <li>German-based company.</li>
+                          <li>Subject line encryption by default.</li>
+                          <li>Offline support.</li>
+                          <li>Custom domain support.</li>
+                          <li>End-to-end encrypted storage of all contact details.</li>
+
+
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>No PGP compatibility.</li>
+                          <li>No free tier.</li>
+                          <li>No automated email sorting into folders.</li>
+                          <li>UI is fairly basic.</li>
+                          <li>Has no .onion site.</li>
+                          <li>Within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -378,13 +417,26 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>Ad-free experience.</li>
+                          <li>Hide-my-email aliases</li>
+                          <li>Scheduled Send & Snooze</li>
+                          <li>Offline access.</li>
+                          <li>Third-party integrations</li>
+                          <li>Generous storage</li>
+                          <li>Powerful search.</li>
+                          <li>Offline support.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>No end-to-end encryption.</li>
+                          <li>No PGP support.</li>
+                          <li>Requires phone number on sign-up.</li>
+                          <li>Australian-based company.</li>
+                          <li>Within the 5, 9 & 14 eyes alliance.</li>
+                          <li>Partial open-source code.</li>
+
                       </ul>
                   </div>
               </div>
