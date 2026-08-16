@@ -236,7 +236,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Proton Drive Logo" class="product-logo">
+                  <img src="/assets/icons/proton-drive-icon.svg" alt="Proton Drive Logo" class="product-logo">
                   <a href="https://proton.me/drive" target="_blank" class="product-name">Proton Drive</a>
               </div>
               <div class="product-details">
@@ -267,7 +267,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Filen Logo" class="product-logo">
+                  <img src="/assets/icons/filen-app-icon.svg" alt="Filen Logo" class="product-logo">
                   <a href="https://filen.io" target="_blank" class="product-name">Filen</a>
               </div>
               <div class="product-details">
@@ -329,7 +329,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Proton Mail Logo" class="product-logo">
+                  <img src="/assets/icons/proton-mail-icon.svg" alt="Proton Mail Logo" class="product-logo">
                   <a href="https://proton.me/mail" target="_blank" class="product-name">Proton Mail</a>
               </div>
               <div class="product-details">
@@ -350,7 +350,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Tuta Logo" class="product-logo">
+                  <img src="/assets/icons/tuta-mail-icon.svg" alt="Tuta Logo" class="product-logo">
                   <a href="https://tuta.com" target="_blank" class="product-name">Tuta</a>
               </div>
               <div class="product-details">
@@ -371,7 +371,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Fastmail Logo" class="product-logo">
+                  <img src="/assets/icons/fastmail-icon.svg" alt="Fastmail Logo" class="product-logo">
                   <a href="https://fastmail.com" target="_blank" class="product-name">Fastmail</a>
               </div>
               <div class="product-details">
@@ -396,7 +396,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Proton Docs Logo" class="product-logo">
+                  <img src="/assets/icons/proton-docs-icon.svg" alt="Proton Docs Logo" class="product-logo">
                   <a href="https://proton.me/docs" target="_blank" class="product-name">Proton Docs</a>
               </div>
               <div class="product-details">
@@ -417,7 +417,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Proton Sheets Logo" class="product-logo">
+                  <img src="/assets/icons/proton-sheets-icon.svg" alt="Proton Sheets Logo" class="product-logo">
                   <a href="https://proton.me/sheets" target="_blank" class="product-name">Proton Sheets</a>
               </div>
               <div class="product-details">
@@ -438,7 +438,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="CryptPad Logo" class="product-logo">
+                  <img src="/assets/icons/cryptpad-icon.svg" alt="CryptPad Logo" class="product-logo">
                   <a href="https://cryptpad.fr" target="_blank" class="product-name">CryptPad</a>
               </div>
               <div class="product-details">
@@ -463,7 +463,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="SimpleLogin Logo" class="product-logo">
+                  <img src="/assets/icons/simplelogin-icon.svg" alt="SimpleLogin Logo" class="product-logo">
                   <a href="https://simplelogin.io" target="_blank" class="product-name">SimpleLogin</a>
               </div>
               <div class="product-details">
@@ -484,7 +484,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Addy.io Logo" class="product-logo">
+                  <img src="/assets/icons/addydotio-icon.svg" alt="Addy.io Logo" class="product-logo">
                   <a href="https://addy.io" target="_blank" class="product-name">Addy.io</a>
               </div>
               <div class="product-details">
@@ -509,7 +509,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Standard Notes Logo" class="product-logo">
+                  <img src="/assets/icons/standard-notes-icon.svg" alt="Standard Notes Logo" class="product-logo">
                   <a href="https://standardnotes.com" target="_blank" class="product-name">Standard Notes</a>
               </div>
               <div class="product-details">
@@ -530,7 +530,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Joplin Logo" class="product-logo">
+                  <img src="/assets/icons/joplin-icon.svg" alt="Joplin Logo" class="product-logo">
                   <a href="https://joplinapp.org" target="_blank" class="product-name">Joplin</a>
               </div>
               <div class="product-details">
@@ -555,7 +555,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Proton Pass Logo" class="product-logo">
+                  <img src="/assets/icons/proton-pass-icon.svg" alt="Proton Pass Logo" class="product-logo">
                   <a href="https://proton.me/pass" target="_blank" class="product-name">Proton Pass</a>
               </div>
               <div class="product-details">
@@ -576,7 +576,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Bitwarden Logo" class="product-logo">
+                  <img src="/assets/icons/bitwarden-icon.svg" alt="Bitwarden Logo" class="product-logo">
                   <a href="https://bitwarden.com" target="_blank" class="product-name">Bitwarden</a>
               </div>
               <div class="product-details">
@@ -597,7 +597,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="1Password Logo" class="product-logo">
+                  <img src="/assets/icons/1password-icon.svg" alt="1Password Logo" class="product-logo">
                   <a href="https://1password.com" target="_blank" class="product-name">1Password</a>
               </div>
               <div class="product-details">
@@ -618,7 +618,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="KeePassXC Logo" class="product-logo">
+                  <img src="/assets/icons/keepassxc-icon.svg" alt="KeePassXC Logo" class="product-logo">
                   <a href="https://keepassxc.org/" target="_blank" class="product-name">KeePassXC</a>
               </div>
               <div class="product-details">
@@ -643,7 +643,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Ente Logo" class="product-logo">
+                  <img src="/assets/icons/ente-icon.svg" alt="Ente Logo" class="product-logo">
                   <a href="https://ente.com" target="_blank" class="product-name">Ente</a>
               </div>
               <div class="product-details">
@@ -664,7 +664,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Proton Drive Logo" class="product-logo">
+                  <img src="/assets/icons/proton-drive-icon.svg" alt="Proton Drive Logo" class="product-logo">
                   <a href="https://proton.me/drive" target="_blank" class="product-name">Proton Drive</a>
               </div>
               <div class="product-details">
@@ -685,7 +685,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Immich Logo" class="product-logo">
+                  <img src="/assets/icons/immich-icon.svg" alt="Immich Logo" class="product-logo">
                   <a href="https://immich.app" target="_blank" class="product-name">Immich</a>
               </div>
               <div class="product-details">
@@ -710,7 +710,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Kagi Logo" class="product-logo">
+                  <img src="/assets/icons/kagi-search-icon.svg" alt="Kagi Logo" class="product-logo">
                   <a href="https://kagi.com" target="_blank" class="product-name">Kagi</a>
               </div>
               <div class="product-details">
@@ -731,7 +731,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="DuckDuckGo Logo" class="product-logo">
+                  <img src="/assets/icons/duckduckgo-icon.svg" alt="DuckDuckGo Logo" class="product-logo">
                   <a href="https://duckduckgo.com" target="_blank" class="product-name">DuckDuckGo</a>
               </div>
               <div class="product-details">
@@ -752,7 +752,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Brave Search Logo" class="product-logo">
+                  <img src="/assets/icons/brave-icon.svg" alt="Brave Search Logo" class="product-logo">
                   <a href="https://search.brave.com" target="_blank" class="product-name">Brave Search</a>
               </div>
               <div class="product-details">
@@ -777,7 +777,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Proton VPN Logo" class="product-logo">
+                  <img src="/assets/icons/proton-vpn-icon.svg" alt="Proton VPN Logo" class="product-logo">
                   <a href="https://protonvpn.com" target="_blank" class="product-name">Proton VPN</a>
               </div>
               <div class="product-details">
@@ -798,7 +798,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Windscribe Logo" class="product-logo">
+                  <img src="/assets/icons/windscribe-icon.svg" alt="Windscribe Logo" class="product-logo">
                   <a href="https://windscribe.com" target="_blank" class="product-name">Windscribe</a>
               </div>
               <div class="product-details">
@@ -819,7 +819,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Mullvad VPN Logo" class="product-logo">
+                  <img src="/assets/icons/mullvad-icon.svg" alt="Mullvad VPN Logo" class="product-logo">
                   <a href="https://mullvad.net" target="_blank" class="product-name">Mullvad VPN</a>
               </div>
               <div class="product-details">
@@ -844,7 +844,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="NextDNS Logo" class="product-logo">
+                  <img src="/assets/icons/nextdns-icon.svg" alt="NextDNS Logo" class="product-logo">
                   <a href="https://nextdns.io/" target="_blank" class="product-name">NextDNS</a>
               </div>
               <div class="product-details">
@@ -865,7 +865,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Control D Logo" class="product-logo">
+                  <img src="/assets/icons/controd-icon.svg" alt="Control D Logo" class="product-logo">
                   <a href="https://controld.com" target="_blank" class="product-name">Control D</a>
               </div>
               <div class="product-details">
@@ -886,7 +886,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Mullvad DNS Logo" class="product-logo">
+                  <img src="/assets/icons/mullvad-icon.svg" alt="Mullvad DNS Logo" class="product-logo">
                   <a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank" class="product-name">Mullvad DNS</a>
               </div>
               <div class="product-details">
@@ -911,7 +911,7 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="CachyOS Logo" class="product-logo">
+                  <img src="/assets/icons/cachyos-icon.svg" alt="CachyOS Logo" class="product-logo">
                   <a href="https://cachyos.org/" target="_blank" class="product-name">CachyOS</a>
               </div>
               <div class="product-details">
@@ -932,7 +932,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Fedora Logo" class="product-logo">
+                  <img src="/assets/icons/fedora-icon.svg" alt="Fedora Logo" class="product-logo">
                   <a href="https://www.fedoraproject.org/" target="_blank" class="product-name">Fedora</a>
               </div>
               <div class="product-details">
@@ -953,7 +953,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="ZorinOS Logo" class="product-logo">
+                  <img src="/assets/icons/zorin-os-icon.svg" alt="ZorinOS Logo" class="product-logo">
                   <a href="https://zorin.com/os/" target="_blank" class="product-name">ZorinOS</a>
               </div>
               <div class="product-details">
@@ -974,7 +974,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Linux Mint Logo" class="product-logo">
+                  <img src="/assets/icons/linux-mint-icon.svg" alt="Linux Mint Logo" class="product-logo">
                   <a href="https://linuxmint.com/" target="_blank" class="product-name">Linux Mint</a>
               </div>
               <div class="product-details">
