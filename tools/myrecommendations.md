@@ -65,6 +65,7 @@ permalink: /tools/recommendations/
                           <li>Not fully open-source.</li>
                           <li>Can use a lot of system resources.</li>
                           <li>Based on the Chromium engine.</li>
+                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
@@ -135,6 +136,12 @@ permalink: /tools/recommendations/
                       <strong class="pros-title">Pros:</strong>
                       <ul>
                           <li>Strong privacy features like anti-fingerprinting, ad and tracker blocking, and automatic browser data wiping.</li>
+                          <li>Firefox based.</li>
+                          <li>Letterboxing.</li>
+                          <li>Identical fingerprint for all users.</li>
+                          <li>No telemetry, accounts, or sync.</li>
+                          <li>DuckDuckGo default search.</li>
+                          <li>Cross-platform.</li>
                           <li>Works with Mullvad VPN.</li>
                       </ul>
                   </div>
@@ -142,6 +149,9 @@ permalink: /tools/recommendations/
                       <strong class="cons-title">Cons:</strong>
                       <ul>
                           <li>Some websites may not function correctly.</li>
+                          <li>No mobile app.</li>
+                          <li>No built-in sync</li>
+                          <li>Based within the 5, 9 & 14 eyes alliance.</li>
                       </ul>
                   </div>
               </div>
