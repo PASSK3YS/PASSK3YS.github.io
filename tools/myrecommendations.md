@@ -74,7 +74,7 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li>Fully open-source.</li>
+                          <li>Open-source.</li>
                           <li>Lightweight.</li>
                           <li>No Google telemetry</li>
                           <li>Supports uBlock Origin.</li>
@@ -176,20 +176,26 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Signal Logo" class="product-logo">
+                  <img src="/assets/icons/signal-app-icon.svg" alt="Signal Logo" class="product-logo">
                   <a href="https://signal.org" target="_blank" class="product-name">Signal</a>
               </div>
               <div class="product-details">
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>End-to-end encrypted.</li>
+                          <li>Open-source.</li>
+                          <li>Minimal metadata.</li>
+                          <li>Disappearing messages.</li>
+                          <li>Free and ad-free.</li>
+                          <li>Cross-platform.</li>
+                          <li>IP relay for calls.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Requires a phone number.</li>
                       </ul>
                   </div>
               </div>
@@ -197,20 +203,28 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="SimpleX Chat Logo" class="product-logo">
+                  <img src="/assets/icons/simplex-chat-icon.svg" alt="SimpleX Chat Logo" class="product-logo">
                   <a href="https://simplex.chat/" target="_blank" class="product-name">SimpleX Chat</a>
               </div>
               <div class="product-details">
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>No phone number requirement.</li>
+                          <li>Open-souce.</li>
+                          <li>Quantum-resistant encryption</li>
+                          <li>Cross-platform.</li>
+                          <li>Proxied P2P architecture<li>
+                          <li>Disappearing messages.</li>
+                          <li>Multiple profiles.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>UI less polished.</li>
+                          <li>Smaller community.</li>
+                          <li>UK-based company.</li>
                       </ul>
                   </div>
               </div>
@@ -229,13 +243,23 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>End-to-end and zero-access encrypted.</li>
+                          <li>Switzerland-based company.</li>
+                          <li>Open source.</li>
+                          <li>Independently audited.</li>
+                          <li>Password-protected sharing links.</li>
+                          <li>No file size limit.</li>
+                          <li>Cross-platform.</li>
+                          <li>Built-in Docs and Sheets with collaboration.</li>
+                          <li>Has a .onion site.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Limited free tier.</li>
+                          <li>Native Linux desktop app.</li>
+                          <li>Potentially higher cost compared to mainstream providers.</li>
                       </ul>
                   </div>
               </div>
@@ -250,13 +274,19 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>End-to-end and zero access encrypted.</li>
+                          <li>Generous free plan.</li>
+                          <li>Affordable paid plans.</li>
+                          <li>Cross-platform.</li>
+                          <li>Germany-based company</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Mobile app can be buggy.</li>
+                          <li>Short inactivity policy for free accounts.</li>
+
                       </ul>
                   </div>
               </div>
@@ -264,20 +294,30 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Cryptomator Logo" class="product-logo">
+                  <img src="/assets/icons/cryptomator-icon.svg" alt="Cryptomator Logo" class="product-logo">
                   <a href="https://cryptomator.org" target="_blank" class="product-name">Cryptomator</a>
               </div>
               <div class="product-details">
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>Independently audited.</li>
+                          <li>Open-source.</li>
+                          <li>Cross-platform.</li>
+                          <li>Completely free on desktop.</li>
+                          <li>One-time purchase on mobile.</li>
+                          <li>Works with any cloud provider.</li>
+                          <li>Client-side AES-256 encryption.</li>
+                          <li>Per-file encryption.</li>
+                          <li>German-based company.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Paid mobile app.</li>
+                          <li>No cloud-side search.</li>
+                          <li>No protection against device compromise.</li>
                       </ul>
                   </div>
               </div>
