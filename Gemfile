@@ -5,3 +5,6 @@ gem "liquid", "~> 4.0.4"
 gem "webrick"
 gem "csv"
 gem "bigdecimal"
+gem "base64", "~> 0.3.0"
+
+gem "kramdown-parser-gfm", "~> 1.1"
