@@ -48,13 +48,18 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li>Very customisable, respects privacy and EU made. </li>
+                          <li>Very customisable.</li>
+                          <li>Respects privacy.</li>
+                          <li>Encrypted sync.</li>
+                          <li>Made in the EU.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
                           <li>Not fully open-source.</li>
+                          <li>Can use a lot of system resources.</li>
+                          <li>Based on the Chromium engine.</li>
                       </ul>
                   </div>
               </div>
@@ -69,13 +74,17 @@ permalink: /tools/recommendations/
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li>Lightweight and supports uBlock Origin</li>
+                          <li>Lightweight.</li>
+                          <li>Supports uBlock Origin.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li>Unable to play DRM protected media on sites like Netlix and Disney Plus</li>
+                          <li>Unable to play DRM protected media on sites like Netlix and Disney Plus.</li>
+                          <li>No sync between devices.</li>
+                          <li>No mobile app.</li>
+                          <li>Based on the Chromium engine.</li>
                       </ul>
                   </div>
               </div>
@@ -97,6 +106,8 @@ permalink: /tools/recommendations/
                       <strong class="cons-title">Cons:</strong>
                       <ul>
                           <li>A little slower to get feature and security updates compared to Firefox.</li>
+                          <li>Some updates can be buggy.</li>
+                          <li>No mobile app.</li>
                       </ul>
                   </div>
               </div>
@@ -112,6 +123,7 @@ permalink: /tools/recommendations/
                       <strong class="pros-title">Pros:</strong>
                       <ul>
                           <li>Strong privacy features like anti-fingerprinting, ad and tracker blocking, and automatic browser data wiping.</li>
+                          <li>Works with Mullvad VPN.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
@@ -129,20 +141,23 @@ permalink: /tools/recommendations/
           
           <div class="product-entry">
               <div class="product-header">
-                  <img src="" alt="Proton Calendar Logo" class="product-logo">
+                  <img src="/assets/icons/proton-calendar-icon.svg" alt="Proton Calendar Logo" class="product-logo">
                   <a href="https://proton.me/calendar" target="_blank" class="product-name">Proton Calendar</a>
               </div>
               <div class="product-details">
                   <div class="pros-section">
                       <strong class="pros-title">Pros:</strong>
                       <ul>
-                          <li></li>
+                          <li>End-to-end encrypted</li>
+                          <li>Cross platform.</li>
+                          <li>Easy to import calendar information from other providers.</li>
                       </ul>
                   </div>
                   <div class="cons-section">
                       <strong class="cons-title">Cons:</strong>
                       <ul>
-                          <li></li>
+                          <li>Fewer features than mainstream alternatives.</li>
+                          <li>Read-only sharing with non-Proton users.</li>
                       </ul>
                   </div>
               </div>
