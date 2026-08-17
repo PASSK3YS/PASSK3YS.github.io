@@ -48,27 +48,30 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/vivaldi-browser-icon.svg" alt="Vivaldi Logo" class="product-logo">
                   <a href="https://vivaldi.com" target="_blank" class="product-name">Vivaldi</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>Very customisable.</li>
-                          <li>Respects privacy.</li>
-                          <li>No Google telemetry.</li>
-                          <li>Encrypted sync.</li>
-                          <li>Made in the EU.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Very customisable.</li>
+                              <li>Respects privacy.</li>
+                              <li>No Google telemetry.</li>
+                              <li>Encrypted sync.</li>
+                              <li>Made in the EU.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Not fully open-source.</li>
+                              <li>Can use a lot of system resources.</li>
+                              <li>Based on the Chromium engine.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Not fully open-source.</li>
-                          <li>Can use a lot of system resources.</li>
-                          <li>Based on the Chromium engine.</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -76,28 +79,31 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/helium-app-icon.svg" alt="Helium Logo" class="product-logo">
                   <a href="https://helium.computer" target="_blank" class="product-name">Helium</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>Open-source.</li>
-                          <li>Lightweight.</li>
-                          <li>No Google telemetry.</li>
-                          <li>Supports uBlock Origin.</li>
-                          <li>Anti-fingerprinting measures.</li>
-                          <li>No Brave-style bloat.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Open-source.</li>
+                              <li>Lightweight.</li>
+                              <li>No Google telemetry.</li>
+                              <li>Supports uBlock Origin.</li>
+                              <li>Anti-fingerprinting measures.</li>
+                              <li>No Brave-style bloat.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Unable to play DRM protected media on sites like Netflix and Disney Plus.</li>
+                              <li>No sync between devices.</li>
+                              <li>No mobile app.</li>
+                              <li>Based on the Chromium engine.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Unable to play DRM protected media on sites like Netflix and Disney Plus.</li>
-                          <li>No sync between devices.</li>
-                          <li>No mobile app.</li>
-                          <li>Based on the Chromium engine.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -105,25 +111,28 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/floorp-browser-icon.svg" alt="Floorp Logo" class="product-logo">
                   <a href="https://floorp.app" target="_blank" class="product-name">Floorp</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>Privacy-conscious defaults like mozilla telemery disabled.</li>
-                          <li>Very customisable.</li>
-                          <li>Firefox-based.</li>
-                          <li>Open source.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Privacy-conscious defaults like mozilla telemery disabled.</li>
+                              <li>Very customisable.</li>
+                              <li>Firefox-based.</li>
+                              <li>Open source.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>A little slower to get feature and security updates compared to Firefox.</li>
+                              <li>Some updates can be buggy.</li>
+                              <li>No mobile app.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>A little slower to get feature and security updates compared to Firefox.</li>
-                          <li>Some updates can be buggy.</li>
-                          <li>No mobile app.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -131,30 +140,33 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/mullvad-browser-icon.svg" alt="Mullvad Browser Logo" class="product-logo">
                   <a href="https://mullvad.net/en/browser" target="_blank" class="product-name">Mullvad Browser</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>Strong privacy features like anti-fingerprinting, ad and tracker blocking, and automatic browser data wiping.</li>
-                          <li>Firefox-based.</li>
-                          <li>Letterboxing.</li>
-                          <li>Identical fingerprint for all users.</li>
-                          <li>No telemetry, accounts, or sync.</li>
-                          <li>DuckDuckGo default search.</li>
-                          <li>Cross-platform.</li>
-                          <li>Works with Mullvad VPN.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Strong privacy features like anti-fingerprinting, ad and tracker blocking, and automatic browser data wiping.</li>
+                              <li>Firefox-based.</li>
+                              <li>Letterboxing.</li>
+                              <li>Identical fingerprint for all users.</li>
+                              <li>No telemetry, accounts, or sync.</li>
+                              <li>DuckDuckGo default search.</li>
+                              <li>Cross-platform.</li>
+                              <li>Works with Mullvad VPN.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Some websites may not function correctly.</li>
+                              <li>No mobile app.</li>
+                              <li>No built-in sync</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Some websites may not function correctly.</li>
-                          <li>No mobile app.</li>
-                          <li>No built-in sync</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -166,23 +178,26 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/proton-calendar-icon.svg" alt="Proton Calendar Logo" class="product-logo">
                   <a href="https://proton.me/calendar" target="_blank" class="product-name">Proton Calendar</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>End-to-end encrypted.</li>
-                          <li>Cross platform.</li>
-                          <li>Easy to import calendar information from other providers.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>End-to-end encrypted.</li>
+                              <li>Cross platform.</li>
+                              <li>Easy to import calendar information from other providers.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Fewer features than mainstream alternatives.</li>
+                              <li>Read-only sharing with non-Proton users.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Fewer features than mainstream alternatives.</li>
-                          <li>Read-only sharing with non-Proton users.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -194,28 +209,31 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/signal-app-icon.svg" alt="Signal Logo" class="product-logo">
                   <a href="https://signal.org" target="_blank" class="product-name">Signal</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>End-to-end encrypted.</li>
-                          <li>Open-source.</li>
-                          <li>Minimal metadata.</li>
-                          <li>Disappearing messages.</li>
-                          <li>Free and ad-free experience.</li>
-                          <li>Cross-platform.</li>
-                          <li>IP relay for calls.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>End-to-end encrypted.</li>
+                              <li>Open-source.</li>
+                              <li>Minimal metadata.</li>
+                              <li>Disappearing messages.</li>
+                              <li>Free and ad-free experience.</li>
+                              <li>Cross-platform.</li>
+                              <li>IP relay for calls.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Requires a phone number.</li>
+                              <li>US-Based company.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Requires a phone number.</li>
-                          <li>US-Based company.</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -223,29 +241,32 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/simplex-chat-icon.svg" alt="SimpleX Chat Logo" class="product-logo">
                   <a href="https://simplex.chat/" target="_blank" class="product-name">SimpleX Chat</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>No phone number requirement.</li>
-                          <li>Open-source.</li>
-                          <li>Quantum-resistant encryption</li>
-                          <li>Cross-platform.</li>
-                          <li>Proxied P2P architecture</li>
-                          <li>Disappearing messages.</li>
-                          <li>Multiple profiles.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>No phone number requirement.</li>
+                              <li>Open-source.</li>
+                              <li>Quantum-resistant encryption</li>
+                              <li>Cross-platform.</li>
+                              <li>Proxied P2P architecture</li>
+                              <li>Disappearing messages.</li>
+                              <li>Multiple profiles.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>UI less polished.</li>
+                              <li>Smaller community.</li>
+                              <li>UK-based company.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>UI less polished.</li>
-                          <li>Smaller community.</li>
-                          <li>UK-based company.</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -257,30 +278,33 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/proton-drive-icon.svg" alt="Proton Drive Logo" class="product-logo">
                   <a href="https://proton.me/drive" target="_blank" class="product-name">Proton Drive</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>End-to-end and zero-access encrypted.</li>
-                          <li>Switzerland-based company.</li>
-                          <li>Open source.</li>
-                          <li>Independently audited.</li>
-                          <li>Password-protected sharing links.</li>
-                          <li>No file size limit.</li>
-                          <li>Cross-platform.</li>
-                          <li>Built-in Docs and Sheets with collaboration.</li>
-                          <li>Has a .onion site.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>End-to-end and zero-access encrypted.</li>
+                              <li>Switzerland-based company.</li>
+                              <li>Open source.</li>
+                              <li>Independently audited.</li>
+                              <li>Password-protected sharing links.</li>
+                              <li>No file size limit.</li>
+                              <li>Cross-platform.</li>
+                              <li>Built-in Docs and Sheets with collaboration.</li>
+                              <li>Has a .onion site.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Limited free tier.</li>
+                              <li>No native Linux desktop app.</li>
+                              <li>Potentially higher cost compared to mainstream providers.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Limited free tier.</li>
-                          <li>No native Linux desktop app.</li>
-                          <li>Potentially higher cost compared to mainstream providers.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -288,26 +312,29 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/filen-app-icon.svg" alt="Filen Logo" class="product-logo">
                   <a href="https://filen.io" target="_blank" class="product-name">Filen</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>End-to-end and zero access encrypted.</li>
-                          <li>Generous free plan.</li>
-                          <li>Affordable paid plans.</li>
-                          <li>Cross-platform.</li>
-                          <li>Germany-based company</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>End-to-end and zero access encrypted.</li>
+                              <li>Generous free plan.</li>
+                              <li>Affordable paid plans.</li>
+                              <li>Cross-platform.</li>
+                              <li>Germany-based company</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Mobile app can be buggy.</li>
+                              <li>Short inactivity policy for free accounts.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Mobile app can be buggy.</li>
-                          <li>Short inactivity policy for free accounts.</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -315,31 +342,34 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/cryptomator-icon.svg" alt="Cryptomator Logo" class="product-logo">
                   <a href="https://cryptomator.org" target="_blank" class="product-name">Cryptomator</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>Independently audited.</li>
-                          <li>Open-source.</li>
-                          <li>Cross-platform.</li>
-                          <li>Completely free on desktop.</li>
-                          <li>One-time purchase on mobile.</li>
-                          <li>Works with any cloud provider.</li>
-                          <li>Client-side AES-256 encryption.</li>
-                          <li>Per-file encryption.</li>
-                          <li>German-based company.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Independently audited.</li>
+                              <li>Open-source.</li>
+                              <li>Cross-platform.</li>
+                              <li>Completely free on desktop.</li>
+                              <li>One-time purchase on mobile.</li>
+                              <li>Works with any cloud provider.</li>
+                              <li>Client-side AES-256 encryption.</li>
+                              <li>Per-file encryption.</li>
+                              <li>German-based company.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Paid mobile app.</li>
+                              <li>No cloud-side search.</li>
+                              <li>No protection against device compromise.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Paid mobile app.</li>
-                          <li>No cloud-side search.</li>
-                          <li>No protection against device compromise.</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -351,36 +381,39 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/proton-mail-icon.svg" alt="Proton Mail Logo" class="product-logo">
                   <a href="https://proton.me/mail" target="_blank" class="product-name">Proton Mail</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>End-to-end & zero-access encryption.</li>
-                          <li>Cross-platform.</li>
-                          <li>Independently audited.</li>
-                          <li>Switzerland-based company.</li>
-                          <li>Ad-free experience.</li>
-                          <li>Cheap paid plans.</li>
-                          <li>Pay anonymously with cash.</li>
-                          <li>Blocked third-party trackers in emails.</li>
-                          <li>Automated email sorting into folders.</li>
-                          <li>Dark Web Monitoring</li>
-                          <li>Hide-my-email aliases</li>
-                          <li>End-to-end ecrypted password-protected emails for non-Proton users.</li>
-                          <li>Custom domain support.</li>
-                          <li>Generous free plan.</li>
-                          <li>Has a .onion site.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>End-to-end & zero-access encryption.</li>
+                              <li>Cross-platform.</li>
+                              <li>Independently audited.</li>
+                              <li>Switzerland-based company.</li>
+                              <li>Ad-free experience.</li>
+                              <li>Cheap paid plans.</li>
+                              <li>Pay anonymously with cash.</li>
+                              <li>Blocked third-party trackers in emails.</li>
+                              <li>Automated email sorting into folders.</li>
+                              <li>Dark Web Monitoring</li>
+                              <li>Hide-my-email aliases</li>
+                              <li>End-to-end ecrypted password-protected emails for non-Proton users.</li>
+                              <li>Custom domain support.</li>
+                              <li>Generous free plan.</li>
+                              <li>Has a .onion site.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Subject lines aren't encrypted.</li>
+                              <li>Limited free storage</li>
+                              <li>Offline support limited to mobile apps.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Subject lines aren't encrypted.</li>
-                          <li>Limited free storage</li>
-                          <li>Offline support limited to mobile apps.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -388,37 +421,40 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/tuta-mail-icon.svg" alt="Tuta Logo" class="product-logo">
                   <a href="https://tuta.com" target="_blank" class="product-name">Tuta Mail</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>Quantum-safe end-to-end encryption.</li>
-                          <li>Zero-access encryption.</li>
-                          <li>Independently audited</li>
-                          <li>Open-source.</li>
-                          <li>100% renewable energy.</li>
-                          <li>100% Google-independent.</li>
-                          <li>Cheap paid plans.</li>
-                          <li>Pay anonymously with cash.</li>
-                          <li>German-based company.</li>
-                          <li>Subject line encryption by default.</li>
-                          <li>Offline support.</li>
-                          <li>Custom domain support.</li>
-                          <li>End-to-end encrypted storage of all contact details.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Quantum-safe end-to-end encryption.</li>
+                              <li>Zero-access encryption.</li>
+                              <li>Independently audited</li>
+                              <li>Open-source.</li>
+                              <li>100% renewable energy.</li>
+                              <li>100% Google-independent.</li>
+                              <li>Cheap paid plans.</li>
+                              <li>Pay anonymously with cash.</li>
+                              <li>German-based company.</li>
+                              <li>Subject line encryption by default.</li>
+                              <li>Offline support.</li>
+                              <li>Custom domain support.</li>
+                              <li>End-to-end encrypted storage of all contact details.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>No PGP compatibility.</li>
+                              <li>No free tier.</li>
+                              <li>No automated email sorting into folders.</li>
+                              <li>UI is fairly basic.</li>
+                              <li>Has no .onion site.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>No PGP compatibility.</li>
-                          <li>No free tier.</li>
-                          <li>No automated email sorting into folders.</li>
-                          <li>UI is fairly basic.</li>
-                          <li>Has no .onion site.</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -426,32 +462,35 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/fastmail-icon.svg" alt="Fastmail Logo" class="product-logo">
                   <a href="https://fastmail.com" target="_blank" class="product-name">Fastmail</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>Ad-free experience.</li>
-                          <li>Hide-my-email aliases</li>
-                          <li>Scheduled Send & Snooze</li>
-                          <li>Offline access.</li>
-                          <li>Third-party integrations</li>
-                          <li>Generous storage</li>
-                          <li>Powerful search.</li>
-                          <li>Offline support.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Ad-free experience.</li>
+                              <li>Hide-my-email aliases</li>
+                              <li>Scheduled Send & Snooze</li>
+                              <li>Offline access.</li>
+                              <li>Third-party integrations</li>
+                              <li>Generous storage</li>
+                              <li>Powerful search.</li>
+                              <li>Offline support.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>No end-to-end encryption.</li>
+                              <li>No PGP support.</li>
+                              <li>Requires phone number on sign-up.</li>
+                              <li>Australian-based company.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                              <li>Partial open-source code.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>No end-to-end encryption.</li>
-                          <li>No PGP support.</li>
-                          <li>Requires phone number on sign-up.</li>
-                          <li>Australian-based company.</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                          <li>Partial open-source code.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -463,20 +502,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/proton-docs-icon.svg" alt="Proton Docs Logo" class="product-logo">
                   <a href="https://proton.me/docs" target="_blank" class="product-name">Proton Docs</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -484,20 +526,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/proton-sheets-icon.svg" alt="Proton Sheets Logo" class="product-logo">
                   <a href="https://proton.me/sheets" target="_blank" class="product-name">Proton Sheets</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -505,20 +550,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/cryptpad-icon.svg" alt="CryptPad Logo" class="product-logo">
                   <a href="https://cryptpad.fr" target="_blank" class="product-name">CryptPad</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -530,20 +578,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/simplelogin-icon.svg" alt="SimpleLogin Logo" class="product-logo">
                   <a href="https://simplelogin.io" target="_blank" class="product-name">SimpleLogin</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -551,20 +602,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/addydotio-icon.svg" alt="Addy.io Logo" class="product-logo">
                   <a href="https://addy.io" target="_blank" class="product-name">Addy.io</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -576,39 +630,40 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/standard-notes-icon.svg" alt="Standard Notes Logo" class="product-logo">
                   <a href="https://standardnotes.com" target="_blank" class="product-name">Standard Notes</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>End-to-end encrypted.</li>
-                          <li>Open-source.</li>
-                          <li>Cross-platform.</li>
-                          <li>Offline support.</li>
-                          <li>Self-hosting.</li>
-                          <li>Encypted sheduled backups.</li>
-                          <li>Import and export options.</li>
-                          <li>Supports community made plugins and themes.</li>
-                          <li>Web clipper.</li>
-                          <li>Notes stored locally with on-device encryption.</li>
-                          <li>Independently audited.</li>
-                          <li>End-to-end encrypted file storage.</li>
-
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>End-to-end encrypted.</li>
+                              <li>Open-source.</li>
+                              <li>Cross-platform.</li>
+                              <li>Offline support.</li>
+                              <li>Self-hosting.</li>
+                              <li>Encypted sheduled backups.</li>
+                              <li>Import and export options.</li>
+                              <li>Supports community made plugins and themes.</li>
+                              <li>Web clipper.</li>
+                              <li>Notes stored locally with on-device encryption.</li>
+                              <li>Independently audited.</li>
+                              <li>End-to-end encrypted file storage.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Updates can be buggy.</li>
+                              <li>Limited free plan.</li>
+                              <li>Expensive paid pans.</li>
+                              <li>No real-time collaboration.</li>
+                              <li>No tasks or to-dos.</li>
+                              <li>US-based company.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>Updates can be buggy.</li>
-                          <li>Limited free plan.</li>
-                          <li>Expensive paid pans.</li>
-                          <li>No real-time collaboration.</li>
-                          <li>No tasks or to-dos.</li>
-                          <li>US-based company.</li>
-                          <li>Based within the 5, 9 or 14 eyes alliance.</li>
-                          
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -616,27 +671,30 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/joplin-icon.svg" alt="Joplin Logo" class="product-logo">
                   <a href="https://joplinapp.org" target="_blank" class="product-name">Joplin</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li>Open Source.</li>
-                          <li>Self-hosting.</li>
-                          <li>Offline support.</li>
-                          <li>Optional end-to-end encrypted sync.</li>
-                          <li>Supports community plugins and themes.</li>
-                          <li>Free app.</li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Open Source.</li>
+                              <li>Self-hosting.</li>
+                              <li>Offline support.</li>
+                              <li>Optional end-to-end encrypted sync.</li>
+                              <li>Supports community plugins and themes.</li>
+                              <li>Free app.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>No real-time collaboration</li>
+                              <li>Mobile sync complexity.</li>
+                              <li>UI is more basic compared to others.</li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li>No real-time collaboration</li>
-                          <li>Mobile sync complexity.</li>
-                          <li>UI is more basic compared to others.</li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -648,20 +706,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/proton-pass-icon.svg" alt="Proton Pass Logo" class="product-logo">
                   <a href="https://proton.me/pass" target="_blank" class="product-name">Proton Pass</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -669,20 +730,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/bitwarden-icon.svg" alt="Bitwarden Logo" class="product-logo">
                   <a href="https://bitwarden.com" target="_blank" class="product-name">Bitwarden</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -690,20 +754,23 @@ permalink: /tools/recommendations/
                   <img src="assets/icons/1password-icon.svg" alt="1Password Logo" class="product-logo">
                   <a href="https://1password.com" target="_blank" class="product-name">1Password</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -711,20 +778,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/keepassxc-icon.svg" alt="KeePassXC Logo" class="product-logo">
                   <a href="https://keepassxc.org/" target="_blank" class="product-name">KeePassXC</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -736,20 +806,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/ente-icon.svg" alt="Ente Logo" class="product-logo">
                   <a href="https://ente.com" target="_blank" class="product-name">Ente</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -757,20 +830,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/proton-drive-icon.svg" alt="Proton Drive Logo" class="product-logo">
                   <a href="https://proton.me/drive" target="_blank" class="product-name">Proton Drive</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -778,20 +854,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/immich-icon.svg" alt="Immich Logo" class="product-logo">
                   <a href="https://immich.app" target="_blank" class="product-name">Immich</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -803,20 +882,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/kagi-search-icon.svg" alt="Kagi Logo" class="product-logo">
                   <a href="https://kagi.com" target="_blank" class="product-name">Kagi</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -824,20 +906,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/duckduckgo-icon.svg" alt="DuckDuckGo Logo" class="product-logo">
                   <a href="https://duckduckgo.com" target="_blank" class="product-name">DuckDuckGo</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -845,20 +930,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/brave-icon.svg" alt="Brave Search Logo" class="product-logo">
                   <a href="https://search.brave.com" target="_blank" class="product-name">Brave Search</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -870,20 +958,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/proton-vpn-icon.svg" alt="Proton VPN Logo" class="product-logo">
                   <a href="https://protonvpn.com" target="_blank" class="product-name">Proton VPN</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -891,20 +982,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/windscribe-icon.svg" alt="Windscribe Logo" class="product-logo">
                   <a href="https://windscribe.com" target="_blank" class="product-name">Windscribe</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -912,20 +1006,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/mullvad-icon.svg" alt="Mullvad VPN Logo" class="product-logo">
                   <a href="https://mullvad.net" target="_blank" class="product-name">Mullvad VPN</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -937,20 +1034,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/nextdns-icon.svg" alt="NextDNS Logo" class="product-logo">
                   <a href="https://nextdns.io/" target="_blank" class="product-name">NextDNS</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -958,20 +1058,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/controd-icon.svg" alt="Control D Logo" class="product-logo">
                   <a href="https://controld.com" target="_blank" class="product-name">Control D</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -979,20 +1082,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/mullvad-icon.svg" alt="Mullvad DNS Logo" class="product-logo">
                   <a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank" class="product-name">Mullvad DNS</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
 
@@ -1004,20 +1110,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/cachyos-icon.svg" alt="CachyOS Logo" class="product-logo">
                   <a href="https://cachyos.org/" target="_blank" class="product-name">CachyOS</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -1025,20 +1134,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/fedora-icon.svg" alt="Fedora Logo" class="product-logo">
                   <a href="https://www.fedoraproject.org/" target="_blank" class="product-name">Fedora</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -1046,20 +1158,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/zorin-os-icon.svg" alt="ZorinOS Logo" class="product-logo">
                   <a href="https://zorin.com/os/" target="_blank" class="product-name">ZorinOS</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
 
           <div class="product-entry">
@@ -1067,20 +1182,23 @@ permalink: /tools/recommendations/
                   <img src="/assets/icons/linux-mint-icon.svg" alt="Linux Mint Logo" class="product-logo">
                   <a href="https://linuxmint.com/" target="_blank" class="product-name">Linux Mint</a>
               </div>
-              <div class="product-details">
-                  <div class="pros-section">
-                      <strong class="pros-title">Pros:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li></li>
+                          </ul>
+                      </div>
                   </div>
-                  <div class="cons-section">
-                      <strong class="cons-title">Cons:</strong>
-                      <ul>
-                          <li></li>
-                      </ul>
-                  </div>
-              </div>
+              </details>
           </div>
       </div>
   </div>
@@ -1236,6 +1354,18 @@ pre, code {
     color: var(--accent);
 }
 
+.product-details-dropdown {
+    width: 100%;
+}
+
+.dropdown-title {
+    color: var(--text);
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: list-item;
+}
+
 .product-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1253,12 +1383,14 @@ pre, code {
 .pros-title {
     color: #10b981;
     display: block;
+    font-weight: bold;
     margin-bottom: 8px;
 }
 
 .cons-title {
     color: #ef4444;
     display: block;
+    font-weight: bold;
     margin-bottom: 8px;
 }
 
