@@ -655,7 +655,7 @@ permalink: /tools/recommendations/
                           <ul>
                               <li>Updates can be buggy.</li>
                               <li>Limited free plan.</li>
-                              <li>Expensive paid pans.</li>
+                              <li>Expensive paid plans.</li>
                               <li>No real-time collaboration.</li>
                               <li>No tasks or to-dos.</li>
                               <li>US-based company.</li>
