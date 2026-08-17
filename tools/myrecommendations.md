@@ -249,9 +249,9 @@ permalink: /tools/recommendations/
                           <ul>
                               <li>No phone number requirement.</li>
                               <li>Open-source.</li>
-                              <li>Quantum-resistant encryption</li>
+                              <li>Quantum-resistant encryption.</li>
                               <li>Cross-platform.</li>
-                              <li>Proxied P2P architecture</li>
+                              <li>Proxied P2P architecture.</li>
                               <li>Disappearing messages.</li>
                               <li>Multiple profiles.</li>
                           </ul>
@@ -446,7 +446,6 @@ permalink: /tools/recommendations/
                           <strong class="cons-title">Cons:</strong>
                           <ul>
                               <li>No PGP compatibility.</li>
-                              <li>No free tier.</li>
                               <li>No automated email sorting into folders.</li>
                               <li>UI is fairly basic.</li>
                               <li>Has no .onion site.</li>
