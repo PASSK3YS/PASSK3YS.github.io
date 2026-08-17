@@ -737,7 +737,7 @@ permalink: /tools/recommendations/
                           <ul>
                               <li>Autofill is not entirely reliable.</li>
                               <li>Command line interface only on paid plans.</li>
-                              <li>Secure link and vault sharing only on paid plans.<li>
+                              <li>Secure link and vault sharing only on paid plans.</li>
                               <li>No self-hosting.</li>
                           </ul>
                       </div>
@@ -790,7 +790,7 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
-                  <img src="assets/icons/1password-icon.svg" alt="1Password Logo" class="product-logo">
+                  <img src="/assets/icons/1password-icon.svg" alt="1Password Logo" class="product-logo">
                   <a href="https://1password.com" target="_blank" class="product-name">1Password</a>
               </div>
               <details class="product-details-dropdown">
