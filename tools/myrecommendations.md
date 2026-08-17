@@ -712,13 +712,33 @@ permalink: /tools/recommendations/
                       <div class="pros-section">
                           <strong class="pros-title">Pros:</strong>
                           <ul>
-                              <li></li>
+                              <li>End-to-end encrypted</li>
+                              <li>Independently audited.</li>
+                              <li>Switzerland-based company.</li>
+                              <li>Polished and user friendly UI.</li>
+                              <li>Cross-platform.</li>
+                              <li>Passkey support.</li>
+                              <li>Item history.</li>
+                              <li>Generous free plan.</li>
+                              <li>Unlimited logins, notes and credit cards on free plan.</li>
+                              <li>Secure link and vault sharing.</li>
+                              <li>Encrypted attachments.</li>
+                              <li>Dark web monitoring.</li>
+                              <li>Email aliases.</li>
+                              <li>Command line interface.</li>
+                              <li>Easy import and export options.</li>
+                              <li>Alerts for weak and reused passwords.</li>
+                              <li>Emergency access.</li>
+                              <li>Built-in 2FA authenticator.</li>
                           </ul>
                       </div>
                       <div class="cons-section">
                           <strong class="cons-title">Cons:</strong>
                           <ul>
-                              <li></li>
+                              <li>Autofill is not entirely reliable.</li>
+                              <li>Command line interface only on paid plans.</li>
+                              <li>Secure link and vault sharing only on paid plans.<li>
+                              <li>No self-hosting.</li>
                           </ul>
                       </div>
                   </div>
@@ -736,13 +756,32 @@ permalink: /tools/recommendations/
                       <div class="pros-section">
                           <strong class="pros-title">Pros:</strong>
                           <ul>
-                              <li></li>
+                              <li>End-to-end encrypted.</li>
+                              <li>Open-source.</li>
+                              <li>Cross-platform.</li>
+                              <li>Passkey support.</li>
+                              <li>Generous free plan.</li>
+                              <li>Encrypted attachments.</li>
+                              <li>Unlimited logins, notes and credit cards on free plan.</li>
+                              <li>Self-hosting.</li>
+                              <li>Share text and attachments via an encrypted link.</li>
+                              <li>Dark web monitoring.</li>
+                              <li>Easy import and export options.</li>
+                              <li>Alerts for weak and reused passwords.</li>
+                              <li>Emergency access.</li>
+                              <li>Built-in 2FA authenticator.</li>
                           </ul>
                       </div>
                       <div class="cons-section">
                           <strong class="cons-title">Cons:</strong>
                           <ul>
-                              <li></li>
+                              <li>UI feels less polished.</li>
+                              <li>Autofill is not entirely reliable.</li>
+                              <li>Alerts for weak and reused passwords behind paid plan.</li>
+                              <li>Email aliases via third-party behind paid plan.</li>
+                              <li>Attachment sharing via encrypted link behind paid plan.<li>
+                              <li>US-based company.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
                           </ul>
                       </div>
                   </div>
@@ -760,13 +799,26 @@ permalink: /tools/recommendations/
                       <div class="pros-section">
                           <strong class="pros-title">Pros:</strong>
                           <ul>
-                              <li></li>
+                              <li>End-to-end encrypted</li>
+                              <li>Secret Key generated on device.</li>
+                              <li>Polished and user friendly UI.</li>
+                              <li>Passkey support.</li>
+                              <li>Cross-platform.</li>
+                              <li>Encrypted attachments.</li>
+                              <li>Secure link and vault sharing.</li>
+                              <li>Dark web monitoring.</li>
+                              <li>Alerts for weak and reused passwords.</li>
                           </ul>
                       </div>
                       <div class="cons-section">
                           <strong class="cons-title">Cons:</strong>
                           <ul>
-                              <li></li>
+                              <li>Closed-source.</li>
+                              <li>No free plan.</li>
+                              <li>Expensive paid plan.</li>
+                              <li>No self-hosting.</li>
+                              <li>Canadian-based company.</li>
+                              <li>Based within the 5, 9 or 14 eyes alliance.</li>
                           </ul>
                       </div>
                   </div>
