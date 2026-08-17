@@ -779,7 +779,7 @@ permalink: /tools/recommendations/
                               <li>Autofill is not entirely reliable.</li>
                               <li>Alerts for weak and reused passwords behind paid plan.</li>
                               <li>Email aliases via third-party behind paid plan.</li>
-                              <li>Attachment sharing via encrypted link behind paid plan.<li>
+                              <li>Attachment sharing via encrypted link behind paid plan.</li>
                               <li>US-based company.</li>
                               <li>Based within the 5, 9 or 14 eyes alliance.</li>
                           </ul>
