@@ -804,6 +804,7 @@ permalink: /tools/recommendations/
                               <li>Polished and user friendly UI.</li>
                               <li>Passkey support.</li>
                               <li>Cross-platform.</li>
+                              <li>Strong business features</li>
                               <li>Encrypted attachments.</li>
                               <li>Secure link and vault sharing.</li>
                               <li>Dark web monitoring.</li>
