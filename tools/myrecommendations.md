@@ -482,6 +482,7 @@ permalink: /tools/recommendations/
                           <ul>
                               <li>No end-to-end encryption.</li>
                               <li>No PGP support.</li>
+                              <li>No free plan.</li>
                               <li>Requires phone number on sign-up.</li>
                               <li>Australian-based company.</li>
                               <li>Based within the 5, 9 or 14 eyes alliance.</li>
