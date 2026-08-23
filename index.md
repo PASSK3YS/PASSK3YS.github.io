@@ -79,12 +79,9 @@ title: About
 
     <div class="unified-row">
         <h3 class="soft-header">>_ Tip Jar</h3>
-        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 15px;">
             <img src="/assets/icons/monero.svg" alt="Monero Icon" class="tip-icon">
-            <div style="display: flex; flex-direction: column; gap: 4px;">
-                <span class="unified-meta">MONERO (XMR)</span>
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--text-muted); word-break: break-all;">46yuchLT4YATJjWkSFAD9LeNbD9jCtJHU9Vn3FhRsDJ95GHaDvp8ppzfd3u2L7hZ1DSB8n1kQPMrmeu5zQA9oT8XFv2ka4R</span>
-            </div>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--text-muted); word-break: break-all; line-height: 1.4;">46yuchLT4YATJjWkSFAD9LeNbD9jCtJHU9Vn3FhRsDJ95GHaDvp8ppzfd3u2L7hZ1DSB8n1kQPMrmeu5zQA9oT8XFv2ka4R</span>
         </div>
     </div>
 
