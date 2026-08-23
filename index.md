@@ -79,9 +79,12 @@ title: About
 
     <div class="unified-row">
         <h3 class="soft-header">>_ Tip Jar</h3>
-        <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="https://files.horizon.pics/7a5ffcb6-a038-4326-b27b-f6206d417b7f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Monero QR Code" class="tip-qr">
-            <span class="unified-meta">MONERO (XMR)</span>
+        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+            <img src="/assets/icons/monero.svg" alt="Monero Icon" class="tip-icon">
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+                <span class="unified-meta">MONERO (XMR)</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--text-muted); word-break: break-all;">46yuchLT4YATJjWkSFAD9LeNbD9jCtJHU9Vn3FhRsDJ95GHaDvp8ppzfd3u2L7hZ1DSB8n1kQPMrmeu5zQA9oT8XFv2ka4R</span>
+            </div>
         </div>
     </div>
 
@@ -270,24 +273,16 @@ pre, code {
     transition: color 0.3s ease;
 }
 
-.tip-qr {
-    width: 80px;
-    height: 80px;
+.tip-icon {
+    width: 40px;
+    height: 40px;
     object-fit: contain;
-    background-color: #ffffff;
-    padding: 6px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    border: 1px solid var(--border);
+    flex-shrink: 0;
 }
 
-[data-theme="dark"] .tip-qr {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-}
-
-.unified-row:hover .tip-qr {
-    transform: scale(1.05);
+.unified-row:hover .tip-icon {
+    transform: scale(1.1);
 }
 
 .cinema-link-wrapper {
