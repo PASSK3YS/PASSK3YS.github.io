@@ -108,6 +108,37 @@ permalink: /tools/recommendations/
 
           <div class="product-entry">
               <div class="product-header">
+                  <img src="/assets/icons/brave-icon.svg" alt="Brave Logo" class="product-logo">
+                  <a href="https://brave.com/origin" target="_blank" class="product-name">Brave Origin</a>
+              </div>
+              <details class="product-details-dropdown">
+                  <summary class="dropdown-title">Pros & Cons</summary>
+                  <div class="product-details">
+                      <div class="pros-section">
+                          <strong class="pros-title">Pros:</strong>
+                          <ul>
+                              <li>Open-source.</li>
+                              <li>Lightweight.</li>
+                              <li>No Google telemetry.</li>
+                              <li>Free on Linux.</li>
+                              <li>Supports uBlock Origin.</li>
+                              <li>Anti-fingerprinting measures.</li>
+                              <li>No Brave ads or crypto bloat.</li>
+                          </ul>
+                      </div>
+                      <div class="cons-section">
+                          <strong class="cons-title">Cons:</strong>
+                          <ul>
+                              <li>Windows, Android, and iOS require a one time payment.</li>
+                              <li>Based on the Chromium engine.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </details>
+          </div>
+
+          <div class="product-entry">
+              <div class="product-header">
                   <img src="/assets/icons/floorp-browser-icon.svg" alt="Floorp Logo" class="product-logo">
                   <a href="https://floorp.app" target="_blank" class="product-name">Floorp</a>
               </div>
