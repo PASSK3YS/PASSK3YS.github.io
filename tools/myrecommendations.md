@@ -123,7 +123,7 @@ permalink: /tools/recommendations/
                               <li>Free on Linux.</li>
                               <li>Supports uBlock Origin.</li>
                               <li>Anti-fingerprinting measures.</li>
-                              <li>No Brave ads or crypto bloat.</li>
+                              <li>Removes Brave browser ads and crypto bloat.</li>
                           </ul>
                       </div>
                       <div class="cons-section">
