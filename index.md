@@ -4,7 +4,7 @@ title: About
 ---
 
 <div class="bio-container">
-    <img src="https://files.horizon.pics/e3915a41-a35d-4f53-8041-df90f652947a?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
+    <img src="https://files.horizon.pics/80bf60d4-5f09-458c-a235-6f7387f7db1f?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran" class="profile-img">
     <div class="bio-text">
         <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
             Hi, I'm Kieran<span class="blinking-cursor">_</span>
@@ -67,13 +67,6 @@ title: About
         <h3 class="soft-header">>_ Now</h3>
         <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
             <span class="latest-title" style="margin: 0;">What I'm doing now &rarr;</span>
-        </div>
-    </a>
-
-    <a href="/guestbook/" class="unified-row interactive-row" style="text-decoration: none; color: inherit;">
-        <h3 class="soft-header">>_ Guestbook</h3>
-        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <span class="guestbook-title" style="margin: 0;">Sign my guestbook &rarr;</span>
         </div>
     </a>
 
@@ -194,7 +187,6 @@ pre, code {
     box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
 }
 
-.interactive-row:hover .guestbook-title,
 .interactive-row:hover .latest-title {
     color: var(--accent);
 }
@@ -261,13 +253,6 @@ pre, code {
 
 .gamertag-list a:hover {
     color: var(--accent);
-}
-
-.guestbook-title {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--text);
-    transition: color 0.3s ease;
 }
 
 .tip-icon {
