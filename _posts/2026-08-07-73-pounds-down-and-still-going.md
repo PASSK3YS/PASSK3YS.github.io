@@ -4,7 +4,6 @@ title: "My Weight Loss Journey: 73 Pounds Down and Still Going"
 description: My weight loss journey through intermittent fasting, cutting sugar, and walking, and my continued push toward my goal weight.
 ---
 
-My Weight Loss Journey: 73 Pounds Down and Still Going
 At my heaviest, I weighed 322 pounds. Today, I weigh 249 pounds. That's 73 pounds gone, and I've lost 6 inches off my waist along the way. My next milestone is 200 pounds, and while there's still a long road ahead, I wanted to share how I got here.
 
 Two weeks ago, I started intermittent fasting using the 16:8 method. That means a 16 hour fast with an 8 hour eating window. It sounds brutal on paper, but the structure has honestly made things simpler. Instead of grazing all day, I know exactly when I eat and when I don't.
