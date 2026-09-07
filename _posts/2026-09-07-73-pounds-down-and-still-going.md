@@ -6,7 +6,7 @@ description: My weight loss journey through intermittent fasting, cutting sugar,
 
 At my heaviest, I weighed 322 pounds. Today, I weigh 249 pounds. That's 73 pounds gone, and I've lost 6 inches off my waist along the way. My next milestone is 200 pounds, and while there's still a long road ahead, I wanted to share how I got here.
 
-For a while now I have been dieting and clalorie counting. Portion control is one of the things I have been struggling with and that's one of the main reasons I put on weight. Another reason was COVID. I gained a significant amount of weight during lockdown back in 2020/2026, and unfortunately I kept that weight on.
+For a while now I have been dieting and clalorie counting. Portion control is one of the things I have been struggling with and that's one of the main reasons I put on weight. Another reason was COVID. I gained a significant amount of weight during lockdown back in 2020/2021, and unfortunately I kept that weight on.
 
 Since gaining the weight, I would get out of breath walking up the stairs, or walking down the road outside my house. I was totally unfit and I knew something needed to change. I starting off dieting and controlling my portion sizes. Eating lots of (unhealthy) food is what I do best, so cutting down on unhealthy foods and reducing my portion sizes was and still is today a challenge. I have been on and off dieting for a long time now and I have seen positive results on the scale. Evebtually I reached a plateau with the scales and needed to do something more.
 
