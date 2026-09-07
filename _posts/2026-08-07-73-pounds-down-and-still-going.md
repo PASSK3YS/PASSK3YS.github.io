@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Weight Loss Journey: 73 Pounds Down and Still Going
+title: "My Weight Loss Journey: 73 Pounds Down and Still Going"
 description: My weight loss journey through intermittent fasting, cutting sugar, and walking, and my continued push toward my goal weight.
 ---
 
