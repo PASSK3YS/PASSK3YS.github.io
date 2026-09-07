@@ -37,7 +37,7 @@ export default {
             count = parseInt(count) + 1;
             
             await env.UPVOTES.put(path, count.toString());
-            await env.UPVOTES.put(`vote_${hashHex}`, "1", { expirationTtl: 86400 });
+            await env.UPVOTES.put(`vote_${hashHex}`, "1");
 
             return new Response(JSON.stringify({ count }), {
                 headers: { ...headers, "Content-Type": "application/json" }
