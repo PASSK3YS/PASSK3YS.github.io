@@ -35,4 +35,53 @@ layout: default
     </div>
   </div>
 
+<div class="upvote-container" style="text-align: center; margin: 40px 0;">
+    <button id="upvote-btn" style="background: transparent; border: 2px solid var(--border); color: var(--text); border-radius: 12px; padding: 10px 20px; cursor: pointer; font-size: 1rem; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s ease;">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+        <span id="upvote-count">0</span>
+    </button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const upvoteBtn = document.getElementById("upvote-btn");
+    const countDisplay = document.getElementById("upvote-count");
+    
+    const workerUrl = "https://upvote-worker.snowy-scene-5750.workers.dev";
+    const currentPath = window.location.pathname;
+
+    fetch(`${workerUrl}${currentPath}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.count !== undefined) {
+                countDisplay.textContent = data.count;
+            }
+        })
+        .catch(() => {});
+
+    upvoteBtn.addEventListener("click", () => {
+        upvoteBtn.style.transform = "scale(0.95)";
+        setTimeout(() => upvoteBtn.style.transform = "scale(1)", 100);
+
+        fetch(`${workerUrl}${currentPath}`, { method: "POST" })
+            .then(res => {
+                if (res.status === 429) {
+                    upvoteBtn.style.borderColor = "#ef4444";
+                    upvoteBtn.style.color = "#ef4444";
+                    return null;
+                }
+                return res.json();
+            })
+            .then(data => {
+                if (data && data.count !== undefined) {
+                    countDisplay.textContent = data.count;
+                    upvoteBtn.style.borderColor = "var(--accent)";
+                    upvoteBtn.style.color = "var(--accent)";
+                }
+            })
+            .catch(() => {});
+    });
+});
+</script>
+
 </article>

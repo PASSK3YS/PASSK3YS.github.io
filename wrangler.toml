@@ -1,0 +1,7 @@
+name = "upvote-worker"
+main = "src/index.js"
+compatibility_date = "2023-10-10"
+
+[[kv_namespaces]]
+binding = "UPVOTES"
+id = "8baddb009f894e10a2eec7fadd9c3dec"
