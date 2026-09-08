@@ -69,6 +69,7 @@ Click "Create new file" again. In the name box, type `_layouts/default.html`. Ty
 </body>
 </html>
 ```
+
 Scroll down and click "Commit changes" to save it.
 
 ### 4. Publish your first post
@@ -76,7 +77,7 @@ Click "Create new file" once more. Type _posts/ to create a posts folder, and na
 
 At the very top of the file, you need a small configuration block so Jekyll knows it is a blog post. Add this, followed by the writing:
 
-```markdown
+```
 ---
 layout: default
 title: "Migrating to a New Home"
@@ -85,6 +86,7 @@ title: "Migrating to a New Home"
 BLOG POST CONTENT GOES HERE
 This is the first post on this new independent blog.
 ```
+
 Save the file.
 
 ### 5. Turn on the website
