@@ -86,13 +86,24 @@ Below the second ``---``, write your blog post using standard Markdown.
 e. Click the green Commit changes button at the top right to save and publish your post.
 
 ### Step 4: Apply a Theme
-By default, your site will look like a plain text document. You can instantly style it without writing any CSS by using GitHub's built-in themes.
 
-a. Navigate back to Settings > Pages.
+a. Return to your repository's main page by clicking the <> Code tab.
 
-b. Click the Choose a theme button.
+b. Click Add file > Create new file.
 
-c. Select a layout that fits your aesthetic and click Select theme. GitHub will immediately apply this design across your entire site, giving you a fully functioning, free blog hosted on GitHub pages!
+c. Name this file exactly _config.yml. This acts as the master control panel for your website.
+
+d. On the first line, type the name of one of GitHub's supported starter themes, exactly like this:
+
+`theme: jekyll-theme-minimal`
+
+e. Click the green Commit changes button.
+
+Once the background build finishes in a minute or two, your site will automatically pull the design files and transform your plain text into a styled web page.
+
+If you want to experiment with different looks, you can edit that `_config.yml` file and swap `jekyll-theme-minimal` for other built-in options like: `jekyll-theme-cayman`, 
+`jekyll-theme-hacker`, 
+or `jekyll-theme-slate`.
 
 ---
 
