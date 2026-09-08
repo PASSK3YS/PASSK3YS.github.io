@@ -46,3 +46,56 @@ In your new repository, click "Add file" and then "Create new file". Name this f
 title: "YOUR BLOG NAME HERE"
 description: "DESCRIPTION OF YOUR BLOG HERE"
 theme: jekyll-theme-minimal
+```
+Scroll to the bottom and click the green "Commit changes" button to save it.
+
+### 3. Add your website's skeleton (Layout)
+Click "Create new file" again. In the name box, type `_layouts/default.html`. Typing the slash automatically creates a new folder. This file is the skeleton of your website that determines where the title and text go. Paste this inside:
+
+{% raw %}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  <header>
+    <h1><a href="/">{{ site.title }}</a></h1>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
+```
+{% endraw %}
+
+Scroll down and click "Commit changes" to save it.
+
+### 4. Publish your first post
+Click "Create new file" once more. Type _posts/ to create a posts folder, and name the file with today's date and title, exactly like this: `2026-10-15-hello.md`.
+
+At the very top of the file, you need a small configuration block so Jekyll knows it is a blog post. Add this, followed by the writing:
+
+```
+---
+layout: default
+title: "Migrating to a New Home"
+---
+
+BLOG POST CONTENT GOES HERE
+This is the first post on this new independent blog.
+```
+
+Save the file.
+
+### 5. Turn on the website
+Click the "Settings" tab near the top of the repository page. On the left-hand menu, click "Pages". Under the "Build and deployment" section, make sure the source says "Deploy from a branch", and click the dropdown menu to select the `main` branch. Click "Save". Wait about two minutes, and the blog will be live and viewable at [https://yourusername.github.io](https://yourusername.github.io).
+
+---
+
+If you need help with GitHub pages, please don't hesitate to [contact me](https://kieran.colfer.net/contact/){:target="_blank"}
+
+Until next time...
