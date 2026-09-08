@@ -69,6 +69,8 @@ Click "Create new file" again. In the name box, type `_layouts/default.html`. Ty
   </main>
 </body>
 </html>
+```
+{% endraw %}
 
 Scroll down and click "Commit changes" to save it.
 
