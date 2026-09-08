@@ -2,7 +2,7 @@
 layout: post
 title: "Listed is shutting down: Finding a new home for your blog"
 description: Listed by Standard Notes is shutting down. Here's what you can do if you're a Listed user.
-image: https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&region=eu-central&mime1=image&mime2=jpeg
+image: "https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&region=eu-central&mime1=image&mime2=jpeg"
 ---
 
 ![Goodbye Listed](https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&region=eu-central&mime1=image&mime2=jpeg)
