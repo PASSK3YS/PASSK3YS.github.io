@@ -101,9 +101,9 @@ e. Click the green Commit changes button.
 
 Once the background build finishes in a minute or two, your site will automatically pull the design files and transform your plain text into a styled web page.
 
-If you want to experiment with different looks, you can edit that `_config.yml` file and swap `jekyll-theme-minimal` for other built-in options like: `jekyll-theme-cayman`, 
-`jekyll-theme-hacker`, 
-or `jekyll-theme-slate`.
+If you want to experiment with different looks, you can edit that `_config.yml` file and swap `jekyll-theme-minimal` for other built-in options like: `jekyll-theme-cayman`
+`jekyll-theme-hacker` 
+`jekyll-theme-slate`
 
 ---
 
