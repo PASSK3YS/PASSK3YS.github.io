@@ -52,7 +52,7 @@ Scroll to the bottom and click the green "Commit changes" button to save it.
 ### 3. Add your website's skeleton (Layout)
 Click "Create new file" again. In the name box, type `_layouts/default.html`. Typing the slash automatically creates a new folder. This file is the skeleton of your website that determines where the title and text go. Paste this inside:
 
-```html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
