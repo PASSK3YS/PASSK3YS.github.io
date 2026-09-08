@@ -103,9 +103,11 @@ Once the background build finishes in a minute or two, your site will automatica
 
 If you want to experiment with different looks, you can edit that `_config.yml` file and swap `jekyll-theme-minimal` for other built-in options like:
 
-- `jekyll-theme-cayman`
-- `jekyll-theme-hacker` 
-- `jekyll-theme-slate`
+- `jekyll-theme-cayman`.
+
+- `jekyll-theme-hacker`.
+
+- `jekyll-theme-slate`.
 
 ---
 
