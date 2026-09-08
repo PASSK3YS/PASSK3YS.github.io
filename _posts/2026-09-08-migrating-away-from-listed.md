@@ -37,6 +37,8 @@ If you want a hosted platform that maintains the distraction-free, privacy-consc
 *   **Features:** It uses the Python-Markdown library and explicitly enforces minimalism. There are zero ads, tracking cookies, or analytics. To prevent design distractions, it intentionally lacks support for custom CSS, rich editors, pagination, and custom favicons. It includes native RSS feeds and a built in plain-text email newsletter for subscribers.
 *   **Export & Data:** Users can export the entire blog at any time as a zip archive containing all raw Markdown files, making self-hosting migrations completely trivial.
 
+---
+
 ## Taking Control: Hosting on GitHub Pages
 If you want absolute control over your content, building a static site on GitHub Pages is a fantastic long-term solution. GitHub Pages natively supports a tool called Jekyll. Think of Jekyll as a robot that takes your simple text files and automatically stitches them together into a fully functioning website, without forcing you into a rigid platform.
 
