@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I gave Elon Musk my $8
+title: "I gave Elon Musk my $8"
 description: I bit the bullet.
 ---
 

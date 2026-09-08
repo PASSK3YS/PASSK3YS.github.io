@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Addicted to watching movies at the cinema
+title: "Addicted to watching movies at the cinema"
 description: Getting a membership at my local cinema was so worth it.
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How you can help fight Internet censorship with your browser
+title: "How you can help fight Internet censorship with your browser"
 description:
 ---
 

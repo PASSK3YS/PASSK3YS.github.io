@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apple Removes Advanced Data Protection from UK
+title: "Apple Removes Advanced Data Protection from UK"
 description: The UK demands access to your files.
 ---
 

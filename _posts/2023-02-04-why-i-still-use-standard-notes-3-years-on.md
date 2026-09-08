@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why I still use Standard Notes 3 years on
+title: "Why I still use Standard Notes 3 years on"
 description: After 3 years of full time use, Standard Notes is my go-to notes app.
 ---
 

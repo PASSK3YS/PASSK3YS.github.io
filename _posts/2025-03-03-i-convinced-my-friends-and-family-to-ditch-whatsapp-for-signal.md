@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I convinced my friends and family to ditch WhatsApp for Signal
+title: "I convinced my friends and family to ditch WhatsApp for Signal"
 description: How I successfully convinced my friends and family to switch to Signal using creativity and persistence.
 image: https://bear-images.sfo2.cdn.digitaloceanspaces.com/krn/messagemeonsignal-2.webp
 ---

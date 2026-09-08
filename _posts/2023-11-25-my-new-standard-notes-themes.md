@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My new Standard Notes themes
+title: "My new Standard Notes themes"
 description:
 ---
 

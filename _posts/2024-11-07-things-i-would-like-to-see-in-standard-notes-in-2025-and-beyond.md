@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Things I would like to see in Standard Notes in 2025 and beyond
+title: "Things I would like to see in Standard Notes in 2025 and beyond"
 description: Features I'd love to see in Standard Notes.
 ---
 

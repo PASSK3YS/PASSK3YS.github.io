@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I'm addicted to Euro Truck Simulator 2
+title: "I'm addicted to Euro Truck Simulator 2"
 description: Loaded up and truckin'.
 ---
 

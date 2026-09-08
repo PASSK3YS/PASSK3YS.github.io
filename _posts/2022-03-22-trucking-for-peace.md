@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Trucking For Peace raises over $25,000 for Ukraine
+title: "Trucking For Peace raises over $25,000 for Ukraine"
 description: Eurotruck Simulator 2 community comes together for a good cause.
 ---
 
