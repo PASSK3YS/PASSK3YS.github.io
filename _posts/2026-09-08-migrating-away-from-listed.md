@@ -39,66 +39,60 @@ If you want a hosted platform that maintains the distraction-free, privacy-consc
 
 ---
 
-## Taking Control: Hosting on GitHub Pages
-If you want absolute control over your content, building a static site on GitHub Pages is a fantastic long-term solution. GitHub Pages natively supports a tool called Jekyll. Think of Jekyll as a robot that takes your simple text files and automatically stitches them together into a fully functioning website, without forcing you into a rigid platform.
+Another option is to host your blog using GitHub pages. GitHub pages is completely free and provides a static website which can be updated at any time. Here's how to set up a blogging website using GitHub pages.
 
-### 1. Create your website's main folder (Repository)
-Go to GitHub.com and sign up or log in. Click the "+" button at the top right and select "New repository". A repository is just a project folder. You must name it exactly like this to tell GitHub it is a website: yourusername.github.io (replace "yourusername" with your actual GitHub account name). Leave it public and click "Create".
+### Step 1: Claim Your Space on GitHub
+Create a free account at GitHub.com, or sign into your existing GitHub account.
 
-### 2. Set up the website settings
-In your new repository, click "Add file" and then "Create new file". Name this file `_config.yml`. This acts as the master settings file for the blog. Paste this exact text inside:
+a. Click the + icon in the top right corner and select New repository.
+
+b. In the Repository name box, type `yourusername.github.io` (replace "yourusername" with your actual GitHub username). This exact naming convention is the specific trigger that tells GitHub to host this folder as a live website.
+
+c. Check the box that says Add a README file.
+
+d. Scroll to the bottom and click the green Create repository button.
+
+### Step 2: Activate the Website
+a. Inside your newly created repository, click the Settings tab (the gear icon near the top right).
+
+b. On the left-hand sidebar, scroll down and click Pages.
+
+c. Under the Build and deployment section, ensure the source is set to Deploy from a branch.
+
+d. Under the Branch heading, select `main` from the dropdown menu and click Save.
+
+e. Wait about two minutes. GitHub is now silently building your skeleton site in the background.
+
+### Step 3: Write Your First Post
+
+Because Listed.to relied on Markdown, you already know exactly how to write your content. GitHub Pages uses a background engine called Jekyll to turn those Markdown files into a styled blog.
+
+a. Return to your repository's main page by clicking the <> Code tab.
+
+b. Click Add file > Create new file.
+
+c. In the file name box, type `_posts/2026-10-01-welcome.md`. Typing `_posts/` will automatically generate the required folder, and the strict `YYYY-MM-DD-title.md` naming format is required for Jekyll to recognize the file as a blog post.
+
+d. At the very top of your file, you must include a hidden configuration block called "front matter." This tells the site how to handle the page. Paste this exactly:
 
 ```yaml
-title: "YOUR BLOG NAME HERE"
-description: "DESCRIPTION OF YOUR BLOG HERE"
-theme: jekyll-theme-minimal
-```
-Scroll to the bottom and click the green "Commit changes" button to save it.
-
-### 3. Add your website's skeleton (Layout)
-Click "Create new file" again. In the name box, type `_layouts/default.html`. Typing the slash automatically creates a new folder. This file is the skeleton of your website that determines where the title and text go. Paste this inside:
-
-{% raw %}
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-</head>
-<body>
-  <header>
-    <h1><a href="/">{{ site.title }}</a></h1>
-  </header>
-  <main>
-    {{ content }}
-  </main>
-</body>
-</html>
-```
-{% endraw %}
-
-Scroll down and click "Commit changes" to save it.
-
-### 4. Publish your first post
-Click "Create new file" once more. Type _posts/ to create a posts folder, and name the file with today's date and title, exactly like this: `2026-10-15-hello.md`.
-
-At the very top of the file, you need a small configuration block so Jekyll knows it is a blog post. Add this, followed by the writing:
-
-```
 ---
-layout: default
-title: "Migrating to a New Home"
+layout: post
+title: "Finding a new home after Listed"
 ---
-
-BLOG POST CONTENT GOES HERE
-This is the first post on this new independent blog.
 ```
+Below the second ``---``, write your blog post using standard Markdown.
 
-Save the file.
+e. Click the green Commit changes button at the top right to save and publish your post.
 
-### 5. Turn on the website
-Click the "Settings" tab near the top of the repository page. On the left-hand menu, click "Pages". Under the "Build and deployment" section, make sure the source says "Deploy from a branch", and click the dropdown menu to select the `main` branch. Click "Save". Wait about two minutes, and the blog will be live and viewable at [https://yourusername.github.io](https://yourusername.github.io).
+### Step 4: Apply a Theme
+By default, your site will look like a plain text document. You can instantly style it without writing any CSS by using GitHub's built-in themes.
+
+a. Navigate back to Settings > Pages.
+
+b. Click the Choose a theme button.
+
+c. Select a layout that fits your aesthetic and click Select theme. GitHub will immediately apply this design across your entire site, giving you a fully functioning, free blog hosted on GitHub pages!
 
 ---
 
