@@ -5,6 +5,8 @@ description: Listed by Standard Notes is shutting down. Here's what you can do i
 image: https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&region=eu-central&mime1=image&mime2=jpeg
 ---
 
+[Goodbye Listed]!(https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&region=eu-central&mime1=image&mime2=jpeg)
+
 [Standard Notes recently announced](https://listed.to/@Listed/76799/an-update-about-listed){:target="_blank"} that the intergrated minimalistic blogging platform, Listed.to will permanently shut down on December 31, 2026. 
 
 If you have been using Listed, your writing isn't lost. All your past posts will remain safely and privately stored in your Standard Notes account. However, your public blog, guestbook, and any custom domain routing will go dark at the end of the year. The team is retiring the platform to focus on the core Standard Notes application.
