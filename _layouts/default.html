@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,11 +19,13 @@
     {% if page.description %}
     <meta name="description" content="{{ page.description }}">
     <meta property="og:description" content="{{ page.description }}">
+    <meta name="twitter:description" content="{{ page.description }}">
     {% endif %}
 
-    {% assign og_image = page.image | default: "https://files.horizon.pics/2d6f201f-fbb8-4870-8a67-c8e1357d2fed?a=480&region=eu-central&mime1=image&mime2=jpeg" %}
-    <meta property="og:image" content="{{ og_image }}">
-    <meta name="twitter:image" content="{{ og_image }}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image }}">
+    <meta name="twitter:image" content="{{ page.image }}">
+    {% endif %}
 
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:url" content="https://kieran.colfer.net{{ page.url }}">
@@ -468,4 +470,4 @@
         });
     </script>
 </body>
-</html>
+</html>"""
