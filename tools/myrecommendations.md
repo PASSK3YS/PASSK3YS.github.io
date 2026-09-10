@@ -1359,6 +1359,13 @@ pre, code {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
 .grid-item {
     scroll-margin-top: 100px;
     background: var(--nav-bg);
@@ -1367,21 +1374,8 @@ pre, code {
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 24px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    opacity: 0;
-    transform: translateY(-40px);
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.grid-item.visible:hover {
-    border-color: var(--accent);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
 }
 
 [data-theme="dark"] .grid-item {
@@ -1495,20 +1489,3 @@ pre, code {
     color: var(--text);
 }
 </style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.grid-item').forEach(card => {
-        observer.observe(card);
-    });
-});
-</script>
