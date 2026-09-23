@@ -201,7 +201,6 @@ nav {
 .theme-toggle:hover {
     background: var(--accent-glow);
     color: var(--accent);
-    transform: rotate(15deg);
 }
 
 .bio-container {
