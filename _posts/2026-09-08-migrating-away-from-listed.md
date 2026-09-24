@@ -22,20 +22,28 @@ If you want a hosted platform that maintains the distraction-free, privacy-consc
 *   **Features:** The editor supports standard Markdown and MathJax. It features built in ActivityPub federation, meaning users on platforms like Mastodon can follow the blog directly. The Pro tier unlocks custom domains, themes, code injection, and native photo hosting.
 *   **Export & Data:** Writing can be exported as an ePub file, and the platform offers an open developer API for programmatic data access.
 
+---
+
 **[Bear Blog](https://bearblog.dev){:target="_blank"}**
 *   **Pricing:** A free tier is available on a `bearblog.dev` subdomain. The Pro tier costs $5/month.
 *   **Features:** It utilizes a pure Markdown editor and native browser rendering for maximum speed. It includes a built in "Discovery feed" that exposes writing to the broader Bear Blog community to help build an initial audience. Upgrading to Pro enables custom domains and custom CSS.
 *   **Export & Data:** Built in tools provide easy export functionalities and full-content RSS feeds.
+
+---
 
 **[Noted.do](https://noted.do){:target="_blank"}**
 *   **Pricing:** Free tier is available. Supporter plan is $1.99 per month.
 *   **Features:** Noted.do supports markdown. It features publishing notes directly from the Standard Notes app via a plug-in. Other features include sharing of notes via a private link and writing directly from the website without using the Standard Notes app. Readers can subscribe to your Noted.do blog by email. The supporter plan unlocks custom domain, more storage for pictures, and colours and fonts for your blog to give it a unique style.
 *   **Export & Data:** Noted.do allows you to import your Listed.to blog posts. You can easily export your data on Noted.do into a ZIP file to export or backup elsewhere.
 
+---
+
 **[Micro.blog](https://micro.blog){:target="_blank"}**
 *   **Pricing:** Hosting costs $5/month. There is no free hosted tier, though the social community features are free if the blog is hosted elsewhere.
 *   **Features:** It operates as both a standalone blogging platform and a social network. It accommodates short, title-less posts as well as long-form essays using either a rich text or Markdown editor. The platform fully supports custom domains.
 *   **Export & Data:** A core feature is automated cross-posting, allowing users to syndicate posts directly to other social networks and platforms via RSS.
+
+---
 
 **[Mataroa](https://mataroa.blog){:target="_blank"}**
 *   **Pricing:** A free tier operates on a `mataroa.blog` subdomain. The premium version is $9/year, and 5% of all revenue funds CO₂ removal initiatives.
