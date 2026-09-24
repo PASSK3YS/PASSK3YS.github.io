@@ -27,7 +27,7 @@ If you want a hosted platform that maintains the distraction-free, privacy-consc
 *   **Features:** It utilizes a pure Markdown editor and native browser rendering for maximum speed. It includes a built in "Discovery feed" that exposes writing to the broader Bear Blog community to help build an initial audience. Upgrading to Pro enables custom domains and custom CSS.
 *   **Export & Data:** Built in tools provide easy export functionalities and full-content RSS feeds.
 
-**[Noted.do](https://noted.do)
+**[Noted.do](https://noted.do)**
 *   **Pricing:** Free tier is available. Supporter plan is $1.99 per month.
 *   **Features:** Noted.do supports markdown. It features publishing notes directly from the Standard Notes app via a plug-in. Other features include sharing of notes via a private link and writing directly from the website without using the Standard Notes app. Readers can subscribe to your Noted.do blog by email. The supporter plan unlocks custom domain, more storage for pictures, and colours and fonts for your blog to give it a unique style.
 *   **Export & Data:** Noted.do allows you to import your Listed.to blog posts. You can easily export your data on Noted.do into a ZIP file to export or backup elsewhere.
