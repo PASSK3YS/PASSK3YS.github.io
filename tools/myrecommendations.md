@@ -14,6 +14,7 @@ permalink: /tools/recommendations/
   My recommendations based on personal use and trust:</p>
 
   <div class="info-callout">
+      This page is under development. Information may be missing or incorrect.
       Incorrect information? <a href="https://github.com/PASSK3YS/PASSK3YS.github.io/issues" target="_blank">Open a GitHub issue</a>
   </div>
 
