@@ -32,7 +32,7 @@ If you want a hosted platform that maintains the distraction-free, privacy-consc
 ---
 
 **[Noted.do](https://noted.do){:target="_blank"}**
-*   **Pricing:** Free tier is available. Supporter plan is $1.99 per month.
+*   **Pricing:** Has a free tier. Supporter plan is $1.99 per month.
 *   **Features:** Noted.do supports markdown. It features publishing notes directly from the Standard Notes app via a plug-in. Other features include sharing of notes via a private link and writing directly from the website without using the Standard Notes app. Readers can subscribe to your Noted.do blog by email. The supporter plan unlocks custom domain, more storage for pictures, and colours and fonts for your blog to give it a unique style.
 *   **Export & Data:** Noted.do allows you to import your Listed.to blog posts. You can easily export your data on Noted.do into a ZIP file to export or backup elsewhere.
 
