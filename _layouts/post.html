@@ -46,6 +46,7 @@ layout: default
       <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: {% if page.description %}15px{% else %}20px{% endif %}; display: flex; align-items: center; gap: 8px;">
         <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
         <span>
+          {{ page.date | date: "%B %d, %Y" }} &bull;
           {% assign words = content | number_of_words %}
           {% assign read_time = words | divided_by: 180 %}
           {% if read_time == 0 %}
