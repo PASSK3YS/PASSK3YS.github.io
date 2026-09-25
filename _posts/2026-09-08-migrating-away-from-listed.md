@@ -6,9 +6,9 @@ image: "https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&re
 permalink: /blog/migrating-away-from-listed/
 ---
 
-  <div class="info-callout">
-      These are my personal recommendations, and not official recommendations endorsed by Standard Notes.</a>
-  </div>
+
+> These are my personal recommendations, and not official recommendations endorsed by Standard Notes.
+
 
 ![Goodbye Listed](https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&region=eu-central&mime1=image&mime2=jpeg)
 
