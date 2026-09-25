@@ -6,6 +6,10 @@ image: "https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&re
 permalink: /blog/migrating-away-from-listed/
 ---
 
+  <div class="info-callout">
+      These are my personal recommendations, and not official recommendations endorsed by Standard Notes.</a>
+  </div>
+
 ![Goodbye Listed](https://files.horizon.pics/4cda86a5-f81f-4186-a226-6c86c6c97b8d?a=480&region=eu-central&mime1=image&mime2=jpeg)
 
 [Standard Notes recently announced](https://listed.to/@Listed/76799/an-update-about-listed){:target="_blank"} that the intergrated minimalistic blogging platform, Listed.to will permanently shut down on December 31, 2026. 
