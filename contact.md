@@ -60,7 +60,7 @@ body, main, p, a, span, div, button {
 }
 
 h1, h2, h3 {
-    font-family: 'Staatliches', 'Atkinson Hyperlegible Next', sans-serif !important;
+    font-family: 'Staatliches', 'SUSE', sans-serif !important;
 }
 
 pre, code {
