@@ -53,20 +53,18 @@ permalink: /contact/
 
 </div>
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-
 <style>
 
 body, main, p, a, span, div, button {
-    font-family: 'SUSE', 'JetBrains Mono', system-ui, -apple-system, sans-serif !important;
+    font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, sans-serif !important;
 }
 
 h1, h2, h3 {
-    font-family: 'Staatliches', 'SUSE', sans-serif !important;
+    font-family: 'Staatliches', 'Atkinson Hyperlegible Next', sans-serif !important;
 }
 
 pre, code {
-    font-family: 'JetBrains Mono', monospace !important;
+    font-family: 'Atkinson Hyperlegible Next', monospace !important;
 }
 
 .blinking-cursor {
@@ -153,7 +151,7 @@ pre, code {
     color: var(--text-muted);
     margin: 0;
     font-weight: 700;
-    font-family: 'Staatliches', 'SUSE', sans-serif !important;
+    font-family: 'Staatliches', 'Atkinson Hyperlegible Next', sans-serif !important;
 }
 
 .directory-interactive-text {

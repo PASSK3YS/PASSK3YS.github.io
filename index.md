@@ -85,7 +85,7 @@ title: About
 <style>
 
 body, main, p, a, span, div, button {
-    font-family: 'SUSE', 'JetBrains Mono', system-ui, -apple-system, sans-serif !important;
+    font-family: 'Staatliches', 'Atkinson Hyperlegible Next', sans-serif !important;
 }
 
 h1, h2, h3 {
