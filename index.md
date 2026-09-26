@@ -80,8 +80,6 @@ title: About
 
 </div>
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-
 <style>
 
 body, main, p, a, span, div, button {

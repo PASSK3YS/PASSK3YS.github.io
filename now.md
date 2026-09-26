@@ -5,8 +5,6 @@ permalink: /now/
 last_updated: 2026-08-14
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-
 <style>
 body, main, p, a, span, li {
     font-family: 'Atkinson Hyperlegible Next', sans-serif !important
