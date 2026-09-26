@@ -64,7 +64,7 @@ h1, h2, h3 {
 }
 
 pre, code {
-    font-family: 'Atkinson Hyperlegible Next', monospace !important;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif !important;
 }
 
 .blinking-cursor {

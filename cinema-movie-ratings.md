@@ -7,7 +7,7 @@ permalink: /cinema-movie-ratings/
 <style>
 
     body, main, p, a, span, div, button, select, option {
-        font-family: 'SUSE', sans-serif !important;
+        font-family: 'Atkinson Hyperlegible Next', sans-serif !important
     }
     h1, h2, h3 {
         font-family: 'Staatliches', sans-serif !important;

@@ -9,7 +9,7 @@ last_updated: 2026-08-14
 
 <style>
 body, main, p, a, span, li {
-    font-family: 'SUSE', sans-serif !important;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif !important
 }
 h1, h2, h3 {
     font-family: 'Staatliches', sans-serif !important;

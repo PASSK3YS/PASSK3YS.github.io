@@ -54,8 +54,8 @@ permalink: /docs/
 
 <style>
 
-body, main, h1, h2, h3, p, a, span, div, button {
-    font-family: 'SUSE', sans-serif !important;
+body, main, p, a, span, div, button {
+    font-family: 'Atkinson Hyperlegible Next', sans-serif !important
 }
 
 h1, h2, h3 {

@@ -85,7 +85,7 @@ title: About
 <style>
 
 body, main, p, a, span, div, button {
-    font-family: 'SUSE', 'Atkinson Hyperlegible Next', sans-serif !important;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif !important;
 }
 
 h1, h2, h3 {
