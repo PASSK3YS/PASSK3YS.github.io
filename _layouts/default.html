@@ -16,7 +16,7 @@
         }
     </script>
 
-    {% assign seo_title = page.title | default: site.title %}
+   {% assign seo_title = page.title | default: "kieran.colfer.net" %}
     <meta property="og:title" content="{{ seo_title }}">
     <meta name="twitter:title" content="{{ seo_title }}">
 
@@ -27,14 +27,19 @@
     <meta name="twitter:description" content="{{ seo_description }}">
     {% endif %}
 
-    {% assign seo_image = page.image | default: "/assets/icons/default-thumbnail.png" %}
-    <meta property="og:image" content="https://kieran.colfer.net{{ seo_image }}">
-    <meta name="twitter:image" content="https://kieran.colfer.net{{ seo_image }}">
+    {% if page.image %}
+        <meta property="og:image" content="https://kieran.colfer.net{{ page.image }}">
+        <meta name="twitter:image" content="https://kieran.colfer.net{{ page.image }}">
+    {% else %}
+        {% assign encoded_title = seo_title | cgi_escape %}
+        {% assign dynamic_image = "https://placehold.co/1200x630/1a1a1a/ffffff.png?text=" | append: encoded_title | append: "%0A%0A" | append: "kieran.colfer.net" | append: "&font=Roboto" %}
+        <meta property="og:image" content="{{ dynamic_image }}">
+        <meta name="twitter:image" content="{{ dynamic_image }}">
+    {% endif %}
     
     <meta property="og:url" content="https://kieran.colfer.net{{ page.url }}">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
 
