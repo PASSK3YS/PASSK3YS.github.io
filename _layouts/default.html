@@ -16,18 +16,21 @@
         }
     </script>
 
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-    <meta property="og:description" content="{{ page.description }}">
-    <meta name="twitter:description" content="{{ page.description }}">
+    {% assign seo_title = page.title | default: site.title %}
+    <meta property="og:title" content="{{ seo_title }}">
+    <meta name="twitter:title" content="{{ seo_title }}">
+
+    {% assign seo_description = page.description | default: page.excerpt | strip_html | normalize_whitespace | truncatewords: 30 %}
+    {% if seo_description and seo_description != "" %}
+    <meta name="description" content="{{ seo_description }}">
+    <meta property="og:description" content="{{ seo_description }}">
+    <meta name="twitter:description" content="{{ seo_description }}">
     {% endif %}
 
-    {% if page.image %}
-    <meta property="og:image" content="{{ page.image }}">
-    <meta name="twitter:image" content="{{ page.image }}">
-    {% endif %}
-
-    <meta property="og:title" content="{{ page.title }}">
+    {% assign seo_image = page.image | default: "/assets/icons/default-thumbnail.png" %}
+    <meta property="og:image" content="https://kieran.colfer.net{{ seo_image }}">
+    <meta name="twitter:image" content="https://kieran.colfer.net{{ seo_image }}">
+    
     <meta property="og:url" content="https://kieran.colfer.net{{ page.url }}">
     <meta name="twitter:card" content="summary_large_image">
 
