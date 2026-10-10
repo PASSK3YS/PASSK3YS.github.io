@@ -2,7 +2,7 @@
 layout: default
 title: Now
 permalink: /now/
-last_updated: 2026-08-14
+last_updated: 2026-10-10
 ---
 
 <style>
@@ -140,21 +140,21 @@ h1, h2, h3 {
             <h3 class="soft-header">>_ Working on</h3>
             <ul class="hacker-list">
                 <li><strong>Trying to lose weight</strong></li>
+                <li><strong>Recovering from a back injury</strong></li>
             </ul>
         </div>
 
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Playing</h3>
             <ul class="hacker-list">
-                <li><strong>Dead By Daylight</strong></li>
+                <li><strong>Gears of War: E-Day</strong></li>
             </ul>
         </div>
 
         <div class="unified-row interactive-row">
             <h3 class="soft-header">>_ Watching</h3>
             <ul class="hacker-list">
-                <li><strong>House of the Dragon</strong> on HBO Max</li>
-                <li><strong>A Knight of the Seven Kingdoms</strong> on HBO Max</li>
+                <li><strong>House of the Dragon Season 3</strong> on HBO Max</li>
             </ul>
         </div>
 
