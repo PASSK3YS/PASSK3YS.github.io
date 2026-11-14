@@ -2,7 +2,7 @@
 layout: post
 title: "Back to Vice City"
 description:
-image:
+image: "https://files.horizon.pics/3bafbfa4-ef43-4fb2-847e-05a87323b8e2?a=480&region=eu-central&mime1=image&mime2=jpeg"
 permalink: /blog/back-to-vice-city/
 ---
 
