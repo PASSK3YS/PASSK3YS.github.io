@@ -36,8 +36,8 @@ permalink: /tools/snowflake/
         </p>
         <iframe
             src="https://embed-snowflake.torproject.org/embed.html"
-            width="320" height="240" frameborder="0" scrolling="no"
-            style="max-width: 100%; border-radius: 8px;">
+            width="340" height="310" frameborder="0" scrolling="no"
+            style="max-width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
         </iframe>
     </div>
 </div>
