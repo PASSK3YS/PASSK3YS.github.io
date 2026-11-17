@@ -40,7 +40,6 @@ html, body {
     
     --nav-bg: rgba(15, 15, 27, 0.7); 
     --border: rgba(255, 255, 255, 0.1); 
-    
 
     --sh-comment: #64748b;
     --sh-keyword: #c084fc;
@@ -64,7 +63,6 @@ html, body {
     --nav-bg: rgba(255, 255, 255, 0.8);
     --accent-glow: rgba(79, 70, 229, 0.15);
     
-
     --sh-comment: #94a3b8;
     --sh-keyword: #7c3aed;
     --sh-string: #16a34a;
@@ -252,82 +250,110 @@ li { margin-bottom: 6px; }
     .rec-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
+/* ============================================================
+   Footer — terminal window strip (matches homepage terminal)
+   ============================================================ */
+
 footer {
     margin-top: 4rem;
     padding: 0 20px 3rem 20px;
     border-top: none;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .footer-card {
     background-color: var(--nav-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    color: var(--accent);
+    color: var(--text-muted);
     border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 4rem 2rem 5rem 2rem;
+    border-radius: 12px;
+    padding: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    gap: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     position: relative;
     overflow: hidden;
 }
 
 [data-theme="dark"] .footer-card {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    background: rgba(16, 16, 22, 0.94);
+    border-color: rgba(139, 124, 255, 0.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px -18px rgba(139, 124, 255, 0.25);
+}
+
+/* top strip bar with dots */
+.footer-card::before {
+    content: "";
+    display: block;
+    height: 0;
 }
 
 .footer-content {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 20px 20px 22px;
 }
 
 .copyright {
-    font-size: 0.9rem;
-    font-weight: 700;
-    opacity: 0.8;
-    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 400;
+    opacity: 1;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    line-height: 1.9;
 }
 
 .footer-card a {
     color: var(--accent);
-    border-bottom: 1px dashed rgba(127, 156, 245, 0.3);
+    border-bottom: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .footer-card a:hover {
-    border-bottom: 1px dashed var(--accent);
+    border-bottom: none;
+    color: var(--accent-hover);
     text-shadow: 0 0 15px var(--accent-glow);
 }
 
 .footer-big-text {
     position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: clamp(1.5rem, 6vw, 3.5rem);
-    font-weight: 800;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+    font-size: 0.68rem;
+    font-weight: 400;
     white-space: nowrap;
-    color: var(--accent);
-    opacity: 0.1;
-    z-index: 1;
+    color: var(--text-muted);
+    opacity: 1;
+    z-index: 2;
     line-height: 1;
     pointer-events: none;
-    letter-spacing: -1px;
+    letter-spacing: 2px;
+    text-align: right;
+    padding: 10px 16px;
+    border-top: 1px solid var(--border);
+    background: rgba(139, 124, 255, 0.06);
 }
 
 .footer-socials {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .footer-socials a {
     color: var(--accent);
     border-bottom: none;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, color 0.2s;
     display: flex;
     align-items: center;
 }
@@ -336,12 +362,13 @@ footer {
     transform: translateY(-4px) scale(1.1);
     opacity: 1;
     border-bottom: none;
+    color: var(--accent-hover);
     text-shadow: 0 0 20px var(--accent-glow);
 }
 
 .footer-socials svg {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     fill: currentColor;
 }
 
