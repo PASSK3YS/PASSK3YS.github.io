@@ -5,46 +5,37 @@ permalink: /cinema-watchlist/2024/
 ---
 
 <style>
-.page-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-.main-title {
-    font-size: 2.5em;
-    color: var(--text);
-    margin: 0 0 10px 0;
-}
-.year-nav {
+.section-cmd { margin-top: 26px; font-family: 'JetBrains Mono', monospace; }
+.prompt-line { display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; }
+.prompt { color: var(--accent); white-space: nowrap; }
+.cmd { color: var(--text); }
+.command-name { color: var(--accent); }
+.dim { color: var(--text-muted); }
+
+.term-head { text-align: left; margin: 0 0 6px 0; }
+
+.yr-nav {
     display: flex;
-    gap: 15px;
-    justify-content: center;
+    gap: 18px;
     align-items: center;
     flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 10px 0 4px 0;
 }
-.year-nav a {
-    text-decoration: none;
-    border-bottom: none !important;
-    padding: 6px 18px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-}
-.year-inactive {
+.yr-nav a {
     color: var(--text-muted);
-    opacity: 0.5;
+    opacity: 0.6;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: opacity 0.2s ease, color 0.2s ease;
 }
-.year-inactive:hover {
-    color: var(--text);
-    opacity: 1;
-    background-color: var(--nav-bg);
-}
-.year-active {
-    color: var(--accent);
-    font-weight: bold;
-    background-color: var(--border);
-    box-shadow: 0 0 10px var(--accent-glow);
-}
+.yr-nav a:hover { color: var(--accent); opacity: 1; }
+.yr-nav a.active { color: var(--accent); opacity: 1; font-weight: 700; }
+.yr-nav .yr-sep { opacity: 0.3; }
+
 .watch-count {
-    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
     font-weight: bold;
     color: var(--accent);
     text-transform: uppercase;
@@ -52,19 +43,19 @@ permalink: /cinema-watchlist/2024/
 }
 .controls-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    margin-top: 15px;
+    margin-top: 14px;
 }
 .sort-btn {
-    background-color: var(--nav-bg);
-    color: var(--text);
-    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px dashed var(--border);
     padding: 6px 16px;
-    border-radius: 20px;
-    font-family: inherit;
-    font-size: 0.85rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -73,73 +64,95 @@ permalink: /cinema-watchlist/2024/
 }
 .sort-btn:hover {
     border-color: var(--accent);
+    border-style: solid;
     color: var(--accent);
     box-shadow: 0 0 10px var(--accent-glow);
 }
+
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
 }
 .movie-card {
     display: flex;
     align-items: center;
-    background-color: var(--nav-bg);
+    background: var(--nav-bg);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 15px;
+    border-radius: 6px;
+    padding: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .movie-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
     border-color: var(--accent);
+    box-shadow: 0 0 20px -6px var(--accent-glow);
 }
 .movie-thumbnail {
-    width: 100px;
-    height: 150px;
+    width: 90px;
+    height: 135px;
     object-fit: cover;
     background-color: var(--bg);
     flex-shrink: 0;
-    border-radius: 8px;
-    margin-right: 20px;
+    border-radius: 4px;
+    margin-right: 16px;
     border: 1px solid var(--border);
+    filter: grayscale(0.35) contrast(1.05);
+    transition: filter 0.3s ease;
 }
+.movie-card:hover .movie-thumbnail { filter: grayscale(0) contrast(1); }
 .movie-info {
     display: flex;
     flex-direction: column;
     text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    min-width: 0;
 }
 .movie-title {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: bold;
     margin: 0 0 5px 0;
     color: var(--text);
-    line-height: 1.3;
+    line-height: 1.35;
+    transition: color 0.2s ease;
 }
+.movie-card:hover .movie-title { color: var(--accent); }
 .movie-date {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--accent);
+    opacity: 0.85;
     font-weight: bold;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+.term-cursor {
+    display: inline-block;
+    width: 0.55em; height: 1.05em;
+    background: var(--accent);
+    vertical-align: text-bottom;
+    animation: cw-blink 1s step-end infinite;
+}
+@keyframes cw-blink { 50% { opacity: 0; } }
+.tline { opacity: 0; animation: cw-in 0.4s ease forwards; }
+@keyframes cw-in { to { opacity: 1; } }
 </style>
 
-<div class="page-header">
-    <h1 class="main-title">Cinema Watchlist</h1>
-    <h2 class="year-subtitle year-nav">
-        <a href="/cinema-watchlist/2022/" class="year-inactive">2022</a>
-        <a href="/cinema-watchlist/2023/" class="year-inactive">2023</a>
-        <a href="#" class="year-active">2024</a>
-        <a href="/cinema-watchlist/2025/" class="year-inactive">2025</a>
-        <a href="/cinema-watchlist/2026/" class="year-inactive">2026</a>
-        <a href="/cinema-movie-ratings/" class="year-inactive">Movie Ratings</a>
-    </h2>
+<div class="term-head tline">
+    <div class="prompt-line">
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">cinema-watch</span> --year 2024</span>
+    </div>
+    <div class="yr-nav">
+        <a href="/cinema-watchlist/2022/">[2022]</a>
+        <a href="/cinema-watchlist/2023/">[2023]</a>
+        <a href="#" class="active">[2024]</a>
+        <a href="/cinema-watchlist/2025/">[2025]</a>
+        <a href="/cinema-watchlist/2026/">[2026]</a>
+        <span class="yr-sep">|</span>
+        <a href="/cinema-movie-ratings/">[ratings]</a>
+    </div>
     <div class="controls-container">
         <span class="watch-count" id="totalCount"></span>
         <button class="sort-btn" id="sortToggle">⬇️ Newest First</button>
@@ -197,7 +210,7 @@ permalink: /cinema-watchlist/2024/
         </div>
     </div>
     <div class="movie-card">
-        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/830/863/posters/thumb/521add45d9.jpg.webp" alt="Trap">
+        <img class="movie-thumbnail" src="https://media.trakt.tv/images/movies/000/830/863/posters/thumb/521add45d9.jpg.webp" alt="trap">
         <div class="movie-info">
             <h2 class="movie-title">Trap</h2>
             <p class="movie-date">15 August</p>
@@ -293,6 +306,12 @@ permalink: /cinema-watchlist/2024/
             <h2 class="movie-title">The Iron Claw</h2>
             <p class="movie-date">9 February</p>
         </div>
+    </div>
+</div>
+
+<div class="section-cmd tline">
+    <div class="prompt-line" style="margin-top: 22px;">
+        <span class="prompt">$</span><span class="term-cursor"></span>
     </div>
 </div>
 
