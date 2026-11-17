@@ -34,11 +34,13 @@ permalink: /tools/snowflake/
             learn more at
             <a href="https://snowflake.torproject.org" rel="noopener noreferrer">snowflake.torproject.org</a>.
         </p>
-        <iframe
-            src="https://embed-snowflake.torproject.org/embed.html"
-            width="340" height="310" frameborder="0" scrolling="no"
-            style="max-width: 100%; border-radius: 8px; display: block; margin: 0 auto;">
-        </iframe>
+        <div class="snowflake-embed">
+            <iframe
+                src="https://snowflake.torproject.org/embed.html"
+                width="340" height="300" frameborder="0"
+                title="Tor Snowflake volunteer widget">
+            </iframe>
+        </div>
     </div>
 </div>
 
@@ -95,6 +97,20 @@ h1, h2, h3 {
 
 .snowflake-section a {
     color: var(--accent);
+}
+
+.snowflake-embed {
+    display: flex;
+    justify-content: center;
+}
+
+.snowflake-embed iframe {
+    width: 340px;
+    max-width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
 }
 
 @media (max-width: 850px) {
