@@ -4,194 +4,103 @@ title: Contact
 permalink: /contact/
 ---
 
-<div class="bio-container">
-    <div class="bio-text">
-        <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
-            Contact<span class="blinking-cursor">_</span>
-        </h1>
-        <p style="font-size: 1.05rem; opacity: 0.9; margin: 0;">
-            You can reach me using the following...
-        </p>
+<div class="section-cmd tline" style="margin-top: 0;">
+    <div class="prompt-line">
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">contact</span> --methods</span>
     </div>
+    <p class="dim" style="margin: 2px 0 0 0;">You can reach me using the following...</p>
 </div>
 
-<div class="unified-card">
-
-    <div class="unified-row interactive-row">
-        <h3 class="soft-header">>_ Email</h3>
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-            <a href="mailto:hi@colfer.net" class="directory-interactive-text">hi@colfer.net</a>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; margin-bottom: 0; line-height: 1.4;">
-                If you use Proton Mail, all email communications will be end-to-end encrypted.
-            </p>
-        </div>
+<div class="section-cmd tline">
+    <div class="prompt-line" style="margin-bottom: 2px;">
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">email</span> --encrypt</span>
     </div>
-
-    <div class="unified-row interactive-row">
-        <h3 class="soft-header">>_ Secure Chat</h3>
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-            <a href="https://signal.org" target="_blank" class="directory-interactive-text">Signal</a>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 15px; margin-bottom: 0; line-height: 1.4;">
-                Trusted contacts only.
-            </p>
-        </div>
+    <div class="tr">
+        <span class="tr-k">[mail]</span>
+        <span class="tr-v"><a href="mailto:hi@colfer.net">hi@colfer.net</a></span>
     </div>
+    <p class="dim tr-note">If you use Proton Mail, all email communications will be end-to-end encrypted.</p>
+</div>
 
-    <div class="unified-row">
-        <h3 class="soft-header">>_ Discord Community</h3>
-        <div class="gamertag-list" style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <span class="gamertag-label">Proton</span> 
-                <a href="https://discord.com/invite/proton" target="_blank" class="directory-interactive-text">Join Server</a>
-            </div>
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <span class="gamertag-label">Standard Notes</span> 
-                <a href="https://discord.com/invite/fxjJFxkRkY" target="_blank" class="directory-interactive-text">Join Server</a>
-            </div>
-        </div>
+<div class="section-cmd tline">
+    <div class="prompt-line" style="margin-bottom: 2px;">
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">secure-chat</span></span>
     </div>
+    <div class="tr">
+        <span class="tr-k">[signal]</span>
+        <span class="tr-v"><a href="https://signal.org" target="_blank">Signal</a></span>
+    </div>
+    <p class="dim tr-note">Trusted contacts only.</p>
+</div>
 
+<div class="section-cmd tline">
+    <div class="prompt-line" style="margin-bottom: 2px;">
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">discord</span> --servers</span>
+    </div>
+    <div class="tr">
+        <span class="tr-k">[proton]</span>
+        <span class="tr-v"><a href="https://discord.com/invite/proton" target="_blank">Join Server</a></span>
+    </div>
+    <div class="tr">
+        <span class="tr-k">[standard-notes]</span>
+        <span class="tr-v"><a href="https://discord.com/invite/fxjJFxkRkY" target="_blank">Join Server</a></span>
+    </div>
+    <div class="prompt-line" style="margin-top: 22px;">
+        <span class="prompt">$</span><span class="term-cursor"></span>
+    </div>
 </div>
 
 <style>
+    /* Contact page — terminal styling (shared with homepage) */
+    .prompt-line { display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; }
+    .prompt { color: var(--accent); white-space: nowrap; }
+    .cmd { color: var(--text); font-family: 'JetBrains Mono', monospace; }
+    .command-name { color: var(--accent); }
 
-body, main, p, a, span, div, button {
-    font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, sans-serif !important;
-}
+    .dim { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
 
-h1, h2, h3 {
-    font-family: 'Staatliches', 'SUSE', sans-serif !important;
-}
-
-pre, code {
-    font-family: 'Atkinson Hyperlegible Next', sans-serif !important;
-}
-
-.blinking-cursor {
-    font-weight: 800;
-    color: var(--accent);
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
-.bio-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.bio-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.unified-card {
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-}
-
-[data-theme="dark"] .unified-card {
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-}
-
-.unified-row {
-    padding: 30px 34px;
-    border-bottom: 1px dashed var(--border);
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    align-items: center;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    border-left: 6px solid transparent;
-}
-
-[data-theme="dark"] .unified-row {
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.unified-row:last-child {
-    border-bottom: none;
-}
-
-.unified-row.interactive-row {
-    cursor: pointer;
-}
-
-.unified-row.interactive-row:hover {
-    background-color: rgba(99, 102, 241, 0.05);
-    border-left-color: var(--accent);
-}
-
-[data-theme="dark"] .unified-row.interactive-row:hover {
-    background-color: rgba(99, 102, 241, 0.1);
-    border-left-color: var(--accent);
-    transform: translate(-2px, -2px);
-    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
-}
-
-.interactive-row:hover .directory-interactive-text {
-    color: var(--accent);
-}
-
-.soft-header {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    margin: 0;
-    font-weight: 700;
-    font-family: 'Staatliches', 'Atkinson Hyperlegible Next', sans-serif !important;
-}
-
-.directory-interactive-text {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.directory-interactive-text:hover {
-    color: var(--accent);
-    text-decoration: underline;
-}
-
-.gamertag-label {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.gamertag-list a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 800;
-    transition: color 0.3s ease;
-    font-size: 1.1rem;
-}
-
-.gamertag-list a:hover {
-    color: var(--accent);
-}
-
-@media (max-width: 850px) {
-    .unified-row {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 25px 14px;
+    .tr .tr-v a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px dashed var(--accent);
+        transition: border-color 0.2s ease, text-shadow 0.2s ease;
     }
-}
+    .tr .tr-v a:hover {
+        border-bottom-style: solid;
+        text-shadow: 0 0 14px var(--accent-glow);
+    }
+
+    .term-cursor {
+        display: inline-block;
+        width: 0.55em; height: 1.05em;
+        background: var(--accent);
+        vertical-align: text-bottom;
+        animation: term-blink 1s step-end infinite;
+    }
+    @keyframes term-blink { 50% { opacity: 0; } }
+
+    .tr {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 5px 0;
+        width: fit-content;
+        max-width: 100%;
+        transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .tr:hover { transform: translateX(8px); }
+    .tr .tr-k { color: var(--accent); opacity: 0.75; transition: color 0.25s ease, opacity 0.25s ease; font-family: 'JetBrains Mono', monospace; }
+    .tr:hover .tr-k { opacity: 1; }
+    .tr .tr-v { color: var(--text); font-family: 'JetBrains Mono', monospace; }
+
+    .tr-note {
+        font-size: 0.8rem;
+        margin: 2px 0 0 0;
+        line-height: 1.5;
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .tline { opacity: 0; animation: contact-type-in 0.4s ease forwards; }
+    @keyframes contact-type-in { to { opacity: 1; } }
 </style>
