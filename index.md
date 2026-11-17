@@ -22,9 +22,6 @@ title: About
 
     <div class="term-body">
 
-        <div class="prompt-line tline">
-            <span class="prompt">$</span><span class="cmd">cat about.txt</span>
-        </div>
         <div class="output about-output tline">
             <div class="bio-frame">
                 <img src="https://files.horizon.pics/e3915a41-a35d-4f53-8041-df90f652947a?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran">
