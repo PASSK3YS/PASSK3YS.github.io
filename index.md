@@ -17,7 +17,7 @@ title: About
 
 <div class="section-cmd tline">
     <div class="prompt-line" style="margin-bottom: 2px;">
-        <span class="prompt">$</span><span class="cmd"><span class="command-name">socials</span> --list</span>
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">socials</span>
     </div>
     <div class="tr">
         <span class="tr-k">[x]</span>
