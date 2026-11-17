@@ -257,10 +257,13 @@
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation: none !important; transition: none !important; }
             .tline, .term-cursor { opacity: 1 !important; }
-            /* Marquee kill-switch above must never hide the track title:
-               without the scroll animation, padding-left:100% parks the
-               text off-screen inside overflow:hidden — so undo the offset. */
-            .scrolling-title { padding-left: 0 !important; animation: none !important; }
+            /* Exempt the track-title marquee: it only ever applies when the
+               title overflows, so freezing it would just clip the text.
+               (Class specificity beats the * selector above.) */
+            .ytm-title.scrolling-title {
+                padding-left: 100% !important;
+                animation: scroll-text 10s linear infinite !important;
+            }
         }
 
         @media (max-width: 640px) {
@@ -532,9 +535,12 @@
                             document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(musicTitle + ' ' + data.music.artist)}`;
 
                             trackEl.classList.remove('scrolling-title');
+                            trackEl.style.removeProperty('animation-duration');
                             requestAnimationFrame(() => {
-                                // only marquee when there is text to scroll and it overflows
+                                // only marquee when there is text to scroll and it overflows;
+                                // pace the scroll to the text length so it reads naturally
                                 if (musicTitle && trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
+                                    trackEl.style.animationDuration = Math.max(6, Math.round(trackEl.offsetWidth / 30)) + 's';
                                     trackEl.classList.add('scrolling-title');
                                 }
                             });
