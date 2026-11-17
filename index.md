@@ -6,7 +6,6 @@ title: About
 <div class="output about-output tline">
     <div class="bio-frame">
         <img src="https://files.horizon.pics/e3915a41-a35d-4f53-8041-df90f652947a?a=480&region=eu-central&mime1=image&mime2=jpeg" alt="Kieran">
-        <span class="frame-caption">kieran.png</span>
     </div>
     <div class="about-text">
         <p>Hi, I'm Kieran<span class="term-cursor"></span></p>
@@ -114,13 +113,14 @@ title: About
         align-items: flex-start;
     }
 
+    /* Photo frame hugs the image: tight padding, no caption */
     .bio-frame {
         flex-shrink: 0;
-        position: relative;
-        padding: 6px;
+        padding: 3px;
         border: 1px solid var(--accent);
         border-radius: 4px;
         background: var(--accent-glow);
+        line-height: 0;
     }
     .bio-frame img {
         display: block;
@@ -131,15 +131,6 @@ title: About
         transition: filter 0.3s ease;
     }
     .bio-frame:hover img { filter: saturate(1.1) contrast(1.05); }
-    .bio-frame .frame-caption {
-        display: block;
-        text-align: center;
-        font-family: 'JetBrains Mono', monospace !important;
-        font-size: 0.62rem;
-        letter-spacing: 2px;
-        color: var(--text-muted);
-        padding-top: 5px;
-    }
 
     .about-text { min-width: 0; }
     .about-text p { margin: 0 0 4px 0; }
