@@ -2,27 +2,103 @@
 layout: default
 ---
 
-<div class="page-content">
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.description }}</p>
+<style>
+.dc-cat-shell { font-family: 'JetBrains Mono', monospace; }
+.dc-cat-shell .dc-intro { font-family: 'SUSE', sans-serif; }
 
-  <ul class="post-list" style="list-style: none; padding: 0;">
+.dc-cat-cmd {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin: 0 0 24px 0;
+    font-family: 'JetBrains Mono', monospace;
+    flex-wrap: wrap;
+}
+.dc-cat-cmd .prompt { color: var(--accent); white-space: nowrap; }
+.dc-cat-cmd .cmd { color: var(--text); font-size: 1.1rem; font-weight: 700; }
+.dc-cat-cmd .command-name { color: var(--accent); }
+
+.dc-doc-list { list-style: none; padding: 0; margin: 26px 0 0 0; }
+
+.dc-doc-entry {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 6px 0;
+    text-decoration: none;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    font-family: 'JetBrains Mono', monospace;
+}
+.dc-doc-entry:hover { transform: translateX(8px); }
+.dc-doc-entry .tr-k { color: var(--accent); opacity: 0.75; transition: opacity 0.25s ease; }
+.dc-doc-entry:hover .tr-k { opacity: 1; }
+
+.dc-doc-main { display: flex; flex-direction: column; min-width: 0; }
+.dc-doc-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--text);
+    transition: color 0.2s ease;
+}
+.dc-doc-entry:hover .dc-doc-title { color: var(--accent); }
+.dc-doc-desc {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-top: 2px;
+    color: var(--text-muted);
+}
+
+.dc-cat-back {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.dc-cat-back:hover { color: var(--accent); text-shadow: 0 0 12px var(--accent-glow); }
+
+.term-cursor {
+    display: inline-block;
+    width: 0.55em; height: 1.05em;
+    background: var(--accent);
+    vertical-align: text-bottom;
+    animation: dc-blink 1s step-end infinite;
+}
+@keyframes dc-blink { 50% { opacity: 0; } }
+</style>
+
+<div class="page-content dc-cat-shell">
+  <div class="dc-cat-cmd">
+    <span class="prompt">$</span><span class="cmd"><span class="command-name">cat</span> /docs/{{ page.category_name }}/</span>
+  </div>
+  <p class="dc-intro" style="color: var(--text-muted);">{{ page.description }}</p>
+
+  <ul class="dc-doc-list">
     {% assign category_docs = site.docs | where: "category", page.category_name %}
     {% for doc in category_docs %}
       <li style="margin-bottom: 20px;">
         <span class="post-meta" style="font-size: 0.85em; opacity: 0.7;">
 </span>
-        <h3>
-          <a class="post-link" href="{{ doc.url }}" style="text-decoration: none; font-size: 1.2em; font-weight: bold;">
-            {{ doc.title }}
+        <h3 style="margin: 0;">
+          <a class="dc-doc-entry post-link" href="{{ doc.url }}">
+            <span class="tr-k">[doc]</span>
+            <span class="dc-doc-main">
+              <span class="dc-doc-title">{{ doc.title }}</span>
+              {% if doc.description %}
+                <span class="dc-doc-desc">{{ doc.description }}</span>
+              {% endif %}
+            </span>
           </a>
         </h3>
-        {% if doc.description %}
-          <p style="margin-top: 5px;">{{ doc.description }}</p>
-        {% endif %}
       </li>
     {% endfor %}
   </ul>
 
-  <p style="margin-top: 40px;"><a href="/docs/" class="back-link">&larr; Back to all Docs</a></p>
+  <p style="margin-top: 40px;"><a href="/docs/" class="dc-cat-back">&larr; cd /docs/</a></p>
+
+  <div style="display: flex; gap: 10px; align-items: baseline; margin-top: 40px;">
+    <span style="color: var(--accent); font-family: 'JetBrains Mono', monospace;">$</span>
+    <span class="term-cursor"></span>
+  </div>
 </div>
