@@ -257,6 +257,10 @@
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation: none !important; transition: none !important; }
             .tline, .term-cursor { opacity: 1 !important; }
+            /* Marquee kill-switch above must never hide the track title:
+               without the scroll animation, padding-left:100% parks the
+               text off-screen inside overflow:hidden — so undo the offset. */
+            .scrolling-title { padding-left: 0 !important; animation: none !important; }
         }
 
         @media (max-width: 640px) {
@@ -499,15 +503,18 @@
                         const artEl = document.getElementById('ytm-art');
                         const currentTitle = trackEl.getAttribute('data-title');
 
-                        if (currentTitle !== data.music.title) {
-                            trackEl.setAttribute('data-title', data.music.title);
+                        // tolerate alternate field names / empty payloads
+                        const musicTitle = data.music.title || data.music.track || data.music.name || '';
+
+                        if (currentTitle !== musicTitle) {
+                            trackEl.setAttribute('data-title', musicTitle);
 
                             const isDefaultImage = url => !url || url.includes('2a96cbd8b46e442fc41c2b86b821562f');
                             let imageUrl = data.music.image;
 
                             if (isDefaultImage(imageUrl)) {
                                 try {
-                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}&entity=song&limit=1`);
+                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(musicTitle + ' ' + data.music.artist)}&entity=song&limit=1`);
                                     const itunesData = await res.json();
                                     if (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
                                         imageUrl = itunesData.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
@@ -520,13 +527,14 @@
                             }
 
                             artEl.src = imageUrl;
-                            trackEl.textContent = data.music.title;
+                            trackEl.textContent = musicTitle;
                             document.getElementById('ytm-artist').textContent = data.music.artist;
-                            document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(data.music.title + ' ' + data.music.artist)}`;
+                            document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(musicTitle + ' ' + data.music.artist)}`;
 
                             trackEl.classList.remove('scrolling-title');
                             requestAnimationFrame(() => {
-                                if (trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
+                                // only marquee when there is text to scroll and it overflows
+                                if (musicTitle && trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
                                     trackEl.classList.add('scrolling-title');
                                 }
                             });
