@@ -5,177 +5,181 @@ permalink: /cinema-movie-ratings/
 ---
 
 <style>
+    .section-cmd { margin-top: 26px; font-family: 'JetBrains Mono', monospace; }
+    .prompt-line { display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; }
+    .prompt { color: var(--accent); white-space: nowrap; }
+    .cmd { color: var(--text); }
+    .command-name { color: var(--accent); }
+    .dim { color: var(--text-muted); }
 
-    body, main, p, a, span, div, button, select, option {
-        font-family: 'Atkinson Hyperlegible Next', sans-serif !important
-    }
-    h1, h2, h3 {
-        font-family: 'Staatliches', sans-serif !important;
+    .ratings-head {
+        font-family: 'JetBrains Mono', monospace;
+        margin: 0 0 20px 0;
     }
 
-    .ratings-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    
-    .year-filter-container select {
-        background: var(--nav-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+    .yr-filter select {
+        background: transparent;
         color: var(--accent);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 10px 18px;
+        border: 1px dashed var(--border);
+        border-radius: 4px;
+        padding: 6px 14px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
         font-weight: 700;
         cursor: pointer;
         outline: none;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.2s ease;
+        appearance: none;
+        -webkit-appearance: none;
     }
 
-    .year-filter-container select option {
+    .yr-filter select option {
         background-color: var(--bg-solid);
         color: var(--accent);
     }
 
-    [data-theme="dark"] .year-filter-container select {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-    }
-
-    .year-filter-container select:hover, .year-filter-container select:focus {
+    .yr-filter select:hover, .yr-filter select:focus {
         border-color: var(--accent);
-        background: var(--accent-glow);
-        transform: translateY(-1px);
+        border-style: solid;
+        box-shadow: 0 0 10px var(--accent-glow);
     }
 
     .featured-movie {
         display: flex;
-        gap: 25px;
+        gap: 20px;
         background: var(--nav-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
         border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 25px;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border-radius: 6px;
+        padding: 18px;
+        margin-bottom: 26px;
         align-items: center;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    [data-theme="dark"] .featured-movie {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
     .featured-movie:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        transform: translateY(-3px);
         border-color: var(--accent);
+        box-shadow: 0 0 20px -6px var(--accent-glow);
     }
 
     .featured-poster {
-        width: 140px;
+        width: 120px;
         height: auto;
-        border-radius: 12px;
+        border-radius: 4px;
         border: 1px solid var(--border);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        filter: grayscale(0.35) contrast(1.05);
+        transition: filter 0.3s ease;
+        flex-shrink: 0;
     }
+
+    .featured-movie:hover .featured-poster { filter: grayscale(0) contrast(1); }
 
     .featured-details {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        font-family: 'JetBrains Mono', monospace;
+        min-width: 0;
+    }
+
+    .featured-details h2 {
+        margin: 0;
+        color: var(--accent);
+        font-size: 1.05rem;
+        font-family: 'JetBrains Mono', monospace;
+        text-shadow: 0 0 14px var(--accent-glow);
     }
 
     .huge-rating {
-        font-size: 2.2rem;
-        font-family: 'Staatliches', sans-serif;
-        font-weight: 400;
+        font-size: 1.7rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 700;
         color: var(--text);
         background: var(--bg-solid);
-        border: 2px solid var(--accent);
-        padding: 8px 18px;
-        border-radius: 12px;
+        border: 1px dashed var(--accent);
+        padding: 4px 16px;
+        border-radius: 4px;
         display: inline-block;
         width: fit-content;
-        margin-top: 5px;
+        margin-top: 6px;
     }
 
-    .hacker-table {
+    .ratings-table {
         width: 100%;
         border-collapse: collapse;
-        font-family: 'SUSE', sans-serif;
-        font-size: 0.9rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.82rem;
         background: var(--nav-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
         border: 1px solid var(--border);
-        border-radius: 16px;
+        border-radius: 6px;
         overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
 
-    [data-theme="dark"] .hacker-table {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-    }
-
-    .hacker-table th, .hacker-table td {
-        padding: 15px;
+    .ratings-table th, .ratings-table td {
+        padding: 12px 14px;
         text-align: left;
         border-bottom: 1px dashed var(--border);
+        white-space: nowrap;
     }
 
-    .hacker-table th {
+    .ratings-table td:last-child { white-space: normal; min-width: 160px; }
+
+    .ratings-table th {
         color: var(--accent);
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-weight: 800;
-        font-family: 'Staatliches', sans-serif;
-        background: rgba(0, 0, 0, 0.05);
+        font-size: 0.72rem;
+        font-weight: 700;
+        background: rgba(139, 124, 255, 0.06);
     }
 
-    .hacker-table tr {
-        transition: background-color 0.3s ease;
+    .ratings-table tr {
+        transition: background-color 0.2s ease;
     }
 
-    .hacker-table tr:hover {
+    .ratings-table tbody tr:hover {
         background-color: var(--accent-glow);
     }
 
-    .hacker-table tr:last-child td {
+    .ratings-table tr:last-child td {
         border-bottom: none;
     }
 
     .rating-badge {
-        background: var(--bg-solid);
-        border: 1px solid var(--border);
-        padding: 4px 12px;
-        border-radius: 12px;
-        color: var(--text);
+        background: transparent;
+        border: 1px dashed var(--accent);
+        padding: 2px 10px;
+        border-radius: 4px;
+        color: var(--accent);
         font-weight: 700;
+        font-size: 0.78rem;
     }
+
+    .term-cursor {
+        display: inline-block;
+        width: 0.55em; height: 1.05em;
+        background: var(--accent);
+        vertical-align: text-bottom;
+        animation: mr-blink 1s step-end infinite;
+    }
+    @keyframes mr-blink { 50% { opacity: 0; } }
+    .tline { opacity: 0; animation: mr-in 0.4s ease forwards; }
+    @keyframes mr-in { to { opacity: 1; } }
 
     @media (max-width: 600px) {
         .featured-movie {
             flex-direction: column;
             text-align: center;
         }
-        .huge-rating {
-            margin: 10px auto 0 auto;
-        }
+        .featured-details { align-items: center; }
+        .huge-rating { margin: 10px auto 0 auto; }
     }
 </style>
 
-<div class="page-content">
-    
-    <div class="ratings-header">
-        <h1 style="margin: 0;">Cinema Movie Ratings</h1>
-        
-        <div class="year-filter-container">
+<div class="ratings-head tline">
+    <div class="prompt-line">
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">cinema-ratings</span> --all</span>
+        <span class="yr-filter">
             {% assign all_years = site.data["movie-ratings"] | map: "year" | uniq | sort | reverse %}
             <select id="year-filter" aria-label="Filter by Year">
                 <option value="all">Date: All Years</option>
@@ -183,43 +187,48 @@ permalink: /cinema-movie-ratings/
                     <option value="{{ year }}">Year: {{ year }}</option>
                 {% endfor %}
             </select>
-        </div>
+        </span>
     </div>
+</div>
 
-    {% assign latest_movie = site.data["movie-ratings"] | first %}
-    <div class="featured-movie">
-        <img src="{{ latest_movie.poster }}" alt="{{ latest_movie.title }} Poster" class="featured-poster" onerror="this.style.display='none'">
-        <div class="featured-details">
-            <h2 style="margin: 0; color: var(--accent);">{{ latest_movie.title }}</h2>
-            <div style="font-size: 1.1rem; font-weight: 800; color: var(--text);">{{ latest_movie.year }}</div>
-            <p style="color: var(--text-muted); margin: 0; font-weight: 700;">{{ latest_movie.notes }}</p>
-            <div class="huge-rating">{{ latest_movie.rating }}</div>
-        </div>
+{% assign latest_movie = site.data["movie-ratings"] | first %}
+<div class="featured-movie tline">
+    <img src="{{ latest_movie.poster }}" alt="{{ latest_movie.title }} Poster" class="featured-poster" onerror="this.style.display='none'">
+    <div class="featured-details">
+        <h2>{{ latest_movie.title }}</h2>
+        <div style="font-size: 0.9rem; font-weight: 700; color: var(--text);">{{ latest_movie.year }}</div>
+        <p style="color: var(--text-muted); margin: 0; font-size: 0.8rem;">{{ latest_movie.notes }}</p>
+        <div class="huge-rating">{{ latest_movie.rating }}</div>
     </div>
+</div>
 
-    <div style="overflow-x: auto; margin-top: 20px;">
-        <table class="hacker-table">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Year</th>
-                    <th>Rating</th>
-                    <th>Date Watched</th>
-                </tr>
-            </thead>
-            <tbody id="movie-table-body">
-                {% for movie in site.data["movie-ratings"] offset: 1 %}
-                <tr class="movie-row" data-year="{{ movie.year }}">
-                    <td style="font-weight: 700; color: var(--text);">{{ movie.title }}</td>
-                    <td style="color: var(--text-muted);">{{ movie.year }}</td>
-                    <td><span class="rating-badge">{{ movie.rating }}</span></td>
-                    <td style="color: var(--text-muted);">{{ movie.notes }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+<div style="overflow-x: auto; margin-top: 20px;" class="tline">
+    <table class="ratings-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Rating</th>
+                <th>Date Watched</th>
+            </tr>
+        </thead>
+        <tbody id="movie-table-body">
+            {% for movie in site.data["movie-ratings"] offset: 1 %}
+            <tr class="movie-row" data-year="{{ movie.year }}">
+                <td style="font-weight: 700; color: var(--text);">{{ movie.title }}</td>
+                <td style="color: var(--text-muted);">{{ movie.year }}</td>
+                <td><span class="rating-badge">{{ movie.rating }}</span></td>
+                <td style="color: var(--text-muted);">{{ movie.notes }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="section-cmd tline">
+    <div class="prompt-line" style="margin-top: 22px;">
+        <span class="prompt">$</span><span class="term-cursor"></span>
     </div>
-
 </div>
 
 <script>
@@ -227,7 +236,7 @@ permalink: /cinema-movie-ratings/
         const filter = document.getElementById('year-filter');
         const rows = document.querySelectorAll('.movie-row');
 
-        filter.addEventListener('change', function() {
+        filter.addEventListener("change", function() {
             const selectedYear = this.value;
             
             rows.forEach(row => {
