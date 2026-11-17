@@ -16,7 +16,6 @@ permalink: /contact/
         <span class="prompt">$</span><span class="cmd"><span class="command-name">email</span> --encrypt</span>
     </div>
     <div class="tr">
-        <span class="tr-k">[mail]</span>
         <span class="tr-v"><a href="mailto:hi@colfer.net">hi@colfer.net</a></span>
     </div>
     <p class="dim tr-note">If you use Proton Mail, all email communications will be end-to-end encrypted.</p>
@@ -27,7 +26,6 @@ permalink: /contact/
         <span class="prompt">$</span><span class="cmd"><span class="command-name">secure-chat</span></span>
     </div>
     <div class="tr">
-        <span class="tr-k">[signal]</span>
         <span class="tr-v"><a href="https://signal.org" target="_blank">Signal</a></span>
     </div>
     <p class="dim tr-note">Trusted contacts only.</p>
