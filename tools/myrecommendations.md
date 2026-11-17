@@ -6,11 +6,261 @@ permalink: /tools/recommendations/
 
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 
-<div class="page-content">
-<a href="/tools/" class="back-link">&larr; Back to Tools</a>
+<style>
+.rec-shell { font-family: 'JetBrains Mono', monospace; }
+.rec-shell p, .rec-shell li, .rec-shell span, .rec-shell div, .rec-shell label, .rec-shell summary { font-family: 'SUSE', sans-serif !important; }
+.rec-shell h1, .rec-shell h3 { font-family: 'JetBrains Mono', monospace !important; }
+.rec-shell pre, .rec-shell code { font-family: 'JetBrains Mono', monospace !important; }
 
-  <h1 style="margin-top: 10px;">Tools and services I recommend</h1>
-  <p>This page contains zero affiliate links.<br>
+.rec-back {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+    display: inline-block;
+}
+.rec-back:hover { color: var(--accent); text-shadow: 0 0 12px var(--accent-glow); }
+
+.rec-cmd {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin: 18px 0 6px 0;
+    flex-wrap: wrap;
+}
+.rec-cmd .prompt { color: var(--accent); white-space: nowrap; }
+.rec-cmd .cmd { color: var(--text); font-size: 1.1rem; font-weight: 700; }
+.rec-cmd .command-name { color: var(--accent); }
+
+.rec-intro { font-family: 'SUSE', sans-serif !important; color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+
+.info-callout {
+    background-color: rgba(99, 102, 241, 0.08);
+    border: 1px dashed var(--accent);
+    padding: 12px 16px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text);
+    font-family: 'SUSE', sans-serif !important;
+}
+
+.info-callout a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.info-callout a:hover {
+    text-decoration: none;
+    text-shadow: 0 0 12px var(--accent-glow);
+}
+
+.dropdown-container {
+    margin: 25px 0;
+}
+
+#section-nav {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 700;
+    color: var(--accent);
+    background-color: transparent;
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px top 50%;
+    background-size: 11px auto;
+}
+
+#section-nav:hover, #section-nav:focus {
+    border-color: var(--accent);
+    border-style: solid;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+[data-theme="dark"] #section-nav {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e2e8f0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    margin-top: 30px;
+}
+
+.grid-item {
+    scroll-margin-top: 100px;
+    background: var(--nav-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.grid-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px -6px var(--accent-glow);
+}
+
+.grid-item h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: var(--accent);
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    text-shadow: 0 0 14px var(--accent-glow);
+}
+
+.product-entry {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.product-entry:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.product-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 4px;
+    background-color: var(--bg-solid);
+    padding: 4px;
+    border: 1px solid var(--border);
+    transition: border-color 0.25s ease;
+}
+
+.product-entry:hover .product-logo { border-color: var(--accent); }
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'SUSE', sans-serif !important;
+    transition: color 0.25s ease;
+}
+
+.product-name:hover {
+    color: var(--accent);
+    text-shadow: 0 0 12px var(--accent-glow);
+}
+
+.product-details-dropdown {
+    width: 100%;
+}
+
+.dropdown-title {
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.78rem;
+    cursor: pointer;
+    margin-bottom: 12px;
+    display: list-item;
+    transition: color 0.2s ease;
+}
+
+.dropdown-title:hover {
+    color: var(--accent-hover);
+}
+
+.product-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    font-size: 0.92rem;
+    background: rgba(139, 124, 255, 0.04);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    padding: 14px;
+}
+
+@media (max-width: 600px) {
+    .product-details {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.pros-title {
+    color: #10b981;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.85rem;
+}
+
+.cons-title {
+    color: #ef4444;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.85rem;
+}
+
+.product-details ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.product-details li {
+    margin-bottom: 6px;
+    color: var(--text);
+    position: relative;
+    padding-left: 20px;
+}
+
+.product-details li::before {
+    content: ">>";
+    font-family: 'JetBrains Mono', monospace !important;
+    color: var(--accent);
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    font-size: 0.85em;
+}
+</style>
+
+<div class="page-content rec-shell">
+<a href="/tools/" class="rec-back">&larr; cd /tools/</a>
+
+  <div class="rec-cmd">
+    <span class="prompt">$</span><span class="cmd"><span class="command-name">cat</span> /recs/recommended-tools.txt</span>
+  </div>
+  <p class="rec-intro">This page contains zero affiliate links.<br>
   My recommendations based on personal use and trust:</p>
 
   <div class="info-callout">
@@ -37,8 +287,6 @@ permalink: /tools/recommendations/
           <option value="#os">🐧 OS</option>
       </select>
   </div>
-
-  <hr>
 
   <div class="grid-container">
       <div class="grid-item" id="browser">
@@ -1288,205 +1536,3 @@ permalink: /tools/recommendations/
       </div>
   </div>
 </div>
-
-<style>
-body, main, p, a, span, div, button, li {
-    font-family: 'SUSE', sans-serif !important;
-}
-
-h1, h2, h3 {
-    font-family: 'Staatliches', sans-serif !important;
-}
-
-pre, code {
-    font-family: 'JetBrains Mono', monospace !important;
-}
-
-.info-callout {
-    background-color: rgba(99, 102, 241, 0.1);
-    border-left: 4px solid var(--accent);
-    padding: 12px 16px;
-    margin: 20px 0;
-    border-radius: 0 8px 8px 0;
-    font-size: 0.95rem;
-    color: var(--text);
-}
-
-.info-callout a {
-    color: var(--accent);
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-.info-callout a:hover {
-    text-decoration: none;
-}
-
-.dropdown-container {
-    margin: 25px 0;
-}
-
-#section-nav {
-    width: 100%;
-    max-width: 350px;
-    padding: 12px 16px;
-    font-size: 1rem;
-    font-family: 'SUSE', sans-serif;
-    font-weight: 700;
-    color: var(--text);
-    background-color: var(--nav-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-    background-repeat: no-repeat;
-    background-position: right 16px top 50%;
-    background-size: 12px auto;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-#section-nav:hover, #section-nav:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-glow);
-}
-
-[data-theme="dark"] #section-nav {
-    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e2e8f0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-}
-
-.grid-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.grid-item {
-    scroll-margin-top: 100px;
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-[data-theme="dark"] .grid-item {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-}
-
-.grid-item:hover {
-    border-color: var(--accent);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
-}
-
-.grid-item h3 {
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 1.5rem;
-    color: var(--accent);
-    border-bottom: 1px dashed var(--border);
-    padding-bottom: 10px;
-}
-
-.product-entry {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.product-entry:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.product-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.product-logo {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    border-radius: 8px;
-    background-color: var(--bg-solid);
-    padding: 4px;
-    border: 1px solid var(--border);
-}
-
-.product-name {
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--text);
-    transition: color 0.3s ease;
-}
-
-.product-name:hover {
-    color: var(--accent);
-}
-
-.product-details-dropdown {
-    width: 100%;
-}
-
-.dropdown-title {
-    color: var(--text);
-    font-weight: 700;
-    cursor: pointer;
-    margin-bottom: 15px;
-    display: list-item;
-}
-
-.product-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    font-size: 0.95rem;
-}
-
-@media (max-width: 600px) {
-    .product-details {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-}
-
-.pros-title {
-    color: #10b981;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.cons-title {
-    color: #ef4444;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.product-details ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 0;
-}
-
-.product-details li {
-    margin-bottom: 6px;
-    color: var(--text);
-}
-</style>
