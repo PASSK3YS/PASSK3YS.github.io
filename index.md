@@ -14,7 +14,10 @@ title: About
             <a href="/tools/">Tools</a>
             <a href="/blog/">Blog</a>
         </nav>
-        <span class="term-title">kieran@site: ~</span>
+        <button class="term-theme-toggle" id="term-theme-toggle" aria-label="Toggle Theme">
+            <svg id="term-sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg id="term-moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
     </div>
 
     <div class="term-body">
@@ -185,13 +188,25 @@ title: About
     border-bottom-color: transparent;
 }
 
-.term-title {
+.term-theme-toggle {
     margin-left: auto;
-    font-family: 'JetBrains Mono', monospace !important;
-    font-size: 0.72rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
     color: var(--text-muted);
-    letter-spacing: 1.5px;
-    white-space: nowrap;
+    cursor: pointer;
+    padding: 6px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s ease, transform 0.2s ease;
+}
+.term-theme-toggle:hover {
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
 }
 
 .term-body {
@@ -330,7 +345,6 @@ a.tr:hover .tr-v { color: var(--accent); }
     .term-body { padding: 20px 16px 28px; font-size: 0.84rem; }
     .about-output { flex-direction: column; align-items: center; text-align: center; }
     .bio-frame img { width: 120px; }
-    .term-title { display: none; }
     .term-footer { flex-direction: column; gap: 6px; }
 }
 </style>
@@ -345,6 +359,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // sequential line entrance
     document.querySelectorAll('.tline').forEach((el, i) => {
         el.style.animationDelay = (0.05 + i * 0.12) + 's';
+    });
+
+    // theme toggle in the terminal strip — syncs with the site's localStorage theme
+    const termToggle = document.getElementById('term-theme-toggle');
+    const termSun = document.getElementById('term-sun-icon');
+    const termMoon = document.getElementById('term-moon-icon');
+
+    function termUpdateIcons(theme) {
+        const effective = theme === 'system'
+            ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+            : theme;
+        termSun.style.display = effective === 'light' ? 'block' : 'none';
+        termMoon.style.display = effective === 'dark' ? 'block' : 'none';
+    }
+
+    termUpdateIcons(localStorage.getItem('theme') || 'system');
+
+    termToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        document.documentElement.setAttribute('data-theme', next);
+        termUpdateIcons(next);
+        // keep the site's own toggle icons in sync if present
+        if (typeof updateIcons === 'function') updateIcons(next);
     });
 
     fetch('/feed.json')
