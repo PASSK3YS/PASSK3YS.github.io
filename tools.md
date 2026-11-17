@@ -4,178 +4,123 @@ title: Tools
 permalink: /tools/
 ---
 
-<div class="bio-container">
-    <div class="bio-text">
-        <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
-            Tools<span class="blinking-cursor">_</span>
-        </h1>
-        <p style="font-size: 1.05rem; opacity: 0.9; margin: 0;">
-            A collection of privacy-focused, client-side tools and resources.
-        </p>
+<div class="section-cmd tline" style="margin-top: 0;">
+    <div class="prompt-line">
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">tools</span> --list</span>
+    </div>
+    <p class="dim" style="margin: 2px 0 0 0;">A collection of privacy-focused, client-side tools and resources.</p>
+</div>
+
+<div class="section-cmd tline">
+    <a class="doc-tr" href="/tools/standard-notes-themes/">
+        <span class="tr-k">[themes]</span>
+        <span class="doc-main">
+            <span class="doc-title">Standard Notes Themes</span>
+            <span class="doc-desc dim">A collection of custom themes including Standard Blue, Dark Mint, and Lights Out.</span>
+            <span class="read-more">View Themes &rarr;</span>
+        </span>
+    </a>
+</div>
+
+<div class="section-cmd tline">
+    <a class="doc-tr" href="/tools/username-generator/">
+        <span class="tr-k">[gen]</span>
+        <span class="doc-main">
+            <span class="doc-title">Username Generator</span>
+            <span class="doc-desc dim">Generate secure, random usernames with optional keywords and numbers.</span>
+            <span class="read-more">Open Tool &rarr;</span>
+        </span>
+    </a>
+</div>
+
+<div class="section-cmd tline">
+    <a class="doc-tr" href="/tools/snowflake/">
+        <span class="tr-k">[tor]</span>
+        <span class="doc-main">
+            <span class="doc-title">Tor Snowflake Proxy</span>
+            <span class="doc-desc dim">Opt in to become a Snowflake volunteer and help people in censored countries reach the open internet.</span>
+            <span class="read-more">Volunteer &rarr;</span>
+        </span>
+    </a>
+</div>
+
+<div class="section-cmd tline">
+    <a class="doc-tr" href="/tools/recommendations/">
+        <span class="tr-k">[recs]</span>
+        <span class="doc-main">
+            <span class="doc-title">Recommendations</span>
+            <span class="doc-desc dim">My curated list of tools, software, and services I use and recommend.</span>
+            <span class="read-more">View List &rarr;</span>
+        </span>
+    </a>
+</div>
+
+<div class="section-cmd tline">
+    <div class="prompt-line" style="margin-top: 22px;">
+        <span class="prompt">$</span><span class="term-cursor"></span>
     </div>
 </div>
 
-<div class="unified-card">
-
-    <a href="/tools/standard-notes-themes/" class="unified-row interactive-row">
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Standard Notes Themes</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-                A collection of custom themes including Standard Blue, Dark Mint, and Lights Out.
-            </p>
-            <span class="read-more">View Themes &rarr;</span>
-        </div>
-    </a>
-
-    <a href="/tools/username-generator/" class="unified-row interactive-row">
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Username Generator</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-                Generate secure, random usernames with optional keywords and numbers.
-            </p>
-            <span class="read-more">Open Tool &rarr;</span>
-        </div>
-    </a>
-
-    <a href="/tools/snowflake/" class="unified-row interactive-row">
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Tor Snowflake Proxy</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-                Opt in to become a Snowflake volunteer and help people in censored countries reach the open internet.
-            </p>
-            <span class="read-more">Volunteer &rarr;</span>
-        </div>
-    </a>
-
-    <a href="/tools/recommendations/" class="unified-row interactive-row">
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Recommendations</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-                My curated list of tools, software, and services I use and recommend.
-            </p>
-            <span class="read-more">View List &rarr;</span>
-        </div>
-    </a>
-
-</div>
-
 <style>
+    /* Tools page — terminal styling (shared with homepage) */
+    .prompt-line { display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; }
+    .prompt { color: var(--accent); white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+    .cmd { color: var(--text); font-family: 'JetBrains Mono', monospace; }
+    .command-name { color: var(--accent); }
 
-body, main, p, a, span, div, button {
-    font-family: 'Atkinson Hyperlegible Next', sans-serif !important
-}
+    .dim { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
 
-h1, h2, h3 {
-    font-family: 'Staatliches', sans-serif !important;
-}
-
-pre, code {
-    font-family: 'JetBrains Mono', monospace !important;
-}
-
-.blinking-cursor {
-    font-weight: 800;
-    color: var(--accent);
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
-.bio-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.bio-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.unified-card {
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-}
-
-[data-theme="dark"] .unified-card {
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-}
-
-.unified-row {
-    padding: 30px 34px;
-    border-bottom: 1px dashed var(--border);
-    display: block;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    border-left: 6px solid transparent;
-    text-decoration: none;
-    color: inherit;
-}
-
-[data-theme="dark"] .unified-row {
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.unified-row:last-child {
-    border-bottom: none;
-}
-
-.unified-row.interactive-row {
-    cursor: pointer;
-}
-
-.unified-row.interactive-row:hover {
-    background-color: rgba(99, 102, 241, 0.05);
-    border-left-color: var(--accent);
-}
-
-[data-theme="dark"] .unified-row.interactive-row:hover {
-    background-color: rgba(99, 102, 241, 0.1);
-    border-left-color: var(--accent);
-}
-
-.interactive-row:hover .directory-interactive-text {
-    color: var(--accent);
-}
-
-.interactive-row:hover .read-more {
-    color: var(--accent);
-    transform: translateX(5px);
-}
-
-.directory-interactive-text {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    line-height: 1.3;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-@media (max-width: 850px) {
-    .unified-row {
-        padding: 25px 14px;
+    .doc-tr {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 5px 0;
+        width: fit-content;
+        max-width: 100%;
+        text-decoration: none;
+        transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+        font-family: 'JetBrains Mono', monospace;
     }
-}
+    .doc-tr:hover { transform: translateX(8px); }
+    .doc-tr .tr-k { color: var(--accent); opacity: 0.75; transition: opacity 0.25s ease; }
+    .doc-tr:hover .tr-k { opacity: 1; }
+
+    .doc-main { display: flex; flex-direction: column; min-width: 0; }
+    .doc-title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1rem;
+        color: var(--text);
+        transition: color 0.2s ease;
+    }
+    .doc-tr:hover .doc-title { color: var(--accent); }
+    .doc-desc {
+        font-size: 0.82rem;
+        line-height: 1.5;
+        margin-top: 2px;
+    }
+    .read-more {
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: color 0.25s ease, transform 0.25s ease;
+    }
+    .doc-tr:hover .read-more {
+        color: var(--accent);
+        transform: translateX(4px);
+    }
+
+    .term-cursor {
+        display: inline-block;
+        width: 0.55em; height: 1.05em;
+        background: var(--accent);
+        vertical-align: text-bottom;
+        animation: tools-blink 1s step-end infinite;
+    }
+    @keyframes tools-blink { 50% { opacity: 0; } }
+
+    .tline { opacity: 0; animation: tools-type-in 0.4s ease forwards; }
+    @keyframes tools-type-in { to { opacity: 1; } }
 </style>
