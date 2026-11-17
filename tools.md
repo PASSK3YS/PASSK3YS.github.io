@@ -27,16 +27,6 @@ permalink: /tools/
         </div>
     </a>
 
-    <a href="/tools/vivaldi-themes/" class="unified-row interactive-row">
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Vivaldi browser themes</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-                A collection of my custom Vivaldi Browser Themes.
-            </p>
-            <span class="read-more">View Themes &rarr;</span>
-        </div>
-    </a>
-
     <a href="/tools/username-generator/" class="unified-row interactive-row">
         <div style="display: flex; flex-direction: column; justify-content: center;">
             <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Username Generator</h2>
