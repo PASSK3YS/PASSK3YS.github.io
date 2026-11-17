@@ -17,22 +17,16 @@ permalink: /tools/snowflake/
 
 <div class="unified-card">
     <div class="snowflake-section" style="padding: 30px 34px;">
-        <h2 style="margin: 0 0 10px 0;">Become a Snowflake volunteer</h2>
-        <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 20px 0; line-height: 1.5;">
-            Snowflake is a pluggable transport for Tor. When you turn it on below, your browser
-            acts as a temporary, disposable proxy that helps someone in a censored network
-            connect to the Tor network. Your connection is used only as a bridge &mdash; you never
-            see their traffic or their identity, and they never see yours. To keep helping,
-            simply leave this tab open.
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 12px 0; line-height: 1.5;">
+            Toggle the switch below and your browser becomes a temporary bridge, helping people
+            in censored countries connect to the Tor network. You never see their traffic or
+            identity, and they never see yours. Leave this tab open to keep helping.
         </p>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0 0 20px 0; line-height: 1.5;">
-            <strong>Things to know:</strong> nothing happens until you opt in with the button
-            below, and you can turn it off at any time. Tor asks volunteers not to run a
-            snowflake proxy while connected to a VPN, and visitors on networks that block
-            WebRTC won't be able to participate. Snowflake is a project of the
+            Nothing happens until you opt in, and you can switch off anytime. Please don't run a
+            snowflake while on a VPN. A project of the
             <a href="https://torproject.org" rel="noopener noreferrer">Tor Project</a> &mdash;
-            learn more at
-            <a href="https://snowflake.torproject.org" rel="noopener noreferrer">snowflake.torproject.org</a>.
+            <a href="https://snowflake.torproject.org" rel="noopener noreferrer">learn more</a>.
         </p>
         <div class="snowflake-embed">
             <iframe
