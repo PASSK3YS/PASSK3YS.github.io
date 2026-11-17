@@ -4,19 +4,17 @@ title: Snowflake Proxy
 permalink: /tools/snowflake/
 ---
 
-<div class="bio-container">
-    <div class="bio-text">
-        <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;">
-            Tor Snowflake<span class="blinking-cursor">_</span>
-        </h1>
-        <p style="font-size: 1.05rem; opacity: 0.9; margin: 0;">
-            Help people in censored countries reach the open internet.
-        </p>
+<div class="sf-shell">
+    <div class="sf-cmd">
+        <span class="prompt">$</span><span class="cmd"><span class="command-name">tor</span> --snowflake-proxy</span>
     </div>
+    <p class="sf-intro">
+        Help people in censored countries reach the open internet.
+    </p>
 </div>
 
-<div class="unified-card">
-    <div class="snowflake-section" style="padding: 30px 34px;">
+<div class="sf-card">
+    <div class="snowflake-section">
         <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 12px 0; line-height: 1.5;">
             Toggle the switch below and your browser becomes a temporary bridge, helping people
             in censored countries connect to the Tor network. You never see their traffic or
@@ -41,56 +39,36 @@ permalink: /tools/snowflake/
 <script src="https://cdn.jsdelivr.net/npm/snowflake-extension/embed.js"></script>
 
 <style>
-
-body, main, p, a, span, div, button {
-    font-family: 'Atkinson Hyperlegible Next', sans-serif !important
+.sf-shell { font-family: 'JetBrains Mono', monospace; margin-bottom: 26px; }
+.sf-cmd { display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; }
+.sf-cmd .prompt { color: var(--accent); white-space: nowrap; }
+.sf-cmd .cmd { color: var(--text); font-size: 1.1rem; font-weight: 700; }
+.sf-cmd .command-name { color: var(--accent); }
+.sf-intro {
+    font-family: 'SUSE', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
 }
 
-h1, h2, h3 {
-    font-family: 'Staatliches', sans-serif !important;
-}
-
-.blinking-cursor {
-    font-weight: 800;
-    color: var(--accent);
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
-.bio-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.bio-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.unified-card {
+.sf-card {
     background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     overflow: hidden;
 }
 
-[data-theme="dark"] .unified-card {
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-}
-
+.snowflake-section { padding: 22px 24px; }
 .snowflake-section a {
     color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+}
+.snowflake-section a:hover {
+    border-bottom-style: solid;
+    text-shadow: 0 0 14px var(--accent-glow);
 }
 
 .snowflake-embed {
@@ -103,13 +81,13 @@ h1, h2, h3 {
     max-width: 100%;
     height: 300px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     background: transparent;
 }
 
 @media (max-width: 850px) {
     .snowflake-section {
-        padding: 25px 14px;
+        padding: 18px 14px;
     }
 }
 </style>
