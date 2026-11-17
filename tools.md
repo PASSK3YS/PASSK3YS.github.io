@@ -47,6 +47,16 @@ permalink: /tools/
         </div>
     </a>
 
+    <a href="/tools/snowflake/" class="unified-row interactive-row">
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+            <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Tor Snowflake Proxy</h2>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+                Opt in to become a Snowflake volunteer and help people in censored countries reach the open internet.
+            </p>
+            <span class="read-more">Volunteer &rarr;</span>
+        </div>
+    </a>
+
     <a href="/tools/recommendations/" class="unified-row interactive-row">
         <div style="display: flex; flex-direction: column; justify-content: center;">
             <h2 class="directory-interactive-text" style="margin: 0 0 10px 0;">Recommendations</h2>
