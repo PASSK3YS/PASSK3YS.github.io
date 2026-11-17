@@ -652,3 +652,26 @@ div.highlight:hover .copy-code-button {
 .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .nn { color: var(--sh-variable); }
 .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo { color: var(--sh-number); }
 .highlight .o, .highlight .ow { color: var(--sh-operator); }
+
+/* ============================================================
+   Terminal strip overrides — neutralize legacy global `nav`
+   element styling inside the layout's terminal window
+   ============================================================ */
+
+.term-strip nav {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+    display: flex;
+    align-items: center;
+}
+
+[data-theme="dark"] .term-strip nav {
+    box-shadow: none;
+}
