@@ -49,7 +49,7 @@ title: About
     </div>
     <a class="tr" href="#" id="latest-blog-link">
         <span class="tr-k">[blog]</span>
-        <span class="tr-v dim" id="latest-blog-container">Loading latest...</span>
+        <span class="tr-v" id="latest-blog-container">Loading latest...</span>
     </a>
 </div>
 
@@ -59,7 +59,7 @@ title: About
     </div>
     <a class="tr" href="/cinema-watchlist/2026/" id="latest-movie-link">
         <span class="tr-k">[film]</span>
-        <span class="tr-v dim" id="latest-movie-container">Loading latest...</span>
+        <span class="tr-v" id="latest-movie-container">Loading latest...</span>
     </a>
 </div>
 
@@ -97,6 +97,13 @@ title: About
     .output a:hover, .tr .tr-v a:hover, .about-text a:hover { border-bottom-style: solid; text-shadow: 0 0 14px var(--accent-glow); }
 
     .dim { color: var(--text-muted); }
+
+    /* Colour rule: labels (bracket tags) accent-dim, plain values white,
+       every clickable row's value text accent — consistent with bio links */
+    a.tr .tr-v,
+    a.tr .tr-v .dim {
+        color: var(--accent);
+    }
 
     .term-cursor {
         display: inline-block;
@@ -153,8 +160,6 @@ title: About
     .tr .tr-v { color: var(--text); }
 
     a.tr { text-decoration: none; }
-    a.tr .tr-v { color: var(--text); transition: color 0.2s ease; }
-    a.tr:hover .tr-v { color: var(--accent); }
 
     .xmr {
         font-family: 'JetBrains Mono', monospace !important;
