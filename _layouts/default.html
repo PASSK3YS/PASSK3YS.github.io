@@ -120,7 +120,7 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--border);
             border-radius: 16px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.06);
             overflow: hidden;
         }
 
@@ -266,35 +266,64 @@
             .term-privacy-link { margin: 0; }
         }
 
+        /* ============================================================
+           Floating "now playing" player — terminal styling
+           ============================================================ */
+
         .floating-player-wrapper {
             position: fixed; bottom: 90px; left: 30px; width: 300px;
-            background: var(--nav-bg); backdrop-filter: blur(12px);
+            background: rgba(16, 16, 22, 0.96);
+            backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 16px; z-index: 1000;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3), 0 4px 6px -2px rgba(0,0,0,0.1);
+            border: 1px solid rgba(139, 124, 255, 0.35);
+            border-radius: 6px; z-index: 1000;
+            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.8), 0 0 40px -18px rgba(139, 124, 255, 0.4);
             transform: translateY(20px); opacity: 0; visibility: hidden;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
-        [data-theme="dark"] .floating-player-wrapper {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+
+        [data-theme="light"] .floating-player-wrapper {
+            background: var(--nav-bg, #ffffff);
+            border: 1px solid var(--border, #d5d0f0);
+            box-shadow: 0 12px 30px -12px rgba(109, 74, 255, 0.25);
         }
-        
+
         .floating-player-wrapper.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
         .floating-player-wrapper.ytm-active { display: block; }
-        .ytm-maximized-content { padding: 15px; display: flex; flex-direction: column; gap: 10px; }
-        .ytm-link-wrapper { display: flex; flex-direction: row; align-items: center; text-decoration: none !important; gap: 15px; }
-        .ytm-art { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
+        .ytm-maximized-content { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+        .ytm-link-wrapper { display: flex; flex-direction: row; align-items: center; text-decoration: none !important; gap: 14px; }
+        .ytm-art {
+            width: 60px; height: 60px; object-fit: cover; border-radius: 4px;
+            border: 1px solid rgba(139, 124, 255, 0.35);
+            padding: 2px; background: rgba(139, 124, 255, 0.10);
+            box-sizing: border-box;
+        }
         .ytm-info { display: flex; flex-direction: column; overflow: hidden; width: 100%; }
-        .ytm-status { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; display: flex; align-items: center; }
-        
+        .ytm-status {
+            font-family: 'JetBrains Mono', monospace !important;
+            font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent); margin-bottom: 4px; display: flex; align-items: center;
+        }
+
         .ytm-title-container { overflow: hidden; width: 100%; position: relative; white-space: nowrap; }
-        .ytm-title { font-weight: 700; font-size: 0.95rem; color: var(--text); display: inline-block; }
+        .ytm-title {
+            font-family: 'JetBrains Mono', monospace !important;
+            font-weight: 700; font-size: 0.88rem;
+            color: #eceafc;
+            display: inline-block;
+        }
+        [data-theme="light"] .ytm-title { color: #2b2640; }
         .scrolling-title { padding-left: 100%; animation: scroll-text 10s linear infinite; }
         @keyframes scroll-text { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
 
-        .ytm-artist { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .ytm-artist {
+            font-family: 'JetBrains Mono', monospace !important;
+            font-size: 0.76rem; color: #9a93c4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        [data-theme="light"] .ytm-artist { color: #6a6488; }
+
+        .ytm-link-wrapper:hover .ytm-title { text-shadow: 0 0 14px rgba(139, 124, 255, 0.8); }
 
         .playing-indicator { display: inline-flex; align-items: flex-end; gap: 3px; height: 10px; margin-left: 8px; }
         .playing-indicator .bar { width: 3px; background-color: var(--accent); animation: eq-bounce 1s infinite ease-in-out; transform-origin: bottom; }
@@ -305,37 +334,46 @@
 
         .floating-music-btn {
             position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px;
-            background: var(--nav-bg); backdrop-filter: blur(12px);
-            color: var(--accent); border: 1px solid var(--border);
-            border-radius: 16px; cursor: pointer; display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); z-index: 1000;
+            background: rgba(16, 16, 22, 0.96); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--accent);
+            border: 1px solid rgba(139, 124, 255, 0.35);
+            border-radius: 6px; cursor: pointer; display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(139, 124, 255, 0.4); z-index: 1000;
             transition: all 0.3s ease;
         }
 
-        [data-theme="dark"] .floating-music-btn {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        [data-theme="light"] .floating-music-btn {
+            background: var(--nav-bg, #ffffff);
+            border: 1px solid var(--border, #d5d0f0);
+            box-shadow: 0 8px 20px -8px rgba(109, 74, 255, 0.25);
         }
 
         .floating-music-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent);
+            box-shadow: 0 0 24px -8px rgba(139, 124, 255, 0.55);
         }
 
         .scroll-to-top {
             position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px;
-            background: var(--nav-bg); backdrop-filter: blur(12px);
-            color: var(--accent); border: 1px solid var(--border);
-            border-radius: 16px; cursor: pointer; display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); z-index: 1000;
+            background: rgba(16, 16, 22, 0.96); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--accent);
+            border: 1px solid rgba(139, 124, 255, 0.35);
+            border-radius: 6px; cursor: pointer; display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(139, 124, 255, 0.4); z-index: 1000;
             opacity: 0; visibility: hidden; transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
-        [data-theme="dark"] .scroll-to-top {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        [data-theme="light"] .scroll-to-top {
+            background: var(--nav-bg, #ffffff);
+            border: 1px solid var(--border, #d5d0f0);
+            box-shadow: 0 8px 20px -8px rgba(109, 74, 255, 0.25);
         }
 
         .scroll-to-top.visible { opacity: 1; visibility: visible; }
-        .scroll-to-top:hover { transform: translateY(-4px); }
+        .scroll-to-top:hover { transform: translateY(-4px); border-color: var(--accent); }
     </style>
 
     <link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" />
