@@ -6,7 +6,7 @@ permalink: /privacy/
 
 <div class="section-cmd tline" style="margin-top: 0;">
     <div class="prompt-line">
-        <span class="prompt">$</span><span class="cmd"><span class="command-name">cat</span> /legal/privacy.txt</span>
+        <span class="prompt">$</span><span class="cmd"><span class="command-name"> privacy-policy</span></span>
     </div>
     <p class="dim" style="margin: 2px 0 0 0;">Last updated: November 17, 2026</p>
 </div>
