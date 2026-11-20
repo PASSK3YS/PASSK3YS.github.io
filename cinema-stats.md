@@ -69,7 +69,7 @@ permalink: /cinema-stats/
     margin-top: 2px;
 }
 
-/* horizontal bar "chart" rows */
+/* horizontal bar rows */
 .cs-bar-row {
     display: grid;
     grid-template-columns: 52px 1fr 96px;
@@ -148,21 +148,30 @@ permalink: /cinema-stats/
     <span class="cs-prompt">$</span><span class="cs-cmd"><span class="cs-command-name">cinema-stats</span> --all-years</span>
 </div>
 
-{% comment %}========== aggregate prep, computed once =========={% endcomment %}
+{% comment %}=====================================================
+     Aggregate prep — all numbers derived from the data file.
+     Ratings look like "8/10": strip "/10" and coerce to number.
+     ====================================================={% endcomment %}
 {% assign all_movies = site.data["movie-ratings"] %}
 {% assign total = all_movies | size %}
 
-{% assign sum = 0 %}
-{% assign decade_counter = 0 %}
+{% assign grand_sum = 0 %}
 {% for movie in all_movies %}
-    {% assign value = movie.rating | slice: 0, 2 | plus: 0 %}
-    {% assign sum = sum | plus: value %}
+    {% assign grand_sum = grand_sum | plus: movie.year_num %}
 {% endfor %}
-{% assign grand_avg = sum | divided_by: 110.0 %}
+{% comment %}above loop is a placeholder pattern only; real sum below{% endcomment %}
+{% assign grand_sum = 0 %}
+{% for movie in all_movies %}
+    {% assign val = movie.rating | remove: "/10" | plus: 0 %}
+    {% assign grand_sum = grand_sum | plus: val %}
+{% endfor %}
+{% assign grand_avg_times100 = grand_sum | times: 100 | divided_by: total %}
+{% assign grand_avg_whole = grand_avg_times100 | divided_by: 100 %}
+{% assign grand_avg_frac = grand_avg_times100 | modulo: 100 %}
 
-{% comment %}================== hero stats =================={% endcomment %}
 <div class="cs-panels">
 
+{% comment %}================== hero stats =================={% endcomment %}
 <div class="cs-panel tline">
     <div class="cs-panel-head"><span class="prompt">$</span><h2>cinema --summary</h2></div>
     <div class="cs-hero">
@@ -173,73 +182,53 @@ permalink: /cinema-stats/
         </div>
         <div class="cs-stat">
             <div class="stat-label">Average score</div>
-            <div class="stat-value">{{ grand_avg | round: 2 }}/10</div>
+            <div class="stat-value">{{ grand_avg_whole }}.{% if grand_avg_frac < 10 %}0{% endif %}{{ grand_avg_frac }}/10</div>
             <div class="stat-sub">across all years</div>
-        </div>
-        <div class="cs-stat">
-            <div class="stat-label">First logged</div>
-            <div class="stat-value">2022</div>
-            <div class="stat-sub">DC League of Super-Pets</div>
         </div>
     </div>
 </div>
 
-{% comment %}================== per-year breakdown =================={% endcomment %}
+{% comment %}================== per-year breakdown ==================
+     Loop over years present in the data so future years appear
+     automatically. Bar width = avg rating × 10 (so 10/10 = 100%).
+     ====================================================={% endcomment %}
 <div class="cs-panel tline">
     <div class="cs-panel-head"><span class="prompt">$</span><h2>cinema-stats --by-year</h2></div>
 
-    {% assign y2026 = all_movies | where: "year", 2026 %}
-    {% assign y2025 = all_movies | where: "year", 2025 %}
-    {% assign y2024 = all_movies | where: "year", 2024 %}
-    {% assign y2023 = all_movies | where: "year", 2023 %}
-    {% assign y2022 = all_movies | where: "year", 2022 %}
-
-    {% assign c2026 = y2026 | size %}
-    {% assign c2025 = y2025 | size %}
-    {% assign c2024 = y2024 | size %}
-    {% assign c2023 = y2023 | size %}
-    {% assign c2022 = y2022 | size %}
-
-    {% comment %}average per year: ratings look like "8/10", so slice the leading number{% endcomment %}
-    {% assign s2026 = 0 %}{% assign s2025 = 0 %}{% assign s2024 = 0 %}{% assign s2023 = 0 %}{% assign s2022 = 0 %}
-    {% for m in y2026 %}{% assign s2026 = s2026 | plus: m.rating[0] %}{% endfor %}
-    {% for m in y2025 %}{% assign s2025 = s2025 | plus: m.rating[0] %}{% endfor %}
-    {% for m in y2024 %}{% assign s2024 = s2024 | plus: m.rating[0] %}{% endfor %}
-    {% for m in y2023 %}{% assign s2023 = s2023 | plus: m.rating[0] %}{% endfor %}
-    {% for m in y2022 %}{% assign s2022 = s2022 | plus: m.rating[0] %}{% endfor %}
-
-    {% assign a2026 = s2026 | divided_by: c2026 | round: 2 %}
-    {% assign a2025 = s2025 | divided_by: c2025 | round: 2 %}
-    {% assign a2024 = s2024 | divided_by: c2024 | round: 2 %}
-    {% assign a2023 = s2023 | divided_by: c2023 | round: 2 %}
-    {% assign a2022 = s2022 | divided_by: c2022 | round: 2 %}
-
-    {% comment %}bar widths scaled so 10/10 = 100%; widths in px via inline style{% endcomment %}
-    {% assign w2026 = a2026 | times: 10.0 %}
-    {% assign w2025 = a2025 | times: 10.0 %}
-    {% assign w2024 = a2024 | times: 10.0 %}
-    {% assign w2023 = a2023 | times: 10.0 %}
-    {% assign w2022 = a2022 | times: 10.0 %}
-
-    <div class="cs-bar-row"><span class="cs-bar-year">2026</span><div class="cs-bar-track"><div class="cs-bar-fill" style="width: {{ w2026 }}%"></div></div><span class="cs-bar-metric">{{ a2026 }}/10 <span class="dim">({{ c2026 }} films)</span></span></div>
-    <div class="cs-bar-row"><span class="cs-bar-year">2025</span><div class="cs-bar-track"><div class="cs-bar-fill" style="width: {{ w2025 }}%"></div></div><span class="cs-bar-metric">{{ a2025 }}/10 <span class="dim">({{ c2025 }} films)</span></span></div>
-    <div class="cs-bar-row"><span class="cs-bar-year">2024</span><div class="cs-bar-track"><div class="cs-bar-fill" style="width: {{ w2024 }}%"></div></div><span class="cs-bar-metric">{{ a2024 }}/10 <span class="dim">({{ c2024 }} films)</span></span></div>
-    <div class="cs-bar-row"><span class="cs-bar-year">2023</span><div class="cs-bar-track"><div class="cs-bar-fill" style="width: {{ w2023 }}%"></div></div><span class="cs-bar-metric">{{ a2023 }}/10 <span class="dim">({{ c2023 }} films)</span></span></div>
-    <div class="cs-bar-row"><span class="cs-bar-year">2022</span><div class="cs-bar-track"><div class="cs-bar-fill" style="width: {{ w2022 }}%"></div></div><span class="cs-bar-metric">{{ a2022 }}/10 <span class="dim">({{ c2022 }} films)</span></span></div>
+    {% assign years = all_movies | map: "year" | uniq | sort %}
+    {% for yr in years reversed %}
+        {% assign year_movies = all_movies | where: "year", yr %}
+        {% assign year_count = year_movies | size %}
+        {% assign year_sum = 0 %}
+        {% for m in year_movies %}
+            {% assign v = m.rating | remove: "/10" | plus: 0 %}
+            {% assign year_sum = year_sum | plus: v %}
+        {% endfor %}
+        {% assign avg_x100 = year_sum | times: 100 | divided_by: year_count %}
+        {% assign avg_whole = avg_x100 | divided_by: 100 %}
+        {% assign avg_frac = avg_x100 | modulo: 100 %}
+        {% assign bar_width = avg_whole | times: 10 %}
+        <div class="cs-bar-row">
+            <span class="cs-bar-year">{{ yr }}</span>
+            <div class="cs-bar-track"><div class="cs-bar-fill" style="width: {{ bar_width }}%"></div></div>
+            <span class="cs-bar-metric">{{ avg_whole }}.{% if avg_frac < 10 %}0{% endif %}{{ avg_frac }}/10 <span class="dim">({{ year_count }} films)</span></span>
+        </div>
+    {% endfor %}
 </div>
 
-{% comment %}================== leaderboard =================={% endcomment %}
+{% comment %}================== top-rated =================={% endcomment %}
 <div class="cs-panel tline">
     <div class="cs-panel-head"><span class="prompt">$</span><h2>cinema-stats --top-rated</h2></div>
-    <ol class="cs-list">
-        {% assign perfects = all_movies | where_exp: "m", "m.rating == '10/10'" %}
-        {% assign tens = perfects | size %}
-        {% for m in all_movies reversed %}
-            {% if m.rating == '10/10' %}
-                <li><span class="rank">[{{ forloop.index }}]</span> {{ m.title }} <span class="cs-dim">(2024)</span></li>
+    <ul class="cs-list">
+        {% assign rank = 0 %}
+        {% for m in all_movies %}
+            {% if m.rating == "10/10" %}
+                {% assign rank = rank | plus: 1 %}
+                <li><span class="rank">[{{ rank }}]</span> {{ m.title }} <span class="cs-dim">(watched {{ m.notes | remove: "Watched " }})</span></li>
             {% endif %}
         {% endfor %}
-    </ol>
+        {% if rank == 0 %}<li><span class="cs-dim">no perfect scores yet</span></li>{% endif %}
+    </ul>
 </div>
 
 </div>
