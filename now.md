@@ -2,7 +2,7 @@
 layout: default
 title: Now
 permalink: /now/
-last_updated: 2026-10-10
+last_updated: 2026-11-27
 ---
 
 <style>
@@ -105,22 +105,21 @@ last_updated: 2026-10-10
     <div class="now-section">
         <h3 class="sec-head">&gt;_ working on</h3>
         <ul class="now-list">
-            <li><strong>Trying to lose weight</strong></li>
-            <li><strong>Recovering from a back injury</strong></li>
+            <li><strong>Editing my website</strong></li>
         </ul>
     </div>
 
     <div class="now-section">
         <h3 class="sec-head">&gt;_ playing</h3>
         <ul class="now-list">
-            <li><strong>Gears of War: E-Day</strong></li>
+            <li><strong>Grand Theft Auto VI</strong></li>
         </ul>
     </div>
 
     <div class="now-section">
         <h3 class="sec-head">&gt;_ watching</h3>
         <ul class="now-list">
-            <li><strong>House of the Dragon Season 3</strong> on HBO Max</li>
+            <li><strong>A Knight of the Seven Kingdoms </strong> on HBO Max</li>
         </ul>
     </div>
 
