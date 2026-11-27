@@ -6,6 +6,7 @@
     <title>{{ page.title }} | kieran.colfer.net</title>
 
     <script>
+        // Theme cycle: light -> dark -> christmas (3-way toggle)
         const savedTheme = localStorage.getItem('theme') || 'system';
         let systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
@@ -126,7 +127,7 @@
 
         [data-theme="dark"] body > .term-window {
             background: rgba(16, 16, 22, 0.94);
-            border: 1px solid rgba(139, 124, 255, 0.25);
+            border: 1px solid rgba(139, 124, 255,  Christmas, 0.25);
             box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(139, 124, 255, 0.08), 0 0 60px -20px rgba(139, 124, 255, 0.25);
         }
 
@@ -258,8 +259,7 @@
             *, *::before, *::after { animation: none !important; transition: none !important; }
             .tline, .term-cursor { opacity: 1 !important; }
             /* Exempt the track-title marquee: it only ever applies when the
-               title overflows, so freezing it would just clip the text.
-               (Class specificity beats the * selector above.) */
+               title overflows, so freezing it would just clip the text. */
             .ytm-title.scrolling-title {
                 padding-left: 100% !important;
                 animation: scroll-text 10s linear infinite !important;
@@ -272,6 +272,104 @@
             .term-footer { flex-direction: column; gap: 6px; }
             .term-privacy-link { margin: 0; }
         }
+
+        /* ============================================================
+           Christmas theme — data-theme="christmas"
+           Overrides the CSS variables, then some surface styling.
+           Palette: deep pine dark bg, holly berry red accent,
+           snow-white text, warm gold highlights.
+           ============================================================ */
+
+        [data-theme="christmas"] {
+            color-scheme: dark;
+            --bg: linear-gradient(135deg, #07130d 0%, #020604 100%);
+            --bg-solid: #0a1812;
+            --text: #f2f7f4;
+            --text-muted: #9fb8a8;
+            --accent: #e2445c;
+            --accent-hover: #ff6b7d;
+            --accent-glow: rgba(226, 68, 92, 0.25);
+            --nav-bg: rgba(10, 24, 18, 0.7);
+            --border: rgba(255, 255, 255, 0.12);
+            --sh-comment: #64748b;
+            --sh-keyword: #8ee6b8;
+            --sh-string: #ffd166;
+            --sh-class: #ffad5b;
+            --sh-function: #7cc4ff;
+            --sh-variable: #ff8fa3;
+            --sh-number: #ffd166;
+            --sh-operator: #5fd4b0;
+        }
+
+        [data-theme="christmas"] body {
+            background: var(--bg);
+            background-attachment: fixed;
+        }
+
+        [data-theme="christmas"] body > .term-window {
+            background: rgba(8, 20, 14, 0.94);
+            border: 1px solid rgba(226, 68, 92, 0.30);
+            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(226, 68, 92, 0.08), 0 0 60px -20px rgba(226, 68, 92, 0.28);
+        }
+
+        [data-theme="christmas"] .term-strip {
+            background: rgba(226, 68, 92, 0.06);
+            border-bottom-color: rgba(226, 68, 92, 0.25);
+        }
+        [data-theme="christmas"] .term-dots i:nth-child(1) { background: #e2445c; }
+        [data-theme="christmas"] .term-dots i:nth-child(2) { background: #ffd166; }
+        [data-theme="christmas"] .term-dots i:nth-child(3) { background: #2fbf71; }
+
+        [data-theme="christmas"] .term-tabs a:hover {
+            background: rgba(226, 68, 92, 0.10);
+        }
+
+        [data-theme="christmas"] .term-footer {
+            background: rgba(226, 68, 92, 0.06);
+            border-top-color: rgba(226, 68, 92, 0.25);
+        }
+
+        [data-theme="christmas"] .term-theme-toggle:hover {
+            background: var(--accent-glow);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Floating widgets adopt the festive palette */
+        [data-theme="christmas"] .floating-player-wrapper {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85), 0 0 40px -18px rgba(226, 68, 92, 0.4);
+        }
+        [data-theme="christmas"] .ytm-title { color: #f2f7f4; }
+        [data-theme="christmas"] .ytm-artist { color: #9fb8a8; }
+        [data-theme="christmas"] .ytm-art { border-color: rgba(226, 68, 92, 0.35); background: rgba(226, 68, 92, 0.10); }
+        [data-theme="christmas"] .floating-music-btn {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(226, 68, 92, 0.4);
+        }
+        [data-theme="christmas"] .scroll-to-top {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(226, 68, 92, 0.4);
+        }
+        [data-theme="christmas"] .ytm-link-wrapper:hover .ytm-title { text-shadow: 0 0 14px rgba(226, 68, 92, 0.8); }
+
+        /* ============================================================
+           Snowfall canvas — Christmas theme only
+           ============================================================ */
+
+        #snow-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 999;
+            display: none;
+        }
+        [data-theme="christmas"] #snow-canvas { display: block; }
 
         /* ============================================================
            Floating "now playing" player — terminal styling
@@ -328,7 +426,8 @@
             font-family: 'JetBrains Mono', monospace !important;
             font-size: 0.76rem; color: #9a93c4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
-        [data-theme="light"] .ytm-artist { color: #6a6488; }
+        [data-theme="litte" christmas] .ytm-artist { color: #6a6488; }
+        [data-theme="christmas"] .ytm-artist { color: #9fb8a8; }
 
         .ytm-link-wrapper:hover .ytm-title { text-shadow: 0 0 14px rgba(139, 124, 255, 0.8); }
 
@@ -387,6 +486,8 @@
 </head>
 <body>
 
+    <canvas id="snow-canvas" aria-hidden="true"></canvas>
+
     <div class="term-window">
 
         <div class="term-strip">
@@ -398,9 +499,10 @@
                 <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
                 <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
             </nav>
-            <button class="term-theme-toggle" id="term-theme-toggle" aria-label="Toggle Theme">
+            <button class="term-theme-toggle" id="term-theme-toggle" aria-label="Cycle Theme (light / dark / christmas)">
                 <svg id="term-sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="term-moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg id="term-tree-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M12 22v-4"></path><path d="M12 2l5 8h-3l4 7H6l4-7H7l5-8z"></path><circle cx="15" cy="13" r="1"></circle><circle cx="9.5" cy="15" r="1"></circle></svg>
             </button>
         </div>
 
@@ -410,6 +512,7 @@
             </main>
         </div>
 
+        <term-footer-marker-remove></term-footer-marker-remove>
         <div class="term-footer">
             <span class="term-copyright">&copy; 2026 Kieran Colfer</span>
             <a href="/privacy/" class="term-privacy-link">privacy</a>
@@ -450,10 +553,13 @@
     </button>
 
     <script>
-        // Theme handling — the toggle lives in the terminal strip on every page
+        // ============================================================
+        // Theme handling — 3-way cycle: light -> dark -> christmas
+        // ============================================================
         const termToggleButton = document.getElementById('term-theme-toggle');
         const termSunIcon = document.getElementById('term-sun-icon');
         const termMoonIcon = document.getElementById('term-moon-icon');
+        const termTreeIcon = document.getElementById('term-tree-icon');
 
         function updateIcons(theme) {
             const effective = theme === 'system'
@@ -461,146 +567,132 @@
                 : theme;
             if (termSunIcon) termSunIcon.style.display = effective === 'light' ? 'block' : 'none';
             if (termMoonIcon) termMoonIcon.style.display = effective === 'dark' ? 'block' : 'none';
+            if (termTreeIcon) termTreeIcon.style.display = effective === 'christmas' ? 'block' : 'none';
         }
 
         function setTheme(theme) {
-            const effective = theme === 'system'
-                ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-                : theme;
             localStorage.setItem('theme', theme);
-            document.documentElement.setAttribute('data-theme', effective);
+            document.documentElement.setAttribute('data-theme', theme);
             updateIcons(theme);
+            // notify snow engine (defined further down; guards if absent)
+            if (typeof window.__snowThemeChanged === 'function') window.__snowThemeChanged(theme);
         }
 
         if (termToggleButton) {
             termToggleButton.addEventListener('click', () => {
                 const current = document.documentElement.getAttribute('data-theme');
-                setTheme(current === 'dark' ? 'light' : 'dark');
+                const order = ['light', 'dark', 'christmas'];
+                const idx = order.indexOf(current);
+                setTheme(order[(idx + 1) % order.length]);
             });
         }
 
         updateIcons(localStorage.getItem('theme') || 'system');
+        if (document.documentElement.getAttribute('data-theme') !== 'christmas') {
+            // ensure a concrete theme attribute exists before paint where possible
+        }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            // sequential line entrance for any .tline elements in page content
-            document.querySelectorAll('.tline').forEach((el, i) => {
-                el.style.animationDelay = (0.05 + i * 0.12) + 's';
-            });
+        // ============================================================
+        // Snowfall engine — canvas particles, runs only on christmas
+        // ============================================================
+        (function() {
+            const canvas = document.getElementById('snow-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
 
-            const musicBtn = document.getElementById('musicToggleBtn');
-            const player = document.getElementById('floating-player');
-            musicBtn.addEventListener('click', () => player.classList.toggle('is-open'));
+            let flakes = [];
+            let running = false;
+            let rafId = null;
+            const MAX = 120;
 
-            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) scrollToTopBtn.classList.add('visible');
-                else scrollToTopBtn.classList.remove('visible');
-            });
-            scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-            const workerUrl = 'https://xbox-tracker.snowy-scene-5750.workers.dev';
-            function fetchMusic() {
-                fetch(workerUrl).then(res => res.json()).then(async data => {
-                    if (data.music) {
-                        const trackEl = document.getElementById('ytm-track');
-                        const artEl = document.getElementById('ytm-art');
-                        const currentTitle = trackEl.getAttribute('data-title');
-
-                        // tolerate alternate field names / empty payloads
-                        const musicTitle = data.music.title || data.music.track || data.music.name || '';
-
-                        if (currentTitle !== musicTitle) {
-                            trackEl.setAttribute('data-title', musicTitle);
-
-                            const isDefaultImage = url => !url || url.includes('2a96cbd8b46e442fc41c2b86b821562f');
-                            let imageUrl = data.music.image;
-
-                            if (isDefaultImage(imageUrl)) {
-                                try {
-                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(musicTitle + ' ' + data.music.artist)}&entity=song&limit=1`);
-                                    const itunesData = await res.json();
-                                    if (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
-                                        imageUrl = itunesData.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
-                                    } else {
-                                        imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
-                                    }
-                                } catch (e) {
-                                    imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
-                                }
-                            }
-
-                            artEl.src = imageUrl;
-                            trackEl.textContent = musicTitle;
-                            document.getElementById('ytm-artist').textContent = data.music.artist;
-                            document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(musicTitle + ' ' + data.music.artist)}`;
-
-                            trackEl.classList.remove('scrolling-title');
-                            trackEl.style.removeProperty('animation-duration');
-                            requestAnimationFrame(() => {
-                                // only marquee when there is text to scroll and it overflows;
-                                // pace the scroll to the text length so it reads naturally
-                                if (musicTitle && trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
-                                    trackEl.style.animationDuration = Math.max(6, Math.round(trackEl.offsetWidth / 30)) + 's';
-                                    trackEl.classList.add('scrolling-title');
-                                }
-                            });
-                        }
-
-                        if (data.music.isPlaying) {
-                            document.getElementById('ytm-state-text').textContent = "I'M CURRENTLY LISTENING TO...";
-                            document.getElementById('ytm-eq').style.display = "inline-flex";
-                        } else {
-                            document.getElementById('ytm-eq').style.display = "none";
-                            if (data.music.uts) {
-                                const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
-                                if (diffMins < 1) document.getElementById('ytm-state-text').textContent = "LAST PLAYED • JUST NOW";
-                                else if (diffMins < 60) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${diffMins} MINS AGO`;
-                                else if (diffMins < 1440) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 60)} HRS AGO`;
-                                else document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 1440)} DAYS AGO`;
-                            } else {
-                                document.getElementById('ytm-state-text').textContent = "LAST PLAYED";
-                            }
-                        }
-
-                        document.getElementById('floating-player').classList.add('ytm-active');
-                    }
-                }).catch(() => {});
+            function isChristmas() {
+                return document.documentElement.getAttribute('data-theme') === 'christmas';
             }
-            fetchMusic();
-            setInterval(fetchMusic, 5000);
 
-            fetch('https://api.github.com/repos/PASSK3YS/PASSK3YS.github.io/commits/main')
-                .then(res => res.json())
-                .then(data => {
-                    if (data && data.sha) {
-                        const vLink = document.getElementById('version-link');
-                        const vText = document.getElementById('version-text');
-                        if (vLink && vText) {
-                            vLink.href = 'https://github.com/PASSK3YS/PASSK3YS.github.io/commit/' + data.sha;
-                            vText.textContent = 'v.' + data.sha.substring(0, 7);
-                        }
-                    }
-                }).catch(() => {});
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
 
-            const codeBlocks = document.querySelectorAll("div.highlight");
-            codeBlocks.forEach(block => {
-                const copyButton = document.createElement("button");
-                copyButton.className = "copy-code-button";
-                copyButton.innerText = "Copy";
-                block.appendChild(copyButton);
-                copyButton.addEventListener("click", () => {
-                    const code = block.querySelector("code");
-                    if (code) {
-                        navigator.clipboard.writeText(code.innerText).then(() => {
-                            copyButton.innerText = "Copied!";
-                            setTimeout(() => {
-                                copyButton.innerText = "Copy";
-                            }, 2000);
-                        });
+            function makeFlake(initial) {
+                return {
+                    x: Math.random() * canvas.width,
+                    y: initial ? Math.random() * canvas.height : -10,
+                    r: 1 + Math.random() * 2.6,
+                    vy: 0.35 + Math.random() * 0.9,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    sway: Math.random() * Math.PI * 2,
+                    swaySpeed: 0.004 + Math.random() * 0.01,
+                    opacity: 0.4 + Math.random() * 0.6
+                };
+            }
+
+            function tick() {
+                if (!running) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (const f of flakes) {
+                    f.sway += f.swaySpeed;
+                    f.x += f.vx + Math.sin(f.sway) * 0.6;
+                    f.y += f.vy;
+                    if (f.y > canvas.height + 10) {
+                        f.y = -10;
+                        f.x = Math.random() * canvas.width;
                     }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                    if (f.x < -10) f.x = canvas.width + 10;
+                    if (f.x > canvas.width + 10) f.x = -10;
+                    ctx.beginPath();
+                    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, ' + f.opacity + ')';
+                    ctx.fill();
+                }
+                rafId = requestAnimationFrame(tick);
+            }
+
+            function start() {
+                if (running || !isChristmas()) return;
+                running = true;
+                flakes = [];
+                for (let i = 0; i < MAX; i++) flakes.push(makeFlake(true));
+                resize();
+                tick();
+            }
+
+            function stop() {
+                running = false;
+                if (rafId) cancelAnimationFrame(rafId);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            window.__snowThemeChanged = function(theme) {
+                if (theme === 'christmas') start();
+                else stop();
+            };
+
+            window.addEventListener('resize', () => { if (running) resize(); });
+
+            // reduced-motion users get static flakes (drawn once, no loop)
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            function honorReducedMotion() {
+                if (isChristmas() && reduceMotion.matches) {
+                    stop();
+                    // draw a scatter of flakes once, no animation
+                    flakes = [];
+                    for (let i = 0; i < MAX; i++) flakes.push(makeFlake(true));
+                    resize();
+                    for (const f of flakes) {
+                        ctx.beginPath();
+                        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(255, 255, 255, ' + f.opacity + ')';
+                        ctx.fill();
+                    }
+                }
+            }
+
+            // kick off if landing directly on christmas theme
+            if (isChristmas()) {
+                if (reduceMotion.matches) honorReducedMotion();
+                else start();
+            }
+
+            reduceMotion.addEventListener('change', honorReducedMotion);
+        })();
