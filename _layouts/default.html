@@ -10,7 +10,9 @@
         const savedTheme = localStorage.getItem('theme') || 'system';
         let systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-        if (savedTheme === 'system') {
+        if (savedTheme === 'christmas') {
+            document.documentElement.setAttribute('data-theme', 'christmas');
+        } else if (savedTheme === 'system') {
             document.documentElement.setAttribute('data-theme', systemTheme);
         } else {
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -127,7 +129,7 @@
 
         [data-theme="dark"] body > .term-window {
             background: rgba(16, 16, 22, 0.94);
-            border: 1px solid rgba(139, 124, 255,  Christmas, 0.25);
+            border: 1px solid rgba(139, 124, 255, 0.25);
             box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(139, 124, 255, 0.08), 0 0 60px -20px rgba(139, 124, 255, 0.25);
         }
 
@@ -274,104 +276,6 @@
         }
 
         /* ============================================================
-           Christmas theme — data-theme="christmas"
-           Overrides the CSS variables, then some surface styling.
-           Palette: deep pine dark bg, holly berry red accent,
-           snow-white text, warm gold highlights.
-           ============================================================ */
-
-        [data-theme="christmas"] {
-            color-scheme: dark;
-            --bg: linear-gradient(135deg, #07130d 0%, #020604 100%);
-            --bg-solid: #0a1812;
-            --text: #f2f7f4;
-            --text-muted: #9fb8a8;
-            --accent: #e2445c;
-            --accent-hover: #ff6b7d;
-            --accent-glow: rgba(226, 68, 92, 0.25);
-            --nav-bg: rgba(10, 24, 18, 0.7);
-            --border: rgba(255, 255, 255, 0.12);
-            --sh-comment: #64748b;
-            --sh-keyword: #8ee6b8;
-            --sh-string: #ffd166;
-            --sh-class: #ffad5b;
-            --sh-function: #7cc4ff;
-            --sh-variable: #ff8fa3;
-            --sh-number: #ffd166;
-            --sh-operator: #5fd4b0;
-        }
-
-        [data-theme="christmas"] body {
-            background: var(--bg);
-            background-attachment: fixed;
-        }
-
-        [data-theme="christmas"] body > .term-window {
-            background: rgba(8, 20, 14, 0.94);
-            border: 1px solid rgba(226, 68, 92, 0.30);
-            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(226, 68, 92, 0.08), 0 0 60px -20px rgba(226, 68, 92, 0.28);
-        }
-
-        [data-theme="christmas"] .term-strip {
-            background: rgba(226, 68, 92, 0.06);
-            border-bottom-color: rgba(226, 68, 92, 0.25);
-        }
-        [data-theme="christmas"] .term-dots i:nth-child(1) { background: #e2445c; }
-        [data-theme="christmas"] .term-dots i:nth-child(2) { background: #ffd166; }
-        [data-theme="christmas"] .term-dots i:nth-child(3) { background: #2fbf71; }
-
-        [data-theme="christmas"] .term-tabs a:hover {
-            background: rgba(226, 68, 92, 0.10);
-        }
-
-        [data-theme="christmas"] .term-footer {
-            background: rgba(226, 68, 92, 0.06);
-            border-top-color: rgba(226, 68, 92, 0.25);
-        }
-
-        [data-theme="christmas"] .term-theme-toggle:hover {
-            background: var(--accent-glow);
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        /* Floating widgets adopt the festive palette */
-        [data-theme="christmas"] .floating-player-wrapper {
-            background: rgba(8, 20, 14, 0.96);
-            border-color: rgba(226, 68, 92, 0.35);
-            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85), 0 0 40px -18px rgba(226, 68, 92, 0.4);
-        }
-        [data-theme="christmas"] .ytm-title { color: #f2f7f4; }
-        [data-theme="christmas"] .ytm-artist { color: #9fb8a8; }
-        [data-theme="christmas"] .ytm-art { border-color: rgba(226, 68, 92, 0.35); background: rgba(226, 68, 92, 0.10); }
-        [data-theme="christmas"] .floating-music-btn {
-            background: rgba(8, 20, 14, 0.96);
-            border-color: rgba(226, 68, 92, 0.35);
-            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(226, 68, 92, 0.4);
-        }
-        [data-theme="christmas"] .scroll-to-top {
-            background: rgba(8, 20, 14, 0.96);
-            border-color: rgba(226, 68, 92, 0.35);
-            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(226, 68, 92, 0.4);
-        }
-        [data-theme="christmas"] .ytm-link-wrapper:hover .ytm-title { text-shadow: 0 0 14px rgba(226, 68, 92, 0.8); }
-
-        /* ============================================================
-           Snowfall canvas — Christmas theme only
-           ============================================================ */
-
-        #snow-canvas {
-            position: fixed;
-            inset: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 999;
-            display: none;
-        }
-        [data-theme="christmas"] #snow-canvas { display: block; }
-
-        /* ============================================================
            Floating "now playing" player — terminal styling
            ============================================================ */
 
@@ -426,8 +330,7 @@
             font-family: 'JetBrains Mono', monospace !important;
             font-size: 0.76rem; color: #9a93c4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
-        [data-theme="litte" christmas] .ytm-artist { color: #6a6488; }
-        [data-theme="christmas"] .ytm-artist { color: #9fb8a8; }
+        [data-theme="light"] .ytm-artist { color: #6a6488; }
 
         .ytm-link-wrapper:hover .ytm-title { text-shadow: 0 0 14px rgba(139, 124, 255, 0.8); }
 
@@ -480,6 +383,99 @@
 
         .scroll-to-top.visible { opacity: 1; visibility: visible; }
         .scroll-to-top:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+        /* ============================================================
+           Christmas theme — data-theme="christmas"
+           Deep pine background, holly-berry accent, snow-white text,
+           warm gold secondary. Variables restyle nearly everything via
+           var() indirection; surfaces with hardcoded purple get
+           explicit overrides below.
+           ============================================================ */
+
+        [data-theme="christmas"] {
+            color-scheme: dark;
+            --bg: linear-gradient(135deg, #07130d 0%, #020604 100%);
+            --bg-solid: #0a1812;
+            --text: #f2f7f4;
+            --text-muted: #9fb8a8;
+            --accent: #e2445c;
+            --accent-hover: #ff6b7d;
+            --accent-glow: rgba(226, 68, 92, 0.25);
+            --nav-bg: rgba(10, 24, 18, 0.7);
+            --border: rgba(255, 255, 255, 0.12);
+            --sh-comment: #6b8a7a;
+            --sh-keyword: #8ee6b8;
+            --sh-string: #ffd166;
+            --sh-class: #ffad5b;
+            --sh-function: #7cc4ff;
+            --sh-variable: #ff8fa3;
+            --sh-number: #ffd166;
+            --sh-operator: #5fd4b0;
+        }
+
+        [data-theme="christmas"] body {
+            background: var(--bg);
+            background-attachment: fixed;
+        }
+
+        [data-theme="christmas"] body > .term-window {
+            background: rgba(8, 20, 14, 0.94);
+            border: 1px solid rgba(226, 68, 92, 0.30);
+            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(226, 68, 92, 0.08), 0 0 60px -20px rgba(226, 68, 92, 0.28);
+        }
+
+        [data-theme="christmas"] .term-strip {
+            background: rgba(226, 68, 92, 0.06);
+            border-bottom-color: rgba(226, 68, 92, 0.25);
+        }
+        [data-theme="christmas"] .term-dots i:nth-child(1) { background: #e2445c; }
+        [data-theme="christmas"] .term-dots i:nth-child(2) { background: #ffd166; }
+        [data-theme="christmas"] .term-dots i:nth-child(3) { background: #2fbf71; }
+
+        [data-theme="christmas"] .term-tabs a:hover {
+            background: rgba(226, 68, 92, 0.10);
+        }
+
+        [data-theme="christmas"] .term-footer {
+            background: rgba(226, 68, 92, 0.06);
+            border-top-color: rgba(226, 68, 92, 0.25);
+        }
+
+        [data-theme="christmas"] .floating-player-wrapper {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85), 0 0 40px -18px rgba(226, 68, 92, 0.4);
+        }
+        [data-theme="christmas"] .ytm-title { color: #f2f7f4; }
+        [data-theme="christmas"] .ytm-artist { color: #9fb8a8; }
+        [data-theme="christmas"] .ytm-art { border-color: rgba(226, 68, 92, 0.35); background: rgba(226, 68, 92, 0.10); }
+        [data-theme="christmas"] .ytm-link-wrapper:hover .ytm-title { text-shadow: 0 0 14px rgba(226, 68, 92, 0.8); }
+
+        [data-theme="christmas"] .floating-music-btn {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(226, 68, 92, 0.4);
+        }
+        [data-theme="christmas"] .scroll-to-top {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(226, 68, 92, 0.4);
+        }
+
+        /* ============================================================
+           Snowfall canvas — visible only on christmas theme
+           ============================================================ */
+
+        #snow-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 999;
+            display: none;
+        }
+        [data-theme="christmas"] #snow-canvas { display: block; }
     </style>
 
     <link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" />
@@ -512,7 +508,6 @@
             </main>
         </div>
 
-        <term-footer-marker-remove></term-footer-marker-remove>
         <div class="term-footer">
             <span class="term-copyright">&copy; 2026 Kieran Colfer</span>
             <a href="/privacy/" class="term-privacy-link">privacy</a>
@@ -574,7 +569,6 @@
             localStorage.setItem('theme', theme);
             document.documentElement.setAttribute('data-theme', theme);
             updateIcons(theme);
-            // notify snow engine (defined further down; guards if absent)
             if (typeof window.__snowThemeChanged === 'function') window.__snowThemeChanged(theme);
         }
 
@@ -588,9 +582,6 @@
         }
 
         updateIcons(localStorage.getItem('theme') || 'system');
-        if (document.documentElement.getAttribute('data-theme') !== 'christmas') {
-            // ensure a concrete theme attribute exists before paint where possible
-        }
 
         // ============================================================
         // Snowfall engine — canvas particles, runs only on christmas
@@ -648,6 +639,19 @@
                 rafId = requestAnimationFrame(tick);
             }
 
+            function drawStatic() {
+                // reduced-motion fallback: one static scatter, no loop
+                resize();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let i = 0; i < MAX; i++) {
+                    const f = makeFlake(true);
+                    ctx.beginPath();
+                    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, ' + f.opacity + ')';
+                    ctx.fill();
+                }
+            }
+
             function start() {
                 if (running || !isChristmas()) return;
                 running = true;
@@ -664,35 +668,146 @@
             }
 
             window.__snowThemeChanged = function(theme) {
-                if (theme === 'christmas') start();
-                else stop();
+                if (theme !== 'christmas') { stop(); return; }
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) drawStatic();
+                else start();
             };
 
-            window.addEventListener('resize', () => { if (running) resize(); });
-
-            // reduced-motion users get static flakes (drawn once, no loop)
-            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-            function honorReducedMotion() {
-                if (isChristmas() && reduceMotion.matches) {
-                    stop();
-                    // draw a scatter of flakes once, no animation
-                    flakes = [];
-                    for (let i = 0; i < MAX; i++) flakes.push(makeFlake(true));
-                    resize();
-                    for (const f of flakes) {
-                        ctx.beginPath();
-                        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-                        ctx.fillStyle = 'rgba(255, 255, 255, ' + f.opacity + ')';
-                        ctx.fill();
-                    }
-                }
-            }
+            window.addEventListener('resize', () => {
+                if (running) resize();
+                else if (isChristmas() && window.matchMedia('(prefers-reduced-motion: reduce)').matches) drawStatic();
+            });
 
             // kick off if landing directly on christmas theme
             if (isChristmas()) {
-                if (reduceMotion.matches) honorReducedMotion();
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) drawStatic();
                 else start();
             }
-
-            reduceMotion.addEventListener('change', honorReducedMotion);
         })();
+
+        // ============================================================
+        // Page behaviour (music player, scroll-to-top, version, copy)
+        // ============================================================
+        document.addEventListener("DOMContentLoaded", () => {
+            // sequential line entrance for any .tline elements in page content
+            document.querySelectorAll('.tline').forEach((el, i) => {
+                el.style.animationDelay = (0.05 + i * 0.12) + 's';
+            });
+
+            const musicBtn = document.getElementById('musicToggleBtn');
+            const player = document.getElementById('floating-player');
+            musicBtn.addEventListener('click', () => player.classList.toggle('is-open'));
+
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) scrollToTopBtn.classList.add('visible');
+                else scrollToTopBtn.classList.remove('visible');
+            });
+            scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            const workerUrl = 'https://xbox-tracker.snowy-scene-5750.workers.dev';
+            function fetchMusic() {
+                fetch(workerUrl).then(res => res.json()).then(async data => {
+                    if (data.music) {
+                        const trackEl = document.getElementById('ytm-track');
+                        const artEl = document.getElementById('ytm-art');
+                        const currentTitle = trackEl.getAttribute('data-title');
+
+                        // tolerate alternate field names / empty payloads
+                        const musicTitle = data.music.title || data.music.track || data.music.name || '';
+
+                        if (currentTitle !== musicTitle) {
+                            trackEl.setAttribute('data-title', musicTitle);
+
+                            const isDefaultImage = url => !url || url.includes('2a96cbd8b46e442fc41c2b86b821562f');
+                            let imageUrl = data.music.image;
+
+                            if (isDefaultImage(imageUrl)) {
+                                try {
+                                    const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(musicTitle + ' ' + data.music.artist)}&entity=song&limit=1`);
+                                    const itunesData = await res.json();
+                                    if (itunesData.results && itunesData.results.length > 0 && itunesData.results[0].artworkUrl100) {
+                                        imageUrl = itunesData.results[0].artworkUrl100.replace('100x100bb', '300x300bb');
+                                    } else {
+                                        imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
+                                    }
+                                } catch (e) {
+                                    imageUrl = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%231a1a1a"/><circle cx="135" cy="210" r="25" fill="%23333"/><path d="M160 210V110H200V140H160" fill="none" stroke="%23333" stroke-width="20"/></svg>';
+                                }
+                            }
+
+                            artEl.src = imageUrl;
+                            trackEl.textContent = musicTitle;
+                            document.getElementById('ytm-artist').textContent = data.music.artist;
+                            document.getElementById('ytm-link').href = `https://music.youtube.com/search?q=${encodeURIComponent(musicTitle + ' ' + data.music.artist)}`;
+
+                            trackEl.classList.remove('scrolling-title');
+                            trackEl.style.removeProperty('animation-duration');
+                            requestAnimationFrame(() => {
+                                // only marquee when there is text to scroll and it overflows;
+                                // pace the scroll to the text length so it reads naturally
+                                if (musicTitle && trackEl.offsetWidth > trackEl.parentElement.clientWidth) {
+                                    trackEl.style.animationDuration = Math.max(6, Math.round(trackEl.offsetWidth / 30)) + 's';
+                                    trackEl.classList.add('scrolling-title');
+                                }
+                            });
+                        }
+
+                        if (data.music.isPlaying) {
+                            document.getElementById('ytm-state-text').textContent = "I'M CURRENTLY LISTENING TO...";
+                            document.getElementById('ytm-eq').style.display = "inline-flex";
+                        } else {
+                            document.getElementById('ytm-eq').style.display = "none";
+                            if (data.music.uts) {
+                                const diffMins = Math.floor((Date.now() - (data.music.uts * 1000)) / 60000);
+                                if (diffMins < 1) document.getElementById('ytm-state-text').textContent = "LAST PLAYED • JUST NOW";
+                                else if (diffMins < 60) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${diffMins} MINS AGO`;
+                                else if (diffMins < 1440) document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 60)} HRS AGO`;
+                                else document.getElementById('ytm-state-text').textContent = `LAST PLAYED • ${Math.floor(diffMins / 1440)} DAYS AGO`;
+                            } else {
+                                document.getElementById('ytm-state-text').textContent = "LAST PLAYED";
+                            }
+                        }
+
+                        document.getElementById('floating-player').classList.add('ytm-active');
+                    }
+                }).catch(() => {});
+            }
+            fetchMusic();
+            setInterval(fetchMusic, 5000);
+
+            fetch('https://api.github.com/repos/PASSK3YS/PASSK3YS.github.io/commits/main')
+                .then(res => res.json())
+                .then(data => {
+                    if (data && data.sha) {
+                        const vLink = document.getElementById('version-link');
+                        const vText = document.getElementById('version-text');
+                        if (vLink && vText) {
+                            vLink.href = 'https://github.com/PASSK3YS/PASSK3YS.github.io/commit/' + data.sha;
+                            vText.textContent = 'v.' + data.sha.substring(0, 7);
+                        }
+                    }
+                }).catch(() => {});
+
+            const codeBlocks = document.querySelectorAll("div.highlight");
+            codeBlocks.forEach(block => {
+                const copyButton = document.createElement("button");
+                copyButton.className = "copy-code-button";
+                copyButton.innerText = "Copy";
+                block.appendChild(copyButton);
+                copyButton.addEventListener("click", () => {
+                    const code = block.querySelector("code");
+                    if (code) {
+                        navigator.clipboard.writeText(code.innerText).then(() => {
+                            copyButton.innerText = "Copied!";
+                            setTimeout(() => {
+                                copyButton.innerText = "Copy";
+                            }, 2000);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
