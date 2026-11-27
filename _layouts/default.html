@@ -6,10 +6,13 @@
     <title>{{ page.title }} | kieran.colfer.net</title>
 
     <script>
+        // Theme cycle: light -> dark -> christmas (3-way toggle)
         const savedTheme = localStorage.getItem('theme') || 'system';
         let systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-        if (savedTheme === 'system') {
+        if (savedTheme === 'christmas') {
+            document.documentElement.setAttribute('data-theme', 'christmas');
+        } else if (savedTheme === 'system') {
             document.documentElement.setAttribute('data-theme', systemTheme);
         } else {
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -258,8 +261,7 @@
             *, *::before, *::after { animation: none !important; transition: none !important; }
             .tline, .term-cursor { opacity: 1 !important; }
             /* Exempt the track-title marquee: it only ever applies when the
-               title overflows, so freezing it would just clip the text.
-               (Class specificity beats the * selector above.) */
+               title overflows, so freezing it would just clip the text. */
             .ytm-title.scrolling-title {
                 padding-left: 100% !important;
                 animation: scroll-text 10s linear infinite !important;
@@ -381,11 +383,106 @@
 
         .scroll-to-top.visible { opacity: 1; visibility: visible; }
         .scroll-to-top:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+        /* ============================================================
+           Christmas theme — data-theme="christmas"
+           Deep pine background, holly-berry accent, snow-white text,
+           warm gold secondary. Variables restyle nearly everything via
+           var() indirection; surfaces with hardcoded purple get
+           explicit overrides below.
+           ============================================================ */
+
+        [data-theme="christmas"] {
+            color-scheme: dark;
+            --bg: linear-gradient(135deg, #07130d 0%, #020604 100%);
+            --bg-solid: #0a1812;
+            --text: #f2f7f4;
+            --text-muted: #9fb8a8;
+            --accent: #e2445c;
+            --accent-hover: #ff6b7d;
+            --accent-glow: rgba(226, 68, 92, 0.25);
+            --nav-bg: rgba(10, 24, 18, 0.7);
+            --border: rgba(255, 255, 255, 0.12);
+            --sh-comment: #6b8a7a;
+            --sh-keyword: #8ee6b8;
+            --sh-string: #ffd166;
+            --sh-class: #ffad5b;
+            --sh-function: #7cc4ff;
+            --sh-variable: #ff8fa3;
+            --sh-number: #ffd166;
+            --sh-operator: #5fd4b0;
+        }
+
+        [data-theme="christmas"] body {
+            background: var(--bg);
+            background-attachment: fixed;
+        }
+
+        [data-theme="christmas"] body > .term-window {
+            background: rgba(8, 20, 14, 0.94);
+            border: 1px solid rgba(226, 68, 92, 0.30);
+            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(226, 68, 92, 0.08), 0 0 60px -20px rgba(226, 68, 92, 0.28);
+        }
+
+        [data-theme="christmas"] .term-strip {
+            background: rgba(226, 68, 92, 0.06);
+            border-bottom-color: rgba(226, 68, 92, 0.25);
+        }
+        [data-theme="christmas"] .term-dots i:nth-child(1) { background: #e2445c; }
+        [data-theme="christmas"] .term-dots i:nth-child(2) { background: #ffd166; }
+        [data-theme="christmas"] .term-dots i:nth-child(3) { background: #2fbf71; }
+
+        [data-theme="christmas"] .term-tabs a:hover {
+            background: rgba(226, 68, 92, 0.10);
+        }
+
+        [data-theme="christmas"] .term-footer {
+            background: rgba(226, 68, 92, 0.06);
+            border-top-color: rgba(226, 68, 92, 0.25);
+        }
+
+        [data-theme="christmas"] .floating-player-wrapper {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.85), 0 0 40px -18px rgba(226, 68, 92, 0.4);
+        }
+        [data-theme="christmas"] .ytm-title { color: #f2f7f4; }
+        [data-theme="christmas"] .ytm-artist { color: #9fb8a8; }
+        [data-theme="christmas"] .ytm-art { border-color: rgba(226, 68, 92, 0.35); background: rgba(226, 68, 92, 0.10); }
+        [data-theme="christmas"] .ytm-link-wrapper:hover .ytm-title { text-shadow: 0 0 14px rgba(226, 68, 92, 0.8); }
+
+        [data-theme="christmas"] .floating-music-btn {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(226, 68, 92, 0.4);
+        }
+        [data-theme="christmas"] .scroll-to-top {
+            background: rgba(8, 20, 14, 0.96);
+            border-color: rgba(226, 68, 92, 0.35);
+            box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7), 0 0 30px -14px rgba(226, 68, 92, 0.4);
+        }
+
+        /* ============================================================
+           Snowfall canvas — visible only on christmas theme
+           ============================================================ */
+
+        #snow-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 999;
+            display: none;
+        }
+        [data-theme="christmas"] #snow-canvas { display: block; }
     </style>
 
     <link rel="alternate" type="application/feed+json" title="{{ site.title }} - Blog" href="{{ '/feed.json' | prepend: site.baseurl | prepend: site.url }}" />
 </head>
 <body>
+
+    <canvas id="snow-canvas" aria-hidden="true"></canvas>
 
     <div class="term-window">
 
@@ -398,9 +495,10 @@
                 <a href="/tools/" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a>
                 <a href="/blog/" {% if page.url contains '/blog/' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
             </nav>
-            <button class="term-theme-toggle" id="term-theme-toggle" aria-label="Toggle Theme">
+            <button class="term-theme-toggle" id="term-theme-toggle" aria-label="Cycle Theme (light / dark / christmas)">
                 <svg id="term-sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="term-moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg id="term-tree-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M12 22v-4"></path><path d="M12 2l5 8h-3l4 7H6l4-7H7l5-8z"></path><circle cx="15" cy="13" r="1"></circle><circle cx="9.5" cy="15" r="1"></circle></svg>
             </button>
         </div>
 
@@ -450,10 +548,13 @@
     </button>
 
     <script>
-        // Theme handling — the toggle lives in the terminal strip on every page
+        // ============================================================
+        // Theme handling — 3-way cycle: light -> dark -> christmas
+        // ============================================================
         const termToggleButton = document.getElementById('term-theme-toggle');
         const termSunIcon = document.getElementById('term-sun-icon');
         const termMoonIcon = document.getElementById('term-moon-icon');
+        const termTreeIcon = document.getElementById('term-tree-icon');
 
         function updateIcons(theme) {
             const effective = theme === 'system'
@@ -461,26 +562,132 @@
                 : theme;
             if (termSunIcon) termSunIcon.style.display = effective === 'light' ? 'block' : 'none';
             if (termMoonIcon) termMoonIcon.style.display = effective === 'dark' ? 'block' : 'none';
+            if (termTreeIcon) termTreeIcon.style.display = effective === 'christmas' ? 'block' : 'none';
         }
 
         function setTheme(theme) {
-            const effective = theme === 'system'
-                ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-                : theme;
             localStorage.setItem('theme', theme);
-            document.documentElement.setAttribute('data-theme', effective);
+            document.documentElement.setAttribute('data-theme', theme);
             updateIcons(theme);
+            if (typeof window.__snowThemeChanged === 'function') window.__snowThemeChanged(theme);
         }
 
         if (termToggleButton) {
             termToggleButton.addEventListener('click', () => {
                 const current = document.documentElement.getAttribute('data-theme');
-                setTheme(current === 'dark' ? 'light' : 'dark');
+                const order = ['light', 'dark', 'christmas'];
+                const idx = order.indexOf(current);
+                setTheme(order[(idx + 1) % order.length]);
             });
         }
 
         updateIcons(localStorage.getItem('theme') || 'system');
 
+        // ============================================================
+        // Snowfall engine — canvas particles, runs only on christmas
+        // ============================================================
+        (function() {
+            const canvas = document.getElementById('snow-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            let flakes = [];
+            let running = false;
+            let rafId = null;
+            const MAX = 120;
+
+            function isChristmas() {
+                return document.documentElement.getAttribute('data-theme') === 'christmas';
+            }
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function makeFlake(initial) {
+                return {
+                    x: Math.random() * canvas.width,
+                    y: initial ? Math.random() * canvas.height : -10,
+                    r: 1 + Math.random() * 2.6,
+                    vy: 0.35 + Math.random() * 0.9,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    sway: Math.random() * Math.PI * 2,
+                    swaySpeed: 0.004 + Math.random() * 0.01,
+                    opacity: 0.4 + Math.random() * 0.6
+                };
+            }
+
+            function tick() {
+                if (!running) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (const f of flakes) {
+                    f.sway += f.swaySpeed;
+                    f.x += f.vx + Math.sin(f.sway) * 0.6;
+                    f.y += f.vy;
+                    if (f.y > canvas.height + 10) {
+                        f.y = -10;
+                        f.x = Math.random() * canvas.width;
+                    }
+                    if (f.x < -10) f.x = canvas.width + 10;
+                    if (f.x > canvas.width + 10) f.x = -10;
+                    ctx.beginPath();
+                    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, ' + f.opacity + ')';
+                    ctx.fill();
+                }
+                rafId = requestAnimationFrame(tick);
+            }
+
+            function drawStatic() {
+                // reduced-motion fallback: one static scatter, no loop
+                resize();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let i = 0; i < MAX; i++) {
+                    const f = makeFlake(true);
+                    ctx.beginPath();
+                    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, ' + f.opacity + ')';
+                    ctx.fill();
+                }
+            }
+
+            function start() {
+                if (running || !isChristmas()) return;
+                running = true;
+                flakes = [];
+                for (let i = 0; i < MAX; i++) flakes.push(makeFlake(true));
+                resize();
+                tick();
+            }
+
+            function stop() {
+                running = false;
+                if (rafId) cancelAnimationFrame(rafId);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            window.__snowThemeChanged = function(theme) {
+                if (theme !== 'christmas') { stop(); return; }
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) drawStatic();
+                else start();
+            };
+
+            window.addEventListener('resize', () => {
+                if (running) resize();
+                else if (isChristmas() && window.matchMedia('(prefers-reduced-motion: reduce)').matches) drawStatic();
+            });
+
+            // kick off if landing directly on christmas theme
+            if (isChristmas()) {
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) drawStatic();
+                else start();
+            }
+        })();
+
+        // ============================================================
+        // Page behaviour (music player, scroll-to-top, version, copy)
+        // ============================================================
         document.addEventListener("DOMContentLoaded", () => {
             // sequential line entrance for any .tline elements in page content
             document.querySelectorAll('.tline').forEach((el, i) => {
